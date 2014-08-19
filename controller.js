@@ -1176,7 +1176,14 @@ will load everything in the RQ will a pass <= [pass]. so pass of 10 loads everyt
 		// because the model will execute it for all extensions once the controller is initiated.
 		// so instead, a generic callback function is added to track if the extension is done loading.
 		// which is why the extension is added to the extension Q (above).
-					_app.u.loadScript(_app.rq[i][3],callback,(_app.rq[i]));
+/*campus*/		if(_app.rq[i][3]){
+						dump('--LOADSCRIPT'); dump(_app.rq[i][3]); dump(_app.rq[i]);
+						_app.u.loadScript(_app.rq[i][3],callback,(_app.rq[i]));
+					}
+					else {
+						callback(_app.rq[i]);
+					}
+/*campus*/		//_app.u.loadScript(_app.rq[i][3],callback,(_app.rq[i]));
 					_app.rq.splice(i, 1); //remove from old array to avoid dupes.
 					}
 				else	{
@@ -2975,6 +2982,9 @@ return $r;
 
 							}
 						$ele.trigger(infoObj.state,[$ele,infoObj]);
+/*campus apptimize*/	if(infoObj.state == 'complete'){
+/*campus apptimize*/		_app.ext.quickstart.vars.showContentCompleteFired = true;
+/*campus apptimize*/		}
 						}
 					else	{
 						$ele.anymessage({'message':'_app.templateFunctions.handleTemplateEvents, infoObj.state ['+infoObj.state+'] is not valid. Only init, complete and depart are acceptable values.','gMessage':true});

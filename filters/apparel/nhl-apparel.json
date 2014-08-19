@@ -1,0 +1,31 @@
+{
+	"id"	: "NHL-Apparel",
+	"page-title" : "NHL Apparel at CampusColors.com",
+	"page-description" : "Buy NHL, it is bloody good!",
+	"pages" : [
+		{
+			"id" 			: "nhl-t-shirts",
+			"link"			: "#!nhl-apparel/nhl-t-shirts", 
+			"img" 			: "3_prongs_standard",
+			"name"			: "NHL T-shirts",
+			"baseFilter" 	: { "and" : [ {"term" : {"prod_is_general" : "nhl_clothing"}} , {"term" : {"apparel_type" : "t-shirts"}}]}
+		},
+		{
+			"id" 			: "nhl-sweatshirts",
+			"link"			: "#!nhl-apparel/nhl-sweatshirts", 
+			"img" 			: "9/93086_2",
+			"name"			: "NHL Sweatshirts",
+			"baseFilter" 	: { "and" : [ {"term" : {"prod_is_general" : "nhl_clothing"}} , {"term" : {"apparel_type" : "sweatshirts"}}]}
+		},
+		{
+			"id" 			: "nhl-best-sellers",
+			"link"			: "#!nhl-apparel/nhl-best-sellers", 
+			"img" 			: "K/shutterstock_67866511",
+			"name"			: "NHL Best Sellers",
+			"baseFilter" 	: {"term" : {"tags" : "IS_BESTSELLER"}},
+			"optionList" 	: [
+				"user:primary_color"
+			]
+		}
+	]
+}

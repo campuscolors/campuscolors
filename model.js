@@ -1212,17 +1212,17 @@ will return false if datapointer isn't in _app.data or local (or if it's too old
 			var r = false; //what is returned. false if no extensions are loaded or the # of extensions
 			if(typeof extObj == 'object')	{
 
-//				_app.u.dump(' -> valid extension object containing '+extObj.length+' extensions');
+				_app.u.dump(' -> valid extension object containing '+extObj.length+' extensions');
 				var L = extObj.length;
 				r = L; //return the size of the extension object 
-				for(var i = 0; i < L; i += 1) {
+				for(var i = 0; i < L; i += 1) { dump(extObj[i].namespace);
 //					_app.u.dump(" -> i: "+i);
 //namespace and filename are required for any extension.
-					if(!extObj[i].namespace || !extObj[i].filename)	{
+/*campus*/				if(!extObj[i].namespace)	{
 						if(extObj.callback && typeof extObj.callback == 'string')	{
-							extObj[i].callback.onError("Extension did not load because namespace ["+extObj[i].namespace+"] and/or filename ["+extObj[i].filename+"]  not set",'')
+/*campus*/					extObj[i].callback.onError("Extension did not load because namespace ["+extObj[i].namespace+"] not set",'');
 							}
-						_app.u.dump(" -> extension did not load because namespace ("+extObj[i].namespace+") or filename ("+extObj[i].filename+") was left blank.");
+/*campus*/					_app.u.dump(" -> extension did not load because namespace ("+extObj[i].namespace+") was left blank.");
 						continue; //go to next index in loop.
 						}
 					else if (typeof window[extObj[i].namespace] == 'function')	{
@@ -1231,8 +1231,13 @@ will return false if datapointer isn't in _app.data or local (or if it's too old
 						//extension has already been imported. Here for cases where extensions are added as part of preloader (init.js)
 						}
 					else	{
-//						_app.u.dump(" -> fetch extension: "+extObj[i].namespace);
-						this.fetchExtension(extObj[i],i);
+/*campus*/					if(!extObj[i].filename){
+							_app.u.dump(" -> extension did not load because filename ("+extObj[i].filename+") was left blank.");
+							}
+						else {
+//							_app.u.dump(" -> fetch extension: "+extObj[i].namespace);
+							this.fetchExtension(extObj[i],i);
+/*campus*/					}
 						}
 					} // end loop.
 				this.executeCallbacksWhenExtensionsAreReady(extObj); //reexecutes itself. will execute callbacks when all extensions are loaded.

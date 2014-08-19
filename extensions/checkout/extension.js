@@ -56,7 +56,8 @@ var order_create = function(_app) {
 			onSuccess : function()	{
 //				_app.u.dump('BEGIN _app.ext.order_create.init.onSuccess');
 
-				_app.u.loadCSSFile(_app.vars.baseURL+"extensions/checkout/styles.css","checkoutCSS");
+				//this loaded in index w/ apptimize now: extensions/checkout/styles.css
+				//_app.u.loadCSSFile(_app.vars.baseURL+"extensions/checkout/styles.css","checkoutCSS");
 				if(_app.vars._clientid == '1pc')	{
 					_app.u.loadCSSFile(_app.vars.baseURL+"extensions/checkout/opc_styles.css","opcCheckoutCSS"); //loaded after checkoutCSS so that overrides can be set, if need be.
 					}

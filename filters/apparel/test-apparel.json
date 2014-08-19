@@ -1,0 +1,17 @@
+{
+	"id" : "Test-Apparel",
+	"page-title" : "Test Apparel at CampusColors.com",
+	"page-description" : "Buy Test, because it is a test!",
+	"pages" : [
+		{
+			"id" : "test-shorts",
+			"link" : "#!test-apparel/test-shorts",
+			"img" : "K/keyboard1",
+			"name" : "Test Shorts",
+			"baseFilter" : {"term" : {"tags" : "IS_BESTSELLER"}},
+			"optionList" : [
+				"zoovy:prod_name"
+			]
+		}
+	]
+}

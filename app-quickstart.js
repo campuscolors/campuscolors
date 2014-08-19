@@ -60,6 +60,9 @@ var quickstart = function(_app) {
 			'shipAddressTemplate'],
 		"sotw" : {}, //state of the world. set to most recent page info object.
 		"hotw" : new Array(15), //history of the world. contains 15 most recent sotw objects.
+/**/	"showContentFinished" : false, //robots addition
+/**/	"showContentCompleteFired" : false, //robots addition
+/**/	"cachedPageCount" : 20, //robots addition
 		"session" : {
 			"recentSearches" : [],
 			"recentlyViewedItems" : [],
@@ -511,7 +514,7 @@ need to be customized on a per-ria basis.
 			}, //wiki
 
 // * 201403 -> infoObj now passed into pageTransition.
-		pageTransition : function($o,$n, infoObj)	{
+/*campus robots*/		pageTransition : function($o,$n, infoObj, callback)	{
 //if $o doesn't exist, the animation doesn't run and the new element doesn't show up, so that needs to be accounted for.
 //$o MAY be a jquery instance but have no length, so check both.
 			if($o instanceof jQuery && $o.length)	{
@@ -524,22 +527,27 @@ need to be customized on a per-ria basis.
 				if(infoObj.performJumpToTop && $(window).scrollTop() > 0)	{ // >0 scrolltop check should be on window, it'll work in ff AND chrome (body or html won't).
 					//new page content loading. scroll to top.
 					$('html, body').animate({scrollTop : 0},'fast',function(){
-						$o.fadeOut(1000, function(){$n.fadeIn(1000)}); //fade out old, fade in new.
-						})
+/*campus robots*/		$o.fadeOut(1000, function(){$n.fadeIn(1000); callback(); setTimeout(function()
+/*campus robots*/		{_app.ext.quickstart.vars.showContentFinished = true;},100);}); //fade out old, fade in new.
+						});
 					} 
-				else	{
-					$o.fadeOut(1000, function(){$n.fadeIn(1000)}); //fade out old, fade in new.
+				else	{ 
+/*campus robots*/	$o.fadeOut(1000, function(){$n.fadeIn(1000); callback(); setTimeout(function(){_app.ext.quickstart.vars.showContentFinished = true;},1000);}); //fade out old, fade in new.
 					}
 				}
 			else if($n instanceof jQuery)	{
 				dump(" -> $o is not properly defined.  jquery: "+($o instanceof jQuery)+" and length: "+$o.length);
 				$('html, body').animate({scrollTop : 0},'fast',function(){
 					$n.fadeIn(1000);
+/*campus robots*/	setTimeout(function(){
+/*campus robots*/		_app.ext.quickstart.vars.showContentFinished = true;
+/*campus robots*/		}, 1000);
 					});
 				}
 			else	{
 				//hhmm  not sure how or why we got here.
 				dump("WARNING! in pageTransition, neither $o nor $n were instances of jQuery.  how odd.",'warn');
+				_app.ext.quickstart.vars.showContentFinished = true;
 				}
 			}, //pageTransition
 
@@ -916,6 +924,8 @@ fallback is to just output the value.
 // -> unshift is used in the case of 'recent' so that the 0 spot always holds the most recent and also so the length can be maintained (kept to a reasonable #).
 // infoObj.back can be set to 0 to skip a URI update (will skip both hash state and popstate.) 
 			showContent : function(pageType,infoObj)	{
+/*campus robots*/	_app.ext.quickstart.vars.showContentFinsihed = false;
+/*campus robots*/	_app.ext.quickstart.vars.showContentCompleteFired = false;
 //				dump("BEGIN showContent ["+pageType+"]."); dump(infoObj);
 				infoObj = infoObj || {}; //could be empty for a cart or checkout
 /*
@@ -977,7 +987,35 @@ for legacy browsers. That means old browsers will use the anchor to retain 'back
 						infoObj.navcat = zGlobals.appSettings.rootcat;
 						$new = _app.ext.quickstart.u.showPage(infoObj);
 						break;
-
+//campus - the whole case blow:						
+					case 'static':
+						infoObj.pageType = 'static';
+						var parentID = infoObj.templateid+"_"+(infoObj.id || "");
+						var $parent = $(_app.u.jqSelector('#',parentID));
+						if($parent.length > 0){
+							infoObj.state = 'init';
+							_app.renderFunctions.handleTemplateEvents($parent,infoObj);
+							}
+						else {
+							$parent = new tlc().getTemplateInstance(infoObj.templateid);
+							$parent.attr('id', parentID);
+							infoObj.state = 'init';
+							_app.renderFunctions.handleTemplateEvents($parent,infoObj);
+							if(infoObj.dataset){
+								dump(infoObj);
+								infoObj.verb = 'translate';
+								$parent.tlc(infoObj);
+								}
+							}
+						$new = $parent;
+						$new.hide();
+						$new.data('templateid',infoObj.templateid);
+						$new.data('pageid',infoObj.id);
+						$('#mainContentArea').append($new);
+						infoObj.state = 'complete';
+						_app.renderFunctions.handleTemplateEvents($new,infoObj);
+						break;
+						
 					case 'category':
 //add item to recently viewed list IF it is not already the most recent in the list.				
 //Originally, used: 						if($.inArray(infoObj.navcat,_app.ext.quickstart.vars.session.recentCategories) < 0)
@@ -1081,27 +1119,39 @@ for legacy browsers. That means old browsers will use the anchor to retain 'back
 				infoObj.performJumpToTop = (infoObj.performJumpToTop === false) ? false : true; //specific instances jump to top. these are passed in (usually related to modals).
 		
 //transition appPreView out on init.
-				if($('#appPreView').is(':visible'))	{
+//				if($('#appPreView').is(':visible'))	{
 //appPreViewBG is an optional element used to create a layer between the preView and the view when the preView is loaded 'over' the view.
-					var $bg = $('#appPreViewBG');
-					if($bg.length)	{
-						$bg.animate({left:$(window).width(),top:$(window).height()},function(){$bg.hide();});
-						}
-
-					$('#appPreView').slideUp(1000,function(){
-						$new.show(); //have to show content area here because the slideDown will only make the parent visible
-						$('#appView').slideDown(3000);
-						});
-					}
-				else if(infoObj.performTransition == false)	{
+//					var $bg = $('#appPreViewBG');
+//					if($bg.length)	{
+//						$bg.animate({left:$(window).width(),top:$(window).height()},function(){$bg.hide();});
+//						}
+//
+//					$('#appPreView').slideUp(1000,function(){
+//						$new.show(); //have to show content area here because the slideDown will only make the parent visible
+//						$('#appView').slideDown(3000);
+//						});
+//					}
+//				else 
+				if(infoObj.performTransition == false)	{
+/*campus robots*/	_app.ext.quickstart.vars.showContentFinished = true;
 					}
 				else if(typeof _app.ext.quickstart.pageTransition == 'function')	{
-					_app.ext.quickstart.pageTransition($old,$new,infoObj);
+/*campus robots*/	var callback = function(){
+/**/					var $hiddenpages = $("#mainContentArea > :hidden");
+/**/					var L = $hiddenpages.length;
+/**/					dump(L);
+/**/					dump(L - _app.ext.quickstart.vars.cachedPageCount);
+/**/					for(var i = 0; i < L - _app.ext.quickstart.vars.cachedPageCount; i++){
+/**/						$($hiddenpages.get(i)).intervaledEmpty().remove();
+/**/						}
+/**/					};
+/*campus robots*/	_app.ext.quickstart.pageTransition($old,$new,infoObj, callback);
 					}
 				else if($new instanceof jQuery)	{
 //no page transition specified. hide old content, show new. fancy schmancy.
 					$("#mainContentArea :visible:first").hide();
 					$new.show();
+/*campus robots*/			_app.ext.quickstart.vars.showContentFinished = true;
 					}
 				else	{
 					dump("WARNING! in showContent and no parentID is set for the element being translated.");
@@ -1574,6 +1624,7 @@ $target.tlc({
 //				if(infoObj.pageType == 'cart' && infoObj.show != 'inline'){r = false; dump('transition suppressed: showing modal cart.');}
 				if(infoObj.pageType == 'category' && $old.data('templateid') == 'categoryTemplate' && $old.data('catsafeid') == infoObj.navcat){r = false; dump("transition suppressed: reloading same category.");}
 				else if(infoObj.pageType == 'category' && $old.data('templateid') == 'homepageTemplate' && $old.data('catsafeid') == infoObj.navcat){r = false; dump("transition suppressed: reloading homepage.");}
+/*campus*/		else if(infoObj.pageType == 'static' && $old.data('templateid') == infoObj.templateid && $old.data('pageid') == infoObj.id){r = false; dump("transition suppressed: same filter page "+infoObj.id);}
 				else if(infoObj.pageType == 'product' && $old.data('templateid') == 'productTemplate' && $old.data('pid') == infoObj.pid){r = false; dump("transition suppressed: reloading same product.");}
 				else if($old.data('templateid') == 'companyTemplate' && infoObj.pageType == 'company')	{r = false; dump("transition suppressed: changing company articles.");}
 				else if($old.data('templateid') == 'customerTemplate' && infoObj.pageType == 'customer')	{r = false; dump("transition suppressed: changing customer articles.");}
