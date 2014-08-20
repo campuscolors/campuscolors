@@ -195,15 +195,16 @@ var _robots = {
 
 
 <div id='appView' class=''>
+<!--
 <div class="screenSize" style="position:absolute;top:100px;left:10px;">
 	<div class="text" style="width:60px;height:25px;"></div>
 	<div class="button" onclick="myApp.ext.store_cc.a.showScreenSize($(this));" style="width:60px;height:25px;background-color:black;color:white;text-align:center;">Screen</div>
 </div>
-
+-->
 <header>
 	<div class="headerTop greyGradient">
 		<div class="wrapper">
-			<div class="login floatRight showTablet showDesktop">
+			<div class="login floatRight hidePhone showTabletBlock showDesktopBlock">
 				Welcome, 
 				<span class="loginHide">
 					Guest! (
@@ -219,11 +220,11 @@ var _robots = {
 				<a href="#!myaccount" class="bareWhiteLink marginRight showTablet showDesktop">CUSTOMER SERVICE</a> <!-- TODO : CUSTOMER SERVICE LINK (LOOKS LIKE RETURNS ARTICLE?) -->
 				<a href="#!company/contact/" class="bareWhiteLink marginRight marginLeft showTablet showDesktop">(866) 598-2267</a>
 				<span class="whiteText showTablet showDesktop">Online Chat | </span>
-				<span class="hideTablet hideDesktop bareYellowLink">Live Chat | </span>
+				<span class="hideTablet hideDesktop bareYellowLink liveChat"><span class="sprite"></span>Live Chat | </span>
 				<span class="yellowText showTablet showDesktop">CURRENTLY...</span>
 				<a href="#!myaccount" class="bareWhiteLink hideTablet hideDesktop">STORE LOCATIONS</a> <!-- TODO : ADD STORE LOCATION LINK -->
 			</div>
-			<div class="upperCartWrapper floatLeft center hide960To1079 hideAbove1080 hidePhone showTablet hideDesktop">
+			<div class="upperCartWrapper floatLeft center hide960To1079 hideAbove1080 hidePhone showTabletBlock hideDesktop">
 				<div class="sprite floatLeft">
 					<div class="cartItemCount floatLeft"></div>
 				</div>
@@ -231,7 +232,7 @@ var _robots = {
 		</div>
 	</div>
 	<div class="headerMid wrapper">
-		<a href="#!" class="logo floatLeft">
+		<a href="#!" class="logo">
 			<img data-apptimize="embed" src="images/campus-colors-logo_543x89.jpg" alt="Campus Colors Logo">
 		</a>
 		<div class="searchCart floatRight">		
@@ -241,7 +242,7 @@ var _robots = {
 					<button class="productSearchButton sprite floatRight"></button>
 				</form>
 			</div>
-			<div class="cartWrapper center hide770To959 hide640To769 hide480To639 hideBelow479">
+			<div class="cartWrapper center hidePhone hideTablet showDesktopBlock">
 				<div class="sprite floatLeft"></div>
 				<div class="cartItemCount floatLeft"></div>
 				<div class="floatLeft"> Item(s) in Cart - </div>
@@ -249,9 +250,23 @@ var _robots = {
 			</div>
 		</div>
 	</div>
-	<div class="headerLower greenGradient">
-		<span class="shipLogo sprite"></span>
-		<span class="promoOffer yearbook marginRight">FREE SHIPPING ORDERS OVER $75</span>
+	<div class="mobileNav greenGradient hideTablet hideDesktop">
+		<a href="" class="mobileMenu sprite"><span class="bareWhiteLink">Menu</span></a>
+		<span class="spacer"></span>
+		<a href="#!customer/myaccount/" class="mobileAcct sprite"><span class="bareWhiteLink">Account</span></a>
+		<span class="spacer"></span>
+		<a href="tel:+18665982267" class="mobilePhone sprite"><span class="bareWhiteLink">Call</span></a>
+		<span class="spacer"></span>
+		<a href="#!cart/" class="mobileCart sprite">
+			<span class="bareWhiteLink">Cart</span>
+			<span class="cartItemCount whiteText"></span>
+		</a>
+	</div>
+	<div class="headerLower greyGradient hideTablet hideDesktop">
+		<span class="promoOffer yearbook marginRight"><span class="shipLogo sprite"></span>FREE SHIPPING ORDERS OVER $75</span>
+	</div>
+	<div class="headerLower greenGradient hidePhone showTabletBlock showDesktopBlock">
+		<span class="promoOffer yearbook marginRight"><span class="shipLogo sprite"></span>FREE SHIPPING ORDERS OVER $75</span>
 		<span class="promoCode">Use code: <span class="yearbook bold">FreeShip </span>during <span class="bold">Checkout</span></span>
 	</div>
 </header>
@@ -266,7 +281,7 @@ var _robots = {
 <div id='mainContentArea'></div><!-- DO NOT REMOVE - this is where the specific page (ex: homepage, product, category) content is going to go -->
 
 <footer class="clear">
-	<div class="topBrands">
+	<div class="topBrands hidePhone showTabletBlock showDesktopBlock">
 		<div class="secTitleWrap">
 			<div class="secTitleBorder">
 				<div class="secTitle yearbook wrapper">TOP BRANDS</div>
@@ -287,7 +302,7 @@ var _robots = {
 		<div class="next"></div>
 	</div>
 	<div class="footBG1">
-		<div class="footerPromo">
+		<div class="footerPromo hidePhone showTabletBlock">
 			<div class="center wrapper">
 <!-- TODO : CHECK THAT THIS LINK IS WHAT WAS WRITTEN FOR THE LOCATIONS PAGE -->
 				Visit our <a href="#!company/locations/" class="uRedLink">stores</a> to try on all our selection of thousands of items or shop online for the convenience of ordering direct.
@@ -347,7 +362,7 @@ var _robots = {
 				</ul>
 				<div class="clear"></div>
 				<div class="questions center">Questions or Concerns? Call Us!</div>
-				<div class="footerPhone yearbook yellowText center">(866) 598-2267</div><!-- TODO : ADD PHONE LINK FOR MOBILE -->
+				<a href="tel:+18665982267" class="footerPhone yearbook bareYellowLink center">(866) 598-2267</a>
 				<div class="footerHours center">MONDAY - FRIDAY 9:30am - 5:00pm CST</div>
 				<div class="center"><a href="#!company/contact/" class="footerAfterHrs uYellowLink">After Hours</a></div> <!-- TODO : POSSIBLE SHOULD BE CHAT SUPPORT? -->
 			</div>
@@ -469,12 +484,12 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 	<a href="#!test-apparel/">TEST</a>
 
 	
-	<div class="homeMain floatRight">
-		<div class="homeBanner floatRight">
+	<div class="homeMain">
+		<div class="homeBanner">
 			<img src="images/main-banner_700x388.jpg" alt="Shop by Retro Team Brand" width="700" height="388"> <!-- TODO : SET UP BANNERS.JSON FOR THIS SECTION -->
 		</div>
 		<div class="clear"></div>
-		<div class="homeFeaturedCats floatRight">
+		<div class="homeFeaturedCats floatRight hidePhone">
 			<div class="secTitleWrap">
 				<div class="secTitleBorder">
 					<div class="secTitle yearbook">FEATURED CATEGORIES</div>
@@ -496,7 +511,7 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 			</ul>
 		</div>
 	</div>
-	<div class="homeVertNav redGradient floatRight hide640To769 hide480To639 hideBelow479">
+	<div class="homeVertNav redGradient floatRight hidePhone hideTablet showDesktopBlock">
 		<div class="vertNavBorder">
 			<div class="vertNavTitle whiteText marginTop">SHOP BY</div>
 			<a href="" class="bareWhiteLink bold marginTop">College</a>
@@ -528,9 +543,7 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 				<div class="secTitle yearbook wrapper">BEST SELLERS</div>
 			</div>
 		</div>
-		<div class="wrapper">
-			<ul data-tlc="quickstart#searchbytag --tag='IS_BESTSELLER' --size='8' --templateid='productListTemplateResultsNoPreview';" class='listStyleNone fluidList clearfix noPadOrMargin productList ccList homeCarousel'></ul>
-		</div>
+		<ul data-tlc="quickstart#searchbytag --tag='IS_BESTSELLER' --size='8' --templateid='productListTemplateResultsNoPreview';" class='listStyleNone fluidList clearfix noPadOrMargin productList ccList homeCarousel'></ul>
 	</div>
 
 	

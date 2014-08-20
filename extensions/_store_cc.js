@@ -351,22 +351,44 @@ var store_cc = function(_app) {
 			runHomeCarousel : function($context) {
 //				_app.u.dump('----Running homepage carousels');	
 				var $target = $('.homeCarousel',$context);
+				var w = $target.parent().width();
+				dump('Carousel width is:'); dump(w);
 				if($target.data('isCarousel'))	{$target.trigger('play');} //only make it a carousel once, but make sure it always scrolls
 				else {
 					$target.data('isCarousel',true);
 					//for whatever reason, caroufredsel needs to be executed after a moment.
 					setTimeout(function(){
 						$target.carouFredSel({
-							responsive: true,
-							auto: {	pauseOnHover: "immediate" },
-							items : { "visible" : 4},
-							width: '99%',
-							//mousewheel: true, //this is mobile, so mousewheel isn't necessary (plugin is not loaded)
-							swipe: { onMouse: true,	onTouch: true }
-						}).parent().css('margin','auto');
+							width	:"100%",
+							items	: {
+								minimum: 3,
+								width : "80px"
+							},
+							scroll: {	fx: "directscroll"	},
+							auto: {
+								delay: 1000,
+								pauseOnHover:"immediate"
+							},
+							swipe: { 
+								onMouse: true,	
+								onTouch: true 
+							}
+			/*				pagination: {
+								container: ".page",
+								keys: true
+							},
+							prev: {
+								button: ".prev",
+								key: "left"
+							},
+							next: {
+								button: ".next",
+								key: "right"
+							}
+			*/			});
 					},2000); 
 				} //HOMEPAGE best sellers CAROUSEL	
-			},
+			}
 			
 		}, //u [utilities]
 
