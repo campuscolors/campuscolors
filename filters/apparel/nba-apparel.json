@@ -1,0 +1,64 @@
+{
+	"id"	: "NBA-Apparel",
+	"page-title" : "NBA Apparel at CampusColors.com",
+	"page-description" : "Buy NBA, it is up in the air!",
+	"banner" : "images/cat-banner_785x200.jpg",
+	"pages" : [
+		{
+			"id" 				: "nba-t-shirts",
+			"link"			: "#!nba-apparel/nba-t-shirts", 
+			"img" 			: "3_prongs_standard",
+			"name"			: "NBA T-shirts",
+			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nba"}} , {"term" : {"apparel_type" : "t-shirts"}}]}
+		},
+		{
+			"id" 				: "nba-sweatshirts",
+			"link"			: "#!nba-apparel/nba-sweatshirts", 
+			"img" 			: "9/93086_2",
+			"name"			: "NBA Sweatshirts",
+			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nba"}} , {"term" : {"apparel_type" : "sweatshirts"}}]}
+		},
+		{
+			"id" 				: "nba-jerseys",
+			"link"			: "#!nba-apparel/nba-jerseys", 
+			"img" 			: "",
+			"name"			: "NBA Jerseys",
+			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nba"}} , {"term" : {"apparel_type" : "jerseys"}}]}
+		},
+		{
+			"id" 				: "nba-jackets",
+			"link"			: "#!nba-apparel/nba-jackets", 
+			"img" 			: "",
+			"name"			: "NBA Jackets",
+			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nba"}} , {"term" : {"apparel_type" : "jackets"}}]}
+		},
+		{
+			"id" 				: "nba-shorts",
+			"link"			: "#!nba-apparel/nba-shorts", 
+			"img" 			: "",
+			"name"			: "NBA Shorts",
+			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nba"}} , {"term" : {"apparel_type" : "shorts"}}]}
+		},
+		{
+			"id" 				: "nba-pants",
+			"link"			: "#!nba-apparel/nba-pants", 
+			"img" 			: "",
+			"name"			: "NBA Pants",
+			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nba"}} , {"term" : {"apparel_type" : "pants"}}]}
+		},
+		{
+			"id" 				: "nba-hats",
+			"link"			: "#!nba-apparel/nba-hats", 
+			"img" 			: "",
+			"name"			: "NBA Hats",
+			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nba"}} , {"term" : {"apparel_type" : "hats"}}]}
+		},
+		{
+			"id" 				: "nba-accessories",
+			"link"			: "#!nba-apparel/nba-accessories", 
+			"img" 			: "",
+			"name"			: "NBA Accessories",
+			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nba"}} , {"term" : {"apparel_type" : "accessories"}}]}
+		}
+	]
+}

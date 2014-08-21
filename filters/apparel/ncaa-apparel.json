@@ -1,0 +1,57 @@
+{
+	"id"	: "NCAA-Apparel",
+	"page-title" : "NCAA Apparel at CampusColors.com",
+	"page-description" : "Buy NCAA, it is !",
+	"banner" : "images/cat-banner_785x200.jpg",
+	"pages" : [
+		{
+			"id" 				: "ncaa-t-shirts",
+			"link"			: "#!ncaa-apparel/ncaa-t-shirts", 
+			"img" 			: "3_prongs_standard",
+			"name"			: "NCAA T-shirts",
+			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "ncaa"}} , {"term" : {"apparel_type" : "t-shirts"}}]}
+		},
+		{
+			"id" 				: "ncaa-sweatshirts",
+			"link"			: "#!ncaa-apparel/ncaa-sweatshirts", 
+			"img" 			: "9/93086_2",
+			"name"			: "NCAA Sweatshirts",
+			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "ncaa"}} , {"term" : {"apparel_type" : "sweatshirts"}}]}
+		},
+		{
+			"id" 				: "ncaa-jerseys",
+			"link"			: "#!ncaa-apparel/ncaa-jerseys", 
+			"img" 			: "",
+			"name"			: "NCAA Jerseys",
+			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "ncaa"}} , {"term" : {"apparel_type" : "jerseys"}}]}
+		},
+		{
+			"id" 				: "ncaa-jackets",
+			"link"			: "#!ncaa-apparel/ncaa-jackets", 
+			"img" 			: "",
+			"name"			: "NCAA Jackets",
+			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "ncaa"}} , {"term" : {"apparel_type" : "jackets"}}]}
+		},
+		{
+			"id" 				: "ncaa-pants",
+			"link"			: "#!ncaa-apparel/ncaa-pants", 
+			"img" 			: "",
+			"name"			: "NCAA Pants",
+			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "ncaa"}} , {"term" : {"apparel_type" : "pants"}}]}
+		},
+		{
+			"id" 				: "ncaa-hats",
+			"link"			: "#!ncaa-apparel/ncaa-hats", 
+			"img" 			: "",
+			"name"			: "NCAA Hats",
+			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "ncaa"}} , {"term" : {"apparel_type" : "hats"}}]}
+		},
+		{
+			"id" 				: "ncaa-accessories",
+			"link"			: "#!ncaa-apparel/ncaa-accessories", 
+			"img" 			: "",
+			"name"			: "NCAA Accessories",
+			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "ncaa"}} , {"term" : {"apparel_type" : "accessories"}}]}
+		}
+	]
+}

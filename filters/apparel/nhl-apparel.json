@@ -4,21 +4,42 @@
 	"page-description" : "Buy NHL, it is bloody good!",
 	"pages" : [
 		{
-			"id" 			: "nhl-t-shirts",
+			"id" 				: "nhl-t-shirts",
 			"link"			: "#!nhl-apparel/nhl-t-shirts", 
 			"img" 			: "3_prongs_standard",
 			"name"			: "NHL T-shirts",
-			"baseFilter" 	: { "and" : [ {"term" : {"prod_is_general" : "nhl_clothing"}} , {"term" : {"apparel_type" : "t-shirts"}}]}
+			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nhl"}} , {"term" : {"apparel_type" : "t-shirts"}}]}
 		},
 		{
-			"id" 			: "nhl-sweatshirts",
+			"id" 				: "nhl-sweatshirts",
 			"link"			: "#!nhl-apparel/nhl-sweatshirts", 
 			"img" 			: "9/93086_2",
 			"name"			: "NHL Sweatshirts",
-			"baseFilter" 	: { "and" : [ {"term" : {"prod_is_general" : "nhl_clothing"}} , {"term" : {"apparel_type" : "sweatshirts"}}]}
+			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nhl"}} , {"term" : {"apparel_type" : "sweatshirts"}}]}
 		},
 		{
-			"id" 			: "nhl-best-sellers",
+			"id" 				: "nhl-jerseys",
+			"link"			: "#!nhl-apparel/nhl-jerseys", 
+			"img" 			: "",
+			"name"			: "NHL Jerseys",
+			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nhl"}} , {"term" : {"apparel_type" : "jerseys"}}]}
+		},
+		{
+			"id" 				: "nhl-hats",
+			"link"			: "#!nhl-apparel/nhl-hats", 
+			"img" 			: "",
+			"name"			: "NHL Hats",
+			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nhl"}} , {"term" : {"apparel_type" : "hats"}}]}
+		},
+		{
+			"id" 				: "nhl-accessories",
+			"link"			: "#!nhl-apparel/nhl-accessories", 
+			"img" 			: "",
+			"name"			: "NHL Accessories",
+			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nhl"}} , {"term" : {"apparel_type" : "accessories"}}]}
+		},
+		{
+			"id" 				: "nhl-best-sellers",
 			"link"			: "#!nhl-apparel/nhl-best-sellers", 
 			"img" 			: "K/shutterstock_67866511",
 			"name"			: "NHL Best Sellers",

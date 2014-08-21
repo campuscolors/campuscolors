@@ -1,0 +1,57 @@
+{
+	"id"	: "Adidas-Apparel",
+	"page-title" : "Adidas Apparel at CampusColors.com",
+	"page-description" : "Buy Adidas, it is !",
+	"banner" : "images/cat-banner_785x200.jpg",
+	"pages" : [
+		{
+			"id" 				: "adidas-t-shirts",
+			"link"			: "#!adidas-apparel/adidas-t-shirts", 
+			"img" 			: "3_prongs_standard",
+			"name"			: "Adidas T-shirts",
+			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "adidas"}} , {"term" : {"apparel_type" : "t-shirts"}}]}
+		},
+		{
+			"id" 				: "adidas-sweatshirts",
+			"link"			: "#!adidas-apparel/adidas-sweatshirts", 
+			"img" 			: "9/93086_2",
+			"name"			: "Adidas Sweatshirts",
+			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "adidas"}} , {"term" : {"apparel_type" : "sweatshirts"}}]}
+		},
+		{
+			"id" 				: "adidas-jerseys",
+			"link"			: "#!adidas-apparel/adidas-jerseys", 
+			"img" 			: "",
+			"name"			: "Adidas Jerseys",
+			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "adidas"}} , {"term" : {"apparel_type" : "jerseys"}}]}
+		},
+		{
+			"id" 				: "adidas-shorts",
+			"link"			: "#!adidas-apparel/adidas-shorts", 
+			"img" 			: "",
+			"name"			: "Adidas Shorts",
+			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "adidas"}} , {"term" : {"apparel_type" : "shorts"}}]}
+		},
+		{
+			"id" 				: "adidas-pants",
+			"link"			: "#!adidas-apparel/adidas-pants", 
+			"img" 			: "",
+			"name"			: "Adidas Pants",
+			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "adidas"}} , {"term" : {"apparel_type" : "pants"}}]}
+		},
+		{
+			"id" 				: "adidas-hats",
+			"link"			: "#!adidas-apparel/adidas-hats", 
+			"img" 			: "",
+			"name"			: "Adidas Hats",
+			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "adidas"}} , {"term" : {"apparel_type" : "hats"}}]}
+		},
+		{
+			"id" 				: "adidas-accessories",
+			"link"			: "#!adidas-apparel/adidas-accessories", 
+			"img" 			: "",
+			"name"			: "Adidas Accessories",
+			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "adidas"}} , {"term" : {"apparel_type" : "accessories"}}]}
+		}
+	]
+}
