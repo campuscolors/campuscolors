@@ -561,10 +561,10 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 </div>
 
 
-<div id="splashPageTemplate">
+<div id="splashPageTemplate" class="splashPageTemplate">
 	<span class="displayNone" data-tlc="bind $title '.page-title'; apply --attrib='data-seo-title';"></span>
 	<span class="displayNone" data-tlc="bind $desc '.page-description'; apply --attrib='data-seo-desc';"></span>
-	<div class="fauxBreadCrumb">um... this will eventually do something breadcrumby.</div>
+	<div class="fauxBreadCrumb hidePhone showTabletBlock">um... this will eventually do something breadcrumby.</div>
 	<ul data-tlc="bind $var '.pages'; controller#loop --templateid='splashPageListTemplate'; apply --append;" class="listStyleNone"></ul>
 </div>
 
@@ -815,9 +815,9 @@ SANITY -> if you change the height and width of this image, change the .minimalM
 <li id="productListTemplateResultsNoPreview" class="loadingBG searchResultsProduct">
 	<a data-tlc="bind $var '.'; store_routing#seoanchor --type='product' --seo; apply --attrib='href';" class="pointer bareWhiteLink">
 		<div class="prodThumbContainer">
-			<img data-tlc="bind $var '.images.0'; if (is $var --notblank;) {{apply --img --media=$var --width=218 --height=248 --bgcolor='#ffffff' --replace;}};" src="blank.gif" class="prodThumb" alt="" height="168" width="218">
+			<img data-tlc="bind $var '.images.0'; if (is $var --notblank;) {{apply --img --media=$var --width=210 --height=250 --bgcolor='#ffffff' --replace;}};" src="blank.gif" class="prodThumb" alt="" height="250" width="210">
 		</div>
-		<div class="prodInfo">
+		<div class="prodInfo hidePhone showTabletBlock">
 			<h5 data-tlc="bind $var '.prod_name'; if (is $var --notblank;) {{apply --append;}};" class="hideInMinimalMode"></h5>
 			<div data-tlc="bind $var '.prod_msrp'; if (is $var --notblank;) {{apply --hide;}};">	
 				<h6 data-tlc="bind $var '.base_price';  if (is $var --notblank;) {{format --currency='USD'; format --prepend='<span class=&quot;pricePre&quot;>OUR PRICE: </span>';  apply --append;}};" class="ourPrice hideInMinimalMode"></h6>
