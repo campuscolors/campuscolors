@@ -92,6 +92,8 @@ var store_cc = function(_app) {
 			
 			addEventHandlers : {
 				onSuccess : function() {
+
+					_app.ext.store_cc.u.swipeMobileNav($(".mobileSlideMenu"));
 				
 					_app.templates.homepageTemplate.on('complete.beachmall_carousel',function(event,$context,infoObj) {
 						_app.ext.store_cc.u.runHomeCarousel($context);
@@ -365,7 +367,6 @@ var store_cc = function(_app) {
 		
 			test : function($tag,data) {
 				dump('TEST value:'); dump(data.value);
-				$tag.on("swipe",function(){dump('this worked');$(this).animate({"left":"-5px"},500);});
 			},
 			
 			filtercheckboxlist : function($tag,data) {
@@ -466,6 +467,17 @@ var store_cc = function(_app) {
 			*/			});
 					},2000); 
 				} //HOMEPAGE best sellers CAROUSEL	
+			},
+			
+			//applies a swipe to close mobile navigation window.
+			swipeMobileNav : function($tag) {
+				$tag.swipe( {
+					//"swipe":function(event,direction,duration,fingerCount,fingerData) {
+					"swipeLeft":function(event,direction,duration,fingerCount,fingerData) {
+					dump('this worked');$(this).animate({"left":"-275px"},500);
+					},
+				//threshold:0 //default is 75px. Raise/lower to make more/less sensitive (0 for easy testing)
+					});
 			}
 			
 		}, //u [utilities]
