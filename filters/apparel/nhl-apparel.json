@@ -3,6 +3,9 @@
 	"page-title" : "NHL Apparel at CampusColors.com",
 	"page-description" : "Buy NHL, it is bloody good!",
 	"banner" : "9/93086_2",
+	"bannerlink" : "#!nhl-apparel/nhl-best-sellers",
+	"banneralt" : "NHL Banner",
+	"promo" : "Some promotional test goes here",
 	"pages" : [
 		{
 			"id" 				: "nhl-t-shirts",

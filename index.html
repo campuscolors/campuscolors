@@ -655,10 +655,16 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 <div id="splashPageTemplate" class="splashPageTemplate listWrapper">
 	<span class="displayNone" data-tlc="bind $title '.page-title'; apply --attrib='data-seo-title';"></span>
 	<span class="displayNone" data-tlc="bind $desc '.page-description'; apply --attrib='data-seo-desc';"></span>
+	<!-- TODO : INVESTIGATE SETTING UP AN ELASTIC BREADCRUMB
 	<div class="fauxBreadCrumb hidePhone showTabletBlock">um... this will eventually do something breadcrumby.</div>
-	<div class="splashBanner">
-		<img data-tlc="bind $var '.banner'; apply --img --media=$var --class='splashBanner' --width=670 --height=176 --becolor='ffffff' --replace;" src="blank.gif" alt="" height="670" width="176">
-	</div>
+	-->
+	<a class="splashBanner" data-tlc="bind $href '.bannerlink'; apply --attrib='href';">
+		<p data-tlc="bind $var '.promo'; apply --apend;"></p>
+		<img data-tlc="bind $var '.banner'; apply --img --media=$var --class='splashBanner' --width=670 --height=176 --bgcolor='ffffff' --replace bind $alt '.banneralt'; apply --attrib='alt';" src="blank.gif" alt="" height="670" width="176">
+	</a>
+	<!-- TODO : SET UP CATEGORY FILTERING. THIS IS JUST A PLACEHOLDER FOR NOW 
+	<div class="catFilter hidePhone showTabletBlock">CATEGORY TYPE FILTERS WILL BE IN HUR.</div>
+	-->
 	<ul data-tlc="bind $var '.pages'; controller#loop --templateid='splashPageListTemplate'; apply --append;" class="listStyleNone"></ul>
 </div>
 
