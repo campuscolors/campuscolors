@@ -254,6 +254,83 @@ var store_cc = function(_app) {
 
 			showScreenSize : function($container) {
 				$(".text",$container.parent()).text(screen.width+"px");
+			},
+			
+			showDropDown : function ($tag) {
+				//_app.u.dump('showing');
+				//console.log($tag.data('timeoutNoShow'));
+				if(!$tag.data('timeoutNoShow') || $tag.data('timeoutNoShow')=== "false") {
+					var $dropdown = $("[data-dropdown]", $tag);
+					var height = 0;
+					$dropdown.show();
+					if($dropdown.data('height')){
+						height = $dropdown.data('height');
+					} else{
+						$dropdown.children().each(function(){
+								height += $(this).outerHeight();
+						});
+					}
+					if($tag.data('timeout') && $tag.data('timeout')!== "false"){
+						clearTimeout($tag.data('timeout'));
+						$tag.data('timeout','false');
+							
+					}
+					$dropdown.stop().animate({"height":height+"px"}, 500);
+					if($tag.parent().hasClass("slideMenuBorder")) {
+						$(".sprite", $tag).hide().addClass("openMenu").fadeIn(200);
+					}
+					return true;
+				}
+				return false;
+			},
+			
+			showDropDownClick : function($tag){
+				//_app.u.dump('showClick');
+				if(this.showDropDown($tag)){
+					$('[data-dropdown]',$tag).unbind('click');
+					$('[data-dropdown]',$tag).click(function(event){event.stopPropagation()});
+					$tag.attr('onClick','').unbind('click');
+					setTimeout(function(){
+						$('body').click(function(){
+							_app.ext.store_cc.a.hideDropDownClick($tag);
+						});
+					}, 500);
+				}
+			},
+			
+			hideDropDown : function ($tag) {
+				//_app.u.dump('hiding');
+				$("[data-dropdown]", $tag).stop().animate({"height":"0px"}, 500);
+				if($tag.data('timeout') && $tag.data('timeout')!== "false"){
+					$tag.data('timeout')
+					$tag.data('timeout','false');
+				}
+				$tag.data('timeout',setTimeout(function(){$("[data-dropdown]", $tag).hide();},500));
+				if($tag.parent().hasClass("slideMenuBorder")) {
+						$(".sprite", $tag).hide().removeClass("openMenu").fadeIn(200);
+					}
+				return true;
+			},
+			
+			hideDropDownClick : function($tag){
+				//_app.u.dump('hideClick');
+				if(this.hideDropDown($tag)){
+					$tag.click(function(){_app.ext.store_cc.a.showDropDownClick($(this));});
+					$('body').unbind('click');
+				}
+			},
+			
+			 hideDropDownOnSelect : function($tag){
+				//dump('hideOnSelect');
+				this.hideDropDown($tag);
+				$tag.data('timeoutNoShow', setTimeout(function(){$tag.data('timeoutNoShow', 'false');}, 500));
+			},
+			
+			hideMobileDropDownOnSelect : function($tag){
+				dump('hideOnSelect');
+				this.hideDropDown($tag);
+				$('.mobileSlideMenu').animate({"left":"-275px"},500);
+				$tag.data('timeoutNoShow', setTimeout(function(){$tag.data('timeoutNoShow', 'false');}, 500));
 			}
 		
 		}, //Actions
@@ -288,6 +365,7 @@ var store_cc = function(_app) {
 		
 			test : function($tag,data) {
 				dump('TEST value:'); dump(data.value);
+				$tag.on("swipe",function(){dump('this worked');$(this).animate({"left":"-5px"},500);});
 			},
 			
 			filtercheckboxlist : function($tag,data) {

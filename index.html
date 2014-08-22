@@ -251,7 +251,7 @@ var _robots = {
 		</div>
 	</div>
 	<div class="mobileNav greenGradient hideTablet hideDesktop">
-		<a href="" class="mobileMenu sprite"><span class="bareWhiteLink">Menu</span></a>
+		<div class="mobileMenu sprite pointer" onclick=$(".mobileSlideMenu").animate({"left":"-5px"},500);><span class="bareWhiteLink">Menu</span></div>
 		<span class="spacer"></span>
 		<a href="#!customer/myaccount/" class="mobileAcct sprite"><span class="bareWhiteLink">Account</span></a>
 		<span class="spacer"></span>
@@ -269,6 +269,96 @@ var _robots = {
 		<span class="promoOffer yearbook marginRight"><span class="shipLogo sprite"></span>FREE SHIPPING ORDERS OVER $75</span>
 		<span class="promoCode">Use code: <span class="yearbook bold">FreeShip </span>during <span class="bold">Checkout</span></span>
 	</div>
+	
+	<div class="mobileSlideMenu">
+		<span class="mobileSlideMenuClose sprite" onclick=$(".mobileSlideMenu").animate({"left":"-275px"},500);></span>
+		<div class="slideMenuBorder" data-tlc="bind $var '.'; store_cc#test --legacy;">
+			<div class="levelOne slideTitle yearbook">SHOP BY</div>
+			<div class="levelOne slideTop" onclick="myApp.ext.store_cc.a.showDropDownClick($(this));">
+				COLLEGE
+				<span class="sprite"></span>
+				<div class="levelTwo" data-dropdown="1">
+					<a href="#!nhl-apparel/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">T-Shirts</a>
+					<a>Sweatshirts</a>
+					<a>Jerseys</a>
+					<a>Jackets</a>
+				</div>
+			</div>
+			<div class="levelOne">
+				NFL
+				<span class="sprite"></span>
+			</div>
+			<div class="levelOne">
+				NBA
+				<span class="sprite"></span>
+			</div>
+			<div class="levelOne">
+				MLB
+				<span class="sprite"></span>
+			</div>
+			<div class="levelOne">
+				NHL
+				<span class="sprite"></span>
+			</div>
+			<div class="levelOne">
+				SHOP BY TEAM
+				<span class="sprite"></span>
+			</div>
+			<div class="levelOne">
+				NIKE
+				<span class="sprite"></span>
+			</div>
+			<div class="levelOne">
+				ADIDAS
+				<span class="sprite"></span>
+			</div>
+			<div class="levelOne">
+				SHORTS
+				<span class="sprite"></span>
+			</div>
+			<div class="levelOne">
+				T-SHIRTS
+				<span class="sprite"></span>
+			</div>
+			<div class="levelOne">
+				JERSEYS
+				<span class="sprite"></span>
+			</div>
+			<div class="levelOne">
+				JACKETS
+				<span class="sprite"></span>
+			</div>
+			<div class="levelOne">
+				PANTS
+				<span class="sprite"></span>
+			</div>
+			<div class="levelOne">
+				HATS
+				<span class="sprite"></span>
+			</div>
+			<div class="levelOne">
+				ACCESSORIES
+				<span class="sprite"></span>
+			</div>
+			<div class="levelOne">
+				MEN&#39;S
+				<span class="sprite"></span>
+			</div>
+			<div class="levelOne">
+				WOMEN&#39;S
+				<span class="sprite"></span>
+			</div>
+			<div class="levelOne">
+				KID&#39;S
+				<span class="sprite"></span>
+			</div>
+			<div class="levelOne">
+				SALE
+				<span class="sprite"></span>
+			</div>
+		</div>
+	</div>
+	
 </header>
 
 <div id='globalMessaging' class='appMessaging'></div><!-- DO NOT REMOVE - used for some high level error handling (usually appears below breadcrumb nav or top bar) -->
@@ -548,6 +638,7 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 		</div>
 		<ul data-tlc="quickstart#searchbytag --tag='IS_BESTSELLER' --size='8' --templateid='productListTemplateResultsNoPreview';" class='listStyleNone fluidList clearfix noPadOrMargin productList ccList homeCarousel'></ul>
 	</div>
+	
 
 	
 	
@@ -561,7 +652,7 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 </div>
 
 
-<div id="splashPageTemplate" class="splashPageTemplate">
+<div id="splashPageTemplate" class="splashPageTemplate listWrapper">
 	<span class="displayNone" data-tlc="bind $title '.page-title'; apply --attrib='data-seo-title';"></span>
 	<span class="displayNone" data-tlc="bind $desc '.page-description'; apply --attrib='data-seo-desc';"></span>
 	<div class="fauxBreadCrumb hidePhone showTabletBlock">um... this will eventually do something breadcrumby.</div>
@@ -577,7 +668,7 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 </li>
 
 
-<div id="filteredSearchTemplate" data-tlc="store_cc#filterform;" data-filter="parent" class="wrapper">
+<div id="filteredSearchTemplate" data-tlc="store_cc#filterform;" data-filter="parent" class="listWrapper">
 	<h2 data-tlc="bind $title '.name'; apply --append;"></h2>
 
 	<!-- THIS ELEMENT USED IF THE FILTER WILL NOT BE ON THE PAGE ITSELF (slides out from side for instance).
@@ -591,7 +682,7 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 		</div>
 	</div>
 	-->	
-	<form id="filterListTemplate" onSubmit="return false;" data-app-submit="store_filter|execFilteredSearch" data-tlc="bind $bf '.baseFilter'; stringify; apply --attrib='data-filter-base';" class="filterListTemplate">
+	<form id="filterListTemplate" onSubmit="return false;" data-app-submit="store_filter|execFilteredSearch" data-tlc="bind $bf '.baseFilter'; stringify; apply --attrib='data-filter-base';" class="filterListTemplate hidePhone showTabletBlock">
 		<input data-tlc="bind $var '.base'; store_cc#assigndata  --attribute='filter-base' --legacy;" data-cc="filterBase" type="hidden">
 	<div data-tlc="bind $var '.'; store_cc#test --legacy;"></div>	
 	<!-- This filter shown on all filter lists- no need for data-binds
@@ -817,7 +908,7 @@ SANITY -> if you change the height and width of this image, change the .minimalM
 		<div class="prodThumbContainer">
 			<img data-tlc="bind $var '.images.0'; if (is $var --notblank;) {{apply --img --media=$var --width=210 --height=250 --bgcolor='#ffffff' --replace;}};" src="blank.gif" class="prodThumb" alt="" height="250" width="210">
 		</div>
-		<div class="prodInfo hidePhone showTabletBlock">
+		<div class="prodInfo">
 			<h5 data-tlc="bind $var '.prod_name'; if (is $var --notblank;) {{apply --append;}};" class="hideInMinimalMode"></h5>
 			<div data-tlc="bind $var '.prod_msrp'; if (is $var --notblank;) {{apply --hide;}};">	
 				<h6 data-tlc="bind $var '.base_price';  if (is $var --notblank;) {{format --currency='USD'; format --prepend='<span class=&quot;pricePre&quot;>OUR PRICE: </span>';  apply --append;}};" class="ourPrice hideInMinimalMode"></h6>
