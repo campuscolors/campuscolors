@@ -242,8 +242,8 @@ header {position:relative;}
 	.homeBestSell .productList.ccList .prodInfo {display:block;}
 	
 	.splashPageTemplate {width:690px;}
+	.splashBanner img {height:auto; max-width:100%; margin:0 auto;}
 	.splashPageListTemplate, .productList.ccList > li, .filterListTemplate {height:250px; width:210px; margin:10px; border:5px solid #000000; box-shadow:4px 4px 0 0 #bfbfbf;}
-	.splashPageListTemplate {margin:5px;}
 	.filterListTemplate {float:left; border:5px solid #bfbfbf;}
 	.splashPageListTemplate .title {height:32px; bottom:0; color:#ffffff; background-color:rgba(1,1,1,0.5);}
 	.ccList .prodInfo {bottom:0;}

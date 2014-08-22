@@ -656,6 +656,11 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 	<span class="displayNone" data-tlc="bind $title '.page-title'; apply --attrib='data-seo-title';"></span>
 	<span class="displayNone" data-tlc="bind $desc '.page-description'; apply --attrib='data-seo-desc';"></span>
 	<div class="fauxBreadCrumb hidePhone showTabletBlock">um... this will eventually do something breadcrumby.</div>
+<!-- TODO : GET BANNER IN MEDIA LIBRARY
+	<div class="splashBanner">
+		<img data-tlc="bind $var '.banner'; apply --img --media=$var --class='splashBanner' --width=670 --height=176 --becolor='ffffff' --replace;" src="blank.gif" alt="" height="670" width="176">
+	</div>
+-->
 	<ul data-tlc="bind $var '.pages'; controller#loop --templateid='splashPageListTemplate'; apply --append;" class="listStyleNone"></ul>
 </div>
 
