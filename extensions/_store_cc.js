@@ -257,7 +257,7 @@ var store_cc = function(_app) {
 			showScreenSize : function($container) {
 				$(".text",$container.parent()).text(screen.width+"px");
 			},
-			
+
 			showDropDown : function ($tag) {
 				//_app.u.dump('showing');
 				//console.log($tag.data('timeoutNoShow'));
@@ -358,6 +358,44 @@ var store_cc = function(_app) {
 				$('form',$fl).data('jqContext',$context);
 				
 				//$('form', $fl).trigger('submit');
+			},
+			
+			//adds show/hide to filter options. Will add to parent container if in mobile view, otherwise only to individual filters.
+			//data-top indicates filter parent container. 
+			//data-filterview indicates whether individual filter should start opened or closed, as well as current state for next click
+			showmobilefilter : function(data, thisTLC) {
+				dump('START showMobileFilter');
+				var $tag = data.globals.tags[data.globals.focusTag];
+				dump($tag.data('top'));
+				if(screen.width > 767 && $tag.data('top') == 1) {
+					// Dont hide all filter options if not mobile, just hide individual options. 
+				}
+				else {
+					setTimeout(function() { //have to wait for form to load to get initial height
+						dump(screen.width);
+							var $filter = $tag.data('top') == 1 ? $(".filterListTemplate",$tag.parent()) : $(".filterHider",$tag.parent());
+							var currentHeight = $filter.outerHeight();
+							dump('-- current hieght:'); dump(currentHeight);
+							if($tag.data('filterview') == 0) {
+								$filter.css("height","0");
+							}
+							else { $tag.addClass('filterOpen'); }
+							
+							$tag.off('click').on('click',function() {
+								var state = $tag.data('filterview');
+								if (state == 0) {
+									$filter.animate({'height':currentHeight},500);
+									$tag.addClass('filterOpen');
+									$tag.data('filterview',1);
+								}
+								else {
+									$filter.animate({'height':'0px'},500);
+									$tag.removeClass('filterOpen');
+									$tag.data('filterview',0);
+								}
+							});
+					},1000);
+				}
 			}
 			
 		}, //tlcFormats

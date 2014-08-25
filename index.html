@@ -108,7 +108,7 @@ $(document).ready(function(){
 	var paramStr = window.location.href.replace(window.location.hash, '').split('?')[1];
 	if(!paramStr || paramStr.indexOf('_escaped_fragment_') < 0){
 		window.myApp = new initApp({
-			"_robotHasGreeted" : false,
+			"_robotHasGreeted" : false, <!-- versionhere -->
 			"release":"201408.20140818152200",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
 			"_clientid":"zmvc", //zmvc for store app, 1pc for one page checkout.
 			"baseURL":baseURL, //used in non-local mode.
@@ -677,9 +677,14 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 </li>
 
 
-<div id="filteredSearchTemplate" data-tlc="store_cc#filterform;" data-filter="parent" class="listWrapper">
+<div id="filteredSearchTemplate" data-tlc="store_cc#filterform;" data-filter="parent" class="listWrapper filteredSearchTemplate">
 	<h2 data-tlc="bind $title '.name'; apply --append;"></h2>
-
+	<!-- <div onclick="myApp.ext.store_cc.a.showMobileFilter($(this),$('.filterListTemplate',$(this).parent()));" data-filterview='0' class="showHideFilters greyGradient yearbook"> -->
+	<div data-tlc="store_cc#showmobilefilter;" data-filterview='0' data-top='1' class="showHideFilters hideTablet greyGradient yearbook">
+		FILTERS
+		<span class="sprite"></span>
+	</div>
+	
 	<!-- THIS ELEMENT USED IF THE FILTER WILL NOT BE ON THE PAGE ITSELF (slides out from side for instance).
 	<div id="filterContainer">
 		<div id="showFilterBtn" class="pointer" onClick="$(this).parent().toggleClass('expand');"></div>
@@ -691,10 +696,51 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 		</div>
 	</div>
 	-->	
-	<form id="filterListTemplate" onSubmit="return false;" data-app-submit="store_filter|execFilteredSearch" data-tlc="bind $bf '.baseFilter'; stringify; apply --attrib='data-filter-base';" class="filterListTemplate hidePhone showTabletBlock">
+	<form id="filterListTemplate" onSubmit="return false;" data-app-submit="store_filter|execFilteredSearch" data-tlc="bind $bf '.baseFilter'; stringify; apply --attrib='data-filter-base';" class="filterListTemplate">
 		<input data-tlc="bind $var '.base'; store_cc#assigndata  --attribute='filter-base' --legacy;" data-cc="filterBase" type="hidden">
-	<div data-tlc="bind $var '.'; store_cc#test --legacy;"></div>	
-	<!-- This filter shown on all filter lists- no need for data-binds
+		<div data-tlc="bind $var '.'; store_cc#test --legacy;"></div>	
+		
+		<div class="marginBottom filterGroup">
+			<div data-tlc="store_cc#showmobilefilter;" data-filterview='1' data-top='0' class="filterGroupTitle marginBottom">League<span class="sprite"></span></div>
+				<div class="filterHider">
+					<div class="showFilterOption">
+						<input name="college" data-filter-type="checkboxList" data-filter-index="videoid" data-filter-type="hasAttribute" type="checkbox"><label>College</label>
+					</div>
+					<div class="showFilterOption">
+							<input name="nfl" data-filter-type="checkboxList" data-filter-index="videoid" data-filter-type="hasAttribute" type="checkbox"><label>NFL</label>
+					</div>
+					<div class="showFilterOption">
+							<input name="mlb" data-filter-type="checkboxList" data-filter-index="videoid" data-filter-type="hasAttribute" type="checkbox"><label>MLB</label>
+					</div>
+					<div class="showFilterOption">
+							<input name="nba" data-filter-type="checkboxList" data-filter-index="videoid" data-filter-type="hasAttribute" type="checkbox"><label>NBA</label>
+					</div>
+					<div class="showFilterOption">
+							<input name="nhl" data-filter-type="checkboxList" data-filter-index="videoid" data-filter-type="hasAttribute" type="checkbox"><label>NHL</label>
+					</div>
+				</div>	
+		</div>
+		<div class="marginBottom filterGroup">
+			<div data-tlc="store_cc#showmobilefilter;" data-filterview='0' data-top='0' class="filterGroupTitle marginBottom">League<span class="sprite"></span></div>
+				<div class="filterHider">
+					<div class="showFilterOption">
+						<input name="college" data-filter-type="checkboxList" data-filter-index="videoid" data-filter-type="hasAttribute" type="checkbox"><label>College</label>
+					</div>
+					<div class="showFilterOption">
+							<input name="nfl" data-filter-type="checkboxList" data-filter-index="videoid" data-filter-type="hasAttribute" type="checkbox"><label>NFL</label>
+					</div>
+					<div class="showFilterOption">
+							<input name="mlb" data-filter-type="checkboxList" data-filter-index="videoid" data-filter-type="hasAttribute" type="checkbox"><label>MLB</label>
+					</div>
+					<div class="showFilterOption">
+							<input name="nba" data-filter-type="checkboxList" data-filter-index="videoid" data-filter-type="hasAttribute" type="checkbox"><label>NBA</label>
+					</div>
+					<div class="showFilterOption">
+							<input name="nhl" data-filter-type="checkboxList" data-filter-index="videoid" data-filter-type="hasAttribute" type="checkbox"><label>NHL</label>
+					</div>
+				</div>	
+		</div>
+	<!-- This filter shown on all filter lists- no need for data-binds 
 		<div class="marginBottom">
 			<h5 class="highlightText">
 				<input name="videoid" data-filter-type="checkboxList" data-filter-index="videoid" data-filter-type="hasAttribute" type="checkbox"> Has Video
@@ -706,7 +752,7 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 			</h5>
 		</div>
 	-->
-	<!-- Samples of checkbox binds (for select list attribs) for reference once test products are available. TODO : Set up for test prods.
+	<!-- Samples of checkbox binds (for select list attribs) for reference once test products are available. TODO : Set up for test prods. 
 		<div data-tlc="bind $var '.options.user:primary_color'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
 			<h5 class="highlightBG_2">Name:</h5>
 			<div class="filterCheckboxList" 
@@ -735,7 +781,7 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 		<select data-bind="var:filter(options); index:primary_color; format:filterSelect; extension:store_sac;"></select>
 		<select data-bind="var:filter(options); index:accent_color; format:filterSelect; extension:store_sac;"></select>
 		-->
-		<button onClick="$(this).closest('form').trigger('submit');">Go!</button>
+		<button onClick="$(this).closest('form').trigger('submit');" class="redGradient">Go!</button>
 	</form>
 
 	<ul data-filter="resultsList" class="listStyleNone fluidList noPadOrMargin productList ccList"></ul>
