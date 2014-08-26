@@ -95,8 +95,13 @@ var store_cc = function(_app) {
 
 					_app.ext.store_cc.u.swipeMobileNav($(".mobileSlideMenu"));
 				
-					_app.templates.homepageTemplate.on('complete.beachmall_carousel',function(event,$context,infoObj) {
+					_app.templates.homepageTemplate.on('complete.store_cc',function(event,$context,infoObj) {
+						$(".mobileSlideMenu.standardNav").addClass("hideOnHome");
 						_app.ext.store_cc.u.runHomeCarousel($context);
+					});
+					
+					_app.templates.homepageTemplate.on('depart.store_cc',function(event,$context,infoObj) {
+						$(".mobileSlideMenu.standardNav").removeClass("hideOnHome");
 					});
 					
 					_app.templates.filteredSearchTemplate.on('complete.store_cc',function(event,$context,infoObj) {
@@ -279,7 +284,8 @@ var store_cc = function(_app) {
 					}
 					$dropdown.stop().animate({"height":height+"px"}, 500);
 					if($tag.parent().hasClass("slideMenuBorder")) {
-						$(".sprite", $tag).hide().addClass("openMenu").fadeIn(200);
+			//			$(".sprite", $tag).hide().addClass("openMenu").fadeIn(200);
+						$(".sprite", $tag).addClass("openMenu");
 					}
 					return true;
 				}
@@ -309,7 +315,8 @@ var store_cc = function(_app) {
 				}
 				$tag.data('timeout',setTimeout(function(){$("[data-dropdown]", $tag).hide();},500));
 				if($tag.parent().hasClass("slideMenuBorder")) {
-						$(".sprite", $tag).hide().removeClass("openMenu").fadeIn(200);
+		//				$(".sprite", $tag).hide().removeClass("openMenu").fadeIn(200);
+						$(".sprite", $tag).removeClass("openMenu");
 					}
 				return true;
 			},
@@ -518,6 +525,19 @@ var store_cc = function(_app) {
 					});
 			}
 			
+		/*	This may be a better way to do this, but it doesn't work if the page isn't reloaded. If tablet goes from 
+				portrait to landscape, the nav isn't hidden properly. Uses hideOnHome class for now.
+			//top nav isn't shown on homepage for desktop. This hides it when hp is loaded, and shows when it's left.
+			handleTopNav : function(state) {
+				if(state == 'enter' && screen.width > 959) {
+					$('.mobileSlideMenu.standardNav').fadeOut(500);
+				}
+				else { //if state != enter, it must be exit and you're leaving home.
+					$('.mobileSlideMenu.standardNav').fadeIn(500);
+				}
+			}
+		*/
+		
 		}, //u [utilities]
 
 //app-events are added to an element through data-app-event="extensionName|functionName"
