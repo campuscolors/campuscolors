@@ -12,7 +12,7 @@
  */
 html, body{padding:0px; margin: 0px;}
 body {font-family:Oxygen, Helvetica, sans-serif;}
-.yearbook {font-family:Times New Roman, serif;}
+/*.yearbook {font-family:yearbook, Times New Roman, serif;}*/
 *, *:before, *:after {-moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box;}
 .showTablet, .showDesktop, .hidePhone {display:none;}
 
