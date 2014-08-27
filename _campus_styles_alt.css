@@ -238,8 +238,8 @@ header {position:relative;}
 
 .tabbedProductContentTD .ui-tabs .ui-tabs-nav {width:290px; margin:0 auto; padding:0; box-shadow:2px 2px 0 0 #cccccc;}
 /* backgrounds for default and active state set in globals w/ gradients */
-.tabbedProductContentTD .ui-tabs .ui-tabs-nav li.ui-state-default {width:100%; border-top:2px outset #b75970; border:2px outset #000000; border-radius:0;}
-.tabbedProductContentTD .ui-tabs .ui-tabs-nav li.ui-state-default {border-right:2px outset #000000; border-bottom:2px outset #000000; border-left:2px outset #b75970;}
+.tabbedProductContentTD .ui-tabs .ui-tabs-nav li.ui-state-default {width:100%; border:2px outset #000000; border-radius:0;}
+.tabbedProductContentTD .ui-tabs .ui-tabs-nav li.ui-state-active {border-top:2px outset #b75970; border-right:2px outset #000000; border-bottom:2px outset #000000; border-left:2px outset #b75970;}
 .tabbedProductContentTD .ui-tabs .ui-tabs-nav li.ui-state-default a {width:100%; color:#ffffff; text-align:center; font-family:yearbook, Times New Roman, serif;}
 .tabbedProductContentTD .ui-widget.ui-widget-content.ui-corner-bottom.ui-corner-tr {width:290px; margin:0 auto; background:none; border:none; border-radius:0; font-family:yearbook, Times New Roman, serif;}
 .tabbedProductContentTD .tabContent.ui-tabs-panel.ui-widget-content.ui-corner-bottom {border:none;}
@@ -310,8 +310,19 @@ header {position:relative;}
 	.filterListTemplate button {margin:0 0 10px 10px;}
 	.splashPageListTemplate .title {height:32px; bottom:0; color:#ffffff; background-color:rgba(1,1,1,0.5);}
 	.ccList .prodInfo {bottom:0;}
-}
-
+	
+	.prodViewerContainer {width:728px; margin:0 auto;}
+	.imageContainer, .prodSummaryContainer {width:50%; float:left;}
+	.productPage .addtocartbutton {padding:0;}
+	.tabbedProductContentTD {clear:both;}
+	.tabbedProductContentTD .ui-tabs .ui-tabs-nav {width:auto; margin:10px auto; padding:0; border-bottom:5px solid #333333; box-shadow:0 0 0 0;}
+	.tabbedProductContentTD .ui-tabs .ui-tabs-nav li.ui-state-default {width:auto; background:#b2b4b1; border:none; border-radius:4px 4px 0 0;}
+	.tabbedProductContentTD .ui-tabs .ui-tabs-nav li.ui-state-active {background:#333333;}
+	.tabbedProductContentTD .ui-widget.ui-widget-content.ui-corner-bottom.ui-corner-tr {width:80%; float:left}
+	.prodlistRelatedContainer {width:20%; float:left;}
+	
+	
+	
 @media screen and (min-width : 960px) {
 	.wrapper {width:920px; margin:0 auto; background-color:rgba(1,1,1,.1);}
 	.listWrapper, .standardNav .slideMenuBorder {width:920px;}

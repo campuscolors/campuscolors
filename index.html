@@ -1075,14 +1075,15 @@ this will likely become more flexible in the future. ###
 		
 			<div data-tlc="bind $var '.%attribs.zoovy:prod_cpsiawarning'; if(is $var --notblank) {{apply --add --class='marginBottom'}}; quickstart#cpsiawarning  --legacy;"></div>
 			<div data-tlc="bind $var '.%attribs.zoovy:qty_price'; if(is $var --notblank) {{apply --add --class='marginBottom'}}; store_product#quantitydiscounts  --legacy;"></div>
-		
-			<section class="marginBottom hidePhone showTabletBlock clearfix">
-				<span data-tlc="bind $var '.reviews.average'; if(is $var --notblank) {{format --prepend='review_'; apply --add --class=$var; }};" class="reviewSprite floatLeft marginRight"></span>
-				<span data-tlc="bind $var '.reviews.total'; if (is $var --notblank;) {{format --prepend=' from ' --append=' reviews'; apply --append;}};" class='floatLeft'></span>
-			</section>
-	
+
 		</div> <!-- //prodSummaryContainer -->
 	
+		<div class="center">
+			<section class="marginBottom hidePhone showTablet">
+				<span data-tlc="bind $var '.reviews.average'; if(is $var --notblank) {{format --prepend='review_'; apply --add --class=$var; }};" class="reviewSprite marginRight"></span>
+				<span data-tlc="bind $var '.reviews.total'; if (is $var --notblank;) {{format --prepend=' from ' --append=' reviews'; apply --append;}};"></span>
+			</section>
+		</div>
 	
 		<div class="tabbedProductContentTD">
 			<!--
@@ -1138,11 +1139,11 @@ this will likely become more flexible in the future. ###
 			</div>
 	
 		</div> <!-- //tabbedProductContentTD -->
+		<div class="prodlistRelatedContainer hidePhone showTabletBlock">
+			<ul data-tlc="bind $var '.%attribs.zoovy:related_products'; store_prodlist#productlist  --hidePagination='true' --hideSummary='true' --prepend='<h2>Similar Items</h2>' --withReviews='1' --templateid='productListTemplate'  --legacy; apply --append;" class="listStyleNone fluidList clearfix noPadOrMargin productList"></ul>
+		</div>
 	</div> <!-- //prodViewerContainer -->
 	
-	<div class="prodlistRelatedContainer hidePhone showTabletBlock">
-		<ul data-tlc="bind $var '.%attribs.zoovy:related_products'; store_prodlist#productlist  --hidePagination='true' --hideSummary='true' --prepend='<h2>Similar Items</h2>' --withReviews='1' --templateid='productListTemplate'  --legacy; apply --append;" class="listStyleNone fluidList clearfix noPadOrMargin productList"></ul>
-	</div>
 
 
 </div><!-- productTemplate -->
