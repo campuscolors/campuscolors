@@ -86,6 +86,8 @@ css files should be included before any .js file to ensure they are downloaded i
 <script data-apptimize="embed" type="text/javascript" src="extensions/store_crm.js"></script>
 <script data-apptimize="embed" type="text/javascript" src="extensions/store_tracking.js"></script>
 <script data-apptimize="embed" type="text/javascript" src="app-quickstart.js"></script>
+<script data-apptimize="embed" type="text/javascript" src="extensions/partner_addthis.js"></script>
+
 <script data-apptimize="embed" type="text/javascript" src="resources/jquery.touchSwipe-1.3.3.min.js"></script>
 <script data-apptimize="embed" type="text/javascript" src="resources/jquery.carouFredSel-6.2.0.min.js"></script>
 
@@ -109,7 +111,7 @@ $(document).ready(function(){
 	if(!paramStr || paramStr.indexOf('_escaped_fragment_') < 0){
 		window.myApp = new initApp({
 			"_robotHasGreeted" : false, <!-- versionhere -->
-			"release":"201408.20140818152200",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
+			"release":"201408.20140826175300",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
 			"_clientid":"zmvc", //zmvc for store app, 1pc for one page checkout.
 			"baseURL":baseURL, //used in non-local mode.
 			"checkoutAuthMode" : "active",//can be passive, active or required
@@ -1008,137 +1010,137 @@ this will likely become more flexible in the future. ###
 	
 	<ul data-tlc="bind $var '.recentCategories.0'; store_navcats#breadcrumb  --templateid='breadcrumbTemplate'  --legacy; apply --append;" class="clearfix noPadOrMargin fluidList breadcrumb"></ul>
 	
-	<table class="prodViewerContainer">
-	<tbody><tr>
-		<td class="imageContainer">
+	<div class="prodViewerContainer">
 	
-	<div data-app-click="quickstart|productPicsInModalShow" class="pointer clearfix">
+		<div class="imageContainer">
+			<h2 data-tlc="bind $var '.%attribs.zoovy:prod_name'; apply --append;"></h2>
+			<section class="marginBottom marginTop clearfix hideTablet">
+				<span data-tlc="bind $var '.reviews.average'; if(is $var --notblank) {{format --prepend='review_'; apply --add --class=$var; }};" class="reviewSprite floatLeft marginRight"></span>
+				<span data-tlc="bind $var '.reviews.total'; if (is $var --notblank;) {{format --prepend=' Read All ' --append=' Reviews'; apply --append;}};" class='floatLeft productPageLink'></span>
+			</section>
+			<div data-app-click="quickstart|productPicsInModalShow" class="pointer clearfix">
+				<div data-tlc="bind $var '.%attribs.zoovy:prod_is_tags'; quickstart#tags --legacy;" class="tagsContainer"></div>
+				<img data-tlc="bind $var '.%attribs.zoovy:prod_image1'; if(is $var --notblank){{apply --img --media=$var --width=450 --height=450 --bgcolor='#ffffff' --replace;}};" src="blank.gif" class="prodBigImage" alt="" height="450" width="450">
+			</div>
 	
-		<div data-tlc="bind $var '.%attribs.zoovy:prod_is_tags'; quickstart#tags --legacy;" class="tagsContainer"></div>
-		<img data-tlc="bind $var '.%attribs.zoovy:prod_image1'; if(is $var --notblank){{apply --img --media=$var --width=340 --height=340 --bgcolor='#ffffff' --replace;}};" src="blank.gif" class="prodBigImage" alt="" height="340" width="340">
-	
-	</div>
-	
-		<div data-tlc="bind $var '.pid'; apply --attrib='data-pid';" class="prodThumbs">
-	
-	<div onclick="myApp.ext.store_product.u.showPicsInModal({'pid':$(this).parent().attr('data-pid'),'int':'2'});" class="pointer"><img data-tlc="bind $var '.%attribs.zoovy:prod_image2';  if(is $var --notblank){{apply --img --media=$var --width=100 --height=100 --bgcolor='#ffffff' --replace;}};" src="blank.gif" alt="" height="100" width="100"></div>
-	
-	<div onclick="myApp.ext.store_product.u.showPicsInModal({'pid':$(this).parent().attr('data-pid'),'int':'3'});" class="pointer"><img data-tlc="bind $var '.%attribs.zoovy:prod_image3'; if(is $var --notblank){{apply --img --media=$var --width=100 --height=100 --bgcolor='#ffffff' --replace;}};" src="blank.gif" alt="" height="100" width="100"></div>
-	
-	<div onclick="myApp.ext.store_product.u.showPicsInModal({'pid':$(this).parent().attr('data-pid'),'int':'4'});" class="pointer"><img data-tlc="bind $var '.%attribs.zoovy:prod_image4'; if(is $var --notblank){{apply --img --media=$var --width=100 --height=100 --bgcolor='#ffffff' --replace;}};" src="blank.gif" alt="" height="100" width="100"></div>
-	
+			<div data-tlc="bind $var '.pid'; apply --attrib='data-pid';" class="prodThumbs displayNone"> <!-- TODO : SET THESE TO DISPLAY AS CAROUSEL W/ MAIN IMAGE -->
+				<div onclick="myApp.ext.store_product.u.showPicsInModal({'pid':$(this).parent().attr('data-pid'),'int':'2'});" class="pointer"><img data-tlc="bind $var '.%attribs.zoovy:prod_image2';  if(is $var --notblank){{apply --img --media=$var --width=100 --height=100 --bgcolor='#ffffff' --replace;}};" src="blank.gif" alt="" height="100" width="100"></div>
+				<div onclick="myApp.ext.store_product.u.showPicsInModal({'pid':$(this).parent().attr('data-pid'),'int':'3'});" class="pointer"><img data-tlc="bind $var '.%attribs.zoovy:prod_image3'; if(is $var --notblank){{apply --img --media=$var --width=100 --height=100 --bgcolor='#ffffff' --replace;}};" src="blank.gif" alt="" height="100" width="100"></div>
+				<div onclick="myApp.ext.store_product.u.showPicsInModal({'pid':$(this).parent().attr('data-pid'),'int':'4'});" class="pointer"><img data-tlc="bind $var '.%attribs.zoovy:prod_image4'; if(is $var --notblank){{apply --img --media=$var --width=100 --height=100 --bgcolor='#ffffff' --replace;}};" src="blank.gif" alt="" height="100" width="100"></div>
+			</div>
 		</div>
 	
-		</td>
-	
-		<td class="prodSummaryContainer marginBottom no_underline">
-		<h1 data-tlc="bind $var '.%attribs.zoovy:prod_name'; apply --append;"></h1>
+		<div class="prodSummaryContainer marginBottom no_underline">
 
-		<div class="marginBottom">
-			<h5 data-tlc="bind $var '.pid'; if (is $var --notblank;) {{format --prepend='Sku: '; apply --append;}};" class="stid"></h5>
-			<h5><a href='#' data-tlc="bind $var '.%attribs.zoovy:prod_mfg'; if(is $var --notblank;) {{apply --append; format --prepend='#!search/keywords/'; apply --attrib='href';}};"></a></h5>
-			<h5 data-tlc="bind $var '.%attribs.zoovy:prod_mfgid';  if (is $var --notblank;) {{format --prepend='Mfg ID: '; apply --append;}};"></h5>
-		</div>
-
-		<div class="priceContainer marginBottom">
-			<h4 data-tlc="bind $var '.%attribs.zoovy:base_price'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='Our Price: '; apply --append;}};" class="basePrice"></h4>
-			<h5 data-tlc="bind $var '.%attribs.zoovy:prod_msrp';  if (is $var --notblank;) {{format --currency='USD'; format --prepend='MSRP: ';  apply --append;}};" class="prodMSRP"></h5>
-			<span class="savings">
-				<span data-useparentdata='1' data-tlc="quickstart#priceretailsavingsdifference  --legacy; apply --append;" class="savingsDifference"></span>
-				<span data-useparentdata='1' data-tlc="quickstart#priceretailsavingspercentage  --legacy; apply --append;" class="savingsPercentage"></span>
-			</span>
-		</div>
-		<div class="socialLinks"></div>
-	
-	
-		<table class="marginBottom fullWidth gridTable" data-app-role="childrenSiblingsContainer">
-			<tbody data-tlc="bind $var '.%attribs.zoovy:grp_children'; store_prodlist#productlist  --hideSummary='true' --withInventory='1' --withVariations='1' --templateid='productListTemplateChildren'  --legacy; apply --append;"></tbody>
-		</table>
-	
-	
-		<div data-tlc="bind $var '.%attribs.zoovy:ship_latency'; if (is $var --notblank;) {{ format --prepend='Normally ships in '; format --append=' day(s)'; apply --append;}};" class="latency marginBottom"></div>
-		<div data-app-role="timeInTransit" class="displayNone"></div>
-	
-		<form data-tlc="bind $var '.pid'; store_product#atcform  --legacy; apply --append;" class="prodViewerAddToCartForm clearfix marginBottom" action="#" data-app-submit="quickstart|productAdd2Cart" data-show="inline">
-	
-			<fieldset data-tlc="bind $var '.pid'; store_product#atcvariations  --legacy; apply --append;" class="borderNone"></fieldset>
-			<fieldset data-tlc="bind $var '.'; store_product#atcquantityinput  --defaultvalue='1' --legacy;" class="borderNone"></fieldset>
-	
-			<div class='marginBottom'><input data-tlc="bind $var '.pid'; store_product#addtocartbutton  --legacy;" value="Add to Cart" class="applyButton addtocartbutton displayNone" type="submit"></div>
-		</form>
-	
-		<div data-tlc="bind $var '.%attribs.zoovy:prod_cpsiawarning'; if(is $var --notblank) {{apply --add --class='marginBottom'}}; quickstart#cpsiawarning  --legacy;"></div>
-		<div data-tlc="bind $var '.%attribs.zoovy:qty_price'; if(is $var --notblank) {{apply --add --class='marginBottom'}}; store_product#quantitydiscounts  --legacy;"></div>
-	
-		<section class="marginBottom clearfix">
-			<span data-tlc="bind $var '.reviews.average'; if(is $var --notblank) {{format --prepend='review_'; apply --add --class=$var; }};" class="reviewSprite floatLeft marginRight"></span>
-			<span data-tlc="bind $var '.reviews.total'; if (is $var --notblank;) {{format --prepend=' from ' --append=' reviews'; apply --append;}};" class='floatLeft'></span>
-		</section>
-	
-		<menu data-tlc="bind $var '.pid'; apply --attrib='data-pid';" class="CRMButtonMenu">
-	
-		<a href="#" data-app-click="store_crm|productReviewShow">Write Review</a>	|
-	
-		<a href="#" data-app-click="quickstart|productAdd2List" data-listid="wishlist">Add to Wishlist</a>
-	
-		</menu>
-	
-		</td>
-	</tr>
-	<tr>
-		<td colspan="2" class="tabbedProductContentTD">
-	<!--
-	the tabs are built in an onComplete.  ID's are added based on sku AND index, so the index (order) of the tabs MUST match the order of the tabContent divs
-	or the tab clicked won't open the right content.
-	It's done this way because ID's hard coded into template are bad mojo (templates are recycled) and because using data-binds to add id's caused some serious issues
-	-->
-	
-	<div data-tlc="bind $var '.pid'; apply --attrib='data-pid';" class="prodTabs tabbedProductContent applyAnytabs">
-		<ul class="tabs">
-			<li class="prodDescTab"><a href="#prodDesc">Description</a></li>
-			<li data-tlc="bind $var '.%attribs.zoovy:prod_detail'; if(is $var --notblank) {{apply --show; }};" class="prodDetailTab displayNone"><a href="#prodSpecs">Specs</a></li>
-			<li data-tlc="bind $var '.%attribs.zoovy:prod_features'; if(is $var --notblank) {{ apply --show; }};" class="prodFeaturesTab displayNone"><a href="#prodFeatures">Features</a></li>
-			<li class="prodReviewsTab"><a href="#prodReviews">Reviews</a></li>
-			<li data-tlc="bind $var '.%attribs.youtube:videoid'; if(is $var --notblank) {{ apply --show; }};" class="prodVideoTab displayNone"><a href="#prodVideo">Video</a></li>
-			<li data-tlc="bind $var '.%attribs.zoovy:accessory_products'; if(is $var --notblank) {{ apply --show; }};" class="prodAccessoriesTab displayNone"><a href="#prodAccessories">Accessories</a></li>
-		</ul>
-	
-		<div class="tabContent" data-anytab-content="prodDesc">
-			<div data-tlc="bind $var '.%attribs.zoovy:prod_desc'; if (is $var --notblank;) {{render --wiki='quickstart'; apply --append;}};"></div>
-		</div>
-	
-		<div class="tabContent" data-anytab-content="prodSpecs">
-			<div data-tlc="bind $var '.%attribs.zoovy:prod_detail'; if (is $var --notblank;) {{render --wiki='quickstart'; apply --append;}};"></div>
-		</div>
-	
-		<div class="tabContent" data-anytab-content="prodFeatures">
-			<div data-tlc="bind $var '.%attribs.zoovy:prod_features'; if (is $var --notblank;) {{render --wiki='quickstart'; apply --append;}};"></div>
-		</div>
-	
-	
-		<div class="tabContent" data-anytab-content="prodReviews">
-	
-			<div data-tlc="bind $var '.pid'; apply --attrib='data-pid';" class="clearfix alignRight">
-				<button class="applyButton" data-app-click="store_crm|productReviewShow">Write Review</button>
+			<div class="priceContainer marginBottom">
+				<h4 data-tlc="bind $var '.%attribs.zoovy:base_price'; if (is $var --notblank;) {{format --currency='USD'; format --append='<span class=&quot;priceDesc&quot;>Our Price: </span>'; apply --append;}};" class="basePrice"></h4>
+				<h5 data-tlc="bind $var '.%attribs.zoovy:prod_msrp';  if (is $var --notblank;) {{format --currency='USD'; format --prepend='MSRP: ';  apply --append;}};" class="prodMSRP"></h5>
+				<span class="savings">
+					<span data-useparentdata='1' data-tlc="quickstart#priceretailsavingsdifference  --legacy; apply --append;" class="savingsDifference"></span>
+					<span data-useparentdata='1' data-tlc="quickstart#priceretailsavingspercentage  --legacy; apply --append;" class="savingsPercentage"></span>
+				</span>
+			</div>
+			
+			<div class="marginBottom displayNone">
+				<h5 data-tlc="bind $var '.pid'; if (is $var --notblank;) {{format --prepend='Sku: '; apply --append;}};" class="stid"></h5>
+				<h5><a href='#' data-tlc="bind $var '.%attribs.zoovy:prod_mfg'; if(is $var --notblank;) {{apply --append; format --prepend='#!search/keywords/'; apply --attrib='href';}};"></a></h5>
+				<h5 data-tlc="bind $var '.%attribs.zoovy:prod_mfgid';  if (is $var --notblank;) {{format --prepend='Mfg ID: '; apply --append;}};"></h5>
 			</div>
 
-			<ul data-tlc="bind $var '.reviews.@reviews'; controller#loop --templateid='productReviewsTemplateDetail'; if (is $var --notblank;) {{apply --append;}};" class="listStyleNone clearfix productReviewsList"></ul>
-		</div>
+			<form data-tlc="bind $var '.pid'; store_product#atcform  --legacy; apply --append;" class="prodViewerAddToCartForm clearfix marginBottom" action="#" data-app-submit="quickstart|productAdd2Cart" data-show="inline">
+				<fieldset data-tlc="bind $var '.pid'; store_product#atcvariations  --legacy; apply --append;" class="borderNone"></fieldset> <!-- TODO : custom variation for size -->
+				<fieldset data-tlc="bind $var '.'; store_product#atcquantityinput  --defaultvalue='1' --legacy;" class="borderNone"></fieldset>
+				<div class='marginBottom'><input data-tlc="bind $var '.pid'; store_product#addtocartbutton  --legacy;" value="Add to Cart" class="applyButton addtocartbutton yearbook displayNone" type="submit"></div>
+			</form>
+		
+			<menu data-tlc="bind $var '.pid'; apply --attrib='data-pid';" class="CRMButtonMenu">
+				<a href="#" data-app-click="quickstart|productAdd2List" data-listid="wishlist" class="productPageLink">Add to Wishlist</a> | 
+				<a href="#" data-app-click="" class="productPageLink">E-mail to a friend</a> <!-- TODO : set up e-mail page link feature, possible to use addThis' feature? -->
+				<!-- <a href="#" data-app-click="store_crm|productReviewShow">Write Review</a>	| -->
+			</menu>
+			
+			<div data-tlc="bind $var '.%attribs.zoovy:ship_latency'; if (is $var --notblank;) {{apply --show;}};" class="displayNone">
+				<div data-tlc="bind $var '.%attribs.zoovy:ship_latency'; if (is $var --notblank;) {{ format --prepend='Normally ships in '; format --append=' day(s)'; apply --append;}};" class="latency"></div>
+			</div>
+			<div data-app-role="timeInTransit" class="displayNone"></div>
 	
-		<div class="tabContent" data-anytab-content="prodVideo">
-			<div data-tlc="bind $var '.%attribs.youtube:videoid'; controller#youtubevideo --legacy;"></div>
-		</div>
-
-		<div class="tabContent" data-anytab-content="prodAccessories">
-			<ul data-tlc="bind $var '.%attribs.zoovy:accessory_products'; store_prodlist#productlist  --hidePagination='true' --hideSummary='true' --withReviews='1' --withInventory='1' --withVariations='1' --templateid='productListTemplateATC'  --legacy; apply --append;" class="listStyleNone fluidList clearfix noPadOrMargin lineItemProdlist"></ul>
-		</div>
-
-	</div>
+			<div data-tlc="bind $var '.%attribs.user:fit_tip'; if (is $var --notblank;) {{format --prepend='<h2 class=&quot;yearbook&quot;>FIT TIP</h2>' apply --append;}};" class="fitTip"></div> <!-- TODO : confirm attrib name for this feature (and link below it) -->
+			<a data-tlc="bind $var '.%attribs.user:fit_tip'; if (is $var --notblank;) {{apply --show;}};" class="productPageLink displayNone floatLeft" href="#">Click here for the Size Chart</a>
 	
-		</td>
-	</tr>
-	</tbody></table>
-	<div class="prodlistRelatedContainer">
+			<div class="socialLinks"></div> <!-- TODO : addThis doesn't support Instagram... hmmm -->
+			
+			<table class="marginBottom fullWidth gridTable" data-app-role="childrenSiblingsContainer">
+				<tbody data-tlc="bind $var '.%attribs.zoovy:grp_children'; store_prodlist#productlist  --hideSummary='true' --withInventory='1' --withVariations='1' --templateid='productListTemplateChildren'  --legacy; apply --append;"></tbody>
+			</table>
+		
+			<div data-tlc="bind $var '.%attribs.zoovy:prod_cpsiawarning'; if(is $var --notblank) {{apply --add --class='marginBottom'}}; quickstart#cpsiawarning  --legacy;"></div>
+			<div data-tlc="bind $var '.%attribs.zoovy:qty_price'; if(is $var --notblank) {{apply --add --class='marginBottom'}}; store_product#quantitydiscounts  --legacy;"></div>
+		
+			<section class="marginBottom hidePhone showTabletBlock clearfix">
+				<span data-tlc="bind $var '.reviews.average'; if(is $var --notblank) {{format --prepend='review_'; apply --add --class=$var; }};" class="reviewSprite floatLeft marginRight"></span>
+				<span data-tlc="bind $var '.reviews.total'; if (is $var --notblank;) {{format --prepend=' from ' --append=' reviews'; apply --append;}};" class='floatLeft'></span>
+			</section>
+	
+		</div> <!-- //prodSummaryContainer -->
+	
+	
+		<div class="tabbedProductContentTD">
+			<!--
+			the tabs are built in an onComplete.  ID's are added based on sku AND index, so the index (order) of the tabs MUST match the order of the tabContent divs
+			or the tab clicked won't open the right content.
+			It's done this way because ID's hard coded into template are bad mojo (templates are recycled) and because using data-binds to add id's caused some serious issues
+			-->
+			
+			<div data-tlc="bind $var '.pid'; apply --attrib='data-pid';" class="prodTabs tabbedProductContent applyAnytabs">
+				<ul class="tabs">
+					<li class="prodDescTab"><a href="#prodDesc">Description</a></li>
+					<li data-tlc="bind $var '.%attribs.zoovy:prod_detail'; if(is $var --notblank) {{apply --show; }};" class="prodDetailTab displayNone"><a href="#prodSpecs">Specs</a></li>
+					<li data-tlc="bind $var '.%attribs.zoovy:prod_features'; if(is $var --notblank) {{ apply --show; }};" class="prodFeaturesTab displayNone"><a href="#prodFeatures">Features</a></li>
+					<li class="prodReviewsTab"><a href="#prodReviews">Reviews</a></li>
+					<li data-tlc="bind $var '.%attribs.youtube:videoid'; if(is $var --notblank) {{ apply --show; }};" class="prodVideoTab displayNone"><a href="#prodVideo">Video</a></li>
+					<li data-tlc="bind $var '.%attribs.zoovy:accessory_products'; if(is $var --notblank) {{ apply --show; }};" class="prodAccessoriesTab displayNone"><a href="#prodAccessories">Accessories</a></li>
+					<li data-tlc="bind $var '.%attribs.user:fit_tip'; if(is $var --notblank) {{ apply --show; }};" class="prodFitTipTab displayNone"><a href="#fitTip">Fit Tip</a></li> <!-- TODO : assign correct var here when attrib is made -->
+				</ul>
+			
+				<div class="tabContent" data-anytab-content="prodDesc">
+					<div data-tlc="bind $var '.%attribs.zoovy:prod_desc'; if (is $var --notblank;) {{render --wiki='quickstart'; apply --append;}};"></div>
+				</div>
+			
+				<div class="tabContent" data-anytab-content="prodSpecs">
+					<div data-tlc="bind $var '.%attribs.zoovy:prod_detail'; if (is $var --notblank;) {{render --wiki='quickstart'; apply --append;}};"></div>
+				</div>
+			
+				<div class="tabContent" data-anytab-content="prodFeatures">
+					<div data-tlc="bind $var '.%attribs.zoovy:prod_features'; if (is $var --notblank;) {{render --wiki='quickstart'; apply --append;}};"></div>
+				</div>
+			
+				<div class="tabContent" data-anytab-content="prodReviews">
+					<div data-tlc="bind $var '.pid'; apply --attrib='data-pid';" class="clearfix alignRight">
+						<button class="applyButton" data-app-click="store_crm|productReviewShow">Write Review</button>
+					</div>
+
+					<ul data-tlc="bind $var '.reviews.@reviews'; controller#loop --templateid='productReviewsTemplateDetail'; if (is $var --notblank;) {{apply --append;}};" class="listStyleNone clearfix productReviewsList"></ul>
+				</div>
+			
+				<div class="tabContent" data-anytab-content="prodVideo">
+					<div data-tlc="bind $var '.%attribs.youtube:videoid'; controller#youtubevideo --legacy;"></div>
+				</div>
+
+				<div class="tabContent" data-anytab-content="prodAccessories">
+					<ul data-tlc="bind $var '.%attribs.zoovy:accessory_products'; store_prodlist#productlist  --hidePagination='true' --hideSummary='true' --withReviews='1' --withInventory='1' --withVariations='1' --templateid='productListTemplateATC'  --legacy; apply --append;" class="listStyleNone fluidList clearfix noPadOrMargin lineItemProdlist"></ul>
+				</div>
+				
+				<div class="tabContent" data-anytab-content="fitTip">
+					HA - HAA! There isn't any content assigned here yet!
+					<!-- TODO : DETERMINE WHAT THE CONTENT TYPE FOR THIS LOCATION IS (GRAPHIC, TEXT, ETC.) -->
+				</div>
+
+			</div>
+	
+		</div> <!-- //tabbedProductContentTD -->
+	</div> <!-- //prodViewerContainer -->
+	
+	<div class="prodlistRelatedContainer hidePhone showTabletBlock">
 		<ul data-tlc="bind $var '.%attribs.zoovy:related_products'; store_prodlist#productlist  --hidePagination='true' --hideSummary='true' --prepend='<h2>Similar Items</h2>' --withReviews='1' --templateid='productListTemplate'  --legacy; apply --append;" class="listStyleNone fluidList clearfix noPadOrMargin productList"></ul>
 	</div>
 
