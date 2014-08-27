@@ -55,7 +55,6 @@ document.getElementsByTagName('base')[0].href = baseURL;
 all css includes need to be after the js that changes the base url.
 css files should be included before any .js file to ensure they are downloaded in parallel
 -->
-<link rel="stylesheet" type="text/css" href="http://fast.fonts.net/cssapi/e0e57771-0001-4e8f-91d3-a5bda971ea83.css"/>
 <link data-apptimize="embed" rel="stylesheet" type="text/css" href="app-quickstart.css" />
 <link data-apptimize="embed" rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/themes/ui-lightness/jquery-ui.css" />
 <link data-apptimize="embed" rel="stylesheet" type="text/css" href="_campus_styles_alt.css"/>
@@ -64,6 +63,7 @@ css files should be included before any .js file to ensure they are downloaded i
 
 <link rel="SHORTCUT ICON" href="app-favicon.ico" />
 <link rel="ICON" href="app-favicon.ico" />
+<script type="text/javascript" src="http://fast.fonts.net/jsapi/e0e57771-0001-4e8f-91d3-a5bda971ea83.js"></script>
 
 <!-- jquery and jquery ui are pivotal to the functionality of the app. load them early -->
 <script data-apptimize="embed" type="text/javascript" src="jquery.1.10.2.min.js"></script>
@@ -112,7 +112,7 @@ $(document).ready(function(){
 	if(!paramStr || paramStr.indexOf('_escaped_fragment_') < 0){
 		window.myApp = new initApp({
 			"_robotHasGreeted" : false, <!-- versionhere -->
-			"release":"201408.20140827140400",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
+			"release":"201408.20140827141500",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
 			"_clientid":"zmvc", //zmvc for store app, 1pc for one page checkout.
 			"baseURL":baseURL, //used in non-local mode.
 			"checkoutAuthMode" : "active",//can be passive, active or required
