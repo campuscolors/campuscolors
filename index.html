@@ -111,7 +111,7 @@ $(document).ready(function(){
 	if(!paramStr || paramStr.indexOf('_escaped_fragment_') < 0){
 		window.myApp = new initApp({
 			"_robotHasGreeted" : false, <!-- versionhere -->
-			"release":"201408.20140827142600",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
+			"release":"201408.20140827150600",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
 			"_clientid":"zmvc", //zmvc for store app, 1pc for one page checkout.
 			"baseURL":baseURL, //used in non-local mode.
 			"checkoutAuthMode" : "active",//can be passive, active or required
@@ -174,7 +174,7 @@ var _robots = {
 	<div id='appPreView'>
 	<table>
 	<tr>
-		<td><!-- put logo here --><!--</td>
+		<td>--><!-- put logo here --><!--</td>
 		<td>
 
 		<div id="loader">
@@ -253,7 +253,7 @@ var _robots = {
 		</div>
 	</div>
 	<div class="mobileNav greenGradient hideTablet hideDesktop">
-		<div class="mobileMenu sprite pointer" onclick=$(".mobileSlideMenu").animate({"left":"-5px"},500);><span class="bareWhiteLink">Menu</span></div>
+		<div class="mobileMenu sprite pointer" onclick="$('.mobileSlideMenu').animate({'left':'-5px'},500);"><span class="bareWhiteLink">Menu</span></div>
 		<span class="spacer"></span>
 		<a href="#!customer/myaccount/" class="mobileAcct sprite"><span class="bareWhiteLink">Account</span></a>
 		<span class="spacer"></span>
@@ -273,7 +273,7 @@ var _robots = {
 	</div>
 	
 	<div class="mobileSlideMenu standardNav">
-		<span class="mobileSlideMenuClose sprite" onclick=$(".mobileSlideMenu").animate({"left":"-275px"},500);></span>
+		<span class="mobileSlideMenuClose sprite" onclick="$('.mobileSlideMenu').animate({'left':'-275px'},500);"></span>
 		<div class="slideMenuBorder" data-tlc="bind $var '.'; store_cc#test --legacy;">
 			<div class="levelOne slideTitle yearbook">SHOP BY</div>
 			<div class="levelOne slideTop" onclick="myApp.ext.store_cc.a.showDropDownClick($(this));">
@@ -645,11 +645,11 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 	
 	
 <!-- ORIGIONAL CONTENT
-	<ul data-tlc="bind $var '.@subcategoryDetail'; store_navcats#categorylist  --detail='max' --templateid='categoryListTemplate'  --legacy;" class="listStyleNone fluidList clearfix noPadOrMargin categoryList"></ul>
-	<ul data-tlc="bind $var '.@products'; store_prodlist#productlist  --hideSummary='1' --withReviews='1' --withVariations='1' --withInventory='1' --templateid='productListTemplate'  --legacy;" class="listStyleNone fluidList clearfix noPadOrMargin productList"></ul>
-	<p data-tlc="bind $var '.%page.description'; if (is $var --notblank;) {{ render --wiki='quickstart'; apply --append;}};"></p>
-	<ul data-tlc="quickstart#searchbytag --tag='IS_BESTSELLER' --title='Best Sellers' --size='8' --templateid='productListTemplateResultsNoPreview';" class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
-	<ul data-tlc="bind $var '.$listName.@products'; store_prodlist#productlist  --hideSummary='1' --withReviews='1' --withVariations='1' --withInventory='1' --templateid='productListTemplate'  --legacy;" class="listStyleNone fluidList clearfix noPadOrMargin productList"></ul>
+	<ul data-tlc="bind $var '.@subcategoryDetail'; store_navcats#categorylist  - -detail='max' - -templateid='categoryListTemplate'  - -legacy;" class="listStyleNone fluidList clearfix noPadOrMargin categoryList"></ul>
+	<ul data-tlc="bind $var '.@products'; store_prodlist#productlist  - -hideSummary='1' - -withReviews='1' - -withVariations='1' - -withInventory='1' - -templateid='productListTemplate'  - -legacy;" class="listStyleNone fluidList clearfix noPadOrMargin productList"></ul>
+	<p data-tlc="bind $var '.%page.description'; if (is $var - -notblank;) {{ render - -wiki='quickstart'; apply - -append;}};"></p>
+	<ul data-tlc="quickstart#searchbytag - -tag='IS_BESTSELLER' - -title='Best Sellers' - -size='8' - -templateid='productListTemplateResultsNoPreview';" class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
+	<ul data-tlc="bind $var '.$listName.@products'; store_prodlist#productlist  - -hideSummary='1' - -withReviews='1' - -withVariations='1' - -withInventory='1' - -templateid='productListTemplate'  - -legacy;" class="listStyleNone fluidList clearfix noPadOrMargin productList"></ul>
 -->
 </div>
 
@@ -671,12 +671,14 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 </div>
 
 
-<li id="splashPageListTemplate" class="splashPageListTemplate floatLeft marginRight">
-	<a data-tlc="bind $href '.link'; apply --attrib='href';">
-		<img data-tlc="bind $var '.img'; apply --img --media=$var --width=210 --height=240 --bgcolor='#ffffff' --replace;" src="blank.gif" class="prodThumb" alt="" height="240" width="210">
-		<div data-tlc="bind $var '.id'; apply --append;" class="title center"></div>
-	</a>
-</li>
+<ul>
+	<li id="splashPageListTemplate" class="splashPageListTemplate floatLeft marginRight">
+		<a data-tlc="bind $href '.link'; apply --attrib='href';">
+			<img data-tlc="bind $var '.img'; apply --img --media=$var --width=210 --height=240 --bgcolor='#ffffff' --replace;" src="blank.gif" class="prodThumb" alt="" height="240" width="210">
+			<div data-tlc="bind $var '.id'; apply --append;" class="title center"></div>
+		</a>
+	</li>
+</ul>
 
 
 <div id="filteredSearchTemplate" data-tlc="store_cc#filterform;" data-filter="parent" class="listWrapper filteredSearchTemplate">
@@ -717,19 +719,19 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 			<div data-tlc="store_cc#showmobilefilter;" data-filterview='1' data-top='0' class="filterGroupTitle marginBottom">League<span class="sprite"></span></div>
 				<div class="filterHider">
 					<div class="showFilterOption">
-						<input name="college" data-filter-type="checkboxList" data-filter-index="videoid" data-filter-type="hasAttribute" type="checkbox"><label>College</label>
+						<input name="college" data-filter-type="checkboxList" data-filter-index="videoid" data-filter-typ="hasAttribute" type="checkbox"><label>College</label>
 					</div>
 					<div class="showFilterOption">
-							<input name="nfl" data-filter-type="checkboxList" data-filter-index="videoid" data-filter-type="hasAttribute" type="checkbox"><label>NFL</label>
+							<input name="nfl" data-filter-type="checkboxList" data-filter-index="videoid" data-filter-typ="hasAttribute" type="checkbox"><label>NFL</label>
 					</div>
 					<div class="showFilterOption">
-							<input name="mlb" data-filter-type="checkboxList" data-filter-index="videoid" data-filter-type="hasAttribute" type="checkbox"><label>MLB</label>
+							<input name="mlb" data-filter-type="checkboxList" data-filter-index="videoid" data-filter-typ="hasAttribute" type="checkbox"><label>MLB</label>
 					</div>
 					<div class="showFilterOption">
-							<input name="nba" data-filter-type="checkboxList" data-filter-index="videoid" data-filter-type="hasAttribute" type="checkbox"><label>NBA</label>
+							<input name="nba" data-filter-type="checkboxList" data-filter-index="videoid" data-filter-typ="hasAttribute" type="checkbox"><label>NBA</label>
 					</div>
 					<div class="showFilterOption">
-							<input name="nhl" data-filter-type="checkboxList" data-filter-index="videoid" data-filter-type="hasAttribute" type="checkbox"><label>NHL</label>
+							<input name="nhl" data-filter-type="checkboxList" data-filter-index="videoid" data-filter-typ="hasAttribute" type="checkbox"><label>NHL</label>
 					</div>
 				</div>	
 		</div>
@@ -737,19 +739,19 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 			<div data-tlc="store_cc#showmobilefilter;" data-filterview='0' data-top='0' class="filterGroupTitle marginBottom">League<span class="sprite"></span></div>
 				<div class="filterHider">
 					<div class="showFilterOption">
-						<input name="college" data-filter-type="checkboxList" data-filter-index="videoid" data-filter-type="hasAttribute" type="checkbox"><label>College</label>
+						<input name="college" data-filter-type="checkboxList" data-filter-index="videoid" data-filter-typ="hasAttribute" type="checkbox"><label>College</label>
 					</div>
 					<div class="showFilterOption">
-							<input name="nfl" data-filter-type="checkboxList" data-filter-index="videoid" data-filter-type="hasAttribute" type="checkbox"><label>NFL</label>
+							<input name="nfl" data-filter-type="checkboxList" data-filter-index="videoid" data-filter-typ="hasAttribute" type="checkbox"><label>NFL</label>
 					</div>
 					<div class="showFilterOption">
-							<input name="mlb" data-filter-type="checkboxList" data-filter-index="videoid" data-filter-type="hasAttribute" type="checkbox"><label>MLB</label>
+							<input name="mlb" data-filter-type="checkboxList" data-filter-index="videoid" data-filter-typ="hasAttribute" type="checkbox"><label>MLB</label>
 					</div>
 					<div class="showFilterOption">
-							<input name="nba" data-filter-type="checkboxList" data-filter-index="videoid" data-filter-type="hasAttribute" type="checkbox"><label>NBA</label>
+							<input name="nba" data-filter-type="checkboxList" data-filter-index="videoid" data-filter-typ="hasAttribute" type="checkbox"><label>NBA</label>
 					</div>
 					<div class="showFilterOption">
-							<input name="nhl" data-filter-type="checkboxList" data-filter-index="videoid" data-filter-type="hasAttribute" type="checkbox"><label>NHL</label>
+							<input name="nhl" data-filter-type="checkboxList" data-filter-index="videoid" data-filter-typ="hasAttribute" type="checkbox"><label>NHL</label>
 					</div>
 				</div>	
 		</div>
@@ -766,28 +768,28 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 		</div>
 	-->
 	<!-- Samples of checkbox binds (for select list attribs) for reference once test products are available. TODO : Set up for test prods. 
-		<div data-tlc="bind $var '.options.user:primary_color'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
+		<div data-tlc="bind $var '.options.user:primary_color'; if(is $var - -blank){{apply - -hide;}};" class="filterGroup marginBottom">
 			<h5 class="highlightBG_2">Name:</h5>
 			<div class="filterCheckboxList" 
 				data-tlc="bind $index '.options.user:primary_color.index';
 					bind $cbl '.options.user:primary_color.options'; 
-					store_filter#filtercheckboxlist --index=$index;">
+					store_filter#filtercheckboxlist - -index=$index;">
 			</div>
 		</div>
 		
-		<div data-tlc="bind $var '.options.user:app_brand'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
+		<div data-tlc="bind $var '.options.user:app_brand'; if(is $var - -blank){{apply - -hide;}};" class="filterGroup marginBottom">
 			<h5 class="highlightBG_2">Brand:</h5>
 			<div class="filterCheckboxList" 
 				data-tlc="bind $index '.options.user:app_brand.index';
 					bind $cbl '.options.user:app_brand.options'; 
-					store_filter#filtercheckboxlist --index=$index;"></div>
+					store_filter#filtercheckboxlist - -index=$index;"></div>
 		</div>
-		<div data-tlc="bind $var '.options.user:helmet_type'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
+		<div data-tlc="bind $var '.options.user:helmet_type'; if(is $var - -blank){{apply - -hide;}};" class="filterGroup marginBottom">
 			<h5 class="highlightBG_2">Helmet Type:</h5>
 			<div class="filterCheckboxList" 
 				data-tlc="bind $index '.options.user:helmet_type.index';
 					bind $cbl '.options.user:helmet_type.options'; 
-					store_filter#filtercheckboxlist --index=$index;"></div>
+					store_filter#filtercheckboxlist - -index=$index;"></div>
 		</div>
 	-->
 		<!--
@@ -988,7 +990,7 @@ SANITY -> if you change the height and width of this image, change the .minimalM
 			</div>
 		</div>
 	</a>
-	<!-- <a class="hideInMinimalMode pointer moreDetails" data-tlc="bind $seoname '.prod_name'; bind $var '.'; store_routing#seoanchor --type='product' --seo --seoname=$seoname; apply --attrib='href';">more details</a> -->
+	<!-- <a class="hideInMinimalMode pointer moreDetails" data-tlc="bind $seoname '.prod_name'; bind $var '.'; store_routing#seoanchor - -type='product' - -seo - -seoname=$seoname; apply - -attrib='href';">more details</a> -->
 </li>
 </ul>
 
@@ -1065,11 +1067,11 @@ this will likely become more flexible in the future. ###
 				<div class='marginBottom'><input data-tlc="bind $var '.pid'; store_product#addtocartbutton  --legacy;" value="Add to Cart" class="applyButton addtocartbutton yearbook displayNone" type="submit"></div>
 			</form>
 		
-			<menu data-tlc="bind $var '.pid'; apply --attrib='data-pid';" class="CRMButtonMenu">
+			<div data-tlc="bind $var '.pid'; apply --attrib='data-pid';" class="CRMButtonMenu">
 				<a href="#" data-app-click="quickstart|productAdd2List" data-listid="wishlist" class="productPageLink">Add to Wishlist</a> | 
 				<a href="#" data-app-click="" class="productPageLink">E-mail to a friend</a> <!-- TODO : set up e-mail page link feature, possible to use addThis' feature? -->
 				<!-- <a href="#" data-app-click="store_crm|productReviewShow">Write Review</a>	| -->
-			</menu>
+			</div>
 			
 			<div data-tlc="bind $var '.%attribs.zoovy:ship_latency'; if (is $var --notblank;) {{apply --show;}};" class="displayNone">
 				<div data-tlc="bind $var '.%attribs.zoovy:ship_latency'; if (is $var --notblank;) {{ format --prepend='Normally ships in '; format --append=' day(s)'; apply --append;}};" class="latency"></div>
@@ -1525,7 +1527,7 @@ subscribeListsArticle is used for authenticated buyers.
 
 <li id='subscriberListItemTemplate'>
 	<label data-tlc="bind $var '.EXEC_SUMMARY'; apply --attrib='title';" >
-	<input type='checkbox'  data-tlc="bind $id '.ID'; format --prepend='USER#SUB'; apply --attrib='name'; set $checked ''; store_crm#buyersubscribe --id=$id; if(is $checked --notblank;) {{ apply --attrib='checked';}};" />
+	<input type='checkbox'  data-tlc="bind $id '.ID'; format --prepend='USER#SUB'; apply --attrib='name'; set $checked ''; store_crm#buyersubscribe --id=$id; if(is $checked --notblank;) {{ apply --attrib='checked';}};" /></label>
 	<span data-tlc="bind $var '.NAME'; apply --append;"></span>
 </li>
 
