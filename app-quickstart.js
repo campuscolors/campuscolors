@@ -2248,7 +2248,15 @@ effects the display of the nav buttons only. should be run just after the handle
 				else if (infoObj.KEYWORDS) {
 					_app.ext.quickstart.u.updateDOMTitle("Search - keywords: "+infoObj.KEYWORDS);
 					elasticsearch = _app.ext.store_search.u.buildElasticRaw({
-						"query":{
+	   "filter":{
+						  "and" : [
+							 {"query":{"query_string":{"query":decodeURIComponent(infoObj.KEYWORDS), "fields":["prod_name^5","pid","prod_desc"]}}},
+							 {"has_child":{"type":"sku","query": {"range":{"available":{"gte":1}}}}}, //only return item w/ inventory
+							 {"not" : {"term" : {"tags":"IS_DISCONTINUED"}}} //don't show discontinued items
+							 ]
+						  }});
+	// ISSUE W/ script_score WAS BREAKING THIS VERSION, REMOVED UNTIL FIXED.					  
+/*						"query":{
 							"function_score" : {										
 								"query" : {
 									"query_string":{"query":infoObj.KEYWORDS}	
@@ -2256,6 +2264,7 @@ effects the display of the nav buttons only. should be run just after the handle
 								"functions" : [
 									{
 										"filter" : {"query" : {"query_string":{"query":'"'+infoObj.KEYWORDS+'"'}}},
+									//	"script_score" : {"script":"_score * 10"}
 										"script_score" : {"script":"10"}
 										}
 									],
@@ -2263,7 +2272,7 @@ effects the display of the nav buttons only. should be run just after the handle
 								}
 							}
 						});
-					}
+*/					}
 				else	{
 					_app.ext.quickstart.u.updateDOMTitle("Search - error!");
 					}
