@@ -63,7 +63,6 @@ css files should be included before any .js file to ensure they are downloaded i
 
 <link rel="SHORTCUT ICON" href="app-favicon.ico" />
 <link rel="ICON" href="app-favicon.ico" />
-<script type="text/javascript" src="http://fast.fonts.net/jsapi/e0e57771-0001-4e8f-91d3-a5bda971ea83.js"></script>
 
 <!-- jquery and jquery ui are pivotal to the functionality of the app. load them early -->
 <script data-apptimize="embed" type="text/javascript" src="jquery.1.10.2.min.js"></script>
@@ -112,7 +111,7 @@ $(document).ready(function(){
 	if(!paramStr || paramStr.indexOf('_escaped_fragment_') < 0){
 		window.myApp = new initApp({
 			"_robotHasGreeted" : false, <!-- versionhere -->
-			"release":"201408.20140827141500",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
+			"release":"201408.20140827142600",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
 			"_clientid":"zmvc", //zmvc for store app, 1pc for one page checkout.
 			"baseURL":baseURL, //used in non-local mode.
 			"checkoutAuthMode" : "active",//can be passive, active or required
