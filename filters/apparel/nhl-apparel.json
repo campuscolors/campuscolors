@@ -47,9 +47,9 @@
 			"link"			: "#!nhl-apparel/nhl-best-sellers", 
 			"img" 			: "K/shutterstock_67866511",
 			"name"			: "NHL Best Sellers",
-			"baseFilter" 	: {"term" : {"tags" : "IS_BESTSELLER"}},
+			"baseFilter" 	: {"term" : {"tags" : "IS_FRESH"}},
 			"optionList" 	: [
-				"user:primary_color"
+				"user:app_brand"
 			]
 		}
 	]

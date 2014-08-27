@@ -116,8 +116,8 @@ $(document).ready(function(){
 			"baseURL":baseURL, //used in non-local mode.
 			"checkoutAuthMode" : "active",//can be passive, active or required
 		//	"testURL":"http://www.speedaddictcycles.com/", //used ONLY if protocol is file: (for testing)
-			"testURL":"http://app.sporks.zoovy.com/", //used ONLY if protocol is file: (for testing)
-		//	"testURL":"http://beta.campuscolors.com/", //used ONLY if protocol is file: (for testing)
+		//	"testURL":"http://app.sporks.zoovy.com/", //used ONLY if protocol is file: (for testing)
+			"testURL":"http://beta.campuscolors.com/", //used ONLY if protocol is file: (for testing)
 			"addjQueryPointer" : true,
 			"analyticsPointer" : "ga",
 			"initComplete" : function(){
@@ -702,6 +702,17 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 		<input data-tlc="bind $var '.base'; store_cc#assigndata  --attribute='filter-base' --legacy;" data-cc="filterBase" type="hidden">
 		<div data-tlc="bind $var '.'; store_cc#test --legacy;"></div>	
 		
+		<div data-tlc="bind $var '.options.user:app_brand'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
+			<div data-tlc="store_cc#showmobilefilter;" data-filterview='1' data-top='0' class="filterGroupTitle marginBottom">Brand<span class="sprite"></span></div>
+			<div class="filterHider">
+				<div class="filterCheckboxList" 
+					data-tlc="bind $index '.options.user:app_brand.index';
+						bind $cbl '.options.user:app_brand.options'; 
+						store_filter#filtercheckboxlist --index=$index;">
+				</div>
+			</div>
+		</div>
+		
 		<div class="marginBottom filterGroup">
 			<div data-tlc="store_cc#showmobilefilter;" data-filterview='1' data-top='0' class="filterGroupTitle marginBottom">League<span class="sprite"></span></div>
 				<div class="filterHider">
@@ -966,7 +977,8 @@ SANITY -> if you change the height and width of this image, change the .minimalM
 			<img data-tlc="bind $var '.images.0'; if (is $var --notblank;) {{apply --img --media=$var --width=210 --height=250 --bgcolor='#ffffff' --replace;}};" src="blank.gif" class="prodThumb" alt="" height="250" width="210">
 		</div>
 		<div class="prodInfo">
-			<h5 data-tlc="bind $var '.prod_name'; if (is $var --notblank;) {{apply --append;}};" class="hideInMinimalMode"></h5>
+			<h5 data-tlc="bind $var '.prod_name'; if (is $var --notblank;) {{apply --append;}};" class="hideInMinimalMode"></h5> <!-- TODO : prod_title, or prod_name? -->
+			<h5 data-tlc="bind $var '.prod_title'; if (is $var --notblank;) {{apply --append;}};" class="hideInMinimalMode"></h5>
 			<div data-tlc="bind $var '.prod_msrp'; if (is $var --notblank;) {{apply --hide;}};">	
 				<h6 data-tlc="bind $var '.base_price';  if (is $var --notblank;) {{format --currency='USD'; format --prepend='<span class=&quot;pricePre&quot;>OUR PRICE: </span>';  apply --append;}};" class="ourPrice hideInMinimalMode"></h6>
 			</div>
