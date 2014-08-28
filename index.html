@@ -111,7 +111,7 @@ $(document).ready(function(){
 	if(!paramStr || paramStr.indexOf('_escaped_fragment_') < 0){
 		window.myApp = new initApp({
 			"_robotHasGreeted" : false, <!-- versionhere -->
-			"release":"201408.20140827150600",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
+			"release":"201408.20140827221800",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
 			"_clientid":"zmvc", //zmvc for store app, 1pc for one page checkout.
 			"baseURL":baseURL, //used in non-local mode.
 			"checkoutAuthMode" : "active",//can be passive, active or required
@@ -575,8 +575,8 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 -->
 <div id="homepageTemplate" class="homeTemplate">
 	
-	<a href="#!nhl-apparel/">TESTABILITIZATION</a>
-	<a href="#!test-apparel/">TEST</a>
+	<!-- <a href="#!nhl-apparel/">TESTABILITIZATION</a>
+	<a href="#!test-apparel/">TEST</a> -->
 
 	
 	<div class="homeMain">
@@ -609,14 +609,14 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 	<div class="homeVertNav redGradient floatRight hidePhone hideTablet showDesktopBlock">
 		<div class="vertNavBorder">
 			<div class="vertNavTitle whiteText marginTop">SHOP BY</div>
-			<a href="" class="bareWhiteLink bold marginTop">College</a>
+			<a href="#!ncaa-apparel/" class="bareWhiteLink bold marginTop">College</a>
 			<a href="" class="bareWhiteLink bold">NFL</a>
 			<a href="" class="bareWhiteLink bold">NBA</a>
 			<a href="" class="bareWhiteLink bold">MLB</a>
-			<a href="" class="bareWhiteLink bold">NHL</a>
+			<a href="#!nhl-apparel/" class="bareWhiteLink bold">NHL</a>
 			<a href="" class="bareWhiteLink bold">Shop by Team</a>
 			<a href="" class="bareWhiteLink bold marginTop">Nike</a>
-			<a href="" class="bareWhiteLink bold">Adidas</a>
+			<a href="#!adidas-apparel/" class="bareWhiteLink bold">Adidas</a>
 			<a href="" class="bareWhiteLink bold marginTop">Shorts</a>
 			<a href="" class="bareWhiteLink bold">T-Shirts</a>
 			<a href="" class="bareWhiteLink bold">Sweatshirts</a>
@@ -704,57 +704,84 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 		<input data-tlc="bind $var '.base'; store_cc#assigndata  --attribute='filter-base' --legacy;" data-cc="filterBase" type="hidden">
 		<div data-tlc="bind $var '.'; store_cc#test --legacy;"></div>	
 		
-		<div data-tlc="bind $var '.options.user:app_brand'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
-			<div data-tlc="store_cc#showmobilefilter;" data-filterview='1' data-top='0' class="filterGroupTitle marginBottom">Brand<span class="sprite"></span></div>
+		<div data-tlc="bind $var '.options.user:team_league'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
+			<div data-tlc="store_cc#showmobilefilter;" data-filterview='1' data-top='0' class="filterGroupTitle marginBottom">Leauge<span class="sprite"></span></div>
 			<div class="filterHider">
 				<div class="filterCheckboxList" 
-					data-tlc="bind $index '.options.user:app_brand.index';
-						bind $cbl '.options.user:app_brand.options'; 
+					data-tlc="bind $index '.options.user:team_league.index';
+						bind $cbl '.options.user:team_league.options'; 
 						store_filter#filtercheckboxlist --index=$index;">
 				</div>
 			</div>
 		</div>
 		
-		<div class="marginBottom filterGroup">
-			<div data-tlc="store_cc#showmobilefilter;" data-filterview='1' data-top='0' class="filterGroupTitle marginBottom">League<span class="sprite"></span></div>
-				<div class="filterHider">
-					<div class="showFilterOption">
-						<input name="college" data-filter-type="checkboxList" data-filter-index="videoid" data-filter-typ="hasAttribute" type="checkbox"><label>College</label>
-					</div>
-					<div class="showFilterOption">
-							<input name="nfl" data-filter-type="checkboxList" data-filter-index="videoid" data-filter-typ="hasAttribute" type="checkbox"><label>NFL</label>
-					</div>
-					<div class="showFilterOption">
-							<input name="mlb" data-filter-type="checkboxList" data-filter-index="videoid" data-filter-typ="hasAttribute" type="checkbox"><label>MLB</label>
-					</div>
-					<div class="showFilterOption">
-							<input name="nba" data-filter-type="checkboxList" data-filter-index="videoid" data-filter-typ="hasAttribute" type="checkbox"><label>NBA</label>
-					</div>
-					<div class="showFilterOption">
-							<input name="nhl" data-filter-type="checkboxList" data-filter-index="videoid" data-filter-typ="hasAttribute" type="checkbox"><label>NHL</label>
-					</div>
-				</div>	
+		<div data-tlc="bind $var '.options.user:color_pallete'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
+			<div data-tlc="store_cc#showmobilefilter;" data-filterview='1' data-top='0' class="filterGroupTitle marginBottom">Color<span class="sprite"></span></div>
+			<div class="filterHider">
+				<div class="filterCheckboxList" 
+					data-tlc="bind $index '.options.user:color_pallete.index';
+						bind $cbl '.options.user:color_pallete.options'; 
+						store_filter#filtercheckboxlist --index=$index;">
+				</div>
+			</div>
 		</div>
-		<div class="marginBottom filterGroup">
-			<div data-tlc="store_cc#showmobilefilter;" data-filterview='0' data-top='0' class="filterGroupTitle marginBottom">League<span class="sprite"></span></div>
-				<div class="filterHider">
-					<div class="showFilterOption">
-						<input name="college" data-filter-type="checkboxList" data-filter-index="videoid" data-filter-typ="hasAttribute" type="checkbox"><label>College</label>
-					</div>
-					<div class="showFilterOption">
-							<input name="nfl" data-filter-type="checkboxList" data-filter-index="videoid" data-filter-typ="hasAttribute" type="checkbox"><label>NFL</label>
-					</div>
-					<div class="showFilterOption">
-							<input name="mlb" data-filter-type="checkboxList" data-filter-index="videoid" data-filter-typ="hasAttribute" type="checkbox"><label>MLB</label>
-					</div>
-					<div class="showFilterOption">
-							<input name="nba" data-filter-type="checkboxList" data-filter-index="videoid" data-filter-typ="hasAttribute" type="checkbox"><label>NBA</label>
-					</div>
-					<div class="showFilterOption">
-							<input name="nhl" data-filter-type="checkboxList" data-filter-index="videoid" data-filter-typ="hasAttribute" type="checkbox"><label>NHL</label>
-					</div>
-				</div>	
+		
+		<div data-tlc="bind $var '.options.user:size_gender'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
+			<div data-tlc="store_cc#showmobilefilter;" data-filterview='1' data-top='0' class="filterGroupTitle marginBottom">Gender<span class="sprite"></span></div>
+			<div class="filterHider">
+				<div class="filterCheckboxList" 
+					data-tlc="bind $index '.options.user:size_gender.index';
+						bind $cbl '.options.user:size_gender.options'; 
+						store_filter#filtercheckboxlist --index=$index;">
+				</div>
+			</div>
 		</div>
+		
+		<div data-tlc="bind $var '.options.user:team_conference'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
+			<div data-tlc="store_cc#showmobilefilter;" data-filterview='1' data-top='0' class="filterGroupTitle marginBottom">Conference<span class="sprite"></span></div>
+			<div class="filterHider">
+				<div class="filterCheckboxList" 
+					data-tlc="bind $index '.options.user:team_conference.index';
+						bind $cbl '.options.user:team_conference.options'; 
+						store_filter#filtercheckboxlist --index=$index;">
+				</div>
+			</div>
+		</div>
+		
+		<div data-tlc="bind $var '.options.user:team_league_nhl'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
+			<div data-tlc="store_cc#showmobilefilter;" data-filterview='0' data-top='0' class="filterGroupTitle marginBottom">NHL Teams<span class="sprite"></span></div>
+			<div class="filterHider">
+				<div class="filterCheckboxList" 
+					data-tlc="bind $index '.options.user:team_league_nhl.index';
+						bind $cbl '.options.user:team_league_nhl.options'; 
+						store_filter#filtercheckboxlist --index=$index;">
+				</div>
+			</div>
+		</div>
+		
+		<div data-tlc="bind $var '.options.user:team_league_nba'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
+			<div data-tlc="store_cc#showmobilefilter;" data-filterview='0' data-top='0' class="filterGroupTitle marginBottom">NBA Teams<span class="sprite"></span></div>
+			<div class="filterHider">
+				<div class="filterCheckboxList" 
+					data-tlc="bind $index '.options.user:team_league_nba.index';
+						bind $cbl '.options.user:team_league_nba.options'; 
+						store_filter#filtercheckboxlist --index=$index;">
+				</div>
+			</div>
+		</div>
+		
+		<div data-tlc="bind $var '.options.user:vendor'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
+			<div data-tlc="store_cc#showmobilefilter;" data-filterview='0' data-top='0' class="filterGroupTitle marginBottom">Vendor<span class="sprite"></span></div>
+			<div class="filterHider">
+				<div class="filterCheckboxList" 
+					data-tlc="bind $index '.options.user:vendor.index';
+						bind $cbl '.options.user:vendor.options'; 
+						store_filter#filtercheckboxlist --index=$index;">
+				</div>
+			</div>
+		</div>
+		
+		
 	<!-- This filter shown on all filter lists- no need for data-binds 
 		<div class="marginBottom">
 			<h5 class="highlightText">

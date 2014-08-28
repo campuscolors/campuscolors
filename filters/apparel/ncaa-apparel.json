@@ -2,7 +2,7 @@
 	"id"	: "NCAA-Apparel",
 	"page-title" : "NCAA Apparel at CampusColors.com",
 	"page-description" : "Buy NCAA, it is !",
-	"banner" : "images/cat-banner_785x200.jpg",
+	"banner" : "banners/test_cat_banner_785x200.jpg",
 	"pages" : [
 		{
 			"id" 				: "ncaa-t-shirts",

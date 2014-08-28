@@ -168,33 +168,50 @@ var store_cc = function(_app) {
 					showContent('static',routeObj.params);
 					}
 					
-					
-					
-					
-					
-					
-					_app.router.addAlias('nhl-filter', function(routeObj){
-		dump('ADD ALIAS filter callback routeObj'); dump(routeObj.params); 
-			
-					if(_app.ext.store_filter.filterData['nhl-apparel']){
-						showPage(routeObj,'nhl-apparel');
+					//decides if filter JSON is in local var or if it needs to be retrieved
+					function pickShowOrLoad(routeObj) {
+						var filterpage = routeObj.pagefilter;
+						if(_app.ext.store_filter.filterData[filterpage]){
+							showPage(routeObj,filterpage);
 						}
-					else {
-						loadPage(
-							'nhl-apparel', 
-							function(){showPage(routeObj,'nhl-apparel');}, 
-							function(){showContent('404');}
+						else {
+							loadPage(
+								filterpage, 
+								function(){showPage(routeObj,filterpage);}, 
+								function(){showContent('404');}
 							);
 						}
+					}
+					
+					
+					
+					
+	//TODO : TEST PUSH TO ROBOTS @ THE END OF EACH APPENDhASH
+					
+//ALIAS					
+					_app.router.addAlias('nhl-filter', function(routeObj){
+						dump('ADD ALIAS filter callback routeObj'); dump(routeObj); 
+						pickShowOrLoad(routeObj);
+					});
+
+					_app.router.addAlias('adidas-filter', function(routeObj){
+						dump('ADD ALIAS filter callback routeObj'); dump(routeObj); 
+						pickShowOrLoad(routeObj);
 					});
 					
+					_app.router.addAlias('ncaa-filter', function(routeObj){
+						dump('ADD ALIAS filter callback routeObj'); dump(routeObj); 
+						pickShowOrLoad(routeObj);
+					});
+					
+//APPENDS					
 					_app.router.appendHash({'type':'exact','route':'nhl-apparel/', 'callback':function(routeObj){
 						dump('In appendHash');
 						_app.ext.store_cc.u.getCatJSON(routeObj.route);
 					}});
 					
 					//Adds the listener for the url.  The route needs to match the page pushed into robots below
-					_app.router.appendHash({'type':'match','route':'nhl-apparel/{{id}}','callback':'nhl-filter'});
+					_app.router.appendHash({'type':'match','route':'nhl-apparel/{{id}}','pagefilter':'nhl-apparel','callback':'nhl-filter'});
 					//This is the list of helmet pages.  The ID is part of the URL- change this for SEO reasons- the jsonPath is the file where it loads the options from.  The jsonPath doesn't matter as long as it loads the file
 					var nhlPages = [
 						{id:'nhl-apparel',jsonPath:'filters/apparel/nhl-apparel.json'}
@@ -203,6 +220,40 @@ var store_cc = function(_app) {
 						_app.ext.store_filter.vars.filterPages.push(nhlPages[i]);
 						//this page needs to match the route above
 						_app.ext.seo_robots.vars.pages.push("#!filters/apparel/"+nhlPages[i].id+"/"); 
+					}
+					
+					_app.router.appendHash({'type':'exact','route':'adidas-apparel/', 'callback':function(routeObj){
+						dump('In appendHash');
+						_app.ext.store_cc.u.getCatJSON(routeObj.route);
+					}});
+					
+					//Adds the listener for the url.  The route needs to match the page pushed into robots below
+					_app.router.appendHash({'type':'match','route':'adidas-apparel/{{id}}','pagefilter':'adidas-apparel','callback':'adidas-filter'});
+					//This is the list of helmet pages.  The ID is part of the URL- change this for SEO reasons- the jsonPath is the file where it loads the options from.  The jsonPath doesn't matter as long as it loads the file
+					var adidasPages = [
+						{id:'adidas-apparel',jsonPath:'filters/apparel/adidas-apparel.json'}
+					];
+					for(var i in adidasPages) {
+						_app.ext.store_filter.vars.filterPages.push(adidasPages[i]);
+						//this page needs to match the route above
+						_app.ext.seo_robots.vars.pages.push("#!filters/apparel/"+adidasPages[i].id+"/"); 
+					}
+					
+					_app.router.appendHash({'type':'exact','route':'ncaa-apparel/', 'callback':function(routeObj){
+						dump('In appendHash');
+						_app.ext.store_cc.u.getCatJSON(routeObj.route);
+					}});
+					
+					//Adds the listener for the url.  The route needs to match the page pushed into robots below
+					_app.router.appendHash({'type':'match','route':'ncaa-apparel/{{id}}','pagefilter':'ncaa-apparel','callback':'ncaa-filter'});
+					//This is the list of helmet pages.  The ID is part of the URL- change this for SEO reasons- the jsonPath is the file where it loads the options from.  The jsonPath doesn't matter as long as it loads the file
+					var ncaaPages = [
+						{id:'ncaa-apparel',jsonPath:'filters/apparel/ncaa-apparel.json'}
+					];
+					for(var i in ncaaPages) {
+						_app.ext.store_filter.vars.filterPages.push(ncaaPages[i]);
+						//this page needs to match the route above
+						_app.ext.seo_robots.vars.pages.push("#!filters/apparel/"+ncaaPages[i].id+"/"); 
 					}
 					
 					
@@ -401,7 +452,7 @@ var store_cc = function(_app) {
 									$tag.data('filterview',0);
 								}
 							});
-					},1000);
+					},2000);
 				}
 			}
 			

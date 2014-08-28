@@ -2,7 +2,7 @@
 	"id"	: "NBA-Apparel",
 	"page-title" : "NBA Apparel at CampusColors.com",
 	"page-description" : "Buy NBA, it is up in the air!",
-	"banner" : "images/cat-banner_785x200.jpg",
+	"banner" : "banners/test_cat_banner_785x200.jpg",
 	"pages" : [
 		{
 			"id" 				: "nba-t-shirts",

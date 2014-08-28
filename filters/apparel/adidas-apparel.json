@@ -2,7 +2,7 @@
 	"id"	: "Adidas-Apparel",
 	"page-title" : "Adidas Apparel at CampusColors.com",
 	"page-description" : "Buy Adidas, it is !",
-	"banner" : "images/cat-banner_785x200.jpg",
+	"banner" : "banners/test_cat_banner_785x200.jpg",
 	"pages" : [
 		{
 			"id" 				: "adidas-t-shirts",

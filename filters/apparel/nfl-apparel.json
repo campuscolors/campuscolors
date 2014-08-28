@@ -2,7 +2,7 @@
 	"id"	: "NFL-Apparel",
 	"page-title" : "NFL Apparel at CampusColors.com",
 	"page-description" : "Buy NFL, it is rough!",
-	"banner" : "images/cat-banner_785x200.jpg",
+	"banner" : "banners/test_cat_banner_785x200.jpg",
 	"pages" : [
 		{
 			"id" 				: "nfl-t-shirts",

@@ -2,7 +2,7 @@
 	"id"	: "NHL-Apparel",
 	"page-title" : "NHL Apparel at CampusColors.com",
 	"page-description" : "Buy NHL, it is bloody good!",
-	"banner" : "9/93086_2",
+	"banner" : "banners/test_cat_banner_785x200.jpg",
 	"bannerlink" : "#!nhl-apparel/nhl-best-sellers",
 	"banneralt" : "NHL Banner",
 	"promo" : "Some promotional test goes here",
@@ -10,46 +10,52 @@
 		{
 			"id" 				: "nhl-t-shirts",
 			"link"			: "#!nhl-apparel/nhl-t-shirts", 
-			"img" 			: "3_prongs_standard",
+			"img" 			: "products/images/acc_8004615_tc.jpg",
 			"name"			: "NHL T-shirts",
 			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nhl"}} , {"term" : {"apparel_type" : "t-shirts"}}]}
 		},
 		{
 			"id" 				: "nhl-sweatshirts",
 			"link"			: "#!nhl-apparel/nhl-sweatshirts", 
-			"img" 			: "9/93086_2",
+			"img" 			: "products/images/ala_27548x_wh2012.jpg",
 			"name"			: "NHL Sweatshirts",
 			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nhl"}} , {"term" : {"apparel_type" : "sweatshirts"}}]}
 		},
 		{
 			"id" 				: "nhl-jerseys",
 			"link"			: "#!nhl-apparel/nhl-jerseys", 
-			"img" 			: "",
+			"img" 			: "products/images/acc_8004615_tc.jpg",
 			"name"			: "NHL Jerseys",
 			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nhl"}} , {"term" : {"apparel_type" : "jerseys"}}]}
 		},
 		{
 			"id" 				: "nhl-hats",
 			"link"			: "#!nhl-apparel/nhl-hats", 
-			"img" 			: "",
+			"img" 			: "products/images/ala_27548x_wh2012.jpg",
 			"name"			: "NHL Hats",
 			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nhl"}} , {"term" : {"apparel_type" : "hats"}}]}
 		},
 		{
 			"id" 				: "nhl-accessories",
 			"link"			: "#!nhl-apparel/nhl-accessories", 
-			"img" 			: "",
+			"img" 			: "products/images/acc_8004615_tc.jpg",
 			"name"			: "NHL Accessories",
 			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nhl"}} , {"term" : {"apparel_type" : "accessories"}}]}
 		},
 		{
 			"id" 				: "nhl-best-sellers",
 			"link"			: "#!nhl-apparel/nhl-best-sellers", 
-			"img" 			: "K/shutterstock_67866511",
+			"img" 			: "products/images/ala_27548x_wh2012.jpg",
 			"name"			: "NHL Best Sellers",
 			"baseFilter" 	: {"term" : {"tags" : "IS_FRESH"}},
 			"optionList" 	: [
-				"user:app_brand"
+				"user:team_league",
+				"user:color_pallete",
+				"user:size_gender",
+				"user:team_conference",
+				"user:team_league_nhl",
+				"user:team_league_nba",
+				"user:vendor"
 			]
 		}
 	]
