@@ -212,16 +212,9 @@ var store_cc = function(_app) {
 					
 					//Adds the listener for the url.  The route needs to match the page pushed into robots below
 					_app.router.appendHash({'type':'match','route':'nhl-apparel/{{id}}','pagefilter':'nhl-apparel','callback':'nhl-filter'});
-					//This is the list of helmet pages.  The ID is part of the URL- change this for SEO reasons- the jsonPath is the file where it loads the options from.  The jsonPath doesn't matter as long as it loads the file
-					var nhlPages = [
-						{id:'nhl-apparel',jsonPath:'filters/apparel/nhl-apparel.json'}
-					];
-					for(var i in nhlPages) {
-						_app.ext.store_filter.vars.filterPages.push(nhlPages[i]);
-						//this page needs to match the route above
-						_app.ext.seo_robots.vars.pages.push("#!filters/apparel/"+nhlPages[i].id+"/"); 
-					}
-					
+					_app.ext.store_cc.u.pushFilter('nhl-apparel');
+			
+			
 					_app.router.appendHash({'type':'exact','route':'adidas-apparel/', 'callback':function(routeObj){
 						dump('In appendHash');
 						_app.ext.store_cc.u.getCatJSON(routeObj.route);
@@ -574,6 +567,21 @@ var store_cc = function(_app) {
 					},
 				//threshold:0 //default is 75px. Raise/lower to make more/less sensitive (0 for easy testing)
 					});
+			},
+			
+			//saves filter to store_filter var, and pushes each page in yhe fiolter to robots
+			pushFilter : function(endPath) {
+				//This is the list of pages.  The ID (endPath) is part of the URL- change this for SEO reasons- the jsonPath is the file where it loads the options from.  The jsonPath doesn't matter as long as it loads the file
+				//var nhlPages = [
+				var Pages = [
+					//{id:'nhl-apparel',jsonPath:'filters/apparel/nhl-apparel.json'}
+					{id:endPath,jsonPath:'filters/apparel/'+endPath+'.json'}
+				];
+				for(var i in Pages) {
+					_app.ext.store_filter.vars.filterPages.push(Pages[i]);
+					//this page needs to match the route above
+					_app.ext.seo_robots.vars.pages.push("#!filters/apparel/"+Pages[i].id+"/"); 
+				}
 			}
 			
 		/*	This may be a better way to do this, but it doesn't work if the page isn't reloaded. If tablet goes from 
@@ -588,6 +596,7 @@ var store_cc = function(_app) {
 				}
 			}
 		*/
+		
 		
 		}, //u [utilities]
 
