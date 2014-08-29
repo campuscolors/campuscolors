@@ -147,7 +147,12 @@ header {position:relative;}
 
 /* FOOTER */
 .footerTopBrandCarWrap {height:100px; width:100%; padding:20px 0 0 0; margin:20px 0 0 0; background-color:#cdcdcd; border-bottom:2px solid #525252;}
-.topBrandItem {height:60px; width:100px; margin:0 29px; background-color:blue;}
+.topBrandItem {height:60px; width:100px; margin:0 29px; background-position:0px -273px; background-repeat:no-repeat; overflow:hidden;}
+.topBrandItem.underArmorLogo {background-position:-111px -273px;}
+.topBrandItem.adidasLogo {background-position:-212px -273px;}
+.topBrandItem.newEraLogo {background-position:-308px -274px;}
+.topBrandItem.retroLogo {background-position:-405px -273px;}
+.topBrandItem.fortySevenLogo {background-position:-375px -208px;}
 
 .footBG1 {height:280px; padding:20px 0 0 0; position:relative;}
 .footerPromo {background-color:#fbe143; font-size:14px; border-top:5px solid #525252; border-bottom:5px solid #525252; padding:15px 0;}

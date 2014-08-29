@@ -94,6 +94,7 @@ var store_cc = function(_app) {
 				onSuccess : function() {
 
 					_app.ext.store_cc.u.swipeMobileNav($(".mobileSlideMenu"));
+					_app.ext.store_cc.u.runFooterCarousel();
 				
 					_app.templates.homepageTemplate.on('complete.store_cc',function(event,$context,infoObj) {
 						$(".mobileSlideMenu.standardNav").addClass("hideOnHome");
@@ -545,8 +546,6 @@ var store_cc = function(_app) {
 			runHomeCarousel : function($context) {
 //				_app.u.dump('----Running homepage carousels');	
 				var $target = $('.homeCarousel',$context);
-				var w = $target.parent().width();
-				dump('Carousel width is:'); dump(w);
 				if($target.data('isCarousel'))	{$target.trigger('play');} //only make it a carousel once, but make sure it always scrolls
 				else {
 					$target.data('isCarousel',true);
@@ -581,7 +580,34 @@ var store_cc = function(_app) {
 							}
 			*/			});
 					},2000); 
-				} //HOMEPAGE best sellers CAROUSEL	
+				} //HOMEPAGE best sellers CAROUSEL
+			},
+			
+			//Turns top brands div in footer into an auto scrolling carousel.
+			runFooterCarousel : function() {
+				var $target = $('.footerTopBrandCar');
+				if($target.data('isCarousel'))	{$target.trigger('play');} //only make it a carousel once, but make sure it always scrolls
+				else {
+					$target.data('isCarousel',true);
+					//for whatever reason, caroufredsel needs to be executed after a moment.
+					setTimeout(function(){
+						$target.carouFredSel({
+							width	:"100%",
+							items	: {
+								width : "100px"
+							},
+							scroll: {	fx: "directscroll"	},
+							auto: {
+								delay: 1000,
+								pauseOnHover:"immediate"
+							},
+							swipe: { 
+								onMouse: true,	
+								onTouch: true 
+							}
+						});	
+					},2000);
+				} //FOOTER top brands carousel
 			},
 			
 			//applies a swipe to close mobile navigation window.

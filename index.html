@@ -112,7 +112,7 @@ $(document).ready(function(){
 	if(!paramStr || paramStr.indexOf('_escaped_fragment_') < 0){
 		window.myApp = new initApp({
 			"_robotHasGreeted" : false, <!-- versionhere -->
-			"release":"201408.20140827221800",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
+			"release":"201408.20140828230000",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
 			"_clientid":"zmvc", //zmvc for store app, 1pc for one page checkout.
 			"baseURL":baseURL, //used in non-local mode.
 			"checkoutAuthMode" : "active",//can be passive, active or required
@@ -383,12 +383,12 @@ var _robots = {
 		<div class="footerTopBrandCarWrap">
 			<div class="footerTopBrandCar wrapper">
 <!-- TODO : DYNAMIC CONTENT OR STATIC? WILL NEED SEARCH LINKS FOR EACH BRAND -->
-				<div class="topBrandItem floatLeft"></div>
-				<div class="topBrandItem floatLeft"></div>
-				<div class="topBrandItem floatLeft"></div>
-				<div class="topBrandItem floatLeft"></div>
-				<div class="topBrandItem floatLeft"></div>
-				<div class="topBrandItem floatLeft"></div>
+				<a href="#!search/keywords/adidas" class="topBrandItem sprite adidasLogo floatLeft"></a>
+				<a href="#!search/keywords/under+armor" class="topBrandItem sprite underArmorLogo floatLeft"></a>
+				<a href="#!search/keywords/nike" class="topBrandItem sprite nikeLogo floatLeft"></a>
+				<a href="#!search/keywords/new+era" class="topBrandItem sprite newEraLogo floatLeft"></a>
+				<a href="#!search/keywords/retro+brand" class="topBrandItem sprite retroLogo floatLeft"></a>
+				<a href="#!search/keywords/47+brand" class="topBrandItem sprite fortySevenLogo floatLeft"></a>
 			</div>
 		</div>
 		<div class="prev"></div>
