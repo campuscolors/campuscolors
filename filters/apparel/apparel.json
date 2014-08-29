@@ -1,0 +1,67 @@
+{
+	"id" : "Apparel",
+	"page-title" : "Apparel at CampusColors.com",
+	"page-description" : "Apparel on CampusColors.com",
+	"banner" : "banners/test_cat_banner_785x200.jpg",
+	"bannerlink" : "#!nhl-apparel/nhl-best-sellers",
+	"banneralt" : "Apparel Banner",
+	"promo" : "Some promotional text goes here",
+	"pages" : [
+		{
+			"id" 				: "t-shirts",
+			"link"				: "#!apparel/t-shirts/", 
+			"img" 			: "products/images/acc_8004615_tc.jpg",
+			"name"			: "T-shirts",
+			"baseFilter" 	: {"query" : {"query_string" : {"query":"shirt ","fields":["prod_name"]}}}
+		},
+		{
+			"id" 				: "sweatshirts",
+			"link"				: "#!apparel/sweatshirts/", 
+			"img" 			: "products/images/ala_27548x_wh2012.jpg",
+			"name"			: "Sweatshirts",
+			"baseFilter" 	: {"query" : {"query_string" : {"query":"sweatshirt ","fields":["prod_name"]}}}
+		},
+		{
+			"id" 				: "jerseys",
+			"link"				: "#!apparel/jerseys/", 
+			"img" 			: "products/images/acc_8004615_tc.jpg",
+			"name"			: "Jerseys",
+			"baseFilter" 	: {"query" : {"query_string" : {"query":"jersey","fields":["prod_name"]}}}
+		},
+		{
+			"id" 				: "shorts",
+			"link"				: "#!apparel/shorts/", 
+			"img" 			: "products/images/acc_8004615_tc.jpg",
+			"name"			: "Shorts",
+			"baseFilter" 	: {"query" : {"query_string" : {"query":"shorts","fields":["prod_name"]}}}
+		},
+		{
+			"id" 				: "pants",
+			"link"				: "#!apparel/pants/", 
+			"img" 			: "products/images/acc_8004615_tc.jpg",
+			"name"			: "Pants",
+			"baseFilter" 	: {"query" : {"query_string" : {"query":"pants","fields":["prod_name"]}}}
+		},
+		{
+			"id" 				: "hats",
+			"link"				: "#!apparel/hats/", 
+			"img" 			: "products/images/ala_27548x_wh2012.jpg",
+			"name"			: "Hats",
+			"baseFilter" 	: {"query" : {"query_string" : {"query":"hat","fields":["prod_name"]}}}
+		},
+		{
+			"id" 				: "accessories",
+			"link"				: "#!apparel/accessories/", 
+			"img" 			: "products/images/acc_8004615_tc.jpg",
+			"name"			: "Accessories",
+			"baseFilter" 	: {"query" : {"query_string" : {"query":"accessories","fields":["prod_name"]}}}
+		},
+		{
+			"id" 				: "new-apparel",
+			"link"				: "#!apparel/new-apparel/", 
+			"img" 			: "products/images/ala_27548x_wh2012.jpg",
+			"name"			: "New Apparel",
+			"baseFilter" 	: {"term" : {"tags" : "IS_FRESH"}}
+		}
+	]
+}

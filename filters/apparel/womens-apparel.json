@@ -1,0 +1,67 @@
+{
+	"id" : "Women&#39;s-Apparel",
+	"page-title" : "Women&#39;s Apparel at CampusColors.com",
+	"page-description" : "Women&#39;s apparel on CampusColors.com.",
+	"banner" : "banners/test_cat_banner_785x200.jpg",
+	"bannerlink" : "#!nhl-apparel/nhl-best-sellers",
+	"banneralt" : "Women&#39;s Banner",
+	"promo" : "Some promotional text goes here",
+	"pages" : [
+		{
+			"id" 				: "womens-t-shirts",
+			"link"				: "#!womens-apparel/womens-t-shirts/", 
+			"img" 			: "products/images/acc_8004615_tc.jpg",
+			"name"			: "Women&#39;s T-shirts",
+			"baseFilter" 	: { "and" : [ {"term" : {"size_gender" : "womens"}} , {"query" : {"query_string" : {"query":"shirt ","fields":["prod_name"]}}}]}
+		},
+		{
+			"id" 				: "womens-sweatshirts",
+			"link"				: "#!womens-apparel/womens-sweatshirts/", 
+			"img" 			: "products/images/ala_27548x_wh2012.jpg",
+			"name"			: "Women&#39;s Sweatshirts",
+			"baseFilter" 	: { "and" : [ {"term" : {"size_gender" : "womens"}} , {"query" : {"query_string" : {"query":"sweatshirt ","fields":["prod_name"]}}}]}
+		},
+		{
+			"id" 				: "womens-jerseys",
+			"link"				: "#!womens-apparel/womens-jerseys/", 
+			"img" 			: "products/images/acc_8004615_tc.jpg",
+			"name"			: "Women&#39;s Jerseys",
+			"baseFilter" 	: { "and" : [ {"term" : {"size_gender" : "womens"}} , {"query" : {"query_string" : {"query":"jersey","fields":["prod_name"]}}}]}
+		},
+		{
+			"id" 				: "womens-shorts",
+			"link"				: "#!womens-apparel/womens-shorts/", 
+			"img" 			: "products/images/acc_8004615_tc.jpg",
+			"name"			: "Women&#39;s Shorts",
+			"baseFilter" 	: { "and" : [ {"term" : {"size_gender" : "womens"}} , {"query" : {"query_string" : {"query":"shorts","fields":["prod_name"]}}}]}
+		},
+		{
+			"id" 				: "womens-pants",
+			"link"				: "#!womens-apparel/womens-pants/", 
+			"img" 			: "products/images/acc_8004615_tc.jpg",
+			"name"			: "Women&#39;s Pants",
+			"baseFilter" 	: { "and" : [ {"term" : {"size_gender" : "womens"}} , {"query" : {"query_string" : {"query":"pants","fields":["prod_name"]}}}]}
+		},
+		{
+			"id" 				: "womens-hats",
+			"link"				: "#!womens-apparel/womens-hats/", 
+			"img" 			: "products/images/ala_27548x_wh2012.jpg",
+			"name"			: "Women&#39;s Hats",
+			"baseFilter" 	: { "and" : [ {"term" : {"size_gender" : "womens"}} , {"query" : {"query_string" : {"query":"hat","fields":["prod_name"]}}}]}
+		},
+		{
+			"id" 				: "womens-accessories",
+			"link"				: "#!womens-apparel/womens-accessories/", 
+			"img" 			: "products/images/acc_8004615_tc.jpg",
+			"name"			: "Women&#39;s Accessories",
+			"baseFilter" 	: { "and" : [ {"term" : {"size_gender" : "womens"}} , {"query" : {"query_string" : {"query":"accessories","fields":["prod_name"]}}}]}
+		},
+		{
+			"id" 				: "womens-new-arrivals",
+			"link"				: "#!womens-apparel/womens-new-arrivals/", 
+			"img" 			: "products/images/ala_27548x_wh2012.jpg",
+			"name"			: "Women&#39;s New Arrivals",
+			"baseFilter" 	: { "and" : [ {"term" : {"tags" : "IS_FRESH"}} , {"term" : {"size_gender" : "womens"}}]}
+		}
+	]
+}

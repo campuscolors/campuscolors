@@ -610,24 +610,24 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 		<div class="vertNavBorder">
 			<div class="vertNavTitle whiteText marginTop">SHOP BY</div>
 			<a href="#!ncaa-apparel/" class="bareWhiteLink bold marginTop">College</a>
-			<a href="" class="bareWhiteLink bold">NFL</a>
-			<a href="" class="bareWhiteLink bold">NBA</a>
-			<a href="" class="bareWhiteLink bold">MLB</a>
+			<a href="#!nfl-apparel/" class="bareWhiteLink bold">NFL</a>
+			<a href="#!nba-apparel/" class="bareWhiteLink bold">NBA</a>
+			<a href="#!mlb-apparel/" class="bareWhiteLink bold">MLB</a>
 			<a href="#!nhl-apparel/" class="bareWhiteLink bold">NHL</a>
-			<a href="" class="bareWhiteLink bold">Shop by Team</a>
-			<a href="" class="bareWhiteLink bold marginTop">Nike</a>
+			<a href="#!team-apparel/" class="bareWhiteLink bold">Shop by Team</a>
+			<a href="#!nike-apparel/" class="bareWhiteLink bold marginTop">Nike</a>
 			<a href="#!adidas-apparel/" class="bareWhiteLink bold">Adidas</a>
-			<a href="" class="bareWhiteLink bold marginTop">Shorts</a>
-			<a href="" class="bareWhiteLink bold">T-Shirts</a>
-			<a href="" class="bareWhiteLink bold">Sweatshirts</a>
-			<a href="" class="bareWhiteLink bold">Jerseys</a>
-			<a href="" class="bareWhiteLink bold">Jackets</a>
-			<a href="" class="bareWhiteLink bold">Pants</a>
-			<a href="" class="bareWhiteLink bold">Hats</a>
-			<a href="" class="bareWhiteLink bold">Accessories</a>
-			<a href="" class="bareWhiteLink bold marginTop">Men&#39;s</a>
-			<a href="" class="bareWhiteLink bold">Women&#39;s</a>
-			<a href="" class="bareWhiteLink bold vertNavLast">Kid&#39;s</a>
+			<a href="#!apparel/shorts/" class="bareWhiteLink bold marginTop">Shorts</a>
+			<a href="#!apparel/t-shirts/" class="bareWhiteLink bold">T-Shirts</a>
+			<a href="#!apparel/sweatshirts/" class="bareWhiteLink bold">Sweatshirts</a>
+			<a href="#!apparel/jerseys/" class="bareWhiteLink bold">Jerseys</a>
+			<a href="#!apparel/jackets/" class="bareWhiteLink bold">Jackets</a>
+			<a href="#!apparel/pants/" class="bareWhiteLink bold">Pants</a>
+			<a href="#!apparel/hats/" class="bareWhiteLink bold">Hats</a>
+			<a href="#!apparel/accessories/" class="bareWhiteLink bold">Accessories</a>
+			<a href="#!mens-apparel/" class="bareWhiteLink bold marginTop">Men&#39;s</a>
+			<a href="#!womens-apparel/" class="bareWhiteLink bold">Women&#39;s</a>
+			<a href="#!kids-apparel/" class="bareWhiteLink bold vertNavLast">Kid&#39;s</a>
 		</div>
 		<img src="images/vert-nav-arrow_230x50.png" alt="Banner Bottom" class="vertNavArrow">
 		<!-- <div class="vertNavArrow sprite"></div> -->
@@ -660,8 +660,9 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 	<!-- TODO : INVESTIGATE SETTING UP AN ELASTIC BREADCRUMB
 	<div class="fauxBreadCrumb hidePhone showTabletBlock">um... this will eventually do something breadcrumby.</div>
 	-->
+	<h1 data-tlc="bind $var '.id'; apply --append;"></h1>
 	<a class="splashBanner" data-tlc="bind $href '.bannerlink'; apply --attrib='href';">
-		<p data-tlc="bind $var '.promo'; apply --apend;"></p>
+		<p data-tlc="bind $var '.promo'; apply --append;"></p>
 		<img data-tlc="bind $var '.banner'; apply --img --media=$var --class='splashBanner' --width=670 --height=176 --bgcolor='ffffff' --replace bind $alt '.banneralt'; apply --attrib='alt';" src="blank.gif" alt="" height="670" width="176">
 	</a>
 	<!-- TODO : SET UP CATEGORY FILTERING. THIS IS JUST A PLACEHOLDER FOR NOW 
@@ -675,7 +676,7 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 	<li id="splashPageListTemplate" class="splashPageListTemplate floatLeft marginRight">
 		<a data-tlc="bind $href '.link'; apply --attrib='href';">
 			<img data-tlc="bind $var '.img'; apply --img --media=$var --width=210 --height=240 --bgcolor='#ffffff' --replace;" src="blank.gif" class="prodThumb" alt="" height="240" width="210">
-			<div data-tlc="bind $var '.id'; apply --append;" class="title center"></div>
+			<div data-tlc="bind $var '.name'; apply --append;" class="title center"></div>
 		</a>
 	</li>
 </ul>

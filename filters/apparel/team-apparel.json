@@ -1,0 +1,71 @@
+{
+	"id"	: "Team-Apparel",
+	"page-title" : "Team Apparel at CampusColors.com",
+	"page-description" : "Buy Team, it is bloody good!",
+	"banner" : "banners/test_cat_banner_785x200.jpg",
+	"bannerlink" : "",
+	"banneralt" : "Shop By Team Banner",
+	"promo" : "Some promotional test goes here",
+	"pages" : [
+		{
+			"id" 				: "college-teams",
+			"link"				: "#!team-apparel/ncaa-teams/", 
+			"img" 			: "products/images/acc_8004615_tc.jpg",
+			"name"			: "College Teams",
+			"baseFilter" 	: {"term" : {"team_league" : "ncaa"}},
+			"optionList" 	: [
+				"user:team_league_ncaa"
+			]
+		},
+		{
+			"id" 				: "nfl-teams",
+			"link"				: "#!team-apparel/nfl-teams/", 
+			"img" 			: "products/images/acc_8004615_tc.jpg",
+			"name"			: "NFL Teams",
+			"baseFilter" 	: {"term" : {"team_league" : "nfl"}},
+			"optionList" 	: [
+				"user:team_league_nfl"
+			]
+		},
+		{
+			"id" 				: "nba-teams",
+			"link"				: "#!team-apparel/nba-teams/", 
+			"img" 			: "products/images/acc_8004615_tc.jpg",
+			"name"			: "NBA Teams",
+			"baseFilter" 	: {"term" : {"team_league" : "nba"}},
+			"optionList" 	: [
+				"user:team_league_nba"
+			]
+		},
+		{
+			"id" 				: "mlb-teams",
+			"link"				: "#!team-apparel/mlb-teams/", 
+			"img" 			: "products/images/acc_8004615_tc.jpg",
+			"name"			: "MLB Teams",
+			"baseFilter" 	: {"term" : {"team_league" : "mlb"}},
+			"optionList" 	: [
+				"user:team_league_mlb"
+			]
+		},
+		{
+			"id" 				: "nhl-teams",
+			"link"				: "#!team-apparel/nhl-teams/", 
+			"img" 			: "products/images/acc_8004615_tc.jpg",
+			"name"			: "NHL Teams",
+			"baseFilter" 	: {"term" : {"team_league" : "nhl"}},
+			"optionList" 	: [
+				"user:team_league_nhl"
+			]
+		},
+		{
+			"id" 				: "soccer-teams",
+			"link"				: "#!team-apparel/soccer-teams/", 
+			"img" 			: "products/images/acc_8004615_tc.jpg",
+			"name"			: "SOCCER Teams",
+			"baseFilter" 	: {"term" : {"team_league" : "soccer"}},
+			"optionList" 	: [
+				"user:team_league_soccer"
+			]
+		}
+	]
+}

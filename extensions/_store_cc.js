@@ -189,65 +189,91 @@ var store_cc = function(_app) {
 	//TODO : TEST PUSH TO ROBOTS @ THE END OF EACH APPENDhASH
 					
 //ALIAS					
-					_app.router.addAlias('nhl-filter', function(routeObj){
-						dump('ADD ALIAS filter callback routeObj'); dump(routeObj); 
-						pickShowOrLoad(routeObj);
-					});
-
-					_app.router.addAlias('adidas-filter', function(routeObj){
-						dump('ADD ALIAS filter callback routeObj'); dump(routeObj); 
-						pickShowOrLoad(routeObj);
-					});
+					_app.router.addAlias('filter', function(routeObj){	pickShowOrLoad(routeObj); });
+					_app.router.addAlias('ncaa-filter', function(routeObj){	pickShowOrLoad(routeObj); });
+					_app.router.addAlias('nfl-apparel', function(routeObj){ pickShowOrLoad(routeObj); });
+					_app.router.addAlias('nba-apparel', function(routeObj){ pickShowOrLoad(routeObj); });
+					_app.router.addAlias('mlb-apparel', function(routeObj){ pickShowOrLoad(routeObj); });
+					_app.router.addAlias('nhl-filter', function(routeObj){ pickShowOrLoad(routeObj); });
+					_app.router.addAlias('nike-filter', function(routeObj){ pickShowOrLoad(routeObj); });
+					_app.router.addAlias('adidas-filter', function(routeObj){ 	pickShowOrLoad(routeObj); });
+					_app.router.addAlias('mens-filter', function(routeObj){ 	pickShowOrLoad(routeObj); });
 					
-					_app.router.addAlias('ncaa-filter', function(routeObj){
-						dump('ADD ALIAS filter callback routeObj'); dump(routeObj); 
-						pickShowOrLoad(routeObj);
-					});
-					
-//APPENDS					
-					_app.router.appendHash({'type':'exact','route':'nhl-apparel/', 'callback':function(routeObj){
-						dump('In appendHash');
-						_app.ext.store_cc.u.getCatJSON(routeObj.route);
-					}});
-					
+//APPEND
 					//Adds the listener for the url.  The route needs to match the page pushed into robots below
-					_app.router.appendHash({'type':'match','route':'nhl-apparel/{{id}}','pagefilter':'nhl-apparel','callback':'nhl-filter'});
-					_app.ext.store_cc.u.pushFilter('nhl-apparel');
-			
-			
-					_app.router.appendHash({'type':'exact','route':'adidas-apparel/', 'callback':function(routeObj){
-						dump('In appendHash');
-						_app.ext.store_cc.u.getCatJSON(routeObj.route);
-					}});
-					
-					//Adds the listener for the url.  The route needs to match the page pushed into robots below
-					_app.router.appendHash({'type':'match','route':'adidas-apparel/{{id}}','pagefilter':'adidas-apparel','callback':'adidas-filter'});
-					//This is the list of helmet pages.  The ID is part of the URL- change this for SEO reasons- the jsonPath is the file where it loads the options from.  The jsonPath doesn't matter as long as it loads the file
-					var adidasPages = [
-						{id:'adidas-apparel',jsonPath:'filters/apparel/adidas-apparel.json'}
-					];
-					for(var i in adidasPages) {
-						_app.ext.store_filter.vars.filterPages.push(adidasPages[i]);
-						//this page needs to match the route above
-						_app.ext.seo_robots.vars.pages.push("#!filters/apparel/"+adidasPages[i].id+"/"); 
-					}
-					
 					_app.router.appendHash({'type':'exact','route':'ncaa-apparel/', 'callback':function(routeObj){
-						dump('In appendHash');
 						_app.ext.store_cc.u.getCatJSON(routeObj.route);
 					}});
+					_app.router.appendHash({'type':'match','route':'ncaa-apparel/{{id}}/','pagefilter':'ncaa-apparel','callback':'filter'});
+					_app.ext.store_cc.u.pushFilter('ncaa-apparel');
 					
-					//Adds the listener for the url.  The route needs to match the page pushed into robots below
-					_app.router.appendHash({'type':'match','route':'ncaa-apparel/{{id}}','pagefilter':'ncaa-apparel','callback':'ncaa-filter'});
-					//This is the list of helmet pages.  The ID is part of the URL- change this for SEO reasons- the jsonPath is the file where it loads the options from.  The jsonPath doesn't matter as long as it loads the file
-					var ncaaPages = [
-						{id:'ncaa-apparel',jsonPath:'filters/apparel/ncaa-apparel.json'}
-					];
-					for(var i in ncaaPages) {
-						_app.ext.store_filter.vars.filterPages.push(ncaaPages[i]);
-						//this page needs to match the route above
-						_app.ext.seo_robots.vars.pages.push("#!filters/apparel/"+ncaaPages[i].id+"/"); 
-					}
+					_app.router.appendHash({'type':'exact','route':'nfl-apparel/', 'callback':function(routeObj){
+						_app.ext.store_cc.u.getCatJSON(routeObj.route);
+					}});
+					_app.router.appendHash({'type':'match','route':'nfl-apparel/{{id}}/','pagefilter':'nfl-apparel','callback':'filter'});
+					_app.ext.store_cc.u.pushFilter('nfl-apparel');
+					
+					_app.router.appendHash({'type':'exact','route':'nba-apparel/', 'callback':function(routeObj){
+						_app.ext.store_cc.u.getCatJSON(routeObj.route);
+					}});
+					_app.router.appendHash({'type':'match','route':'nba-apparel/{{id}}/','pagefilter':'nba-apparel','callback':'filter'});
+					_app.ext.store_cc.u.pushFilter('nba-apparel');
+					
+					_app.router.appendHash({'type':'exact','route':'mlb-apparel/', 'callback':function(routeObj){
+						_app.ext.store_cc.u.getCatJSON(routeObj.route);
+					}});
+					_app.router.appendHash({'type':'match','route':'mlb-apparel/{{id}}/','pagefilter':'mlb-apparel','callback':'filter'});
+					_app.ext.store_cc.u.pushFilter('mlb-apparel');
+					
+					
+					_app.router.appendHash({'type':'exact','route':'nhl-apparel/', 'callback':function(routeObj){
+						_app.ext.store_cc.u.getCatJSON(routeObj.route);
+					}});
+					_app.router.appendHash({'type':'match','route':'nhl-apparel/{{id}}/','pagefilter':'nhl-apparel','callback':'filter'});
+					_app.ext.store_cc.u.pushFilter('nhl-apparel');
+					
+					_app.router.appendHash({'type':'exact','route':'team-apparel/', 'callback':function(routeObj){
+						_app.ext.store_cc.u.getCatJSON(routeObj.route);
+					}});
+					_app.router.appendHash({'type':'match','route':'team-apparel/{{id}}/','pagefilter':'team-apparel','callback':'filter'});
+					_app.ext.store_cc.u.pushFilter('team-apparel');
+					
+					_app.router.appendHash({'type':'exact','route':'nike-apparel/', 'callback':function(routeObj){
+						_app.ext.store_cc.u.getCatJSON(routeObj.route);
+					}});
+					_app.router.appendHash({'type':'match','route':'nike-apparel/{{id}}/','pagefilter':'nike-apparel','callback':'filter'});
+					_app.ext.store_cc.u.pushFilter('nike-apparel');
+					
+					_app.router.appendHash({'type':'exact','route':'adidas-apparel/', 'callback':function(routeObj){
+						_app.ext.store_cc.u.getCatJSON(routeObj.route);
+					}});
+					_app.router.appendHash({'type':'match','route':'adidas-apparel/{{id}}/','pagefilter':'adidas-apparel','callback':'filter'});
+					_app.ext.store_cc.u.pushFilter('adidas-apparel');
+					
+					_app.router.appendHash({'type':'exact','route':'apparel/', 'callback':function(routeObj){
+						_app.ext.store_cc.u.getCatJSON(routeObj.route);
+					}});
+					_app.router.appendHash({'type':'match','route':'apparel/{{id}}/','pagefilter':'apparel','callback':'filter'});
+					_app.ext.store_cc.u.pushFilter('apparel');
+					
+					_app.router.appendHash({'type':'exact','route':'mens-apparel/', 'callback':function(routeObj){
+						_app.ext.store_cc.u.getCatJSON(routeObj.route);
+					}});
+					_app.router.appendHash({'type':'match','route':'mens-apparel/{{id}}/','pagefilter':'mens-apparel','callback':'filter'});
+					_app.ext.store_cc.u.pushFilter('mens-apparel');
+					
+					_app.router.appendHash({'type':'exact','route':'womens-apparel/', 'callback':function(routeObj){
+						_app.ext.store_cc.u.getCatJSON(routeObj.route);
+					}});
+					_app.router.appendHash({'type':'match','route':'womens-apparel/{{id}}/','pagefilter':'womens-apparel','callback':'filter'});
+					_app.ext.store_cc.u.pushFilter('womens-apparel');
+					
+					_app.router.appendHash({'type':'exact','route':'kids-apparel/', 'callback':function(routeObj){
+						_app.ext.store_cc.u.getCatJSON(routeObj.route);
+					}});
+					_app.router.appendHash({'type':'match','route':'kids-apparel/{{id}}/','pagefilter':'kids-apparel','callback':'filter'});
+					_app.ext.store_cc.u.pushFilter('kids-apparel');
+					
 					
 					
 			/*		_app.router.appendHash({'type':'exact','route':'nhl-apparel/', 'callback':function(routeObj){

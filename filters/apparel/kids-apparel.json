@@ -1,0 +1,67 @@
+{
+	"id" : "Kids&#39;s-Apparel",
+	"page-title" : "Kids&#39;s Apparel at CampusColors.com",
+	"page-description" : "Kids&#39;s apparel on CampusColors.com.",
+	"banner" : "banners/test_cat_banner_785x200.jpg",
+	"bannerlink" : "#!nhl-apparel/nhl-best-sellers",
+	"banneralt" : "Kids&#39;s Banner",
+	"promo" : "Some promotional text goes here",
+	"pages" : [
+		{
+			"id" 				: "kids-t-shirts",
+			"link"				: "#!kids-apparel/kids-t-shirts/", 
+			"img" 			: "products/images/acc_8004615_tc.jpg",
+			"name"			: "Kids&#39;s T-shirts",
+			"baseFilter" 	: { "and" : [ {"term" : {"size_gender" : "kids"}} , {"query" : {"query_string" : {"query":"shirt ","fields":["prod_name"]}}}]}
+		},
+		{
+			"id" 				: "kids-sweatshirts",
+			"link"				: "#!kids-apparel/kids-sweatshirts/", 
+			"img" 			: "products/images/ala_27548x_wh2012.jpg",
+			"name"			: "Kids&#39;s Sweatshirts",
+			"baseFilter" 	: { "and" : [ {"term" : {"size_gender" : "kids"}} , {"query" : {"query_string" : {"query":"sweatshirt ","fields":["prod_name"]}}}]}
+		},
+		{
+			"id" 				: "kids-jerseys",
+			"link"				: "#!kids-apparel/kids-jerseys/", 
+			"img" 			: "products/images/acc_8004615_tc.jpg",
+			"name"			: "Kids&#39;s Jerseys",
+			"baseFilter" 	: { "and" : [ {"term" : {"size_gender" : "kids"}} , {"query" : {"query_string" : {"query":"jersey","fields":["prod_name"]}}}]}
+		},
+		{
+			"id" 				: "kids-shorts",
+			"link"				: "#!kids-apparel/kids-shorts/", 
+			"img" 			: "products/images/acc_8004615_tc.jpg",
+			"name"			: "Kids&#39;s Shorts",
+			"baseFilter" 	: { "and" : [ {"term" : {"size_gender" : "kids"}} , {"query" : {"query_string" : {"query":"shorts","fields":["prod_name"]}}}]}
+		},
+		{
+			"id" 				: "kids-pants",
+			"link"				: "#!kids-apparel/kids-pants/", 
+			"img" 			: "products/images/acc_8004615_tc.jpg",
+			"name"			: "Kids&#39;s Pants",
+			"baseFilter" 	: { "and" : [ {"term" : {"size_gender" : "kids"}} , {"query" : {"query_string" : {"query":"pants","fields":["prod_name"]}}}]}
+		},
+		{
+			"id" 				: "kids-hats",
+			"link"				: "#!kids-apparel/kids-hats/", 
+			"img" 			: "products/images/ala_27548x_wh2012.jpg",
+			"name"			: "Kids&#39;s Hats",
+			"baseFilter" 	: { "and" : [ {"term" : {"size_gender" : "kids"}} , {"query" : {"query_string" : {"query":"hat","fields":["prod_name"]}}}]}
+		},
+		{
+			"id" 				: "kids-accessories",
+			"link"				: "#!kids-apparel/kids-accessories/", 
+			"img" 			: "products/images/acc_8004615_tc.jpg",
+			"name"			: "Kids&#39;s Accessories",
+			"baseFilter" 	: { "and" : [ {"term" : {"size_gender" : "kids"}} , {"query" : {"query_string" : {"query":"accessories","fields":["prod_name"]}}}]}
+		},
+		{
+			"id" 				: "kids-new-arrivals",
+			"link"				: "#!kids-apparel/kids-new-arrivals/", 
+			"img" 			: "products/images/ala_27548x_wh2012.jpg",
+			"name"			: "Kids&#39;s New Arrivals",
+			"baseFilter" 	: { "and" : [ {"term" : {"tags" : "IS_FRESH"}} , {"term" : {"size_gender" : "kids"}}]}
+		}
+	]
+}
