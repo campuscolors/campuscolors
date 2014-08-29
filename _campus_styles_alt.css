@@ -349,8 +349,8 @@ header {position:relative;}
 	.homeVertNav {max-width:230px; padding:5px 5px 0 5px; position:relative;}
 	.vertNavBorder {border-left:3px solid #ffffff; border-right:3px solid #ffffff; border-top:3px solid #ffffff; border-radius:4px 4px 0 0; pading:0 0 11px 0;}
 	.vertNavTitle {font-size:12px;}
-	.homeVertNav a, .vertNavTitle {display:block; margin-left:13%; margin-right:33%;}
-	.homeVertNav a.vertNavLast {padding:0 0 5px 0;}
+	.homeVertNav .vertLinkCont, .vertNavTitle {margin-left:13%; margin-right:33%;}
+	.homeVertNav .vertLinkCont.vertNavLast {padding:0 0 5px 0;}
 	/*.vertNavArrow {height:50px; width:229px; position:absolute; bottom:-42px; right:0; background-position:-144px -210px;}*/
 	.vertNavArrow {height:auto; max-width:100%; position:absolute; bottom:-39px; right:0;}
 	.homeBanner {margin:20px 65px 20px 20px; float:right;}
