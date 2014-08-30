@@ -6,49 +6,49 @@
 	"pages" : [
 		{
 			"id" 				: "nike-t-shirts",
-			"link"			: "#!nike-apparel/nike-t-shirts", 
+			"link"				: "#!nike-apparel/nike-t-shirts/", 
 			"img" 			: "3_prongs_standard",
 			"name"			: "Nike T-shirts",
 			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nike"}} , {"term" : {"apparel_type" : "t-shirts"}}]}
 		},
 		{
 			"id" 				: "nike-sweatshirts",
-			"link"			: "#!nike-apparel/nike-sweatshirts", 
+			"link"				: "#!nike-apparel/nike-sweatshirts/", 
 			"img" 			: "9/93086_2",
 			"name"			: "Nike Sweatshirts",
 			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nike"}} , {"term" : {"apparel_type" : "sweatshirts"}}]}
 		},
 		{
 			"id" 				: "nike-jerseys",
-			"link"			: "#!nike-apparel/nike-jerseys", 
+			"link"				: "#!nike-apparel/nike-jerseys/", 
 			"img" 			: "",
 			"name"			: "Nike Jerseys",
 			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nike"}} , {"term" : {"apparel_type" : "jerseys"}}]}
 		},
 		{
 			"id" 				: "nike-shorts",
-			"link"			: "#!nike-apparel/nike-shorts", 
+			"link"				: "#!nike-apparel/nike-shorts/", 
 			"img" 			: "",
 			"name"			: "Nike Shorts",
 			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nike"}} , {"term" : {"apparel_type" : "shorts"}}]}
 		},
 		{
 			"id" 				: "nike-pants",
-			"link"			: "#!nike-apparel/nike-pants", 
+			"link"				: "#!nike-apparel/nike-pants/", 
 			"img" 			: "",
 			"name"			: "Nike Pants",
 			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nike"}} , {"term" : {"apparel_type" : "pants"}}]}
 		},
 		{
 			"id" 				: "nike-hats",
-			"link"			: "#!nike-apparel/nike-hats", 
+			"link"				: "#!nike-apparel/nike-hats/", 
 			"img" 			: "",
 			"name"			: "Nike Hats",
 			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nike"}} , {"term" : {"apparel_type" : "hats"}}]}
 		},
 		{
 			"id" 				: "nike-accessories",
-			"link"			: "#!nike-apparel/nike-accessories", 
+			"link"				: "#!nike-apparel/nike-accessories/", 
 			"img" 			: "",
 			"name"			: "Nike Accessories",
 			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nike"}} , {"term" : {"apparel_type" : "accessories"}}]}

@@ -6,63 +6,63 @@
 	"pages" : [
 		{
 			"id" 				: "nfl-t-shirts",
-			"link"			: "#!nfl-apparel/nfl-t-shirts", 
+			"link"				: "#!nfl-apparel/nfl-t-shirts/", 
 			"img" 			: "3_prongs_standard",
 			"name"			: "NFL T-shirts",
 			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nfl"}} , {"term" : {"apparel_type" : "t-shirts"}}]}
 		},
 		{
 			"id" 				: "nfl-sweatshirts",
-			"link"			: "#!nfl-apparel/nfl-sweatshirts", 
+			"link"				: "#!nfl-apparel/nfl-sweatshirts/", 
 			"img" 			: "9/93086_2",
 			"name"			: "NFL Sweatshirts",
 			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nfl"}} , {"term" : {"apparel_type" : "sweatshirts"}}]}
 		},
 		{
 			"id" 				: "nfl-jerseys",
-			"link"			: "#!nfl-apparel/nfl-jerseys", 
+			"link"				: "#!nfl-apparel/nfl-jerseys/", 
 			"img" 			: "",
 			"name"			: "NFL Jerseys",
 			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nfl"}} , {"term" : {"apparel_type" : "jerseys"}}]}
 		},
 		{
 			"id" 				: "nfl-jackets",
-			"link"			: "#!nfl-apparel/nfl-jackets", 
+			"link"				: "#!nfl-apparel/nfl-jackets/", 
 			"img" 			: "",
 			"name"			: "NFL Jackets",
 			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nfl"}} , {"term" : {"apparel_type" : "jackets"}}]}
 		},
 		{
 			"id" 				: "nfl-shorts",
-			"link"			: "#!nfl-apparel/nfl-shorts", 
+			"link"				: "#!nfl-apparel/nfl-shorts/", 
 			"img" 			: "",
 			"name"			: "NFL Shorts",
 			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nfl"}} , {"term" : {"apparel_type" : "shorts"}}]}
 		},
 		{
 			"id" 				: "nfl-pants",
-			"link"			: "#!nfl-apparel/nfl-pants", 
+			"link"				: "#!nfl-apparel/nfl-pants/", 
 			"img" 			: "",
 			"name"			: "NFL Pants",
 			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nfl"}} , {"term" : {"apparel_type" : "pants"}}]}
 		},
 		{
 			"id" 				: "nfl-hats",
-			"link"			: "#!nfl-apparel/nfl-hats", 
+			"link"				: "#!nfl-apparel/nfl-hats/", 
 			"img" 			: "",
 			"name"			: "NFL Hats",
 			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nfl"}} , {"term" : {"apparel_type" : "hats"}}]}
 		},
 		{
 			"id" 				: "nfl-accessories",
-			"link"			: "#!nfl-apparel/nfl-accessories", 
+			"link"				: "#!nfl-apparel/nfl-accessories/", 
 			"img" 			: "",
 			"name"			: "NFL Accessories",
 			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nfl"}} , {"term" : {"apparel_type" : "accessories"}}]}
 		},
 		{
 			"id" 				: "nfl-best-sellers",
-			"link"			: "#!nfl-apparel/nfl-best-sellers", 
+			"link"				: "#!nfl-apparel/nfl-best-sellers/", 
 			"img" 			: "K/shutterstock_67866511",
 			"name"			: "NFL Best Sellers",
 			"baseFilter" 	: {"term" : {"tags" : "IS_BESTSELLER"}},

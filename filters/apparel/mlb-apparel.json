@@ -6,56 +6,56 @@
 	"pages" : [
 		{
 			"id" 				: "mlb-t-shirts",
-			"link"			: "#!mlb-apparel/mlb-t-shirts", 
+			"link"				: "#!mlb-apparel/mlb-t-shirts/", 
 			"img" 			: "3_prongs_standard",
 			"name"			: "MLB T-shirts",
 			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "mlb"}} , {"term" : {"apparel_type" : "t-shirts"}}]}
 		},
 		{
 			"id" 				: "mlb-sweatshirts",
-			"link"			: "#!mlb-apparel/mlb-sweatshirts", 
+			"link"				: "#!mlb-apparel/mlb-sweatshirts/", 
 			"img" 			: "9/93086_2",
 			"name"			: "MLB Sweatshirts",
 			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "mlb"}} , {"term" : {"apparel_type" : "sweatshirts"}}]}
 		},
 		{
 			"id" 				: "mlb-jerseys",
-			"link"			: "#!mlb-apparel/mlb-jerseys", 
+			"link"				: "#!mlb-apparel/mlb-jerseys/", 
 			"img" 			: "",
 			"name"			: "MLB Jerseys",
 			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "mlb"}} , {"term" : {"apparel_type" : "jerseys"}}]}
 		},
 		{
 			"id" 				: "mlb-jackets",
-			"link"			: "#!mlb-apparel/mlb-jackets", 
+			"link"				: "#!mlb-apparel/mlb-jackets/", 
 			"img" 			: "",
 			"name"			: "MLB Jackets",
 			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "mlb"}} , {"term" : {"apparel_type" : "jackets"}}]}
 		},
 		{
 			"id" 				: "mlb-shorts",
-			"link"			: "#!mlb-apparel/mlb-shorts", 
+			"link"				: "#!mlb-apparel/mlb-shorts/", 
 			"img" 			: "",
 			"name"			: "MLB Shorts",
 			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "mlb"}} , {"term" : {"apparel_type" : "shorts"}}]}
 		},
 		{
 			"id" 				: "mlb-pants",
-			"link"			: "#!mlb-apparel/mlb-pants", 
+			"link"				: "#!mlb-apparel/mlb-pants/", 
 			"img" 			: "",
 			"name"			: "MLB Pants",
 			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "mlb"}} , {"term" : {"apparel_type" : "pants"}}]}
 		},
 		{
 			"id" 				: "mlb-hats",
-			"link"			: "#!mlb-apparel/mlb-hats", 
+			"link"				: "#!mlb-apparel/mlb-hats/", 
 			"img" 			: "",
 			"name"			: "MLB Hats",
 			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "mlb"}} , {"term" : {"apparel_type" : "hats"}}]}
 		},
 		{
 			"id" 				: "mlb-accessories",
-			"link"			: "#!mlb-apparel/mlb-accessories", 
+			"link"				: "#!mlb-apparel/mlb-accessories/", 
 			"img" 			: "",
 			"name"			: "MLB Accessories",
 			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "mlb"}} , {"term" : {"apparel_type" : "accessories"}}]}

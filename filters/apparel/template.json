@@ -9,42 +9,42 @@
 	"pages" : [
 		{
 			"id" 				: "nhl-t-shirts",
-			"link"				: "#!nhl-apparel/nhl-t-shirts", 
+			"link"				: "#!nhl-apparel/nhl-t-shirts/", 
 			"img" 			: "products/images/acc_8004615_tc.jpg",
 			"name"			: "NHL T-shirts",
 			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nhl"}} , {"term" : {"apparel_type" : "t-shirts"}}]}
 		},
 		{
 			"id" 				: "nhl-sweatshirts",
-			"link"				: "#!nhl-apparel/nhl-sweatshirts", 
+			"link"				: "#!nhl-apparel/nhl-sweatshirts/", 
 			"img" 			: "products/images/ala_27548x_wh2012.jpg",
 			"name"			: "NHL Sweatshirts",
 			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nhl"}} , {"term" : {"apparel_type" : "sweatshirts"}}]}
 		},
 		{
 			"id" 				: "nhl-jerseys",
-			"link"				: "#!nhl-apparel/nhl-jerseys", 
+			"link"				: "#!nhl-apparel/nhl-jerseys/", 
 			"img" 			: "products/images/acc_8004615_tc.jpg",
 			"name"			: "NHL Jerseys",
 			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nhl"}} , {"term" : {"apparel_type" : "jerseys"}}]}
 		},
 		{
 			"id" 				: "nhl-hats",
-			"link"				: "#!nhl-apparel/nhl-hats", 
+			"link"				: "#!nhl-apparel/nhl-hats/", 
 			"img" 			: "products/images/ala_27548x_wh2012.jpg",
 			"name"			: "NHL Hats",
 			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nhl"}} , {"term" : {"apparel_type" : "hats"}}]}
 		},
 		{
 			"id" 				: "nhl-accessories",
-			"link"				: "#!nhl-apparel/nhl-accessories", 
+			"link"				: "#!nhl-apparel/nhl-accessories/", 
 			"img" 			: "products/images/acc_8004615_tc.jpg",
 			"name"			: "NHL Accessories",
 			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nhl"}} , {"term" : {"apparel_type" : "accessories"}}]}
 		},
 		{
 			"id" 				: "nhl-best-sellers",
-			"link"				: "#!nhl-apparel/nhl-best-sellers", 
+			"link"				: "#!nhl-apparel/nhl-best-sellers/", 
 			"img" 			: "products/images/ala_27548x_wh2012.jpg",
 			"name"			: "NHL Best Sellers",
 			"baseFilter" 	: {"term" : {"tags" : "IS_FRESH"}},
