@@ -23,6 +23,7 @@ body {font-family:Oxygen, Helvetica, sans-serif;}
 .sprite {background-image:url(images/sprite_500x500.png);}
 .wrapper {width:290px; margin:0 auto;} /* for testing:  background-color:rgba(1,1,1,.1); */
 .listWrapper {width:300px; margin:0 auto;}
+.titleHead {width:100%; padding:5px; border:2px outset #000000; color:#ffffff; font-size:1.5em;}
 
 .bareYellowLink {color:#fbe143; text-decoration:none;}
 .uYellowLink {color:#fbe143; text-decoration:underline;}
@@ -239,7 +240,7 @@ header {position:relative;}
 .productPage .priceDesc {font-size:0.5em; display:none;}
 .productPageLink {padding:6px 0 0 0; color:#781c2b;}
 .productPage .addtocartbutton {height:50px; width:290px; color:#000000; font-size:2.1em; border-top:2px outset #fbe143; border-right:2px outset #000000; border-bottom:2px outset #000000; border-left:2px outset #fbe143; box-shadow:2px 2px 0 0 #cccccc; border-radius:0;}
-.latency {height: 60px; width: 290px; margin:10px auto; color:#194835; font-size:2em; background: none repeat scroll 0 0 rgb(204, 204, 204); border: 2px solid rgb(153, 153, 153); box-shadow: 2px 2px 0 0 rgb(153, 153, 153); padding: 13px 0 0 0;}
+.latency {height: 60px; width: 290px; margin:10px auto; color:#194835; font-size:2em; background-color:#eeeeee; border:2px solid #cccccc; box-shadow:2px 2px 0 0 #cccccc; padding: 13px 0 0 0;}
 .fitTip {text-align:left}
 .socialLinks a {margin:5px;}
 
@@ -321,6 +322,8 @@ header {position:relative;}
 	
 	.prodViewerContainer {width:728px; margin:0 auto;}
 	.imageContainer, .prodSummaryContainer {width:50%; float:left;}
+	.prodSummaryUpper, .latency, .prodSummaryLower {width:auto; margin-bottom:20px; background-color:#eeeeee; border:2px solid #cccccc; box-shadow:2px 2px 0 0 #cccccc;}
+	.latency, .fitTip {padding:20px;}
 	.productPage .addtocartbutton {padding:0;}
 	.tabbedProductContentTD {clear:both;}
 	.tabbedProductContentTD .ui-tabs .ui-tabs-nav {width:auto; margin:10px auto; padding:0; border-bottom:5px solid #333333; box-shadow:0 0 0 0;}

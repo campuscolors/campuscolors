@@ -117,8 +117,8 @@ $(document).ready(function(){
 			"baseURL":baseURL, //used in non-local mode.
 			"checkoutAuthMode" : "active",//can be passive, active or required
 		//	"testURL":"http://www.speedaddictcycles.com/", //used ONLY if protocol is file: (for testing)
-		//	"testURL":"http://app.sporks.zoovy.com/", //used ONLY if protocol is file: (for testing)
-			"testURL":"http://beta.campuscolors.com/", //used ONLY if protocol is file: (for testing)
+			"testURL":"http://app.sporks.zoovy.com/", //used ONLY if protocol is file: (for testing)
+		//	"testURL":"http://beta.campuscolors.com/", //used ONLY if protocol is file: (for testing)
 			"addjQueryPointer" : true,
 			"analyticsPointer" : "ga",
 			"initComplete" : function(){
@@ -761,6 +761,17 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 			</div>
 		</div>
 		
+		<div data-tlc="bind $var '.options.user:team_league_nhl_alt'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
+			<div data-tlc="store_cc#showmobilefilter;" data-filterview='0' data-top='0' class="filterGroupTitle marginBottom">NHL Teams Alt<span class="sprite"></span></div>
+			<div class="filterHider">
+				<div class="filterCheckboxList" 
+					data-tlc="bind $index '.options.user:team_league_nhl_alt.index';
+						bind $cbl '.options.user:team_league_nhl_alt.options'; 
+						store_filter#filtercheckboxlist --index=$index;">
+				</div>
+			</div>
+		</div>
+		
 		<div data-tlc="bind $var '.options.user:team_league_nba'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
 			<div data-tlc="store_cc#showmobilefilter;" data-filterview='0' data-top='0' class="filterGroupTitle marginBottom">NBA Teams<span class="sprite"></span></div>
 			<div class="filterHider">
@@ -1075,31 +1086,34 @@ this will likely become more flexible in the future. ###
 	
 		<div class="prodSummaryContainer marginBottom no_underline">
 
-			<div class="priceContainer marginBottom">
-				<h4 data-tlc="bind $var '.%attribs.zoovy:base_price'; if (is $var --notblank;) {{format --currency='USD'; format --append='<span class=&quot;priceDesc&quot;>Our Price: </span>'; apply --append;}};" class="basePrice"></h4>
-				<h5 data-tlc="bind $var '.%attribs.zoovy:prod_msrp';  if (is $var --notblank;) {{format --currency='USD'; format --prepend='MSRP: ';  apply --append;}};" class="prodMSRP"></h5>
-				<span class="savings">
-					<span data-useparentdata='1' data-tlc="quickstart#priceretailsavingsdifference  --legacy; apply --append;" class="savingsDifference"></span>
-					<span data-useparentdata='1' data-tlc="quickstart#priceretailsavingspercentage  --legacy; apply --append;" class="savingsPercentage"></span>
-				</span>
-			</div>
-			
-			<div class="marginBottom displayNone">
-				<h5 data-tlc="bind $var '.pid'; if (is $var --notblank;) {{format --prepend='Sku: '; apply --append;}};" class="stid"></h5>
-				<h5><a href='#' data-tlc="bind $var '.%attribs.zoovy:prod_mfg'; if(is $var --notblank;) {{apply --append; format --prepend='#!search/keywords/'; apply --attrib='href';}};"></a></h5>
-				<h5 data-tlc="bind $var '.%attribs.zoovy:prod_mfgid';  if (is $var --notblank;) {{format --prepend='Mfg ID: '; apply --append;}};"></h5>
-			</div>
+			<div class="prodSummaryUpper">
+				<div class="yearbook greyGradient titleHead hidePhone showTabletBlock">PRODUCT DETAILS</div>
+				<div class="priceContainer marginBottom">
+					<h4 data-tlc="bind $var '.%attribs.zoovy:base_price'; if (is $var --notblank;) {{format --currency='USD'; format --append='<span class=&quot;priceDesc&quot;>Our Price: </span>'; apply --append;}};" class="basePrice"></h4>
+					<h5 data-tlc="bind $var '.%attribs.zoovy:prod_msrp';  if (is $var --notblank;) {{format --currency='USD'; format --prepend='MSRP: ';  apply --append;}};" class="prodMSRP"></h5>
+					<span class="savings">
+						<span data-useparentdata='1' data-tlc="quickstart#priceretailsavingsdifference  --legacy; apply --append;" class="savingsDifference"></span>
+						<span data-useparentdata='1' data-tlc="quickstart#priceretailsavingspercentage  --legacy; apply --append;" class="savingsPercentage"></span>
+					</span>
+				</div>
+				
+				<div class="marginBottom displayNone">
+					<h5 data-tlc="bind $var '.pid'; if (is $var --notblank;) {{format --prepend='Sku: '; apply --append;}};" class="stid"></h5>
+					<h5><a href='#' data-tlc="bind $var '.%attribs.zoovy:prod_mfg'; if(is $var --notblank;) {{apply --append; format --prepend='#!search/keywords/'; apply --attrib='href';}};"></a></h5>
+					<h5 data-tlc="bind $var '.%attribs.zoovy:prod_mfgid';  if (is $var --notblank;) {{format --prepend='Mfg ID: '; apply --append;}};"></h5>
+				</div>
 
-			<form data-tlc="bind $var '.pid'; store_product#atcform  --legacy; apply --append;" class="prodViewerAddToCartForm clearfix marginBottom" action="#" data-app-submit="quickstart|productAdd2Cart" data-show="inline">
-				<fieldset data-tlc="bind $var '.pid'; store_product#atcvariations  --legacy; apply --append;" class="borderNone"></fieldset> <!-- TODO : custom variation for size -->
-				<fieldset data-tlc="bind $var '.'; store_product#atcquantityinput  --defaultvalue='1' --legacy;" class="borderNone"></fieldset>
-				<div class='marginBottom'><input data-tlc="bind $var '.pid'; store_product#addtocartbutton  --legacy;" value="Add to Cart" class="applyButton addtocartbutton yearbook displayNone" type="submit"></div>
-			</form>
-		
-			<div data-tlc="bind $var '.pid'; apply --attrib='data-pid';" class="CRMButtonMenu">
-				<a href="#" data-app-click="quickstart|productAdd2List" data-listid="wishlist" class="productPageLink">Add to Wishlist</a> | 
-				<a href="#" data-app-click="" class="productPageLink">E-mail to a friend</a> <!-- TODO : set up e-mail page link feature, possible to use addThis' feature? -->
-				<!-- <a href="#" data-app-click="store_crm|productReviewShow">Write Review</a>	| -->
+				<form data-tlc="bind $var '.pid'; store_product#atcform  --legacy; apply --append;" class="prodViewerAddToCartForm clearfix marginBottom" action="#" data-app-submit="quickstart|productAdd2Cart" data-show="inline">
+					<fieldset data-tlc="bind $var '.pid'; store_product#atcvariations  --legacy; apply --append;" class="borderNone"></fieldset> <!-- TODO : custom variation for size -->
+					<fieldset data-tlc="bind $var '.'; store_product#atcquantityinput  --defaultvalue='1' --legacy;" class="borderNone"></fieldset>
+					<div class='marginBottom'><input data-tlc="bind $var '.pid'; store_product#addtocartbutton  --legacy;" value="Add to Cart" class="applyButton addtocartbutton yearbook displayNone" type="submit"></div>
+				</form>
+			
+				<div data-tlc="bind $var '.pid'; apply --attrib='data-pid';" class="CRMButtonMenu">
+					<a href="#" data-app-click="quickstart|productAdd2List" data-listid="wishlist" class="productPageLink">Add to Wishlist</a> | 
+					<a href="#" data-app-click="" class="productPageLink">E-mail to a friend</a> <!-- TODO : set up e-mail page link feature, possible to use addThis' feature? -->
+					<!-- <a href="#" data-app-click="store_crm|productReviewShow">Write Review</a>	| -->
+				</div>
 			</div>
 			
 			<div data-tlc="bind $var '.%attribs.zoovy:ship_latency'; if (is $var --notblank;) {{apply --show;}};" class="displayNone">
@@ -1107,8 +1121,10 @@ this will likely become more flexible in the future. ###
 			</div>
 			<div data-app-role="timeInTransit" class="displayNone"></div>
 	
-			<div data-tlc="bind $var '.%attribs.user:fit_tip'; if (is $var --notblank;) {{format --prepend='<h2 class=&quot;yearbook&quot;>FIT TIP</h2>' apply --append;}};" class="fitTip"></div> <!-- TODO : confirm attrib name for this feature (and link below it) -->
-			<a data-tlc="bind $var '.%attribs.user:fit_tip'; if (is $var --notblank;) {{apply --show;}};" class="productPageLink displayNone floatLeft" href="#">Click here for the Size Chart</a>
+			<div data-tlc="bind $var '.%attribs.user:fit_tip'; if(is $var --notblank;) {{apply --show;}};" class="prodSummaryLower displayNone">
+				<div data-tlc="bind $var '.%attribs.user:fit_tip'; if (is $var --notblank;) {{format --prepend='<h2 class=&quot;yearbook&quot;>FIT TIP</h2>' apply --append;}};" class="fitTip"></div> <!-- TODO : confirm attrib name for this feature (and link below it) -->
+				<a data-tlc="bind $var '.%attribs.user:fit_tip'; if (is $var --notblank;) {{apply --show;}};" class="productPageLink displayNone floatLeft" href="#">Click here for the Size Chart</a>
+			</div>
 	
 			<div class="socialLinks"></div> <!-- TODO : addThis doesn't support Instagram... hmmm -->
 			
