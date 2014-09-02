@@ -110,6 +110,14 @@ var store_cc = function(_app) {
 						$('form',$context).data('loadFullList', infoObj.loadFullList).trigger('submit');
 					});
 					
+					_app.templates.productTemplate.on('complete.store_cc',function(event,$context,infoObj) {
+						_app.ext.store_cc.u.showRecentlyViewedItems($context);
+					});
+					
+					_app.templates.productTemplate.on('depart.store_cc',function(event,$context,infoObj) {
+						_app.ext.store_cc.u.addRecentlyViewedItems($context, infoObj.pid);
+					});
+					
 					
 					function loadPage(id, successCallback, failCallback){
 					var pageObj = _app.ext.store_filter.vars.filterPageLoadQueue[id];
@@ -634,7 +642,40 @@ var store_cc = function(_app) {
 					//this page needs to match the route above
 					_app.ext.seo_robots.vars.pages.push("#!filters/apparel/"+Pages[i].id+"/"); 
 				}
-			}
+			},
+			
+			//called on depart from prod page to add item to recently viewed items list
+			//changed this from quickstart's addition at page load to prevent items from showing in list on first page visit
+			addRecentlyViewedItems : function($context, pid) {
+				dump('START addRecentlyViewedItems');
+					//pid is infoObj.pid passed from onDeparts
+				if($.inArray(pid,_app.ext.quickstart.vars.session.recentlyViewedItems) < 0)	{
+					_app.ext.quickstart.vars.session.recentlyViewedItems.unshift(pid);
+					}
+				else	{
+					//the item is already in the list. move it to the front.
+					_app.ext.quickstart.vars.session.recentlyViewedItems.splice(0, 0, _app.ext.quickstart.vars.session.recentlyViewedItems.splice(_app.ext.quickstart.vars.session.recentlyViewedItems.indexOf(pid), 1)[0]);
+					}
+			},//addRecentlyViewedItems
+				
+				//populates carousel if items in recently viewed list, shows placeholder text if list empty
+			showRecentlyViewedItems : function($context) {
+				var $container = $('.productRecentCarousel', $context);
+					dump('START showRecentlyViewedItems');
+					//if no recently viewed items, tell them the sky is blue
+				if(_app.ext.quickstart.vars.session.recentlyViewedItems.length == 0) {
+					// $('.recentEmpty',$container).show(); //Use if contianer w/ empty message is desired. 
+					dump('There aint nuthin in there ma!');
+				}
+					//otherwise, show them what they've seen
+				else {
+					$('.recentEmpty',$container).hide();
+					$('.secTitleWrap',$container).show();
+					$('ul',$container).empty(); //empty product list;
+					$container.tlc({'dataset':_app.ext.quickstart.vars.session.recentlyViewedItems,verb:'translate'}); //build product list
+					dump(_app.ext.quickstart.vars.session.recentlyViewedItems);
+				}
+			},//showRecentlyViewedItems
 			
 		/*	This may be a better way to do this, but it doesn't work if the page isn't reloaded. If tablet goes from 
 				portrait to landscape, the nav isn't hidden properly. Uses hideOnHome class for now.

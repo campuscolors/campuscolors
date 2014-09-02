@@ -970,15 +970,18 @@ for legacy browsers. That means old browsers will use the anchor to retain 'back
 				switch(pageType)	{
 
 					case 'product':
-	//add item to recently viewed list IF it is not already in the list.				
-						if($.inArray(infoObj.pid,_app.ext.quickstart.vars.session.recentlyViewedItems) < 0)	{
-							_app.ext.quickstart.vars.session.recentlyViewedItems.unshift(infoObj.pid);
-							}
-						else	{
+//campus edit:
+	//add item to recently viewed list IF it is not already in the list.	
+//THIS MOVED TO _store_cc.js addRecentlyViewedItems function TO ALLOW ITEMS TO BE ADDED ON DEPART IN ORDER TO 
+//PREVENT AN ITEM FROM BEING SHOWN ON ITS OWN PAGE (UNLESS IT IS NOT THE FIRST VISIT TO THAT PRODUCT'S PAGE)		
+//						if($.inArray(infoObj.pid,_app.ext.quickstart.vars.session.recentlyViewedItems) < 0)	{
+//							_app.ext.quickstart.vars.session.recentlyViewedItems.unshift(infoObj.pid);
+//							}
+//						else	{
 // ** 201332 indexOf changed to $.inArray for IE8 compatibility, since IE8 only supports the indexOf method on Strings
 							//the item is already in the list. move it to the front.
-							_app.ext.quickstart.vars.session.recentlyViewedItems.splice(0, 0, _app.ext.quickstart.vars.session.recentlyViewedItems.splice($.inArray(infoObj.pid, _app.ext.quickstart.vars.session.recentlyViewedItems), 1)[0]);
-							}
+//							_app.ext.quickstart.vars.session.recentlyViewedItems.splice(0, 0, _app.ext.quickstart.vars.session.recentlyViewedItems.splice($.inArray(infoObj.pid, _app.ext.quickstart.vars.session.recentlyViewedItems), 1)[0]);
+//							}
 						$new = _app.ext.quickstart.u.showProd(infoObj);
 						break;
 	
