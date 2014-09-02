@@ -429,6 +429,12 @@ var store_cc = function(_app) {
 //on a data-bind, format: is equal to a renderformat. extension: tells the rendering engine where to look for the renderFormat.
 //that way, two render formats named the same (but in different extensions) don't overwrite each other.
 		tlcFormats : {
+		
+			dump : function(data,thisTLC) {
+				dump("store_cc#dump");
+				dump(data);
+				return true;
+			},
 			
 			filterform : function(data, thisTLC) {
 				var $context = data.globals.tags[data.globals.focusTag];
