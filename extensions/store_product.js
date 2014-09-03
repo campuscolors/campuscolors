@@ -574,7 +574,7 @@ it has no inventory AND inventory matters to merchant
 						for(var index in prodData['@inventory']) {
 							inv += Number(prodData['@inventory'][index].AVAILABLE)
 							}
-	//					_app.u.dump(" -> item HAS variations. inv = "+inv);
+/*campus*/		_app.u.dump(" -> item HAS variations. inv = "+inv+" item follows:"); dump(prodData['@variations']);
 						}
 					}
 				else	{} //cant get inventory without a product record.
