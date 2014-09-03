@@ -218,13 +218,13 @@ var _robots = {
 				<a href="#!customer/myaccount/"><span class="loginShow username uYellowLink"></span></a>
 			</div>
 			<div class="links">
-				<a href="#!myaccount" class="bareWhiteLink marginRight showTablet showDesktop">STORE LOCATIONS</a> <!-- TODO : ADD STORE LOCATION LINK -->
+				<a href="#!company/locations/" class="bareWhiteLink marginRight showTablet showDesktop">STORE LOCATIONS</a>
 				<a href="#!myaccount" class="bareWhiteLink marginRight showTablet showDesktop">CUSTOMER SERVICE</a> <!-- TODO : CUSTOMER SERVICE LINK (LOOKS LIKE RETURNS ARTICLE?) -->
 				<a href="#!company/contact/" class="bareWhiteLink marginRight marginLeft showTablet showDesktop">(866) 598-2267</a>
 				<span class="whiteText showTablet showDesktop">Online Chat | </span>
 				<span class="hideTablet hideDesktop bareYellowLink liveChat"><span class="sprite"></span>Live Chat | </span>
 				<span class="yellowText showTablet showDesktop">CURRENTLY...</span>
-				<a href="#!myaccount" class="bareWhiteLink hideTablet hideDesktop">STORE LOCATIONS</a> <!-- TODO : ADD STORE LOCATION LINK -->
+				<a href="#!company/locations/" class="bareWhiteLink hideTablet hideDesktop">STORE LOCATIONS</a>
 			</div>
 			<div class="upperCartWrapper floatLeft center hide960To1079 hideAbove1080 hidePhone showTabletBlock hideDesktop">
 				<div class="sprite floatLeft">
@@ -396,7 +396,6 @@ var _robots = {
 	<div class="footBG1">
 		<div class="footerPromo hidePhone showTabletBlock">
 			<div class="center wrapper">
-<!-- TODO : CHECK THAT THIS LINK IS WHAT WAS WRITTEN FOR THE LOCATIONS PAGE -->
 				Visit our <a href="#!company/locations/" class="uRedLink">stores</a> to try on all our selection of thousands of items or shop online for the convenience of ordering direct.
 				<div class="twoDayShip clear">Overnight and 2-Day Delivery Available.</div>
 			</div>
@@ -426,15 +425,15 @@ var _robots = {
 				<div class="rightLinks floatLeft">
 					<ul class="listStyleNone footUL">
 						<li><a href="">Home</a></li>
-						<li><a href="">Store Locations</a></li>
+						<li><a href="#!company/locations/">Store Locations</a></li>
 						<li><a href="">Customer Service</a></li>
-						<li><a href="">FAQ's</a></li>
+						<li><a href="#!company/faq/">FAQ's</a></li>
 						<li><a href="">Help</a></li>
 					</ul>
 					<ul class="listStyleNone footUL">
-						<li><a href="">My Account</a></li>
-						<li><a href="">Privacy Policy</a></li>
-						<li><a href="">About Us</a></li>
+						<li><a href="#!customer/myaccount/">My Account</a></li>
+						<li><a href="#!company/privacy/">Privacy Policy</a></li>
+						<li><a href="#!company/about/">About Us</a></li>
 					</ul>
 				</div>
 			</div>
@@ -907,7 +906,7 @@ remember to NOT put the button inside the href or two events will occur onclick.
 	<button class="floatRight pointer quickView displayNone" data-app-click="quickstart|quickviewShow" data-loadstemplate="productTemplateQuickView">Quickview</button>
 	
 	<a data-tlc="bind $pid '.pid'; bind $seo '.%attribs.zoovy:prod_name'; bind $href ''; store_routing#productlink --pid=$pid --seo=$seo; apply --attrib='href';" class="blockLink bareWhiteLink">
-		<!-- <div data-tlc="bind $var '.pid'; quickstart#addpicslider  --legacy; apply --append;" class="prodThumbContainer"> -->
+		<!-- <div data-tlc="bind $var '.pid'; quickstart#addpicslider  - -legacy; apply - -append;" class="prodThumbContainer"> -->
 		<div class="prodThumbContainer">
 			<img data-tlc="bind $var '.%attribs.zoovy:prod_thumb'; if(is $var --blank;){{bind $var '.%attribs.zoovy:prod_image1';}}; if(is $var --notblank;){{apply --img --media=$var --width=210 --height=250 --bgcolor='#ffffff' --replace;}};" src="blank.gif" class="prodThumb" alt="" height="250" width="210">
 		</div>
@@ -1336,9 +1335,9 @@ if you change these, you should move them above this comment so that when you (o
 
 
 
-<div id="companyTemplate" class="clearfix">
+<div id="companyTemplate" class="clearfix companyTemplate wrapper">
 
-	<div class="sideline">
+	<div class="sideline center yearbook">
 <nav id="companyNav">
 <ul class="listStyleNone noPadOrMargin">
 <!-- these are generated via javascript, based on the quickstart.pages object. -->
@@ -1349,31 +1348,87 @@ if you change these, you should move them above this comment so that when you (o
 	<div class="mainColumn">
 <!-- .textContentArea is used as a selector in quickstart.js because article tag type isn't ie8 friendly -->
 		<div id="aboutArticle" class="textContentArea article">
-			<h1>About Us</h1>
+			<h1>ABOUT US</h1>
 			<div>
-			<!-- ::: add your about us information here -->
+				<p>
+					It all began in the summer of 1989. While driving back from a summer vacation, Neil Rubenstein's two son&#39;s wanted 
+					to stop in Ann Arbor, MI so that they could get official sweatshirts and football jerseys from the University of Michigan. 
+					An hour later with &#36;250 worth of newly acquired sweatshirts, t&#45;shirts, shorts and jerseys packed into the trunk of the 
+					car the family returned to the road to finish the drive back to suburban Chicago. While on the drive, Neil thought to 
+					himself, &#34;If my kids want this stuff so bad that I have to drive an hour out of our way, there have got to be more kids 
+					like mine and more parents willing to do the same.&#34; It was at that time that the idea for Campus Colors was born.
+				</p>
+				<p>
+					Campus Colors was started in 1990 with the premise of bringing authentic college bookstore merchandise to suburban 
+					Chicago. The idea was simple&#58; rather than travel to your favorite college to get merchandise to support your favorite school, 
+					Campus Colors would bring the merchandise of the school to you. What started out as a small retail store free standing 
+					commercial building that resembled a fraternity house on a college campus, Campus Colors has grown into a family run 
+					chain with locations throughout the Chicagoland area. And now with the Pro Colors store, Campus Colors is able to offer 
+					all of your favorite pro team merchandise too.
+				</p>
+				<p>
+					Both inside our brick and mortar stores and now on&#45;line, Campus Colors carries one of the largest selections of top quality, 
+					licensed collegiate sportswear and novelties in the country. Our merchandise is authentic&#45;we buy from the same top 
+					companies that supply collegiate bookstores across the country, that&#39;s why we truly are &#34;The Authentic Off Campus 
+					College Store.&#34; In addition, every single item in our stores is officially licensed, which means that the university or school 
+					has approved that item and a portion of the proceeds from the sale of that product go directly to that school. With merchandise 
+					representing over 200 colleges and universities you&#39;re sure to find something for collegiate fans of all ages.
+				</p>
+				<p>
+					Featuring top quality merchandise by vendors such as&#58; Nike, Adidas, Reebok, Majestic, Top of the World, and more, Campus 
+					Colors offers a wide selection of sweatshirts, t&#45;shirts, shorts, pants, hats, jerseys, and novelties for men, women, and children. 
+					Ranging in size from toddler to XXL we can outfit just about anyone.
+				</p>
+				<p>
+					With over 400 different hooded sweatshirts, 750 different t&#45;shirts, 300 different pairs of shorts and over 1000 different novelties, 
+					our selection is unparalleled and unique. What&#39;s more, approximately 60&#37; of all of our merchandise is custom designed to meet 
+					the high standards of Campus Colors&#39; customers. By designing our own merchandise, we are able to deliver top quality, clean, 
+					timeless and fashionable designs that look great both now and for many years to come.
+				</p>
 			</div>
 		</div>
 
 
 		<div id="contactArticle" class="displayNone textContentArea">
-			<h1>Contact Information</h1>
+			<h1 class="displayNone">CONTACT US</h1>
+			<h2>Customer Service Worth Cheering for!</h2>
 			<div class="companyAddress">
-			<!-- ::: add your contact information here ::: -->
+				<p>
+					Campus Colors has knowledgeable, friendly customer service standing by, ready to assist you. You can contact us directly 
+					Monday &#45; Friday, 9:30am &#45; 5pm CST. You can also email us 24 hours a day for any assistance you may need 
+					after hours&#33;
+				</p>
+				<h3>Call Us at&#58; &#40;866&#41; 598 2267</h3>
+				<h3>Email Us 24&#47;7 at:</h3> service&#64;campuscolors.com
+				<div onclick="myApp.ext.store_cc.a.showDropDownClick($(this));" >
+					<button class="ccButton">OR CLICK HERE:</button>
+					<form action="#" data-app-submit="store_crm|contactFormSubmit" data-dropdown="1" name="contactForm" class='alignedForm'>
+						<input name="msgtype" value="feedback" type="hidden">
+						<fieldset>
+							<div id="contactFormMessaging"></div>
+							<label><span class="prompt">Email Address</span><input name="sender" required type="email" class='alignInput'></label>
+							<label><span class="prompt">Subject</span><input name="subject" required type="text" class='alignInput'></label>
+							<label><span class="prompt">Order ID</span><input name="OID" type="text" class='alignInput'></label>
+							<label><span class="prompt">Message</span><textarea name="body" required rows='6' class='alignInput'></textarea></label>
+							<div class="alignRight"><input class="applyButton" value="Send Message" type="submit"></div>
+						</fieldset>
+					</form>
+				</div>
+				<h2>
+					Champions in Customer
+					Satisfaction. 
+				</h2>
+				<p>
+					<span><b>Satisfaction or your money back&#33;</b></span> Buy with confidence from Campus Colors. 
+				</p>
+				<p>
+					If you are not completely satisfied with any&#42; item purchased from Campus Colors, return it to us within 30 days of the 
+					shipping date, and we will refund your money. To view our return policy and instructions in detail, please visit our <a href="#!company/returns/">returns page</a>. 
+				</p>
+				<p>
+					&#42;Restrictions apply to clearance items and non&#45;saleable items. Please view the returns page for complete details
+				</p>
 			</div>
-
-			<form action="#" data-app-submit="store_crm|contactFormSubmit" name="contactForm" class='alignedForm'>
-			<input name="msgtype" value="feedback" type="hidden">
-			<fieldset>
-				<legend>Contact Us</legend>
-				<div id="contactFormMessaging"></div>
-				<label><span class="prompt">Email Address</span><input name="sender" required type="email" class='alignInput'></label>
-				<label><span class="prompt">Subject</span><input name="subject" required type="text" class='alignInput'></label>
-				<label><span class="prompt">Order ID</span><input name="OID" type="text" class='alignInput'></label>
-				<label><span class="prompt">Message</span><textarea name="body" required rows='6' class='alignInput'></textarea></label>
-				<div class="alignRight"><input class="applyButton" value="Send Message" type="submit"></div>
-			</fieldset>
-			</form>
 		</div>
 
 
@@ -1386,7 +1441,7 @@ if you change these, you should move them above this comment so that when you (o
 
 
 		<div class="displayNone textContentArea" id="paymentArticle">
-			<h1>Payment Policy</h1>
+			<h1>PAYMENT POLICY</h1>
 			<div>
 			<!-- ::: add your payment policy here ::: -->
 			</div>
@@ -1394,7 +1449,7 @@ if you change these, you should move them above this comment so that when you (o
 
 
 		<div class="displayNone textContentArea" id="privacyArticle">
-			<h1>Privacy Statement</h1>
+			<h1>PRIVACY POLICY</h1>
 	<h4>About this Privacy Policy:</h4>
 	<p>The entire site, or at least specific portions of this site are assisted by Zoovy technology. Zoovy has created this privacy policy as a template for customers who are using Zoovy technology with their websites. Zoovy in no way takes responsibility for the accuracy or enforcement of this policy. For a copy of Zoovy's privacy policy (which does not necessarily apply to the customers of its customers) visit http://www.zoovy.com/legal</p>
 
@@ -1438,18 +1493,224 @@ if you change these, you should move them above this comment so that when you (o
 
 
 		<div class="displayNone textContentArea" id="returnArticle">
-			<h1>Return Policy</h1>
+			<h1>RETURN POLICY</h1>
 			<div>
-			<!-- ::: add your return policy here ::: -->
+				<h3>Returns and Exchanges</h3>
+				<p>
+					All returns must be unused and in new saleable condition with all original hangtags affixed and packaging intact. 
+					We reserve the right to refuse any returned merchandise if it is does not meet the previously mentioned conditions. 
+					Additionally, should Campus Colors determine that your return is not saleable, the item will be returned to you at your expense.
+				</p>
+				<p>
+					Campus Colors accepts returns of merchandise within 30 days of the date that the order has shipped. Tags must still be 
+					attached and the item must be new, unused and unwashed. We will refund the credit card used to make the original 
+					purchase or issue a store credit or exchange. Original shipping and handling charges are not refundable. If you exchange 
+					an item, you will be charged for shipping and handling on the new item. If the original order qualified for any promotions 
+					or discounts, your refund will be less those discounts if your return causes your order to become unqualified. If you would 
+					like to make an exchange or return, please follow the instructions below. Clearance items are not covered under this warranty. 
+					All sales are final on Clearance merchandise. Clearance merchandise is exchangeable for size only in the exact same item 
+					only while quantities last &#45; no exceptions.
+				</p>
+				<p>
+					Campus Colors requires your merchandise to be received back by us prior to processing your refund. If you have not received 
+					your order and would like a refund, please contact our Customer Service Department for further assistance. All orders are 
+					shipped with delivery confirmations via reputable 3rd party carriers. If delivery confirmations show a status of delivered, we will 
+					be unable to offer a refund without return of the merchandise&#45;NO EXCEPTIONS.
+				</p>
+				<h3>
+					If you would like to make an exchange or return, please follow the instructions below.
+				</h3>
+				<p>
+					Step 1. Call Campus Colors at 866&#45;598&#45;CAMPUS &#40;2267&#41; or e&#45;mail us at service&#64;campuscolors.com 
+					within 30 days of the date of shipment to receive a return authorization number. For quicker processing have your receipt 
+					number which is in the upper corner of your sale receipt. Please note that all returns must be postmarked within 10 days of 
+					the date that the RMA number is issued or they will be refused.
+				</p>
+				<p>
+					Step 2. After you contact our Customer Service department, we will e&#45;mail you a Return Merchandise Authorization form. 
+					This form must be included with the item&#40;s&#41; being returned to us.
+				</p>
+				<p>
+					Step 3. Clearly mark the return authorization number on the outside of the package. Shipments returned without return 
+					authorization numbers will be refused. To make sure the item you are returning reaches us without damage or loss, make 
+					sure it is properly packaged or boxed. We recommend you ship your package back to us with a carrier that can track your 
+					package to prevent loss.
+				</p>
+				<p>
+					Step 4. We will do our best to exchange your purchase or refund your money within one week upon receiving your merchandise 
+					back. Be sure that the &#39;Ship To Address&#39; for all product returns is clearly legible and ship to&#58;
+				</p>
+				<p>
+					Campus Colors
+					Attention&#58; Returns
+					1586 Old Deerfield Road
+					Highland Park, IL 60035
+				</p>
+				<p>
+					If you were shipped a defective item or item in error, please call us or e-mail our customer service department at 
+					service&#64;campuscolors.com  &#40;make sure to include your name, telephone number address and order number&#40;. 
+					We will contact you to return the merchandise to us. If you do not follow this procedure, we cannot refund shipping expense 
+					incurred by you to send back erroneous merchandise.
+				</p>
+				<h3>
+					Special order and sale merchandise is FINAL SALE and may not be returned or exchanged.
+				</h3>
 			</div>
 		</div>
 
 
 
 		<div class="displayNone textContentArea" id="shippingArticle">
-			<h1>Shipping Information</h1>
-			<div>
-			<!-- ::: add your shipping information here ::: -->
+			<h1>SHIPPING INFORMATION</h1>
+			<div class="center">
+				
+				<b>FREE Standard Shipping for orders $75.00 and over</b><br>
+				<b>$3.99 Flat Rate Shipping for orders $74.99 and under</b><br>
+				<p>
+					&#42;Free and Flat Rate shipping offers are only available in the continental United States and apply to standard ground 
+					shipping only.  There may be an additional charge on oversized items.  An additional P&#38;H fee for these items will be 
+					displayed in your cart, so you'll know the cost before you place your order.   
+				</p>
+				
+				<h3>On a Deadline&#63;</h3>
+				Campus Colors offers discounted Priority, 2nd&#45;Day and 1&#45;Day shipping options.  See details on upgrade charges 
+				when you view your cart at checkout.  Items that are too heavy or too large will be shipped Ground delivery.  Packages may 
+				require a signature.  Does not include Saturday delivery.  For Saturday delivery please call customer service at 
+				866&#45;598&#45;2267. 
+				
+				<h3>Alaska, Hawaii &#38; US Territories</h3>
+				Orders to these addresses are subject to additional charges.  Shipping total will be displayed on the cart page before checkout.  
+				Priority, 2nd&#45;Day and 1&#45;Day delivery not available. 
+				
+				<h3>PO APO &#38; FPO Addresses</h3>
+				These orders are shipped using our standard shipping and handling charges.
+				<p>
+					Shipping confirmations along with tracking numbers are sent to the e&#45;mail on the order, the evening the order leaves the 
+					facility.  We recommend that customers choose a secure location when selecting a shipping address.  Campus Colors will not 
+					be held responsible for packages that are confirmed delivered by our 3rd party carriers.  Ship to addresses requiring a correction 
+					may incur an additional charge. 
+				</p>
+				<p>
+					Most orders ship within 1 business day of being placed. Orders shipping via 1 Day and 2nd Day will take priority. In some rare 
+					cases, please allow up to 2&#45;3 business days for order processing. 
+				</p>
+				<p>
+					Campus Colors uses the United States Postal Service and UPS for shipping of all packages to our customers. While these are 
+					proven, reliable carriers, occasionally packages do not arrive at their destinations within the proper allotted in&#45;transit 
+					timeframe. At this time, the only in&#45;transit time guaranteed delivery services available are 1 Day and 2 Day Air Services. 
+					USPS Priority Mail and Ground service are not day guaranteed, but rather approximations of when your package should arrive 
+					at its destination. While we will make every effort possible to assist our customers in having their packages delivered in a 
+					proper timely manner, we do not accept responsibility for negligence by our 3rd party carriers.
+				</p>
+				<p>
+					All free shipping offers are shipped via standard ground service. Orders qualify for free shipping promotions based upon the 
+					amount of the order after all discounts have been taken and before any applicable sales tax is added.
+				</p>
+			</div>
+		</div>
+		
+		<div class="displayNone textContentArea" id="locationsArticle">
+			<h1>STORE LOCATIONS</h1>
+			<div class="locationBlock">
+				<img src="images/sample-location_290x110.jpg" alt="Downtown Chicago" width="290" height="110"></img>
+				<h4>Downtown Chicago</h4>
+				<p>
+					835 N Michigan Ave.<br>
+					Water Tower Place &#45; 7th FL<br>
+					Chicago, IL 60611<br>
+					<a href="tel:+13122662400">
+						312&#45;266&#45;2400
+					</a> 
+				</p>
+				<p>
+					Monday &#45; Friday 10 am &#45; 9 pm<br>
+					Saturday 10 am &#45; 9 pm<br>
+					Sunday 11 am &#45; 6 pm<br>
+					<a href="https://maps.google.com/maps?q=Water+Tower+Place,+835+N+Michigan+Ave,+Chicago,+IL&hl=en&sll=46.44186,-93.36129&sspn=12.311272,19.753418&oq=835+N+Michigan+Ave.,+Water&t=m&z=17&iwloc=A" target="_blank" rel="noindex,nofollow">
+						Map
+					</a>
+				</p>
+			</div>
+			
+			<div class="locationBlock">
+				<img src="images/sample-location_290x110.jpg" alt="Highland Park" width="290" height="110"></img>
+				<h4>Highland Park</h4>
+				<p>
+					599 Central Ave.<br>
+					Highland Park, IL 60035<br>
+					<a href="tel:+18474332300">
+						847&#45;433&#45;2300
+					</a> 
+				</p>
+				<p>
+					Monday &#45; Friday 10 am &#45; 5&#58;30 pm<br>
+					Saturday 10 am &#45; 5 pm<br>
+					Sunday Noon &#45; 4 pm<br>
+					<a href="https://maps.google.com/maps/place?ftid=0x880fc1a34dddc39d:0xdf1f29e2c3e20e0&q=599+Central+Avenue,+Highland+Park,+IL&hl=en&dtab=0&ie=UTF8&ll=42.190262,-87.805052&spn=0.000016,0.000021&t=m&z=16&vpsrc=0" target="_blank" rel="noindex,nofollow">
+						Map
+					</a>
+				</p>
+			</div>
+			
+			<div class="locationBlock">
+				<img src="images/sample-location_290x110.jpg" alt="Kildeer" width="290" height="110"></img>
+				<h4>Kildeer</h4>
+				<p>
+					20291 N. Rand Rd.<br>
+					&#40;Next to Whole Foods&#41;<br>
+					Kildeer, IL 60035<br>
+					<a href="tel:+18475405700">
+						847&#45;540&#45;5700
+					</a> 
+				</p>
+				<p>
+					Monday &#45; Saturday 10 am &#45; 6 pm<br>
+					Sunday 11 am &#45; 5 pm<br>
+					<a href="https://maps.google.com/maps?q=20291+N+Rand+Rd,+Kildeer,+IL&hl=en&ll=42.158337,-88.045131&spn=0.006466,0.009645&sll=46.44186,-93.36129&sspn=12.311272,19.753418&oq=20291+N.+Rand+Rd&hnear=20291+N+Rand+Rd,+Kildeer,+Illinois+60074&t=m&z=17" target="_blank" rel="noindex,nofollow">
+						Map
+					</a>
+				</p>
+			</div>
+			
+			<div class="locationBlock">
+				<img src="images/sample-location_290x110.jpg" alt="Hinsdale" width="290" height="110"></img>
+				<h4>Hinsdale</h4>
+				<p>
+					777 N. York Rd.<br>
+					Gateway Square<br>
+					Hinsdale, IL 60521<br>
+					<a href="tel:+16309202300">
+						630&#45;920&#45;2300
+					</a> 
+				</p>
+				<p>
+					Monday &#45; Friday 10 am &#45; 5&#58;30 pm<br>
+					Saturday 10 am &#45; 5 pm<br>
+					Sunday 10 am &#45; 2 pm<br>
+					<a href="http://maps.google.com/maps?q=777+N.+York+Rd.+Gateway+Square+Hinsdale,+IL+60521&hl=en&sll=42.186128,-87.800074&sspn=0.01113,0.01929&z=14" target="_blank" rel="noindex,nofollow">
+						Map
+					</a>
+				</p>
+			</div>
+			
+			<div class="locationBlock">
+				<img src="images/sample-location_290x110.jpg" alt="Mequon Wisconsin" width="290" height="110"></img>
+				<h4>Mequon&#45;Wisconsin</h4>
+				<p>
+					10906 N. Port Washington Rd.<br>
+					Mequon, WI 53092<br>
+					<a href="tel:+12622369034">
+						262&#45;236&#45;9034
+					</a> 
+				</p>
+				<p>
+					Monday &#45; Friday 10 am &#45; 6 pm<br>
+					Saturday 10 am &#45; 5 pm<br>
+					Sunday 11 am &#45; 4 pm<br>
+					<a href="http://goo.gl/maps/OtLn2" target="_blank" rel="noindex,nofollow">
+						Map
+					</a>
+				</p>
 			</div>
 		</div>
 
