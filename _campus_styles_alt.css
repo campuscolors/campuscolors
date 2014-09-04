@@ -12,7 +12,7 @@
  */
 html, body{padding:0px; margin: 0px;}
 body {font-family:Oxygen, Helvetica, sans-serif;}
-.yearbook {font-family:yearbook, Times New Roman, serif;}
+.yearbook {font-family:Yearbook Solid W01, Times New Roman, serif;}
 *, *:before, *:after {-moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box;}
 .showTablet, .showDesktop, .hidePhone {display:none;}
 
@@ -34,7 +34,7 @@ body {font-family:Oxygen, Helvetica, sans-serif;}
 .bareWhiteLink:hover {color:#fbe143;}
 .yellowText {color:#fbe143;}
 .whiteText {color:#ffffff;}
-.ccButton {padding:1% 2%; color:#000000; font-family:yearbook, Times New Roman, serif; border-top:2px outset #fbe143; border-right:2px outset #000000; border-bottom:2px outset #000000; border-left:2px outset #fbe143; box-shadow:2px 2px 0 0 #cccccc; border-radius:0;}
+.ccButton {padding:1% 2%; color:#000000; font-family:Yearbook Solid W01, Times New Roman, serif; border-top:2px outset #fbe143; border-right:2px outset #000000; border-bottom:2px outset #000000; border-left:2px outset #fbe143; box-shadow:2px 2px 0 0 #cccccc; border-radius:0;}
 
 .secTitleWrap {background-color:#9e9e9e; padding:5px 0;}
 .secTitleBorder {border-top:2px solid #525252; border-bottom:2px solid #525252;}
@@ -205,7 +205,7 @@ header {position:relative;}
 .splashPageListTemplate, .productList.ccList > li {height:102px; width:90px; margin:5px; border:2px solid #000000; box-shadow:2px 2px 0 0 #bfbfbf; position:relative;}
 .splashPageListTemplate {margin:5px 5px 27px 5px;}
 .splashPageListTemplate img {height:auto; max-width:100%;}
-.splashPageListTemplate .title {height:20px; width:100%; padding:3px 0 0 0; position:absolute; left:0; bottom:-22; color:#000000; font-family:Yearbook, Times, serif;}
+.splashPageListTemplate .title {height:20px; width:100%; padding:3px 0 0 0; position:absolute; left:0; bottom:-22; color:#000000; font-family:Yearbook Solid W01, Times New Roman, serif;}
 
 
 
@@ -252,8 +252,8 @@ header {position:relative;}
 /* backgrounds for default and active state set in globals w/ gradients */
 .tabbedProductContentTD .ui-tabs .ui-tabs-nav li.ui-state-default, .catSideline .title.ui-state-default {width:100%; border:2px outset #000000; border-radius:0;}
 .tabbedProductContentTD .ui-tabs .ui-tabs-nav li.ui-state-active, .catSideline .title.ui-state-active {border-top:2px outset #b75970; border-right:2px outset #000000; border-bottom:2px outset #000000; border-left:2px outset #b75970;}
-.tabbedProductContentTD .ui-tabs .ui-tabs-nav li.ui-state-default a {width:100%; color:#ffffff; text-align:center; font-family:yearbook, Times New Roman, serif;}
-.tabbedProductContentTD .ui-widget.ui-widget-content.ui-corner-bottom.ui-corner-tr {width:290px; margin:0 auto; background:none; border:none; border-radius:0; font-family:yearbook, Times New Roman, serif;}
+.tabbedProductContentTD .ui-tabs .ui-tabs-nav li.ui-state-default a {width:100%; color:#ffffff; text-align:center; font-family:Yearbook Solid W01, Times New Roman, serif;}
+.tabbedProductContentTD .ui-widget.ui-widget-content.ui-corner-bottom.ui-corner-tr {width:290px; margin:0 auto; background:none; border:none; border-radius:0; font-family:Yearbook Solid W01, Times New Roman, serif;}
 .tabbedProductContentTD .tabContent.ui-tabs-panel.ui-widget-content.ui-corner-bottom {border:none;}
 
 .productRecentCarousel .mpControlContainer {display:none;}
@@ -261,7 +261,7 @@ header {position:relative;}
 
 
 /* companyTemplate */
-.companyTemplate h2 {color:#781c2b; font-family:yearbook, Times New Roman, serif; }
+.companyTemplate h2 {color:#781c2b; font-family:Yearbook Solid W01, Times New Roman, serif; }
 .companyTemplate h3 {color:#666666;}
 .sideline a {color:#666666;}
 .sideline a:hover {color:#781c2b;}
