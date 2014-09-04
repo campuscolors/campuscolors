@@ -1,0 +1,12 @@
+{
+	"homepageBanners" : {
+		"main" : {
+			"src"			: "banners/retro_brand_banner_700x268.jpg",
+			"width"		: "700",
+			"height"	: "268",
+			"alt"			: "Retro Brand",
+			"title"		: "Retro Brand",
+			"href"		: "#!brand-apparel/retro-brand-apparel/"
+		}
+	}
+}
