@@ -112,7 +112,7 @@ $(document).ready(function(){
 	if(!paramStr || paramStr.indexOf('_escaped_fragment_') < 0){
 		window.myApp = new initApp({
 			"_robotHasGreeted" : false, <!-- versionhere -->
-			"release":"201408.20140904083200",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
+			"release":"201408.20140904164800",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
 			"_clientid":"zmvc", //zmvc for store app, 1pc for one page checkout.
 			"baseURL":baseURL, //used in non-local mode.
 			"checkoutAuthMode" : "active",//can be passive, active or required
@@ -210,7 +210,8 @@ var _robots = {
 				Welcome, 
 				<span class="loginHide">
 					Guest! (
-					<span class="pointer uYellowLink	 underline" onclick="myApp.ext.quickstart.u.showLoginModal();"> LOG IN</span>
+					<!-- <span class="pointer uYellowLink	 underline" onclick="myApp.ext.quickstart.u.showLoginModal();"> LOG IN</span> -->
+					<a href="#!customer/createaccount/" class="uYellowLink underline"> LOG IN</a>
 					or <!-- TODO PUT CORRECT CREATE ACCOUNT LINK HERE! -->
 					<a href="#!customer/createaccount/"><span class="uYellowLink underline">SIGN UP</span></a>
 					 )
@@ -1912,9 +1913,9 @@ if you change these, you should move them above this comment so that when you (o
 
 
 
-<div id="customerTemplate" class="clearfix smallButton">
+<div id="customerTemplate" class="clearfix smallButton wrapper">
 
-	<div class="sideline">
+	<div class="sideline" data-customer-sideline="1">
 	<nav id="customerNav">
 	<ul class="listStyleNone noPadOrMargin">
 		<li><a href='#!customer/subscriberLists'>Newsletter Subscription</a></li>
@@ -2017,9 +2018,7 @@ subscribeListsArticle is used for authenticated buyers.
 
 		<div id="listsArticle" class="displayNone textContentArea">
 			<h1>List Manager</h1>
-
 			<div class='applyAccordion' data-tlc="apply --empty; bind $var '.@lists'; controller#loop --templateid='buyerListTemplate'; apply --append; bind $content '.@lists'; controller#loop --templateid='buyerListProdlistContainerTemplate'; apply --append;"></div>
-
 		</div>
 
 		<div id="forgetmeArticle" class="displayNone textContentArea">
@@ -2027,6 +2026,138 @@ subscribeListsArticle is used for authenticated buyers.
 			<p>Items on this list will not show up anywhere on the site. Use it for items you never want to see again. If you add an item to the list by mistake, use this page to remove it from the list and it will start re-appearing during your shopping experience.</p>
 			<ul id="forgetmeContainer" class="prodlist ">
 			</ul>
+		</div>
+		
+		<div id='createaccountArticle' class="displayNone textContentArea wrapper createaccountArticle">
+			<div class="logContainer">
+				<div class="logTitle yearbook">SIGN IN</div>
+				<p>
+					If you have an existing account, please sign in.
+				</p>
+				<form action='#' data-app-submit="quickstart|accountLoginSubmit" id="loginForm" class="marginBottom"> 
+					<input type="hidden" name="method" value="unsecure">
+					<input type="hidden" name="loginCallbackinline" id="loginCallbackinline" value=''><!-- used to save a callback action in -->
+					<input type="email" class="zform_textbox zform_email" required="required" name="login" value='' size="39" placeholder="E-mail address" id="modalLoginLogin">
+					<input type="password" class="zform_textbox zform_password" required="required" name="password" value='' size="39" placeholder="Password" id="modalLoginpassword">
+					<input type="submit" value="SIGN IN" class="applyButton ccButton">
+				</form>
+				<div id="recoverPasswordContainer" class="marginBottom marginTop recoverPasswordContainer">
+					<div id="recoverPasswordMessaging" class="appMessaging recoverPasswordMessaging"></div>
+					<form action="#" data-app-submit="quickstart|accountPasswordRecoverSubmit">
+						<div class="center">Forgot your password?</div>
+						<div onclick="myApp.ext.store_cc.a.togglerecover($(this));" class="center">
+							<span class="uRedLink pointer">Click here</span>
+							to recover it!
+						</div>
+						<div data-slide="toggle">
+							<div class="marginBottom marginTop">
+								<label>
+									<span>Enter your e-mail address:</span>
+									<input type="text" name="recover" required="required" size="25" class="zform_textbox">
+								</label>
+							</div>
+							<div><input type="submit" class="applyButton ccButton" value="SEND PASSWORD"></div>
+						</div>
+					</form>
+				</div><!-- //recoverPasswordContainer -->
+			</div> <!-- //login -->
+			<div class="logContainer logRight">
+				<div class="logTitle yearbook">NEW MEMBERS</div>
+				<p>
+					Note&#58; Entering a name, e-mail address, and password will allow you to check your order status online and recall your customer 
+					information for future orders.
+				</p>
+		<!--		<form action="#" class="inputsAsBreaks"  onSubmit="myApp.ext.store_cc.u.handleAppLoginCreate($(this)); return false;"> -->
+					 <form action="#" submit="return false;" class="inputsAsBreaks"> <!-- For testing form to prevent reload -->
+					<input type="hidden" name="_script" value="campuscolors"/>
+					<input type="hidden" name="form" value="wholesale" />
+					<input name="firstname" type="text" size="30" placeholder="First Name" required="required" class="zform_textbox" />
+					<input name="lastname" type="text" size="30" placeholder="Last Name" required="required" class="zform_textbox"/>
+					<input name="email" type="email" size="30" placeholder="E-mail Address" required="required" class="zform_textbox" />
+					<input name="pass" type="password" size="30" placeholder="Password" required="required" class="zform_textbox" />
+					<input name="pass2" type="password" size="12" placeholder="Confirm Password" required="required" class="zform_textbox" />
+					<!--<div class="passwordInput"><b>Password</b><input name="password" size="30" placeholder="Password" required /></div>-->
+					<div onclick="myApp.ext.store_cc.a.togglerecover($(this));" class="center">
+						<span class="uRedLink pointer">Click here</span> to enter more info. and save time later.
+					</div>
+					<div data-slide="toggle">
+						<input name="address1" type="text" size="30" value="" placeholder="Address" class="zform_textbox" /> 
+						<input name="address2" type="text" size="30" value="" placeholder="Address (Line 2)" class="zform_textbox" />
+						<input name="city" type="text" size="30" placeholder="City" value="" class="zform_textbox" /> 	
+						<select name="region" class="zform_textbox">
+							<option selected="selected" value="">(Select State)</option>
+							<option value="AL">AL</option>
+							<option value="AK">AK</option>
+							<option value="AZ">AZ</option>
+							<option value="AR">AR</option>
+							<option value="CA">CA</option>
+							<option value="CO">CO</option>
+							<option value="CT">CT</option>
+							<option value="DE">DE</option>
+							<option value="DC">DC</option>
+							<option value="FL">FL</option>
+							<option value="GA">GA</option>
+							<option value="HI">HI</option>
+							<option value="ID">ID</option>
+							<option value="IL">IL</option>
+							<option value="IN">IN</option>
+							<option value="IA">IA</option>
+							<option value="KS">KS</option>
+							<option value="KY">KY</option>
+							<option value="LA">LA</option>
+							<option value="ME">ME</option>
+							<option value="MD">MD</option>
+							<option value="MA">MA</option>
+							<option value="MI">MI</option>
+							<option value="MN">MN</option>
+							<option value="MS">MS</option>
+							<option value="MO">MO</option>
+							<option value="MT">MT</option>
+							<option value="NE">NE</option>
+							<option value="NV">NV</option>
+							<option value="NH">NH</option>
+							<option value="NJ">NJ</option>
+							<option value="NM">NM</option>
+							<option value="NY">NY</option>
+							<option value="NC">NC</option>
+							<option value="ND">ND</option>
+							<option value="OH">OH</option>
+							<option value="OK">OK</option>
+							<option value="OR">OR</option>
+							<option value="PA">PA</option>
+							<option value="RI">RI</option>
+							<option value="SC">SC</option>
+							<option value="SD">SD</option>
+							<option value="TN">TN</option>
+							<option value="TX">TX</option>
+							<option value="UT">UT</option>
+							<option value="VT">VT</option>
+							<option value="VA">VA</option>
+							<option value="WA">WA</option>
+							<option value="WV">WV</option>
+							<option value="WI">WI</option>
+							<option value="WY">WY</option>
+						</select>
+						<input name="postal" type="text" size="10" value="" placeholder="Zip/Postal" class="textfzip zform_textbox" />
+						<select name="country" class="zform_textbox">
+							<option value="US">United States of America</option>
+						</select>
+						<input name="phone" type="tel" size="12" placeholder="Phone Number" value="" class="textfzip zform_textbox" />
+					</div>
+			<!--		<input type="submit" value="Create an Account" class="createButton ccButton marginTop ui-widget ui-button"> -->
+					 <button onclick="myApp.ext.store_cc.u.handleAppLoginCreate($(this).parent());" class="createButton ui-button">Create an Account</button> <!-- For testing form to prevent reload -->
+				</form>
+			</div> <!-- //createaccount -->
+			<div class="logContainer">
+				<div class="logTitle yearbook">GUEST CHECKOUT</div>
+				<p>
+					No registration required
+				</p>
+				<p>
+					Your order history is not available when you use this option!
+				</p>
+				<a href="#!checkout/" class="ccButton ui-widget ui-button">CHECK OUT WITHOUT CONDITIONING</a>
+			</div>
 		</div>
 
 	</div>

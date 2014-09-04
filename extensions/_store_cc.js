@@ -26,6 +26,25 @@ var store_cc = function(_app) {
 	
 	
 	vars : {	},
+	
+	
+////////////////////////////////////   CALLS    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+	
+	calls : {
+	
+		appBuyerCreate : {
+			init : function(obj,_tag)	{
+				this.dispatch(obj,_tag);
+				return 1;
+			},
+			dispatch : function(obj,_tag){
+				obj._tag = _tag || {};
+				obj._cmd = "appBuyerCreate";
+				_app.model.addDispatchToQ(obj,'immutable');
+			}
+		}, //appBuyerCreate
+		
+	}, //calls
 
 
 ////////////////////////////////////   CALLBACKS    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -81,6 +100,12 @@ var store_cc = function(_app) {
 					
 					_app.templates.productTemplate.on('depart.store_cc',function(event,$context,infoObj) {
 						_app.ext.store_cc.u.addRecentlyViewedItems($context, infoObj.pid);
+					});
+					
+					_app.templates.customerTemplate.on('complete.store_accountcreate',function(event,$context,infoObj) {
+						var $sideline = $('[data-customer-sideline]', $context);
+						if(infoObj.show == "createaccount") { $sideline.hide(); }
+						else { $sideline.show(); }
 					});
 					
 					
@@ -336,6 +361,11 @@ var store_cc = function(_app) {
 				this.hideDropDown($tag);
 				$('.mobileSlideMenu').animate({"left":"-275px"},500);
 				$tag.data('timeoutNoShow', setTimeout(function(){$tag.data('timeoutNoShow', 'false');}, 500));
+			},
+			
+			//toggles height on data-slide element within parent of the tag passed (made orig. for password recover, but could be used elsewhere).
+			togglerecover : function($tag) {
+				$("[data-slide='toggle']",$tag.parent()).slideToggle();
 			}
 		
 		}, //Actions
@@ -647,6 +677,37 @@ var store_cc = function(_app) {
 					dump(_app.ext.quickstart.vars.session.recentlyViewedItems);
 				}
 			},//showRecentlyViewedItems
+			
+/* CREATE ACCOUNT UTILS */			
+			handleAppLoginCreate : function($form)	{
+				if($form)	{
+					var formObj = $form.serializeJSON();
+					
+					if(formObj.pass !== formObj.pass2) {
+						_app.u.throwMessage('Sorry, your passwords do not match! Please re-enter your password');
+						return;
+					}
+					
+					var tagObj = {
+						'callback':function(rd) {
+							if(_app.model.responseHasErrors(rd)) {
+								$form.anymessage({'message':rd});
+							}
+							else {
+								showContent('customer',{'show':'myaccount'});
+								_app.u.throwMessage(_app.u.successMsgObject("Your account has been created!"));
+							}
+						}
+					}
+					
+					formObj._vendor = "campuscolors";
+					_app.ext.store_cc.calls.appBuyerCreate.init(formObj,tagObj,'immutable');
+					_app.model.dispatchThis('immutable');
+				}
+				else {
+					$('#globalMessaging').anymessage({'message':'$form not passed into store_cc.u.handleBuyerAccountCreate','gMessage':true});
+				}
+			}, //handleAppLoginCreate
 			
 		/*	This may be a better way to do this, but it doesn't work if the page isn't reloaded. If tablet goes from 
 				portrait to landscape, the nav isn't hidden properly. Uses hideOnHome class for now.

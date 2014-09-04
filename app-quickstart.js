@@ -2505,7 +2505,7 @@ either templateID needs to be set OR showloading must be true. TemplateID will t
 										_app.model.addDispatchToQ({"_cmd":"buyerProductListDetail","listid":listID,"_tag" : {'datapointer':'buyerProductListDetail|'+listID,"listid":listID,'callback':'buyerListAsProdlist','extension':'quickstart','jqObj':$("[data-buyerlistid='"+listID+"'] ul",$context)}},'mutable');
 										}
 									
-									var data = _app.data[rd.datapointer]['@lists']; //shortcut
+										var data = _app.data[rd.datapointer]['@lists']; //shortcut
 									var L = data.length;
 									var numRequests = 0;
 									for(var i = 0; i < L; i += 1)	{
@@ -2523,7 +2523,8 @@ either templateID needs to be set OR showloading must be true. TemplateID will t
 								_app.ext.cco.calls.appCheckoutDestinations.init(_app.model.fetchCartID(),{},'mutable'); //needed for country list in address editor.
 								_app.model.addDispatchToQ({"_cmd":"buyerAddressList","_tag":{'callback':'tlc','jqObj':$article,'verb':'translate','datapointer':'buyerAddressList'}},'mutable');
 								break;
-							
+/*campus*/			case 'createaccount':				
+								break;
 							case 'logout':
 								$(document.body).removeClass('buyerLoggedIn');
 								$('.username').empty();
