@@ -6,13 +6,13 @@
 		{ "required":1,"var":"lastname","type":"text","label":"Last Name" },
 		{ "required":1,"var":"email","type":"text","label":"Email" },
 		{ "required":1,"var":"pass","type":"text","label":"Password" },
-		{ "required":1,"var":"address1","type":"text","label":"Address1" },
-		{ "required":1,"var":"address2","type":"text","label":"Address2" },
-		{ "required":1,"var":"city","type":"text","label":"City" },
-		{ "required":1,"var":"region","type":"text","label":"Region" },
-		{ "required":1,"var":"postal","type":"text","label":"Postal/Zip" },
-		{ "required":1,"var":"country","type":"text","label":"Country" },
-		{ "required":1,"var":"phone","type":"text","label":"Phone" }
+		{ "required":0,"var":"address1","type":"text","label":"Address1" },
+		{ "required":0,"var":"address2","type":"text","label":"Address2" },
+		{ "required":0,"var":"city","type":"text","label":"City" },
+		{ "required":0,"var":"region","type":"text","label":"Region" },
+		{ "required":0,"var":"postal","type":"text","label":"Postal/Zip" },
+		{ "required":0,"var":"country","type":"text","label":"Country" },
+		{ "required":0,"var":"phone","type":"text","label":"Phone" }
 	],
 	 
 
