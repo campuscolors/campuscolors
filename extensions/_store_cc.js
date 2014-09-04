@@ -342,12 +342,14 @@ var store_cc = function(_app) {
 //that way, two render formats named the same (but in different extensions) don't overwrite each other.
 		tlcFormats : {
 		
+			//a testing function to show data bound to a tag
 			dump : function(data,thisTLC) {
 				dump("store_cc#dump");
 				dump(data);
 				return true;
 			},
-			
+/* FILTER SEARCH TLC */			
+			//adds filter data to the page form for filtering
 			filterform : function(data, thisTLC) {
 				var $context = data.globals.tags[data.globals.focusTag];
 				
@@ -407,10 +409,12 @@ var store_cc = function(_app) {
 		
 		renderFormats : {
 		
+			//a rebderformat for showing data bound to a tag
 			test : function($tag,data) {
 				dump('TEST value:'); dump(data.value);
 			},
 			
+/* FILTER SEARCH RENDERFORMATS */			
 			filtercheckboxlist : function($tag,data) {
 				dump('START filtercheckboxlist');
 				var options = false;
@@ -434,6 +438,7 @@ var store_cc = function(_app) {
 				}
 			},
 			
+			//adds base filter data to tag for use in filter search
 			assigndata : function($tag, data) {
 				$tag.data(data.bindData.attribute, data.value);
 				//_app.u.dump($tag.data(data.bindData.attribute));
@@ -446,7 +451,8 @@ var store_cc = function(_app) {
 //utilities are typically functions that are exected by an event or action.
 //any functions that are recycled should be here.
 		u : {
-		
+
+/* FILTER SEARCH UTILS */		
 			//for top level category (ie: nhl-apparel) will check if data object has been loaded in vars and show content w/ it if it has,
 			//if not, will get data from the JSON record and showContent w/ that. Shows 404 if data can't be found in vars or JSON record.
 			getCatJSON : function(route) {
@@ -468,6 +474,22 @@ var store_cc = function(_app) {
 				}
 			},
 			
+			//saves filter to store_filter var, and pushes each page in the filter to robots
+			pushFilter : function(endPath) {
+				//This is the list of pages.  The ID (endPath) is part of the URL- change this for SEO reasons- the jsonPath is the file where it loads the options from.  The jsonPath doesn't matter as long as it loads the file
+				//var nhlPages = [
+				var Pages = [
+					//{id:'nhl-apparel',jsonPath:'filters/apparel/nhl-apparel.json'}
+					{id:endPath,jsonPath:'filters/apparel/'+endPath+'.json'}
+				];
+				for(var i in Pages) {
+					_app.ext.store_filter.vars.filterPages.push(Pages[i]);
+					//this page needs to match the route above
+					_app.ext.seo_robots.vars.pages.push("#!filters/apparel/"+Pages[i].id+"/"); 
+				}
+			},
+			
+/* CAROUSEL UTILS */
 			//Turns best sellers ul on homepage into an auto scrolling carousel. 
 			runHomeCarousel : function($context) {
 //				_app.u.dump('----Running homepage carousels');	
@@ -536,6 +558,7 @@ var store_cc = function(_app) {
 				} //FOOTER top brands carousel
 			},
 			
+/* MOBILE UTILS */
 			//applies a swipe to close mobile navigation window.
 			swipeMobileNav : function($tag) {
 				$tag.swipe( {
@@ -547,21 +570,7 @@ var store_cc = function(_app) {
 					});
 			},
 			
-			//saves filter to store_filter var, and pushes each page in yhe fiolter to robots
-			pushFilter : function(endPath) {
-				//This is the list of pages.  The ID (endPath) is part of the URL- change this for SEO reasons- the jsonPath is the file where it loads the options from.  The jsonPath doesn't matter as long as it loads the file
-				//var nhlPages = [
-				var Pages = [
-					//{id:'nhl-apparel',jsonPath:'filters/apparel/nhl-apparel.json'}
-					{id:endPath,jsonPath:'filters/apparel/'+endPath+'.json'}
-				];
-				for(var i in Pages) {
-					_app.ext.store_filter.vars.filterPages.push(Pages[i]);
-					//this page needs to match the route above
-					_app.ext.seo_robots.vars.pages.push("#!filters/apparel/"+Pages[i].id+"/"); 
-				}
-			},
-			
+/* PRODUCT PAGE UTILS */
 			//called on depart from prod page to add item to recently viewed items list
 			//changed this from quickstart's addition at page load to prevent items from showing in list on first page visit
 			addRecentlyViewedItems : function($context, pid) {
