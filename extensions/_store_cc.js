@@ -25,46 +25,7 @@ var store_cc = function(_app) {
 	var r = {
 	
 	
-	vars : {
-		"nhl" : {
-			"id"	: "NHL-Apparel",
-			"page-title" : "NHL Apparel at CampusColors.com",
-			"page-description" : "Buy NHL, it is bloody good!",
-			"pages" : [
-				{
-					"id" 			: "nhl-t-shirts",
-					"link"			: "#!nhl-apparel/nhl-t-shirts", 
-					"img" 			: "3_prongs_standard",
-					"name"			: "NHL T-shirts",
-					"baseFilter" 	: { "and" : [ {"term" : {"prod_is_general" : "nhl_clothing"}} , {"term" : {"apparel_type" : "t-shirts"}}]}
-				},
-				{
-					"id" 			: "nhl-sweatshirts",
-					"link"			: "#!nhl-apparel/nhl-sweatshirts", 
-					"img" 			: "9/93086_2",
-					"name"			: "NHL Sweatshirts",
-					"baseFilter" 	: { "and" : [ {"term" : {"prod_is_general" : "nhl_clothing"}} , {"term" : {"apparel_type" : "sweatshirts"}}]}
-				}
-			]
-		},
-		"test" : {
-			"id" : "Test-Apparel",
-			"page-title" : "Test Apparel at CampusColors.com",
-			"page-description" : "Buy Test, because it is a test!",
-			"pages" : [
-				{
-					"id" : "test-shorts",
-					"link" : "#!test-apparel/test-shorts",
-					"img" : "K/keyboard1",
-					"name" : "Test Shorts",
-					"baseFilter" : {"term" : {"tags" : "IS_BESTSELLER"}},
-					"optionList" : [
-						"zoovy:prod_name"
-					]
-				}
-			]
-		}
-	},
+	vars : {	},
 
 
 ////////////////////////////////////   CALLBACKS    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -83,9 +44,8 @@ var store_cc = function(_app) {
 				return r;
 				},
 			onError : function()	{
-//errors will get reported for this callback as part of the extensions loading.  This is here for extra error handling purposes.
-//you may or may not need it.
-						showContent('static',{'templateid':'splashPageTemplate','id':data.id,'dataset':_app.ext.store_cc.vars.test});
+				//errors will get reported for this callback as part of the extensions loading.  This is here for extra error handling purposes.
+				//you may or may not need it.
 				_app.u.dump('BEGIN store_cc.callbacks.init.onError');
 				}
 			}, 
@@ -121,7 +81,7 @@ var store_cc = function(_app) {
 					
 					function loadPage(id, successCallback, failCallback){
 					var pageObj = _app.ext.store_filter.vars.filterPageLoadQueue[id];
-//		dump('pageObj passed to loadPage in store_filter'); dump(pageObj);
+//					dump('pageObj passed to loadPage in store_filter'); dump(pageObj);
 					if(pageObj){
 						$.getJSON(pageObj.jsonPath+"?_v="+(new Date()).getTime(), function(json){
 							_app.ext.store_filter.filterData[pageObj.id] = json;
@@ -144,13 +104,13 @@ var store_cc = function(_app) {
 					};
 					
 					function showPage(routeObj,parentID){
-//		dump('START showPage'); dump(routeObj);
+//					dump('START showPage'); dump(routeObj);
 					routeObj.params.templateid = routeObj.params.templateID || "filteredSearchTemplate";
-//				dump(parentID);
+//					dump(parentID);
 					routeObj.params.dataset = $.extend(true, {}, $.grep(_app.ext.store_filter.filterData[parentID].pages,function(e,i){
 						return e.id == routeObj.params.id;
 					})[0]);
-		dump('routeObj.params.dataset');  dump(routeObj.params.dataset.optionList);
+			dump('routeObj.params.dataset');  dump(routeObj.params.dataset.optionList);
 					
 					var optStrs = routeObj.params.dataset.optionList;
 					routeObj.params.dataset.options = routeObj.params.dataset.options || {};
@@ -199,14 +159,6 @@ var store_cc = function(_app) {
 					
 //ALIAS					
 					_app.router.addAlias('filter', function(routeObj){	pickShowOrLoad(routeObj); });
-					_app.router.addAlias('ncaa-filter', function(routeObj){	pickShowOrLoad(routeObj); });
-					_app.router.addAlias('nfl-apparel', function(routeObj){ pickShowOrLoad(routeObj); });
-					_app.router.addAlias('nba-apparel', function(routeObj){ pickShowOrLoad(routeObj); });
-					_app.router.addAlias('mlb-apparel', function(routeObj){ pickShowOrLoad(routeObj); });
-					_app.router.addAlias('nhl-filter', function(routeObj){ pickShowOrLoad(routeObj); });
-					_app.router.addAlias('nike-filter', function(routeObj){ pickShowOrLoad(routeObj); });
-					_app.router.addAlias('adidas-filter', function(routeObj){ 	pickShowOrLoad(routeObj); });
-					_app.router.addAlias('mens-filter', function(routeObj){ 	pickShowOrLoad(routeObj); });
 					
 //APPEND
 					//Adds the listener for the url.  The route needs to match the page pushed into robots below
@@ -282,46 +234,6 @@ var store_cc = function(_app) {
 					}});
 					_app.router.appendHash({'type':'match','route':'kids-apparel/{{id}}/','pagefilter':'kids-apparel','callback':'filter'});
 					_app.ext.store_cc.u.pushFilter('kids-apparel');
-					
-					
-					
-			/*		_app.router.appendHash({'type':'exact','route':'nhl-apparel/', 'callback':function(routeObj){
-						var data = _app.ext.store_cc.vars.nhl;
-						showContent('static',{'templateid':'splashPageTemplate','id':data.id,'dataset':_app.ext.store_cc.vars.nhl});
-					}});
-					_app.router.appendHash({'type':'match','route':'nhl-apparel/{{filterid}}', 'callback':function(routeObj){
-//						dump('{{filteriddump}} appendHash routeObj'); dump(routeObj);
-						var data = $.grep(_app.ext.store_cc.vars.nhl.pages, function(e,i) {
-//							dump('appendHash data & e: '); dump(e); 
-							return e.id == routeObj.params.filterid;
-						})[0];
-						if(data) { 
-//							dump('data2'); dump(data);
-							showContent('static',{'templateid':'filteredSearchTemplate','id':data.id,'dataset':data});
-						}
-						else {
-							showContent('404');
-						}
-					}});
-					//TODO : PUSH TO ROBOTS... SOMEWHERE
-					
-					_app.router.appendHash({'type':'exact','route':'test-apparel/', 'callback':function(routeObj){
-						var data = _app.ext.store_cc.vars.test;
-						_app.ext.store_filter.filterData = _app.ext.store_cc.vars;
-					}});
-					_app.router.appendHash({'type':'match','route':'test-apparel/{{filterid}}', 'callback':function(routeObj){
-						dump('{{filteriddump}} appendHash routeObj'); dump(routeObj);
-						var data = $.grep(_app.ext.store_cc.vars.test.pages, function(e,i) {
-							return e.id == routeObj.params.filterid; dump(e);	
-						})[0];
-						if(data) {
-							showContent('static',{'templateid':'filteredSearchTemplate','id':data.id,'dataset':data});
-						}
-						else {
-							showContent('404');
-						}
-					}});
-				*/	
 					
 				},
 				onError : function() {
