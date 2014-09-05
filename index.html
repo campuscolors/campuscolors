@@ -2067,8 +2067,8 @@ subscribeListsArticle is used for authenticated buyers.
 					Note&#58; Entering a name, e-mail address, and password will allow you to check your order status online and recall your customer 
 					information for future orders.
 				</p>
-		<!--		<form action="#" class="inputsAsBreaks"  onSubmit="myApp.ext.store_cc.u.handleAppLoginCreate($(this)); return false;"> -->
-					 <form action="#" submit="return false;" class="inputsAsBreaks"> <!-- For testing form to prevent reload -->
+				<form action="#" class="inputsAsBreaks"  onSubmit="myApp.ext.store_cc.u.handleAppLoginCreate($(this)); return false;">
+					<!-- <form action="#" submit="return false;" class="inputsAsBreaks">  For testing form to prevent reload -->
 					<input type="hidden" name="_script" value="campuscolors"/>
 					<input type="hidden" name="form" value="wholesale" />
 					<input name="firstname" type="text" size="30" placeholder="First Name" required="required" class="zform_textbox" />
@@ -2144,8 +2144,8 @@ subscribeListsArticle is used for authenticated buyers.
 						</select>
 						<input name="phone" type="tel" size="12" placeholder="Phone Number" value="" class="textfzip zform_textbox" />
 					</div>
-			<!--		<input type="submit" value="Create an Account" class="createButton ccButton marginTop ui-widget ui-button"> -->
-					 <button onclick="myApp.ext.store_cc.u.handleAppLoginCreate($(this).parent());" class="createButton ui-button">Create an Account</button> <!-- For testing form to prevent reload -->
+					<input type="submit" value="Create an Account" class="createButton ccButton marginTop ui-widget ui-button">
+					<!-- <button onclick="myApp.ext.store_cc.u.handleAppLoginCreate($(this).parent());" class="createButton ui-button">Create an Account</button>  For testing form to prevent reload -->
 				</form>
 			</div> <!-- //createaccount -->
 			<div class="logContainer">
