@@ -14,7 +14,7 @@
 				"user:team_conference",
 				"user:color_pallete",
 				"user:size_gender",
-				"user:vendor"
+				"user:vendor_code"
 			]
 		},
 		{
@@ -27,7 +27,7 @@
 				"user:team_conference",
 				"user:color_pallete",
 				"user:size_gender",
-				"user:vendor"
+				"user:vendor_code"
 			]
 		},
 		{
@@ -40,7 +40,7 @@
 				"user:team_conference",
 				"user:color_pallete",
 				"user:size_gender",
-				"user:vendor"
+				"user:vendor_code"
 			]
 		},
 		{
@@ -53,7 +53,7 @@
 				"user:team_conference",
 				"user:color_pallete",
 				"user:size_gender",
-				"user:vendor"
+				"user:vendor_code"
 			]
 		},
 		{
@@ -66,7 +66,7 @@
 				"user:team_conference",
 				"user:color_pallete",
 				"user:size_gender",
-				"user:vendor"
+				"user:vendor_code"
 			]
 		},
 		{
@@ -79,7 +79,7 @@
 				"user:team_conference",
 				"user:color_pallete",
 				"user:size_gender",
-				"user:vendor"
+				"user:vendor_code"
 			]
 		},
 		{
@@ -92,7 +92,7 @@
 				"user:team_conference",
 				"user:color_pallete",
 				"user:size_gender",
-				"user:vendor"
+				"user:vendor_code"
 			]
 		},
 		{
@@ -105,7 +105,7 @@
 				"user:team_conference",
 				"user:color_pallete",
 				"user:size_gender",
-				"user:vendor"
+				"user:vendor_code"
 			]
 		}
 	]
