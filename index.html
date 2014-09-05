@@ -212,15 +212,16 @@ var _robots = {
 					Guest! (
 					 <span class="pointer uYellowLink	 underline" onclick="myApp.ext.quickstart.u.showLoginModal();"> LOG IN</span> 
 					<!-- <a href="#!customer/createaccount/" class="uYellowLink underline"> LOG IN</a> -->
-					or <!-- TODO PUT CORRECT CREATE ACCOUNT LINK HERE! -->
+					or
 					<a href="#!customer/createaccount/"><span class="uYellowLink underline">SIGN UP</span></a>
 					 )
 				</span>
 				<a href="#!customer/myaccount/"><span class="loginShow username uYellowLink"></span></a>
+				<a href="#!customer/logout/"><span class="loginShow uYellowLink">LOG OUT</span></a>
 			</div>
 			<div class="links">
 				<a href="#!company/locations/" class="bareWhiteLink marginRight showTablet showDesktop">STORE LOCATIONS</a>
-				<a href="#!myaccount" class="bareWhiteLink marginRight showTablet showDesktop">CUSTOMER SERVICE</a> <!-- TODO : CUSTOMER SERVICE LINK (LOOKS LIKE RETURNS ARTICLE?) -->
+				<a href="#!company/returns/" class="bareWhiteLink marginRight showTablet showDesktop">CUSTOMER SERVICE</a> <!-- TODO : CUSTOMER SERVICE LINK (LOOKS LIKE RETURNS ARTICLE?) -->
 				<a href="#!company/contact/" class="bareWhiteLink marginRight marginLeft showTablet showDesktop">(866) 598-2267</a>
 				<span class="whiteText showTablet showDesktop">Online Chat | </span>
 				<span class="hideTablet hideDesktop bareYellowLink liveChat"><span class="sprite"></span>Live Chat | </span>
@@ -478,7 +479,7 @@ var _robots = {
 		<div class="footLogos">
 			<div class="delivery sprite floatLeft"></div>
 			<div class="payment sprite floatRight"></div>
-			<div class="gtsLogo sprite floatRight displayNone"></div> <!-- TODO : gts implimentation... -->
+			<div class="gtsLogo sprite floatRight displayNone"></div> <!-- TODO : gts implimentation... on hold while Google changes structure -->
 		</div>
 	</div>
 </footer>
@@ -665,7 +666,7 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 		<p data-tlc="bind $var '.promo'; apply --append;"></p>
 		<img data-tlc="bind $var '.banner'; apply --img --media=$var --class='splashBanner' --width=670 --height=176 --bgcolor='ffffff' --replace bind $alt '.banneralt'; apply --attrib='alt';" src="blank.gif" alt="" height="670" width="176">
 	</a>
-	<!-- TODO : SET UP CATEGORY FILTERING. THIS IS JUST A PLACEHOLDER FOR NOW 
+	<!-- TODO : SET UP CATEGORY FILTERING. THIS IS JUST A PLACEHOLDER FOR NOW BECUASE CURRENTLY THIS ACTION WOULD BE HEAVY PROCESSING
 	<div class="catFilter hidePhone showTabletBlock">CATEGORY TYPE FILTERS WILL BE IN HUR.</div>
 	-->
 	<ul data-tlc="bind $var '.pages'; controller#loop --templateid='splashPageListTemplate'; apply --append;" class="listStyleNone"></ul>
@@ -2027,8 +2028,9 @@ subscribeListsArticle is used for authenticated buyers.
 			<ul id="forgetmeContainer" class="prodlist ">
 			</ul>
 		</div>
-		
+
 		<div id='createaccountArticle' class="displayNone textContentArea wrapper createaccountArticle">
+			<p id='loginMessagingInline' class='marginBottom appMessaging loginMessaging'></p>
 			<div class="logContainer">
 				<div class="logTitle yearbook">SIGN IN</div>
 				<p>
@@ -2674,7 +2676,7 @@ The 'data-action' attribute is used to assign an onclick.
 
 	<p id='loginMessaging' class='marginBottom appMessaging'></p>
 
-	<div id="loginFormContainer">
+	<div id="loginFormContainer" class="loginFormContainer">
 		<div class="createAccount logContainer">
 			<div class="logTitle yearbook">First Time With Us?</div>
 			<p class="center">If you have never made a purchase at this web site and have never subscribed to this store's mailing list,

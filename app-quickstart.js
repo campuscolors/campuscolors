@@ -458,9 +458,10 @@ document.write = function(v){
 			onSuccess : function(tagObj)	{
 				_app.vars.cid = _app.data[tagObj.datapointer].cid; //save to a quickly referencable location.
 				$('#loginSuccessContainer').show(); //contains 'continue' button.
-				$('#loginMessaging').empty().show().append("Thank you, you are now logged in."); //used for success and fail messaging.
+/*campus: below id's changed to classes because there are two login forms*/
+				$('.loginMessaging').empty().show().append("Thank you, you are now logged in."); //used for success and fail messaging.
 				$('#loginFormContainer').hide(); //contains actual form.
-				$('#recoverPasswordContainer').hide(); //contains password recovery form.
+				$('.recoverPasswordContainer').hide(); //contains password recovery form.
 				_app.ext.quickstart.u.handleLoginActions();
 				}
 			} //authenticateBuyer
@@ -2618,7 +2619,8 @@ buyer to 'take with them' as they move between  pages.
 			showLoginModal : function()	{
 //make sure form is showing and previous messaging is removed/reset.
 				$('#loginSuccessContainer').hide(); //contains 'continue' button.
-				$('#loginMessaging, #recoverPasswordMessaging').empty(); //used for success and fail messaging.
+/*campus: below id's changed to classes because there are two login forms*/
+				$('.loginMessaging, #recoverPasswordMessaging').empty(); //used for success and fail messaging.
 				$('#loginFormContainer, #recoverPasswordContainer').show(); //contains actual form and password recovery form (second id)
 				$('#loginFormForModal').dialog({modal: true,width: ($(window).width() > 500) ? 500 : '90%',autoOpen:false});
 				$('#loginFormForModal').dialog('open');
