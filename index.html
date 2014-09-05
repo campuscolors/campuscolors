@@ -112,7 +112,7 @@ $(document).ready(function(){
 	if(!paramStr || paramStr.indexOf('_escaped_fragment_') < 0){
 		window.myApp = new initApp({
 			"_robotHasGreeted" : false, <!-- versionhere -->
-			"release":"201408.20140904165800",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
+			"release":"201408.20140905125700",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
 			"_clientid":"zmvc", //zmvc for store app, 1pc for one page checkout.
 			"baseURL":baseURL, //used in non-local mode.
 			"checkoutAuthMode" : "active",//can be passive, active or required
@@ -282,39 +282,104 @@ var _robots = {
 				COLLEGE
 				<span class="sprite"></span>
 				<div class="levelTwo" data-dropdown="1">
-					<a href="#!nhl-apparel/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">T-Shirts</a>
-					<a>Sweatshirts</a>
-					<a>Jerseys</a>
-					<a>Jackets</a>
+					<a href="#!ncaa-apparel/ncaa-shorts/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Basketball Shorts</a>
+					<a href="#!ncaa-apparel/ncaa-t-shirts/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">T-Shirts</a>
+					<a href="#!ncaa-apparel/ncaa-sweatshirts/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Sweatshirts</a>
+					<a href="#!ncaa-apparel/ncaa-jerseys/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Jerseys</a>
+					<a href="#!ncaa-apparel/ncaa-jackets/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Jackets</a>
+					<a href="#!ncaa-apparel/ncaa-pants/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Pants</a>
+					<a href="#!ncaa-apparel/ncaa-hats/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Hats</a>
+					<a href="#!ncaa-apparel/ncaa-accessories/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Accessories</a>
+					<a href="#!ncaa-apparel/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">All College</a>
 				</div>
 			</div>
-			<div class="levelOne">
+			<div class="levelOne" onclick="myApp.ext.store_cc.a.showDropDownClick($(this));">
 				NFL
 				<span class="sprite"></span>
+				<div class="levelTwo" data-dropdown="1">
+					<a href="#!nfl-apparel/nfl-shorts/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Shorts</a>
+					<a href="#!nfl-apparel/nfl-t-shirts/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">T-Shirts</a>
+					<a href="#!nfl-apparel/nfl-sweatshirts/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Sweatshirts</a>
+					<a href="#!nfl-apparel/nfl-jerseys/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Jerseys</a>
+					<a href="#!nfl-apparel/nfl-jackets/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Jackets</a>
+					<a href="#!nfl-apparel/nfl-pants/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Pants</a>
+					<a href="#!nfl-apparel/nfl-hats/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Hats</a>
+					<a href="#!nfl-apparel/nfl-accessories/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Accessories</a>
+					<a href="#!nfl-apparel/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">All NFL</a>
+				</div>
 			</div>
-			<div class="levelOne">
+			<div class="levelOne" onclick="myApp.ext.store_cc.a.showDropDownClick($(this));">
 				NBA
 				<span class="sprite"></span>
+				<div class="levelTwo" data-dropdown="1">
+					<a href="#!nba-apparel/nba-shorts/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Basketball Shorts</a>
+					<a href="#!nba-apparel/nba-t-shirts/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">T-Shirts</a>
+					<a href="#!nba-apparel/nba-sweatshirts/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Sweatshirts</a>
+					<a href="#!nba-apparel/nba-jerseys/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Jerseys</a>
+					<a href="#!nba-apparel/nba-jackets/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Jackets</a>
+					<a href="#!nba-apparel/nba-pants/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Pants</a>
+					<a href="#!nba-apparel/nba-hats/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Hats</a>
+					<a href="#!nba-apparel/nba-accessories/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Accessories</a>
+					<a href="#!nba-apparel/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">All NBA</a>
+				</div>
 			</div>
-			<div class="levelOne">
+			<div class="levelOne" onclick="myApp.ext.store_cc.a.showDropDownClick($(this));">
 				MLB
 				<span class="sprite"></span>
+				<div class="levelTwo" data-dropdown="1">
+					<a href="#!mlb-apparel/mlb-shorts/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Shorts</a>
+					<a href="#!mlb-apparel/mlb-t-shirts/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">T-Shirts</a>
+					<a href="#!mlb-apparel/mlb-sweatshirts/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Sweatshirts</a>
+					<a href="#!mlb-apparel/mlb-jerseys/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Jerseys</a>
+					<a href="#!mlb-apparel/mlb-jackets/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Jackets</a>
+					<a href="#!mlb-apparel/mlb-pants/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Pants</a>
+					<a href="#!mlb-apparel/mlb-hats/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Hats</a>
+					<a href="#!mlb-apparel/mlb-accessories/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Accessories</a>
+					<a href="#!mlb-apparel/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">All MLB</a>
+				</div>
 			</div>
-			<div class="levelOne">
+			<div class="levelOne" onclick="myApp.ext.store_cc.a.showDropDownClick($(this));">
 				NHL
 				<span class="sprite"></span>
+				<div class="levelTwo" data-dropdown="1">
+					<a href="#!nhl-apparel/nhl-t-shirts/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">T-Shirts</a>
+					<a href="#!nhl-apparel/nhl-sweatshirts/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Sweatshirts</a>
+					<a href="#!nhl-apparel/nhl-jerseys/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Jerseys</a>
+					<a href="#!nhl-apparel/nhl-hats/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Hats</a>
+					<a href="#!nhl-apparel/nhl-accessories/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Accessories</a>
+					<a href="#!nhl-apparel/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">All NHL</a>
+				</div>
 			</div>
 			<div class="levelOne hideTablet">
 				SHOP BY TEAM
 				<span class="sprite"></span>
 			</div>
-			<div class="levelOne">
+			<div class="levelOne" onclick="myApp.ext.store_cc.a.showDropDownClick($(this));">
 				NIKE
 				<span class="sprite"></span>
+				<div class="levelTwo" data-dropdown="1">
+					<a href="#!nike-apparel/nike-shorts/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Shorts</a>
+					<a href="#!nike-apparel/nike-t-shirts/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">T-Shirts</a>
+					<a href="#!nike-apparel/nike-sweatshirts/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Sweatshirts</a>
+					<a href="#!nike-apparel/nike-jerseys/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Jerseys</a>
+					<a href="#!nike-apparel/nike-pants/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Pants</a>
+					<a href="#!nike-apparel/nike-hats/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Hats</a>
+					<a href="#!nike-apparel/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">All Nike</a>
+				</div>
 			</div>
-			<div class="levelOne">
+			<div class="levelOne" onclick="myApp.ext.store_cc.a.showDropDownClick($(this));">
 				ADIDAS
 				<span class="sprite"></span>
+				<div class="levelTwo" data-dropdown="1">
+					<a href="#!adidas-apparel/adidas-shorts/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Shorts</a>
+					<a href="#!adidas-apparel/adidas-t-shirts/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">T-Shirts</a>
+					<a href="#!adidas-apparel/adidas-sweatshirts/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Sweatshirts</a>
+					<a href="#!adidas-apparel/adidas-jerseys/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Jerseys</a>
+					<a href="#!adidas-apparel/adidas-jackets/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Jackets</a>
+					<a href="#!adidas-apparel/adidas-pants/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Pants</a>
+					<a href="#!adidas-apparel/adidas-hats/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Hats</a>
+					<a href="#!adidas-apparel/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">All Adidas</a>
+				</div>
 			</div>
 			<div class="levelOne hideTablet">
 				SHORTS
