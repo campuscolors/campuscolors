@@ -55,7 +55,8 @@ body {font-family:Oxygen, Helvetica, sans-serif;}
 }
 
 .greenGradient,
-.createaccountArticle .ccButton {
+.createaccountArticle .ccButton,
+#loginFormContainer .ccButton {
 	background: #308c67; /* Old browsers */
 	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
 	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzMwOGM2NyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxOTQ4MzUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
@@ -291,11 +292,13 @@ header {position:relative;}
 
 /* CUSTOMER TEMPLATE*/
 .logContainer {height:auto; width:100%; padding:20px;}
+#loginFormContainer .logContainer {width:100%; float:none;}
+#loginFormContainer p {margin:1em 0;}
 .logTitle {color:#781c2b; font-size:1.5em;}
 #loginForm {width:100%}
 .zform_textbox {width:100%; padding:10px; margin:10px auto; display:block; border:1px solid #000000;}
-.createaccountArticle .ccButton {width:100%; color:#ffffff; border-top:2px outset #308c67; border-left:2px outset #308c67;}
-.createaccountArticle div[data-slide='toggle']{display:none;}
+.createaccountArticle .ccButton, #loginFormContainer .ccButton {width:100%; color:#ffffff; border-top:2px outset #308c67; border-left:2px outset #308c67; font-family:Yearbook Solid W01, Times New Roman, serif;}
+.createaccountArticle div[data-slide='toggle'], #loginFormContainer div[data-slide='toggle'] {display:none;}
 
 
 

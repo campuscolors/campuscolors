@@ -210,8 +210,8 @@ var _robots = {
 				Welcome, 
 				<span class="loginHide">
 					Guest! (
-					<!-- <span class="pointer uYellowLink	 underline" onclick="myApp.ext.quickstart.u.showLoginModal();"> LOG IN</span> -->
-					<a href="#!customer/createaccount/" class="uYellowLink underline"> LOG IN</a>
+					 <span class="pointer uYellowLink	 underline" onclick="myApp.ext.quickstart.u.showLoginModal();"> LOG IN</span> 
+					<!-- <a href="#!customer/createaccount/" class="uYellowLink underline"> LOG IN</a> -->
 					or <!-- TODO PUT CORRECT CREATE ACCOUNT LINK HERE! -->
 					<a href="#!customer/createaccount/"><span class="uYellowLink underline">SIGN UP</span></a>
 					 )
@@ -2056,7 +2056,7 @@ subscribeListsArticle is used for authenticated buyers.
 									<input type="text" name="recover" required="required" size="25" class="zform_textbox">
 								</label>
 							</div>
-							<div><input type="submit" class="applyButton ccButton" value="SEND PASSWORD"></div>
+							<div><input type="submit" class="applyButton ccButton" value="E-MAIL PASSWORD"></div>
 						</div>
 					</form>
 				</div><!-- //recoverPasswordContainer -->
@@ -2672,53 +2672,54 @@ The 'data-action' attribute is used to assign an onclick.
 
 <!-- the contents of this div/id are toggled on/off when login/logout occurs. don't change the ID -->
 
-
 	<p id='loginMessaging' class='marginBottom appMessaging'></p>
 
-	<div id='loginFormContainer'>
-		<form action='#' data-app-submit='quickstart|accountLoginSubmit' class='marginBottom alignedForm'>
-		<input type='hidden' name='method' value='unsecure' />
-		<input type='hidden' name='loginCallback' id='loginCallback' value='' /><!-- used to save a callback action in -->
-			<fieldset>
-			<legend>Account Login</legend>
-			<label>
-				<span class='prompt'>Login/Email</span>
-				<input type='email' class='alignInput' required='required'  name='login' value='' size='25'  />
-			</label>
-			<label>
-				<span class='prompt'>Password</span>
-				<input type='password' class='alignInput' required='required'  name='password' value='' size='25'  />	
-			</label>
-			<div class='alignRight'>
-			<input type='submit' value='log in' class='applyButton ' />
-			</div>
-			</fieldset>
-		</form>
+	<div id="loginFormContainer">
+		<div class="createAccount logContainer">
+			<div class="logTitle yearbook">First Time With Us?</div>
+			<p class="center">If you have never made a purchase at this web site and have never subscribed to this store's mailing list,
+				please choose this option.
+			</p>
+			<a href="#!customer/createaccount/" class="ccButton ui-widget ui-button">Create an Account</a>
+				<!-- USE THIS BUTTON WHEN CREATING WITH A MODAL (will need createAccount template added as well)
+			<button class='modalCreateButton tertiaryColorHover' onClick="app.ext.acctCreate.a.showAccountCreate();">Create an Account</button> -->
+		</div>
 
-		<div id='recoverPasswordContainer' class='marginBottom'>
-			<div id='recoverPasswordMessaging' class='appMessaging'></div>
-			<form action='#' data-app-submit='quickstart|accountPasswordRecoverSubmit' class='alignedForm'>
-			<fieldset>
-			<legend>Recover Password</legend>
-			<label>
-				<span class='prompt'>Login/Email</span>
-				<input type='text' name='login' required='required' size='25' class='alignInput' />
-			</label>
-			<div class='alignRight'><input type='submit' class='applyButton' value='Email Password to Me' /></div>
-			</fieldset>
+		<div id="gotAccount" class='gotAccount logContainer'> 
+			<div class="logTitle yearbook">SIGN IN</div>
+			<!-- Third parameter is id of message destination -->
+			<form action='#' data-app-submit='quickstart|accountLoginSubmit' id='modalLoginForm'>
+				<input type='hidden' name='method' value='unsecure'>
+				<input type='hidden' name='loginCallback' id='loginCallback' value='' /><!-- used to save a callback action in -->
+				<input type='email' class='zform_textbox zform_email' name='login' id='modalLoginlogin' value='' size='20' placeholder='E-mail address' />
+				<input type='password' class='zform_textbox zform_password' name='password' id='modalLoginpassword' value='' size='20' placeholder='Password' />
+				<input type='submit' value='Log In' class='ccButton ui-button logInModalSubmit' />
 			</form>
-		</div><!-- /recoverPasswordContainer -->
-
-		<div>
-		<a class='applyButton' href='#!customer/newsletter'>Create Account</a>
+			<div class='marginBottom recoverPasswordContainer'>
+				<div class='appMessaging recoverPasswordMessaging'></div>
+				<form action='#' data-app-submit='quickstart|accountPasswordRecoverSubmit'>
+					<div class="center marginTop">Forgot Your Password?</div>
+					<div onclick="myApp.ext.store_cc.a.togglerecover($(this));" class="center">
+						<span class="uRedLink pointer">Click here</span>
+						to recover it!
+					</div>
+					<div data-slide='toggle'>
+						<div class='marginBottom marginTop'>
+							<label>
+								<span>Enter your e-mail address:</span>
+								<input type='text' name='login' required='required' size='25' class="zform_textbox">
+							</label>
+						</div>
+						<div><input type='submit' class='applyButton ccButton ui-button' value='Email Password to Me'></div>
+					</div>
+				</form>
+			</div><!-- /recoverPasswordContainer -->
 		</div>
 	</div>
-
-<!-- this div will appear after a successful login. if you bind a new action to the button, best to empty the div and re-add the button, so the actions don't statck. -->
+	<!-- this div will appear after a successful login. if you bind a new action to the button, best to empty the div and re-add the button, so the actions don't statck. -->
 	<div id='loginSuccessContainer' class='center displayNone'>
-		<button class='applyButton' id='modalLoginContinueButton' data-app-click="quickstart|dialogCloseExec">Continue</button>
+		<button class='ui-button-text ui-button ui-state-default ui-corner-all ' id='modalLoginContinueButton' data-app-click="quickstart|dialogCloseExec">Continue</button>
 	</div>
-
 </div>
 
 
