@@ -255,7 +255,7 @@ header {position:relative;}
 .tabbedProductContentTD .ui-tabs .ui-tabs-nav li.ui-state-default, .catSideline .title.ui-state-default {width:100%; border:2px outset #000000; border-radius:0;}
 .tabbedProductContentTD .ui-tabs .ui-tabs-nav li.ui-state-active, .catSideline .title.ui-state-active {border-top:2px outset #b75970; border-right:2px outset #000000; border-bottom:2px outset #000000; border-left:2px outset #b75970;}
 .tabbedProductContentTD .ui-tabs .ui-tabs-nav li.ui-state-default a {width:100%; color:#ffffff; text-align:center; font-family:Yearbook Solid W01, Times New Roman, serif;}
-.tabbedProductContentTD .ui-widget.ui-widget-content.ui-corner-bottom.ui-corner-tr {width:290px; margin:0 auto; background:none; border:none; border-radius:0; font-family:Yearbook Solid W01, Times New Roman, serif;}
+.tabbedProductContentTD .ui-widget.ui-widget-content.ui-corner-bottom.ui-corner-tr {width:290px; margin:0 auto; background:none; border:none; border-radius:0;}
 .tabbedProductContentTD .tabContent.ui-tabs-panel.ui-widget-content.ui-corner-bottom {border:none;}
 
 .productRecentCarousel .mpControlContainer {display:none;}

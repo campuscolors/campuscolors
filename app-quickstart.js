@@ -2268,7 +2268,7 @@ effects the display of the nav buttons only. should be run just after the handle
 								"functions" : [
 									{
 										"filter" : {"query" : {"query_string":{"query":'"'+infoObj.KEYWORDS+'"'}}},
-									//	"script_score" : {"script":"_score * 10"}
+									//	"script_score" : {"script":"_score * 10"} mod that didn't work...
 										"script_score" : {"script":"10"}
 										}
 									],
