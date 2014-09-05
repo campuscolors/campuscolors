@@ -96,6 +96,7 @@ var store_cc = function(_app) {
 					
 					_app.templates.productTemplate.on('complete.store_cc',function(event,$context,infoObj) {
 						_app.ext.store_cc.u.showRecentlyViewedItems($context);
+						_app.ext.store_cc.u.runPreviousCarousel($context);
 					});
 					
 					_app.templates.productTemplate.on('depart.store_cc',function(event,$context,infoObj) {
@@ -591,6 +592,47 @@ var store_cc = function(_app) {
 						});	
 					},2000);
 				} //FOOTER top brands carousel
+			},
+			
+			//Turns previously viewed ul on product page into an auto scrolling carousel. 
+			runPreviousCarousel : function($context) {
+//				_app.u.dump('----Running product page previously viewed carousel');	
+				var $target = $('.productPreviousViewed',$context);
+				if($target.data('isCarousel'))	{$target.trigger('play');} //only make it a carousel once, but make sure it always scrolls
+				else {
+					$target.data('isCarousel',true);
+					//for whatever reason, caroufredsel needs to be executed after a moment.
+					setTimeout(function(){
+						$target.carouFredSel({
+							width	:"100%",
+							items	: {
+								minimum: 5,
+								width : "80px"
+							},
+							scroll: {	items: 1, fx: "directscroll" },
+							auto: {
+								delay: 1000,
+								pauseOnHover:"immediate"
+							},
+							swipe: { 
+								onMouse: true,	
+								onTouch: true 
+							}
+			/*				pagination: {
+								container: ".page",
+								keys: true
+							},
+							prev: {
+								button: ".prev",
+								key: "left"
+							},
+							next: {
+								button: ".next",
+								key: "right"
+							}
+			*/			});
+					},2000); 
+				} //PREVIOUSLY VIEWED CAROUSEL
 			},
 			
 /* MOBILE UTILS */
