@@ -12,35 +12,65 @@
 			"link"			: "#!nhl-apparel/nhl-t-shirts/", 
 			"img" 			: "products/images/acc_8004615_tc.jpg",
 			"name"			: "NHL T-shirts",
-			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nhl"}} , {"term" : {"apparel_type" : "t-shirts"}}]}
+			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "nhl"}} , {"query" : {"query_string" : {"query":"shirt","fields":["prod_name"]}}}]},
+			"optionList" 	: [
+				"user:team_conference",
+				"user:color_pallete",
+				"user:size_gender",
+				"user:vendor"
+			]
 		},
 		{
 			"id" 				: "nhl-sweatshirts",
 			"link"			: "#!nhl-apparel/nhl-sweatshirts/", 
 			"img" 			: "products/images/ala_27548x_wh2012.jpg",
 			"name"			: "NHL Sweatshirts",
-			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nhl"}} , {"term" : {"apparel_type" : "sweatshirts"}}]}
+			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "nhl"}} , {"query" : {"query_string" : {"query":"sweatshirt","fields":["prod_name"]}}}]},
+			"optionList" 	: [
+				"user:team_conference",
+				"user:color_pallete",
+				"user:size_gender",
+				"user:vendor"
+			]
 		},
 		{
 			"id" 				: "nhl-jerseys",
 			"link"			: "#!nhl-apparel/nhl-jerseys/", 
 			"img" 			: "products/images/acc_8004615_tc.jpg",
 			"name"			: "NHL Jerseys",
-			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nhl"}} , {"term" : {"apparel_type" : "jerseys"}}]}
+			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "nhl"}} , {"query" : {"query_string" : {"query":"jersey","fields":["prod_name"]}}}]},
+			"optionList" 	: [
+				"user:team_conference",
+				"user:color_pallete",
+				"user:size_gender",
+				"user:vendor"
+			]
 		},
 		{
 			"id" 				: "nhl-hats",
 			"link"			: "#!nhl-apparel/nhl-hats/", 
 			"img" 			: "products/images/ala_27548x_wh2012.jpg",
 			"name"			: "NHL Hats",
-			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nhl"}} , {"term" : {"apparel_type" : "hats"}}]}
+			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "nhl"}} , {"query" : {"query_string" : {"query":"hat","fields":["prod_name"]}}}]},
+			"optionList" 	: [
+				"user:team_conference",
+				"user:color_pallete",
+				"user:size_gender",
+				"user:vendor"
+			]
 		},
 		{
 			"id" 				: "nhl-accessories",
 			"link"			: "#!nhl-apparel/nhl-accessories/", 
 			"img" 			: "products/images/acc_8004615_tc.jpg",
 			"name"			: "NHL Accessories",
-			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nhl"}} , {"term" : {"apparel_type" : "accessories"}}]}
+			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "nhl"}} , {"query" : {"query_string" : {"query":"accessory","fields":["prod_name"]}}}]},
+			"optionList" 	: [
+				"user:team_conference",
+				"user:color_pallete",
+				"user:size_gender",
+				"user:vendor"
+			]
 		},
 		{
 			"id" 				: "nhl-best-sellers",
@@ -49,14 +79,14 @@
 			"name"			: "NHL Best Sellers",
 			"baseFilter" 	: {"term" : {"tags" : "IS_FRESH"}},
 			"optionList" 	: [
-				"user:team_league",
+				"user:team_conference",
 				"user:color_pallete",
 				"user:size_gender",
-				"user:team_conference",
+				"user:vendor",
+				"user:team_league",
 				"user:team_league_nhl",
 				"user:team_league_nhl_alt",
-				"user:team_league_nba",
-				"user:vendor"
+				"user:team_league_nba"
 			]
 		}
 	]

@@ -5,53 +5,108 @@
 	"banner" : "banners/test_cat_banner_785x200.jpg",
 	"pages" : [
 		{
+			"id" 				: "ncaa-shorts",
+			"link"				: "#!ncaa-apparel/ncaa-shorts/", 
+			"img" 			: "",
+			"name"			: "NCAA Basketball Shorts",
+			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "ncaa"}} , {"query" : {"query_string" : {"query":"shorts ","fields":["prod_name"]}}}]},
+			"optionList" 	: [
+				"user:team_conference",
+				"user:color_pallete",
+				"user:size_gender",
+				"user:vendor"
+			]
+		},
+		{
 			"id" 				: "ncaa-t-shirts",
 			"link"				: "#!ncaa-apparel/ncaa-t-shirts/", 
 			"img" 			: "3_prongs_standard",
 			"name"			: "NCAA T-shirts",
-			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "ncaa"}} , {"term" : {"apparel_type" : "t-shirts"}}]}
+			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "ncaa"}} , {"query" : {"query_string" : {"query":"shirt ","fields":["prod_name"]}}}]},
+			"optionList" 	: [
+				"user:team_conference",
+				"user:color_pallete",
+				"user:size_gender",
+				"user:vendor"
+			]
 		},
 		{
 			"id" 				: "ncaa-sweatshirts",
 			"link"				: "#!ncaa-apparel/ncaa-sweatshirts/", 
 			"img" 			: "9/93086_2",
 			"name"			: "NCAA Sweatshirts",
-			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "ncaa"}} , {"term" : {"apparel_type" : "sweatshirts"}}]}
-		},
-		{
-			"id" 				: "ncaa-jerseys",
-			"link"				: "#!ncaa-apparel/ncaa-jerseys/", 
-			"img" 			: "",
-			"name"			: "NCAA Jerseys",
-			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "ncaa"}} , {"term" : {"apparel_type" : "jerseys"}}]}
-		},
-		{
-			"id" 				: "ncaa-jackets",
-			"link"				: "#!ncaa-apparel/ncaa-jackets/", 
-			"img" 			: "",
-			"name"			: "NCAA Jackets",
-			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "ncaa"}} , {"term" : {"apparel_type" : "jackets"}}]}
+			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "ncaa"}} , {"query" : {"query_string" : {"query":"sweatshirt ","fields":["prod_name"]}}}]},
+			"optionList" 	: [
+				"user:team_conference",
+				"user:color_pallete",
+				"user:size_gender",
+				"user:vendor"
+			]
 		},
 		{
 			"id" 				: "ncaa-pants",
 			"link"				: "#!ncaa-apparel/ncaa-pants/", 
 			"img" 			: "",
 			"name"			: "NCAA Pants",
-			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "ncaa"}} , {"term" : {"apparel_type" : "pants"}}]}
+			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "ncaa"}} , {"query" : {"query_string" : {"query":"pants ","fields":["prod_name"]}}}]},
+			"optionList" 	: [
+				"user:team_conference",
+				"user:color_pallete",
+				"user:size_gender",
+				"user:vendor"
+			]
+		},
+		{
+			"id" 				: "ncaa-jerseys",
+			"link"				: "#!ncaa-apparel/ncaa-jerseys/", 
+			"img" 			: "",
+			"name"			: "NCAA Jerseys",
+			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "ncaa"}} , {"query" : {"query_string" : {"query":"jersey","fields":["prod_name"]}}}]},
+			"optionList" 	: [
+				"user:team_conference",
+				"user:color_pallete",
+				"user:size_gender",
+				"user:vendor"
+			]
+		},
+		{
+			"id" 				: "ncaa-jackets",
+			"link"				: "#!ncaa-apparel/ncaa-jackets/", 
+			"img" 			: "",
+			"name"			: "NCAA Jackets",
+			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "ncaa"}} , {"query" : {"query_string" : {"query":"jacket ","fields":["prod_name"]}}}]},
+			"optionList" 	: [
+				"user:team_conference",
+				"user:color_pallete",
+				"user:size_gender",
+				"user:vendor"
+			]
 		},
 		{
 			"id" 				: "ncaa-hats",
 			"link"				: "#!ncaa-apparel/ncaa-hats/", 
 			"img" 			: "",
 			"name"			: "NCAA Hats",
-			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "ncaa"}} , {"term" : {"apparel_type" : "hats"}}]}
+			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "ncaa"}} , {"query" : {"query_string" : {"query":"hat","fields":["prod_name"]}}}]},
+			"optionList" 	: [
+				"user:team_conference",
+				"user:color_pallete",
+				"user:size_gender",
+				"user:vendor"
+			]
 		},
 		{
 			"id" 				: "ncaa-accessories",
 			"link"				: "#!ncaa-apparel/ncaa-accessories/", 
 			"img" 			: "",
 			"name"			: "NCAA Accessories",
-			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "ncaa"}} , {"term" : {"apparel_type" : "accessories"}}]}
+			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "ncaa"}} , {"query" : {"query_string" : {"query":"accessory","fields":["prod_name"]}}}]},
+			"optionList" 	: [
+				"user:team_conference",
+				"user:color_pallete",
+				"user:size_gender",
+				"user:vendor"
+			]
 		}
 	]
 }

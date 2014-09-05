@@ -8,60 +8,166 @@
 	"promo" : "Some promotional text goes here",
 	"pages" : [
 		{
+			"id" 				: "mens-shorts",
+			"link"				: "#!mens-apparel/mens-shorts/", 
+			"img" 			: "products/images/acc_8004615_tc.jpg",
+			"name"			: "Men&#39;s Shorts",
+			"baseFilter" 	: { "and" : [ {"term" : {"size_gender" : "adult"}} , {"query" : {"query_string" : {"query":"shorts","fields":["prod_name"]}}}]},
+			"optionList" 	: [
+				"user:color_pallete",
+				"user:size_gender",
+				"user:vendor_code",
+				"user:team_league",
+				"user:team_conference",
+				"user:team_league_nfl",
+				"user:team_league_nba",
+				"user:team_league_mlb",
+				"user:team_league_nhl"
+			]
+		},
+		{
 			"id" 				: "mens-t-shirts",
 			"link"				: "#!mens-apparel/mens-t-shirts/", 
 			"img" 			: "products/images/acc_8004615_tc.jpg",
 			"name"			: "Men&#39;s T-shirts",
-			"baseFilter" 	: { "and" : [ {"term" : {"size_gender" : "adult"}} , {"query" : {"query_string" : {"query":"shirt ","fields":["prod_name"]}}}]}
+			"baseFilter" 	: { "and" : [ {"term" : {"size_gender" : "adult"}} , {"query" : {"query_string" : {"query":"shirt ","fields":["prod_name"]}}}]},
+			"optionList" 	: [
+				"user:color_pallete",
+				"user:size_gender",
+				"user:vendor_code",
+				"user:team_league",
+				"user:team_conference",
+				"user:team_league_nfl",
+				"user:team_league_nba",
+				"user:team_league_mlb",
+				"user:team_league_nhl"
+			]
 		},
 		{
 			"id" 				: "mens-sweatshirts",
 			"link"				: "#!mens-apparel/mens-sweatshirts/", 
 			"img" 			: "products/images/ala_27548x_wh2012.jpg",
 			"name"			: "Men&#39;s Sweatshirts",
-			"baseFilter" 	: { "and" : [ {"term" : {"size_gender" : "adult"}} , {"query" : {"query_string" : {"query":"sweatshirt ","fields":["prod_name"]}}}]}
+			"baseFilter" 	: { "and" : [ {"term" : {"size_gender" : "adult"}} , {"query" : {"query_string" : {"query":"sweatshirt ","fields":["prod_name"]}}}]},
+			"optionList" 	: [
+				"user:color_pallete",
+				"user:size_gender",
+				"user:vendor_code",
+				"user:team_league",
+				"user:team_conference",
+				"user:team_league_nfl",
+				"user:team_league_nba",
+				"user:team_league_mlb",
+				"user:team_league_nhl"
+			]
 		},
 		{
 			"id" 				: "mens-jerseys",
 			"link"				: "#!mens-apparel/mens-jerseys/", 
 			"img" 			: "products/images/acc_8004615_tc.jpg",
 			"name"			: "Men&#39;s Jerseys",
-			"baseFilter" 	: { "and" : [ {"term" : {"size_gender" : "adult"}} , {"query" : {"query_string" : {"query":"jersey","fields":["prod_name"]}}}]}
+			"baseFilter" 	: { "and" : [ {"term" : {"size_gender" : "adult"}} , {"query" : {"query_string" : {"query":"jersey","fields":["prod_name"]}}}]},
+			"optionList" 	: [
+				"user:color_pallete",
+				"user:size_gender",
+				"user:vendor_code",
+				"user:team_league",
+				"user:team_conference",
+				"user:team_league_nfl",
+				"user:team_league_nba",
+				"user:team_league_mlb",
+				"user:team_league_nhl"
+			]
 		},
 		{
-			"id" 				: "mens-shorts",
-			"link"				: "#!mens-apparel/mens-shorts/", 
+			"id" 				: "mens-jackets",
+			"link"				: "#!mens-apparel/mens-jackets/", 
 			"img" 			: "products/images/acc_8004615_tc.jpg",
-			"name"			: "Men&#39;s Shorts",
-			"baseFilter" 	: { "and" : [ {"term" : {"size_gender" : "adult"}} , {"query" : {"query_string" : {"query":"shorts","fields":["prod_name"]}}}]}
+			"name"			: "Men&#39;s Jackets",
+			"baseFilter" 	: { "and" : [ {"term" : {"size_gender" : "adult"}} , {"query" : {"query_string" : {"query":"jacket","fields":["prod_name"]}}}]},
+			"optionList" 	: [
+				"user:color_pallete",
+				"user:size_gender",
+				"user:vendor_code",
+				"user:team_league",
+				"user:team_conference",
+				"user:team_league_nfl",
+				"user:team_league_nba",
+				"user:team_league_mlb",
+				"user:team_league_nhl"
+			]
 		},
 		{
 			"id" 				: "mens-pants",
 			"link"				: "#!mens-apparel/mens-pants/", 
 			"img" 			: "products/images/acc_8004615_tc.jpg",
 			"name"			: "Men&#39;s Pants",
-			"baseFilter" 	: { "and" : [ {"term" : {"size_gender" : "adult"}} , {"query" : {"query_string" : {"query":"pants","fields":["prod_name"]}}}]}
+			"baseFilter" 	: { "and" : [ {"term" : {"size_gender" : "adult"}} , {"query" : {"query_string" : {"query":"pants","fields":["prod_name"]}}}]},
+			"optionList" 	: [
+				"user:color_pallete",
+				"user:size_gender",
+				"user:vendor_code",
+				"user:team_league",
+				"user:team_conference",
+				"user:team_league_nfl",
+				"user:team_league_nba",
+				"user:team_league_mlb",
+				"user:team_league_nhl"
+			]
 		},
 		{
 			"id" 				: "mens-hats",
 			"link"				: "#!mens-apparel/mens-hats/", 
 			"img" 			: "products/images/ala_27548x_wh2012.jpg",
 			"name"			: "Men&#39;s Hats",
-			"baseFilter" 	: { "and" : [ {"term" : {"size_gender" : "adult"}} , {"query" : {"query_string" : {"query":"hat","fields":["prod_name"]}}}]}
+			"baseFilter" 	: { "and" : [ {"term" : {"size_gender" : "adult"}} , {"query" : {"query_string" : {"query":"hat","fields":["prod_name"]}}}]},
+			"optionList" 	: [
+				"user:color_pallete",
+				"user:size_gender",
+				"user:vendor_code",
+				"user:team_league",
+				"user:team_conference",
+				"user:team_league_nfl",
+				"user:team_league_nba",
+				"user:team_league_mlb",
+				"user:team_league_nhl"
+			]
 		},
 		{
 			"id" 				: "mens-accessories",
 			"link"				: "#!mens-apparel/mens-accessories/", 
 			"img" 			: "products/images/acc_8004615_tc.jpg",
 			"name"			: "Men&#39;s Accessories",
-			"baseFilter" 	: { "and" : [ {"term" : {"size_gender" : "adult"}} , {"query" : {"query_string" : {"query":"accessories","fields":["prod_name"]}}}]}
+			"baseFilter" 	: { "and" : [ {"term" : {"size_gender" : "adult"}} , {"query" : {"query_string" : {"query":"accessories","fields":["prod_name"]}}}]},
+			"optionList" 	: [
+				"user:color_pallete",
+				"user:size_gender",
+				"user:vendor_code",
+				"user:team_league",
+				"user:team_conference",
+				"user:team_league_nfl",
+				"user:team_league_nba",
+				"user:team_league_mlb",
+				"user:team_league_nhl"
+			]
 		},
 		{
 			"id" 				: "mens-new-arrivals",
 			"link"				: "#!mens-apparel/mens-new-arrivals/", 
 			"img" 			: "products/images/ala_27548x_wh2012.jpg",
 			"name"			: "Men&#39;s New Arrivals",
-			"baseFilter" 	: { "and" : [ {"term" : {"tags" : "IS_FRESH"}} , {"term" : {"size_gender" : "adult"}}]}
+			"baseFilter" 	: { "and" : [ {"term" : {"tags" : "IS_FRESH"}} , {"term" : {"size_gender" : "adult"}}]},
+			"optionList" 	: [
+				"user:color_pallete",
+				"user:size_gender",
+				"user:vendor_code",
+				"user:team_league",
+				"user:team_conference",
+				"user:team_league_nfl",
+				"user:team_league_nba",
+				"user:team_league_mlb",
+				"user:team_league_nhl"
+			]
 		}
 	]
 }

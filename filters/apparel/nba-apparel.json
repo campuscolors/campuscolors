@@ -5,60 +5,108 @@
 	"banner" : "banners/test_cat_banner_785x200.jpg",
 	"pages" : [
 		{
+			"id" 				: "nba-shorts",
+			"link"				: "#!nba-apparel/nba-shorts/", 
+			"img" 			: "",
+			"name"			: "NBA Shorts",
+			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "nba"}} , {"query" : {"query_string" : {"query":"shorts","fields":["prod_name"]}}}]},
+			"optionList" 	: [
+				"user:team_conference",
+				"user:color_pallete",
+				"user:size_gender",
+				"user:vendor"
+			]
+		},
+		{
 			"id" 				: "nba-t-shirts",
 			"link"				: "#!nba-apparel/nba-t-shirts/", 
 			"img" 			: "3_prongs_standard",
 			"name"			: "NBA T-shirts",
-			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nba"}} , {"term" : {"apparel_type" : "t-shirts"}}]}
+			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "nba"}} , {"query" : {"query_string" : {"query":"shirt","fields":["prod_name"]}}}]},
+			"optionList" 	: [
+				"user:team_conference",
+				"user:color_pallete",
+				"user:size_gender",
+				"user:vendor"
+			]
 		},
 		{
 			"id" 				: "nba-sweatshirts",
 			"link"				: "#!nba-apparel/nba-sweatshirts/", 
 			"img" 			: "9/93086_2",
 			"name"			: "NBA Sweatshirts",
-			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nba"}} , {"term" : {"apparel_type" : "sweatshirts"}}]}
+			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "nba"}} , {"query" : {"query_string" : {"query":"sweatshirt","fields":["prod_name"]}}}]},
+			"optionList" 	: [
+				"user:team_conference",
+				"user:color_pallete",
+				"user:size_gender",
+				"user:vendor"
+			]
 		},
 		{
 			"id" 				: "nba-jerseys",
 			"link"				: "#!nba-apparel/nba-jerseys/", 
 			"img" 			: "",
 			"name"			: "NBA Jerseys",
-			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nba"}} , {"term" : {"apparel_type" : "jerseys"}}]}
+			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "nba"}} , {"query" : {"query_string" : {"query":"jersey","fields":["prod_name"]}}}]},
+			"optionList" 	: [
+				"user:team_conference",
+				"user:color_pallete",
+				"user:size_gender",
+				"user:vendor"
+			]
 		},
 		{
 			"id" 				: "nba-jackets",
 			"link"				: "#!nba-apparel/nba-jackets/", 
 			"img" 			: "",
 			"name"			: "NBA Jackets",
-			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nba"}} , {"term" : {"apparel_type" : "jackets"}}]}
-		},
-		{
-			"id" 				: "nba-shorts",
-			"link"				: "#!nba-apparel/nba-shorts/", 
-			"img" 			: "",
-			"name"			: "NBA Shorts",
-			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nba"}} , {"term" : {"apparel_type" : "shorts"}}]}
+			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "nba"}} , {"query" : {"query_string" : {"query":"jacket","fields":["prod_name"]}}}]},
+			"optionList" 	: [
+				"user:team_conference",
+				"user:color_pallete",
+				"user:size_gender",
+				"user:vendor"
+			]
 		},
 		{
 			"id" 				: "nba-pants",
 			"link"				: "#!nba-apparel/nba-pants/", 
 			"img" 			: "",
 			"name"			: "NBA Pants",
-			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nba"}} , {"term" : {"apparel_type" : "pants"}}]}
+			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "nba"}} , {"query" : {"query_string" : {"query":"pants","fields":["prod_name"]}}}]},
+			"optionList" 	: [
+				"user:team_conference",
+				"user:color_pallete",
+				"user:size_gender",
+				"user:vendor"
+			]
 		},
 		{
 			"id" 				: "nba-hats",
 			"link"				: "#!nba-apparel/nba-hats/", 
 			"img" 			: "",
 			"name"			: "NBA Hats",
-			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nba"}} , {"term" : {"apparel_type" : "hats"}}]}
+			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "nba"}} , {"query" : {"query_string" : {"query":"hat","fields":["prod_name"]}}}]},
+			"optionList" 	: [
+				"user:team_conference",
+				"user:color_pallete",
+				"user:size_gender",
+				"user:vendor"
+			]
 		},
 		{
 			"id" 				: "nba-accessories",
 			"link"				: "#!nba-apparel/nba-accessories/", 
 			"img" 			: "",
 			"name"			: "NBA Accessories",
-			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "nba"}} , {"term" : {"apparel_type" : "accessories"}}]}
+			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "nba"}} , {"query" : {"query_string" : {"query":"accessory","fields":["prod_name"]}}}]},
+			"optionList" 	: [
+				"user:team_conference",
+				"user:color_pallete",
+				"user:size_gender",
+				"user:vendor"
+			]
 		}
 	]
 }

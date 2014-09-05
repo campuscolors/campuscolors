@@ -5,53 +5,88 @@
 	"banner" : "banners/test_cat_banner_785x200.jpg",
 	"pages" : [
 		{
+			"id" 				: "adidas-shorts",
+			"link"			: "#!adidas-apparel/adidas-shorts/", 
+			"img" 			: "",
+			"name"			: "Adidas Shorts",
+			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "adidas"}} , {"query" : {"query_string" : {"query":"shorts","fields":["prod_name"]}}}]},
+			"optionList" 	: [
+				"user:team_conference",
+				"user:color_pallete",
+				"user:size_gender"
+			]
+		},
+		{
 			"id" 				: "adidas-t-shirts",
 			"link"			: "#!adidas-apparel/adidas-t-shirts/", 
 			"img" 			: "3_prongs_standard",
 			"name"			: "Adidas T-shirts",
-			"baseFilter" 	: { "and" : [ {"term" : {"vendor_code" : "adidas"}} , {"term" : {"apparel_type" : "t-shirts"}}]}
+			"baseFilter" 	: { "and" : [ {"term" : {"vendor_code" : "adidas"}} , {"query" : {"query_string" : {"query":"shirt","fields":["prod_name"]}}}]},
+			"optionList" 	: [
+				"user:team_conference",
+				"user:color_pallete",
+				"user:size_gender"
+			]
 		},
 		{
 			"id" 				: "adidas-sweatshirts",
 			"link"			: "#!adidas-apparel/adidas-sweatshirts/", 
 			"img" 			: "9/93086_2",
 			"name"			: "Adidas Sweatshirts",
-			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "adidas"}} , {"term" : {"apparel_type" : "sweatshirts"}}]}
+			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "adidas"}} , {"query" : {"query_string" : {"query":"sweatshirt","fields":["prod_name"]}}}]},
+			"optionList" 	: [
+				"user:team_conference",
+				"user:color_pallete",
+				"user:size_gender"
+			]
 		},
 		{
 			"id" 				: "adidas-jerseys",
 			"link"			: "#!adidas-apparel/adidas-jerseys/", 
 			"img" 			: "",
 			"name"			: "Adidas Jerseys",
-			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "adidas"}} , {"term" : {"apparel_type" : "jerseys"}}]}
+			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "adidas"}} , {"query" : {"query_string" : {"query":"jersey","fields":["prod_name"]}}}]},
+			"optionList" 	: [
+				"user:team_conference",
+				"user:color_pallete",
+				"user:size_gender"
+			]
 		},
 		{
-			"id" 				: "adidas-shorts",
-			"link"			: "#!adidas-apparel/adidas-shorts/", 
+			"id" 				: "adidas-jackets",
+			"link"			: "#!adidas-apparel/adidas-jackets/", 
 			"img" 			: "",
-			"name"			: "Adidas Shorts",
-			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "adidas"}} , {"term" : {"apparel_type" : "shorts"}}]}
+			"name"			: "Adidas Jackets",
+			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "adidas"}} , {"query" : {"query_string" : {"query":"jacket","fields":["prod_name"]}}}]},
+			"optionList" 	: [
+				"user:team_conference",
+				"user:color_pallete",
+				"user:size_gender"
+			]
 		},
 		{
 			"id" 				: "adidas-pants",
 			"link"			: "#!adidas-apparel/adidas-pants/", 
 			"img" 			: "",
 			"name"			: "Adidas Pants",
-			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "adidas"}} , {"term" : {"apparel_type" : "pants"}}]}
+			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "adidas"}} , {"query" : {"query_string" : {"query":"pants","fields":["prod_name"]}}}]},
+			"optionList" 	: [
+				"user:team_conference",
+				"user:color_pallete",
+				"user:size_gender"
+			]
 		},
 		{
 			"id" 				: "adidas-hats",
 			"link"			: "#!adidas-apparel/adidas-hats/", 
 			"img" 			: "",
 			"name"			: "Adidas Hats",
-			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "adidas"}} , {"term" : {"apparel_type" : "hats"}}]}
-		},
-		{
-			"id" 				: "adidas-accessories",
-			"link"			: "#!adidas-apparel/adidas-accessories/", 
-			"img" 			: "",
-			"name"			: "Adidas Accessories",
-			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "adidas"}} , {"term" : {"apparel_type" : "accessories"}}]}
+			"baseFilter" 	: { "and" : [ {"term" : {"apparel_brand" : "adidas"}} , {"query" : {"query_string" : {"query":"hat","fields":["prod_name"]}}}]},
+			"optionList" 	: [
+				"user:team_conference",
+				"user:color_pallete",
+				"user:size_gender"
+			]
 		}
 	]
 }
