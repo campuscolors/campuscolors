@@ -349,6 +349,7 @@ var store_filter = function(_app) {
 						"query" :{
 							"function_score" : {"filter":elasticsearch.filter}
 							},
+		//				"filter" : elasticsearch.filter, 
 						"facets" : elasticsearch.facets
 						}
 					//tmp.query.function_score.boost_mode = "sum";

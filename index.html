@@ -112,7 +112,7 @@ $(document).ready(function(){
 	if(!paramStr || paramStr.indexOf('_escaped_fragment_') < 0){
 		window.myApp = new initApp({
 			"_robotHasGreeted" : false, <!-- versionhere -->
-			"release":"201408.20140905125700",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
+			"release":"201408.20140908121000",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
 			"_clientid":"zmvc", //zmvc for store app, 1pc for one page checkout.
 			"baseURL":baseURL, //used in non-local mode.
 			"checkoutAuthMode" : "active",//can be passive, active or required
@@ -848,12 +848,12 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 			</div>
 		</div>
 		
-		<div data-tlc="bind $var '.options.user:vendor'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
+		<div data-tlc="bind $var '.options.user:vendor_code'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
 			<div data-tlc="store_cc#showmobilefilter;" data-filterview='0' data-top='0' class="filterGroupTitle marginBottom">Vendor<span class="sprite"></span></div>
 			<div class="filterHider">
 				<div class="filterCheckboxList" 
-					data-tlc="bind $index '.options.user:vendor.index';
-						bind $cbl '.options.user:vendor.options'; 
+					data-tlc="bind $index '.options.user:vendor_code.index';
+						bind $cbl '.options.user:vendor_code.options'; 
 						store_filter#filtercheckboxlist --index=$index;">
 				</div>
 			</div>
