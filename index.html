@@ -112,7 +112,7 @@ $(document).ready(function(){
 	if(!paramStr || paramStr.indexOf('_escaped_fragment_') < 0){
 		window.myApp = new initApp({
 			"_robotHasGreeted" : false, <!-- versionhere -->
-			"release":"201408.20140908121000",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
+			"release":"201408.20140909162800",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
 			"_clientid":"zmvc", //zmvc for store app, 1pc for one page checkout.
 			"baseURL":baseURL, //used in non-local mode.
 			"checkoutAuthMode" : "active",//can be passive, active or required
@@ -1175,8 +1175,10 @@ this will likely become more flexible in the future. ###
 				</div>
 
 				<form data-tlc="bind $var '.pid'; store_product#atcform  --legacy; apply --append;" class="prodViewerAddToCartForm clearfix marginBottom" action="#" data-app-submit="quickstart|productAdd2Cart" data-show="inline">
-					<fieldset data-tlc="bind $var '.pid'; store_product#atcvariations  --legacy; apply --append;" class="borderNone"></fieldset> <!-- TODO : custom variation for size -->
-					<fieldset data-tlc="bind $var '.'; store_product#atcquantityinput  --defaultvalue='1' --legacy;" class="borderNone"></fieldset>
+					<div>
+						<fieldset data-tlc="bind $var '.pid'; store_product#atcvariations  --legacy; apply --append;" class="borderNone inLine"></fieldset> <!-- TODO : custom variation for size -->
+						<fieldset data-tlc="bind $var '.'; store_product#atcquantityinput  --defaultvalue='1' --legacy;" class="borderNone inLine"></fieldset>
+					</div>
 					<div class='marginBottom'><input data-tlc="bind $var '.pid'; store_product#addtocartbutton  --legacy;" value="Add to Cart" class="applyButton addtocartbutton yearbook displayNone" type="submit"></div>
 				</form>
 			

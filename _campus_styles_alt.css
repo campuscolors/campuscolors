@@ -241,10 +241,15 @@ header {position:relative;}
 /* productTemplate */
 .imageContainer {width:300px; margin:0 auto; padding:0;}
 .imageContainer img {height:auto; max-width:100%;}
+.productPageLink {padding:6px 0 0 0; color:#781c2b;}
 .prodSummaryContainer {width:300px; margin:10px auto; text-align:center;}
 .productPage .basePrice {color:#194835; font-size:3em;}
 .productPage .priceDesc {font-size:0.5em; display:none;}
-.productPageLink {padding:6px 0 0 0; color:#781c2b;}
+.variation_SZ .label_select {display:none;}
+.sizeOption {height:40px; min-width:40px; color:#ffffff; background-color:#781c2b; text-align:center; font-weight:bold; padding: 9px 2px; display:inline-block; margin:10px 5px;}
+.sizeOption.selectedSize {color:#781c2b; background-color:#ffffff; border:1px solid #781c2b;}
+.prodViewerAddToCartForm .inLine {display:inline;}
+.prodViewerAddToCartForm .numberInput {height:40px; border:1px inset #000000; text-align:center;}
 .productPage .addtocartbutton {height:50px; width:290px; color:#000000; font-size:2.1em; border-top:2px outset #fbe143; border-right:2px outset #000000; border-bottom:2px outset #000000; border-left:2px outset #fbe143; box-shadow:2px 2px 0 0 #cccccc; border-radius:0;}
 .latency {height: 60px; width: 290px; margin:10px auto; color:#194835; font-size:2em; background-color:#eeeeee; border:2px solid #cccccc; box-shadow:2px 2px 0 0 #cccccc; padding: 13px 0 0 0;}
 .fitTip {text-align:left}

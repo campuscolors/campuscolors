@@ -75,6 +75,8 @@ var store_cc = function(_app) {
 			
 			addEventHandlers : {
 				onSuccess : function() {
+				
+					$.extend(handlePogs.prototype,_app.ext.store_cc.variations);
 
 					_app.ext.store_cc.u.swipeMobileNav($(".mobileSlideMenu"));
 					_app.ext.store_cc.u.runFooterCarousel();
@@ -793,7 +795,87 @@ var store_cc = function(_app) {
 				_app.model.dispatchThis('immutable');
 			}
 		
-		} //e [app Events]
+		}, //e [app Events]
+		
+/*
+#######################
+
+Variations
+
+#######################
+*/
+
+		variations : {
+			
+			renderOptionSizeSELECT: function(pog) {
+				dump('START renderOptionSizeSELECT for pog'); dump(pog);
+				var pogid = pog.id;
+				var $parentDiv = $("<span \/>");
+				var $selectList = $("<select>").attr({"name":pogid});
+				var i = 0;
+				var len = $.isEmptyObject(pog['@options']) ? 0 : pog['@options'].length;
+
+				var selOption; //used to hold each option added to the select
+				var optionTxt;
+
+				
+			//if the option is 'optional' AND has more than one option, add blank prompt. If required, add a please choose prompt first.
+				if(len > 0)	{
+					optionTxt = (pog['optional'] == 1) ?  "" :  "Please choose (required)";
+					selOption = "<option value='' disable='disabled' selected='selected'>"+optionTxt+"<\/option>";
+					$selectList.append(selOption);
+				}
+			//adds options to the select list.
+				while (i < len) {
+					optionTxt = pog['@options'][i]['prompt'];
+					if(pog['@options'][i]['p'])
+						optionTxt += pogs.handlePogPrice(pog['@options'][i]['p']); //' '+pog['@options'][i]['p'][0]+'$'+pog['@options'][i]['p'].substr(1);
+					selOption = "<option value='"+pog['@options'][i]['v']+"'>"+optionTxt+"<\/option>";
+					$selectList.append(selOption);
+					i++;
+				}
+				
+				if(pogid === "SZ") {
+					dump('OMG THE POG IS SZ');
+					var $sizeDiv = $("<div></div>");
+					var j = 0;
+					while (j < len) {
+						if(pog['@options'][j]['v']) {
+							var pogval  = (pog['@options'][j]['v']);
+							dump(pogval);
+							var $sizeOption = $("<span class='sizeOption pointer' data-pogval='"+pogval+"'></span>");
+							$sizeOption.text(pogval);
+							$sizeOption.click(function() {
+								var $this = $(this);
+								var thisSelection = $this.attr('data-pogval');
+								$selectList.val(thisSelection);
+								dump('You have clicked on '+$this.attr('data-pogval')+' good sir');
+								$('span',$sizeDiv).each(function() {
+									if($(this).hasClass('selectedSize')) $(this).removeClass('selectedSize').addClass('pointer');
+									if($(this).attr('data-pogval') == thisSelection) $(this).addClass('selectedSize').removeClass('pointer');
+								});
+							}); 
+							$sizeOption.appendTo($sizeDiv);
+						} 
+						j++;
+					}
+					$sizeDiv.appendTo($parentDiv);
+					$selectList.addClass('displayNone');
+				}
+
+			//	dump(" -> pogid: "+pogid);
+			//	dump(" -> pog hint: "+pog['ghint']);
+				$selectList.appendTo($parentDiv);
+				if(pog['ghint']) {$parentDiv.append(pogs.showHintIcon(pogid,pog['ghint']))}
+				return $parentDiv;
+			}, //
+			
+			xinit : function(){
+				this.addHandler("type","select","renderOptionSizeSELECT");
+				_app.u.dump("--- RUNNING XINIT");
+			}
+			
+		} //variations
 		
 	} //r object.
 	return r;
