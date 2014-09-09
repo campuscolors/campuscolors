@@ -390,7 +390,8 @@ var store_filter = function(_app) {
 									var $ic = $(this).closest('[data-filter=inputContainer]');
 									
 									var summary = $.grep(_app.data[rd.datapointer].facets[index].terms, function(e, i){
-										return e.term === val;
+						//				return e.term === val;
+										return e.term === val.toLowerCase(); 
 										})[0];
 									if(summary || $(this).prop('checked')){
 										summary = summary || {count:0};
