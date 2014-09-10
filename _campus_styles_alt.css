@@ -302,7 +302,7 @@ header {position:relative;}
 .logTitle {color:#781c2b; font-size:1.5em;}
 #loginForm {width:100%}
 .zform_textbox {width:100%; padding:10px; margin:10px auto; display:block; border:1px solid #000000;}
-.createaccountArticle .ccButton, #loginFormContainer .ccButton {width:100%; color:#ffffff; border-top:2px outset #308c67; border-left:2px outset #308c67; font-family:Yearbook Solid W01, Times New Roman, serif;}
+.createaccountArticle .ccButton, #loginFormContainer .ccButton {width:100%; color:#ffffff; border-top:2px outset #308c67; border-left:2px outset #308c67; font-family:Yearbook Solid W01, Times New Roman, serif; display:inline-block; text-align:center; text-decoration:none; font-size:1.1em;}
 .createaccountArticle div[data-slide='toggle'], #loginFormContainer div[data-slide='toggle'] {display:none;}
 
 
