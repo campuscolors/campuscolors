@@ -267,6 +267,7 @@ header {position:relative;}
 
 
 /* companyTemplate */
+.companyTemplate h1, .customerTemplate h1 {font-family:Yearbook Solid W01, Times New Roman, serif;}
 .companyTemplate h2 {color:#781c2b; font-family:Yearbook Solid W01, Times New Roman, serif; }
 .companyTemplate h3 {color:#666666;}
 .sideline a {color:#666666;}
@@ -306,6 +307,11 @@ header {position:relative;}
 
 
 
+/* CART / CART LIST */
+.ccButton .ui-button-text {COLOR:#000000;}
+
+
+
 @media screen and (min-width:400px) {
 	.headerTop {height:36px;}
 	.links {width:84%;}
@@ -315,7 +321,7 @@ header {position:relative;}
 	.hideTablet {display:none;}
 	.showTabletBlock {display:block;}
 	.showTablet {display:inline;}
-	.wrapper {width:728px; margin:0 auto; background-color:rgba(1,1,1,.1);}
+	.wrapper {width:728px; margin:0 auto;}
 	.listWrapper, .standardNav .slideMenuBorder {width:690px;}
 	.secTitle {text-align:right;}
 	
@@ -390,6 +396,7 @@ header {position:relative;}
 	.productRecentCarousel .secTitle {text-align:center;}
 		
 	.locationBlock {width:250px; float:left; margin:0 15px 0 0;}
+	.locationBlock:nth-child(odd) {float:right;}
 	.catSideline {width:173px; margin:0 20px 0 0; font-size:0.9em;}
 	.catSideline .ui-accordion-content {padding:0.5em;}
 	.companyRight {float:left; width:73%;}
@@ -402,7 +409,7 @@ header {position:relative;}
 	
 	
 @media screen and (min-width : 960px) {
-	.wrapper {width:920px; margin:0 auto; background-color:rgba(1,1,1,.1);}
+	.wrapper {width:920px; margin:0 auto;}
 	.listWrapper, .standardNav .slideMenuBorder {width:920px;}
 	.hideDesktop {display:none;}
 	.showDesktopBlock {display:block;}
@@ -445,5 +452,5 @@ header {position:relative;}
 	.wrapper {width:950px;}
 	
 	.prodViewerContainer {width:948px;}
-	.companyRight .sideline {margin:20px 47px 20px 0;}
+	.companyRight .sideline {margin:20px 21px 20px 0;}
 }
