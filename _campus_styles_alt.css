@@ -32,6 +32,7 @@ body {font-family:Oxygen, Helvetica, sans-serif;}
 .uRedLink:hover {color:#781c2b;}
 .bareWhiteLink {color:#ffffff; text-decoration:none;}
 .bareWhiteLink:hover {color:#fbe143;}
+.bareBlackLink {color:#000000; text-decoration:none;}
 .yellowText {color:#fbe143;}
 .whiteText {color:#ffffff;}
 .ccButton {padding:1% 2%; color:#000000; font-family:Yearbook Solid W01, Times New Roman, serif; border-top:2px outset #fbe143; border-right:2px outset #000000; border-bottom:2px outset #000000; border-left:2px outset #fbe143; box-shadow:2px 2px 0 0 #cccccc; border-radius:0;}
@@ -121,8 +122,6 @@ header {position:relative;}
 .mobileCart .cartItemCount {width:15px; position:absolute; top:14px; right:9px; text-align:center;}
 
 .searchCart {margin:5px 0 0 0;}
-.cartWrapper .sprite {height:30px; width:30px; background-position:-39px 1px; margin:0 0 0 50px;}
-.cartWrapper .cartItemCount {height:25px; width:25px; padding:1px 0 0 0; margin:0 5px 0 0; text-align:center; color:#ffffff; background-color:red; border-radius:15px; box-shadow:1px 1px 2px 0 #000000;}
 .upperCartWrapper {position:relative;}
 .upperCartWrapper .sprite {height:25px; width:31px; background-position:-129px 0; position:absolute; top:-4px; left:20px;}
 .upperCartWrapper .cartItemCount {width:16px; position:absolute; bottom:4px; right:0;}
@@ -415,6 +414,8 @@ header {position:relative;}
 	.headerMid {height:120px;}
 	.mobileSlideMenu.standardNav.hideOnHome {display:none;}
 	.newsLetterWrapper {width:80%;}
+	.cartWrapper .sprite {height:30px; width:30px; background-position:-39px 1px; margin:0 0 0 50px;}
+	.cartWrapper .cartItemCount {height:25px; width:25px; padding:1px 0 0 0; margin:0 5px 0 0; text-align:center; color:#ffffff; background-color:red; border-radius:15px; box-shadow:1px 1px 2px 0 #000000;}
 	
 	.homeMain {width:75%; float:right;}
 	.homeVertNav {max-width:230px; padding:5px 5px 0 5px; position:relative;}

@@ -57,6 +57,7 @@ var store_routing = function(_app) {
 
 
 				_app.router.appendHash({'type':'exact','route':'cart','callback':function(routeObj){showContent('cart',routeObj.params);}});
+				_app.router.appendHash({'type':'exact','route':'cart/','callback':function(routeObj){showContent('cart',routeObj.params);}});
 				_app.router.appendHash({'type':'exact','route':'home','callback':'homepage'});
 				_app.router.appendHash({'type':'exact','route':'','callback':'homepage'});
 				_app.router.appendHash({'type':'match','route':'category/{{navcat}}*','callback':'category'});
