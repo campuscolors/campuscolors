@@ -124,7 +124,7 @@ header {position:relative;}
 .searchCart {margin:5px 0 0 0;}
 .upperCartWrapper {position:relative;}
 .upperCartWrapper .sprite {height:25px; width:31px; background-position:-129px 0; position:absolute; top:-4px; left:20px;}
-.upperCartWrapper .cartItemCount {width:16px; position:absolute; bottom:4px; right:0;}
+.upperCartWrapper .cartItemCount {width:16px; position:absolute; bottom:4px; right:0; color:#ffffff;}
 .searchWrapper {padding:8px; border-radius:7px; border:2px outset #308c67; margin:0 0 5px 0;}
 .searchWrapper .productSearchKeyword {height:40px; width:220px; padding:10px; border:none; border-radius:5px 0 0 5px; background-color:#dddddd;}
 .searchWrapper .productSearchButton {height:40px; width:50px; border:1px outset #fbe143; background-color:#fbe143; background-position:12px 7px; background-repeat:no-repeat;}
@@ -220,6 +220,7 @@ header {position:relative;}
  {height:11px; width:16px; margin:0 0 0 5px; background-position:-350px -117px; background-repeat:no-repeat; display:inline-block;}
 .filterHider {overflow:hidden;}
 .filteredSearchTemplate button {display:block; clear:both; margin:0 auto 10px auto; color:#ffffff; padding:1px 8px; border:2px outset #b75970;}
+.filteredSearchTemplate button.quickView {display:none; color:#000000; border-color:#fbe143 #000000 #000000 #fbe143; border-style:outset; font-size:0.9em;}
 
 
 
@@ -264,6 +265,12 @@ header {position:relative;}
 
 .productRecentCarousel .mpControlContainer {display:none;}
 
+
+
+/*productTemplateQuickiew*/
+.productTemplateQuickView .imageContainer, .productTemplateQuickView .prodSummaryContainer  {width:90%;}
+.productTemplateQuickView .latency {width:90%; font-size:1em;}
+.productTemplateQuickView .ccButton {width:70%; display:block; margin:0 auto; text-align:center;}
 
 
 /* companyTemplate */
@@ -394,6 +401,11 @@ header {position:relative;}
 	.prodlistRelatedContainer {width:30%; float:left;}
 	.prodlistRelatedContainer .productList.ccList > li {height:224px; width:190px; }
 	.productRecentCarousel .secTitle {text-align:center;}
+	
+	.productTemplateQuickView .prodViewerContainer {width:100%;}
+	.productTemplateQuickView .imageContainer {width:50%; padding:0; float:none;}
+	.productTemplateQuickView .prodSummaryContainer {width:90%; padding:0; float:none;}
+	.productTemplateQuickView .ccButton {width:40%}
 		
 	.locationBlock {width:250px; float:left; margin:0 15px 0 0;}
 	.locationBlock:nth-child(odd) {float:right;}
@@ -438,6 +450,9 @@ header {position:relative;}
 	.splashBanner p {left:140px;}
 	
 	.prodViewerContainer {width:908px;}
+	
+	#product-modal .productTemplateQuickView .imageContainer, #product-modal .productTemplateQuickView .prodSummaryContainer {width:50%; float:left;}
+	.productTemplateQuickView .prodSummaryContainer {float:none;}
 	
 	.locationBlock, .companyRight .sideline {width:300px;}
 	.catSideline {width:220px;}
