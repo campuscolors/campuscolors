@@ -1,14 +1,16 @@
 {
 	"id"	: "MLB-Apparel",
 	"page-title" : "MLB Apparel at CampusColors.com",
-	"page-description" : "Buy MLB, it is !",
+	"page-description" : "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 	"banner" : "banners/test_cat_banner_785x200.jpg",
 	"pages" : [
 		{
 			"id" 				: "mlb-shorts",
-			"link"				: "#!mlb-apparel/mlb-shorts/", 
+			"link"				: "#!mlb-apparel-merchandise/mlb-shorts/", 
 			"img" 			: "",
 			"name"			: "MLB Shorts",
+			"page-title" 	: "MLB Shorts at CampusColors.com",
+			"page-description" : "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "mlb"}} , {"query" : {"query_string" : {"query":"shorts","fields":["prod_name"]}}}]},
 			"optionList" 	: [
 				"user:team_conference",
@@ -19,9 +21,11 @@
 		},
 		{
 			"id" 				: "mlb-t-shirts",
-			"link"				: "#!mlb-apparel/mlb-t-shirts/", 
+			"link"				: "#!mlb-apparel-merchandise/mlb-t-shirts/", 
 			"img" 			: "3_prongs_standard",
 			"name"			: "MLB T-shirts",
+			"page-title" 	: "MLB T-shirts at CampusColors.com",
+			"page-description" : "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "mlb"}} , {"query" : {"query_string" : {"query":"shirt","fields":["prod_name"]}}}]},
 			"optionList" 	: [
 				"user:team_conference",
@@ -32,9 +36,11 @@
 		},
 		{
 			"id" 				: "mlb-sweatshirts",
-			"link"				: "#!mlb-apparel/mlb-sweatshirts/", 
+			"link"				: "#!mlb-apparel-merchandise/mlb-sweatshirts/", 
 			"img" 			: "9/93086_2",
 			"name"			: "MLB Sweatshirts",
+			"page-title" 	: "MLB Sweatshirts at CampusColors.com",
+			"page-description" : "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "mlb"}} , {"query" : {"query_string" : {"query":"sweatshirt","fields":["prod_name"]}}}]},
 			"optionList" 	: [
 				"user:team_conference",
@@ -45,9 +51,11 @@
 		},
 		{
 			"id" 				: "mlb-jerseys",
-			"link"				: "#!mlb-apparel/mlb-jerseys/", 
+			"link"				: "#!mlb-apparel-merchandise/mlb-jerseys/", 
 			"img" 			: "",
 			"name"			: "MLB Jerseys",
+			"page-title" 	: "MLB Jerseys at CampusColors.com",
+			"page-description" : "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "mlb"}} , {"query" : {"query_string" : {"query":"jersey","fields":["prod_name"]}}}]},
 			"optionList" 	: [
 				"user:team_conference",
@@ -58,9 +66,11 @@
 		},
 		{
 			"id" 				: "mlb-jackets",
-			"link"				: "#!mlb-apparel/mlb-jackets/", 
+			"link"				: "#!mlb-apparel-merchandise/mlb-jackets/", 
 			"img" 			: "",
 			"name"			: "MLB Jackets",
+			"page-title" 	: "MLB Jackets at CampusColors.com",
+			"page-description" : "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "mlb"}} , {"query" : {"query_string" : {"query":"jacket","fields":["prod_name"]}}}]},
 			"optionList" 	: [
 				"user:team_conference",
@@ -71,9 +81,11 @@
 		},
 		{
 			"id" 				: "mlb-pants",
-			"link"				: "#!mlb-apparel/mlb-pants/", 
+			"link"				: "#!mlb-apparel-merchandise/mlb-pants/", 
 			"img" 			: "",
 			"name"			: "MLB Pants",
+			"page-title" 	: "MLB Pants at CampusColors.com",
+			"page-description" : "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "mlb"}} , {"query" : {"query_string" : {"query":"pants","fields":["prod_name"]}}}]},
 			"optionList" 	: [
 				"user:team_conference",
@@ -84,9 +96,11 @@
 		},
 		{
 			"id" 				: "mlb-hats",
-			"link"				: "#!mlb-apparel/mlb-hats/", 
+			"link"				: "#!mlb-apparel-merchandise/mlb-hats/", 
 			"img" 			: "",
 			"name"			: "MLB Hats",
+			"page-title" 	: "MLB Hats at CampusColors.com",
+			"page-description" : "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "mlb"}} , {"query" : {"query_string" : {"query":"hat","fields":["prod_name"]}}}]},
 			"optionList" 	: [
 				"user:team_conference",
@@ -97,9 +111,11 @@
 		},
 		{
 			"id" 				: "mlb-accessories",
-			"link"				: "#!mlb-apparel/mlb-accessories/", 
+			"link"				: "#!mlb-apparel-merchandise/mlb-accessories/", 
 			"img" 			: "",
 			"name"			: "MLB Accessories",
+			"page-title" 	: "MLB Accessories at CampusColors.com",
+			"page-description" : "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "mlb"}} , {"query" : {"query_string" : {"query":"accessory","fields":["prod_name"]}}}]},
 			"optionList" 	: [
 				"user:team_conference",

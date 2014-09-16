@@ -1,0 +1,92 @@
+{
+	"id"	: "Nike-Gear",
+	"page-title" : "Nike Gear at CampusColors.com",
+	"page-description" : "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
+	"banner" : "banners/test_cat_banner_785x200.jpg",
+	"pages" : [
+		{
+			"id" 				: "nike-shorts",
+			"link"				: "#!nike-gear/nike-shorts/", 
+			"img" 			: "",
+			"name"			: "Nike Shorts",
+			"page-title" 	: "Nike Shorts at CampusColors.com",
+			"page-description" : "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
+			"baseFilter" 	: { "and" : [ {"term" : {"vendor_code" : "nike"}} , {"query" : {"query_string" : {"query":"shorts","fields":["prod_name"]}}}]},
+			"optionList" 	: [
+				"user:team_conference",
+				"user:color_pallete",
+				"user:size_gender"
+			]
+		},
+		{
+			"id" 				: "nike-t-shirts",
+			"link"				: "#!nike-gear/nike-t-shirts/", 
+			"img" 			: "",
+			"name"			: "Nike T-shirts",
+			"page-title" 	: "Nike T-shirts at CampusColors.com",
+			"page-description" : "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
+			"baseFilter" 	: { "and" : [ {"term" : {"vendor_code" : "nike"}} , {"query" : {"query_string" : {"query":"shirt","fields":["prod_name"]}}}]},
+			"optionList" 	: [
+				"user:team_conference",
+				"user:color_pallete",
+				"user:size_gender"
+			]
+		},
+		{
+			"id" 				: "nike-sweatshirts",
+			"link"				: "#!nike-gear/nike-sweatshirts/", 
+			"img" 			: "",
+			"name"			: "Nike Sweatshirts",
+			"page-title" 	: "Nike Sweatshirts at CampusColors.com",
+			"page-description" : "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
+			"baseFilter" 	: { "and" : [ {"term" : {"vendor_code" : "nike"}} , {"query" : {"query_string" : {"query":"sweatshirt","fields":["prod_name"]}}}]},
+			"optionList" 	: [
+				"user:team_conference",
+				"user:color_pallete",
+				"user:size_gender"
+			]
+		},
+		{
+			"id" 				: "nike-jerseys",
+			"link"				: "#!nike-gear/nike-jerseys/", 
+			"img" 			: "",
+			"name"			: "Nike Jerseys",
+			"page-title" 	: "Nike Jerseys at CampusColors.com",
+			"page-description" : "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
+			"baseFilter" 	: { "and" : [ {"term" : {"vendor_code" : "nike"}} , {"query" : {"query_string" : {"query":"jersey","fields":["prod_name"]}}}]},
+			"optionList" 	: [
+				"user:team_conference",
+				"user:color_pallete",
+				"user:size_gender"
+			]
+		},
+		{
+			"id" 				: "nike-pants",
+			"link"				: "#!nike-gear/nike-pants/", 
+			"img" 			: "",
+			"name"			: "Nike Pants",
+			"page-title" 	: "Nike Pants at CampusColors.com",
+			"page-description" : "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
+			"baseFilter" 	: { "and" : [ {"term" : {"vendor_code" : "nike"}} , {"query" : {"query_string" : {"query":"pants","fields":["prod_name"]}}}]},
+			"optionList" 	: [
+				"user:team_conference",
+				"user:color_pallete",
+				"user:size_gender"
+			]
+		},
+		{
+			"id" 				: "nike-hats",
+			"link"				: "#!nike-gear/nike-hats/", 
+			"img" 			: "",
+			"name"			: "Nike Hats",
+			"page-title" 	: "Nike Hats at CampusColors.com",
+			"page-description" : "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
+			"baseFilter" 	: { "and" : [ {"term" : {"vendor_code" : "nike"}} , {"query" : {"query_string" : {"query":"hat","fields":["prod_name"]}}}]},
+			"optionList" 	: [
+				"user:team_conference",
+				"user:color_pallete",
+				"user:size_gender"
+			]
+		}
+	]
+}

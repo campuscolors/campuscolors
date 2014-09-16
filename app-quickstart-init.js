@@ -16,7 +16,7 @@ myApp.rq.push(['extension',0,'cco','']);
 
 myApp.rq.push(['extension',0,'store_routing','']);
 myApp.rq.push(['extension',0,'seo_robots','']);
-//myApp.rq.push(['extension',0,'store_seo','extensions/store_seo.js', 'attachHandlers']);
+myApp.rq.push(['extension',0,'store_seo','extensions/store_seo.js', 'attachHandlers']);
 
 myApp.rq.push(['extension',0,'store_prodlist','']);
 myApp.rq.push(['extension',0,'prodlist_infinite','']);

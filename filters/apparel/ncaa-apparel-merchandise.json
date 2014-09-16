@@ -6,7 +6,7 @@
 	"pages" : [
 		{
 			"id" 				: "ncaa-shorts",
-			"link"				: "#!ncaa-apparel/ncaa-shorts/", 
+			"link"				: "#!ncaa-apparel-merchandise/ncaa-shorts/", 
 			"img" 			: "",
 			"name"			: "NCAA Basketball Shorts",
 			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "ncaa"}} , {"query" : {"query_string" : {"query":"shorts ","fields":["prod_name"]}}}]},
@@ -19,7 +19,7 @@
 		},
 		{
 			"id" 				: "ncaa-t-shirts",
-			"link"				: "#!ncaa-apparel/ncaa-t-shirts/", 
+			"link"				: "#!ncaa-apparel-merchandise/ncaa-t-shirts/", 
 			"img" 			: "3_prongs_standard",
 			"name"			: "NCAA T-shirts",
 			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "ncaa"}} , {"query" : {"query_string" : {"query":"shirt ","fields":["prod_name"]}}}]},
@@ -32,7 +32,7 @@
 		},
 		{
 			"id" 				: "ncaa-sweatshirts",
-			"link"				: "#!ncaa-apparel/ncaa-sweatshirts/", 
+			"link"				: "#!ncaa-apparel-merchandise/ncaa-sweatshirts/", 
 			"img" 			: "9/93086_2",
 			"name"			: "NCAA Sweatshirts",
 			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "ncaa"}} , {"query" : {"query_string" : {"query":"sweatshirt ","fields":["prod_name"]}}}]},
@@ -45,7 +45,7 @@
 		},
 		{
 			"id" 				: "ncaa-pants",
-			"link"				: "#!ncaa-apparel/ncaa-pants/", 
+			"link"				: "#!ncaa-apparel-merchandise/ncaa-pants/", 
 			"img" 			: "",
 			"name"			: "NCAA Pants",
 			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "ncaa"}} , {"query" : {"query_string" : {"query":"pants ","fields":["prod_name"]}}}]},
@@ -58,7 +58,7 @@
 		},
 		{
 			"id" 				: "ncaa-jerseys",
-			"link"				: "#!ncaa-apparel/ncaa-jerseys/", 
+			"link"				: "#!ncaa-apparel-merchandise/ncaa-jerseys/", 
 			"img" 			: "",
 			"name"			: "NCAA Jerseys",
 			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "ncaa"}} , {"query" : {"query_string" : {"query":"jersey","fields":["prod_name"]}}}]},
@@ -71,7 +71,7 @@
 		},
 		{
 			"id" 				: "ncaa-jackets",
-			"link"				: "#!ncaa-apparel/ncaa-jackets/", 
+			"link"				: "#!ncaa-apparel-merchandise/ncaa-jackets/", 
 			"img" 			: "",
 			"name"			: "NCAA Jackets",
 			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "ncaa"}} , {"query" : {"query_string" : {"query":"jacket ","fields":["prod_name"]}}}]},
@@ -84,7 +84,7 @@
 		},
 		{
 			"id" 				: "ncaa-hats",
-			"link"				: "#!ncaa-apparel/ncaa-hats/", 
+			"link"				: "#!ncaa-apparel-merchandise/ncaa-hats/", 
 			"img" 			: "",
 			"name"			: "NCAA Hats",
 			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "ncaa"}} , {"query" : {"query_string" : {"query":"hat","fields":["prod_name"]}}}]},
@@ -97,7 +97,7 @@
 		},
 		{
 			"id" 				: "ncaa-accessories",
-			"link"				: "#!ncaa-apparel/ncaa-accessories/", 
+			"link"				: "#!ncaa-apparel-merchandise/ncaa-accessories/", 
 			"img" 			: "",
 			"name"			: "NCAA Accessories",
 			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "ncaa"}} , {"query" : {"query_string" : {"query":"accessory","fields":["prod_name"]}}}]},

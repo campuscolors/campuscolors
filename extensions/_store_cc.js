@@ -170,10 +170,15 @@ var store_cc = function(_app) {
 					showContent('static',routeObj.params);
 					}
 					
-					//decides if filter JSON is in local var or if it needs to be retrieved
-					function pickShowOrLoad(routeObj) {
-						var filterpage = routeObj.pagefilter;
-						if(_app.ext.store_filter.filterData[filterpage]){
+					
+					
+	//TODO : TEST PUSH TO ROBOTS @ THE END OF EACH APPENDhASH
+					
+//ALIAS					
+					_app.router.addAlias('filter', function(routeObj){
+						//decides if filter JSON is in local var or if it needs to be retrieved
+						var filterpage = routeObj.pagefilter; dump('filter page = '); dump(filterpage); dump(_app.ext.store_filter.filterData[filterpage]);
+						if(_app.ext.store_filter.filterData[filterpage]){ dump('in the if...');
 							showPage(routeObj,filterpage);
 						}
 						else {
@@ -183,66 +188,58 @@ var store_cc = function(_app) {
 								function(){showContent('404');}
 							);
 						}
-					}
-					
-					
-					
-					
-	//TODO : TEST PUSH TO ROBOTS @ THE END OF EACH APPENDhASH
-					
-//ALIAS					
-					_app.router.addAlias('filter', function(routeObj){	pickShowOrLoad(routeObj); });
+					});
 					
 //APPEND
 					//Adds the listener for the url.  The route needs to match the page pushed into robots below
-					_app.router.appendHash({'type':'exact','route':'ncaa-apparel/', 'callback':function(routeObj){
+					_app.router.appendHash({'type':'exact','route':'ncaa-apparel-merchandise/', 'callback':function(routeObj){
 						_app.ext.store_cc.u.getCatJSON(routeObj.route);
 					}});
-					_app.router.appendHash({'type':'match','route':'ncaa-apparel/{{id}}/','pagefilter':'ncaa-apparel','callback':'filter'});
-					_app.ext.store_cc.u.pushFilter('ncaa-apparel');
+					_app.router.appendHash({'type':'match','route':'ncaa-apparel-merchandise/{{id}}/','pagefilter':'ncaa-apparel-merchandise','callback':'filter'});
+					_app.ext.store_cc.u.pushFilter('ncaa-apparel-merchandise');
 					
-					_app.router.appendHash({'type':'exact','route':'nfl-apparel/', 'callback':function(routeObj){
+					_app.router.appendHash({'type':'exact','route':'nfl-apparel-merchandise/', 'callback':function(routeObj){
 						_app.ext.store_cc.u.getCatJSON(routeObj.route);
 					}});
-					_app.router.appendHash({'type':'match','route':'nfl-apparel/{{id}}/','pagefilter':'nfl-apparel','callback':'filter'});
-					_app.ext.store_cc.u.pushFilter('nfl-apparel');
+					_app.router.appendHash({'type':'match','route':'nfl-apparel-merchandise/{{id}}/','pagefilter':'nfl-apparel-merchandise','callback':'filter'});
+					_app.ext.store_cc.u.pushFilter('nfl-apparel-merchandise');
 					
-					_app.router.appendHash({'type':'exact','route':'nba-apparel/', 'callback':function(routeObj){
+					_app.router.appendHash({'type':'exact','route':'nba-apparel-merchandise/', 'callback':function(routeObj){
 						_app.ext.store_cc.u.getCatJSON(routeObj.route);
 					}});
-					_app.router.appendHash({'type':'match','route':'nba-apparel/{{id}}/','pagefilter':'nba-apparel','callback':'filter'});
-					_app.ext.store_cc.u.pushFilter('nba-apparel');
+					_app.router.appendHash({'type':'match','route':'nba-apparel-merchandise/{{id}}/','pagefilter':'nba-apparel-merchandise','callback':'filter'});
+					_app.ext.store_cc.u.pushFilter('nba-apparel-merchandise');
 					
-					_app.router.appendHash({'type':'exact','route':'mlb-apparel/', 'callback':function(routeObj){
+					_app.router.appendHash({'type':'exact','route':'mlb-apparel-merchandise/', 'callback':function(routeObj){
 						_app.ext.store_cc.u.getCatJSON(routeObj.route);
 					}});
-					_app.router.appendHash({'type':'match','route':'mlb-apparel/{{id}}/','pagefilter':'mlb-apparel','callback':'filter'});
-					_app.ext.store_cc.u.pushFilter('mlb-apparel');
+					_app.router.appendHash({'type':'match','route':'mlb-apparel-merchandise/{{id}}/','pagefilter':'mlb-apparel-merchandise','callback':'filter'});
+					_app.ext.store_cc.u.pushFilter('mlb-apparel-merchandise');
 					
 					
-					_app.router.appendHash({'type':'exact','route':'nhl-apparel/', 'callback':function(routeObj){
+					_app.router.appendHash({'type':'exact','route':'nhl-apparel-merchandise/', 'callback':function(routeObj){
 						_app.ext.store_cc.u.getCatJSON(routeObj.route);
 					}});
-					_app.router.appendHash({'type':'match','route':'nhl-apparel/{{id}}/','pagefilter':'nhl-apparel','callback':'filter'});
-					_app.ext.store_cc.u.pushFilter('nhl-apparel');
+					_app.router.appendHash({'type':'match','route':'nhl-apparel-merchandise/{{id}}/','pagefilter':'nhl-apparel-merchandise','callback':'filter'});
+					_app.ext.store_cc.u.pushFilter('nhl-apparel-merchandise');
 					
-					_app.router.appendHash({'type':'exact','route':'team-apparel/', 'callback':function(routeObj){
+					_app.router.appendHash({'type':'exact','route':'team-apparel-merchandise/', 'callback':function(routeObj){
 						_app.ext.store_cc.u.getCatJSON(routeObj.route);
 					}});
-					_app.router.appendHash({'type':'match','route':'team-apparel/{{id}}/','pagefilter':'team-apparel','callback':'filter'});
-					_app.ext.store_cc.u.pushFilter('team-apparel');
+					_app.router.appendHash({'type':'match','route':'team-apparel-merchandise/{{id}}/','pagefilter':'team-apparel-merchandise','callback':'filter'});
+					_app.ext.store_cc.u.pushFilter('team-apparel-merchandise');
 					
-					_app.router.appendHash({'type':'exact','route':'nike-apparel/', 'callback':function(routeObj){
+					_app.router.appendHash({'type':'exact','route':'nike-gear/', 'callback':function(routeObj){
 						_app.ext.store_cc.u.getCatJSON(routeObj.route);
 					}});
-					_app.router.appendHash({'type':'match','route':'nike-apparel/{{id}}/','pagefilter':'nike-apparel','callback':'filter'});
-					_app.ext.store_cc.u.pushFilter('nike-apparel');
+					_app.router.appendHash({'type':'match','route':'nike-gear/{{id}}/','pagefilter':'nike-gear','callback':'filter'});
+					_app.ext.store_cc.u.pushFilter('nike-gear');
 					
-					_app.router.appendHash({'type':'exact','route':'adidas-apparel/', 'callback':function(routeObj){
+					_app.router.appendHash({'type':'exact','route':'adidas-gear/', 'callback':function(routeObj){
 						_app.ext.store_cc.u.getCatJSON(routeObj.route);
 					}});
-					_app.router.appendHash({'type':'match','route':'adidas-apparel/{{id}}/','pagefilter':'adidas-apparel','callback':'filter'});
-					_app.ext.store_cc.u.pushFilter('adidas-apparel');
+					_app.router.appendHash({'type':'match','route':'adidas-gear/{{id}}/','pagefilter':'adidas-gear','callback':'filter'});
+					_app.ext.store_cc.u.pushFilter('adidas-gear');
 					
 					_app.router.appendHash({'type':'exact','route':'apparel/', 'callback':function(routeObj){
 						_app.ext.store_cc.u.getCatJSON(routeObj.route);
@@ -250,23 +247,23 @@ var store_cc = function(_app) {
 					_app.router.appendHash({'type':'match','route':'apparel/{{id}}/','pagefilter':'apparel','callback':'filter'});
 					_app.ext.store_cc.u.pushFilter('apparel');
 					
-					_app.router.appendHash({'type':'exact','route':'mens-apparel/', 'callback':function(routeObj){
+					_app.router.appendHash({'type':'exact','route':'mens-apparel-merchandise/', 'callback':function(routeObj){
 						_app.ext.store_cc.u.getCatJSON(routeObj.route);
 					}});
-					_app.router.appendHash({'type':'match','route':'mens-apparel/{{id}}/','pagefilter':'mens-apparel','callback':'filter'});
-					_app.ext.store_cc.u.pushFilter('mens-apparel');
+					_app.router.appendHash({'type':'match','route':'mens-apparel-merchandise/{{id}}/','pagefilter':'mens-apparel-merchandise','callback':'filter'});
+					_app.ext.store_cc.u.pushFilter('mens-apparel-merchandise');
 					
-					_app.router.appendHash({'type':'exact','route':'womens-apparel/', 'callback':function(routeObj){
+					_app.router.appendHash({'type':'exact','route':'womens-apparel-merchandise/', 'callback':function(routeObj){
 						_app.ext.store_cc.u.getCatJSON(routeObj.route);
 					}});
-					_app.router.appendHash({'type':'match','route':'womens-apparel/{{id}}/','pagefilter':'womens-apparel','callback':'filter'});
-					_app.ext.store_cc.u.pushFilter('womens-apparel');
+					_app.router.appendHash({'type':'match','route':'womens-apparel-merchandise/{{id}}/','pagefilter':'womens-apparel-merchandise','callback':'filter'});
+					_app.ext.store_cc.u.pushFilter('womens-apparel-merchandise');
 					
-					_app.router.appendHash({'type':'exact','route':'kids-apparel/', 'callback':function(routeObj){
+					_app.router.appendHash({'type':'exact','route':'kids-apparel-merchandise/', 'callback':function(routeObj){
 						_app.ext.store_cc.u.getCatJSON(routeObj.route);
 					}});
-					_app.router.appendHash({'type':'match','route':'kids-apparel/{{id}}/','pagefilter':'kids-apparel','callback':'filter'});
-					_app.ext.store_cc.u.pushFilter('kids-apparel');
+					_app.router.appendHash({'type':'match','route':'kids-apparel-merchandise/{{id}}/','pagefilter':'kids-apparel-merchandise','callback':'filter'});
+					_app.ext.store_cc.u.pushFilter('kids-apparel-merchandise');
 					
 				},
 				onError : function() {

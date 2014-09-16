@@ -1,7 +1,7 @@
 {
 	"id"	: "NHL-Apparel",
 	"page-title" : "NHL Apparel at CampusColors.com",
-	"page-description" : "Buy NHL, it is bloody good!",
+	"page-description" : "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 	"banner" : "banners/test_cat_banner_785x200.jpg",
 	"bannerlink" : "#!nhl-apparel/nhl-best-sellers",
 	"banneralt" : "NHL Banner",
@@ -9,9 +9,11 @@
 	"pages" : [
 		{
 			"id" 				: "nhl-t-shirts",
-			"link"			: "#!nhl-apparel/nhl-t-shirts/", 
-			"img" 			: "products/images/acc_8004615_tc.jpg",
+			"link"				: "#!nhl-apparel-merchandise/nhl-t-shirts/", 
+			"img" 			: "",
 			"name"			: "NHL T-shirts",
+			"page-title" 	: "NHL T-shirts at CampusColors.com",
+			"page-description" : "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "nhl"}} , {"query" : {"query_string" : {"query":"shirt","fields":["prod_name"]}}}]},
 			"optionList" 	: [
 				"user:team_conference",
@@ -22,9 +24,11 @@
 		},
 		{
 			"id" 				: "nhl-sweatshirts",
-			"link"			: "#!nhl-apparel/nhl-sweatshirts/", 
-			"img" 			: "products/images/ala_27548x_wh2012.jpg",
+			"link"				: "#!nhl-apparel-merchandise/nhl-sweatshirts/", 
+			"img" 			: "",
 			"name"			: "NHL Sweatshirts",
+			"page-title" 	: "NHL Sweatshirts at CampusColors.com",
+			"page-description" : "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "nhl"}} , {"query" : {"query_string" : {"query":"sweatshirt","fields":["prod_name"]}}}]},
 			"optionList" 	: [
 				"user:team_conference",
@@ -35,9 +39,11 @@
 		},
 		{
 			"id" 				: "nhl-jerseys",
-			"link"			: "#!nhl-apparel/nhl-jerseys/", 
-			"img" 			: "products/images/acc_8004615_tc.jpg",
+			"link"				: "#!nhl-apparel-merchandise/nhl-jerseys/", 
+			"img" 			: "",
 			"name"			: "NHL Jerseys",
+			"page-title" 	: "NHL Jerseys at CampusColors.com",
+			"page-description" : "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "nhl"}} , {"query" : {"query_string" : {"query":"jersey","fields":["prod_name"]}}}]},
 			"optionList" 	: [
 				"user:team_conference",
@@ -48,9 +54,11 @@
 		},
 		{
 			"id" 				: "nhl-hats",
-			"link"			: "#!nhl-apparel/nhl-hats/", 
-			"img" 			: "products/images/ala_27548x_wh2012.jpg",
+			"link"				: "#!nhl-apparel-merchandise/nhl-hats/", 
+			"img" 			: "",
 			"name"			: "NHL Hats",
+			"page-title" 	: "NHL Hats at CampusColors.com",
+			"page-description" : "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "nhl"}} , {"query" : {"query_string" : {"query":"hat","fields":["prod_name"]}}}]},
 			"optionList" 	: [
 				"user:team_conference",
@@ -61,9 +69,11 @@
 		},
 		{
 			"id" 				: "nhl-accessories",
-			"link"			: "#!nhl-apparel/nhl-accessories/", 
-			"img" 			: "products/images/acc_8004615_tc.jpg",
+			"link"				: "#!nhl-apparel-merchandise/nhl-accessories/", 
+			"img" 			: "",
 			"name"			: "NHL Accessories",
+			"page-title" 	: "NHL Accessories at CampusColors.com",
+			"page-description" : "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "nhl"}} , {"query" : {"query_string" : {"query":"accessory","fields":["prod_name"]}}}]},
 			"optionList" 	: [
 				"user:team_conference",
@@ -74,9 +84,11 @@
 		},
 		{
 			"id" 				: "nhl-best-sellers",
-			"link"			: "#!nhl-apparel/nhl-best-sellers/", 
-			"img" 			: "products/images/ala_27548x_wh2012.jpg",
+			"link"				: "#!nhl-apparel-merchandise/nhl-best-sellers/", 
+			"img" 			: "",
 			"name"			: "NHL Best Sellers",
+			"page-title" 	: "NHL Best Sellers at CampusColors.com",
+			"page-description" : "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"baseFilter" 	: {"term" : {"tags" : "IS_FRESH"}},
 			"optionList" 	: [
 				"user:team_conference",
