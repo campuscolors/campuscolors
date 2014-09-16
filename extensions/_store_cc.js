@@ -352,13 +352,13 @@ var store_cc = function(_app) {
 			
 			 hideDropDownOnSelect : function($tag){
 				//dump('hideOnSelect');
-				this.hideDropDown($tag);
+				this.hideDropDownClick($tag);
 				$tag.data('timeoutNoShow', setTimeout(function(){$tag.data('timeoutNoShow', 'false');}, 500));
 			},
 			
 			hideMobileDropDownOnSelect : function($tag){
 				dump('hideOnSelect');
-				this.hideDropDown($tag);
+				this.hideDropDownClick($tag);
 				$('.mobileSlideMenu').animate({"left":"-275px"},500);
 				$tag.data('timeoutNoShow', setTimeout(function(){$tag.data('timeoutNoShow', 'false');}, 500));
 			},
