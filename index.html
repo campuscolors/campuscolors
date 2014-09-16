@@ -1104,11 +1104,11 @@ SANITY -> if you change the height and width of this image, change the .minimalM
 			<h5 data-tlc="bind $var '.prod_name'; store_cc#dump; if (is $var --notblank;) {{apply --append;}};" class="hideInMinimalMode"></h5> <!-- TODO : prod_title, or prod_name? -->
 			<h5 data-tlc="bind $var '.prod_title'; if (is $var --notblank;) {{apply --append;}};" class="hideInMinimalMode"></h5>
 			<div data-tlc="bind $var '.prod_msrp'; if (is $var --notblank;) {{apply --hide;}};">	
-				<h6 data-tlc="bind $var '.base_price';  if (is $var --notblank;) {{format --currency='USD'; format --prepend='<span class=&quot;pricePre&quot;>OUR PRICE: </span>';  apply --append;}};" class="ourPrice hideInMinimalMode"></h6>
+				<h6 data-tlc="bind $var '.base_price';  if (is $var --notblank;) {{math --div='100' --precision='2'; format --currency='USD'; format --prepend='<span class=&quot;pricePre&quot;>OUR PRICE: </span>';  apply --append;}};" class="ourPrice hideInMinimalMode"></h6>
 			</div>
 			<div data-tlc="bind $var '.prod_msrp'; if (is $var --blank;) {{apply --hide;}};">
-				<h6 data-tlc="bind $var '.prod_msrp';  if (is $var --notblank;) {{format --currency='USD'; format --prepend='<span class=&quot;pricePre&quot;>WAS </span>';  apply --append;}};" class="wasPrice hideInMinimalMode floatLeft"></h6>
-				<h6 data-tlc="bind $var '.base_price';  if (is $var --notblank;) {{format --currency='USD'; format --prepend='<span class=&quot;pricePre&quot;>NOW </span>';  apply --append;}};" class="yellowText nowPrice hideInMinimalMode floatRight"></h6>
+				<h6 data-tlc="bind $var '.prod_msrp';  if (is $var --notblank;) {{math --div='100' --precision='2'; format --currency='USD'; format --prepend='<span class=&quot;pricePre&quot;>WAS </span>';  apply --append;}};" class="wasPrice hideInMinimalMode floatLeft"></h6>
+				<h6 data-tlc="bind $var '.base_price';  if (is $var --notblank;) {{math --div='100' --precision='2'; format --currency='USD'; format --prepend='<span class=&quot;pricePre&quot;>NOW </span>';  apply --append;}};" class="yellowText nowPrice hideInMinimalMode floatRight"></h6>
 			</div>
 		</div>
 	</a>
