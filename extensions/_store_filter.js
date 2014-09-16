@@ -234,9 +234,8 @@ var store_filter = function(_app) {
 				return true;
 				},
 			filtercheckboxlist : function(data, thisTLC){
-	dump('START store_filter.filtercheckboxlist');
+//				dump('START store_filter.filtercheckboxlist');
 				var args = thisTLC.args2obj(data.command.args, data.globals);
-	dump(args);
 				if(typeof args.filterType === "undefined"){
 					args.filterType = 'checkboxList';
 					}

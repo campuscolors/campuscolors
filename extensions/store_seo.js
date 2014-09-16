@@ -119,7 +119,6 @@ var store_seo = function(_app) {
 
 		u : {
 			generateMeta : function($context, infoObj){
-		dump('generateMeta infoObj:'); dump(infoObj);
 				var baseTitle = '';
 				var desc = '';
 //				dump('THE PAGE TYPE IS:'); dump(infoObj);
@@ -131,8 +130,8 @@ var store_seo = function(_app) {
 					case "static" 		: 
 					case "product" 		: 
 						//Grab from the titles and descriptions on the page
-						baseTitle = $('[data-seo-title]', $context).attr('data-seo-title'); dump('This is the base title' + baseTitle);
-						desc = $('[data-seo-desc]', $context).attr('data-seo-desc'); dump('This is the meta Description' + desc);
+						baseTitle = $('[data-seo-title]', $context).attr('data-seo-title'); //dump('This is the base title' + baseTitle);
+						desc = $('[data-seo-desc]', $context).attr('data-seo-desc'); //dump('This is the meta Description' + desc);
 						break;
 					case "company" 	:
 	//TODO add these spans to company pages

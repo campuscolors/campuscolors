@@ -282,13 +282,13 @@ var _robots = {
 	
 	<div class="mobileSlideMenu standardNav">
 		<span class="mobileSlideMenuClose sprite" onclick="$('.mobileSlideMenu').animate({'left':'-275px'},500);"></span>
-		<div class="slideMenuBorder" data-tlc="bind $var '.'; store_cc#test --legacy;">
+		<div class="slideMenuBorder">
 			<div class="levelOne slideTitle yearbook">SHOP BY</div>
 			<div class="levelOne slideTop" onclick="myApp.ext.store_cc.a.showDropDownClick($(this));">
 				COLLEGE
 				<span class="sprite"></span>
 				<div class="levelTwo" data-dropdown="1">
-					<a href="#!ncaa-apparel-merchandise/ncaa-shorts/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Basketball Shorts</a>
+					<a href="#!ncaa-apparel-merchandise/ncaa-shorts/" onclick="myApp.ext.store_cc.a.hideDropDownOnSelect($(this).parent().parent());">Basketball Shorts</a>
 					<a href="#!ncaa-apparel-merchandise/ncaa-t-shirts/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">T-Shirts</a>
 					<a href="#!ncaa-apparel-merchandise/ncaa-sweatshirts/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Sweatshirts</a>
 					<a href="#!ncaa-apparel-merchandise/ncaa-jerseys/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Jerseys</a>
@@ -779,8 +779,7 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 	</div>
 	-->	
 	<form id="filterListTemplate" onSubmit="return false;" data-app-submit="store_filter|execFilteredSearch" data-tlc="bind $bf '.baseFilter'; stringify; apply --attrib='data-filter-base';" class="filterListTemplate">
-		<input data-tlc="bind $var '.base'; store_cc#assigndata  --attribute='filter-base' --legacy;" data-cc="filterBase" type="hidden">
-		<div data-tlc="bind $var '.'; store_cc#test --legacy;"></div>	
+		<input data-tlc="bind $var '.base'; store_cc#assigndata  --attribute='filter-base' --legacy;" data-cc="filterBase" type="hidden">	
 		
 		<div data-tlc="bind $var '.options.user:team_league'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
 			<div data-tlc="store_cc#showmobilefilter;" data-filterview='1' data-top='0' class="filterGroupTitle marginBottom">Leauge<span class="sprite"></span></div>
@@ -1087,7 +1086,7 @@ SANITY -> if you change the height and width of this image, change the .minimalM
 			<img data-tlc="bind $var '.images.0'; apply --img --media=$var --width=210 --height=250 --bgcolor='#ffffff' --replace;" src="blank.gif" class="prodThumb" alt="" height="210" width="250">
 		</div>
 		<div class="prodInfo">
-			<h5 data-tlc="bind $var '.prod_name'; store_cc#dump; if (is $var --notblank;) {{apply --append;}};" class="hideInMinimalMode"></h5> <!-- TODO : prod_title, or prod_name? -->
+			<h5 data-tlc="bind $var '.prod_name'; if (is $var --notblank;) {{apply --append;}};" class="hideInMinimalMode"></h5> <!-- TODO : prod_title, or prod_name? -->
 			<h5 data-tlc="bind $var '.prod_title'; if (is $var --notblank;) {{apply --append;}};" class="hideInMinimalMode"></h5>
 			<div data-tlc="bind $var '.prod_msrp'; if (is $var --notblank;) {{apply --hide;}};">	
 				<h6 data-tlc="bind $var '.base_price';  if (is $var --notblank;) {{math --div='100' --precision='2'; format --currency='USD'; format --prepend='<span class=&quot;pricePre&quot;>OUR PRICE: </span>';  apply --append;}};" class="ourPrice hideInMinimalMode"></h6>
@@ -1110,7 +1109,7 @@ SANITY -> if you change the height and width of this image, change the .minimalM
 			<img data-tlc="bind $var '.images.0'; if (is $var --notblank;) {{apply --img --media=$var --width=210 --height=250 --bgcolor='#ffffff' --replace;}};" src="blank.gif" class="prodThumb" alt="" height="250" width="210">
 		</div>
 		<div class="prodInfo">
-			<h5 data-tlc="bind $var '.prod_name'; store_cc#dump; if (is $var --notblank;) {{apply --append;}};" class="hideInMinimalMode"></h5> <!-- TODO : prod_title, or prod_name? -->
+			<h5 data-tlc="bind $var '.prod_name'; if (is $var --notblank;) {{apply --append;}};" class="hideInMinimalMode"></h5> <!-- TODO : prod_title, or prod_name? -->
 			<h5 data-tlc="bind $var '.prod_title'; if (is $var --notblank;) {{apply --append;}};" class="hideInMinimalMode"></h5>
 			<div data-tlc="bind $var '.prod_msrp'; if (is $var --notblank;) {{apply --hide;}};">	
 				<h6 data-tlc="bind $var '.base_price';  if (is $var --notblank;) {{math --div='100' --precision='2'; format --currency='USD'; format --prepend='<span class=&quot;pricePre&quot;>OUR PRICE: </span>';  apply --append;}};" class="ourPrice hideInMinimalMode"></h6>

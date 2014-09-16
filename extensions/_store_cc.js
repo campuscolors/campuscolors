@@ -143,12 +143,12 @@ var store_cc = function(_app) {
 					routeObj.params.dataset = $.extend(true, {}, $.grep(_app.ext.store_filter.filterData[parentID].pages,function(e,i){
 						return e.id == routeObj.params.id;
 					})[0]);
-			dump('routeObj.params.dataset');  dump(routeObj.params.dataset.optionList);
+//					dump('routeObj.params.dataset');  dump(routeObj.params.dataset.optionList);
 					
 					var optStrs = routeObj.params.dataset.optionList;
 					routeObj.params.dataset.options = routeObj.params.dataset.options || {};
 					for(var i in optStrs){
-			dump('optStrs[i]'); dump(optStrs[i]);
+//						dump('optStrs[i]'); dump(optStrs[i]);
 						var o = optStrs[i];
 						if(_app.ext.store_filter.vars.elasticFields[o]){
 							routeObj.params.dataset.options[o] = $.extend(true, {}, _app.ext.store_filter.vars.elasticFields[o]);
@@ -177,8 +177,8 @@ var store_cc = function(_app) {
 //ALIAS					
 					_app.router.addAlias('filter', function(routeObj){
 						//decides if filter JSON is in local var or if it needs to be retrieved
-						var filterpage = routeObj.pagefilter; dump('filter page = '); dump(filterpage); dump(_app.ext.store_filter.filterData[filterpage]);
-						if(_app.ext.store_filter.filterData[filterpage]){ dump('in the if...');
+						var filterpage = routeObj.pagefilter;
+						if(_app.ext.store_filter.filterData[filterpage]){
 							showPage(routeObj,filterpage);
 						}
 						else {
@@ -405,18 +405,18 @@ var store_cc = function(_app) {
 			//data-top indicates filter parent container. 
 			//data-filterview indicates whether individual filter should start opened or closed, as well as current state for next click
 			showmobilefilter : function(data, thisTLC) {
-				dump('START showMobileFilter');
+//				dump('START showMobileFilter');
 				var $tag = data.globals.tags[data.globals.focusTag];
-				dump($tag.data('top'));
+//				dump($tag.data('top'));
 				if(screen.width > 767 && $tag.data('top') == 1) {
 					// Dont hide all filter options if not mobile, just hide individual options. 
 				}
 				else {
 					setTimeout(function() { //have to wait for form to load to get initial height
-						dump(screen.width);
+//						dump(screen.width);
 							var $filter = $tag.data('top') == 1 ? $(".filterListTemplate",$tag.parent()) : $(".filterHider",$tag.parent());
 							var currentHeight = $filter.outerHeight();
-							dump('-- current hieght:'); dump(currentHeight);
+//							dump('-- current hieght:'); dump(currentHeight);
 							if($tag.data('filterview') == 0) {
 								$filter.css("height","0");
 							}
