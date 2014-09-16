@@ -1082,21 +1082,27 @@ remember to NOT put the button inside the 'href' container or two events will oc
 SANITY -> if you change the height and width of this image, change the .minimalMode .searchResultsProduct in qs_styles.css to match
 -->
 <li id="productListTemplateResults" class="loadingBG searchResultsProduct ">
-	<div data-app-click="quickstart|inlineProductPreviewShow" class="pointer">
+	<div data-app-click="quickstart|inlineProductPreviewShow" class="pointer bareWhiteLink">
 		<div class="prodThumbContainer">
-		<img data-tlc="bind $var '.images.0'; apply --img --media=$var --width=120 --height=120 --bgcolor='#ffffff' --replace;" src="blank.gif" class="prodThumb" alt="" height="120" width="120">
+			<img data-tlc="bind $var '.images.0'; apply --img --media=$var --width=210 --height=250 --bgcolor='#ffffff' --replace;" src="blank.gif" class="prodThumb" alt="" height="210" width="250">
 		</div>
-
-		<h5 data-tlc="bind $var '.prod_name'; if (is $var --notblank;) {{apply --append;}};" class="hideInMinimalMode"></h5>
-
-		<h6 data-tlc="bind $var '.base_price';  if (is $var --notblank;) {{math --div='100'; format --currency='USD'; format --prepend='Our Price: ';  apply --append;}};" class="hideInMinimalMode"></h6>
-		
+		<div class="prodInfo">
+			<h5 data-tlc="bind $var '.prod_name'; store_cc#dump; if (is $var --notblank;) {{apply --append;}};" class="hideInMinimalMode"></h5> <!-- TODO : prod_title, or prod_name? -->
+			<h5 data-tlc="bind $var '.prod_title'; if (is $var --notblank;) {{apply --append;}};" class="hideInMinimalMode"></h5>
+			<div data-tlc="bind $var '.prod_msrp'; if (is $var --notblank;) {{apply --hide;}};">	
+				<h6 data-tlc="bind $var '.base_price';  if (is $var --notblank;) {{math --div='100' --precision='2'; format --currency='USD'; format --prepend='<span class=&quot;pricePre&quot;>OUR PRICE: </span>';  apply --append;}};" class="ourPrice hideInMinimalMode"></h6>
+			</div>
+			<div data-tlc="bind $var '.prod_msrp'; if (is $var --blank;) {{apply --hide;}};">
+				<h6 data-tlc="bind $var '.prod_msrp';  if (is $var --notblank;) {{math --div='100' --precision='2'; format --currency='USD'; format --prepend='<span class=&quot;pricePre&quot;>WAS </span>';  apply --append;}};" class="wasPrice hideInMinimalMode floatLeft"></h6>
+				<h6 data-tlc="bind $var '.base_price';  if (is $var --notblank;) {{math --div='100' --precision='2'; format --currency='USD'; format --prepend='<span class=&quot;pricePre&quot;>NOW </span>';  apply --append;}};" class="yellowText nowPrice hideInMinimalMode floatRight"></h6>
+			</div>
+		</div>
 	</div>
-	<a class="hideInMinimalMode pointer moreDetails" data-tlc="bind $seoname '.prod_name'; bind $var '.'; store_routing#seoanchor --type='product' --seo --seoname=$seoname; apply --attrib='href';">more details</a>
+	<!-- <a class="hideInMinimalMode pointer moreDetails" data-tlc="bind $seoname '.prod_name'; bind $var '.'; store_routing#seoanchor - -type='product' - -seo - -seoname=$seoname; apply - -attrib='href';">more details</a> -->
 </li>
 
 <li id="productListTemplateResultsNoPreview" class="loadingBG searchResultsProduct">
-	<a data-tlc="bind $var '.'; store_routing#seoanchor --type='product' --seo; apply --attrib='href';" class="pointer bareWhiteLink">
+	<a data-tlc="bind $var '.'; store_routing#seoanchor --type='product' --seo; apply --attrib='href';" class="bareWhiteLink">
 		<div class="prodThumbContainer">
 			<img data-tlc="bind $var '.images.0'; if (is $var --notblank;) {{apply --img --media=$var --width=210 --height=250 --bgcolor='#ffffff' --replace;}};" src="blank.gif" class="prodThumb" alt="" height="250" width="210">
 		</div>
@@ -2281,9 +2287,9 @@ subscribeListsArticle is used for authenticated buyers.
 	<!-- the div is use to show a detailed view of a product. should be hidden by default. -->
 	<div class="previewProductDetail displayNone"></div>
 
-	<div class="previewListContainer">
+	<div class="previewListContainer listWrapper">
 		<!-- productListTemplateResults gets loaded into here -->
-		<ul id="resultsProductListContainer" class="listStyleNone fluidList noPadOrMargin productList"></ul>
+		<ul id="resultsProductListContainer" class="listStyleNone fluidList noPadOrMargin productList ccList"></ul>
 	</div>
 
 </div>
