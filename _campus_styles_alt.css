@@ -220,7 +220,7 @@ header {position:relative;}
  {height:11px; width:16px; margin:0 0 0 5px; background-position:-350px -117px; background-repeat:no-repeat; display:inline-block;}
 .filterHider {overflow:hidden;}
 .filteredSearchTemplate button {display:block; clear:both; margin:0 auto 10px auto; color:#ffffff; padding:1px 8px; border:2px outset #b75970;}
-.filteredSearchTemplate button.quickView {display:none; color:#000000; border-color:#fbe143 #000000 #000000 #fbe143; border-style:outset; font-size:0.9em;}
+.filteredSearchTemplate button.quickView, .productListTemplate button.quickView {display:none; color:#000000; border-color:#fbe143 #000000 #000000 #fbe143; border-style:outset; font-size:0.9em;}
 
 
 

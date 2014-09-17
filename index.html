@@ -734,7 +734,7 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 	<!-- TODO : INVESTIGATE SETTING UP AN ELASTIC BREADCRUMB
 	<div class="fauxBreadCrumb hidePhone showTabletBlock">um... this will eventually do something breadcrumby.</div>
 	-->
-	<h1 data-tlc="bind $var '.id'; apply --append;"></h1>
+	<h1 data-tlc="bind $var '.id'; apply --append;" class="yearbook"></h1>
 	<a class="splashBanner" data-tlc="bind $href '.bannerlink'; apply --attrib='href';">
 		<p data-tlc="bind $var '.promo'; apply --append;"></p>
 		<img data-tlc="bind $var '.banner'; apply --img --media=$var --class='splashBanner' --width=670 --height=176 --bgcolor='ffffff' --replace bind $alt '.banneralt'; apply --attrib='alt';" src="blank.gif" alt="" height="670" width="176">
@@ -978,9 +978,9 @@ Used for the product in a product list (prodlist), usually in the body of a cate
 the loadingBG class is removed (must be that classname) when the template is translated.
 remember to NOT put the button inside the href or two events will occur onclick.
 -->
-<li id="productListTemplate" class="loadingBG" onmouseover="$('.quickView',$(this)).show();" onmouseout="$('.quickView').hide();">
+<li id="productListTemplate" class="loadingBG productListTemplate" onmouseover="$('.quickView',$(this)).show();" onmouseout="$('.quickView').hide();">
 
-	<button class="floatRight pointer quickView displayNone" data-app-click="quickstart|quickviewShow" data-loadstemplate="productTemplateQuickView">Quickview</button>
+	<button class="floatRight pointer quickView displayNone ccButton" data-app-click="quickstart|quickviewShow" data-loadstemplate="productTemplateQuickView">Quickview</button>
 	
 	<a data-tlc="bind $pid '.pid'; bind $seo '.%attribs.zoovy:prod_name'; bind $href ''; store_routing#productlink --pid=$pid --seo=$seo; apply --attrib='href';" class="blockLink bareWhiteLink">
 		<!-- <div data-tlc="bind $var '.pid'; quickstart#addpicslider  - -legacy; apply - -append;" class="prodThumbContainer"> -->
