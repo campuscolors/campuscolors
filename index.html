@@ -985,7 +985,7 @@ remember to NOT put the button inside the href or two events will occur onclick.
 	<a data-tlc="bind $pid '.pid'; bind $seo '.%attribs.zoovy:prod_name'; bind $href ''; store_routing#productlink --pid=$pid --seo=$seo; apply --attrib='href';" class="blockLink bareWhiteLink">
 		<!-- <div data-tlc="bind $var '.pid'; quickstart#addpicslider  - -legacy; apply - -append;" class="prodThumbContainer"> -->
 		<div class="prodThumbContainer">
-			<img data-tlc="bind $var '.%attribs.zoovy:prod_thumb'; if(is $var --blank;){{bind $var '.%attribs.zoovy:prod_image1';}}; if(is $var --notblank;){{apply --img --media=$var --width=210 --height=250 --bgcolor='#ffffff' --replace;}};" src="blank.gif" class="prodThumb" alt="" height="250" width="210">
+			<img data-tlc="bind $var '.%attribs.zoovy:prod_thumb'; if(is $var --blank;){{bind $var '.%attribs.zoovy:prod_image1';}}; if(is $var --notblank;){{apply --img --media=$var --width=210 --height=250 --bgcolor='#ffffff' --replace;}};" src="images/default-image_210x250.jpg" data-apptimize="embed" class="prodThumb" alt="" height="250" width="210">
 		</div>
 		<div class="prodInfo">
 			<h5 data-tlc="bind $var '.%attribs.zoovy:prod_name'; if (is $var --notblank;) {{apply --append;}};"></h5>
@@ -1083,7 +1083,7 @@ SANITY -> if you change the height and width of this image, change the .minimalM
 <li id="productListTemplateResults" class="loadingBG searchResultsProduct ">
 	<div data-app-click="quickstart|inlineProductPreviewShow" class="pointer bareWhiteLink">
 		<div class="prodThumbContainer">
-			<img data-tlc="bind $var '.images.0'; apply --img --media=$var --width=210 --height=250 --bgcolor='#ffffff' --replace;" src="blank.gif" class="prodThumb" alt="" height="210" width="250">
+			<img data-tlc="bind $var '.images.0'; apply --img --media=$var --width=210 --height=250 --bgcolor='#ffffff' --replace;" src="images/default-image_210x250.jpg" data-apptimize="embed" class="prodThumb" alt="" height="210" width="250">
 		</div>
 		<div class="prodInfo">
 			<h5 data-tlc="bind $var '.prod_name'; if (is $var --notblank;) {{apply --append;}};" class="hideInMinimalMode"></h5> <!-- TODO : prod_title, or prod_name? -->
@@ -1106,7 +1106,7 @@ SANITY -> if you change the height and width of this image, change the .minimalM
 	
 	<a  data-tlc="bind $var '.'; store_routing#seoanchor --type='product' --seo; apply --attrib='href';" class="bareWhiteLink">
 		<div class="prodThumbContainer">
-			<img data-tlc="bind $var '.images.0'; if (is $var --notblank;) {{apply --img --media=$var --width=210 --height=250 --bgcolor='#ffffff' --replace;}};" src="blank.gif" class="prodThumb" alt="" height="250" width="210">
+			<img data-tlc="bind $var '.images.0'; if (is $var --notblank;) {{apply --img --media=$var --width=210 --height=250 --bgcolor='#ffffff' --replace;}};" src="images/default-image_210x250.jpg" data-apptimize="embed" class="prodThumb" alt="" height="250" width="210">
 		</div>
 		<div class="prodInfo">
 			<h5 data-tlc="bind $var '.prod_name'; if (is $var --notblank;) {{apply --append;}};" class="hideInMinimalMode"></h5> <!-- TODO : prod_title, or prod_name? -->
