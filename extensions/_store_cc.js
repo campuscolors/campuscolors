@@ -790,7 +790,15 @@ var store_cc = function(_app) {
 				}
 				_app.model.addDispatchToQ(sfo, 'immutable');
 				_app.model.dispatchThis('immutable');
-			}
+			},
+			
+			//sets an element on the product page, in .prodViewerContainer, to scroll to the tab passed as data-scroll-tab
+			scrollToRevealTab : function($ele, p) {
+				p.preventDefault();
+				var $context = $ele.closest('.prodViewerContainer');
+				$("a[href="+$ele.data('scroll-tab')+"]",$context).trigger('click');
+				$("html,body").animate( { scrollTop : $(".tabbedProductContent",$context).offset().top }, 750 );
+			},
 		
 		}, //e [app Events]
 		
