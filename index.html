@@ -1229,9 +1229,12 @@ this will likely become more flexible in the future. ###
 				</div>
 			</div>
 			
-			<div data-tlc="bind $var '.%attribs.zoovy:ship_latency'; if (is $var --notblank;) {{apply --show;}};" class="displayNone">
-				<div data-tlc="bind $var '.%attribs.zoovy:ship_latency'; if (is $var --notblank;) {{ format --prepend='Normally ships in '; format --append=' day(s)'; apply --append;}};" class="latency"></div>
+			<div class="latency">
+				<h3 class="yearbook">SHIPS SAME DAY</h3>
+				<span>&#40;if ordered before 3pm, CT&#41;</span>
 			</div>
+			<!-- Every item has the same latency, so it's static <div data-tlc="bind $var '.%attribs.zoovy:ship_latency'; if (is $var - -notblank;) {{ format - -prepend='Normally ships in '; format - -append=' day(s)'; apply - -append;}};" class="latency"></div> -->
+			
 			<div data-app-role="timeInTransit" class="displayNone"></div>
 	
 			<div data-tlc="bind $var '.%attribs.user:fit_tip'; if(is $var --notblank;) {{apply --show;}};" class="prodSummaryLower displayNone">
