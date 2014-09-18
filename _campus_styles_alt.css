@@ -150,13 +150,15 @@ header {position:relative;}
 .mobileSlideMenu .levelOne .levelTwo > a:first-child {border:none;}
 
 /* FOOTER */
-.footerTopBrandCarWrap {height:100px; width:100%; padding:20px 0 0 0; background-color:#cdcdcd; border-bottom:2px solid #525252;}
+.topBrands {background-color:#cdcdcd; border-bottom:2px solid #525252;}
+.footerTopBrandCarWrap {height:100px; width:770px; padding:20px 0 0 0;}
 .topBrandItem {height:60px; width:100px; margin:0 29px; background-position:0px -273px; background-repeat:no-repeat; overflow:hidden;}
-.topBrandItem.underArmorLogo {background-position:-111px -273px;}
 .topBrandItem.adidasLogo {background-position:-212px -273px;}
+.topBrandItem.underArmorLogo {background-position:-111px -273px;}
 .topBrandItem.newEraLogo {background-position:-308px -274px;}
-.topBrandItem.retroLogo {background-position:-405px -273px;}
+.topBrandItem.reebokLogo {background-position:0 -377px;}
 .topBrandItem.fortySevenLogo {background-position:-375px -208px;}
+.topBrandItem.retroLogo {background-position:-405px -273px;}
 
 .footBG1 {height:280px; padding:20px 0 0 0; position:relative;}
 .footerPromo {background-color:#fbe143; font-size:14px; border-top:5px solid #525252; border-bottom:5px solid #525252; padding:15px 0;}
@@ -432,10 +434,20 @@ header {position:relative;}
 	.standardNav .levelOne {width:131px;}
 	
 	.headerMid {height:120px;}
+	.homeTopBrands {width:654px; margin:0 auto 10px auto;}
+	.homeMain .topBrandItem {height:30px; width:50px; margin:0 20px; background-position:0px -343px; background-repeat:no-repeat; overflow:hidden; display:inline-block;}
+	.homeMain .topBrandItem.adidasLogo {background-position:-99px -343px;}
+	.homeMain .topBrandItem.underArmorLogo {background-position:-51px -343px;}
+	.homeMain .topBrandItem.newEraLogo {background-position:-147px -343px;}
+	.homeMain .topBrandItem.reebokLogo {background-position:0px -386px;}
+	.homeMain .topBrandItem.fortySevenLogo {background-position:-194px -343px;}
+	.homeMain .topBrandItem.retroLogo {background-position:-235px -343px;}
 	.mobileSlideMenu.standardNav.hideOnHome {display:none;}
 	.newsLetterWrapper {width:80%;}
 	.cartWrapper .sprite {height:30px; width:30px; background-position:-39px 1px; margin:0 0 0 50px;}
 	.cartWrapper .cartItemCount {height:25px; width:25px; padding:1px 0 0 0; margin:0 5px 0 0; text-align:center; color:#ffffff; background-color:red; border-radius:15px; box-shadow:1px 1px 2px 0 #000000;}
+	
+	.footerTopBrandCarWrap {width:950px;}
 	
 	.homeMain {width:75%; float:right;}
 	.homeVertNav {max-width:230px; padding:5px 5px 0 5px; position:relative;}
