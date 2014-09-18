@@ -16,7 +16,6 @@ body {font-family:Oxygen, Helvetica, sans-serif;}
 *, *:before, *:after {-moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box;}
 .showTablet, .showDesktop, .hidePhone {display:none;}
 
-#appView {padding:0 5px;}
 .clear {clear:both;}
 .center {text-align:center;}
 .bold {font-weight:bold;}
@@ -174,16 +173,17 @@ header {position:relative;}
 .instagramBanner {background-position:-451px -150px;}
 .footRight .questions {margin:40px 0 0 0;}
 /* .crowd {height:152px; width:100%; position:absolute; bottom:0; left:0; background:transparent url("images/crowd-500x152.png") repeat-x 0 0;} */
-.crowd {height:auto; max-width:100%; position:absolute; bottom:0; left:0;}
+.crowd {height:auto; width:100%; position:absolute; bottom:0; left:0;}
 
 
 
 /* homepageTemplate */
-.homeBanner {width:90%; margin:20px auto; text-align:center;}
+.homeBanner {margin:20px auto; text-align:center;}
 .homeBanner img {height:auto; max-width:100%;}
-.homeFeaturedCats {width:100%; padding:0 0 20px 0;}
+.homeFeaturedCats {width:100%; position:relative;}
+.homeFeaturedCats .secTitleWrap.ghostTitle {width:300px; position:absolute; top:0; right:-300px; }
 .homeFeaturedCats .secTitle {margin:0 60px 0 0;}
-.homeFeaturedCats ul {padding:0; text-align:center;}
+.homeFeaturedCats ul {margin:20px; padding:0; text-align:center;}
 
 .homeBestSell {max-height:140px; width:100%; overflow:hidden;} 
 .homeBestSell .ccList {width:100%;float:none;}
@@ -371,7 +371,7 @@ header {position:relative;}
 	.payment {width:233px; background-position:-75px -159px;}
 	.gtsLogo{background-position:0 -215px;}
 	
-	.homeFeaturedCats .splashPageListTemplate {height:230px; width:330px; margin:0 10px; display:inline-block;}
+	.homeFeaturedCats .splashPageListTemplate {height:210px; width:310px; margin:0 10px; display:inline-block;}
 	.homeBestSell {max-height:310px;}
 	.homeBestSell .productList.ccList > li {height:250px; width:210px; border:2px solid #000000; margin:1em;}
 	.homeBestSell .productList.ccList .prodInfo {display:block;}
@@ -445,7 +445,7 @@ header {position:relative;}
 	.homeVertNav .vertLinkCont.vertNavLast {padding:0 0 5px 0;}
 	/*.vertNavArrow {height:50px; width:229px; position:absolute; bottom:-42px; right:0; background-position:-144px -210px;}*/
 	.vertNavArrow {height:auto; max-width:100%; position:absolute; bottom:-39px; right:0;}
-	.homeBanner {margin:20px 65px 20px 20px; float:right;}
+	.homeBanner {margin:20px;}
 
 	.splashPageTemplate {width:920px;}
 	.splashBanner p {left:140px;}
@@ -464,8 +464,10 @@ header {position:relative;}
 }
 
 @media screen and (min-width : 1080px) {
-	#appView {width:1080px; margin:0 auto;}
+	#appView {margin:0 auto;}
 	.wrapper {width:950px;}
+	.homeMainWrapper {width:1080px; margin:0 auto;}
+	.homeFeaturedCats .splashPageListTemplate {height:230px; width:330px;
 	
 	.prodViewerContainer {width:948px;}
 	.companyRight .sideline {margin:20px 21px 20px 0;}

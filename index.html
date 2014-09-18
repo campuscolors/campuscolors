@@ -652,59 +652,65 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 	<!-- <a href="#!nhl-apparel-merchandise/">TESTABILITIZATION</a>
 	<a href="#!test-apparel/">TEST</a> -->
 
-	
-	<div class="homeMain">
-		<div class="homeBanner loadingBG">
-			<!-- THIS CONTENT LOADED VIA _banners.json in store_cc.u.showHomepageBanners() --> 
-		</div>
-		<div class="clear"></div>
-		<div class="homeFeaturedCats floatRight hidePhone showTabletBlock">
-			<div class="secTitleWrap">
-				<div class="secTitleBorder">
-					<div class="secTitle yearbook">FEATURED CATEGORIES</div>
-				</div>
+	<div class="homeMainWrapper">
+		<div class="homeMain">
+			<div class="homeBanner loadingBG">
+				<!-- THIS CONTENT LOADED VIA _banners.json in store_cc.u.showHomepageBanners() --> 
 			</div>
-			<ul class="listStyleNone"> <!-- TODO : ALIGNMENT W/ BANNER, ALIGNMENT ON TITLE TEXT -->
-				<li class="splashPageListTemplate">
-					<a href=""> <!-- TODO : href here -->
-						<img data-apptimize="embed" src="images/main-banner_700x388.jpg" alt="Featured Category" width="320" height="220">
-						<div class="title center">NHL HOCKEY SHORTS</div>
-					</a>
-				</li>
-				<li class="splashPageListTemplate">
-					<a href=""> <!-- TODO : href here -->
-						<img data-apptimize="embed" src="images/main-banner_700x388.jpg" alt="Featured Category"  width="320" height="220">
-						<div class="title center">NHL HOCKEY T-SHIRTS</div>
-					</a>
-				</li>
-			</ul>
+			<div class="clear"></div>
+			<div class="homeFeaturedCats floatRight hidePhone showTabletBlock">
+				<div class="secTitleWrap ghostTitle"> <!-- This element is duplicated here to overcome a design that didn't work well w/out it -->
+					<div class="secTitleBorder">
+						<div class="secTitle yearbook">C</div>
+					</div>
+				</div>
+				<div class="secTitleWrap">
+					<div class="secTitleBorder">
+						<div class="secTitle yearbook">FEATURED CATEGORIES</div>
+					</div>
+				</div>
+				<ul class="listStyleNone">
+					<li class="splashPageListTemplate">
+						<a href=""> <!-- TODO : href here -->
+							<img data-apptimize="embed" src="images/main-banner_700x388.jpg" alt="Featured Category" width="320" height="220">
+							<div class="title center">NHL HOCKEY SHORTS</div>
+						</a>
+					</li>
+					<li class="splashPageListTemplate">
+						<a href=""> <!-- TODO : href here -->
+							<img data-apptimize="embed" src="images/main-banner_700x388.jpg" alt="Featured Category"  width="320" height="220">
+							<div class="title center">NHL HOCKEY T-SHIRTS</div>
+						</a>
+					</li>
+				</ul>
+			</div>
 		</div>
-	</div>
-	<div class="homeVertNav redGradient floatRight hidePhone hideTablet showDesktopBlock">
-		<div class="vertNavBorder">
-			<div class="vertNavTitle whiteText marginTop">SHOP BY</div>
-			<div class="vertLinkCont marginTop"><a href="#!ncaa-apparel-merchandise/" class="bareWhiteLink bold">College</a></div>
-			<div class="vertLinkCont"><a href="#!nfl-apparel-merchandise/" class="bareWhiteLink bold">NFL</a></div>
-			<div class="vertLinkCont"><a href="#!nba-apparel-merchandise/" class="bareWhiteLink bold">NBA</a></div>
-			<div class="vertLinkCont"><a href="#!mlb-apparel-merchandise/" class="bareWhiteLink bold">MLB</a></div>
-			<div class="vertLinkCont"><a href="#!nhl-apparel-merchandise/" class="bareWhiteLink bold">NHL</a></div>
-			<div class="vertLinkCont"><a href="#!team-apparel-merchandise/" class="bareWhiteLink bold">Shop by Team</a></div>
-			<div class="vertLinkCont marginTop"><a href="#!nike-gear/" class="bareWhiteLink bold">Nike</a></div>
-			<div class="vertLinkCont"><a href="#!adidas-gear/" class="bareWhiteLink bold">Adidas</a></div>
-			<div class="vertLinkCont marginTop"><a href="#!apparel/shorts/" class="bareWhiteLink bold">Shorts</a></div>
-			<div class="vertLinkCont"><a href="#!apparel/t-shirts/" class="bareWhiteLink bold">T-Shirts</a></div>
-			<div class="vertLinkCont"><a href="#!apparel/sweatshirts/" class="bareWhiteLink bold">Sweatshirts</a></div>
-			<div class="vertLinkCont"><a href="#!apparel/jerseys/" class="bareWhiteLink bold">Jerseys</a></div>
-			<div class="vertLinkCont"><a href="#!apparel/jackets/" class="bareWhiteLink bold">Jackets</a></div>
-			<div class="vertLinkCont"><a href="#!apparel/pants/" class="bareWhiteLink bold">Pants</a></div>
-			<div class="vertLinkCont"><a href="#!apparel/hats/" class="bareWhiteLink bold">Hats</a></div>
-			<div class="vertLinkCont"><a href="#!apparel/accessories/" class="bareWhiteLink bold">Accessories</a></div>
-			<div class="vertLinkCont marginTop"><a href="#!mens-apparel-merchandise/" class="bareWhiteLink bold">Men&#39;s</a></div>
-			<div class="vertLinkCont"><a href="#!womens-apparel-merchandise/" class="bareWhiteLink bold">Women&#39;s</a></div>
-			<div class="vertLinkCont vertNavLast"><a href="#!kids-apparel-merchandise/" class="bareWhiteLink bold">Kid&#39;s</a></div>
+		<div class="homeVertNav redGradient floatRight hidePhone hideTablet showDesktopBlock">
+			<div class="vertNavBorder">
+				<div class="vertNavTitle whiteText marginTop">SHOP BY</div>
+				<div class="vertLinkCont marginTop"><a href="#!ncaa-apparel-merchandise/" class="bareWhiteLink bold">College</a></div>
+				<div class="vertLinkCont"><a href="#!nfl-apparel-merchandise/" class="bareWhiteLink bold">NFL</a></div>
+				<div class="vertLinkCont"><a href="#!nba-apparel-merchandise/" class="bareWhiteLink bold">NBA</a></div>
+				<div class="vertLinkCont"><a href="#!mlb-apparel-merchandise/" class="bareWhiteLink bold">MLB</a></div>
+				<div class="vertLinkCont"><a href="#!nhl-apparel-merchandise/" class="bareWhiteLink bold">NHL</a></div>
+				<div class="vertLinkCont"><a href="#!team-apparel-merchandise/" class="bareWhiteLink bold">Shop by Team</a></div>
+				<div class="vertLinkCont marginTop"><a href="#!nike-gear/" class="bareWhiteLink bold">Nike</a></div>
+				<div class="vertLinkCont"><a href="#!adidas-gear/" class="bareWhiteLink bold">Adidas</a></div>
+				<div class="vertLinkCont marginTop"><a href="#!apparel/shorts/" class="bareWhiteLink bold">Shorts</a></div>
+				<div class="vertLinkCont"><a href="#!apparel/t-shirts/" class="bareWhiteLink bold">T-Shirts</a></div>
+				<div class="vertLinkCont"><a href="#!apparel/sweatshirts/" class="bareWhiteLink bold">Sweatshirts</a></div>
+				<div class="vertLinkCont"><a href="#!apparel/jerseys/" class="bareWhiteLink bold">Jerseys</a></div>
+				<div class="vertLinkCont"><a href="#!apparel/jackets/" class="bareWhiteLink bold">Jackets</a></div>
+				<div class="vertLinkCont"><a href="#!apparel/pants/" class="bareWhiteLink bold">Pants</a></div>
+				<div class="vertLinkCont"><a href="#!apparel/hats/" class="bareWhiteLink bold">Hats</a></div>
+				<div class="vertLinkCont"><a href="#!apparel/accessories/" class="bareWhiteLink bold">Accessories</a></div>
+				<div class="vertLinkCont marginTop"><a href="#!mens-apparel-merchandise/" class="bareWhiteLink bold">Men&#39;s</a></div>
+				<div class="vertLinkCont"><a href="#!womens-apparel-merchandise/" class="bareWhiteLink bold">Women&#39;s</a></div>
+				<div class="vertLinkCont vertNavLast"><a href="#!kids-apparel-merchandise/" class="bareWhiteLink bold">Kid&#39;s</a></div>
+			</div>
+			<img src="images/vert-nav-arrow_230x50.png" alt="Banner Bottom" class="vertNavArrow">
+			<!-- <div class="vertNavArrow sprite"></div> -->
 		</div>
-		<img src="images/vert-nav-arrow_230x50.png" alt="Banner Bottom" class="vertNavArrow">
-		<!-- <div class="vertNavArrow sprite"></div> -->
 	</div>
 	<div class="homeBestSell clear">
 		<div class="secTitleWrap">
