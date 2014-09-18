@@ -114,7 +114,7 @@ $(document).ready(function(){
 	if(!paramStr || paramStr.indexOf('_escaped_fragment_') < 0){
 		window.myApp = new initApp({
 			"_robotHasGreeted" : false, <!-- versionhere -->
-			"release":"201408.20140917112500",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
+			"release":"201408.20140918133600",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
 			"_clientid":"zmvc", //zmvc for store app, 1pc for one page checkout.
 			"baseURL":baseURL, //used in non-local mode.
 			"checkoutAuthMode" : "active",//can be passive, active or required
@@ -273,7 +273,9 @@ var _robots = {
 		</a>
 	</div>
 	<div class="headerLower greyGradient hideTablet hideDesktop">
-		<span class="promoOffer yearbook marginRight"><span class="shipLogo sprite"></span>FREE SHIPPING ORDERS OVER $75</span>
+		<span class="promoOffer yearbook marginRight">
+		<span class="shipLogo sprite">
+		</span>FREE SHIPPING ORDERS OVER $75</span>
 	</div>
 	<div class="headerLower greenGradient hidePhone showTabletBlock showDesktopBlock">
 		<span class="promoOffer yearbook marginRight"><span class="shipLogo sprite"></span>FREE SHIPPING ORDERS OVER $75</span>
@@ -800,52 +802,52 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 	<form id="filterListTemplate" onSubmit="return false;" data-app-submit="store_filter|execFilteredSearch" data-tlc="bind $bf '.baseFilter'; stringify; apply --attrib='data-filter-base';" class="filterListTemplate">
 		<input data-tlc="bind $var '.base'; store_cc#assigndata  --attribute='filter-base' --legacy;" data-cc="filterBase" type="hidden">	
 		
-		<div data-tlc="bind $var '.options.user:team_league'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
-			<div data-tlc="store_cc#showmobilefilter;" data-filterview='1' data-top='0' class="filterGroupTitle marginBottom">Leauge<span class="sprite"></span></div>
+		<div data-tlc="bind $var '.options.user:team_league_ncaa'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
+			<div data-tlc="store_cc#showmobilefilter;" data-filterview='0' data-top='0' class="filterGroupTitle greyGradient marginBottom">College Teams<span class="sprite"></span></div>
 			<div class="filterHider">
 				<div class="filterCheckboxList" 
-					data-tlc="bind $index '.options.user:team_league.index';
-						bind $cbl '.options.user:team_league.options'; 
+					data-tlc="bind $index '.options.user:team_league_ncaa.index';
+						bind $cbl '.options.user:team_league_ncaa.options'; 
 						store_filter#filtercheckboxlist --index=$index;">
 				</div>
 			</div>
 		</div>
 		
-		<div data-tlc="bind $var '.options.user:color_pallete'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
-			<div data-tlc="store_cc#showmobilefilter;" data-filterview='1' data-top='0' class="filterGroupTitle marginBottom">Color<span class="sprite"></span></div>
+		<div data-tlc="bind $var '.options.user:team_league_nfl'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
+			<div data-tlc="store_cc#showmobilefilter;" data-filterview='0' data-top='0' class="filterGroupTitle greyGradient marginBottom">NFL Teams<span class="sprite"></span></div>
 			<div class="filterHider">
 				<div class="filterCheckboxList" 
-					data-tlc="bind $index '.options.user:color_pallete.index';
-						bind $cbl '.options.user:color_pallete.options'; 
+					data-tlc="bind $index '.options.user:team_league_nfl.index';
+						bind $cbl '.options.user:team_league_nfl.options'; 
 						store_filter#filtercheckboxlist --index=$index;">
 				</div>
 			</div>
 		</div>
 		
-		<div data-tlc="bind $var '.options.user:size_gender'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
-			<div data-tlc="store_cc#showmobilefilter;" data-filterview='1' data-top='0' class="filterGroupTitle marginBottom">Gender<span class="sprite"></span></div>
+		<div data-tlc="bind $var '.options.user:team_league_nba'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
+			<div data-tlc="store_cc#showmobilefilter;" data-filterview='0' data-top='0' class="filterGroupTitle greyGradient marginBottom">NBA Teams<span class="sprite"></span></div>
 			<div class="filterHider">
 				<div class="filterCheckboxList" 
-					data-tlc="bind $index '.options.user:size_gender.index';
-						bind $cbl '.options.user:size_gender.options'; 
+					data-tlc="bind $index '.options.user:team_league_nba.index';
+						bind $cbl '.options.user:team_league_nba.options'; 
 						store_filter#filtercheckboxlist --index=$index;">
 				</div>
 			</div>
 		</div>
-		
-		<div data-tlc="bind $var '.options.user:team_conference'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
-			<div data-tlc="store_cc#showmobilefilter;" data-filterview='1' data-top='0' class="filterGroupTitle marginBottom">Conference<span class="sprite"></span></div>
+			
+		<div data-tlc="bind $var '.options.user:team_league_mlb'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
+			<div data-tlc="store_cc#showmobilefilter;" data-filterview='0' data-top='0' class="filterGroupTitle greyGradient marginBottom">MLB Teams<span class="sprite"></span></div>
 			<div class="filterHider">
 				<div class="filterCheckboxList" 
-					data-tlc="bind $index '.options.user:team_conference.index';
-						bind $cbl '.options.user:team_conference.options'; 
+					data-tlc="bind $index '.options.user:team_league_mlb.index';
+						bind $cbl '.options.user:team_league_mlb.options'; 
 						store_filter#filtercheckboxlist --index=$index;">
 				</div>
 			</div>
 		</div>
 		
 		<div data-tlc="bind $var '.options.user:team_league_nhl'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
-			<div data-tlc="store_cc#showmobilefilter;" data-filterview='0' data-top='0' class="filterGroupTitle marginBottom">NHL Teams<span class="sprite"></span></div>
+			<div data-tlc="store_cc#showmobilefilter;" data-filterview='0' data-top='0' class="filterGroupTitle greyGradient marginBottom">NHL Teams<span class="sprite"></span></div>
 			<div class="filterHider">
 				<div class="filterCheckboxList" 
 					data-tlc="bind $index '.options.user:team_league_nhl.index';
@@ -855,30 +857,50 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 			</div>
 		</div>
 		
-		<div data-tlc="bind $var '.options.user:team_league_nhl_alt'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
-			<div data-tlc="store_cc#showmobilefilter;" data-filterview='0' data-top='0' class="filterGroupTitle marginBottom">NHL Teams Alt<span class="sprite"></span></div>
+		<div data-tlc="bind $var '.options.user:size'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
+			<div data-tlc="store_cc#showmobilefilter;" data-filterview='1' data-top='0' class="filterGroupTitle greyGradient marginBottom">Size<span class="sprite"></span></div>
 			<div class="filterHider">
 				<div class="filterCheckboxList" 
-					data-tlc="bind $index '.options.user:team_league_nhl_alt.index';
-						bind $cbl '.options.user:team_league_nhl_alt.options'; 
+					data-tlc="bind $index '.options.user:size.index';
+						bind $cbl '.options.user:size.options'; 
 						store_filter#filtercheckboxlist --index=$index;">
 				</div>
 			</div>
 		</div>
 		
-		<div data-tlc="bind $var '.options.user:team_league_nba'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
-			<div data-tlc="store_cc#showmobilefilter;" data-filterview='0' data-top='0' class="filterGroupTitle marginBottom">NBA Teams<span class="sprite"></span></div>
+		<div data-tlc="bind $var '.options.base_price'; if(is $var --blank;){{apply --tag --remove;}};" class="filterGroup priceFilter marginBottom">
+			<div data-tlc="store_cc#showmobilefilter;" data-filterview='0' data-top='0' class="filterGroupTitle greyGradient marginBottom">Price<span class="sprite"></span></div>
+			<div class="filterHider">
+				<div data-filter-range-mult="100" data-tlc="bind $range '.options.base_price'; if(is $range --notblank;){{store_cc#filterrange --index='base_price';}};"></div>
+			</div>
+		</div>
+		
+		<div data-tlc="bind $var '.options.user:size_gender'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
+			<div data-tlc="store_cc#showmobilefilter;" data-filterview='1' data-top='0' class="filterGroupTitle greyGradient marginBottom">Gender<span class="sprite"></span></div>
 			<div class="filterHider">
 				<div class="filterCheckboxList" 
-					data-tlc="bind $index '.options.user:team_league_nba.index';
-						bind $cbl '.options.user:team_league_nba.options'; 
+					data-tlc="bind $index '.options.user:size_gender.index';
+						bind $cbl '.options.user:size_gender.options'; 
 						store_filter#filtercheckboxlist --index=$index;">
 				</div>
 			</div>
 		</div>
 		
+		<!-- TODO : ADD TYPE/STYLE (PANTS, JERSEY, ETC.) FILTER HERE -->
+		
+		<div data-tlc="bind $var '.options.user:color_pallete'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
+			<div data-tlc="store_cc#showmobilefilter;" data-filterview='1' data-top='0' class="filterGroupTitle greyGradient marginBottom">Color<span class="sprite"></span></div>
+			<div class="filterHider">
+				<div class="filterCheckboxList" 
+					data-tlc="bind $index '.options.user:color_pallete.index';
+						bind $cbl '.options.user:color_pallete.options'; 
+						store_filter#filtercheckboxlist --index=$index;">
+				</div>
+			</div>
+		</div>
+
 		<div data-tlc="bind $var '.options.user:vendor_code'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
-			<div data-tlc="store_cc#showmobilefilter;" data-filterview='0' data-top='0' class="filterGroupTitle marginBottom">Vendor<span class="sprite"></span></div>
+			<div data-tlc="store_cc#showmobilefilter;" data-filterview='1' data-top='0' class="filterGroupTitle greyGradient marginBottom">Brand<span class="sprite"></span></div>
 			<div class="filterHider">
 				<div class="filterCheckboxList" 
 					data-tlc="bind $index '.options.user:vendor_code.index';
@@ -887,6 +909,29 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 				</div>
 			</div>
 		</div>
+		
+		<div data-tlc="bind $var '.options.user:team_league'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
+			<div data-tlc="store_cc#showmobilefilter;" data-filterview='0' data-top='0' class="filterGroupTitle greyGradient marginBottom">Leauge<span class="sprite"></span></div>
+			<div class="filterHider">
+				<div class="filterCheckboxList" 
+					data-tlc="bind $index '.options.user:team_league.index';
+						bind $cbl '.options.user:team_league.options'; 
+						store_filter#filtercheckboxlist --index=$index;">
+				</div>
+			</div>
+		</div>
+		
+		<div data-tlc="bind $var '.options.user:team_conference'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
+			<div data-tlc="store_cc#showmobilefilter;" data-filterview='0' data-top='0' class="filterGroupTitle greyGradient marginBottom">Conference<span class="sprite"></span></div>
+			<div class="filterHider">
+				<div class="filterCheckboxList" 
+					data-tlc="bind $index '.options.user:team_conference.index';
+						bind $cbl '.options.user:team_conference.options'; 
+						store_filter#filtercheckboxlist --index=$index;">
+				</div>
+			</div>
+		</div>
+
 		
 		
 	<!-- This filter shown on all filter lists- no need for data-binds 

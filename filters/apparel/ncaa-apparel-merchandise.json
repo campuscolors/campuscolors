@@ -23,6 +23,7 @@
 			"img" 			: "3_prongs_standard",
 			"name"			: "NCAA T-shirts",
 			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "ncaa"}} , {"query" : {"query_string" : {"query":"shirt ","fields":["prod_name"]}}}]},
+			"options"		: {	"base_price" : { "min":0, "max":300 }},
 			"optionList" 	: [
 				"user:team_conference",
 				"user:color_pallete",

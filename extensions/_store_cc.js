@@ -401,6 +401,45 @@ var store_cc = function(_app) {
 				//$('form', $fl).trigger('submit');
 			},
 			
+			filterrange : function(data, thisTLC){
+				var args = thisTLC.args2obj(data.command.args, data.globals);
+				if(typeof args.filterType === "undefined"){
+					args.filterType = 'range';
+					}
+				if(args.index){
+					
+					var range = data.globals.binds[data.globals.focusBind];
+					range.min = range.min || 0;
+					range.step = range.step || 1;
+					var $tag = data.globals.tags[data.globals.focusTag];
+
+					$tag.attr('data-filter-index',args.index);
+					$tag.attr('data-filter-type',args.filterType);
+					
+					$tag.slider({
+						range : true,
+						min : range.min,
+						max : range.max,
+						step : range.step,
+						values : [range.min, range.max],
+//passing $(this) seems wrong, was failing when tried to process JSON, uncomment when fixed, submitting w/ button still works.
+// 						change : function(event, ui){_app.ext.store_filter.e.execFilteredSearch($(this), event);},
+						slide : function(event, ui){$('.sliderVal', ui.handle).text(ui.value);},
+						create : function(event, ui){
+							$(this).find(".ui-slider-handle").each(function(i){
+								var vals = $tag.slider('values');
+								var $tooltip = $('<span class="sliderValContainer ui-state-default">$<span class="sliderVal">'+vals[i]+'</span></span>');
+								$(this).append($tooltip);
+								});
+							}
+						})
+					}
+				else {
+					return false;
+					}
+				return true;
+				},
+			
 			//adds show/hide to filter options. Will add to parent container if in mobile view, otherwise only to individual filters.
 			//data-top indicates filter parent container. 
 			//data-filterview indicates whether individual filter should start opened or closed, as well as current state for next click
