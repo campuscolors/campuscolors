@@ -279,7 +279,9 @@ else	{
 				else	{
 					$(window).off('scroll.infiniteScroll').on('scroll.infiniteScroll',function(){
 						//will load data when two rows from bottom.
-						if( $(window).scrollTop() >= ( $(document).height() - $(window).height() - ($tag.children().first().height() * 2) ) )	{
+						//if( $(window).scrollTop() >= ( $(document).height() - $(window).height() - ($tag.children().first().height() * 2) ) )	{
+						//campus colors has a large footer
+						if( $(window).scrollTop() >= ( $(document).height() - 600 - $(window).height() - ($tag.children().first().height() * 2) ) )	{
 							$(window).off('scroll.infiniteScroll');
 							if($tag.data('isDispatching') == true)	{}
 							else	{
