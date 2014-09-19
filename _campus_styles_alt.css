@@ -258,7 +258,7 @@ header {position:relative;}
 .variationWrapper {width:100%;}
 .selectWrapper {width:61px; position:relative; overflow:hidden;}
 .selectWrapper .sprite {height:40px; width:20px; position:absolute; top:10px; right:5px; background-position:0 0;}
-.qtySelect {min-width:74px; color:#781c2b; background:url("images/sprite_500x500.png") no-repeat scroll 28px -460px #ffffff; border:1px solid #781c2b; text-align:left;}
+.qtySelect {min-width:74px; color:#781c2b; background:url("images/sprite_500x500.png") no-repeat scroll 25px -460px #ffffff; border:1px solid #781c2b; text-align:left;}
 .prodViewerAddToCartForm .numberInput {height:40px; border:1px inset #000000; text-align:center;}
 .productPage .addtocartbutton {height:50px; width:290px; color:#000000; font-size:2.1em; border-top:2px outset #fbe143; border-right:2px outset #000000; border-bottom:2px outset #000000; border-left:2px outset #fbe143; box-shadow:2px 2px 0 0 #cccccc; border-radius:0;}
 .latency {width: 290px; margin:10px auto; color:#194835; font-size:1.2em; background-color:#eeeeee; border:2px solid #cccccc; box-shadow:2px 2px 0 0 #cccccc; padding: 13px 0 0 0;}
@@ -275,6 +275,7 @@ header {position:relative;}
 .tabbedProductContentTD .ui-tabs .ui-tabs-nav li.ui-state-default a {width:100%; color:#ffffff; text-align:center; font-family:Yearbook Solid W01, Times New Roman, serif;}
 .tabbedProductContentTD .ui-widget.ui-widget-content.ui-corner-bottom.ui-corner-tr {width:290px; margin:0 auto; background:none; border:none; border-radius:0;}
 .tabbedProductContentTD .tabContent.ui-tabs-panel.ui-widget-content.ui-corner-bottom {border:none;}
+.sizeGuide {height:auto; max-width:100%; box-shadow:1px 1px 3px 1px #444444;}
 
 .productRecentCarousel .mpControlContainer {display:none;}
 
