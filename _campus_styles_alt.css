@@ -507,7 +507,7 @@ header {position:relative;}
 }
 
 @media screen and (min-width : 1080px) {
-	#appView {margin:0 auto;}
+	#appView {width:1080px; margin:0 auto; box-shadow:0px 1px 5px 5px #cccccc;}
 	.wrapper {width:950px;}
 	.homeMainWrapper {width:1080px; margin:0 auto;}
 	.homeFeaturedCats .splashPageListTemplate {height:230px; width:330px;
