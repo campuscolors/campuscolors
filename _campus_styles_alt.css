@@ -34,7 +34,7 @@ body {font-family:Oxygen, Helvetica, sans-serif;}
 .bareBlackLink {color:#000000; text-decoration:none;}
 .yellowText {color:#fbe143;}
 .whiteText {color:#ffffff;}
-.ccButton {padding:1% 2%; color:#000000; font-family:Yearbook Solid W01, Times New Roman, serif; border-top:2px outset #fbe143; border-right:2px outset #000000; border-bottom:2px outset #000000; border-left:2px outset #fbe143; box-shadow:2px 2px 0 0 #cccccc; border-radius:0;}
+.ccButton, .tabContent .applyButton.ccButton {padding:1% 2%; color:#000000; font-family:Yearbook Solid W01, Times New Roman, serif; border-top:2px outset #fbe143; border-right:2px outset #000000; border-bottom:2px outset #000000; border-left:2px outset #fbe143; box-shadow:2px 2px 0 0 #cccccc; border-radius:0;}
 
 .secTitleWrap {background-color:#9e9e9e; padding:5px 0;}
 .secTitleBorder {border-top:2px solid #525252; border-bottom:2px solid #525252;}
@@ -82,7 +82,8 @@ body {font-family:Oxygen, Helvetica, sans-serif;}
 	background: linear-gradient(to bottom,  #b75970 0%,#781c2b 100%); /* W3C */
 }
 
-.yellowGradient, .productPage .addtocartbutton, .ccButton {
+.yellowGradient, .productPage .addtocartbutton, .ccButton,
+.tabContent .applyButton.ccButton {
 	background: #fbe143; /* Old browsers */
 	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
 	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZiZTE0MyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmNWJkMjUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
@@ -470,6 +471,9 @@ header {position:relative;}
 	.splashBanner p {left:140px;}
 	
 	.prodViewerContainer {width:908px;}
+	.sizeOption:hover {background:#b75970;}
+	.sizeOption.selectedSize:hover{background:#ffffff;}
+	.productPage .addtocartbutton:hover {background:#781c2b; color:#ffffff; border-left:2px outset #b75970; border-top:2px outset #b75970;}
 	
 	#product-modal .productTemplateQuickView .imageContainer, #product-modal .productTemplateQuickView .prodSummaryContainer {width:50%; float:left;}
 	.productTemplateQuickView .prodSummaryContainer {float:none;}
