@@ -261,6 +261,7 @@ header {position:relative;}
 .qtySelect {min-width:74px; color:#781c2b; background:url("images/sprite_500x500.png") no-repeat scroll 25px -460px #ffffff; border:1px solid #781c2b; text-align:left;}
 .prodViewerAddToCartForm .numberInput {height:40px; border:1px inset #000000; text-align:center;}
 .productPage .addtocartbutton {height:50px; width:290px; color:#000000; font-size:2.1em; border-top:2px outset #fbe143; border-right:2px outset #000000; border-bottom:2px outset #000000; border-left:2px outset #fbe143; box-shadow:2px 2px 0 0 #cccccc; border-radius:0;}
+.productPage .addtocartbutton.orderSoon {width:170px; font-size:1.9em;}
 .latency {width: 290px; margin:10px auto; color:#194835; font-size:1.2em; background-color:#eeeeee; border:2px solid #cccccc; box-shadow:2px 2px 0 0 #cccccc; padding: 13px 0 0 0;}
 .latency h3 {display:inline;}
 .latency span {font-size:0.7em;}
@@ -408,6 +409,7 @@ header {position:relative;}
 	.prodSummaryContainer {padding:0 0 0 5%;}
 	.prodSummaryUpper, .latency, .prodSummaryLower {width:auto; margin-bottom:20px; background-color:#eeeeee; border:2px solid #cccccc; box-shadow:2px 2px 0 0 #cccccc;}
 	.variationWrapper {width:90%;}
+	.productPage .addtocartbutton.orderSoon {width:160px; font-size:1.5em;}
 	.latency, .fitTip {padding:20px;}
 	.productPage .addtocartbutton {padding:0;}
 	.tabbedProductContentTD {clear:both;}
@@ -480,6 +482,7 @@ header {position:relative;}
 	.sizeOption:hover {background:#b75970;}
 	.sizeOption.selectedSize:hover{background:#ffffff;}
 	.productPage .addtocartbutton:hover {background:#781c2b; color:#ffffff; border-left:2px outset #b75970; border-top:2px outset #b75970;}
+	.productPage .addtocartbutton.orderSoon {width:210px; font-size:1.9em;}
 	
 	#product-modal .productTemplateQuickView .imageContainer, #product-modal .productTemplateQuickView .prodSummaryContainer {width:50%; float:left;}
 	.productTemplateQuickView .prodSummaryContainer {float:none;}

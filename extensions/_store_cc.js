@@ -515,12 +515,45 @@ var store_cc = function(_app) {
 				}
 				//set this. because the name is shared by (potentially) a lot of inputs, the browser 'may' use the previously set value (like if you add 1 then go to another page, all the inputs will be set to 1. bad in a prodlist format)
 				$input.val(args.defaultvalue || 0); 
-				
-				dump('atcquantityinput args'); dump(args);
-				$tag.addClass('customatcquantityinput');
-				dump(data.globals.binds.var.pid);
-			
 			},
+			
+			getitwhileitlasts : function(data, thisTLC) {
+				var $tag = data.globals.tags[data.globals.focusTag];
+				var prod = data.globals.binds.var;
+				var pid = prod.pid
+				
+				//dump("getItWhileItLasts"); dump(prod['@inventory']); dump(prod['@inventory'][pid].AVAILABLE);
+				//some of this borrowed from store_product.renderformats.detailedinvdisplay
+				if(pid && prod['@inventory'] && prod['@inventory'][pid] && prod['@inventory'][pid].AVAILABLE)	{
+					var qty = prod['@inventory'][pid].AVAILABLE;
+					if(qty < 10) {
+						$(".addtocartbutton",$tag.parent()).addClass("orderSoon");
+						$(".leftInStock",$tag).text("Only "+qty+" In Stock");
+						$tag.show();
+					}
+					else { /*"There were more than enough to go around, no need for alarm.*/ }
+					}
+					
+				/*not sure yet if this will be needed for our purposes...	
+				else if(pid && prod['@inventory'])	{
+					var inventory = prod['@inventory'],
+					vlt = _app.ext.store_product.u.buildVariationLookup(prod['@variations']), //variation lookup table.
+					$table = $("<table class='gridTable fullWidth marginBottom' \/>");
+					$table.append("<thead><tr><th class='alignLeft'>Variation<\/th><th class='alignRight'>Inv. Available<\/th><\/tr>");
+					for(var index in inventory)	{
+//						var pretty = vlt[index.split(':')[1].substr[0,2]];
+//						pretty += 
+						$table.append("<tr><td>"+_app.ext.store_product.u.inventoryID2Pretty(index,vlt)+"<\/td><\/tr>");
+						}
+					$table.appendTo($tag);
+					$table.anytable();
+					}
+				*/	
+					
+				else	{
+					dump("Inventory could not be determined in store_cc.tlcFormat.getitwhileitlasts for "+pid);
+					}
+			}
 			
 		}, //tlcFormats
 		

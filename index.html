@@ -1265,7 +1265,13 @@ this will likely become more flexible in the future. ###
 						<!-- <fieldset data-tlc="bind $var '.'; store_product#atcquantityinput  - -defaultvalue='1' - -legacy;" class="borderNone inLine"></fieldset> -->
 						<fieldset data-tlc="bind $var '.'; store_cc#atcquantityinput  --defaultvalue='1';" class="borderNone floatRight"></fieldset>
 					</div>
-					<div class='marginBottom'><input data-tlc="bind $var '.pid'; store_product#addtocartbutton  --legacy;" value="Add to Cart" class="applyButton addtocartbutton yearbook displayNone" type="submit"></div>
+					<div class='marginBottom'>
+						<input data-tlc="bind $var '.pid'; store_product#addtocartbutton  --legacy;" value="Add to Cart" class="applyButton addtocartbutton yearbook displayNone" type="submit">
+						<div data-tlc="bind $var '.'; store_cc#getitwhileitlasts;" class="floatRight marginRight displayNone">
+							<h3>ORDER SOON!</h3>
+							<span class="leftInStock"></span>
+						</div>
+					</div>
 				</form>
 			
 				<div data-tlc="bind $var '.pid'; apply --attrib='data-pid';" class="CRMButtonMenu">
