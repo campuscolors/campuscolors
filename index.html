@@ -1245,7 +1245,9 @@ this will likely become more flexible in the future. ###
 			<div class="yearbook greyGradient titleHead hidePhone showTabletBlock">PRODUCT DETAILS</div>
 			<div class="prodSummaryUpper">
 				<div class="priceContainer marginBottom">
+					<span class="sprite moneyBefore"></span>
 					<h4 data-tlc="bind $var '.%attribs.zoovy:base_price'; if (is $var --notblank;) {{format --currency='USD'; format --append='<span class=&quot;priceDesc&quot;>Our Price: </span>'; apply --append;}};" class="basePrice"></h4>
+					<span class="sprite moneyAfter"></span>
 					<h5 data-tlc="bind $var '.%attribs.zoovy:prod_msrp';  if (is $var --notblank;) {{format --currency='USD'; format --prepend='MSRP: ';  apply --append;}};" class="prodMSRP"></h5>
 					<span class="savings">
 						<span data-useparentdata='1' data-tlc="quickstart#priceretailsavingsdifference  --legacy; apply --append;" class="savingsDifference"></span>

@@ -250,6 +250,9 @@ header {position:relative;}
 .productPageLink {padding:6px 0 0 0; color:#781c2b;}
 .prodSummaryContainer {width:300px; margin:10px auto; text-align:center;}
 .productPage .basePrice {color:#194835; font-size:3em;}
+.priceContainer {position:relative;}
+.moneyBefore {height:26px; width:22px; background-position:-403px -116px; position:absolute; top:10px; left:30%; margin:0 0 0 -15%; display:inline-block;}
+.moneyAfter {height:26px; width:22px; background-position:-431px -116px; position:absolute; top:10px; right:30%; margin:0 -15% 0 0; display:inline-block;}
 .productPage .priceDesc {font-size:0.5em; display:none;}
 .variation_SZ .label_select {display:none;}
 .sizeOption, .qtySelect {height:40px; min-width:40px; color:#ffffff; background-color:#781c2b; text-align:center; font-weight:bold; padding: 9px 2px; display:inline-block; margin:10px 5px;}
@@ -407,6 +410,7 @@ header {position:relative;}
 	.imageContainer, .prodSummaryContainer {width:50%; float:left;}
 	.imageContainer {padding:0 5% 0 0;}
 	.prodSummaryContainer {padding:0 0 0 5%;}
+	.moneyBefore, .moneyAfter {top:20px;}
 	.prodSummaryUpper, .latency, .prodSummaryLower {width:auto; margin-bottom:20px; background-color:#eeeeee; border:2px solid #cccccc; box-shadow:2px 2px 0 0 #cccccc;}
 	.variationWrapper {width:90%;}
 	.productPage .addtocartbutton.orderSoon {width:160px; font-size:1.5em;}
