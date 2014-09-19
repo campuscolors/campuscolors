@@ -216,12 +216,12 @@ header {position:relative;}
 
 /* filterListTemplate */
 .showHideFilters {height:36px; width:100%; padding:2px 0 0 0; border-bottom:2px solid #000000; border-top:2px solid #e9e9e9; color:#ffffff; text-align:center; font-size:2em; text-shadow:2px 2px 2px #000000; position:relative;}
-.showHideFilters .sprite, .filterGroupTitle .sprite {height:11px; width:16px; margin:0 0 0 5px; background-position:-350px -117px; background-repeat:no-repeat; display:inline-block;}
-.showHideFilters.filterOpen .sprite, .filterGroupTitle.filterOpen .sprite {background-position:-350px -130px;}
+.showHideFilters .sprite, .filterGroupTitle .sprite {height:11px; width:16px; margin:0 0 0 5px; background-position:-376px -117px; background-repeat:no-repeat; display:inline-block;}
+.showHideFilters.filterOpen .sprite, .filterGroupTitle.filterOpen .sprite {background-position:-376px -130px;}
 .filteredSearchTemplate ul {clear:both;}
 .filterListTemplate {width:270px; margin:10px auto; overflow:hidden;}
 .filterGroup {width:46%; margin:0 5px; float:left;}
-.filterGroupTitle {padding:2px; border:1px solid #000000;}
+.filterGroupTitle {padding:2px; border:1px solid #000000; color:#ffffff;}
 .filterGroup.priceFilter .ui-slider {height:20px; width:70%; margin:5px 13px;}
 .filterGroup.priceFilter .sliderValContainer  {padding:0 2px;}
  {height:11px; width:16px; margin:0 0 0 5px; background-position:-350px -117px; background-repeat:no-repeat; display:inline-block;}
