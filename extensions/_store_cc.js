@@ -439,7 +439,7 @@ var store_cc = function(_app) {
 					}
 				return true;
 				},
-			
+/*PRODUCT LIST TLC*/			
 			//adds show/hide to filter options. Will add to parent container if in mobile view, otherwise only to individual filters.
 			//data-top indicates filter parent container. 
 			//data-filterview indicates whether individual filter should start opened or closed, as well as current state for next click
@@ -476,7 +476,51 @@ var store_cc = function(_app) {
 							});
 					},2000);
 				}
-			}
+			},
+/* PRODUCT PAGE TLC */
+			//add all the necessary fields for quantity inputs.
+			atcquantityinput : function(data, thisTLC)	{
+				var args = thisTLC.args2obj(data.command.args, data.globals);
+				var $tag = data.globals.tags[data.globals.focusTag];
+				var pid = data.globals.binds.var.pid;
+				var $input = $("<input class='displayNone' \/>",{"name":"qty"});
+				var $select = $("<select class='qtySelect' \/>",{"name":"qty"});
+				var $selectWrapper = $("<div class='selectWrapper'></div>");
+					
+				if(_app.ext.store_product.u.productIsPurchaseable(data.globals.binds.var.pid)) {
+					$input.attr({'size':3,'min':0,'step':1,'type':'number'}).addClass('numberInput').appendTo($tag);
+					$input.on('keyup.classChange',function(){
+						if(Number($(this).val()) > 0){$(this).addClass('qtyChanged ui-state-highlight');}
+					});
+						//a select list for qty selection is desired, let's build it...
+					var $defaultOption = $("<option value='1' selected='selected'>1</option>");
+					$defaultOption.appendTo($select);
+					for(var i = 2; i <11; i++) {
+						var $option = $("<option>"+[i]+"</option>");
+						$option.appendTo($select);
+					}
+					
+					//leaveing the default input field and changing that value to what is chosen in the select list is easier than rewriting 40 functions
+					$select.change(function() {
+						var selected = $(this).val();	//the option selected in select list
+						$input.val(selected);				//now the default input has the select value and can still be used for handleaddtocart.
+					});
+					
+					$select.appendTo($selectWrapper);
+					$selectWrapper.appendTo($tag);
+				}
+				else	{
+					$tag.hide(); //hide tag so any pre/post text isn't displayed. 
+					$input.attr({'type':'hidden'}).appendTo($tag); //add so that handleaddtocart doesn't throw error that no qty input is present
+				}
+				//set this. because the name is shared by (potentially) a lot of inputs, the browser 'may' use the previously set value (like if you add 1 then go to another page, all the inputs will be set to 1. bad in a prodlist format)
+				$input.val(args.defaultvalue || 0); 
+				
+				dump('atcquantityinput args'); dump(args);
+				$tag.addClass('customatcquantityinput');
+				dump(data.globals.binds.var.pid);
+			
+			},
 			
 		}, //tlcFormats
 		
