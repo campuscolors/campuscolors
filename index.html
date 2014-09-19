@@ -114,7 +114,7 @@ $(document).ready(function(){
 	if(!paramStr || paramStr.indexOf('_escaped_fragment_') < 0){
 		window.myApp = new initApp({
 			"_robotHasGreeted" : false, <!-- versionhere -->
-			"release":"201408.2014091819002400",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
+			"release":"201408.2014091819162800",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
 			"_clientid":"zmvc", //zmvc for store app, 1pc for one page checkout.
 			"baseURL":baseURL, //used in non-local mode.
 			"checkoutAuthMode" : "active",//can be passive, active or required
@@ -1277,8 +1277,8 @@ this will likely become more flexible in the future. ###
 				</form>
 			
 				<div data-tlc="bind $var '.pid'; apply --attrib='data-pid';" class="CRMButtonMenu">
-					<a href="#" data-app-click="quickstart|productAdd2List" data-listid="wishlist" class="productPageLink">Add to Wishlist</a> | 
-					<a href="#" data-app-click="" class="productPageLink">E-mail to a friend</a> <!-- TODO : set up e-mail page link feature, possible to use addThis' feature? -->
+					<span data-app-click="quickstart|productAdd2List" data-listid="wishlist" class="productPageLink pointer">Add to Wishlist</span> | 
+					<span data-app-click="store_cc|showemailfriend" class="productPageLink pointer">E-mail to a friend</span> <!-- TODO : finish this feature by setting up redis up for it -->
 					<!-- <a href="#" data-app-click="store_crm|productReviewShow">Write Review</a>	| -->
 				</div>
 			</div>
@@ -1437,7 +1437,19 @@ this will likely become more flexible in the future. ###
 
 
 
-
+<div id="emailAFriendTemplate">
+	<div class="floatRight yellowText pointer closeEmail">CLOSE WINDOW</div>
+	<div class="clear"></div>
+	<p class="whiteText">
+		Find something you think would interest a friend or family member&#63; Simply enter that person's email address and your email 
+		address below and click &#34;Submit&#34;. The last page &#40;item&#41; you visited will be automatically emailed to the recipient&#33;
+	</p>
+	<form data-app-submit="store_cc|emailfriend">
+		<input type="email" placeholder="Your e-mail address" name="youremail" title="Your e-mail address">
+		<input type="email" placeholder="Your friend's e-mail address" name="theiremail" title="Your friend's e-mail address">
+		<input type="submit" class="ccButton pointer" value="SUBMIT E-MAILS">
+	</form>
+</div>
 
 
 

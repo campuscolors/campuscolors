@@ -889,6 +889,58 @@ var store_cc = function(_app) {
 //when adding an event, be sure to do off('click.appEventName') and then on('click.appEventName') to ensure the same event is not double-added if app events were to get run again over the same template.
 		e : {
 		
+			//shows modal which contains form to e-mail current page to someone (see emailfriend)
+			showemailfriend : function() {
+				$parent = $('#emailAFriendTemplate');
+				dump('--start showemailfriend');
+				$parent.dialog({
+					'modal':'true', 'title':'Sizing Guide','width':'60%', 'max-height':300,'dialogClass':'emailDialog',
+					'open' : function(event, ui) { 
+						$('.closeEmail','.emailDialog').on('click.closeModal', function(){$parent.dialog('close')});
+						$('.ui-widget-overlay').on('click.closeModal', function(){$parent.dialog('close')});
+					},
+					'close': function(event, ui){ 
+						$('.ui-widget-overlay').off('click.closeModal');
+					}
+				});
+				$(".ui-dialog-titlebar").hide();
+			},
+		
+			//processes e-mail page form and calls appMashUpRedis for it. Also needs appMashUpRedis-EMAILPAGE.json in the platform dir.
+			emailfriend : function($form, p) {
+				p.preventDefault();
+				dump('-----start emailfriend...');
+				var sender = $('input[name="youremail"]',$form).val();
+				var recipient = $('input[name="theiremail"]',$form).val();
+				var href = document.location.href;
+				dump('emailfriend sender, recipient, & hash:'); dump(sender);  dump(recipient); dump(href);
+				var params = {
+					'_cartid' 	: _app.model.fetchCartID(),
+					'platform' 	: 'appMashUpRedis-EMAILPAGE.json',
+					'%vars' 	: {
+						'sender'		: sender,
+						'recipient'	: recipient,
+						'href'			: href
+					},
+					'_cmd'		: 'appMashUpRedis',
+					'_tag'		: {
+						'callback':function(rd){
+							if(_app.model.responseHasErrors(rd)) {
+								$form.anymessage({'message':rd});
+							}
+							else {
+								dump('emailfriend callback...'); dump(rd); 
+								$form.anymessage(_app.u.successMsgObject("You've sent a link to "+recipient+" successfully!"));
+//								_gaq.push(['_trackEvent','Cart','User Event','Cart e-mailed']);
+//								window[_app.vars.analyticsPointer]('send', 'event','Checkout','User Event','Cart e-mailed');
+							}
+						}
+					}
+				};
+				_app.model.addDispatchToQ(params,'immutable');
+				_app.model.dispatchThis('immutable');
+			},
+		
 			newsletterSignup : function($ele, p) {
 				p.preventDefault();
 				var sfo = $ele.serializeJSON();

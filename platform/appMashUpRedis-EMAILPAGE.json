@@ -1,0 +1,17 @@
+{
+// whitelist variables which can be interpolated in macros
+"version":201403,
+"@whitelist":[
+  { "id":"$email$", "verb":"get", "value":"email" }
+  ],
+// redis commands are documented at http://redis.io/commands
+"@redis":[
+  [ "rpushx", "people-emailed", "$email$" ]
+  ],
+// this call requires _cartid to be passed, these @CART-MACROS will be run
+// and will send a custom message to ORDER.MASHUP_EMAILED_CART
+"@CART-MACROS":[
+  "EMAIL?msg=ORDER.MASHUP_EMAILED_CART&recipient=$email$",
+  "ADDPRIVATE?note=cart was emailed"
+  ]
+}
