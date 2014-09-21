@@ -482,22 +482,33 @@ var store_cc = function(_app) {
 			atcquantityinput : function(data, thisTLC)	{
 				var args = thisTLC.args2obj(data.command.args, data.globals);
 				var $tag = data.globals.tags[data.globals.focusTag];
-				var pid = data.globals.binds.var.pid;
+				var prod = data.globals.binds.var;
+				var pid = prod.pid;
 				var $input = $("<input class='displayNone' name='qty' \/>");
 				var $select = $("<select class='qtySelect' \/>");
 				var $selectWrapper = $("<div class='selectWrapper'></div>");
-					
+
 				if(_app.ext.store_product.u.productIsPurchaseable(data.globals.binds.var.pid)) {
 					$input.attr({'size':3,'min':0,'step':1,'type':'number'}).addClass('numberInput').appendTo($tag);
 					$input.on('keyup.classChange',function(){
 						if(Number($(this).val()) > 0){$(this).addClass('qtyChanged ui-state-highlight');}
 					});
+					
 						//a select list for qty selection is desired, let's build it...
 					var $defaultOption = $("<option value='1' selected='selected'>1</option>");
 					$defaultOption.appendTo($select);
-					for(var i = 2; i <11; i++) {
-						var $option = $("<option>"+[i]+"</option>");
-						$option.appendTo($select);
+						//check to see what max inventory is and set the number of options accordingly, default to 10 if inventory can't be obtained
+					if(pid && prod['@inventory'] && prod['@inventory'][pid] && prod['@inventory'][pid].AVAILABLE)	{
+						var qty = Number(prod['@inventory'][pid].AVAILABLE) + 1; //+1 to compensate count for first option which was created already
+					}
+					else {
+						var qty = 11; 
+					}
+					if(qty > 1) { //only make additional options if the available qty is more than 1.
+						for(var i = 2; i < qty; i++) {
+							var $option = $("<option value="+i+">"+[i]+"</option>");
+							$option.appendTo($select);
+						}
 					}
 					
 					//leaveing the default input field and changing that value to what is chosen in the select list is easier than rewriting 40 functions
