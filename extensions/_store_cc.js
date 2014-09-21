@@ -483,8 +483,8 @@ var store_cc = function(_app) {
 				var args = thisTLC.args2obj(data.command.args, data.globals);
 				var $tag = data.globals.tags[data.globals.focusTag];
 				var pid = data.globals.binds.var.pid;
-				var $input = $("<input class='displayNone' \/>",{"name":"qty"});
-				var $select = $("<select class='qtySelect' \/>",{"name":"qty"});
+				var $input = $("<input class='displayNone' name='qty' \/>");
+				var $select = $("<select class='qtySelect' \/>");
 				var $selectWrapper = $("<div class='selectWrapper'></div>");
 					
 				if(_app.ext.store_product.u.productIsPurchaseable(data.globals.binds.var.pid)) {
