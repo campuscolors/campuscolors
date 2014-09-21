@@ -776,7 +776,10 @@ var store_cc = function(_app) {
 							},
 							scroll: {	fx: "directscroll"	},
 							auto: {
-								delay: 1000,
+								delay : 1000,
+								duration : 15000,
+								timeoutDuration : 0,
+								easing : 'linear',
 								pauseOnHover:"immediate"
 							},
 							swipe: { 
