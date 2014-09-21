@@ -2469,9 +2469,9 @@ This is the template used both within a dialog and inline, unless implicitly ove
 <section class="cartSummary marginBottom">
 
 	<div data-tlc="bind $var '.sum.items_total'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='Subtotal: '; apply --add --class='orderSubtotal'; apply --append;}};"></div>
-
-	<div data-tlc="bind $var '.sum.tax_total'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='Tax: '; apply --add --class='orderTax'; apply --append;}};"></div>
-
+<!-- client requested that tax not be shown
+	<div data-tlc="bind $var '.sum.tax_total'; if (is $var - -notblank;) {{format - -currency='USD'; format - -prepend='Tax: '; apply - -add - -class='orderTax'; apply - -append;}};"></div>
+-->
 	<div data-tlc="cco#shipinfobyid  --legacy;" class="orderShipping" data-bind="useParentData:true; format:shipinfobyid; extension:cco;"></div>
 
 	<div data-tlc="bind $var '.sum.order_total'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='Order Total: '; apply --add --class='orderTotal'; apply --append;}};"></div>
