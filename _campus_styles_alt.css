@@ -113,7 +113,7 @@ header {position:relative;}
 .logo img {height:auto; max-width:100%; margin:0 auto;}
 
 .mobileNav{height:60px; width:100%; margin:20px 0 0 0; text-align:center; border-top:2px solid #7fb8a1;}
-.mobileNav > a, .mobileNav .mobileMenu {height:40px; width:45px; margin:5px 4% 11px 4%; display:inline-block; position:relative;}
+.mobileNav > a, .mobileNav .mobileCart, .mobileNav .mobileMenu {height:40px; width:45px; margin:5px 4% 11px 4%; display:inline-block; position:relative;}
 .mobileNav .bareWhiteLink {width:100%; position:absolute; bottom:-6px; left:0;}
 .mobileNav .spacer {height:40px; width:1px; border-right:1px solid #ffffff; margin:10px 0; display:inline-block;}
 .mobileMenu {background-position:-239px 1px; background-repeat:no-repeat;}
@@ -471,7 +471,7 @@ header {position:relative;}
 	.homeMain .topBrandItem.retroLogo {background-position:-235px -343px;}
 	.mobileSlideMenu.standardNav.hideOnHome {display:none;}
 	.newsLetterWrapper {width:80%;}
-	.cartWrapper .sprite {height:30px; width:30px; background-position:-39px 1px; margin:0 0 0 50px;}
+	.cartWrapper .sprite {height:30px; width:30px; background-position:-39px 1px; margin:0 0 0 40px;}
 	.cartWrapper .cartItemCount {height:25px; width:25px; padding:1px 0 0 0; margin:0 5px 0 0; text-align:center; color:#ffffff; background-color:red; border-radius:15px; box-shadow:1px 1px 2px 0 #000000;}
 	
 	.footerTopBrandCarWrap {width:950px;}

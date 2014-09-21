@@ -230,13 +230,11 @@ var _robots = {
 				<span class="yellowText showTablet showDesktop">CURRENTLY...</span>
 				<a href="#!company/locations/" class="bareWhiteLink hideTablet hideDesktop">STORE LOCATIONS</a>
 			</div>
-			<a href="#!cart/">
-				<div class="upperCartWrapper floatLeft center hide960To1079 hideAbove1080 hidePhone showTabletBlock hideDesktop">
-					<div class="sprite floatLeft">
-						<div class="cartItemCount floatLeft"></div>
-					</div>
+			<div onClick="myApp.ext.quickstart.u.showCartInModal({'templateID':'cartTemplate'});" class="upperCartWrapper pointer floatLeft center hidePhone showTabletBlock hideDesktop">
+				<div class="sprite floatLeft">
+					<div class="cartItemCount floatLeft"></div>
 				</div>
-			</a>
+			</div>
 		</div>
 	</div>
 	<div class="headerMid wrapper">
@@ -250,14 +248,12 @@ var _robots = {
 					<button class="productSearchButton sprite floatRight"></button>
 				</form>
 			</div>
-			<a href="#!cart/" class="bareBlackLink">
-				<div class="cartWrapper center hidePhone hideTablet showDesktopBlock">
-					<div class="sprite floatLeft"></div>
-					<div class="cartItemCount floatLeft"></div>
-					<div class="floatLeft"> Item(s) in Cart - </div>
-					<div class="cartSubtotal floatLeft"></div>
-				</div>
-			</a>
+			<div onClick="myApp.ext.quickstart.u.showCartInModal({'templateID':'cartTemplate'});" class="cartWrapper pointer center hidePhone hideTablet showDesktopBlock">
+				<div class="sprite floatLeft"></div>
+				<div class="cartItemCount floatLeft"></div>
+				<div class="floatLeft"> Item(s) in Cart - </div>
+				<div class="cartSubtotal floatLeft"></div>
+			</div>
 		</div>
 	</div>
 	<div class="mobileNav greenGradient hideTablet hideDesktop">
@@ -267,10 +263,10 @@ var _robots = {
 		<span class="spacer"></span>
 		<a href="tel:+18665982267" class="mobilePhone sprite"><span class="bareWhiteLink">Call</span></a>
 		<span class="spacer"></span>
-		<a href="#!cart/" class="mobileCart sprite">
+		<div onClick="myApp.ext.quickstart.u.showCartInModal({'templateID':'cartTemplate'});" class="mobileCart sprite"> <!-- href="#!cart/" -->
 			<span class="bareWhiteLink">Cart</span>
 			<span class="cartItemCount whiteText"></span>
-		</a>
+		</div>
 	</div>
 	<div class="headerLower greyGradient hideTablet hideDesktop">
 		<span class="promoOffer yearbook marginRight">
@@ -1263,7 +1259,7 @@ this will likely become more flexible in the future. ###
 					<h5 data-tlc="bind $var '.%attribs.zoovy:prod_mfgid';  if (is $var --notblank;) {{format --prepend='Mfg ID: '; apply --append;}};"></h5>
 				</div>
 
-				<form data-tlc="bind $var '.pid'; store_product#atcform  --legacy; apply --append;" class="prodViewerAddToCartForm clearfix marginBottom" action="#" data-app-submit="quickstart|productAdd2Cart" data-show="inline">
+				<form data-tlc="bind $var '.pid'; store_product#atcform  --legacy; apply --append;" class="prodViewerAddToCartForm clearfix marginBottom" action="#" data-app-submit="quickstart|productAdd2Cart"> <!-- to show cart inline add: data-show="inline" -->
 					<div class="variationWrapper center">
 						<fieldset data-tlc="bind $var '.pid'; store_product#atcvariations  --legacy; apply --append;" class="borderNone inLine"></fieldset>
 						<!-- <fieldset data-tlc="bind $var '.'; store_product#atcquantityinput  - -defaultvalue='1' - -legacy;" class="borderNone inLine"></fieldset> -->
