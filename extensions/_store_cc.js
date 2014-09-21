@@ -80,6 +80,11 @@ var store_cc = function(_app) {
 
 					_app.ext.store_cc.u.swipeMobileNav($(".mobileSlideMenu"));
 					_app.ext.store_cc.u.runFooterCarousel();
+					
+					//make sure minicart stays up to date. 
+					_app.ext.store_cc.vars.mcSetInterval = setInterval(function(){
+						_app.ext.quickstart.u.handleMinicartUpdate({'datapointer':'cartDetail|'+_app.model.fetchCartID()});
+					},4000);
 				
 					_app.templates.homepageTemplate.on('complete.store_cc',function(event,$context,infoObj) {
 						$(".mobileSlideMenu.standardNav").addClass("hideOnHome");
