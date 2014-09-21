@@ -553,7 +553,53 @@ var store_cc = function(_app) {
 				else	{
 					dump("Inventory could not be determined in store_cc.tlcFormat.getitwhileitlasts for "+pid);
 					}
-			}
+			},
+			
+/* CART TLC */
+			//adds qty to cart item, but hides the field and adds a select list to use for changing the qty.
+			//the input and the container the select list is added to must be children of the same container. 
+			cartitemqty : function(data, thisTLC)	{
+				var $tag = data.globals.tags[data.globals.focusTag];
+				var prod = data.globals.binds.var;
+				var $parent = ($tag.parent());
+				var $select = $("<select class='qtySelect cartQtySelect' \/>");
+				var $selectWrapper = $("[data-select-container]",$parent);
+				dump('-----cartitemqty'); dump(prod);
+				
+		//		for(index in prod['%options']){
+		//			dump('store_cc cartitemqty item inventory: '+prod['%options'][index].inv);
+		//			var thisInventory = prod['%options'][index].inv;
+		//		}
+				
+				$tag.val(prod.qty);
+				
+				//for coupons and assemblies, no input desired, but qty display is needed. so the qty is inserted where the input was.
+				if((prod.stid && prod.stid[0] == '%') || prod.asm_master)	{
+					$tag.prop('disabled',true).css('border-width','0')
+					$("[data-cart-show='asm']",$parent).removeClass('displayNone');
+					} 
+				else	{
+					$("[data-cart-show='select']",$parent).removeClass('displayNone');
+					$tag.attr('data-stid',prod.stid);
+					$tag.addClass('displayNone');
+					
+						//a select list for qty selection is desired, let's build it...
+					for(var i = 1; i < 11; i++) {
+						if(i == prod.qty) { var $option = $("<option value="+i+" selected='selected'>"+[i]+"</option>"); }
+						else { var $option = $("<option value="+i+">"+[i]+"</option>"); }
+						$option.appendTo($select);
+					}
+					
+					//leaving the default input field and changing that value to what is chosen in the select list is easier than rewriting 40 functions
+					$select.change(function() {
+						var selected = $(this).val();	//the option selected in select list
+						$tag.val(selected).change();				//now the default input has the select value and can still be used for handleaddtocart.
+					});
+					$parent.css({"position":"relative","top":"-7px"});
+					$select.appendTo($selectWrapper);
+					$selectWrapper.addClass('cartQtySelectWrapper');
+				}
+			},
 			
 		}, //tlcFormats
 		
