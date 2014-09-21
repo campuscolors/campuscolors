@@ -2188,7 +2188,7 @@ VALIDATION
 //javascript doesn't have a great way of easily formatting a string as money.
 //top that off with each browser handles some of these functions a little differently. nice.
 		formatMoney : function(A, currencySign, decimalPlace,hideZero){
-	//		_app.u.dump("BEGIN u.formatMoney");
+			_app.u.dump("BEGIN u.formatMoney");
 			decimalPlace = isNaN(decimalPlace) ? decimalPlace : 2; //if blank or NaN, default to 2
 			var r;
 			var a = new Number(A);

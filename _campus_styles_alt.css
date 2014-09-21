@@ -32,6 +32,7 @@ body {font-family:Oxygen, Helvetica, sans-serif;}
 .bareWhiteLink {color:#ffffff; text-decoration:none;}
 .bareWhiteLink:hover {color:#fbe143;}
 .bareBlackLink {color:#000000; text-decoration:none;}
+.redText {color:#781c2b;}
 .yellowText {color:#fbe143;}
 .whiteText {color:#ffffff;}
 .ccButton, .tabContent .applyButton.ccButton {padding:1% 2%; color:#000000; font-family:Yearbook Solid W01, Times New Roman, serif; border-top:2px outset #fbe143; border-right:2px outset #000000; border-bottom:2px outset #000000; border-left:2px outset #fbe143; box-shadow:2px 2px 0 0 #cccccc; border-radius:0;}
