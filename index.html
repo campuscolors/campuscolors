@@ -862,12 +862,12 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 			</div>
 		</div>
 		
-		<div data-tlc="bind $var '.options.user:size'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
+		<div data-tlc="bind $var '.options.user:size_code'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
 			<div data-tlc="store_cc#showmobilefilter;" data-filterview='1' data-top='0' class="filterGroupTitle greyGradient marginBottom">Size<span class="sprite"></span></div>
 			<div class="filterHider">
 				<div class="filterCheckboxList" 
-					data-tlc="bind $index '.options.user:size.index';
-						bind $cbl '.options.user:size.options'; 
+					data-tlc="bind $index '.options.user:size_code.index';
+						bind $cbl '.options.user:size_code.options'; 
 						store_filter#filtercheckboxlist --index=$index;">
 				</div>
 			</div>
