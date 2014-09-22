@@ -231,7 +231,7 @@ var store_cc = function(_app) {
 					_app.router.appendHash({'type':'exact','route':'team-apparel-merchandise/', 'callback':function(routeObj){
 						_app.ext.store_cc.u.getCatJSON(routeObj.route);
 					}});
-					_app.router.appendHash({'type':'match','route':'team-apparel-merchandise/{{id}}/','pagefilter':'team-apparel-merchandise','callback':'filter'});
+					_app.router.appendHash({'type':'match','route':'team-apparel-merchandise/{{id}}*','pagefilter':'team-apparel-merchandise','callback':'filter'});
 					_app.ext.store_cc.u.pushFilter('team-apparel-merchandise');
 					
 					_app.router.appendHash({'type':'exact','route':'nike-gear/', 'callback':function(routeObj){

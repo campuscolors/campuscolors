@@ -114,7 +114,7 @@ $(document).ready(function(){
 	if(!paramStr || paramStr.indexOf('_escaped_fragment_') < 0){
 		window.myApp = new initApp({
 			"_robotHasGreeted" : false, <!-- versionhere -->
-			"release":"201408.2014091821205800",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
+			"release":"201408.20140922001800",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
 			"_clientid":"zmvc", //zmvc for store app, 1pc for one page checkout.
 			"baseURL":baseURL, //used in non-local mode.
 			"checkoutAuthMode" : "active",//can be passive, active or required
@@ -286,6 +286,7 @@ var _robots = {
 				COLLEGE
 				<span class="sprite"></span>
 				<div class="levelTwo" data-dropdown="1">
+				<!-- TODO : old "by type" links. replaced w/ team links. get rid of em once that's solid 
 					<a href="#!ncaa-apparel-merchandise/ncaa-shorts/" onclick="myApp.ext.store_cc.a.hideDropDownOnSelect($(this).parent().parent());">Basketball Shorts</a>
 					<a href="#!ncaa-apparel-merchandise/ncaa-t-shirts/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">T-Shirts</a>
 					<a href="#!ncaa-apparel-merchandise/ncaa-sweatshirts/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Sweatshirts</a>
@@ -294,7 +295,13 @@ var _robots = {
 					<a href="#!ncaa-apparel-merchandise/ncaa-pants/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Pants</a>
 					<a href="#!ncaa-apparel-merchandise/ncaa-hats/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Hats</a>
 					<a href="#!ncaa-apparel-merchandise/ncaa-accessories/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Accessories</a>
-					<a href="#!ncaa-apparel-merchandise/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">All College</a>
+				-->
+					<a href="#!team-apparel-merchandise/duke-blue-devils-apparel-merchandise.html" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Duke Blue Devils</a>
+					<a href="#!team-apparel-merchandise/illinois-fighting-illini-apparel-merchandise.html" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Illinois Fighting Illini</a>
+					<a href="#!team-apparel-merchandise/illinois-state-redbirds-apparel-merchandise.html" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Illinois State Redbirds</a>
+					<a href="#!team-apparel-merchandise/indiana-hoosiers-apparel-merchandise.html" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Indiana Hoosiers</a>
+					<a href="#!team-apparel-merchandise/iowa-hawkeyes-apparel-merchandise.html" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Iowa Hawkeyes</a>
+					<a href="#!ncaa-apparel-merchandise/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">College by Type</a>
 				</div>
 			</div>
 			<div class="levelOne" onclick="myApp.ext.store_cc.a.showDropDownClick($(this));">
