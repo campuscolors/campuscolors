@@ -973,22 +973,26 @@ var store_cc = function(_app) {
 		e : {
 		
 			//shows modal which contains form to e-mail current page to someone (see emailfriend)
-			showemailfriend : function() {
-				$parent = $('#emailAFriendTemplate');
-				dump('--start showemailfriend');
+			showemailfriend : function($ele,p) {
+				p.preventDefault();
+				var $parent = $('#emailAFriendTemplate');
+				var pid = $ele.parent().attr('data-pid');
+				dump('--start showemailfriend'); dump(pid);
 				$parent.dialog({
 					'modal':'true', 'title':'Sizing Guide','width':'60%', 'max-height':300,'dialogClass':'emailDialog',
 					'open' : function(event, ui) { 
+						$("span",$parent).attr("data-pid",pid);
 						$('.closeEmail','.emailDialog').on('click.closeModal', function(){$parent.dialog('close')});
 						$('.ui-widget-overlay').on('click.closeModal', function(){$parent.dialog('close')});
 					},
 					'close': function(event, ui){ 
 						$('.ui-widget-overlay').off('click.closeModal');
+						$("span",$parent).attr("data-pid","");
 					}
 				});
 				$(".ui-dialog-titlebar").hide();
 			},
-		
+/*		
 			//processes e-mail page form and calls appMashUpRedis for it. Also needs appMashUpRedis-EMAILPAGE.json in the platform dir.
 			emailfriend : function($form, p) {
 				p.preventDefault();
@@ -1014,6 +1018,37 @@ var store_cc = function(_app) {
 							else {
 								dump('emailfriend callback...'); dump(rd); 
 								$form.anymessage(_app.u.successMsgObject("You've sent a link to "+recipient+" successfully!"));
+//								_gaq.push(['_trackEvent','Cart','User Event','Cart e-mailed']);
+//								window[_app.vars.analyticsPointer]('send', 'event','Checkout','User Event','Cart e-mailed');
+							}
+						}
+					}
+				};
+				_app.model.addDispatchToQ(params,'immutable');
+				_app.model.dispatchThis('immutable');
+			},
+*/			
+			emailfriend : function($form, p) {
+				p.preventDefault();
+				dump('-----start emailfriend...');
+				var sender = $('input[name="youremail"]',$form).val();
+				var recipient = $('input[name="theiremail"]',$form).val();
+				var pid = $("span",$form).attr("data-pid");
+				dump('emailfriend sender, & pid:'); dump(recipient);  dump(pid);
+				var params = {
+					'product' 	: pid,
+					'recipient'	: recipient,
+					'sender'		: sender,
+					'method'	: 'tellafriend',
+					'_cmd'		: 'appEmailSend',
+					'_tag'		: {
+						'callback':function(rd){
+							if(_app.model.responseHasErrors(rd)) {
+								$form.anymessage({'message':rd});
+							}
+							else {
+								dump('emailfriend callback...'); dump(rd); 
+								$form.anymessage(_app.u.successMsgObject("You've sent an e-mail to "+recipient+" successfully!"));
 //								_gaq.push(['_trackEvent','Cart','User Event','Cart e-mailed']);
 //								window[_app.vars.analyticsPointer]('send', 'event','Checkout','User Event','Cart e-mailed');
 							}
