@@ -371,6 +371,7 @@ var store_cc = function(_app) {
 			//toggles height on data-slide element within parent of the tag passed (made orig. for password recover, but could be used elsewhere).
 			togglerecover : function($tag) {
 				$("[data-slide='toggle']",$tag.parent()).slideToggle();
+				$tag.parent().toggleClass('open');
 			}
 		
 		}, //Actions

@@ -1281,9 +1281,11 @@ this will likely become more flexible in the future. ###
 				</div>
 			</div>
 			
-			<div class="latency">
-				<h3 class="yearbook">SHIPS SAME DAY</h3>
-				<span>&#40;if ordered before 3pm, CT&#41;</span>
+			<div onclick="myApp.ext.store_cc.a.togglerecover($('.sprite'),$(this));" class="latency">
+				<span class="pointer sprite"></span>
+				<h3 class="yearbook pointer">SHIPS SAME DAY</h3>
+				<span class="pointer">&#40;if ordered before 3pm, CT&#41;</span>
+				<div class="latencyMessage marginTop" data-slide="toggle">A message regarding the same day shipping offer should replace this sample text. </div>
 			</div>
 			<!-- Every item has the same latency, so it's static <div data-tlc="bind $var '.%attribs.zoovy:ship_latency'; if (is $var - -notblank;) {{ format - -prepend='Normally ships in '; format - -append=' day(s)'; apply - -append;}};" class="latency"></div> -->
 			

@@ -268,8 +268,11 @@ header {position:relative;}
 .productPage .addtocartbutton {height:50px; width:290px; color:#000000; font-size:2.1em; border-top:2px outset #fbe143; border-right:2px outset #000000; border-bottom:2px outset #000000; border-left:2px outset #fbe143; box-shadow:2px 2px 0 0 #cccccc; border-radius:0;}
 .productPage .addtocartbutton.orderSoon {width:170px; font-size:1.9em;}
 .latency {width: 290px; margin:10px auto; color:#194835; font-size:1.2em; background-color:#eeeeee; border:2px solid #cccccc; box-shadow:2px 2px 0 0 #cccccc; padding: 13px 0 0 0;}
+.latency .sprite {height:12px; width:16px; background-position:-351px -117px; display:inline-block;}
+.latency.open .sprite {background-position:-351px -131px;}
 .latency h3 {display:inline;}
-.latency span {font-size:0.7em;}
+.latency span {font-size:0.6em;}
+.latency div[data-slide="toggle"] {display:none; color:#000000; text-align:left;	font-size:0.8em; margin:1em 0; padding:0 1em;}
 .fitTip {text-align:left}
 .fitTip span {margin:0 0 0 5px; text-decoration:underline;}
 .socialLinks a {margin:5px;}
@@ -425,6 +428,7 @@ header {position:relative;}
 	.variationWrapper {width:90%;}
 	.productPage .addtocartbutton.orderSoon {width:160px; font-size:1.5em;}
 	.latency, .fitTip {padding:20px;}
+	.latency div[data-slide="toggle"] {margin:1em 0 0 0; padding:0;}
 	.productPage .addtocartbutton {padding:0;}
 	.tabbedProductContentTD {clear:both;}
 	.tabbedProductContentTD .ui-tabs .ui-tabs-nav {width:auto; margin:10px auto; padding:0; border-bottom:5px solid #333333; box-shadow:0 0 0 0;}
