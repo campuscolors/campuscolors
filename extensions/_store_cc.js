@@ -1098,6 +1098,19 @@ var store_cc = function(_app) {
 				$("a[href="+$ele.data('scroll-tab')+"]",$context).trigger('click');
 				$("html,body").animate( { scrollTop : $(".tabbedProductContent",$context).offset().top }, 750 );
 			},
+			
+			//resets filter form: finds form button is contained in, unchecks all the checkboxes, submits the form.
+			resetFilter : function($ele,p) {
+				p.preventDefault();
+//				dump('START resetFilter');
+				var $form = $ele.closest('form');
+				$('input[type=checkbox]',$form).each(function() {
+					if($(this).prop('checked') === true) {
+						$(this).prop('checked',false);
+					}
+				});
+				$('[data-reset-form]',$form).trigger('click');
+			}
 		
 		}, //e [app Events]
 		

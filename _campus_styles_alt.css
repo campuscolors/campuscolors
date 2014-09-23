@@ -223,11 +223,13 @@ header {position:relative;}
 .filterListTemplate {width:270px; margin:10px auto; overflow:hidden;}
 .filterGroup {width:46%; margin:0 5px; float:left;}
 .filterGroupTitle {padding:2px; border:1px solid #000000; color:#ffffff;}
+.filterGroupTitle.filterOpen {margin-bottom:1em;}
 .filterGroup.priceFilter .ui-slider {height:20px; width:70%; margin:5px 13px;}
 .filterGroup.priceFilter .sliderValContainer  {padding:0 2px;}
  {height:11px; width:16px; margin:0 0 0 5px; background-position:-350px -117px; background-repeat:no-repeat; display:inline-block;}
 .filterHider {overflow:hidden; padding:0 0 0 5px;}
-.filteredSearchTemplate button {display:block; clear:both; margin:0 auto 10px auto; color:#ffffff; padding:1px 8px; border:2px outset #b75970;}
+.filteredSearchTemplate button {width:90%; display:block; clear:both; margin:10px auto; color:#ffffff; padding:1px 8px; border:2px outset #b75970;}
+.filteredSearchTemplate button.ccButton {color:#000000; border:2px outset #fbe143;}
 .filteredSearchTemplate button.quickView, .productListTemplate button.quickView {display:none; color:#000000; border-color:#fbe143 #000000 #000000 #fbe143; border-style:outset; font-size:0.9em;}
 
 
@@ -417,7 +419,6 @@ header {position:relative;}
 	.filterGroup {width:100%; margin:0;}
 	.filterGroupTitle {width:100%; padding:4px 4px 4px 10px; border-bottom:2px solid #000000; border-top:none; border-left:none; border-right:none;}
 	.filterHider {padding:0 0 0 15px; margin:0 0 10px 0;}
-	.filterListTemplate button {margin:0 0 10px 10px;}
 	.splashPageListTemplate .title {height:32px; bottom:0; color:#ffffff; background-color:rgba(1,1,1,0.5);}
 	.ccList .prodInfo {bottom:0;}
 	

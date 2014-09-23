@@ -491,7 +491,6 @@ var _robots = {
 						<li><a href="#!nba-apparel-merchandise/">NBA</a></li>
 						<li><a href="#!mlb-apparel-merchandise/">MLB</a></li>
 						<li><a href="#!nhl-apparel-merchandise/">NHL</a></li>
-						<li><a href="#!team-apparel-merchandise/">Shop By Team</a></li>
 					</ul>
 					<ul class="listStyleNone footUL">
 						<li><a href="#!nike-gear/">Nike Gear</a></li>
@@ -510,7 +509,6 @@ var _robots = {
 						<li><a href="#!company/locations/">Store Locations</a></li>
 						<li><a href="#!company/about/">Customer Service</a></li>
 						<li><a href="#!company/faq/">FAQ's</a></li>
-						<li><a href="#!company/contact/">Help</a></li>
 					</ul>
 					<ul class="listStyleNone footUL">
 						<li><a href="#!customer/myaccount/">My Account</a></li>
@@ -807,8 +805,11 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 	<form id="filterListTemplate" onSubmit="return false;" data-app-submit="store_filter|execFilteredSearch" data-tlc="bind $bf '.baseFilter'; stringify; apply --attrib='data-filter-base';" class="filterListTemplate">
 		<input data-tlc="bind $var '.base'; store_cc#assigndata  --attribute='filter-base' --legacy;" data-cc="filterBase" type="hidden">	
 		
+		<button onClick="$(this).closest('form').trigger('submit');" data-reset-form="reset" class="redGradient yearbook">Go!</button>
+		<button data-app-click="store_cc|resetFilter" class="ccButton">Reset</button>
+		
 		<div data-tlc="bind $var '.options.user:team_league_ncaa'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
-			<div data-tlc="store_cc#showmobilefilter;" data-filterview='0' data-top='0' class="filterGroupTitle greyGradient marginBottom">College Teams<span class="sprite"></span></div>
+			<div data-tlc="store_cc#showmobilefilter;" data-filterview='0' data-top='0' class="filterGroupTitle greyGradient">College Teams<span class="sprite"></span></div>
 			<div class="filterHider">
 				<div class="filterCheckboxList" 
 					data-tlc="bind $index '.options.user:team_league_ncaa.index';
@@ -819,7 +820,7 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 		</div>
 		
 		<div data-tlc="bind $var '.options.user:team_league_nfl'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
-			<div data-tlc="store_cc#showmobilefilter;" data-filterview='0' data-top='0' class="filterGroupTitle greyGradient marginBottom">NFL Teams<span class="sprite"></span></div>
+			<div data-tlc="store_cc#showmobilefilter;" data-filterview='0' data-top='0' class="filterGroupTitle greyGradient">NFL Teams<span class="sprite"></span></div>
 			<div class="filterHider">
 				<div class="filterCheckboxList" 
 					data-tlc="bind $index '.options.user:team_league_nfl.index';
@@ -830,7 +831,7 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 		</div>
 		
 		<div data-tlc="bind $var '.options.user:team_league_nba'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
-			<div data-tlc="store_cc#showmobilefilter;" data-filterview='0' data-top='0' class="filterGroupTitle greyGradient marginBottom">NBA Teams<span class="sprite"></span></div>
+			<div data-tlc="store_cc#showmobilefilter;" data-filterview='0' data-top='0' class="filterGroupTitle greyGradient">NBA Teams<span class="sprite"></span></div>
 			<div class="filterHider">
 				<div class="filterCheckboxList" 
 					data-tlc="bind $index '.options.user:team_league_nba.index';
@@ -841,7 +842,7 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 		</div>
 			
 		<div data-tlc="bind $var '.options.user:team_league_mlb'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
-			<div data-tlc="store_cc#showmobilefilter;" data-filterview='0' data-top='0' class="filterGroupTitle greyGradient marginBottom">MLB Teams<span class="sprite"></span></div>
+			<div data-tlc="store_cc#showmobilefilter;" data-filterview='0' data-top='0' class="filterGroupTitle greyGradient">MLB Teams<span class="sprite"></span></div>
 			<div class="filterHider">
 				<div class="filterCheckboxList" 
 					data-tlc="bind $index '.options.user:team_league_mlb.index';
@@ -852,7 +853,7 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 		</div>
 		
 		<div data-tlc="bind $var '.options.user:team_league_nhl'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
-			<div data-tlc="store_cc#showmobilefilter;" data-filterview='0' data-top='0' class="filterGroupTitle greyGradient marginBottom">NHL Teams<span class="sprite"></span></div>
+			<div data-tlc="store_cc#showmobilefilter;" data-filterview='0' data-top='0' class="filterGroupTitle greyGradient">NHL Teams<span class="sprite"></span></div>
 			<div class="filterHider">
 				<div class="filterCheckboxList" 
 					data-tlc="bind $index '.options.user:team_league_nhl.index';
@@ -863,7 +864,7 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 		</div>
 		
 		<div data-tlc="bind $var '.options.user:size_code'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
-			<div data-tlc="store_cc#showmobilefilter;" data-filterview='1' data-top='0' class="filterGroupTitle greyGradient marginBottom">Size<span class="sprite"></span></div>
+			<div data-tlc="store_cc#showmobilefilter;" data-filterview='1' data-top='0' class="filterGroupTitle greyGradient">Size<span class="sprite"></span></div>
 			<div class="filterHider">
 				<div class="filterCheckboxList" 
 					data-tlc="bind $index '.options.user:size_code.index';
@@ -874,14 +875,14 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 		</div>
 		
 		<div data-tlc="bind $var '.options.base_price'; if(is $var --blank;){{apply --tag --remove;}};" class="filterGroup priceFilter marginBottom">
-			<div data-tlc="store_cc#showmobilefilter;" data-filterview='0' data-top='0' class="filterGroupTitle greyGradient marginBottom">Price<span class="sprite"></span></div>
+			<div data-tlc="store_cc#showmobilefilter;" data-filterview='0' data-top='0' class="filterGroupTitle greyGradient">Price<span class="sprite"></span></div>
 			<div class="filterHider">
 				<div data-filter-range-mult="100" data-tlc="bind $range '.options.base_price'; if(is $range --notblank;){{store_cc#filterrange --index='base_price';}};"></div>
 			</div>
 		</div>
 		
 		<div data-tlc="bind $var '.options.user:size_gender'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
-			<div data-tlc="store_cc#showmobilefilter;" data-filterview='1' data-top='0' class="filterGroupTitle greyGradient marginBottom">Gender<span class="sprite"></span></div>
+			<div data-tlc="store_cc#showmobilefilter;" data-filterview='1' data-top='0' class="filterGroupTitle greyGradient">Gender<span class="sprite"></span></div>
 			<div class="filterHider">
 				<div class="filterCheckboxList" 
 					data-tlc="bind $index '.options.user:size_gender.index';
@@ -894,7 +895,7 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 		<!-- TODO : ADD TYPE/STYLE (PANTS, JERSEY, ETC.) FILTER HERE -->
 		
 		<div data-tlc="bind $var '.options.user:color_pallete'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
-			<div data-tlc="store_cc#showmobilefilter;" data-filterview='1' data-top='0' class="filterGroupTitle greyGradient marginBottom">Color<span class="sprite"></span></div>
+			<div data-tlc="store_cc#showmobilefilter;" data-filterview='1' data-top='0' class="filterGroupTitle greyGradient">Color<span class="sprite"></span></div>
 			<div class="filterHider">
 				<div class="filterCheckboxList" 
 					data-tlc="bind $index '.options.user:color_pallete.index';
@@ -905,7 +906,7 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 		</div>
 
 		<div data-tlc="bind $var '.options.user:vendor_code'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
-			<div data-tlc="store_cc#showmobilefilter;" data-filterview='1' data-top='0' class="filterGroupTitle greyGradient marginBottom">Brand<span class="sprite"></span></div>
+			<div data-tlc="store_cc#showmobilefilter;" data-filterview='1' data-top='0' class="filterGroupTitle greyGradient">Brand<span class="sprite"></span></div>
 			<div class="filterHider">
 				<div class="filterCheckboxList" 
 					data-tlc="bind $index '.options.user:vendor_code.index';
@@ -916,7 +917,7 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 		</div>
 		
 		<div data-tlc="bind $var '.options.user:team_league'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
-			<div data-tlc="store_cc#showmobilefilter;" data-filterview='0' data-top='0' class="filterGroupTitle greyGradient marginBottom">Leauge<span class="sprite"></span></div>
+			<div data-tlc="store_cc#showmobilefilter;" data-filterview='0' data-top='0' class="filterGroupTitle greyGradient">Leauge<span class="sprite"></span></div>
 			<div class="filterHider">
 				<div class="filterCheckboxList" 
 					data-tlc="bind $index '.options.user:team_league.index';
@@ -927,7 +928,7 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 		</div>
 		
 		<div data-tlc="bind $var '.options.user:team_conference'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
-			<div data-tlc="store_cc#showmobilefilter;" data-filterview='0' data-top='0' class="filterGroupTitle greyGradient marginBottom">Conference<span class="sprite"></span></div>
+			<div data-tlc="store_cc#showmobilefilter;" data-filterview='0' data-top='0' class="filterGroupTitle greyGradient">Conference<span class="sprite"></span></div>
 			<div class="filterHider">
 				<div class="filterCheckboxList" 
 					data-tlc="bind $index '.options.user:team_conference.index';
@@ -980,7 +981,8 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 		<select data-bind="var:filter(options); index:primary_color; format:filterSelect; extension:store_sac;"></select>
 		<select data-bind="var:filter(options); index:accent_color; format:filterSelect; extension:store_sac;"></select>
 		-->
-		<button onClick="$(this).closest('form').trigger('submit');" class="redGradient">Go!</button>
+		<button onClick="$(this).closest('form').trigger('submit');" class="redGradient yearbook">Go!</button>
+		<button data-app-click="store_cc|resetFilter" class="ccButton">Reset</button>
 	</form>
 
 	<ul data-filter="resultsList" class="listStyleNone fluidList noPadOrMargin productList ccList"></ul>
