@@ -168,6 +168,7 @@ obj['softauth'] = "order"; // [OPTIONAL]. if user is logged in, this gets ignore
 						}
 					else	{
 						$parent.append("There are no FAQ at this time.");
+/*campus*/		_app.ext.store_cc.u.tempFAQ($parent);	
 						}
 					$parent.data('faqs-rendered', true);
 					}

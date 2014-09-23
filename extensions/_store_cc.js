@@ -571,7 +571,7 @@ var store_cc = function(_app) {
 					dump("Inventory could not be determined in store_cc.tlcFormat.getitwhileitlasts for "+pid);
 					}
 			},
-			
+						
 /* CART TLC */
 			//adds qty to cart item, but hides the field and adds a select list to use for changing the qty.
 			//the input and the container the select list is added to must be children of the same container. 
@@ -948,6 +948,19 @@ var store_cc = function(_app) {
 					$('#globalMessaging').anymessage({'message':'$form not passed into store_cc.u.handleBuyerAccountCreate','gMessage':true});
 				}
 			}, //handleAppLoginCreate
+			
+/* COMPANY UTIL */			
+			tempFAQ : function($og) {
+				dump('START tempFAQ');
+				var myFAQ = $(".tempFAQ",$og.parent());
+				if(!myFAQ.data('myfaq-rendered')) {
+					$og.hide();
+					myFAQ.removeClass('displayNone').data('myfaq-rendered',true);
+				}
+				
+			},
+
+			
 			
 		/*	This may be a better way to do this, but it doesn't work if the page isn't reloaded. If tablet goes from 
 				portrait to landscape, the nav isn't hidden properly. Uses hideOnHome class for now.
