@@ -778,7 +778,7 @@ var store_cc = function(_app) {
 							scroll: {	fx: "directscroll"	},
 							auto: {
 								delay : 1000,
-								duration : 15000,
+								duration : 30000,
 								timeoutDuration : 0,
 								easing : 'linear',
 								pauseOnHover:"immediate"

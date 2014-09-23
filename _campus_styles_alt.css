@@ -453,6 +453,7 @@ header {position:relative;}
 	.companyRight {float:left; width:73%;}
 	.companyRight .sideline {width:250px; margin:20px 16px 20px 0;}
 	.companyRight .mainColumn {width:100%;}
+	.companyAddress {float:none;}
 	
 	.logContainer {width:48%; margin:1%; float:left; background-color:#f4f4f4; border:5px solid #cccccc;}
 	.logRight {float:right;}
@@ -519,7 +520,7 @@ header {position:relative;}
 	#appView {width:1080px; margin:0 auto; box-shadow:0px 1px 5px 5px #cccccc;}
 	.wrapper {width:950px;}
 	.homeMainWrapper {width:1080px; margin:0 auto;}
-	.homeFeaturedCats .splashPageListTemplate {height:230px; width:330px;
+	.homeFeaturedCats .splashPageListTemplate {height:230px; width:330px;}
 	
 	.prodViewerContainer {width:948px;}
 	.companyRight .sideline {margin:20px 21px 20px 0;}
