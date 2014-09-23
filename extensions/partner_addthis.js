@@ -104,7 +104,7 @@ var partner_addthis = function(_app) {
 						else {
 							$toolbox.addClass('addThisRendered').append(
 									'<div id="socialLinks" class="addthis_toolbox addthis_default_style">'
-							+			'<span class="floatLeft">SHARE: </span>'
+							+			'<span class="floatLeft">Share: </span>'
 							+			'<a class="addthis_button_facebook">'
 							+				'<img src="images/fb_18x17.jpg" width="18" height="17" alt="Share to Facebook" />'
 							+			'</a>'

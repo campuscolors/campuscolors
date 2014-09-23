@@ -114,7 +114,7 @@ $(document).ready(function(){
 	if(!paramStr || paramStr.indexOf('_escaped_fragment_') < 0){
 		window.myApp = new initApp({
 			"_robotHasGreeted" : false, <!-- versionhere -->
-			"release":"201408.20140922121700",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
+			"release":"201408.20140922225400",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
 			"_clientid":"zmvc", //zmvc for store app, 1pc for one page checkout.
 			"baseURL":baseURL, //used in non-local mode.
 			"checkoutAuthMode" : "active",//can be passive, active or required
@@ -1874,10 +1874,11 @@ if you change these, you should move them above this comment so that when you (o
 
 			<div class="displayNone textContentArea" id="shippingArticle">
 				<h1>SHIPPING INFORMATION</h1>
-				<div class="center">
-					
-					<b>FREE Standard Shipping for orders $75.00 and over</b><br>
-					<b>$3.99 Flat Rate Shipping for orders $74.99 and under</b><br>
+				<div>
+					<div class="center">
+						<b><span class="redText">FREE </span>Standard Shipping<br>for orders $75.00 and over</b><br><br>
+						<b><span class="redText">$3.99 Flat Rate </span>Shipping<br>for orders $74.99 and under</b><br>
+					</div>
 					<p>
 						&#42;Free and Flat Rate shipping offers are only available in the continental United States and apply to standard ground 
 						shipping only.  There may be an additional charge on oversized items.  An additional P&#38;H fee for these items will be 
