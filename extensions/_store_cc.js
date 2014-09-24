@@ -571,6 +571,64 @@ var store_cc = function(_app) {
 					dump("Inventory could not be determined in store_cc.tlcFormat.getitwhileitlasts for "+pid);
 					}
 			},
+			
+			relatedproducts : function(data,thisTLC){
+			dump('START store_cc.tlc.relatedproducts');
+		/*		
+				var lt = data.value['%attribs']['zoovy:prod_name'];
+				lt += " "+data.value['%attribs']['zoovy:keywords'];
+				lt += " "+data.value['%attribs']['zoovy:prod_desc'];
+				var search = {
+					"query" : {
+						"more_like_this" : {
+							"fields" : ["prod_name", "keywords", "description"],
+							"like_text" : lt
+						}
+					}
+				}
+		*/	
+		
+				var team, attrib, thisType = "";
+				if(data.value['%attribs']['user:team_league_nfl']) { team = data.value['%attribs']['user:team_league_nfl']; attrib = 'team_league_nfl'; }
+				else if(data.value['%attribs']['user:team_league_ncaa']) { dump(data.value['%attribs']['user:team_league_ncaa']); team = data.value['%attribs']['user:team_league_ncaa']; attrib = 'team_league_ncaa'; }
+				else if(data.value['%attribs']['user:team_league_nba']) { team = data.value['%attribs']['user:team_league_nba']; attrib = 'team_league_nba'; }
+				else if(data.value['%attribs']['user:team_league_mlb']) { team = data.value['%attribs']['user:team_league_mlb']; attrib = 'team_league_mlb'; }
+				else if(data.value['%attribs']['user:team_league_nhl']) { team = data.value['%attribs']['user:team_league_nhl']; attrib = 'team_league_nhl'; }
+				else { /* NO TEAM, NO LIST TO SHOW */}
+				
+		//		if($.inArray('T-Shirt',data.value['%attribs']['zoovy:prod_name'])) { dump('T-shirt was found in the product name!'); }
+		//		if($.inArray('Shorts',data.value['%attribs']['zoovy:prod_name']) && !$.inArray('T-shirt',data.value['%attribs']['zoovy:prod_name'])) { dump('Shorts was found in the product name!'); }
+				
+				dump(team); dump(attrib);
+				var search = {"filter" : {"term" : {}}};
+				search.filter.term[attrib] = team;
+				dump(search); 
+			
+		/*		TODO : build filter to include type so that differnt types can be displayed, and current type can be excluded.
+				var search = {
+					"filter" : { 
+						"and" : [
+							{"term" : {} },
+							{"query" : {"query_string" : {"query":"shorts ","fields":["prod_name"]}}}
+						]
+					}
+				};
+		*/		
+				
+				var _tag = {
+					"callback":"handleElasticResults",
+					"datapointer":"relatedProducts|"+data.value.pid,
+					"extension":"store_search",
+					"list":data.globals.tags[data.globals.focusTag],
+					"templateID":"productListTemplateResultsNoPreview"
+				}
+				es = _app.ext.store_search.u.buildElasticRaw(search);
+				es.size = 4;
+				_app.ext.store_search.calls.appPublicSearch.init(es, _tag, 'immutable');
+				//_app.model.addDispatchToQ(reqObj, 'immutable');
+				_app.model.dispatchThis('immutable');
+				return true;
+			},
 						
 /* CART TLC */
 			//adds qty to cart item, but hides the field and adds a select list to use for changing the qty.

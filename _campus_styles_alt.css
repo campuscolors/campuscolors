@@ -440,7 +440,7 @@ header {position:relative;}
 	.tabbedProductContentTD .ui-tabs .ui-tabs-nav li.ui-state-active, .catSideline .title.active {background:#333333;}
 	.tabbedProductContentTD .ui-widget.ui-widget-content.ui-corner-bottom.ui-corner-tr {width:70%; float:left}
 	.prodlistRelatedContainer {width:30%; float:left;}
-	.prodlistRelatedContainer .productList.ccList > li {height:224px; width:190px; }
+	.prodlistRelatedContainer .productList.ccList > li {height:224px; width:190px; margin:10px auto;}
 	.productRecentCarousel .secTitle {text-align:center;}
 	
 	.productTemplateQuickView .prodViewerContainer {width:100%;}
