@@ -134,7 +134,7 @@ header {position:relative;}
 .headerLower {height:43px; width:100%; background-color:green; color:#ffffff; padding:8px 0 0 0; border-top:2px solid #000000; border-bottom:2px solid #000000; text-align:center;}
 .headerLower .promoOffer {font-size:1.3em; position:relative; padding:0 0 0 50px;}
 .headerLower .shipLogo {height:30px; width:45px; display:inline-block; background-position:-398px -3px; position:absolute; top:0; left:0;}
-.headerLower .promoCode {font-size:1.125em;}
+.headerLower .promoCode {font-size:1.125em; position:relative; padding:0 0 0 50px;}
 
 .mobileSlideMenu {width:266px; background-color:#999999; padding:0 5px 5px 0; position:absolute; top:0; left:-275px; z-index:1001; border-radius:0 0 4px 0;}
 .slideMenuBorder {border-right:3px solid #ffffff; border-bottom:3px solid #ffffff; border-radius:0 0 4px 0; padding:30px 0;}
@@ -374,7 +374,8 @@ header {position:relative;}
 	.login, .links, .upperCartWrapper {margin:0.8em auto 0 auto;}
 	.logo {width:55%; display:inline-block;}
 	.headerLower {height:56px; border-top:2px solid #7fb8a1;}
-	.headerLower .shipLogo {height:30px; width:45px; background-position:-74px 1px;}
+	.headerLower .promoOffer {padding:0;}
+	.headerLower .shipLogo {height:30px; width:45px; background-position:-74px -1px;}
 	.mobileSlideMenu.standardNav {height:43px; width:100%; position:static; background-color:#ffffff; padding:0; border-bottom:2px solid #cccccc; border-radius:0;}
 	.standardNav .slideMenuBorder {border:none; border-radius:0; padding:0; margin:0 auto;}
 	.standardNav .levelOne.slideTitle {display:none;}
