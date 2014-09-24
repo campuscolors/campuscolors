@@ -894,7 +894,16 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 			</div>
 		</div>
 		
-		<!-- TODO : ADD TYPE/STYLE (PANTS, JERSEY, ETC.) FILTER HERE -->
+		<div data-tlc="bind $var '.options.user:website_filter'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
+			<div data-tlc="store_cc#showmobilefilter;" data-filterview='1' data-top='0' class="filterGroupTitle greyGradient">Type / Style<span class="sprite"></span></div>
+			<div class="filterHider">
+				<div class="filterCheckboxList"
+					data-tlc="bind $index '.options.user:user:website_filter.index';
+						bind $cbl '.options.user:user:website_filter.options'; 
+						store_filter#filtercheckboxlist --index=$index;">
+				</div>
+			</div>
+		</div>
 		
 		<div data-tlc="bind $var '.options.user:color_pallete'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
 			<div data-tlc="store_cc#showmobilefilter;" data-filterview='1' data-top='0' class="filterGroupTitle greyGradient">Color<span class="sprite"></span></div>
