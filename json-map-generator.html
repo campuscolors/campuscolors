@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Disallow Generator</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script type="text/javascript">
+		function clearTextAreas() {
+			$('textarea').each(function(){
+				$(this).val('');
+			});
+		}
+	
+		window.onload = clearTextAreas;
+	
+//console.log('');
+		function genJSON(input,$optionList) {
+			var raw = input.split('\n');
+			var pages = [];
+			
+			//make the rootCatgory JSON
+			var rootCat = genRootCat(raw[0],raw[1]); //make the rootCatgory JSON
+			var rootPath = "#!"+raw[1].split('\t')[0].toLowerCase()+"/";
+//			console.log(rootPath);
+
+			//get checkboxes that are checked to make optionList from
+			var optionArray = [];
+			$("input[type=checkbox]",$optionList).each(function(){
+				if($(this).prop('checked') === true) {
+					optionArray.push($(this).val());
+				}
+			});
+//			console.log(optionArray);
+			
+			//make each subcat JSON
+			for(i = 3; i < raw.length; i++) {
+				var process = raw[i].split('\t');
+				var subCat = genSubCat(process, rootPath, optionArray);
+				//console.log(process);
+				pages.push(subCat);
+	//			var output = '';
+	//			var L = process.length;
+	//			for(j = 0; j < L; j++) {
+	//				//output += "Disallow: /p/"+process[j]+".html\n";
+	//				output += "Disallow: /p/"+process[j]+".html\n";
+	//			}
+			}
+			rootCat["pages"] = pages;
+			var output = JSON.stringify(rootCat);
+			$("#output").val(output);
+			alert(rootCat);
+		};
+		
+		function genSubCat(attrib,rootPath,optionArray) {
+			var subCat = {"baseFilter" : {"term" : {}},"options" : {"base_price" : {"min" : 0}}};
+			var teamLong = attrib[0];																						//team_long attribute
+			var id = teamLong.toLowerCase().split(" ").join("-") + "-apparel-merchandise";		//the id for the page (must match appendHash)
+			var teamLongUpper = uppercaseFirst(teamLong);													//used for name on page and meta title
+			var desc = removeQuotes(attrib[1]);
+			var teamLeague = attrib[2];																					//used to build key for baseFilter
+			teamLeague = "team_league_" + teamLeague.toLowerCase();								//now key is built (may need conditions for other cat types)
+			var teamShort = attrib[3];																						//used to build value for baseFilter
+			var imageAlt = attrib[5];																							//the image that goes in the cat thumb. (should be from media library)
+			subCat["id"] = id;
+			subCat["link"] = rootPath + id + ".html";
+			subCat["img"] = attrib[4];
+			subCat["name"] = teamLongUpper + "Apparel & Merchandise";
+			subCat["page-title"] = teamLongUpper + "Apparel & Merchandise | CampusColors.com";
+			subCat["page-description"] = 
+			subCat.baseFilter.term[teamLeague] = teamShort;
+			subCat.options.base_price["max"] = Number(attrib[6]);
+			subCat["optionList"] = optionArray;
+//			console.log(subCat);
+			
+			return subCat;
+		};
+		
+		//generates root category based on passed tab delimited title and title value
+		//title and attrib must be the same length.
+		function genRootCat(title,attrib) {
+//			console.log(title);
+//			console.log(attrib);
+			var splitTitle = title.split('\t');
+			var splitAttrib = attrib.split('\t');
+			var rootCat = {};
+			var key = "";
+			for(i = 0; i < splitTitle.length; i++) { 
+				key = splitTitle[i];
+				rootCat[key] = splitAttrib[i];
+			}
+	//		key = "pages";
+	//		rootCat[key] = [];
+			return rootCat;
+		}; 
+		
+		//makes first letter of each word uppercase
+		function uppercaseFirst(phrase) {
+			var newPhrase = ""
+			phrase = phrase.split(" ");
+			for(i = 0; i < phrase.length; i++) {
+				if(i !== phrase.length - 1) {
+					newPhrase += phrase[i].substring(0,1).toUpperCase() + phrase[i].substring(1,phrase[i].length) + " ";
+				}
+				else { newPhrase += phrase[i].substring(0,1).toUpperCase() + phrase[i].substring(1,phrase[i].length); }
+			}
+//			console.log(newPhrase);
+			return newPhrase;
+		};
+		
+		function removeQuotes(desc) {
+			console.log(desc);
+			if(desc[0] == '\"') { desc = desc.substring(1,desc.length); }
+			console.log(desc);
+			if(desc[desc.length-1] == '\"') { desc = desc.substring(0,desc.length-1); }
+			console.log(desc);
+			return desc;
+		}  
+	</script>
+	
+	<style>
+	body {width:80%; margin:0 auto;}
+	textarea {width:50%; height:400px;}
+	code {border: 1px solid #000000; display:block;  margin:20px 0 0; padding:10px; width:50%;}
+	</style>
+</head>
+<body>
+	<p>
+		Enter data (FORMAT TO BE DESCRIBED) and hit the button to generate the category.
+	</p>
+	<div id="Form">
+		<div>
+			<textarea required="required" name="productList"></textarea>
+		</div>
+		<div>Check a box below to include that filter on the pages in this category:</div>
+		<div class="optionList">
+			<input type="checkbox" value="user:size_code"/>Size
+			<input type="checkbox" value="user:size_gender"/>Gender
+			<input type="checkbox" value="user:website_filter"/>Type/Style
+			<input type="checkbox" value="user:vendor_code"/>Brand
+			<input type="checkbox" value="user:color_pallete"/>Color
+			<input type="checkbox" value="user:team_league_ncaa"/>Teams NCAA
+			<input type="checkbox" value="user:team_league_nfl"/>Teams NFL
+			<input type="checkbox" value="user:team_league_nba"/>Teams NBA
+			<input type="checkbox" value="user:team_league_mlb"/>Teams MLB
+			<input type="checkbox" value="user:team_league_nhl"/>Teams NHL
+		</div>
+		<button onClick="genJSON($('textarea[name=productList]',$(this).parent()).val(),$('.optionList')); return false;">Generazizate</input>
+	</div>
+	<textarea id="output" name="output"></textarea>
+</body>
+</html>
