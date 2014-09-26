@@ -35,7 +35,7 @@ body {font-family:Oxygen, Helvetica, sans-serif;}
 .redText {color:#781c2b;}
 .yellowText {color:#fbe143;}
 .whiteText {color:#ffffff;}
-.ccButton, .tabContent .applyButton.ccButton {padding:1% 2%; color:#000000; font-family:Yearbook Solid W01, Times New Roman, serif; border-top:2px outset #fbe143; border-right:2px outset #000000; border-bottom:2px outset #000000; border-left:2px outset #fbe143; box-shadow:2px 2px 0 0 #cccccc; border-radius:0;}
+.ccButton, .tabContent .applyButton.ccButton, .applyButton.continueShoppingButton.ccButton {padding:1% 2%; color:#000000; font-family:Yearbook Solid W01, Times New Roman, serif; border-top:2px outset #fbe143; border-right:2px outset #000000; border-bottom:2px outset #000000; border-left:2px outset #fbe143; box-shadow:2px 2px 0 0 #cccccc; border-radius:0;}
 
 .secTitleWrap {background-color:#9e9e9e; padding:5px 0;}
 .secTitleBorder {border-top:2px solid #525252; border-bottom:2px solid #525252;}
@@ -72,7 +72,8 @@ body {font-family:Oxygen, Helvetica, sans-serif;}
 .redGradient,
 .tabbedProductContentTD .ui-tabs .ui-tabs-nav li.ui-state-active,
 .catSideline .title.ui-state-active, 
-.ui-dialog.emailDialog .ui-dialog-content {
+.ui-dialog.emailDialog .ui-dialog-content,
+.applyButton.continueShoppingButton.ccButton {
 	background: #b75970; /* Old browsers */
 	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
 	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2I3NTk3MCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM3ODFjMmIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
@@ -85,7 +86,8 @@ body {font-family:Oxygen, Helvetica, sans-serif;}
 }
 
 .yellowGradient, .productPage .addtocartbutton, .ccButton,
-.tabContent .applyButton.ccButton {
+.tabContent .applyButton.ccButton,
+#inStoreCheckoutButton .applyButton.ccButton.checkoutButton {
 	background: #fbe143; /* Old browsers */
 	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
 	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZiZTE0MyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmNWJkMjUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
@@ -354,6 +356,14 @@ header {position:relative;}
 .qtySelect.cartQtySelect {height:auto; margin:0; padding:0; background-position:25px -470px;}
 .cartSummaryTotalsContainer .ui-widget .cartRefreshButton,
 .removeButton.ui-button.ui-button-icon-only {height:20px; width:20px; margin:0;}
+.applyButton.continueShoppingButton.ccButton {border:2px outset #b75970;}
+.ui-state-default.cartButtons {background:#ffffff; border:none;}
+.applyButton.continueShoppingButton.ccButton .ui-button-text {color:#ffffff;}
+#inStoreCheckoutButton .applyButton.ccButton.checkoutButton {border:2px outset #fbe143;}
+.removeButton.ui-button.ui-button-icon-only {height:auto; width:auto; padding:1% 2%; background:none; border:none;}
+.removeButton.ui-button.ui-button-icon-only .ui-button-icon-primary {display:none;}
+.removeButton.ui-button.ui-button-icon-only .ui-button-text {padding:0; text-indent:0; color:#cccccc;}
+#modalCart .footLogos {background-position: 0 -379px; width: 242px; height: 30px; margin:0 auto;}
 
 
 
