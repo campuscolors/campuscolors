@@ -326,7 +326,7 @@ var store_cc = function(_app) {
 					$('[data-dropdown]',$tag).click(function(event){event.stopPropagation()});
 					$tag.attr('onClick','').unbind('click');
 					setTimeout(function(){
-						$('body').click(function(){
+						$('#appView').off('click').on('click',function() {
 							_app.ext.store_cc.a.hideDropDownClick($tag);
 						});
 					}, 500);
@@ -352,7 +352,7 @@ var store_cc = function(_app) {
 				//_app.u.dump('hideClick');
 				if(this.hideDropDown($tag)){
 					$tag.click(function(){_app.ext.store_cc.a.showDropDownClick($(this));});
-					$('body').unbind('click');
+					$('#appView').off('click');
 				}
 			},
 			
