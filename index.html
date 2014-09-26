@@ -1357,7 +1357,10 @@ this will likely become more flexible in the future. ###
 			<div data-app-role="timeInTransit" class="displayNone"></div>
 	
 			<div data-tlc="bind $var '.%attribs.user:fit_tip'; if(is $var --notblank;) {{apply --show;}};" class="prodSummaryLower displayNone">
-				<div data-tlc="bind $var '.%attribs.user:fit_tip'; if (is $var --notblank;) {{format --prepend='<h2 class=&quot;yearbook&quot;>FIT TIP</h2>' format --append='<span data-app-click=&quot;store_cc|scrollToRevealTab&quot; data-scroll-tab=&quot;#prodReviews&quot; class=&quot;pointer productPageLink&quot;>Click here for the Size Chart</span>' apply --append;}};" class="fitTip"></div> <!-- TODO : confirm attrib name for this feature (and link below it) -->
+				<div data-tlc="bind $var '.%attribs.user:fit_tip'; if (is $var --notblank;) {{format --prepend='<h2 class=&quot;yearbook&quot;>FIT TIP</h2>' format --append='<span data-app-click=&quot;store_cc|scrollToRevealTab&quot; data-scroll-tab=&quot;#fitTip&quot; class=&quot;pointer productPageLink&quot;>Click here for the Size Chart</span>' apply --append;}};" class="fitTip"></div> <!-- TODO : confirm attrib name for this feature (and link below it) -->
+			</div>
+			<div data-tlc="bind $var '.%attribs.zoovy:prod_desc'; if(is $var --notblank;) {{apply --show;}};" class="prodSummaryLower displayNone">
+				<div data-tlc="bind $var '.%attribs.zoovy:prod_desc'; if (is $var --notblank;) {{format --prepend='<h2 class=&quot;yearbook&quot;>FIT TIP</h2>' format --append='<span data-app-click=&quot;store_cc|scrollToRevealTab&quot; data-scroll-tab=&quot;#prodReviews&quot; class=&quot;pointer productPageLink&quot;>Click here for the Size Chart</span>' apply --append;}};" class="fitTip"></div> <!-- TODO : confirm attrib name for this feature (and link below it) -->
 			</div>
 
 			<div class="socialLinks"></div> <!-- TODO : addThis doesn't support Instagram... hmmm, AND pintrest is not customized... argh -->
@@ -1431,7 +1434,7 @@ this will likely become more flexible in the future. ###
 				</div>
 				
 				<div class="tabContent" data-anytab-content="sizeGuide">
-					<img data-apptimize="embed" src="images/SampeSizeGuide_500x300.jpg" alt="Size Guide" class="sizeGuide" width="500" height="300">
+					<img data-apptimize="embed" src="images/SampeSizeGuide_500x300.jpg" alt="Size Guide" class="sizeGuide" width="600" height="360">
 				</div>
 
 			</div>
@@ -1443,7 +1446,7 @@ this will likely become more flexible in the future. ###
 		</div>
 		-->
 		<div class="prodlistRelatedContainer">
-			<h3 class="yearbook redText center">OTHER FANS ALSO LIKED</h3>
+			<h3 class="center">OTHER FANS ALSO LIKED</h3>
 			<ul class="productList ccList prodlistRelated alignCenter listStyleNone noPadOrMargin"  data-tlc="store_cc#relatedproducts"></ul>
 		</div>
 	</div> <!-- //prodViewerContainer -->
