@@ -10,6 +10,7 @@ myApp.rq.push(['script',0,(document.location.protocol == 'file:') ? myApp.vars.t
 	}]); //The config.js is dynamically generated.
 	
 myApp.rq.push(['extension',0,'store_cc','','addEventHandlers']);
+myApp.rq.push(['extension',0,'tools_zoom','']);
 	
 myApp.rq.push(['extension',0,'order_create','']);
 myApp.rq.push(['extension',0,'cco','']);

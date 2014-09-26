@@ -59,6 +59,7 @@ css files should be included before any .js file to ensure they are downloaded i
 <!-- <link data-apptimize="embed" rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/themes/ui-lightness/jquery-ui.css" /> -->
 <link rel="stylesheet" type="text/css" href="jquery-ui-1.10.4.custom.min.css" />
 <link data-apptimize="embed" rel="stylesheet" type="text/css" href="_campus_styles_alt.css"/>
+<link data-apptimize="embed" rel="stylesheet" type="text/css" href="extensions/tools_lightbox/lightbox/css/lightbox.css"/>
 
 <link href="http://fast.fonts.net/cssapi/e0e57771-0001-4e8f-91d3-a5bda971ea83.css" type="text/css" rel="stylesheet">
 <link data-apptimize="embed" href='http://fonts.googleapis.com/css?family=Oxygen:400,700' rel='stylesheet' type='text/css'>
@@ -74,6 +75,9 @@ css files should be included before any .js file to ensure they are downloaded i
 
 <!-- EXTENSIONS -->
 <script data-apptimize="embed" type="text/javascript" src="extensions/_store_cc.js"></script>
+<script data-apptimize="embed" type="text/javascript" src="extensions/tools_zoom/zoom/js/jquery.zoom.min.js"></script>
+<script data-apptimize="embed" type="text/javascript" src="extensions/tools_lightbox/lightbox/js/lightbox-2.6.min.js"></script>
+<script data-apptimize="embed" type="text/javascript" src="extensions/tools_zoom/tools_zoom.js"></script>
 <script data-apptimize="embed" type="text/javascript" src="extensions/seo_robots.js"></script>
 <script data-apptimize="embed" type="text/javascript" src="extensions/checkout/extension.js"></script> <!-- order_create -->
 <script data-apptimize="embed" type="text/javascript" src="extensions/cart_checkout_order.js"></script>
@@ -1282,16 +1286,21 @@ this will likely become more flexible in the future. ###
 				<span data-tlc="bind $var '.reviews.average'; if(is $var --notblank) {{format --prepend='review_'; apply --add --class=$var; }};" class="reviewSprite floatLeft marginRight"></span>
 				<span data-tlc="bind $var '.reviews.total'; if (is $var --notblank;) {{format --prepend=' Read All ' --append=' Reviews'; apply --append;}};" class='floatLeft productPageLink'></span>
 			</section>
+			<div data-tlc="bind $var '.%attribs.zoovy:prod_is_tags'; quickstart#tags --legacy;" class="tagsContainer"></div>
+			<div class='pointer clearfix prodPagePid'  data-bind='var:product(pid);format:assignAttribute; attribute:data-pid;'>
+				<a data-tlc="bind $href '.%attribs.zoovy:prod_image1'; bind $var '.'; tools_zoom#imagezoom --data=$var --isthumbs=0 --hrefattr=$href --w=570 --h=570 --legacy;"  data-height='450' data-width='450' data-zheight='1200' data-zwidth='1200'></a> <!-- add if thumbs needs later: data-theight='50' data-twidth='50' -->
+			</div>
+	<!-- ORIG IMAGE FUNCTIONS		TODO : REMOVE IF ZOOM IS APPROVED
 			<div data-app-click="quickstart|productPicsInModalShow" class="pointer clearfix">
 				<div data-tlc="bind $var '.%attribs.zoovy:prod_is_tags'; quickstart#tags --legacy;" class="tagsContainer"></div>
 				<img data-tlc="bind $var '.%attribs.zoovy:prod_image1'; if(is $var --notblank){{apply --img --media=$var --width=450 --height=450 --bgcolor='#ffffff' --replace;}};" src="blank.gif" class="prodBigImage" alt="" height="450" width="450">
 			</div>
-	
-			<div data-tlc="bind $var '.pid'; apply --attrib='data-pid';" class="prodThumbs displayNone"> <!-- TODO : SET THESE TO DISPLAY AS CAROUSEL W/ MAIN IMAGE -->
+			<div data-tlc="bind $var '.pid'; apply --attrib='data-pid';" class="prodThumbs displayNone">
 				<div onclick="myApp.ext.store_product.u.showPicsInModal({'pid':$(this).parent().attr('data-pid'),'int':'2'});" class="pointer"><img data-tlc="bind $var '.%attribs.zoovy:prod_image2';  if(is $var --notblank){{apply --img --media=$var --width=100 --height=100 --bgcolor='#ffffff' --replace;}};" src="blank.gif" alt="" height="100" width="100"></div>
 				<div onclick="myApp.ext.store_product.u.showPicsInModal({'pid':$(this).parent().attr('data-pid'),'int':'3'});" class="pointer"><img data-tlc="bind $var '.%attribs.zoovy:prod_image3'; if(is $var --notblank){{apply --img --media=$var --width=100 --height=100 --bgcolor='#ffffff' --replace;}};" src="blank.gif" alt="" height="100" width="100"></div>
 				<div onclick="myApp.ext.store_product.u.showPicsInModal({'pid':$(this).parent().attr('data-pid'),'int':'4'});" class="pointer"><img data-tlc="bind $var '.%attribs.zoovy:prod_image4'; if(is $var --notblank){{apply --img --media=$var --width=100 --height=100 --bgcolor='#ffffff' --replace;}};" src="blank.gif" alt="" height="100" width="100"></div>
 			</div>
+	-->	
 		</div>
 	
 		<div class="prodSummaryContainer marginBottom no_underline">
