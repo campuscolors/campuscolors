@@ -131,7 +131,8 @@ header {position:relative;}
 .searchWrapper .productSearchKeyword {height:40px; width:220px; padding:10px; border:none; border-radius:5px 0 0 5px; background-color:#dddddd;}
 .searchWrapper .productSearchButton {height:40px; width:50px; border:1px outset #fbe143; background-color:#fbe143; background-position:12px 7px; background-repeat:no-repeat;}
 
-.headerLower {height:43px; width:100%; background-color:green; color:#ffffff; padding:8px 0 0 0; border-top:2px solid #000000; border-bottom:2px solid #000000; text-align:center;}
+.headerLower {height:43px; width:100%; background-color:green; color:#ffffff; padding:8px 0 0 0; border-top:2px solid #000000; border-bottom:2px solid #000000; text-align:center; overflow:hidden;}
+.shipCarItem {height:32px; width:100%; text-align:center;}
 .headerLower .promoOffer {font-size:1.3em; position:relative; padding:0 0 0 50px;}
 .headerLower .shipLogo {height:30px; width:45px; display:inline-block; background-position:-398px -3px; position:absolute; top:0; left:0;}
 .headerLower .promoCode {font-size:1.125em; position:relative; padding:0 0 0 50px;}
@@ -373,7 +374,8 @@ header {position:relative;}
 	.headerMid {height:90px;}
 	.login, .links, .upperCartWrapper {margin:0.8em auto 0 auto;}
 	.logo {width:55%; display:inline-block;}
-	.headerLower {height:56px; border-top:2px solid #7fb8a1;}
+	.headerLower {height:56px; padding:11px 0 0 0; border-top:2px solid #7fb8a1;}
+	.shipCarItem {height:56px;}
 	.headerLower .promoOffer {padding:0;}
 	.headerLower .shipLogo {height:30px; width:45px; background-position:-74px -1px;}
 	.mobileSlideMenu.standardNav {height:43px; width:100%; position:static; background-color:#ffffff; padding:0; border-bottom:2px solid #cccccc; border-radius:0;}

@@ -78,6 +78,7 @@ var store_cc = function(_app) {
 				
 					$.extend(handlePogs.prototype,_app.ext.store_cc.variations);
 
+					_app.ext.store_cc.u.runHeaderCarousel();
 					_app.ext.store_cc.u.swipeMobileNav($(".mobileSlideMenu"));
 					_app.ext.store_cc.u.runFooterCarousel();
 					
@@ -779,6 +780,40 @@ var store_cc = function(_app) {
 			},
 			
 /* CAROUSEL UTILS */
+			//Turns shipping banners in header into an auto scrolling carousel. 
+			runHeaderCarousel : function() {
+//				_app.u.dump('----Running homepage carousels');	
+				if(screen.width > 750) { var $target = $("[data-ship-carousel='notmobile']"); }
+				else { var $target = $("[data-ship-carousel='mobile']"); }
+				if($target.data('isCarousel'))	{$target.trigger('play');} //only make it a carousel once, but make sure it always scrolls
+				else {
+					$target.data('isCarousel',true);
+					//for whatever reason, caroufredsel needs to be executed after a moment.
+					setTimeout(function(){
+						$target.carouFredSel({
+							direction : "up",
+							width:"100%",
+							items	: {
+								minimum: 1,
+					//			width: "100%" if a width is entered here fred decides it should be different. fred is a rebel.
+							},
+							scroll: {	fx: "fade"	},
+							auto: {
+								delay : 1000,
+								duration : 1500,
+								timeoutDuration : 3000,
+								easing : 'linear',
+								pauseOnHover:"immediate"
+							},
+							swipe: { 
+								onMouse: true,	
+								onTouch: true 
+							}
+						});
+					},2000); 
+				} //HEADER shipping CAROUSEL
+			},
+
 			//Turns best sellers ul on homepage into an auto scrolling carousel. 
 			runHomeCarousel : function($context) {
 //				_app.u.dump('----Running homepage carousels');	
