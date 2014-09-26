@@ -118,7 +118,7 @@ $(document).ready(function(){
 	if(!paramStr || paramStr.indexOf('_escaped_fragment_') < 0){
 		window.myApp = new initApp({
 			"_robotHasGreeted" : false, <!-- versionhere -->
-			"release":"201408.20140926123200",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
+			"release":"201408.20140926123200",  //increment this  with each change. should solve caching issues. format: YYYYMMDDHHMMSS
 			"_clientid":"zmvc", //zmvc for store app, 1pc for one page checkout.
 			"baseURL":baseURL, //used in non-local mode.
 			"checkoutAuthMode" : "active",//can be passive, active or required
@@ -1294,17 +1294,6 @@ this will likely become more flexible in the future. ###
 				See all items from <a data-tlc="bind $var '.%attribs.user:team_long'; if(is $var --notblank) {{apply --append;}};" href="#!team-apparel-merchandise/duke-blue-devils-apparel-merchandise.html" class="uRedLink"></a>
 				<img src="images/duke-main-clear.jpg" alt="">
 			</div>
-	<!-- ORIG IMAGE FUNCTIONS		TODO : REMOVE IF ZOOM IS APPROVED
-			<div data-app-click="quickstart|productPicsInModalShow" class="pointer clearfix">
-				<div data-tlc="bind $var '.%attribs.zoovy:prod_is_tags'; quickstart#tags --legacy;" class="tagsContainer"></div>
-				<img data-tlc="bind $var '.%attribs.zoovy:prod_image1'; if(is $var --notblank){{apply --img --media=$var --width=450 --height=450 --bgcolor='#ffffff' --replace;}};" src="blank.gif" class="prodBigImage" alt="" height="450" width="450">
-			</div>
-			<div data-tlc="bind $var '.pid'; apply --attrib='data-pid';" class="prodThumbs displayNone">
-				<div onclick="myApp.ext.store_product.u.showPicsInModal({'pid':$(this).parent().attr('data-pid'),'int':'2'});" class="pointer"><img data-tlc="bind $var '.%attribs.zoovy:prod_image2';  if(is $var --notblank){{apply --img --media=$var --width=100 --height=100 --bgcolor='#ffffff' --replace;}};" src="blank.gif" alt="" height="100" width="100"></div>
-				<div onclick="myApp.ext.store_product.u.showPicsInModal({'pid':$(this).parent().attr('data-pid'),'int':'3'});" class="pointer"><img data-tlc="bind $var '.%attribs.zoovy:prod_image3'; if(is $var --notblank){{apply --img --media=$var --width=100 --height=100 --bgcolor='#ffffff' --replace;}};" src="blank.gif" alt="" height="100" width="100"></div>
-				<div onclick="myApp.ext.store_product.u.showPicsInModal({'pid':$(this).parent().attr('data-pid'),'int':'4'});" class="pointer"><img data-tlc="bind $var '.%attribs.zoovy:prod_image4'; if(is $var --notblank){{apply --img --media=$var --width=100 --height=100 --bgcolor='#ffffff' --replace;}};" src="blank.gif" alt="" height="100" width="100"></div>
-			</div>
-	-->	
 		</div>
 	
 		<div class="prodSummaryContainer marginBottom no_underline">
@@ -1446,7 +1435,7 @@ this will likely become more flexible in the future. ###
 		</div> <!-- //tabbedProductContentTD -->
 		<!-- TODO : uses customer related list generater. remove standard one, once the custom one is completed.
 		<div class="prodlistRelatedContainer hidePhone showTabletBlock">
-			<ul data-tlc="bind $var '.%attribs.zoovy:related_products'; store_prodlist#productlist  --hidePagination='true' --hideSummary='true' --prepend='<h2>Similar Items</h2>' --withReviews='1' --templateid='productListTemplate'  --legacy; apply --append;" class="listStyleNone fluidList clearfix noPadOrMargin productList ccList"></ul>
+			<ul data-tlc="bind $var '.%attribs.zoovy:related_products'; store_prodlist#productlist  - -hidePagination='true' - -hideSummary='true' - -prepend='<h2>Similar Items</h2>' - -withReviews='1' - -templateid='productListTemplate'  - -legacy; apply - -append;" class="listStyleNone fluidList clearfix noPadOrMargin productList ccList"></ul>
 		</div>
 		-->
 		<div class="prodlistRelatedContainer">
@@ -1477,7 +1466,7 @@ this will likely become more flexible in the future. ###
 
 		<div class="imageContainer">
 			<div data-tlc="bind $var '.%attribs.zoovy:prod_is_tags'; quickstart#tags --legacy; if (is $var --notblank;) {{apply --append;}};" class="tagsContainer"></div>
-			<!-- <div data-tlc="bind $var '.pid'; quickstart#addpicslider  --legacy; apply --append;"><img data-tlc="bind $var '.%attribs.zoovy:prod_image1'; apply --img --media=$var --width=240 --height=240 --bgcolor='#ffffff' --replace;" src="blank.gif" class="prodBigImage" alt="" height="240" width="240"></div> -->
+			<!-- <div data-tlc="bind $var '.pid'; quickstart#addpicslider  - -legacy; apply - -append;"><img data-tlc="bind $var '.%attribs.zoovy:prod_image1'; apply - -img - -media=$var - -width=240 - -height=240 - -bgcolor='#ffffff' - -replace;" src="blank.gif" class="prodBigImage" alt="" height="240" width="240"></div> -->
 			<img data-tlc="bind $var '.%attribs.zoovy:prod_image1'; apply --img --media=$var --width=400 --height=400 --bgcolor='#ffffff' --replace;" src="blank.gif" class="prodBigImage" alt="" height="240" width="240">	
 		</div>
 
@@ -1994,7 +1983,7 @@ if you change these, you should move them above this comment so that when you (o
 			<div class="displayNone textContentArea" id="locationsArticle">
 				<h1>STORE LOCATIONS</h1>
 				<div class="locationBlock">
-					<img src="images/locations/water-tower_290x163.jpg" alt="Downtown Chicago" width="290" height="163" data-apptimize="embed"></img>
+					<img src="images/locations/water-tower_290x163.jpg" alt="Downtown Chicago" width="290" height="163" data-apptimize="embed">
 					<h4>Downtown Chicago</h4>
 					<p>
 						835 N Michigan Ave.<br>
@@ -2008,14 +1997,14 @@ if you change these, you should move them above this comment so that when you (o
 						Monday &#45; Friday 10 am &#45; 9 pm<br>
 						Saturday 10 am &#45; 9 pm<br>
 						Sunday 11 am &#45; 6 pm<br>
-						<a href="https://maps.google.com/maps?q=Water+Tower+Place,+835+N+Michigan+Ave,+Chicago,+IL&hl=en&sll=46.44186,-93.36129&sspn=12.311272,19.753418&oq=835+N+Michigan+Ave.,+Water&t=m&z=17&iwloc=A" target="_blank" rel="noindex,nofollow">
+						<a href="https://maps.google.com/maps?q=Water+Tower+Place,+835+N+Michigan+Ave,+Chicago,+IL&amp;hl=en&amp;sll=46.44186,-93.36129&amp;sspn=12.311272,19.753418&amp;oq=835+N+Michigan+Ave.,+Water&amp;t=m&amp;z=17&amp;iwloc=A" target="_blank" rel="nofollow">
 							Map
 						</a>
 					</p>
 				</div>
 				
 				<div class="locationBlock">
-					<img src="images/locations/highland-park_290x218.jpg" alt="Highland Park" width="290" height="218" data-apptimize="embed"></img>
+					<img src="images/locations/highland-park_290x218.jpg" alt="Highland Park" width="290" height="218" data-apptimize="embed">
 					<h4>Highland Park</h4>
 					<p>
 						599 Central Ave.<br>
@@ -2028,14 +2017,14 @@ if you change these, you should move them above this comment so that when you (o
 						Monday &#45; Friday 10 am &#45; 5&#58;30 pm<br>
 						Saturday 10 am &#45; 5 pm<br>
 						Sunday Noon &#45; 4 pm<br>
-						<a href="https://maps.google.com/maps/place?ftid=0x880fc1a34dddc39d:0xdf1f29e2c3e20e0&q=599+Central+Avenue,+Highland+Park,+IL&hl=en&dtab=0&ie=UTF8&ll=42.190262,-87.805052&spn=0.000016,0.000021&t=m&z=16&vpsrc=0" target="_blank" rel="noindex,nofollow">
+						<a href="https://maps.google.com/maps/place?ftid=0x880fc1a34dddc39d:0xdf1f29e2c3e20e0&amp;q=599+Central+Avenue,+Highland+Park,+IL&amp;hl=en&amp;dtab=0&amp;ie=UTF8&amp;ll=42.190262,-87.805052&amp;spn=0.000016,0.000021&amp;t=m&amp;z=16&amp;vpsrc=0" target="_blank" rel="nofollow">
 							Map
 						</a>
 					</p>
 				</div>
 				
 				<div class="locationBlock">
-					<img src="images/locations/kildeer_290x218.jpg" alt="Kildeer" width="290" height="218" data-apptimize="embed"></img>
+					<img src="images/locations/kildeer_290x218.jpg" alt="Kildeer" width="290" height="218" data-apptimize="embed">
 					<h4>Kildeer</h4>
 					<p>
 						20291 N. Rand Rd.<br>
@@ -2048,14 +2037,14 @@ if you change these, you should move them above this comment so that when you (o
 					<p>
 						Monday &#45; Saturday 10 am &#45; 6 pm<br>
 						Sunday 11 am &#45; 5 pm<br>
-						<a href="https://maps.google.com/maps?q=20291+N+Rand+Rd,+Kildeer,+IL&hl=en&ll=42.158337,-88.045131&spn=0.006466,0.009645&sll=46.44186,-93.36129&sspn=12.311272,19.753418&oq=20291+N.+Rand+Rd&hnear=20291+N+Rand+Rd,+Kildeer,+Illinois+60074&t=m&z=17" target="_blank" rel="noindex,nofollow">
+						<a href="https://maps.google.com/maps?q=20291+N+Rand+Rd,+Kildeer,+IL&amp;hl=en&amp;ll=42.158337,-88.045131&amp;spn=0.006466,0.009645&amp;sll=46.44186,-93.36129&amp;sspn=12.311272,19.753418&amp;oq=20291+N.+Rand+Rd&amp;hnear=20291+N+Rand+Rd,+Kildeer,+Illinois+60074&amp;t=m&amp;z=17" target="_blank" rel="nofollow">
 							Map
 						</a>
 					</p>
 				</div>
 				
 				<div class="locationBlock">
-					<img src="images/locations/hinsdale_290x218.jpg" alt="Hinsdale" width="290" height="218" data-apptimize="embed"></img>
+					<img src="images/locations/hinsdale_290x218.jpg" alt="Hinsdale" width="290" height="218" data-apptimize="embed">
 					<h4>Hinsdale</h4>
 					<p>
 						777 N. York Rd.<br>
@@ -2069,14 +2058,14 @@ if you change these, you should move them above this comment so that when you (o
 						Monday &#45; Friday 10 am &#45; 5&#58;30 pm<br>
 						Saturday 10 am &#45; 5 pm<br>
 						Sunday 10 am &#45; 2 pm<br>
-						<a href="http://maps.google.com/maps?q=777+N.+York+Rd.+Gateway+Square+Hinsdale,+IL+60521&hl=en&sll=42.186128,-87.800074&sspn=0.01113,0.01929&z=14" target="_blank" rel="noindex,nofollow">
+						<a href="http://maps.google.com/maps?q=777+N.+York+Rd.+Gateway+Square+Hinsdale,+IL+60521&amp;hl=en&amp;sll=42.186128,-87.800074&amp;sspn=0.01113,0.01929&amp;z=14" target="_blank" rel="nofollow">
 							Map
 						</a>
 					</p>
 				</div>
 				
 				<div class="locationBlock">
-					<img src="images/locations/mequon_290x218.jpg" alt="Mequon Wisconsin" width="290" height="218" data-apptimize="embed"></img>
+					<img src="images/locations/mequon_290x218.jpg" alt="Mequon Wisconsin" width="290" height="218" data-apptimize="embed">
 					<h4>Mequon&#45;Wisconsin</h4>
 					<p>
 						10906 N. Port Washington Rd.<br>
@@ -2089,7 +2078,7 @@ if you change these, you should move them above this comment so that when you (o
 						Monday &#45; Friday 10 am &#45; 6 pm<br>
 						Saturday 10 am &#45; 5 pm<br>
 						Sunday 11 am &#45; 4 pm<br>
-						<a href="http://goo.gl/maps/OtLn2" target="_blank" rel="noindex,nofollow">
+						<a href="http://goo.gl/maps/OtLn2" target="_blank" rel="nofollow">
 							Map
 						</a>
 					</p>
@@ -2324,7 +2313,7 @@ subscribeListsArticle is used for authenticated buyers.
 					<input type="hidden" name="method" value="unsecure">
 					<input type="hidden" name="loginCallbackinline" id="loginCallbackinline" value=''><!-- used to save a callback action in -->
 					<input type="email" class="zform_textbox zform_email" required="required" name="login" value='' size="39" placeholder="E-mail address" id="modalLoginLogin">
-					<input type="password" class="zform_textbox zform_password" required="required" name="password" value='' size="39" placeholder="Password" id="modalLoginpassword">
+					<input type="password" class="zform_textbox zform_password" required="required" name="password" value='' size="39" placeholder="Password" id="inlineLoginpassword">
 					<input type="submit" value="SIGN IN" class="applyButton ccButton">
 				</form>
 				<div id="recoverPasswordContainer" class="marginBottom marginTop recoverPasswordContainer">
@@ -2645,7 +2634,7 @@ This is the template used both within a dialog and inline, unless implicitly ove
 		<div data-tlc="bind $var '.sku'; format --prepend='Sku: '; if (is $var --notblank;) {{apply --append;}};" class="ztable_row_small stid"></div>
 
 		<div>
-			<!-- qty: <input data-tlc="cco#cartitemqty  --legacy;" class="qtyInput numberInput" data-app-change="cco|cartItemUpdateExec" data-bind="format:cartItemQty;extension:cco;useParentData:true;" name="quantity" type="number"> -->
+			<!-- qty: <input data-tlc="cco#cartitemqty  - -legacy;" class="qtyInput numberInput" data-app-change="cco|cartItemUpdateExec" data-bind="format:cartItemQty;extension:cco;useParentData:true;" name="quantity" type="number"> -->
 			<span class="displayNone" data-cart-show='select'>qty: </span><span data-select-container="1"><!-- select list added here through store_cc#cartitemqty on input tag below--></span>
 			<span class="displayNone" data-cart-show='asm'>qty: </span><input data-tlc="bind $var '.'; store_cc#cartitemqty;" class="qtyInput numberInput" data-app-change="cco|cartItemUpdateExec" name="quantity" type="number">
 			<button class="displayNone">update</button><!-- here to stop 'enter' in input above from closing modal -->
@@ -2960,7 +2949,7 @@ The 'data-action' attribute is used to assign an onclick.
 				please choose this option.
 			</p>
 			<a href="#!customer/createaccount/" class="ccButton ui-widget ui-button">Create an Account</a>
-				<!-- USE THIS BUTTON WHEN CREATING WITH A MODAL (will need createAccount template added as well)
+				--><!-- USE THIS BUTTON WHEN CREATING WITH A MODAL (will need createAccount template added as well)
 			<button class='modalCreateButton tertiaryColorHover' onClick="app.ext.acctCreate.a.showAccountCreate();">Create an Account</button> -->
 		<!-- </div>
 		-->
