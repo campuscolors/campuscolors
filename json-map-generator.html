@@ -42,7 +42,7 @@
 				dump(pages);
 			}
 			rootCat["pages"] = pages;
-			var output = JSON.stringify(rootCat);
+			var output = JSON.stringify(rootCat,null,"\t");
 			//file download solution?
 			//	var url = 'data:text/json;charset=utf8,' + encodeURIComponent(output);
 			//	window.open(url, '_blank');

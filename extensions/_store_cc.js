@@ -1202,6 +1202,7 @@ var store_cc = function(_app) {
 						$(this).prop('checked',false);
 					}
 				});
+				dump('length:'); dump($('[data-reset-form]',$form).length);
 				$('[data-reset-form]',$form).trigger('click');
 			}
 		
