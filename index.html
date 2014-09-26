@@ -118,7 +118,7 @@ $(document).ready(function(){
 	if(!paramStr || paramStr.indexOf('_escaped_fragment_') < 0){
 		window.myApp = new initApp({
 			"_robotHasGreeted" : false, <!-- versionhere -->
-			"release":"201408.20140924123200",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
+			"release":"201408.20140926020600",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
 			"_clientid":"zmvc", //zmvc for store app, 1pc for one page checkout.
 			"baseURL":baseURL, //used in non-local mode.
 			"checkoutAuthMode" : "active",//can be passive, active or required
@@ -1289,6 +1289,10 @@ this will likely become more flexible in the future. ###
 			<div data-tlc="bind $var '.%attribs.zoovy:prod_is_tags'; quickstart#tags --legacy;" class="tagsContainer"></div>
 			<div class='pointer clearfix prodPagePid'  data-bind='var:product(pid);format:assignAttribute; attribute:data-pid;'>
 				<a data-tlc="bind $href '.%attribs.zoovy:prod_image1'; bind $var '.'; tools_zoom#imagezoom --data=$var --isthumbs=0 --hrefattr=$href --w=570 --h=570 --legacy;"  data-height='450' data-width='450' data-zheight='1200' data-zwidth='1200'></a> <!-- add if thumbs needs later: data-theight='50' data-twidth='50' -->
+			</div>
+			<div data-tlc="bind $var '.%attribs.user:team_long'; if(is $var --notblank) {{apply --show;}};" class="center logoUpSell">
+				See all items from <a data-tlc="bind $var '.%attribs.user:team_long'; if(is $var --notblank) {{apply --append;}};" href="#!team-apparel-merchandise/duke-blue-devils-apparel-merchandise.html" class="uRedLink"></a>
+				<img src="images/duke-main-clear.jpg" alt="">
 			</div>
 	<!-- ORIG IMAGE FUNCTIONS		TODO : REMOVE IF ZOOM IS APPROVED
 			<div data-app-click="quickstart|productPicsInModalShow" class="pointer clearfix">

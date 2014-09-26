@@ -255,6 +255,7 @@ header {position:relative;}
 /* productTemplate */
 .imageContainer {width:300px; margin:0 auto; padding:0;}
 .imageContainer img {height:auto; max-width:100%;}
+.logoUpSell {line-height:50px;}
 .productPageLink {padding:6px 0 0 0; color:#781c2b;}
 .prodSummaryContainer {width:300px; margin:10px auto; text-align:center;}
 .productPage .basePrice {color:#194835; font-size:3em;}
