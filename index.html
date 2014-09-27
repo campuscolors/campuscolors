@@ -1318,14 +1318,12 @@ this will likely become more flexible in the future. ###
 				</div>
 
 				<form data-tlc="bind $var '.pid'; store_product#atcform  --legacy; apply --append;" class="prodViewerAddToCartForm clearfix marginBottom" action="#" data-app-submit="quickstart|productAdd2Cart"> <!-- to show cart inline add: data-show="inline" -->
-					<div class="variationWrapper center">
-						<fieldset data-tlc="bind $var '.pid'; store_product#atcvariations  --legacy; apply --append;" class="borderNone inLine"></fieldset>
-						<!-- <fieldset data-tlc="bind $var '.'; store_product#atcquantityinput  - -defaultvalue='1' - -legacy;" class="borderNone inLine"></fieldset> -->
-						<fieldset data-tlc="bind $var '.'; store_cc#atcquantityinput  --defaultvalue='1';" class="borderNone floatRight"></fieldset>
-					</div>
-					<div class='marginBottom'>
-						<input data-tlc="bind $var '.pid'; store_product#addtocartbutton  --legacy;" value="Add to Cart" class="applyButton addtocartbutton yearbook displayNone" type="submit">
-						<div data-tlc="bind $var '.'; store_cc#getitwhileitlasts;" class="floatRight marginRight displayNone">
+					<fieldset data-tlc="bind $var '.pid'; store_product#atcvariations  --legacy; apply --append;" class="borderNone inLine variationsWrapper"></fieldset>
+					<!-- <fieldset data-tlc="bind $var '.'; store_product#atcquantityinput  - -defaultvalue='1' - -legacy;" class="borderNone inLine"></fieldset> -->
+					<div class='qtyATCWraper'>
+						<fieldset data-tlc="bind $var '.'; store_cc#atcquantityinput  --defaultvalue='1';" class="borderNone floatLeft"></fieldset>
+						<input data-tlc="bind $var '.pid'; store_product#addtocartbutton  --legacy;" value="Add to Cart" class="applyButton addtocartbutton yearbook displayNone floatRight" type="submit">
+						<div data-tlc="bind $var '.'; store_cc#getitwhileitlasts;" class="displayNone center clear marginTop">
 							<h3>ORDER SOON!</h3>
 							<span class="leftInStock"></span>
 						</div>

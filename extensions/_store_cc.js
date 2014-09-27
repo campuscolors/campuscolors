@@ -1261,9 +1261,10 @@ Variations
 					while (j < len) {
 						if(pog['@options'][j]['v']) {
 							var pogval  = (pog['@options'][j]['v']);
+							var prompt = (pog['@options'][j]['prompt']);
 							dump(pogval);
-							var $sizeOption = $("<span class='sizeOption pointer' data-pogval='"+pogval+"'></span>");
-							$sizeOption.text(pogval);
+							var $sizeOption = $("<div class='sizeOption pointer floatLeft' data-pogval='"+pogval+"'></div>");
+							$sizeOption.text(prompt);
 							$sizeOption.click(function() {
 								var $this = $(this);
 								var thisSelection = $this.attr('data-pogval');

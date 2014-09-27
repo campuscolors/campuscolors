@@ -264,13 +264,14 @@ header {position:relative;}
 .moneyAfter {height:26px; width:22px; background-position:-431px -116px; position:absolute; top:10px; right:30%; margin:0 -15% 0 0; display:inline-block;}
 .productPage .priceDesc {font-size:0.5em; display:none;}
 .variation_SZ .label_select {display:none;}
-.sizeOption, .qtySelect {height:35px; min-width:60px; color:#ffffff; background-color:#781c2b; text-align:center; font-weight:bold; padding:6px 2px; display:inline-block; margin:10px 5px;}
+.sizeOption, .qtySelect {color:#ffffff; background-color:#781c2b; padding:10px; text-align:center; font-weight:bold; margin:5px;}
 .sizeOption.selectedSize {color:#781c2b; background-color:#ffffff; border:1px solid #781c2b;}
 .prodViewerAddToCartForm .inLine {display:inline;}
-.variationWrapper {width:100%;}
+.prodViewerAddToCartForm .variationsWrapper {padding:0 15px;}
+.qtyATCWraper {width:90%; margin:0 auto;}
 .selectWrapper {width:61px; position:relative; overflow:hidden;}
 .selectWrapper .sprite {height:40px; width:20px; position:absolute; top:10px; right:5px; background-position:0 0;}
-.qtySelect {min-width:74px; color:#781c2b; background:url("images/sprite_500x500.png") no-repeat scroll 25px -463px #ffffff; border:1px solid #781c2b; text-align:left;}
+.qtySelect {height:35px; min-width:74px; margin:10px 5px; padding:6px 2px; color:#781c2b; display:inline-block; background:url("images/sprite_500x500.png") no-repeat scroll 25px -463px #ffffff; border:1px solid #781c2b; text-align:left;}
 .prodViewerAddToCartForm .numberInput {height:40px; border:1px inset #000000; text-align:center;}
 .productPage .addtocartbutton {height:50px; width:290px; color:#000000; font-size:2.1em; border-top:2px outset #fbe143; border-right:2px outset #000000; border-bottom:2px outset #000000; border-left:2px outset #fbe143; box-shadow:2px 2px 0 0 #cccccc; border-radius:0;}
 .productPage .addtocartbutton.orderSoon {width:170px; font-size:1.9em;}
@@ -444,7 +445,7 @@ header {position:relative;}
 	.prodSummaryContainer {padding:0 0 0 5%;}
 	.moneyBefore, .moneyAfter {top:20px;}
 	.prodSummaryUpper, .latency, .prodSummaryLower {width:auto; margin-bottom:20px; background-color:#eeeeee; border:2px solid #cccccc; box-shadow:2px 2px 0 0 #cccccc;}
-	.variationWrapper {width:90%;}
+	.qtyATCWraper {width:80%;}
 	.productPage .addtocartbutton.orderSoon {width:160px; font-size:1.5em;}
 	.latency, .fitTip {padding:20px;}
 	.latency div[data-slide="toggle"] {margin:1em 0 0 0; padding:0;}
