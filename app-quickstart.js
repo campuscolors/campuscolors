@@ -904,6 +904,7 @@ fallback is to just output the value.
 					var savings = (( msrp - price ) / msrp) * 100;
 					o = savings.toFixed(0)+'%';
 					$tag.append(o);
+/*campus*/	$tag.append($("<span class='priceDesc'>YOU SAVE</span>"));
 					}
 				else	{
 					$tag.hide(); //if msrp > price, don't show savings because it'll be negative.

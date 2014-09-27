@@ -260,9 +260,12 @@ header {position:relative;}
 .prodSummaryContainer {width:300px; margin:10px auto; text-align:center;}
 .productPage .basePrice {color:#194835; font-size:3em;}
 .priceContainer {position:relative;}
+.prodMSRP {color:#cccccc; color: #ccc; display: inline-block; font-size: 2.0em; margin: 10px 0 0 10px; text-align: center;}
+.basePrice {display:inline-block;}
 .moneyBefore {height:26px; width:22px; background-position:-403px -116px; position:absolute; top:10px; left:30%; margin:0 0 0 -15%; display:inline-block;}
 .moneyAfter {height:26px; width:22px; background-position:-431px -116px; position:absolute; top:10px; right:30%; margin:0 -15% 0 0; display:inline-block;}
-.productPage .priceDesc {font-size:0.5em; display:none;}
+.savingsPercentage {display: inline-block; color:#781c2b; font-size: 2em; margin: 10px 20px 0 0; text-align: center;}
+.productPage .priceDesc {font-size:0.5em; display:block; color:#000000; font-weight:normal;}
 .variation_SZ .label_select {display:none;}
 .sizeOption, .qtySelect {color:#ffffff; background-color:#781c2b; padding:10px; text-align:center; font-weight:bold; margin:5px;}
 .sizeOption.selectedSize {color:#781c2b; background-color:#ffffff; border:1px solid #781c2b;}
@@ -443,6 +446,8 @@ header {position:relative;}
 	.imageContainer, .prodSummaryContainer {width:50%; float:left;}
 	.imageContainer {padding:0 5% 0 0;}
 	.prodSummaryContainer {padding:0 0 0 5%;}
+	.prodMSRP, .savingsPercentage {font-size:1.5em;}
+	.basePrice {font-size:2.5em;}
 	.moneyBefore, .moneyAfter {top:20px;}
 	.prodSummaryUpper, .latency, .prodSummaryLower {width:auto; margin-bottom:20px; background-color:#eeeeee; border:2px solid #cccccc; box-shadow:2px 2px 0 0 #cccccc;}
 	.qtyATCWraper {width:80%;}
@@ -519,6 +524,8 @@ header {position:relative;}
 	.splashBanner p {left:140px;}
 	
 	.prodViewerContainer {width:908px;}
+	.prodMSRP, .savingsPercentage {font-size:2em;}
+	.basePrice {font-size:3em;}
 	.sizeOption:hover {background:#b75970;}
 	.sizeOption.selectedSize:hover{background:#ffffff;}
 	.productPage .addtocartbutton:hover {background:#781c2b; color:#ffffff; border-left:2px outset #b75970; border-top:2px outset #b75970;}

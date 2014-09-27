@@ -118,7 +118,7 @@ $(document).ready(function(){
 	if(!paramStr || paramStr.indexOf('_escaped_fragment_') < 0){
 		window.myApp = new initApp({
 			"_robotHasGreeted" : false, <!-- versionhere -->
-			"release":"201408.20140926123200",  //increment this  with each change. should solve caching issues. format: YYYYMMDDHHMMSS
+			"release":"201408.20140927000000",  //increment this  with each change. should solve caching issues. format: YYYYMMDDHHMMSS
 			"_clientid":"zmvc", //zmvc for store app, 1pc for one page checkout.
 			"baseURL":baseURL, //used in non-local mode.
 			"checkoutAuthMode" : "active",//can be passive, active or required
@@ -1300,14 +1300,14 @@ this will likely become more flexible in the future. ###
 
 			<div class="yearbook greyGradient titleHead hidePhone showTabletBlock">PRODUCT DETAILS</div>
 			<div class="prodSummaryUpper">
-				<div class="priceContainer marginBottom">
-					<span class="sprite moneyBefore"></span>
-					<h4 data-tlc="bind $var '.%attribs.zoovy:base_price'; if (is $var --notblank;) {{format --currency='USD'; format --append='<span class=&quot;priceDesc&quot;>Our Price: </span>'; apply --append;}};" class="basePrice"></h4>
-					<span class="sprite moneyAfter"></span>
-					<h5 data-tlc="bind $var '.%attribs.zoovy:prod_msrp';  if (is $var --notblank;) {{format --currency='USD'; format --prepend='MSRP: ';  apply --append;}};" class="prodMSRP"></h5>
-					<span class="savings">
-						<span data-useparentdata='1' data-tlc="quickstart#priceretailsavingsdifference  --legacy; apply --append;" class="savingsDifference"></span>
-						<span data-useparentdata='1' data-tlc="quickstart#priceretailsavingspercentage  --legacy; apply --append;" class="savingsPercentage"></span>
+				<div class="priceContainer marginBottom marginTop">
+					<h5 data-tlc="bind $var '.%attribs.zoovy:prod_msrp';  if (is $var --notblank;) {{format --currency='USD'; format --append='<span class=&quot;priceDesc&quot;>WAS</span>' apply --append;}};" class="prodMSRP floatLeft"></h5>
+					<span data-tlc="bind $var '.%attribs.zoovy:prod_msrp';  if (is $var --notblank;) {{apply --hide;}};" class="sprite moneyBefore"></span>
+					<h4 data-tlc="bind $var '.%attribs.zoovy:base_price'; if (is $var --notblank;) {{format --currency='USD'; format --append='<span class=&quot;priceDesc&quot;>OUR PRICE</span>'; apply --append;}};" class="basePrice"></h4>
+					<span data-tlc="bind $var '.%attribs.zoovy:prod_msrp';  if (is $var --notblank;) {{apply --hide;}};" class="sprite moneyAfter"></span>
+					<span class="savings floatRight">
+						<span data-useparentdata='1' data-tlc="quickstart#priceretailsavingsdifference - -legacy; apply - -append;" class="savingsDifference"></span>
+						<span data-useparentdata='1' data-tlc="bind $var '.%attribs'; quickstart#priceretailsavingspercentage --legacy; apply --append;" class="savingsPercentage"></span>
 					</span>
 				</div>
 				
