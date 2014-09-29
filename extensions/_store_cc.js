@@ -121,11 +121,11 @@ var store_cc = function(_app) {
 					function loadPage(id, successCallback, failCallback){
 			dump('loadPage id:'); dump(id);
 					var pageObj = _app.ext.store_filter.vars.filterPageLoadQueue[id];
-			dump(pageObj);
-//					dump('pageObj passed to loadPage in store_filter'); dump(pageObj);
+					dump('pageObj passed to loadPage in store_filter'); dump(pageObj);
 					if(pageObj){
 						$.getJSON(pageObj.jsonPath+"?_v="+(new Date()).getTime(), function(json){
 							_app.ext.store_filter.filterData[pageObj.id] = json;
+							dump('this is the json that was stored in filterData'); dump(_app.ext.store_filter.filterData[pageObj.id]);
 							if(typeof successCallback == 'function'){
 								successCallback();
 								}
@@ -152,6 +152,46 @@ var store_cc = function(_app) {
 						return e.id == routeObj.params.id;
 					})[0]);
 //					dump('routeObj.params.dataset');  dump(routeObj.params.dataset.optionList);
+					
+					var optStrs = routeObj.params.dataset.optionList;
+					routeObj.params.dataset.options = routeObj.params.dataset.options || {};
+					for(var i in optStrs){
+//						dump('optStrs[i]'); dump(optStrs[i]);
+						var o = optStrs[i];
+						if(_app.ext.store_filter.vars.elasticFields[o]){
+							routeObj.params.dataset.options[o] = $.extend(true, {}, _app.ext.store_filter.vars.elasticFields[o]);
+							if(routeObj.hashParams[o]){
+								var values = routeObj.hashParams[o].split('|');
+								for(var i in routeObj.params.dataset.options[o].options){
+									var option = routeObj.params.dataset.options[o].options[i];
+									if($.inArray(option.v, values) >= 0){
+										option.checked = "checked";
+										}
+									}
+								}
+							}
+						else {
+							dump("Unrecognized option "+o+" on filter page "+routeObj.params.id);
+							}
+						}
+					routeObj.params.loadFullList = _app.ext.seo_robots.u.isRobotPresent();
+					showContent('static',routeObj.params);
+					}
+					
+					
+					function showSubPage(routeObj,parentID){
+					dump('START showSubPage'); dump(routeObj);
+dump(parentID); dump(_app.ext.store_filter.filterData);
+					var filterData = _app.ext.store_filter.filterData[parentID]; //gets the top level data
+			dump('filtterData after gets top level data'); dump(filterData); dump(routeObj.params.id);
+					filterData = $.grep(filterData.pages,function(e,i){
+						return e.id == routeObj.params.id;	//gets mid level data
+					}[0]);
+			dump('got past first grep');
+					filterData = $.grep(filterData.pages,function(e,i){
+						return e.id == routeObj.params.end;	//gets the lowest level data
+					}[0]);
+					filterData = $.extend(true, {}, filterData);	//deep copy to avoid pass by reference bugs
 					
 					var optStrs = routeObj.params.dataset.optionList;
 					routeObj.params.dataset.options = routeObj.params.dataset.options || {};
@@ -241,6 +281,23 @@ var store_cc = function(_app) {
 						}
 					});
 					
+					_app.router.addAlias('subfilter', function(routeObj){
+						//decides if filter JSON is in local var or if it needs to be retrieved
+						var filterpage = routeObj.pagefilter;
+						if(_app.ext.store_filter.filterData[filterpage]){
+							dump('RUNNING showPage');
+							showSubPage(routeObj,filterpage);
+						}
+						else {
+							dump('RUNNING loadPage');
+							loadPage(
+								filterpage, 
+								function(){showSubPage(routeObj,filterpage);}, 
+								function(){showContent('404');}
+							);
+						}
+					});
+					
 //APPEND
 					//Adds the listener for the url.  The route needs to match the page pushed into robots below
 					_app.router.appendHash({'type':'exact','route':'ncaa-apparel-merchandise/', 'callback':function(routeObj){
@@ -296,8 +353,8 @@ var store_cc = function(_app) {
 					_app.router.appendHash({'type':'match','route':'test-ncaa-team-apparel-merchandise/{{id}}/','pagefilter':'test-ncaa-team-apparel-merchandise','callback':'subcat'});
 			//		_app.ext.store_cc.u.pushFilter('test-ncaa-team-apparel-merchandise');
 					
-					_app.router.appendHash({'type':'match','route':'test-ncaa-team-apparel-merchandise/{{id}}/{{end}}*','pagefilter':'test-ncaa-team-apparel-merchandise','callback':'filter'});
-			//		_app.ext.store_cc.u.pushFilter('test-ncaa-team-apparel-merchandise');
+					_app.router.appendHash({'type':'match','route':'test-ncaa-team-apparel-merchandise/{{id}}/{{end}}/','pagefilter':'test-ncaa-team-apparel-merchandise','callback':'subfilter'});
+					_app.ext.store_cc.u.pushFilter('test-ncaa-team-apparel-merchandise');
 /* test sub-sub append*/					
 					
 					_app.router.appendHash({'type':'exact','route':'nike-gear/', 'callback':function(routeObj){
