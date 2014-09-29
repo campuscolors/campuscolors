@@ -119,7 +119,9 @@ var store_cc = function(_app) {
 					
 					
 					function loadPage(id, successCallback, failCallback){
+			dump('loadPage id:'); dump(id);
 					var pageObj = _app.ext.store_filter.vars.filterPageLoadQueue[id];
+			dump(pageObj);
 //					dump('pageObj passed to loadPage in store_filter'); dump(pageObj);
 					if(pageObj){
 						$.getJSON(pageObj.jsonPath+"?_v="+(new Date()).getTime(), function(json){
@@ -180,14 +182,57 @@ var store_cc = function(_app) {
 					
 	//TODO : TEST PUSH TO ROBOTS @ THE END OF EACH APPENDhASH
 					
-//ALIAS					
+//ALIAS				
+					_app.router.addAlias('subcat', function(routeObj) {
+						dump('START subcat alias: '); dump(routeObj);
+						var a = routeObj.pagefilter;
+						var b = routeObj.params.id+'/';
+						dump('b'); dump(b); 
+			//			showContent('static',{'templateid':'splashPageTemplate','id':b,'dataset':_app.ext.store_cc.vars[a.b]});
+						$.getJSON("filters/apparel/"+a+".json?_v="+(new Date()).getTime(), function(json){
+								dump('THE SUBCAT JSON IS...'); dump(json);
+								var dataset = $.extend(true, {}, $.grep(json.pages,function(e,i){
+									return e.id == b;
+								})[0]);
+								dump('GREP IS: '); dump(dataset);
+								showContent('static',{'templateid':'splashPageTemplate','id':routeObj.params.id,'dataset':dataset});
+							})
+							.fail(function() {
+								dump('FILTER DATA FOR ' + a + 'COULD NOT BE LOADED.');
+								showContent('404');
+							});
+			/*			
+						getCatJSON : function(route) {
+							dump('START getCatJSON');
+							var route = route.split('/')[0];
+							if(_app.ext.store_cc.vars[route]) {
+								dump('IT WAS ALREADY THERE...');
+								showContent('static',{'templateid':'splashPageTemplate','id':data.id,'dataset':_app.ext.store_cc.vars[route]});
+							}
+							else {
+								$.getJSON("filters/apparel/"+route+".json?_v="+(new Date()).getTime(), function(json){
+									dump('THE CAT JSON IS...'); dump(json);
+									showContent('static',{'templateid':'splashPageTemplate','id':json.id,'dataset':json});
+								})
+								.fail(function() {
+									dump('FILTER DATA FOR ' + route + 'COULD NOT BE LOADED.');
+									showContent('404');
+								});
+							}
+						},
+				*/		
+					});
+	
 					_app.router.addAlias('filter', function(routeObj){
+			dump('filter alias routeObj: '); dump(routeObj);
 						//decides if filter JSON is in local var or if it needs to be retrieved
 						var filterpage = routeObj.pagefilter;
 						if(_app.ext.store_filter.filterData[filterpage]){
+							dump('RUNNING showPage');
 							showPage(routeObj,filterpage);
 						}
 						else {
+							dump('RUNNING loadPage');
 							loadPage(
 								filterpage, 
 								function(){showPage(routeObj,filterpage);}, 
@@ -242,6 +287,18 @@ var store_cc = function(_app) {
 					
 					_app.router.appendHash({'type':'match','route':'ncaa-team-apparel-merchandise/{{id}}*','pagefilter':'ncaa-team-apparel-merchandise','callback':'filter'});
 					_app.ext.store_cc.u.pushFilter('ncaa-team-apparel-merchandise');
+					
+/* test sub-sub append*/					
+					_app.router.appendHash({'type':'exact','route':'test-ncaa-team-apparel-merchandise/', 'callback':function(routeObj){
+						_app.ext.store_cc.u.getCatJSON(routeObj.route);
+					}});
+					
+					_app.router.appendHash({'type':'match','route':'test-ncaa-team-apparel-merchandise/{{id}}/','pagefilter':'test-ncaa-team-apparel-merchandise','callback':'subcat'});
+			//		_app.ext.store_cc.u.pushFilter('test-ncaa-team-apparel-merchandise');
+					
+					_app.router.appendHash({'type':'match','route':'test-ncaa-team-apparel-merchandise/{{id}}/{{end}}*','pagefilter':'test-ncaa-team-apparel-merchandise','callback':'filter'});
+			//		_app.ext.store_cc.u.pushFilter('test-ncaa-team-apparel-merchandise');
+/* test sub-sub append*/					
 					
 					_app.router.appendHash({'type':'exact','route':'nike-gear/', 'callback':function(routeObj){
 						_app.ext.store_cc.u.getCatJSON(routeObj.route);

@@ -994,6 +994,7 @@ for legacy browsers. That means old browsers will use the anchor to retain 'back
 						break;
 //campus - the whole case blow:						
 					case 'static':
+					dump('START showContent static');
 						infoObj.pageType = 'static';
 						var parentID = infoObj.templateid+"_"+(infoObj.id || "");
 						var $parent = $(_app.u.jqSelector('#',parentID));

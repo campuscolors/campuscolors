@@ -1,0 +1,87 @@
+{
+	"id": "Test-NCAA-Team-Apparel-Merchandise",
+	"page-title": "Team Apparel at CampusColors.com",
+	"page-description": "\"Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!\"",
+	"banner": "banners/test_cat_banner_785x200.jpg",
+	"bannerlink": "",
+	"banneralt": "Shop By Team Banner",
+	"promo": "Some promotional text goes here",
+	"pages": [
+		{
+			"id": "duke-blue-devils-apparel-merchandise/",
+			"link": "#!test-ncaa-team-apparel-merchandise/duke-blue-devils-apparel-merchandise/",
+			"img": "",
+			"name": "Duke Blue Devils Apparel & Merchandise",
+			"page-title": "Duke Blue Devils Apparel & Merchandise | CampusColors.com",
+			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
+			"banner": "banners/test_cat_banner_785x200.jpg",
+			"bannerlink": "",
+			"banneralt": "Duke Blue Devils Banner",
+			"promo": "Some promotional text goes here",
+			"pages" : [
+				{
+					"baseFilter": {
+						"term": {
+							"team_league_ncaa": "duke"
+						}
+					},
+					"options": {
+						"base_price": {
+							"min": 0,
+							"max": 150
+						}
+					},
+					"id": "duke-blue-devils-all.html",
+					"end": "duke-blue-devils-all.html",
+					"link": "#!test-ncaa-team-apparel-merchandise/duke-blue-devils-apparel-merchandise/duke-blue-devils-all.html",
+					"img": "",
+					"name": "All Duke Blue Devils Apparel & Merchandise",
+					"page-title": "All Duke Blue Devils Apparel & Merchandise | CampusColors.com",
+					"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
+					"optionList": [
+						"user:size_code",
+						"user:size_gender",
+						"user:website_filter",
+						"user:vendor_code",
+						"user:color_pallete"
+					]
+				},
+				{
+					"baseFilter": {
+						"and" : [
+							{
+								"term": {
+									"team_league_ncaa": "duke"
+								}
+							},
+							{
+								"term": {
+									"website_filter" : "shorts"
+								}
+							}
+						]
+					},
+					"options": {
+						"base_price": {
+							"min": 0,
+							"max": 150
+						}
+					},
+					"end": "duke-blue-devils-shorts.html",
+					"link": "#!test-ncaa-team-apparel-merchandise/duke-blue-devils-apparel-merchandise/duke-blue-devils-shorts.html",
+					"img": "",
+					"name": "Duke Blue Devils Shorts",
+					"page-title": "Duke Blue Devils Shorts | CampusColors.com",
+					"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
+					"optionList": [
+						"user:size_code",
+						"user:size_gender",
+						"user:website_filter",
+						"user:vendor_code",
+						"user:color_pallete"
+					]
+				}
+			]
+		}
+	]
+}
