@@ -240,7 +240,7 @@ var store_cc = function(_app) {
 						_app.ext.store_cc.u.getCatJSON(routeObj.route);
 					}});
 					
-					_app.router.appendHash({'type':'match','route':'ncaa-team-apparel-merchandise/{{id}}*','pagefilter':'team-apparel-merchandise','callback':'filter'});
+					_app.router.appendHash({'type':'match','route':'ncaa-team-apparel-merchandise/{{id}}*','pagefilter':'ncaa-team-apparel-merchandise','callback':'filter'});
 					_app.ext.store_cc.u.pushFilter('ncaa-team-apparel-merchandise');
 					
 					_app.router.appendHash({'type':'exact','route':'nike-gear/', 'callback':function(routeObj){

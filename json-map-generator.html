@@ -54,16 +54,16 @@
 //			console.log(attrib);
 			var subCat = {"baseFilter" : {"term" : {}},"options" : {"base_price" : {"min" : 0}}};
 			var teamLong = attrib[0];																						//team_long attribute
-			var id = teamLong.toLowerCase().split(" ").join("-") + "-apparel-merchandise";		//the id for the page (must match appendHash)
+			var id = teamLong.toLowerCase().split(" ").join("-") + "-apparel-merchandise.html";	//the id for the page (must match appendHash)
 			var teamLongUpper = uppercaseFirst(teamLong);													//used for name on page and meta title
 			var desc = removeQuotes(attrib[1]);
 	//		var desc = attrib[1];
 			var teamLeague = attrib[2];																					//used to build key for baseFilter
 			teamLeague = "team_league_" + teamLeague.toLowerCase();								//now key is built (may need conditions for other cat types)
-			var teamShort = attrib[3];																						//used to build value for baseFilter
+			var teamShort = attrib[3].toLowerCase();																//used to build value for baseFilter
 			var imageAlt = attrib[5];																							//the image that goes in the cat thumb. (should be from media library)
 			subCat["id"] = id;
-			subCat["link"] = rootPath + id + ".html";
+			subCat["link"] = rootPath + id;
 			subCat["img"] = attrib[4];
 			subCat["name"] = teamLongUpper + " Apparel & Merchandise";
 			subCat["page-title"] = teamLongUpper + " Apparel & Merchandise | CampusColors.com";
