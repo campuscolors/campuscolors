@@ -286,45 +286,45 @@ var store_cc = function(_app) {
 //APPEND
 					//Adds the listener for the url.  The route needs to match the page pushed into robots below
 					_app.router.appendHash({'type':'exact','route':'ncaa-apparel-merchandise/', 'callback':function(routeObj){
-						_app.ext.store_cc.u.getCatJSON(routeObj.route);
+						_app.ext.store_cc.u.getCatJSON(routeObj);
 					}});
 					_app.router.appendHash({'type':'match','route':'ncaa-apparel-merchandise/{{id}}/','pagefilter':'ncaa-apparel-merchandise','callback':'filter'});
 					_app.ext.store_cc.u.pushFilter('ncaa-apparel-merchandise');
 					
 					_app.router.appendHash({'type':'exact','route':'nfl-apparel-merchandise/', 'callback':function(routeObj){
-						_app.ext.store_cc.u.getCatJSON(routeObj.route);
+						_app.ext.store_cc.u.getCatJSON(routeObj);
 					}});
 					_app.router.appendHash({'type':'match','route':'nfl-apparel-merchandise/{{id}}/','pagefilter':'nfl-apparel-merchandise','callback':'filter'});
 					_app.ext.store_cc.u.pushFilter('nfl-apparel-merchandise');
 					
 					_app.router.appendHash({'type':'exact','route':'nba-apparel-merchandise/', 'callback':function(routeObj){
-						_app.ext.store_cc.u.getCatJSON(routeObj.route);
+						_app.ext.store_cc.u.getCatJSON(routeObj);
 					}});
 					_app.router.appendHash({'type':'match','route':'nba-apparel-merchandise/{{id}}/','pagefilter':'nba-apparel-merchandise','callback':'filter'});
 					_app.ext.store_cc.u.pushFilter('nba-apparel-merchandise');
 					
 					_app.router.appendHash({'type':'exact','route':'mlb-apparel-merchandise/', 'callback':function(routeObj){
-						_app.ext.store_cc.u.getCatJSON(routeObj.route);
+						_app.ext.store_cc.u.getCatJSON(routeObj);
 					}});
 					_app.router.appendHash({'type':'match','route':'mlb-apparel-merchandise/{{id}}/','pagefilter':'mlb-apparel-merchandise','callback':'filter'});
 					_app.ext.store_cc.u.pushFilter('mlb-apparel-merchandise');
 					
 					
 					_app.router.appendHash({'type':'exact','route':'nhl-apparel-merchandise/', 'callback':function(routeObj){
-						_app.ext.store_cc.u.getCatJSON(routeObj.route);
+						_app.ext.store_cc.u.getCatJSON(routeObj);
 					}});
 					_app.router.appendHash({'type':'match','route':'nhl-apparel-merchandise/{{id}}/','pagefilter':'nhl-apparel-merchandise','callback':'filter'});
 					_app.ext.store_cc.u.pushFilter('nhl-apparel-merchandise');
 					
 					_app.router.appendHash({'type':'exact','route':'team-apparel-merchandise/', 'callback':function(routeObj){
-						_app.ext.store_cc.u.getCatJSON(routeObj.route);
+						_app.ext.store_cc.u.getCatJSON(routeObj);
 					}});
 					
 					_app.router.appendHash({'type':'match','route':'team-apparel-merchandise/{{id}}*','pagefilter':'team-apparel-merchandise','callback':'filter'});
 					_app.ext.store_cc.u.pushFilter('team-apparel-merchandise');
 					
 					_app.router.appendHash({'type':'exact','route':'ncaa-team-apparel-merchandise/', 'callback':function(routeObj){
-						_app.ext.store_cc.u.getCatJSON(routeObj.route);
+						_app.ext.store_cc.u.getCatJSON(routeObj);
 					}});
 					
 					_app.router.appendHash({'type':'match','route':'ncaa-team-apparel-merchandise/{{id}}/','pagefilter':'ncaa-team-apparel-merchandise','callback':'subcat'});
@@ -335,7 +335,7 @@ var store_cc = function(_app) {
 					
 /* test sub-sub append*/					
 					_app.router.appendHash({'type':'exact','route':'test-ncaa-team-apparel-merchandise/', 'callback':function(routeObj){
-						_app.ext.store_cc.u.getCatJSON(routeObj.route);
+						_app.ext.store_cc.u.getCatJSON(routeObj);
 					}});
 					
 					_app.router.appendHash({'type':'match','route':'test-ncaa-team-apparel-merchandise/{{id}}/','pagefilter':'test-ncaa-team-apparel-merchandise','callback':'subcat'});
@@ -346,37 +346,37 @@ var store_cc = function(_app) {
 /* test sub-sub append*/					
 					
 					_app.router.appendHash({'type':'exact','route':'nike-gear/', 'callback':function(routeObj){
-						_app.ext.store_cc.u.getCatJSON(routeObj.route);
+						_app.ext.store_cc.u.getCatJSON(routeObj);
 					}});
 					_app.router.appendHash({'type':'match','route':'nike-gear/{{id}}/','pagefilter':'nike-gear','callback':'filter'});
 					_app.ext.store_cc.u.pushFilter('nike-gear');
 					
 					_app.router.appendHash({'type':'exact','route':'adidas-gear/', 'callback':function(routeObj){
-						_app.ext.store_cc.u.getCatJSON(routeObj.route);
+						_app.ext.store_cc.u.getCatJSON(routeObj);
 					}});
 					_app.router.appendHash({'type':'match','route':'adidas-gear/{{id}}/','pagefilter':'adidas-gear','callback':'filter'});
 					_app.ext.store_cc.u.pushFilter('adidas-gear');
 					
 					_app.router.appendHash({'type':'exact','route':'apparel/', 'callback':function(routeObj){
-						_app.ext.store_cc.u.getCatJSON(routeObj.route);
+						_app.ext.store_cc.u.getCatJSON(routeObj);
 					}});
 					_app.router.appendHash({'type':'match','route':'apparel/{{id}}/','pagefilter':'apparel','callback':'filter'});
 					_app.ext.store_cc.u.pushFilter('apparel');
 					
 					_app.router.appendHash({'type':'exact','route':'mens-apparel-merchandise/', 'callback':function(routeObj){
-						_app.ext.store_cc.u.getCatJSON(routeObj.route);
+						_app.ext.store_cc.u.getCatJSON(routeObj);
 					}});
 					_app.router.appendHash({'type':'match','route':'mens-apparel-merchandise/{{id}}/','pagefilter':'mens-apparel-merchandise','callback':'filter'});
 					_app.ext.store_cc.u.pushFilter('mens-apparel-merchandise');
 					
 					_app.router.appendHash({'type':'exact','route':'womens-apparel-merchandise/', 'callback':function(routeObj){
-						_app.ext.store_cc.u.getCatJSON(routeObj.route);
+						_app.ext.store_cc.u.getCatJSON(routeObj);
 					}});
 					_app.router.appendHash({'type':'match','route':'womens-apparel-merchandise/{{id}}/','pagefilter':'womens-apparel-merchandise','callback':'filter'});
 					_app.ext.store_cc.u.pushFilter('womens-apparel-merchandise');
 					
 					_app.router.appendHash({'type':'exact','route':'kids-apparel-merchandise/', 'callback':function(routeObj){
-						_app.ext.store_cc.u.getCatJSON(routeObj.route);
+						_app.ext.store_cc.u.getCatJSON(routeObj);
 					}});
 					_app.router.appendHash({'type':'match','route':'kids-apparel-merchandise/{{id}}/','pagefilter':'kids-apparel-merchandise','callback':'filter'});
 					_app.ext.store_cc.u.pushFilter('kids-apparel-merchandise');
@@ -896,7 +896,8 @@ var store_cc = function(_app) {
 /* FILTER SEARCH UTILS */		
 			//for top level category (ie: nhl-apparel) will check if data object has been loaded in vars and show content w/ it if it has,
 			//if not, will get data from the JSON record and showContent w/ that. Shows 404 if data can't be found in vars or JSON record.
-			getCatJSON : function(route) {
+			getCatJSON : function(routeObj) {
+				var route = routeObj.route;
 				dump('START getCatJSON');
 				var route = route.split('/')[0];
 				if(_app.ext.store_cc.vars[route]) {
