@@ -47,7 +47,7 @@
 					console.log('we can tell a box is checked.');
 					var typeCat = genTypeCat(process, rootPath, optionArray);
 					var subPath = typeCat.link;
-					var subCat = [genTypeSubCat(process, subPath, optionArray,$typeList)];
+					var subCat = genTypeSubCat(process, subPath, optionArray,$typeList);
 //					console.log(subCat);
 		//			pages.push(subCat);
 					typeCat["pages"] = subCat;
@@ -91,16 +91,16 @@
 				if(m > 0) { typeSubCat = {"baseFilter" : { "and" : [] },"options" : {"base_price" : {"min" : 0}}}; }
 				var thisLowerType = typeArray[m].toLowerCase();
 				var thisUpperType = typeArray[m];
-				var teamLong = attrib[0];																												//team_long attribute
-				var id = teamLong.toLowerCase().split(" ").join("-") + "-apparel-merchandise-"+thisLowerType;		//the id for the page (must match appendHash)
-				var teamLongUpper = uppercaseFirst(teamLong);																			//used for name on page and meta title
+				var teamLong = attrib[0];																													//team_long attribute
+				var id = teamLong.toLowerCase().split(" ").join("-") + "-apparel-merchandise-"+thisLowerType + "/";	//the id for the page (must match appendHash)
+				var teamLongUpper = uppercaseFirst(teamLong);																				//used for name on page and meta title
 				var desc = removeQuotes(attrib[1]);
 				var teamLeague = attrib[2];																					//used to build key for baseFilter
 				teamLeague = "team_league_" + teamLeague.toLowerCase();								//now key is built (may need conditions for other cat types)
 				var teamShort = attrib[3].toLowerCase();																//used to build value for baseFilter
 				var imageAlt = attrib[5];																							//the image that goes in the cat thumb. (should be from media library)
 				typeSubCat["id"] = id;
-				typeSubCat["link"] = "/" + subPath + "/" + id;
+				typeSubCat["link"] = subPath + id;
 				typeSubCat["img"] = attrib[4];
 				typeSubCat["name"] = teamLongUpper + " Apparel & Merchandise " + thisUpperType;
 				typeSubCat["page-title"] = teamLongUpper + " Apparel & Merchandise " + thisUpperType + " | CampusColors.com";
@@ -127,7 +127,7 @@
 			
 			var typeCat = {};
 			var teamLong = attrib[0];																						//team_long attribute
-			var id = teamLong.toLowerCase().split(" ").join("-") + "-apparel-merchandise";		//the id for the page (must match appendHash)
+			var id = teamLong.toLowerCase().split(" ").join("-") + "-apparel-merchandise/";		//the id for the page (must match appendHash)
 			var teamLongUpper = uppercaseFirst(teamLong);													//used for name on page and meta title
 			var desc = removeQuotes(attrib[1]);
 			var teamLeague = attrib[2];																					//used to build key for baseFilter
@@ -141,7 +141,7 @@
 			typeCat["name"] = teamLongUpper + " Apparel & Merchandise";
 			typeCat["page-title"] = teamLongUpper + " Apparel & Merchandise | CampusColors.com";
 			typeCat["page-description"] = desc;
-			typeCat["banner"] = banner;
+			typeCat["banner"] = "banners/test_cat_banner_785x200.jpg" //banner;
 			typeCat["bannerlink"] = bannerlink;
 			typeCat["banneralt"] = banneralt;
 			typeCat["promo"] = promo;
