@@ -684,103 +684,101 @@ var store_cc = function(_app) {
 			},
 			
 			relatedproducts : function(data,thisTLC){
- dump('START store_cc.tlc.relatedproducts');
- 
- var team, attrib;
- if(data.value['%attribs']['user:team_league_nfl']) { team = data.value['%attribs']['user:team_league_nfl']; attrib = 'team_league_nfl'; }
- else if(data.value['%attribs']['user:team_league_ncaa']) { dump(data.value['%attribs']['user:team_league_ncaa']); team = data.value['%attribs']['user:team_league_ncaa']; attrib = 'team_league_ncaa'; }
- else if(data.value['%attribs']['user:team_league_nba']) { team = data.value['%attribs']['user:team_league_nba']; attrib = 'team_league_nba'; }
- else if(data.value['%attribs']['user:team_league_mlb']) { team = data.value['%attribs']['user:team_league_mlb']; attrib = 'team_league_mlb'; }
- else if(data.value['%attribs']['user:team_league_nhl']) { team = data.value['%attribs']['user:team_league_nhl']; attrib = 'team_league_nhl'; }
- else { /* NO TEAM, NO LIST TO SHOW */}
- 
- if(team && attrib){
-  var lt = data.value['%attribs']['zoovy:prod_name'];
-  lt += " "+data.value['%attribs']['zoovy:keywords'];
-  lt += " "+data.value['%attribs']['zoovy:prod_desc'];
-  var search = {
-   "query" : {
-    "filtered" : {
-     "query" : {
-      "more_like_this" : {
-       "fields" : ["prod_name", "keywords", "description"],
-       "like_text" : lt
-       }
-      },
-     "filter" : {
-      //added dynamically later
-      }
-     }
-    }
-   }
-  
-  // Order specified by the client
-  var types = [
-   'shorts',
-   't-shirts',
-   'sweatshirts & fleece',
-   'pants',
-   'hats',
-   'jerseys',
-   'novelites & accessories'
-   ];
-  //remove the product type that we already have
-  if($.inArray(data.value['%attribs']['user:website_filter'], types) >= 0){
-   types.splice($.inArray(data.value['%attribs']['user:website_filter'], types),1);
-   }
-  
-  for(var i in types){
-   var thisSearch = $.extend(true, {}, search);
-   
-   //added individually to avoid pass-by-reference bugs- deep copies only copy pointers to arrays and objects
-   thisSearch.query.filtered.filter.and = [];
-   //Filter by team
-   thisSearch.query.filtered.filter.and.push({"term" : {}});
-   thisSearch.query.filtered.filter.and[0][attrib] = team; 
-   //Filter by type
-   thisSearch.query.filtered.filter.and.push({"term" : {"website_filter":types[i]}});
-   
-   var _tag = {
-    "datapointer" : "related-"+types[i]+"|"+data.value.pid
-    };
-   
-   var es = _app.ext.store_search.u.buildElasticRaw(thisSearch);
-   es.size = 4;
-   _app.ext.store_search.calls.appPublicSearch.init(es, _tag, 'immutable');
-   }
-  //Add a ping with the callback at the end, since we have multiple searches going out.
-  var _tag = {
-   "callback" : function(rd){
-    var prods = [];
-    var pass = 0;
-    while(prods.length < 4 && pass < 4){
-     for(var i in types){
-      var d = _app.data["related-"+types[i]+"|"+data.value.pid];
-      if(prods.length  >= 4){
-       break;
-       }
-      else if(d && d.hits & d.hits.hits && d.hits.hits[pass]){
-       prods.push(d.hits.hits[pass]);
-       }
-      }
-     pass++;
-     }
-    for(var i in prods){
-     var $p = new tlc().getTemplateInstance('productListTemplateResultsNoPreview');
-     $p.tlc({'verb':'translate','dataset':prods[i]["_source"]});
-     rd.jqObj.append($p);
-     }
-    },
-   "jqObj" : data.globals.tags[data.globals.focusTag]
-   }
-  _app.model.addDispatchToQ({
-   "_cmd" : "ping",
-   "_tag" : _tag
-   },'immutable');
-  _app.model.dispatchThis('immutable');  
-  }
- return true;
- },
+				dump('START store_cc.tlc.relatedproducts');
+				 
+				var team, attrib;
+				if(data.value['%attribs']['user:team_league_nfl']) { team = data.value['%attribs']['user:team_league_nfl']; attrib = 'team_league_nfl'; }
+				else if(data.value['%attribs']['user:team_league_ncaa']) { dump(data.value['%attribs']['user:team_league_ncaa']); team = data.value['%attribs']['user:team_league_ncaa']; attrib = 'team_league_ncaa'; }
+				else if(data.value['%attribs']['user:team_league_nba']) { team = data.value['%attribs']['user:team_league_nba']; attrib = 'team_league_nba'; }
+				else if(data.value['%attribs']['user:team_league_mlb']) { team = data.value['%attribs']['user:team_league_mlb']; attrib = 'team_league_mlb'; }
+				else if(data.value['%attribs']['user:team_league_nhl']) { team = data.value['%attribs']['user:team_league_nhl']; attrib = 'team_league_nhl'; }
+				else { /* NO TEAM, NO LIST TO SHOW */}
+				 
+				if(team && attrib){
+					var lt = data.value['%attribs']['zoovy:prod_name'];
+					lt += " "+data.value['%attribs']['zoovy:keywords'];
+					lt += " "+data.value['%attribs']['zoovy:prod_desc'];
+					var search = {
+						"query" : {
+							"filtered" : {
+								"query" : {
+									"more_like_this" : {
+										"fields" : ["prod_name", "keywords", "description"],
+										"like_text" : lt
+									}
+								},
+								"filter" : {
+									//added dynamically later
+								}
+							}
+						}
+					}
+				  
+					// Order specified by the client
+					var types = [
+						'shorts', 't-shirts', 'sweatshirts & fleece', 'pants', 'hats', 'jerseys', 'novelites & accessories'
+					];
+					//remove the product type that we already have
+					if($.inArray(data.value['%attribs']['user:website_filter'], types) >= 0) {
+						types.splice($.inArray(data.value['%attribs']['user:website_filter'], types),1);
+					}
+				  
+					for(var i in types){
+						var thisSearch = $.extend(true, {}, search);
+
+						//added individually to avoid pass-by-reference bugs- deep copies only copy pointers to arrays and objects
+						thisSearch.query.filtered.filter.and = [];
+						//Filter by team
+						thisSearch.query.filtered.filter.and.push({"term" : {}});
+						thisSearch.query.filtered.filter.and[0].term[attrib] = team; 
+						//Filter by type
+						thisSearch.query.filtered.filter.and.push({"term" : {"website_filter":types[i]}});
+
+						var _tag = {
+							"datapointer" : "related-"+types[i]+"|"+data.value.pid
+						};
+
+						var es = _app.ext.store_search.u.buildElasticRaw(thisSearch);
+						es.size = 4;
+						_app.ext.store_search.calls.appPublicSearch.init(es, _tag, 'immutable');
+					}
+					//Add a ping with the callback at the end, since we have multiple searches going out.
+					var _tag = {
+						"callback" : function(rd){
+							var prods = [];
+							var pass = 0;
+							while(prods.length < 4 && pass < 4) {
+								for(var i in types) {
+									var d = _app.data["related-"+types[i]+"|"+data.value.pid];
+									if(prods.length  >= 4) {
+										break;
+									}
+									else if(d && d.hits && d.hits.hits && d.hits.hits[pass]) {
+										prods.push(d.hits.hits[pass]);
+									}
+								}
+								pass++;
+							}
+							if(prods.length == 0) { 
+								rd.jqObj.parent().hide();
+								rd.jqObj.empty().remove(); 
+							}
+							for(var i in prods) {
+								var $p = new tlc().getTemplateInstance('productListTemplateResultsNoPreview');
+								$p.tlc({'verb':'translate','dataset':prods[i]["_source"]});
+								rd.jqObj.append($p);
+							}
+						},
+						"jqObj" : data.globals.tags[data.globals.focusTag]
+					}
+					_app.model.addDispatchToQ({
+						"_cmd" : "ping",
+						"_tag" : _tag
+					},'immutable');
+					_app.model.dispatchThis('immutable');  
+				}
+				return true;
+			},
 						
 /* CART TLC */
 			//adds qty to cart item, but hides the field and adds a select list to use for changing the qty.
