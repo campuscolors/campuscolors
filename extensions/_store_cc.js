@@ -181,17 +181,19 @@ var store_cc = function(_app) {
 					
 					function showSubPage(routeObj,parentID){
 					dump('START showSubPage'); dump(routeObj);
+					routeObj.params.templateid = routeObj.params.templateID || "filteredSearchTemplate";
 dump(parentID); dump(_app.ext.store_filter.filterData);
 					var filterData = _app.ext.store_filter.filterData[parentID]; //gets the top level data
 			dump('filtterData after gets top level data'); dump(filterData); dump(routeObj.params.id);
 					filterData = $.grep(filterData.pages,function(e,i){
-						return e.id == routeObj.params.id;	//gets mid level data
-					}[0]);
+						return e.id == routeObj.params.id+"/";	//gets mid level data
+					})[0];
 			dump('got past first grep');
+			dump(filterData);
 					filterData = $.grep(filterData.pages,function(e,i){
-						return e.id == routeObj.params.end;	//gets the lowest level data
-					}[0]);
-					filterData = $.extend(true, {}, filterData);	//deep copy to avoid pass by reference bugs
+						return e.id == routeObj.params.end+"/";	//gets the lowest level data
+					})[0];
+					routeObj.params.dataset = $.extend(true, {}, filterData);	//deep copy to avoid pass by reference bugs
 					
 					var optStrs = routeObj.params.dataset.optionList;
 					routeObj.params.dataset.options = routeObj.params.dataset.options || {};

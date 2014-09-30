@@ -32,7 +32,7 @@
 						}
 					},
 					"id": "duke-blue-devils-all/",
-					"end": "duke-blue-devils-all/",
+					"subid": "duke-blue-devils-all/",
 					"link": "#!test-ncaa-team-apparel-merchandise/duke-blue-devils-apparel-merchandise/duke-blue-devils-all/",
 					"img": "",
 					"name": "All Duke Blue Devils Apparel & Merchandise",
@@ -67,7 +67,8 @@
 							"max": 150
 						}
 					},
-					"end": "duke-blue-devils-shorts/",
+					"id": "duke-blue-devils-shorts/",
+					"subid": "duke-blue-devils-shorts/",
 					"link": "#!test-ncaa-team-apparel-merchandise/duke-blue-devils-apparel-merchandise/duke-blue-devils-shorts/",
 					"img": "",
 					"name": "Duke Blue Devils Shorts",
