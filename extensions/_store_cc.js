@@ -217,7 +217,10 @@ var store_cc = function(_app) {
 							}
 						}
 					routeObj.params.loadFullList = _app.ext.seo_robots.u.isRobotPresent();
+					routeObj.params.id = routeObj.params.id + "-" + routeObj.params.end;
 					showContent('static',routeObj.params);
+//					 dump('----showContent info: '); dump(routeObj.params.id); dump(routeObj.params.end); dump(routeObj.params.id + "-" + routeObj.params.end); dump(routeObj.params.templateid); dump(routeObj.params.dataset);
+//					showContent('static',{"id" : routeObj.params.id + "-" + routeObj.params.end,"templateID" : routeObj.params.templateid,"dataset" : routeObj.params.dataset});
 					}
 					
 					
