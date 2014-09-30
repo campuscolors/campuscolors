@@ -58,7 +58,7 @@ var store_cc = function(_app) {
 				var r = false; //return false if extension won't load for some reason (account config, dependencies, etc).
 				
 				$.getJSON("_banners.json?_v="+(new Date()).getTime(), function(json) {
-					_app.ext.store_cc.vars.homepageBanners = json.homepageBanners
+					_app.ext.store_cc.vars.homepageBanners = json;
 				}).fail(function(){_app.u.throwMessage("BANNERS FAILED TO LOAD - there is a bug in _banners.json")});
 				
 				//if there is any functionality required for this extension to load, put it here. such as a check for async google, the FB object, etc. return false if dependencies are not present. don't check for other extensions.
@@ -925,6 +925,47 @@ var store_cc = function(_app) {
 			},
 
 			//Turns best sellers ul on homepage into an auto scrolling carousel. 
+			runHomeMainBanner : function($context) {
+//				_app.u.dump('----Running homepage banner carousels');	
+				var $target = $('.homeBanner ',$context);
+				if($target.data('isCarousel'))	{$target.trigger('play');} //only make it a carousel once, but make sure it always scrolls
+				else {
+					$target.data('isCarousel',true);
+					//for whatever reason, caroufredsel needs to be executed after a moment.
+					setTimeout(function(){
+						$target.carouFredSel({
+							width	:"9%",
+							items	: {
+								minimum: 1,
+								//width : "700px"
+							},
+							scroll: {	fx: "directscroll"	},
+							auto: {
+								delay: 1000,
+								pauseOnHover:"immediate"
+							},
+							swipe: { 
+								onMouse: true,	
+								onTouch: true 
+							}
+			/*				pagination: {
+								container: ".page",
+								keys: true
+							},
+							prev: {
+								button: ".prev",
+								key: "left"
+							},
+							next: {
+								button: ".next",
+								key: "right"
+							}
+			*/			});
+					},2000); 
+				} //HOMEPAGE main banner CAROUSEL
+			},
+			
+			//Turns best sellers ul on homepage into an auto scrolling carousel. 
 			runHomeCarousel : function($context) {
 //				_app.u.dump('----Running homepage carousels');	
 				var $target = $('.homeCarousel',$context);
@@ -1050,14 +1091,19 @@ var store_cc = function(_app) {
 			
 /* HOMEPAGE UTILS */
 			showHomepageBanners : function() {
-				var $container = $('#homepageTemplate_ .homeBanner');
+			dump('START showHomepageBanners');
+				var $container = $('.homeBanner', '#homepageTemplate_');
 				if(!$container.hasClass('bannersRendered')) {
 					if(_app.ext.store_cc.vars.homepageBanners) {
 						$container.addClass('bannersRendered');
-						var bannerWidth = _app.ext.store_cc.vars.homepageBanners.main.width == "" ? 620 : _app.ext.store_cc.vars.homepageBanners.main.width;
-						var bannerHeight = _app.ext.store_cc.vars.homepageBanners.main.height == "" ? 300 : _app.ext.store_cc.vars.homepageBanners.main.height;
-						//dump('BANNER WIDTH & HEIGHT'); dump(bannerWidth); dump(bannerHeight);
-						$container.removeClass('loadingBG').append(_app.ext.store_cc.u.makeBanner(_app.ext.store_cc.vars.homepageBanners.main,bannerWidth,bannerHeight,"ffffff"));
+						for(var i = 0; i < _app.ext.store_cc.vars.homepageBanners.length; i++) {
+							var thisBanner = _app.ext.store_cc.vars.homepageBanners[i];
+							var bannerWidth = thisBanner.width == "" ? 620 : thisBanner.width;
+							var bannerHeight = thisBanner.height == "" ? 268 : thisBanner.height;
+							//dump('BANNER WIDTH & HEIGHT'); dump(bannerWidth); dump(bannerHeight);
+							$container.removeClass('loadingBG').append(_app.ext.store_cc.u.makeBanner(thisBanner,bannerWidth,bannerHeight,"ffffff"));
+						}
+						_app.ext.store_cc.u.runHomeMainBanner($('#homepageTemplate_'));
 					}
 					else {
 						setTimeout(this.showHomepageBanners,250);

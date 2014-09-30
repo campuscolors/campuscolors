@@ -1,12 +1,42 @@
-{
-	"homepageBanners" : {
-		"main" : {
-			"src"			: "banners/retro_brand_banner_700x268.jpg",
-			"width"		: "700",
-			"height"	: "268",
-			"alt"			: "Retro Brand",
-			"title"		: "Retro Brand",
-			"href"		: "#!brand-apparel/retro-brand-apparel/"
-		}
+[
+	{
+		"src"			: "banners/tailgating_banner_alt.jpg",
+		"width"		: "700",
+		"height"	: "268",
+		"alt"			: "Tailgating Essentials",
+		"title"		: "Tailgating Essentials",
+		"href"		: ""
+	},
+	{
+		"src"			: "banners/gameday_banner.jpg",
+		"width"		: "700",
+		"height"	: "268",
+		"alt"			: "Game Day",
+		"title"		: "Game Day",
+		"href"		: ""
+	},
+	{
+		"src"			: "banners/bogo_banner.jpg",
+		"width"		: "700",
+		"height"	: "268",
+		"alt"			: "Buy One Sweatshirt, Get One 30 percent off",
+		"title"		: "Buy One Sweatshirt, Get One 30 percent off",
+		"href"		: ""
+	},
+	{
+		"src"			: "banners/collegesweatshirts.jpg",
+		"width"		: "700",
+		"height"	: "268",
+		"alt"			: "College Sweatshirts",
+		"title"		: "College Sweatshirts",
+		"href"		: ""
+	},
+	{
+		"src"			: "banners/nfl_hats.jpg",
+		"width"		: "700",
+		"height"	: "268",
+		"alt"			: "NFL Hats",
+		"title"		: "NFL Hats",
+		"href"		: ""
 	}
-}
+]
