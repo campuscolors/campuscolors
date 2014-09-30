@@ -14,9 +14,14 @@
 		window.onload = clearTextAreas;
 	
 //console.log('');
-		function genJSON(input,$optionList) {
+		function genJSON(input,$form) {
+			var $optionList = $('.optionList',$form);
+			var $addType = $('.addType',$form);
+			var $typeList = $('.typeList',$form);
+			var multiSubCat = $("input[type=checkbox]",$addType).prop('checked') == true ? true : false;
 			var raw = input.split('\n');
 			var pages = [];
+			
 			
 			//make the rootCatgory JSON
 			var rootCat = genRootCat(raw[0],raw[1]); //make the rootCatgory JSON
@@ -34,14 +39,32 @@
 			
 			//make each subcat JSON
 			for(i = 3; i < raw.length-1; i++) {
-				console.log(i);
+//				console.log(i);
 				var process = raw[i].split('\t');
-				var subCat = genSubCat(process, rootPath, optionArray);
-				//console.log(process);
-				pages.push(subCat);
-				dump(pages);
+				
+				//take this path if there will be type categories: ncaa > ncaa-shirts,ncaa-shorts,ncaa-all instead of just nike > all nike
+				if(multiSubCat) {
+					console.log('we can tell a box is checked.');
+					var typeCat = genTypeCat(process, rootPath, optionArray);
+					var subPath = typeCat.link;
+					var subCat = [genTypeSubCat(process, subPath, optionArray,$typeList)];
+//					console.log(subCat);
+		//			pages.push(subCat);
+					typeCat["pages"] = subCat;
+				}
+				//take this path if there will only be a root cat and a subcat: nike > all of nike
+				else {
+					var subCat = genSubCat(process, rootPath, optionArray);
+					//console.log(process);
+					pages.push(subCat);
+					dump(pages);
+				}
+				//pages array may have been used to created typeCats, and add them to it for addition to the rootCat
+				if(multiSubCat) { pages.push(typeCat); }
 			}
+			
 			rootCat["pages"] = pages;
+//			console.log(rootCat);
 			var output = JSON.stringify(rootCat,null,"\t");
 			//file download solution?
 			//	var url = 'data:text/json;charset=utf8,' + encodeURIComponent(output);
@@ -50,11 +73,99 @@
 			$("#output").val(output);
 		};
 		
+		
+		
+		function genTypeSubCat(attrib,subPath,optionArray,$typeList) {
+			var typeSubCatArray = []; //what gets returned, an array of each page list object generated.
+			var typeArray = ["All"]; //an array to hold the types of subcats that need to be generated
+			var count = 0;
+			$("input[type=checkbox]",$typeList).each(function(){
+				if($(this).prop('checked') == true) { typeArray.push($(this).val()); count++}
+			});
+			if(count === 0) { alert("If 'Generate Type Sub-categories' is checked, at least one sub-category type must also be checked. Uncheck the category option to create a simple root/sub category structure. (try the escape key if this window will not close"); return; }
+//			console.log('the type array: '); console.log(typeArray);
+			
+			for(var m = 0; m < typeArray.length; m++) {
+//			console.log('this is m'); console.log(m);
+				var typeSubCat = {"baseFilter" : {"term" : {}},"options" : {"base_price" : {"min" : 0}}};
+				if(m > 0) { typeSubCat = {"baseFilter" : { "and" : [] },"options" : {"base_price" : {"min" : 0}}}; }
+				var thisLowerType = typeArray[m].toLowerCase();
+				var thisUpperType = typeArray[m];
+				var teamLong = attrib[0];																												//team_long attribute
+				var id = teamLong.toLowerCase().split(" ").join("-") + "-apparel-merchandise-"+thisLowerType;		//the id for the page (must match appendHash)
+				var teamLongUpper = uppercaseFirst(teamLong);																			//used for name on page and meta title
+				var desc = removeQuotes(attrib[1]);
+				var teamLeague = attrib[2];																					//used to build key for baseFilter
+				teamLeague = "team_league_" + teamLeague.toLowerCase();								//now key is built (may need conditions for other cat types)
+				var teamShort = attrib[3].toLowerCase();																//used to build value for baseFilter
+				var imageAlt = attrib[5];																							//the image that goes in the cat thumb. (should be from media library)
+				typeSubCat["id"] = id;
+				typeSubCat["link"] = "/" + subPath + "/" + id;
+				typeSubCat["img"] = attrib[4];
+				typeSubCat["name"] = teamLongUpper + " Apparel & Merchandise " + thisUpperType;
+				typeSubCat["page-title"] = teamLongUpper + " Apparel & Merchandise " + thisUpperType + " | CampusColors.com";
+				typeSubCat["page-description"] = desc;
+				if(m > 0) { 
+					var baseFilterage = {"term" : {}};
+					baseFilterage.term[teamLeague] = teamShort;
+					typeSubCat.baseFilter.and.push(baseFilterage);
+					baseFilterage = {"term" : {}};
+					baseFilterage.term["website_filter"] = thisLowerType;
+					typeSubCat.baseFilter.and.push(baseFilterage);
+				}
+				else { typeSubCat.baseFilter.term[teamLeague] = teamShort; } //the all category has no AND w/ another attrib
+				typeSubCat.options.base_price["max"] = Number(attrib[6]);
+				typeSubCat["optionList"] = optionArray;
+				typeSubCatArray.push(typeSubCat);
+			}
+//			console.log(typeSubCatArray);
+			return typeSubCatArray;
+		}
+		
+		function genTypeCat(attrib,rootPath,optionArray) {
+//			console.log(attrib); console.log(rootPath); console.log(optionArray);
+			
+			var typeCat = {};
+			var teamLong = attrib[0];																						//team_long attribute
+			var id = teamLong.toLowerCase().split(" ").join("-") + "-apparel-merchandise";		//the id for the page (must match appendHash)
+			var teamLongUpper = uppercaseFirst(teamLong);													//used for name on page and meta title
+			var desc = removeQuotes(attrib[1]);
+			var teamLeague = attrib[2];																					//used to build key for baseFilter
+			teamLeague = "team_league_" + teamLeague.toLowerCase();								//now key is built (may need conditions for other cat types)
+			var teamShort = attrib[3].toLowerCase();																//used to build value for baseFilter
+			var imageAlt = attrib[5];																							//the image that goes in the cat thumb. (should be from media library)
+			var banner, bannerlink, banneralt, promo = "";
+			typeCat["id"] = id;
+			typeCat["link"] = rootPath + id;
+			typeCat["img"] = attrib[4];
+			typeCat["name"] = teamLongUpper + " Apparel & Merchandise";
+			typeCat["page-title"] = teamLongUpper + " Apparel & Merchandise | CampusColors.com";
+			typeCat["page-description"] = desc;
+			typeCat["banner"] = banner;
+			typeCat["bannerlink"] = bannerlink;
+			typeCat["banneralt"] = banneralt;
+			typeCat["promo"] = promo;
+//			console.log(typeCat);
+			return typeCat;
+	/*		
+			"id": "duke-blue-devils-apparel-merchandise/",
+			"link": "#!test-ncaa-team-apparel-merchandise/duke-blue-devils-apparel-merchandise/",
+			"img": "",
+			"name": "Duke Blue Devils Apparel & Merchandise",
+			"page-title": "Duke Blue Devils Apparel & Merchandise | CampusColors.com",
+			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
+			"banner": "banners/test_cat_banner_785x200.jpg",
+			"bannerlink": "",
+			"banneralt": "Duke Blue Devils Banner",
+			"promo": "Some promotional text goes here",
+	*/		
+		}
+		
 		function genSubCat(attrib,rootPath,optionArray) {
 //			console.log(attrib);
 			var subCat = {"baseFilter" : {"term" : {}},"options" : {"base_price" : {"min" : 0}}};
 			var teamLong = attrib[0];																						//team_long attribute
-			var id = teamLong.toLowerCase().split(" ").join("-") + "-apparel-merchandise.html";	//the id for the page (must match appendHash)
+			var id = teamLong.toLowerCase().split(" ").join("-") + "-apparel-merchandise";		//the id for the page (must match appendHash)
 			var teamLongUpper = uppercaseFirst(teamLong);													//used for name on page and meta title
 			var desc = removeQuotes(attrib[1]);
 	//		var desc = attrib[1];
@@ -128,7 +239,7 @@
 	<p>
 		Enter data (FORMAT TO BE DESCRIBED) and hit the button to generate the category.
 	</p>
-	<div id="Form">
+	<div id="form">
 		<div>
 			<textarea required="required" name="productList"></textarea>
 		</div>
@@ -145,7 +256,19 @@
 			<input type="checkbox" value="user:team_league_mlb"/>Teams MLB
 			<input type="checkbox" value="user:team_league_nhl"/>Teams NHL
 		</div>
-		<button onClick="genJSON($('textarea[name=productList]',$(this).parent()).val(),$('.optionList')); return false;">Generazizate</input>
+		<div class="addType">
+			<input type="checkbox" value="subcat"/>Generate Type Sub-categories
+		</div>
+		<div class="typeList">
+			<input type="checkbox" value="Shorts"/>Shorts
+			<input type="checkbox" value="T-Shirts"/>T-Shirts
+			<input type="checkbox" value="Sweatshirts"/>Sweatshirts
+			<input type="checkbox" value="Jerseys"/>Jerseys
+			<input type="checkbox" value="Pants"/>Pants
+			<input type="checkbox" value="Hats"/>Hats
+			<input type="checkbox" value="Accessories"/>Accessories
+		</div>
+		<button onClick="genJSON($('textarea[name=productList]',$(this).parent()).val(),$('#form')); return false;">Generazizate</input>
 	</div>
 	<textarea id="output" name="output"></textarea>
 </body>

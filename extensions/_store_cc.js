@@ -182,14 +182,14 @@ var store_cc = function(_app) {
 					function showSubPage(routeObj,parentID){
 					dump('START showSubPage'); dump(routeObj);
 					routeObj.params.templateid = routeObj.params.templateID || "filteredSearchTemplate";
-dump(parentID); dump(_app.ext.store_filter.filterData);
+//					dump(parentID); dump(_app.ext.store_filter.filterData);
 					var filterData = _app.ext.store_filter.filterData[parentID]; //gets the top level data
-			dump('filtterData after gets top level data'); dump(filterData); dump(routeObj.params.id);
+//					dump('filtterData after gets top level data'); dump(filterData); dump(routeObj.params.id);
 					filterData = $.grep(filterData.pages,function(e,i){
 						return e.id == routeObj.params.id+"/";	//gets mid level data
 					})[0];
-			dump('got past first grep');
-			dump(filterData);
+
+//					dump(filterData);
 					filterData = $.grep(filterData.pages,function(e,i){
 						return e.id == routeObj.params.end+"/";	//gets the lowest level data
 					})[0];
@@ -226,55 +226,35 @@ dump(parentID); dump(_app.ext.store_filter.filterData);
 					
 //ALIAS				
 					_app.router.addAlias('subcat', function(routeObj) {
-						dump('START subcat alias: '); dump(routeObj);
+//						dump('START subcat alias: '); dump(routeObj);
 						var a = routeObj.pagefilter;
 						var b = routeObj.params.id+'/';
-						dump('b'); dump(b); 
+//						dump('b'); dump(b); 
 			//			showContent('static',{'templateid':'splashPageTemplate','id':b,'dataset':_app.ext.store_cc.vars[a.b]});
 						$.getJSON("filters/apparel/"+a+".json?_v="+(new Date()).getTime(), function(json){
-								dump('THE SUBCAT JSON IS...'); dump(json);
+//								dump('THE SUBCAT JSON IS...'); dump(json);
 								var dataset = $.extend(true, {}, $.grep(json.pages,function(e,i){
 									return e.id == b;
 								})[0]);
-								dump('GREP IS: '); dump(dataset);
+//								dump('GREP IS: '); dump(dataset);
 								showContent('static',{'templateid':'splashPageTemplate','id':routeObj.params.id,'dataset':dataset});
 							})
 							.fail(function() {
 								dump('FILTER DATA FOR ' + a + 'COULD NOT BE LOADED.');
 								showContent('404');
 							});
-			/*			
-						getCatJSON : function(route) {
-							dump('START getCatJSON');
-							var route = route.split('/')[0];
-							if(_app.ext.store_cc.vars[route]) {
-								dump('IT WAS ALREADY THERE...');
-								showContent('static',{'templateid':'splashPageTemplate','id':data.id,'dataset':_app.ext.store_cc.vars[route]});
-							}
-							else {
-								$.getJSON("filters/apparel/"+route+".json?_v="+(new Date()).getTime(), function(json){
-									dump('THE CAT JSON IS...'); dump(json);
-									showContent('static',{'templateid':'splashPageTemplate','id':json.id,'dataset':json});
-								})
-								.fail(function() {
-									dump('FILTER DATA FOR ' + route + 'COULD NOT BE LOADED.');
-									showContent('404');
-								});
-							}
-						},
-				*/		
 					});
 	
 					_app.router.addAlias('filter', function(routeObj){
-			dump('filter alias routeObj: '); dump(routeObj);
+//						dump('filter alias routeObj: '); dump(routeObj);
 						//decides if filter JSON is in local var or if it needs to be retrieved
 						var filterpage = routeObj.pagefilter;
 						if(_app.ext.store_filter.filterData[filterpage]){
-							dump('RUNNING showPage');
+//							dump('RUNNING showPage');
 							showPage(routeObj,filterpage);
 						}
 						else {
-							dump('RUNNING loadPage');
+//							dump('RUNNING loadPage');
 							loadPage(
 								filterpage, 
 								function(){showPage(routeObj,filterpage);}, 
@@ -287,11 +267,11 @@ dump(parentID); dump(_app.ext.store_filter.filterData);
 						//decides if filter JSON is in local var or if it needs to be retrieved
 						var filterpage = routeObj.pagefilter;
 						if(_app.ext.store_filter.filterData[filterpage]){
-							dump('RUNNING showPage');
+//							dump('RUNNING showPage');
 							showSubPage(routeObj,filterpage);
 						}
 						else {
-							dump('RUNNING loadPage');
+//							dump('RUNNING loadPage');
 							loadPage(
 								filterpage, 
 								function(){showSubPage(routeObj,filterpage);}, 
@@ -344,7 +324,10 @@ dump(parentID); dump(_app.ext.store_filter.filterData);
 						_app.ext.store_cc.u.getCatJSON(routeObj.route);
 					}});
 					
-					_app.router.appendHash({'type':'match','route':'ncaa-team-apparel-merchandise/{{id}}*','pagefilter':'ncaa-team-apparel-merchandise','callback':'filter'});
+					_app.router.appendHash({'type':'match','route':'ncaa-team-apparel-merchandise/{{id}}/','pagefilter':'ncaa-team-apparel-merchandise','callback':'subcat'});
+			//		_app.ext.store_cc.u.pushFilter('ncaa-team-apparel-merchandise');
+					
+					_app.router.appendHash({'type':'match','route':'ncaa-team-apparel-merchandise/{{id}}/{{end}}/','pagefilter':'ncaa-team-apparel-merchandise','callback':'subfilter'});
 					_app.ext.store_cc.u.pushFilter('ncaa-team-apparel-merchandise');
 					
 /* test sub-sub append*/					
