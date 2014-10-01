@@ -1286,7 +1286,7 @@ this will likely become more flexible in the future. ###
 	<div class="prodViewerContainer">
 	
 		<div class="imageContainer">
-			<h2 data-tlc="bind $var '.%attribs.zoovy:prod_name'; apply --append;"></h2>
+			<h1 data-tlc="bind $var '.%attribs.zoovy:prod_name'; apply --append;" class="yearbook"></h1>
 			<section class="marginBottom marginTop clearfix hideTablet">
 				<span data-tlc="bind $var '.reviews.average'; if(is $var --notblank) {{format --prepend='review_'; apply --add --class=$var; }};" class="reviewSprite floatLeft marginRight"></span>
 				<span data-tlc="bind $var '.reviews.total'; if (is $var --notblank;) {{format --prepend=' Read All ' --append=' Reviews'; apply --append;}};" class='floatLeft productPageLink'></span>
