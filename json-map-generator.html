@@ -74,7 +74,7 @@
 		};
 		
 		
-		
+		//will generate a leaf subCategory for categories with product type: #!rootCat/subCat/leafCat/, and will have a product list in it.
 		function genTypeSubCat(attrib,subPath,optionArray,$typeList) {
 			var typeSubCatArray = []; //what gets returned, an array of each page list object generated.
 			var typeArray = ["All"]; //an array to hold the types of subcats that need to be generated
@@ -99,8 +99,10 @@
 				teamLeague = "team_league_" + teamLeague.toLowerCase();								//now key is built (may need conditions for other cat types)
 				var teamShort = attrib[3].toLowerCase();																//used to build value for baseFilter
 				var imageAlt = attrib[5];																							//the image that goes in the cat thumb. (should be from media library)
-				typeSubCat["id"] = id;
-				typeSubCat["link"] = subPath + id;
+	//			typeSubCat["id"] = id;
+	//			typeSubCat["link"] = subPath + id;
+				typeSubCat["id"] = thisLowerType+"/";
+				typeSubCat["link"] = subPath + thisLowerType+"/";
 				typeSubCat["img"] = attrib[4];
 				typeSubCat["name"] = teamLongUpper + " Apparel & Merchandise " + thisUpperType;
 				typeSubCat["page-title"] = teamLongUpper + " Apparel & Merchandise " + thisUpperType + " | CampusColors.com";
@@ -122,9 +124,9 @@
 			return typeSubCatArray;
 		}
 		
+		//will generate a subCategory for categories with a product type: #!rootCat/subCat/, and will have a listing of type categories in it.
 		function genTypeCat(attrib,rootPath,optionArray) {
-//			console.log(attrib); console.log(rootPath); console.log(optionArray);
-			
+			console.log(attrib); console.log(rootPath); console.log(optionArray);
 			var typeCat = {};
 			var teamLong = attrib[0];																						//team_long attribute
 			var id = teamLong.toLowerCase().split(" ").join("-") + "-apparel-merchandise/";		//the id for the page (must match appendHash)
@@ -141,7 +143,7 @@
 			typeCat["name"] = teamLongUpper + " Apparel & Merchandise";
 			typeCat["page-title"] = teamLongUpper + " Apparel & Merchandise | CampusColors.com";
 			typeCat["page-description"] = desc;
-			typeCat["banner"] = "banners/test_cat_banner_785x200.jpg" //banner;
+			typeCat["banner"] = banner; //"banners/test_cat_banner_785x200.jpg" 
 			typeCat["bannerlink"] = bannerlink;
 			typeCat["banneralt"] = banneralt;
 			typeCat["promo"] = promo;
@@ -161,6 +163,7 @@
 	*/		
 		}
 		
+		//will generate a leaf subCategory when there is only root/sub/product: #!rootCat/subCat/leafCat, and will have a product list in it.
 		function genSubCat(attrib,rootPath,optionArray) {
 //			console.log(attrib);
 			var subCat = {"baseFilter" : {"term" : {}},"options" : {"base_price" : {"min" : 0}}};
