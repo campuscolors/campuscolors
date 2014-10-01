@@ -119,13 +119,13 @@ var store_cc = function(_app) {
 					
 					
 					function loadPage(id, successCallback, failCallback){
-			dump('loadPage id:'); dump(id);
+//					dump('loadPage id:'); dump(id);
 					var pageObj = _app.ext.store_filter.vars.filterPageLoadQueue[id];
-					dump('pageObj passed to loadPage in store_filter'); dump(pageObj);
+//					dump('pageObj passed to loadPage in store_filter'); dump(pageObj);
 					if(pageObj){
 						$.getJSON(pageObj.jsonPath+"?_v="+(new Date()).getTime(), function(json){
 							_app.ext.store_filter.filterData[pageObj.id] = json;
-							dump('this is the json that was stored in filterData'); dump(_app.ext.store_filter.filterData[pageObj.id]);
+//							dump('this is the json that was stored in filterData'); dump(_app.ext.store_filter.filterData[pageObj.id]);
 							if(typeof successCallback == 'function'){
 								successCallback();
 								}
@@ -174,13 +174,14 @@ var store_cc = function(_app) {
 							dump("Unrecognized option "+o+" on filter page "+routeObj.params.id);
 							}
 						}
+					routeObj.params.dataset.breadcrumb = [parentID,routeObj.params.id]	
 					routeObj.params.loadFullList = _app.ext.seo_robots.u.isRobotPresent();
 					showContent('static',routeObj.params);
 					}
 					
 					
 					function showSubPage(routeObj,parentID){
-					dump('START showSubPage'); dump(routeObj);
+//					dump('START showSubPage'); dump(routeObj);
 					routeObj.params.templateid = routeObj.params.templateID || "filteredSearchTemplate";
 //					dump(parentID); dump(_app.ext.store_filter.filterData);
 					var filterData = _app.ext.store_filter.filterData[parentID]; //gets the top level data
@@ -217,6 +218,7 @@ var store_cc = function(_app) {
 							}
 						}
 					routeObj.params.loadFullList = _app.ext.seo_robots.u.isRobotPresent();
+					routeObj.params.dataset.breadcrumb = [parentID,routeObj.params.id,routeObj.params.end]
 					routeObj.params.id = routeObj.params.id + "-" + routeObj.params.end;
 					showContent('static',routeObj.params);
 //					 dump('----showContent info: '); dump(routeObj.params.id); dump(routeObj.params.end); dump(routeObj.params.id + "-" + routeObj.params.end); dump(routeObj.params.templateid); dump(routeObj.params.dataset);
@@ -239,7 +241,8 @@ var store_cc = function(_app) {
 								var dataset = $.extend(true, {}, $.grep(json.pages,function(e,i){
 									return e.id == b;
 								})[0]);
-//								dump('GREP IS: '); dump(dataset);
+			//					dump('GREP IS: '); dump(dataset);
+								dataset.breadcrumb = [routeObj.pagefilter,routeObj.params.id]
 								showContent('static',{'templateid':'splashPageTemplate','id':routeObj.params.id,'dataset':dataset});
 							})
 							.fail(function() {
@@ -323,7 +326,7 @@ var store_cc = function(_app) {
 					_app.router.appendHash({'type':'match','route':'team-apparel-merchandise/{{id}}*','pagefilter':'team-apparel-merchandise','callback':'filter'});
 					_app.ext.store_cc.u.pushFilter('team-apparel-merchandise');
 					
-					_app.router.appendHash({'type':'exact','route':'ncaa-team-apparel-merchandise/', 'callback':function(routeObj){
+					_app.router.appendHash({'type':'exact','route':'ncaa-team-apparel-merchandise/','pagefilter':'ncaa-team-apparel-merchandise','callback':function(routeObj){
 						_app.ext.store_cc.u.getCatJSON(routeObj);
 					}});
 					
@@ -556,6 +559,39 @@ var store_cc = function(_app) {
 					}
 				return true;
 				},
+				
+				addbreadcrumb : function(data, thisTLC) {
+//					dump('START addbreadcrumb'); dump(_app.ext.quickstart.vars.hotw);
+					var $tag = data.globals.tags[data.globals.focusTag];
+					var bc = data.globals.binds.bc;
+					var $bread = $("<div></div>");
+					var L = bc.length
+					$tag.empty(); //be sure there are no crumbs in the bed
+					
+					//check hotw to see if home could have been visited since root cat, if so add a link for it
+					for (var j = 1; j < 4; j++) {
+//						dump('HOTW '+j+' ='); dump(_app.ext.quickstart.vars.hotw[j]);
+						if(_app.ext.quickstart.vars.hotw[j] && _app.ext.quickstart.vars.hotw[j].pageType  == "homepage") {
+							$bread.append($("<a href='#!'>Home</a><span class='crumbTween'> &#62; </span>"));
+						}
+					}
+					
+					for(var i = 0; i < L; i++) {
+//					dump('------this turn = '); dump(i);
+						if(i == L-1) {
+							$bread.append($("<span class='crumbTween'>You are in&#58; </span><span class='crumbLeaf'>" + bc[i] + "</span>"));
+						}
+						else {
+							var $crumb = $("<a></a>");
+							$crumb.text(bc[i]).attr("href","#!" + bc[i].toLowerCase() + "/");
+							$bread.append($crumb);
+							$bread.append("<span class='crumbTween'> &#62; </span>"); 
+						}
+					}
+
+					$tag.append($bread);
+				}, //addbreadcrumb
+				
 /*PRODUCT LIST TLC*/			
 			//adds show/hide to filter options. Will add to parent container if in mobile view, otherwise only to individual filters.
 			//data-top indicates filter parent container. 
@@ -896,16 +932,21 @@ var store_cc = function(_app) {
 			//if not, will get data from the JSON record and showContent w/ that. Shows 404 if data can't be found in vars or JSON record.
 			getCatJSON : function(routeObj) {
 				var route = routeObj.route;
-				dump('START getCatJSON');
+//				dump('START getCatJSON');
 				var route = route.split('/')[0];
+				
 				if(_app.ext.store_cc.vars[route]) {
 					dump('IT WAS ALREADY THERE...');
-					showContent('static',{'templateid':'splashPageTemplate','id':data.id,'dataset':_app.ext.store_cc.vars[route]});
+					var filterData = $.extend(true, {}, _app.ext.store_cc.vars[route]);
+					filterData.breadcrumb = [filterData.id];
+					showContent('static',{'templateid':'splashPageTemplate','id':data.id,'dataset':filterData});
 				}
 				else {
 					$.getJSON("filters/apparel/"+route+".json?_v="+(new Date()).getTime(), function(json){
 						dump('THE CAT JSON IS...'); dump(json);
-						showContent('static',{'templateid':'splashPageTemplate','id':json.id,'dataset':json});
+						var filterData = $.extend(true, {}, json);
+						filterData.breadcrumb = [filterData.id];
+						showContent('static',{'templateid':'splashPageTemplate','id':json.id,'dataset':filterData});
 					})
 					.fail(function() {
 						dump('FILTER DATA FOR ' + route + 'COULD NOT BE LOADED.');
@@ -1131,7 +1172,7 @@ var store_cc = function(_app) {
 			
 /* HOMEPAGE UTILS */
 			showHomepageBanners : function() {
-			dump('START showHomepageBanners');
+//			dump('START showHomepageBanners');
 				var $container = $('.homeBanner', '#homepageTemplate_');
 				if(!$container.hasClass('bannersRendered')) {
 					if(_app.ext.store_cc.vars.homepageBanners) {

@@ -783,6 +783,8 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 <div id="splashPageTemplate" class="splashPageTemplate listWrapper">
 	<span class="displayNone" data-tlc="bind $title '.page-title'; apply --attrib='data-seo-title';"></span>
 	<span class="displayNone" data-tlc="bind $desc '.page-description'; apply --attrib='data-seo-desc';"></span>
+	
+	<div class="filterBreadCrumb" data-tlc="bind $bc '.breadcrumb'; store_cc#addbreadcrumb;"></div>
 	<!-- TODO : INVESTIGATE SETTING UP AN ELASTIC BREADCRUMB
 	<div class="fauxBreadCrumb hidePhone showTabletBlock">um... this will eventually do something breadcrumby.</div>
 	-->
@@ -812,6 +814,8 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 	<span class="displayNone" data-tlc="bind $title '.page-title'; apply --attrib='data-seo-title';"></span>
 	<span class="displayNone" data-tlc="bind $desc '.page-description'; apply --attrib='data-seo-desc';"></span>
 
+	<div class="filterBreadCrumb" data-tlc="bind $bc '.breadcrumb'; store_cc#addbreadcrumb;"></div>
+	
 	<h2 data-tlc="bind $title '.name'; apply --append;"></h2>
 	<!-- <div onclick="myApp.ext.store_cc.a.showMobileFilter($(this),$('.filterListTemplate',$(this).parent()));" data-filterview='0' class="showHideFilters greyGradient yearbook"> -->
 	<div data-tlc="store_cc#showmobilefilter;" data-filterview='0' data-top='1' class="showHideFilters hideTablet greyGradient yearbook">

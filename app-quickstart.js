@@ -994,7 +994,7 @@ for legacy browsers. That means old browsers will use the anchor to retain 'back
 						break;
 //campus - the whole case blow:						
 					case 'static':
-					dump('START showContent static');
+//					dump('START showContent static');
 						infoObj.pageType = 'static';
 						var parentID = infoObj.templateid+"_"+(infoObj.id || "");
 						var $parent = $(_app.u.jqSelector('#',parentID));
@@ -1008,7 +1008,7 @@ for legacy browsers. That means old browsers will use the anchor to retain 'back
 							infoObj.state = 'init';
 							_app.renderFunctions.handleTemplateEvents($parent,infoObj);
 							if(infoObj.dataset){
-								dump(infoObj);
+//								dump(infoObj);
 								infoObj.verb = 'translate';
 								$parent.tlc(infoObj);
 								}

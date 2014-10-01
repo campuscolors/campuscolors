@@ -99,6 +99,11 @@ body {font-family:Oxygen, Helvetica, sans-serif;}
 	background: linear-gradient(to bottom,  #fbe143 0%,#f5bd25 100%); /* W3C */
 }
 
+/*BREADCRUMB*/
+.filterBreadCrumb {padding:16px 0; font-size:0.8em;}
+.filterBreadCrumb a {text-decoration:none; color:#781c2b; margin:0 10px 0 0;}
+.crumbTween {color:#bbbbbb; margin:0 10px 0 0;}
+.crumbLeaf {color:#194835;}
 
 
 /* HEADER */
