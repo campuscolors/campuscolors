@@ -163,6 +163,7 @@ header {position:relative;}
 /* FOOTER */
 .topBrands {background-color:#cdcdcd; border-bottom:2px solid #525252;}
 .footerTopBrandCarWrap {height:100px; width:770px; padding:20px 0 0 0; margin:0 auto;}
+.footerTopBrandCar {overflow:hidden;}
 .topBrandItem {height:60px; width:100px; margin:0 29px; background-position:0px -273px; background-repeat:no-repeat; overflow:hidden;}
 .topBrandItem.adidasLogo {background-position:-212px -273px;}
 .topBrandItem.underArmorLogo {background-position:-111px -273px;}
@@ -170,6 +171,9 @@ header {position:relative;}
 .topBrandItem.reebokLogo {background-position:-307px -335px;}
 .topBrandItem.fortySevenLogo {background-position:-375px -208px;}
 .topBrandItem.retroLogo {background-position:-405px -273px;}
+.topBrandItem.tervisLogo {background-position:-249px -377px;}
+.topBrandItem.topWorldLogo {background-position:-30px -442px;}
+.topBrandItem.gameLogo {background-position:-143px -443px;}
 
 .footBG1 {height:280px; padding:20px 0 0 0; position:relative;}
 .footerPromo {background-color:#fbe143; font-size:14px; border-top:5px solid #525252; border-bottom:5px solid #525252; padding:15px 0;}
