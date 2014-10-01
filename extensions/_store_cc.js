@@ -638,7 +638,7 @@ var store_cc = function(_app) {
 				var prod = data.globals.binds.var;
 				var teamShort = prod['%attribs']['user:team_short'];
 				var teamLong = prod['%attribs']['user:team_long'];
-				var imgSrc = "team_logos/" + teamShort + ".jpeg";
+				var imgSrc = "teamlogos/" + teamShort + ".jpg";
 				var imgAlt = prod['%attribs']['user:team_long'] + " logo";
 				var league = prod['%attribs']['user:team_league'];
 				var href = "#!" + league + "-team-apparel-merchandise/" + teamLong.split(" ").join("-") + "-apparel-merchandise/";
@@ -647,7 +647,6 @@ var store_cc = function(_app) {
 				$('a',$tag).attr("href",href).text(teamLong);
 				$tag.append($img);
 				$tag.show();
-				dump('teamUpsell'); dump(teamShort);
 			},
 			
 			//add all the necessary fields for quantity inputs.
