@@ -5,6 +5,16 @@
 	<title>JSON Map Generator</title>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 	<script type="text/javascript">
+	
+	//FUNCTIONS:
+		genJSON
+		genTypeSubCat
+		genTypeCat
+		genSubCat
+		genRootCat
+		uppercaseFirst
+		removeQuotes
+	
 		function clearTextAreas() {
 			$('textarea').each(function(){
 				$(this).val('');
@@ -95,10 +105,10 @@
 				var id = teamLong.toLowerCase().split(" ").join("-") + "-apparel-merchandise-"+thisLowerType + "/";	//the id for the page (must match appendHash)
 				var teamLongUpper = uppercaseFirst(teamLong);																				//used for name on page and meta title
 				var desc = removeQuotes(attrib[1]);
-				var teamLeague = attrib[2];																					//used to build key for baseFilter
-				teamLeague = "team_league_" + teamLeague.toLowerCase();								//now key is built (may need conditions for other cat types)
-				var teamShort = attrib[3].toLowerCase();																//used to build value for baseFilter
-				var imageAlt = attrib[5];																							//the image that goes in the cat thumb. (should be from media library)
+				var teamLeague = attrib[2];															//used to build key for baseFilter
+				teamLeague = "team_league_" + teamLeague.toLowerCase();		//now key is built (may need conditions for other cat types)
+				var teamShort = attrib[3].toLowerCase();										//used to build value for baseFilter
+				var imageAlt = attrib[5];																	//the image that goes in the cat thumb. (should be from media library)
 	//			typeSubCat["id"] = id;
 	//			typeSubCat["link"] = subPath + id;
 				typeSubCat["id"] = thisLowerType+"/";
@@ -129,7 +139,8 @@
 			console.log(attrib); console.log(rootPath); console.log(optionArray);
 			var typeCat = {};
 			var teamLong = attrib[0];																						//team_long attribute
-			var id = teamLong.toLowerCase().split(" ").join("-") + "-apparel-merchandise/";		//the id for the page (must match appendHash)
+			//var id = teamLong.toLowerCase().split(" ").join("-") + "-apparel-merchandise/";		//the id for the page (must match appendHash)
+			var id = teamLong.toLowerCase().split(" ").join("-") + "/";		//the id for the page (must match appendHash)
 			var teamLongUpper = uppercaseFirst(teamLong);													//used for name on page and meta title
 			var desc = removeQuotes(attrib[1]);
 			var teamLeague = attrib[2];																					//used to build key for baseFilter
@@ -202,6 +213,7 @@
 			for(k = 0; k < splitTitle.length; k++) { 
 				key = splitTitle[k];
 				rootCat[key] = splitAttrib[k];
+				if(k == 0) { rootCat["name"] = splitAttrib[k]; }
 			}
 	//		key = "pages";
 	//		rootCat[key] = [];
