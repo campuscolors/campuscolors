@@ -630,7 +630,26 @@ var store_cc = function(_app) {
 					},2000);
 				}
 			},
+			
 /* PRODUCT PAGE TLC */
+			teamupsell : function(data,thisTLC) {
+				//#!team-apparel-merchandise/duke-blue-devils-apparel-merchandise.html
+				var $tag = data.globals.tags[data.globals.focusTag];
+				var prod = data.globals.binds.var;
+				var teamShort = prod['%attribs']['user:team_short'];
+				var teamLong = prod['%attribs']['user:team_long'];
+				var imgSrc = "team_logos/" + teamShort + ".jpeg";
+				var imgAlt = prod['%attribs']['user:team_long'] + " logo";
+				var league = prod['%attribs']['user:team_league'];
+				var href = "#!" + league + "-team-apparel-merchandise/" + teamLong.split(" ").join("-") + "-apparel-merchandise/";
+				var $img = $(_app.u.makeImage( {"tag" : true, "w" : 60, "h" : 60, "b" : 'ffffff', "name" : imgSrc, "alt"	: imgAlt, "title" : imgAlt} ));
+				
+				$('a',$tag).attr("href",href).text(teamLong);
+				$tag.append($img);
+				$tag.show();
+				dump('teamUpsell'); dump(teamShort);
+			},
+			
 			//add all the necessary fields for quantity inputs.
 			atcquantityinput : function(data, thisTLC)	{
 				var args = thisTLC.args2obj(data.command.args, data.globals);
