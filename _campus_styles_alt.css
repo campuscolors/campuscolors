@@ -163,7 +163,7 @@ header {position:relative;}
 /* FOOTER */
 .topBrands {background-color:#cdcdcd; border-bottom:2px solid #525252;}
 .footerTopBrandCarWrap {height:100px; width:770px; padding:20px 0 0 0; margin:0 auto;}
-.footerTopBrandCar {overflow:hidden;}
+.footerTopBrandCar {max-height:60px; overflow:hidden;}
 .topBrandItem {height:60px; width:100px; margin:0 29px; background-position:0px -273px; background-repeat:no-repeat; overflow:hidden;}
 .topBrandItem.adidasLogo {background-position:-212px -273px;}
 .topBrandItem.underArmorLogo {background-position:-111px -273px;}
@@ -195,7 +195,8 @@ header {position:relative;}
 
 
 /* homepageTemplate */
-.homeBanner {margin:20px auto; text-align:center;}
+.homeBanner {max-height:268px; margin:20px auto; text-align:center; overflow:hidden;}
+.homeBanner .mainBanImageCont {width:300px;}
 .homeBanner img {height:auto; max-width:100%;}
 .homeFeaturedCats {width:100%; position:relative;}
 .homeFeaturedCats .secTitleWrap.ghostTitle {width:300px; position:absolute; top:0; right:-300px; }
@@ -436,6 +437,7 @@ header {position:relative;}
 	.payment {width:233px; background-position:-75px -159px;}
 	.gtsLogo{background-position:0 -215px;}
 	
+	.homeBanner .mainBanImageCont {width:700px;}
 	.homeFeaturedCats .splashPageListTemplate {height:210px; width:310px; margin:0 10px; display:inline-block;}
 	.homeBestSell {max-height:310px;}
 	.homeBestSell .productList.ccList > li {height:250px; width:210px; border:2px solid #000000; margin:1em;}

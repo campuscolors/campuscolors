@@ -1011,14 +1011,16 @@ var store_cc = function(_app) {
 				var $target = $('.homeBanner ',$context);
 				if($target.data('isCarousel'))	{$target.trigger('play');} //only make it a carousel once, but make sure it always scrolls
 				else {
+					var width = "700px";
+					var carWidth = "95%";
+					if(screen.width < 768) { width = "300px"; carWidth = "100%";} 
 					$target.data('isCarousel',true);
 					//for whatever reason, caroufredsel needs to be executed after a moment.
 					setTimeout(function(){
 						$target.carouFredSel({
-							width	:"95%",
+							width	: carWidth,
 							items	: {
-								minimum: 1,
-								//width : "700px"
+								width : width
 							},
 							scroll: {	fx: "directscroll"	},
 							auto: {
@@ -1203,15 +1205,17 @@ var store_cc = function(_app) {
 					title	: bannerJSON.title
 				}));
 				if(bannerJSON.href) {
-					var $banner = $("<a></a>");
+					var $banner = $("<a class='mainBanImageCont'></a>");
 					$banner.append($img);
 					$banner.attr('href',bannerJSON.href);
 					return $banner;
 				}
 				else {
 					//just a banner!
+					var $banner = $("<div class='mainBanImageCont'></div>");
+					$banner.append($img);
+					return $banner;
 				}
-				return $img;
 			},
 			
 /* PRODUCT PAGE UTILS */
