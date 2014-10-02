@@ -118,7 +118,7 @@ $(document).ready(function(){
 	if(!paramStr || paramStr.indexOf('_escaped_fragment_') < 0){
 		window.myApp = new initApp({
 			"_robotHasGreeted" : false, <!-- versionhere -->
-			"release":"201408.20141001031100",  //increment this  with each change. should solve caching issues. format: YYYYMMDDHHMMSS
+			"release":"201408.20141002035200",  //increment this  with each change. should solve caching issues. format: YYYYMMDDHHMMSS
 			"_clientid":"zmvc", //zmvc for store app, 1pc for one page checkout.
 			"baseURL":baseURL, //used in non-local mode.
 			"checkoutAuthMode" : "active",//can be passive, active or required
@@ -257,7 +257,7 @@ var _robots = {
 			<div onClick="myApp.ext.quickstart.u.showCartInModal({'templateID':'cartTemplate'});" class="cartWrapper pointer center hidePhone hideTablet showDesktopBlock">
 				<div class="sprite floatLeft"></div>
 				<div class="cartItemCount floatLeft"></div>
-				<div class="floatLeft"> Item(s) in Cart - </div>
+				<div class="floatLeft itemsInCart"> Item(s) in Cart&#58;&#32; </div>
 				<div class="cartSubtotal floatLeft"></div>
 			</div>
 		</div>
@@ -2910,15 +2910,18 @@ This is the template used both within a dialog and inline, unless implicitly ove
 				<div data-tlc="bind $var '.sum.balance_due_total'; cco#orderbalance  --classname='orderBalanceDue' --hidezero='false' --currencysign='$' --legacy;"></div>
 			</section>
 
-			<section data-app-role="cartTemplateShippingContainer" class="marginBottom cartTemplateShippingContainer">
-				<h3>Shipping:</h3>
-				<div class="cartZipCodeContainer marginBottom">
-					<label>Zip/Postal Code:
-					<input data-tlc="bind $var '.ship.postal'; if(is $var --blank) {{bind $var '.bill.postal'; }}; apply --select=$var; " size="6" name="ship/postal" value="" maxlength="10" data-app-keypress="quickstart|triggerBlurOnEnter" data-app-blur="cco|cartZipUpdateExec" type="text"></label>
-				</div>
-				<ul data-tlc="order_create#shipmethodsasradiobuttons  --legacy;" class="noPadOrMargin listStyleNone" data-bind="useParentData:true; format:shipmethodsasradiobuttons; extension: order_create;" data-app-role="shipMethodsUL"></ul>
-			</section>
-
+			<div data-cc="regularship">
+				<div data-cc="hawaii">Hawaii and Alaska residents <span data-cc="zipclick" class="uRedLink pointer">click here</span> for shipping.</div>
+				<section data-app-role="cartTemplateShippingContainer" class="marginBottom cartTemplateShippingContainer">
+					<h3>Shipping:</h3>
+					<div class="cartZipCodeContainer marginBottom">
+						<label>Zip/Postal Code:
+						<input data-tlc="bind $var '.ship.postal'; if(is $var --blank) {{bind $var '.bill.postal'; }}; apply --select=$var; " size="6" name="ship/postal" value="" maxlength="10" data-app-keypress="quickstart|triggerBlurOnEnter" data-app-blur="cco|cartZipUpdateExec" type="text"></label>
+					</div>
+					<ul data-tlc="order_create#shipmethodsasradiobuttons  --legacy;" class="noPadOrMargin listStyleNone" data-bind="useParentData:true; format:shipmethodsasradiobuttons; extension: order_create;" data-app-role="shipMethodsUL"></ul>
+				</section>
+			</div>
+				
 			<section class="marginBottom"></section>
 
 		</div>

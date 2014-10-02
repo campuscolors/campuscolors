@@ -117,7 +117,11 @@ var store_cc = function(_app) {
 						else { $sideline.show(); }
 					});
 					
+					_app.templates.cartTemplate.on('complete.store_cc',function(event,$context,infoObj) {
+						_app.ext.store_cc.u.getShipContainerHeight($context);
+					});
 					
+
 					function loadPage(id, successCallback, failCallback){
 //					dump('loadPage id:'); dump(id);
 					var pageObj = _app.ext.store_filter.vars.filterPageLoadQueue[id];
@@ -1340,7 +1344,18 @@ var store_cc = function(_app) {
 				}
 				
 			},
-
+			
+			//grabs the shipping container height, then hides it. User can click link to show it if they need to set HI or AK zip. Otherwise, zip should be set by ship rule. 
+			getShipContainerHeight : function($context) {
+				var $shipCont = $('.cartTemplateShippingContainer',$context);
+				var h = $shipCont.innerHeight();
+				$("[data-cc='regularship']",$context).attr("data-shipheight",h);
+				$shipCont.css({"height":0,"overflow":"hidden"});
+				$("[data-cc='zipclick']",$context).off("click").on("click",function() {
+					$shipCont.animate({"height":h},500);
+					$("[data-cc='hawaii']",$context).animate({"height":0,"opacity":0},500);
+				});
+			}
 			
 			
 		/*	This may be a better way to do this, but it doesn't work if the page isn't reloaded. If tablet goes from 

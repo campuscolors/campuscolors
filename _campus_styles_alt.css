@@ -534,6 +534,7 @@ header {position:relative;}
 	.newsLetterWrapper {width:80%;}
 	.cartWrapper .sprite {height:30px; width:30px; background-position:-39px 1px; margin:0 0 0 40px;}
 	.cartWrapper .cartItemCount {height:25px; width:25px; padding:1px 0 0 0; margin:0 5px 0 0; text-align:center; color:#ffffff; background-color:red; border-radius:15px; box-shadow:1px 1px 2px 0 #000000;}
+	.itemsInCart {margin:0 5px 0 0;}
 	
 	.footerTopBrandCarWrap {width:950px;}
 	
