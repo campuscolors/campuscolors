@@ -191,14 +191,16 @@
 //			console.log(attrib);
 			var subCat = {"baseFilter" : {"term" : {}},"options" : {"base_price" : {"min" : 0}}};
 			var teamLong = attrib[0];																						//team_long attribute
-			var id = teamLong.toLowerCase().split(" ").join("-") + "-apparel-merchandise";		//the id for the page (must match appendHash)
+	//Need an option to vary what (if anything) is appended to the id/link hash. Another text field seems like it will make entering the data more confusing.
+//changed for brands			var id = teamLong.toLowerCase().split(" ").join("-") + "-apparel-merchandise";		//the id for the page (must match appendHash)
+			var id = teamLong.toLowerCase().split(" ").join("-") + "-gear";									//the id for the page (must match appendHash)
 			var teamLongUpper = uppercaseFirst(teamLong);													//used for name on page and meta title
 			var desc = removeQuotes(attrib[1]);
 	//		var desc = attrib[1];
 			var teamLeague = attrib[2];																					//used to build key for baseFilter
-			teamLeague = "team_league_" + teamLeague.toLowerCase();								//now key is built (may need conditions for other cat types)
+//changed for brands			teamLeague = "team_league_" + teamLeague.toLowerCase();								//now key is built (may need conditions for other cat types)
 	//		var teamShort = attrib[3].toLowerCase();																//used to build value for baseFilter
-			var teamCode = attrib[4].toLowerCase();																//used to build value for baseFilter
+			var teamCode = attrib[4].replace(/ /g,'').toLowerCase();											//used to build value for baseFilter (some codes had trailing space, so replace to remove).
 	//		var imageAlt = attrib[5];																							//the image that goes in the cat thumb. (should be from media library)
 			subCat["id"] = id;
 			subCat["link"] = rootPath + id;
@@ -206,7 +208,7 @@
 			subCat["name"] = teamLongUpper + " Apparel & Merchandise";
 			subCat["page-title"] = teamLongUpper + " Apparel & Merchandise | CampusColors.com";
 			subCat["page-description"] = desc;
-			subCat.baseFilter.term[teamLeague] = teamShort;
+			subCat.baseFilter.term[teamLeague] = teamCode;
 			subCat.options.base_price["max"] = Number(attrib[6]);
 			subCat["optionList"] = optionArray;
 //			console.log(subCat);
@@ -283,6 +285,7 @@
 			<input type="checkbox" value="user:team_league_nba"/>Teams NBA
 			<input type="checkbox" value="user:team_league_mlb"/>Teams MLB
 			<input type="checkbox" value="user:team_league_nhl"/>Teams NHL
+			<input type="checkbox" value="user:team_conference"/>Teams Conference
 		</div>
 		<div class="addType">
 			<input type="checkbox" value="subcat"/>Generate Type Sub-categories

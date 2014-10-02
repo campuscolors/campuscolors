@@ -379,12 +379,16 @@ var store_cc = function(_app) {
 /*LEAF*/		_app.router.appendHash({'type':'match','route':'soccer-team-apparel-merchandise/{{id}}/{{end}}/','pagefilter':'soccer-team-apparel-merchandise','callback':'subfilter'});
 					_app.ext.store_cc.u.pushFilter('soccer-team-apparel-merchandise');
 //END TEAM BY LEAGUE APPENDS					
-					
-					_app.router.appendHash({'type':'exact','route':'nike-gear/', 'callback':function(routeObj){
+
+//BRANDS APPENDS					
+					_app.router.appendHash({'type':'exact','route':'brands-apparel-merchandise/', 'callback':function(routeObj){
 						_app.ext.store_cc.u.getCatJSON(routeObj);
 					}});
-					_app.router.appendHash({'type':'match','route':'nike-gear/{{id}}/','pagefilter':'nike-gear','callback':'filter'});
-					_app.ext.store_cc.u.pushFilter('nike-gear');
+					_app.router.appendHash({'type':'match','route':'brands-apparel-merchandise/{{id}}/','pagefilter':'brands-apparel-merchandise','callback':'filter'});
+					_app.ext.store_cc.u.pushFilter('brands-apparel-merchandise');
+					
+					
+
 					
 					_app.router.appendHash({'type':'exact','route':'adidas-gear/', 'callback':function(routeObj){
 						_app.ext.store_cc.u.getCatJSON(routeObj);

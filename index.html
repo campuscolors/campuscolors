@@ -717,6 +717,8 @@ var _robots = {
 				SHOP BY TEAM
 				<span class="sprite"></span>
 			</div>
+			<a href="#!brands-apparel-merchandise/nike-gear/" class="levelOne">NIKE</a>
+	<!--	ENTIRELY POSSIBLE THAT THE SUBCATEGORIES MAY ONE DAY BE ADDED BACK IN HERE...
 			<div class="levelOne" onclick="myApp.ext.store_cc.a.showDropDownClick($(this));">
 				NIKE
 				<span class="sprite"></span>
@@ -730,9 +732,12 @@ var _robots = {
 					<a href="#!nike-gear/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">All Nike</a>
 				</div>
 			</div>
+	-->
+			<a href="#!brands-apparel-merchandise/adidas-gear/" class="levelOne">ADIDAS</a>
+	<!--		
 			<div class="levelOne" onclick="myApp.ext.store_cc.a.showDropDownClick($(this));">
-				ADIDAS
 				<span class="sprite"></span>
+				ADIDAS
 				<div class="levelTwo" data-dropdown="1">
 					<a href="#!adidas-gear/adidas-shorts/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Shorts</a>
 					<a href="#!adidas-gear/adidas-t-shirts/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">T-Shirts</a>
@@ -744,6 +749,7 @@ var _robots = {
 					<a href="#!adidas-gear/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">All Adidas</a>
 				</div>
 			</div>
+	-->
 			<div class="levelOne hideTablet">
 				SHORTS
 				<span class="sprite"></span>
@@ -848,8 +854,8 @@ var _robots = {
 						<li><a href="#!nhl-apparel-merchandise/">NHL</a></li>
 					</ul>
 					<ul class="listStyleNone footUL">
-						<li><a href="#!nike-gear/">Nike Gear</a></li>
-						<li><a href="#!adidas-gear/">Addidas Gear</a></li>
+						<li><a href="#!brands-apparel-merchandise/nike-gear/">Nike Gear</a></li>
+						<li><a href="#!brands-apparel-merchandise/adidas-gear/">Addidas Gear</a></li>
 					</ul>
 					<ul class="listStyleNone footUL">
 						<li><a href="#!mens-apparel-merchandise/">Men&#39;s</a></li>
@@ -1068,8 +1074,8 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 				<div class="vertLinkCont"><a href="#!mlb-team-apparel-merchandise/" class="bareWhiteLink bold">MLB</a></div>
 				<div class="vertLinkCont"><a href="#!nhl-team-apparel-merchandise/" class="bareWhiteLink bold">NHL</a></div>
 				<div class="vertLinkCont"><a href="#!team-apparel-merchandise/" class="bareWhiteLink bold">Shop by Team</a></div>
-				<div class="vertLinkCont marginTop"><a href="#!nike-gear/" class="bareWhiteLink bold">Nike</a></div>
-				<div class="vertLinkCont"><a href="#!adidas-gear/" class="bareWhiteLink bold">Adidas</a></div>
+				<div class="vertLinkCont marginTop"><a href="#!brands-apparel-merchandise/nike-gear/" class="bareWhiteLink bold">Nike</a></div>
+				<div class="vertLinkCont"><a href="#!brands-apparel-merchandise/adidas-gear/" class="bareWhiteLink bold">Adidas</a></div>
 				<div class="vertLinkCont marginTop"><a href="#!apparel/shorts/" class="bareWhiteLink bold">Shorts</a></div>
 				<div class="vertLinkCont"><a href="#!apparel/t-shirts/" class="bareWhiteLink bold">T-Shirts</a></div>
 				<div class="vertLinkCont"><a href="#!apparel/sweatshirts/" class="bareWhiteLink bold">Sweatshirts</a></div>
@@ -1967,10 +1973,11 @@ if you change these, you should move them above this comment so that when you (o
 			<ul class="listStyleNone noPadOrMargin">
 			</ul>
 		</div>
--->
+	TODO : CAN REMOVE IF NO TYPES ARE ADDED BACK IN FOR NIKE/ADIDAS SPECIFICLY
 		<h3 class="title yearbook">NIKE GEAR</h3>
 		<div>
 			<ul class="listStyleNone noPadOrMargin">
+				<li><a href="#!nike-gear/nike-shorts/">Nike Shorts</a></li>
 				<li><a href="#!nike-gear/nike-shorts/">Nike Shorts</a></li>
 				<li><a href="#!nike-gear/nike-t-shirts/">Nike T-Shirts</a></li>
 				<li><a href="#!nike-gear/nike-sweatshirts/">Nike Sweatshirts</a></li>
@@ -1991,8 +1998,16 @@ if you change these, you should move them above this comment so that when you (o
 				<li><a href="#!adidas-gear/adidas-hats/">Adidas Hats</a></li>
 			</ul>
 		</div>
+-->	
+		<h3 class="title yearbook">BRAND APPAREL</h3>
+		<div>
+			<ul class="listStyleNone noPadOrMargin">
+				<li><a href="#!brands-apparel-merchandise/nike-gear/">Nike</a></li>
+				<li><a href="#!brands-apparel-merchandise/adidas-gear/">Adidas</a></li>
+			</ul>
+		</div>
 	</div>
-	
+
 	<div class="companyRight">
 		<div class="sideline center yearbook hidePhone showTabletBlock">
 			<nav id="companyNav">
@@ -2477,28 +2492,13 @@ if you change these, you should move them above this comment so that when you (o
 			<ul class="listStyleNone noPadOrMargin">
 			</ul>
 		</div>
--->
-		<h3 class="title yearbook">NIKE GEAR</h3>
+-->	
+		<!-- TODO : SEE CUSTOMER TEMPLATE IF NIKE/ADIDAS SPECIFIC NEEDS TO COME BACK -->
+		<h3 class="title yearbook">BRAND APPAREL</h3>
 		<div>
 			<ul class="listStyleNone noPadOrMargin">
-				<li><a href="#!nike-gear/nike-shorts/">Nike Shorts</a></li>
-				<li><a href="#!nike-gear/nike-t-shirts/">Nike T-Shirts</a></li>
-				<li><a href="#!nike-gear/nike-sweatshirts/">Nike Sweatshirts</a></li>
-				<li><a href="#!nike-gear/nike-jerseys/">Nike Jerseys</a></li>
-				<li><a href="#!nike-gear/nike-pants/">Nike Pants</a></li>
-				<li><a href="#!nike-gear/nike-hats/">Nike Hats</a></li>
-			</ul>
-		</div>
-		<h3 class="title yearbook">ADIDAS GEAR</h3>
-		<div>
-			<ul class="listStyleNone noPadOrMargin">
-				<li><a href="#!adidas-gear/adidas-shorts/">Adidas Shorts</a></li>
-				<li><a href="#!adidas-gear/adidas-t-shirts/">Adidas T-Shirts</a></li>
-				<li><a href="#!adidas-gear/adidas-sweatshirts/">Adidas Sweatshirts</a></li>
-				<li><a href="#!adidas-gear/adidas-jerseys/">Adidas Jerseys</a></li>
-				<li><a href="#!adidas-gear/adidas-jackets/">Adidas Jackets</a></li>
-				<li><a href="#!adidas-gear/adidas-pants/">Adidas Pants</a></li>
-				<li><a href="#!adidas-gear/adidas-hats/">Adidas Hats</a></li>
+				<li><a href="#!brands-apparel-merchandise/nike-gear/">Nike</a></li>
+				<li><a href="#!brands-apparel-merchandise/adidas-gear/">Adidas</a></li>
 			</ul>
 		</div>
 	</div>
