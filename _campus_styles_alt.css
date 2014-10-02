@@ -221,10 +221,10 @@ header {position:relative;}
  
 
 /* splashPageListTemplate */
-.splashPageListTemplate, .productList.ccList > li {height:102px; width:90px; margin:5px; border:2px solid #000000; box-shadow:2px 2px 0 0 #bfbfbf; position:relative;}
-.splashPageListTemplate {margin:5px 5px 27px 5px;}
+.splashPageListTemplate, .productList.ccList > li {height:96px; width:90px; margin:5px; padding:0 5px; border:2px solid #000000; box-shadow:2px 2px 0 0 #bfbfbf; position:relative;}
+.splashPageListTemplate {margin:5px 5px 75px 5px;}
 .splashPageListTemplate img {height:auto; max-width:100%;}
-.splashPageListTemplate .title {height:20px; width:100%; padding:3px 0 0 0; position:absolute; left:0; bottom:-22; color:#000000; font-family:Yearbook Solid W01, Times New Roman, serif;}
+.splashPageListTemplate .title {height:20px; width:100%; padding:5px 0 0 0; position:absolute; left:0; bottom:-22; color:#000000; font-family:Yearbook Solid W01, Times New Roman, serif;}
 
 
 
@@ -445,7 +445,7 @@ header {position:relative;}
 	
 	.splashPageTemplate {width:690px;}
 	.splashBanner p {height:150px; width:350px; left:20px;}
-	.splashPageListTemplate, .productList.ccList > li, .filterListTemplate, .catFilter {height:250px; width:210px; margin:10px; border:5px solid #000000; box-shadow:4px 4px 0 0 #bfbfbf;}
+	.splashPageListTemplate, .productList.ccList > li, .filterListTemplate, .catFilter {height:240px; width:210px; margin:10px; padding:0 5px; border:5px solid #000000; box-shadow:4px 4px 0 0 #bfbfbf;}
 	.catFilter {height:auto; margin:15px 10px 10px 10px; float:left;}
 	.filteredSearchTemplate ul {clear:none;}
 	.filterListTemplate {height:auto; float:left; border:5px solid #bfbfbf;}
