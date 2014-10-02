@@ -109,11 +109,22 @@
 				teamLeague = "team_league_" + teamLeague.toLowerCase();		//now key is built (may need conditions for other cat types)
 				var teamShort = attrib[3].toLowerCase();										//used to build value for baseFilter
 				var imageAlt = attrib[5];																	//the image that goes in the cat thumb. (should be from media library)
+				var img = "";
 	//			typeSubCat["id"] = id;
 	//			typeSubCat["link"] = subPath + id;
 				typeSubCat["id"] = thisLowerType+"/";
 				typeSubCat["link"] = subPath + thisLowerType+"/";
-				typeSubCat["img"] = attrib[4];
+				switch(thisLowerType) {
+					case "all" : img = "teamlogos/" + attrib[4].toLowerCase() + ".jpg"; break;
+					case "shorts" : img = "products/images/unc_26641x_gy"; break;
+					case "t-shirts" : img = "products/images/org_24003x_bk"; break;
+					case "sweatshirts" : img = "products/images/col_27919x_bk"; break;
+					case "jerseys" :  img = "products/images/chbh_3264a_rd"; break;
+					case "pants" : img = "products/images/duke_28734x_bk"; break;
+					case "hats" : img = "products/images/cal_17142x_nv"; break;
+					case "accessories" : img = "products/images/acc_33158_tc"; break;
+				}
+				typeSubCat["img"] = img; //attrib[4];
 				typeSubCat["name"] = teamLongUpper + " Apparel & Merchandise " + thisUpperType;
 				typeSubCat["page-title"] = teamLongUpper + " Apparel & Merchandise " + thisUpperType + " | CampusColors.com";
 				typeSubCat["page-description"] = desc;
@@ -150,7 +161,7 @@
 			var banner, bannerlink, banneralt, promo = "";
 			typeCat["id"] = id;
 			typeCat["link"] = rootPath + id;
-			typeCat["img"] = attrib[4];
+			typeCat["img"] = "teamlogos/" + attrib[4] + ".jpg";
 			typeCat["name"] = teamLongUpper + " Apparel & Merchandise";
 			typeCat["page-title"] = teamLongUpper + " Apparel & Merchandise | CampusColors.com";
 			typeCat["page-description"] = desc;
