@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>JSON Map Generator</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script type="text/javascript">
+	
+		function clearTextAreas() {
+			$('textarea').each(function(){
+				$(this).val('');
+			});
+		}
+	
+		window.onload = clearTextAreas;
+	
+//console.log('');
+		function genLinks(name,league,$form) {
+			var raw = name.split('\n');
+			var output = "";
+			for(var i = 0; i < raw.length; i++) {
+				//console.log(raw);
+				var $a = $("<a></a>");
+				$a.attr("onclick","myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());");
+				var href = "#!"+league+"-team-apparel-merchandise/"+raw[i].toLowerCase().split(" ").join("-")+"/";
+				$a.attr("href",href);
+				$a.text(raw[i]);
+				output += $('<div>').append($a.clone()).html()+"\n";
+			}
+//			console.log(output);			
+			$("#output").val(output);
+		}  
+	</script>
+	
+	<style>
+	body {width:80%; margin:0 auto;}
+	textarea {width:50%; height:400px;}
+	code {border: 1px solid #000000; display:block;  margin:20px 0 0; padding:10px; width:50%;}
+	</style>
+</head>
+<body>
+	<p>
+		Enter CRLF separated list of team_long in this text field.
+	</p>
+	<div id="form">
+		<div>
+			<textarea required="required" name="team_long"></textarea>
+		</div>
+		<p>
+			Enter the value for team_league in this field and press enter to get a list of anchor tags. 
+		</p>
+		<div>
+			<input type="text" required="required" name="team_league"></textarea>
+		</div>
+		<button onClick="genLinks($('textarea[name=team_long]',$(this).parent()).val(),$('input[name=team_league]',$(this).parent()).val(),$('#form')); return false;">Generazizate</input>
+	</div>
+	<textarea id="output" name="output"></textarea>
+</body>
+</html>
