@@ -665,9 +665,9 @@ var store_cc = function(_app) {
 				//#!team-apparel-merchandise/duke-blue-devils-apparel-merchandise.html
 				var $tag = data.globals.tags[data.globals.focusTag];
 				var prod = data.globals.binds.var;
-				var teamShort = prod['%attribs']['user:team_short'];
+				var teamCode = prod['%attribs']['user:team_code'];
 				var teamLong = prod['%attribs']['user:team_long'];
-				var imgSrc = "teamlogos/" + teamShort + ".jpg";
+				var imgSrc = "teamlogos/" + teamCode + ".jpg";
 				var imgAlt = prod['%attribs']['user:team_long'] + " logo";
 				var league = prod['%attribs']['user:team_league'];
 				var href = "#!" + league + "-team-apparel-merchandise/" + teamLong.split(" ").join("-") + "-apparel-merchandise/";
