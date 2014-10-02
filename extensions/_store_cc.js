@@ -561,9 +561,9 @@ var store_cc = function(_app) {
 				},
 				
 				addbreadcrumb : function(data, thisTLC) {
-//					dump('START addbreadcrumb'); dump(_app.ext.quickstart.vars.hotw);
+					dump('START addbreadcrumb'); // dump(_app.ext.quickstart.vars.hotw);
 					var $tag = data.globals.tags[data.globals.focusTag];
-					var bc = data.globals.binds.bc;
+					var bc = data.globals.binds.bc; dump(bc); 
 					var $bread = $("<div></div>");
 					var L = bc.length
 					$tag.empty(); //be sure there are no crumbs in the bed
@@ -583,7 +583,8 @@ var store_cc = function(_app) {
 						}
 						else {
 							var $crumb = $("<a></a>");
-							$crumb.text(bc[i]).attr("href","#!" + bc[i].toLowerCase() + "/");
+							if(i == 0) { $crumb.text(bc[i]).attr("href","#!" + bc[i].toLowerCase() + "/"); }
+							else { $crumb.text(bc[i]).attr("href","#!" + bc[0].toLowerCase() +"/"+ bc[i].toLowerCase() + "/"); }
 							$bread.append($crumb);
 							$bread.append("<span class='crumbTween'> &#62; </span>"); 
 						}
