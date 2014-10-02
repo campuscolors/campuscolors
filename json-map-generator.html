@@ -107,8 +107,9 @@
 				var desc = removeQuotes(attrib[1]);
 				var teamLeague = attrib[2];															//used to build key for baseFilter
 				teamLeague = "team_league_" + teamLeague.toLowerCase();		//now key is built (may need conditions for other cat types)
-				var teamShort = attrib[3].toLowerCase();										//used to build value for baseFilter
-				var imageAlt = attrib[5];																	//the image that goes in the cat thumb. (should be from media library)
+	//			var teamShort = attrib[3].toLowerCase();										//used to build value for baseFilter
+				var teamCode = attrib[4].toLowerCase();										//used to build value for baseFilter
+	//			var imageAlt = attrib[5];																	//the image that goes in the cat thumb. (should be from media library)
 				var img = "";
 	//			typeSubCat["id"] = id;
 	//			typeSubCat["link"] = subPath + id;
@@ -130,13 +131,13 @@
 				typeSubCat["page-description"] = desc;
 				if(m > 0) { 
 					var baseFilterage = {"term" : {}};
-					baseFilterage.term[teamLeague] = teamShort;
+					baseFilterage.term[teamLeague] = teamCode;
 					typeSubCat.baseFilter.and.push(baseFilterage);
 					baseFilterage = {"term" : {}};
 					baseFilterage.term["website_filter"] = thisLowerType;
 					typeSubCat.baseFilter.and.push(baseFilterage);
 				}
-				else { typeSubCat.baseFilter.term[teamLeague] = teamShort; } //the all category has no AND w/ another attrib
+				else { typeSubCat.baseFilter.term[teamLeague] = teamCode; } //the all category has no AND w/ another attrib
 				typeSubCat.options.base_price["max"] = Number(attrib[6]);
 				typeSubCat["optionList"] = optionArray;
 				typeSubCatArray.push(typeSubCat);
@@ -157,21 +158,21 @@
 			var teamLeague = attrib[2];																					//used to build key for baseFilter
 			teamLeague = "team_league_" + teamLeague.toLowerCase();								//now key is built (may need conditions for other cat types)
 			var teamShort = attrib[3].toLowerCase();																//used to build value for baseFilter
-			var imageAlt = attrib[5];																							//the image that goes in the cat thumb. (should be from media library)
-			var banner, bannerlink, banneralt, promo = "";
+	//		var imageAlt = attrib[5];																							//the image that goes in the cat thumb. (should be from media library)
+			
 			typeCat["id"] = id;
 			typeCat["link"] = rootPath + id;
 			typeCat["img"] = "teamlogos/" + attrib[4] + ".jpg";
 			typeCat["name"] = teamLongUpper + " Apparel & Merchandise";
 			typeCat["page-title"] = teamLongUpper + " Apparel & Merchandise | CampusColors.com";
 			typeCat["page-description"] = desc;
-			typeCat["banner"] = banner; //"banners/test_cat_banner_785x200.jpg" 
-			typeCat["bannerlink"] = bannerlink;
-			typeCat["banneralt"] = banneralt;
-			typeCat["promo"] = promo;
+			typeCat["banner"] = attrib[5]; //"banners/test_cat_banner_785x200.jpg" 
+	//		typeCat["bannerlink"] = bannerlink;
+			typeCat["banneralt"] = teamLongUpper + " Promotion";
+	//		typeCat["promo"] = promo;
 //			console.log(typeCat);
 			return typeCat;
-	/*		
+	/*	sample data (it should look somewhat like this)	
 			"id": "duke-blue-devils-apparel-merchandise/",
 			"link": "#!test-ncaa-team-apparel-merchandise/duke-blue-devils-apparel-merchandise/",
 			"img": "",
@@ -196,8 +197,9 @@
 	//		var desc = attrib[1];
 			var teamLeague = attrib[2];																					//used to build key for baseFilter
 			teamLeague = "team_league_" + teamLeague.toLowerCase();								//now key is built (may need conditions for other cat types)
-			var teamShort = attrib[3].toLowerCase();																//used to build value for baseFilter
-			var imageAlt = attrib[5];																							//the image that goes in the cat thumb. (should be from media library)
+	//		var teamShort = attrib[3].toLowerCase();																//used to build value for baseFilter
+			var teamCode = attrib[4].toLowerCase();																//used to build value for baseFilter
+	//		var imageAlt = attrib[5];																							//the image that goes in the cat thumb. (should be from media library)
 			subCat["id"] = id;
 			subCat["link"] = rootPath + id;
 			subCat["img"] = attrib[4];

@@ -224,7 +224,7 @@ header {position:relative;}
 .splashPageListTemplate, .productList.ccList > li {height:96px; width:90px; margin:5px; padding:0 5px; border:2px solid #000000; box-shadow:2px 2px 0 0 #bfbfbf; position:relative;}
 .splashPageListTemplate {margin:5px 5px 75px 5px;}
 .splashPageListTemplate img {height:auto; max-width:100%;}
-.splashPageListTemplate .title {height:20px; width:100%; padding:5px 0 0 0; position:absolute; left:0; bottom:-22; color:#000000; font-family:Yearbook Solid W01, Times New Roman, serif;}
+.splashPageListTemplate .title {height:20px; width:100%; padding:5px 0 0 0; position:absolute; left:0; bottom:-22; color:#000000; font-family:Yearbook Solid W01, Times New Roman, serif; overflow:hidden;}
 
 
 
