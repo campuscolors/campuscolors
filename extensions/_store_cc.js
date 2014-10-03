@@ -685,7 +685,7 @@ var store_cc = function(_app) {
 				var imgSrc = "teamlogos/" + teamCode + ".jpg";
 				var imgAlt = prod['%attribs']['user:team_long'] + " logo";
 				var league = prod['%attribs']['user:team_league'];
-				var href = "#!" + league + "-team-apparel-merchandise/" + teamLong.split(" ").join("-") + "-apparel-merchandise/";
+				var href = "#!" + league + "-team-apparel-merchandise/" + teamLong.split(" ").join("-") + "/";
 				var $img = $(_app.u.makeImage( {"tag" : true, "w" : 60, "h" : 60, "b" : 'ffffff', "name" : imgSrc, "alt"	: imgAlt, "title" : imgAlt} ));
 				
 				$('a',$tag).attr("href",href).text(teamLong);
