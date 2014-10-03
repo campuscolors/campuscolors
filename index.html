@@ -717,7 +717,9 @@ var _robots = {
 				SHOP BY TEAM
 				<span class="sprite"></span>
 			</div>
-			<a href="#!brands-apparel-merchandise/nike-gear/" class="levelOne">NIKE</a>
+			<div class="levelOne oneLevel">
+				<a href="#!brands-apparel-merchandise/nike-gear/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent());">NIKE</a>
+			</div> 
 	<!--	ENTIRELY POSSIBLE THAT THE SUBCATEGORIES MAY ONE DAY BE ADDED BACK IN HERE...
 			<div class="levelOne" onclick="myApp.ext.store_cc.a.showDropDownClick($(this));">
 				NIKE
@@ -733,7 +735,9 @@ var _robots = {
 				</div>
 			</div>
 	-->
-			<a href="#!brands-apparel-merchandise/adidas-gear/" class="levelOne">ADIDAS</a>
+			<div class="levelOne oneLevel">
+				<a href="#!brands-apparel-merchandise/adidas-gear/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent());">ADIDAS</a>
+			</div>
 	<!--		
 			<div class="levelOne" onclick="myApp.ext.store_cc.a.showDropDownClick($(this));">
 				<span class="sprite"></span>
@@ -750,45 +754,32 @@ var _robots = {
 				</div>
 			</div>
 	-->
-			<div class="levelOne hideTablet">
-				SHORTS
-				<span class="sprite"></span>
+			<div class="levelOne oneLevel hideTablet">
+				<a href="#!apparel-merchandise/shorts/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent());">SHORTS</a>
 			</div>
-			<div class="levelOne hideTablet">
-				T-SHIRTS
-				<span class="sprite"></span>
+			<div class="levelOne oneLevel hideTablet">
+				<a href="#!apparel-merchandise/t-shirts/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent());">T-SHIRTS</a>
 			</div>
-			<div class="levelOne hideTablet">
-				JERSEYS
-				<span class="sprite"></span>
+			<div class="levelOne oneLevel hideTablet">
+				<a href="#!apparel-merchandise/jerseys/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent());">JERSEYS</a>
 			</div>
-			<div class="levelOne hideTablet">
-				JACKETS
-				<span class="sprite"></span>
+			<div class="levelOne oneLevel hideTablet">
+				<a href="#!apparel-merchandise/pants/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent());">PANTS</a>
 			</div>
-			<div class="levelOne hideTablet">
-				PANTS
-				<span class="sprite"></span>
+			<div class="levelOne oneLevel hideTablet">
+				<a href="#!apparel-merchandise/hats/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent());">HATS</a>
 			</div>
-			<div class="levelOne hideTablet">
-				HATS
-				<span class="sprite"></span>
+			<div class="levelOne oneLevel hideTablet">
+				<a href="#!apparel-merchandise/accessories-and-novelties/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent());">ACCESSORIES</a>
 			</div>
-			<div class="levelOne hideTablet">
-				ACCESSORIES
-				<span class="sprite"></span>
+			<div class="levelOne oneLevel hideTablet">
+				<a href="#!apparel-merchandise/mens/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent());">MEN&#39;S</a>
 			</div>
-			<div class="levelOne hideTablet">
-				MEN&#39;S
-				<span class="sprite"></span>
+			<div class="levelOne oneLevel hideTablet">
+				<a href="#!apparel-merchandise/womens/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent());">WOMEN&#39;S</a>
 			</div>
-			<div class="levelOne hideTablet">
-				WOMEN&#39;S
-				<span class="sprite"></span>
-			</div>
-			<div class="levelOne hideTablet">
-				KID&#39;S
-				<span class="sprite"></span>
+			<div class="levelOne oneLevel hideTablet">
+				<a href="#!apparel-merchandise/kids/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent());">KID&#39;S</a>
 			</div>
 			<div class="levelOne" onclick="myApp.ext.store_cc.a.showDropDownClick($(this));">
 				SALE
@@ -858,9 +849,9 @@ var _robots = {
 						<li><a href="#!brands-apparel-merchandise/adidas-gear/">Addidas Gear</a></li>
 					</ul>
 					<ul class="listStyleNone footUL">
-						<li><a href="#!mens-apparel-merchandise/">Men&#39;s</a></li>
-						<li><a href="#!womens-apparel-merchandise/">Women&#39;s</a></li>
-						<li><a href="#!kids-apparel-merchandise/">Kid&#39;s</a></li>
+						<li><a href="#!apparel-merchandise/mens/">Men&#39;s</a></li>
+						<li><a href="#!apparel-merchandise/womens/">Women&#39;s</a></li>
+						<li><a href="#!apparel-merchandise/kids/">Kid&#39;s</a></li>
 					</ul>
 					<div class="clear"></div>
 				</div>
@@ -1076,17 +1067,16 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 				<div class="vertLinkCont"><a href="#!team-apparel-merchandise/" class="bareWhiteLink bold">Shop by Team</a></div>
 				<div class="vertLinkCont marginTop"><a href="#!brands-apparel-merchandise/nike-gear/" class="bareWhiteLink bold">Nike</a></div>
 				<div class="vertLinkCont"><a href="#!brands-apparel-merchandise/adidas-gear/" class="bareWhiteLink bold">Adidas</a></div>
-				<div class="vertLinkCont marginTop"><a href="#!apparel/shorts/" class="bareWhiteLink bold">Shorts</a></div>
-				<div class="vertLinkCont"><a href="#!apparel/t-shirts/" class="bareWhiteLink bold">T-Shirts</a></div>
-				<div class="vertLinkCont"><a href="#!apparel/sweatshirts/" class="bareWhiteLink bold">Sweatshirts</a></div>
-				<div class="vertLinkCont"><a href="#!apparel/jerseys/" class="bareWhiteLink bold">Jerseys</a></div>
-				<div class="vertLinkCont"><a href="#!apparel/jackets/" class="bareWhiteLink bold">Jackets</a></div>
-				<div class="vertLinkCont"><a href="#!apparel/pants/" class="bareWhiteLink bold">Pants</a></div>
-				<div class="vertLinkCont"><a href="#!apparel/hats/" class="bareWhiteLink bold">Hats</a></div>
-				<div class="vertLinkCont"><a href="#!apparel/accessories/" class="bareWhiteLink bold">Accessories</a></div>
-				<div class="vertLinkCont marginTop"><a href="#!mens-apparel-merchandise/" class="bareWhiteLink bold">Men&#39;s</a></div>
-				<div class="vertLinkCont"><a href="#!womens-apparel-merchandise/" class="bareWhiteLink bold">Women&#39;s</a></div>
-				<div class="vertLinkCont vertNavLast"><a href="#!kids-apparel-merchandise/" class="bareWhiteLink bold">Kid&#39;s</a></div>
+				<div class="vertLinkCont marginTop"><a href="#!apparel-merchandise/shorts/" class="bareWhiteLink bold">Shorts</a></div>
+				<div class="vertLinkCont"><a href="#!apparel-merchandise/t-shirts/" class="bareWhiteLink bold">T-Shirts</a></div>
+				<div class="vertLinkCont"><a href="#!apparel-merchandise/sweatshirts-and-fleece/" class="bareWhiteLink bold">Sweatshirts</a></div>
+				<div class="vertLinkCont"><a href="#!apparel-merchandise/jerseys/" class="bareWhiteLink bold">Jerseys</a></div>
+				<div class="vertLinkCont"><a href="#!apparel-merchandise/pants/" class="bareWhiteLink bold">Pants</a></div>
+				<div class="vertLinkCont"><a href="#!apparel-merchandise/hats/" class="bareWhiteLink bold">Hats</a></div>
+				<div class="vertLinkCont"><a href="#!apparel-merchandise/accessories-and-novelties/" class="bareWhiteLink bold">Accessories</a></div>
+				<div class="vertLinkCont marginTop"><a href="#!apparel-merchandise/mens/" class="bareWhiteLink bold">Men&#39;s</a></div>
+				<div class="vertLinkCont"><a href="#!apparel-merchandise/womens/" class="bareWhiteLink bold">Women&#39;s</a></div>
+				<div class="vertLinkCont vertNavLast"><a href="#!apparel-merchandise/kids/" class="bareWhiteLink bold">Kid&#39;s</a></div>
 			</div>
 			<img src="images/vert-nav-arrow_230x50.png" alt="Banner Bottom" class="vertNavArrow">
 			<!-- <div class="vertNavArrow sprite"></div> -->

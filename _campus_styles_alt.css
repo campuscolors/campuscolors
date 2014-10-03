@@ -147,7 +147,8 @@ header {position:relative;}
 .mobileSlideMenu {width:266px; background-color:#999999; padding:0 5px 5px 0; position:absolute; top:0; left:-275px; z-index:1001; border-radius:0 0 4px 0;}
 .slideMenuBorder {border-right:3px solid #ffffff; border-bottom:3px solid #ffffff; border-radius:0 0 4px 0; padding:30px 0;}
 .mobileSlideMenu .levelOne, .mobileSlideMenu .levelOne .levelTwo > a  {width:100%; padding:10px 0 10px 12px; border-top:1px solid #adadad; position:relative; font-size:1.3em;}
-.mobileSlideMenu .levelOne:hover {color:#fbe143;}
+.mobileSlideMenu .levelOne.oneLevel a {display:block; color:#000000; text-decoration:none; font-size:1em; padding:0; border:none;} #781c2b
+.mobileSlideMenu .levelOne:hover, .mobileSlideMenu .levelOne.oneLevel:hover a {color:#fbe143;}
 .mobileSlideMenu .levelOne.slideTitle {font-size:2em; border:none;}
 .mobileSlideMenu .levelOne.slideTitle:hover {color:#000000;}
 .mobileSlideMenu .levelOne .slideTop {border:none;}
@@ -411,6 +412,8 @@ header {position:relative;}
 	.standardNav .levelOne.slideTitle {display:none;}
 	.standardNav .levelOne {width:86px; padding:10px 5px; float:left; border:none; color:#781c2b; text-align:center; font-size:1em; text-shadow:2px 2px 2px #cccccc; cursor:pointer; font-weight:bold; text-decoration:none;}
 	.standardNav .levelOne:hover {background:#781c2b; color:#fbe143; box-shadow:2px 2px 0 0 #cccccc; text-shadow:2px 2px 2px #000000;}
+	.mobileSlideMenu .levelOne.oneLevel a {color:#781c2b;}
+	.mobileSlideMenu .levelOne.oneLevel:hover a {color:#fbe143;}
 	.standardNav .levelOne .sprite, .standardNav .levelOne .sprite.openMenu, .mobileSlideMenuClose {display:none;}
 	.standardNav .levelOne .levelTwo {background-color:#781c2b; padding:0 0 0 20px; box-shadow:2px 2px 2px 0 #000000; text-shadow:2px 2px 2px #000000; cursor:default; font-weight:normal;} /* width:217px;  */
 	.standardNav .levelOne .levelTwo a {width:50%; padding:2px 0; font-size:1em; border:none; float:left; text-align:left;}

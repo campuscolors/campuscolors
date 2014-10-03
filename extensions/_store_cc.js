@@ -386,6 +386,13 @@ var store_cc = function(_app) {
 					}});
 					_app.router.appendHash({'type':'match','route':'brands-apparel-merchandise/{{id}}/','pagefilter':'brands-apparel-merchandise','callback':'filter'});
 					_app.ext.store_cc.u.pushFilter('brands-apparel-merchandise');
+
+//TYPE/GENDER APPENDS					
+					_app.router.appendHash({'type':'exact','route':'apparel-merchandise/', 'callback':function(routeObj){
+						_app.ext.store_cc.u.getCatJSON(routeObj);
+					}});
+					_app.router.appendHash({'type':'match','route':'apparel-merchandise/{{id}}/','pagefilter':'apparel-merchandise','callback':'filter'});
+					_app.ext.store_cc.u.pushFilter('apparel-merchandise');
 					
 					
 

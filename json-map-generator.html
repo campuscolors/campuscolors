@@ -193,14 +193,16 @@
 			var teamLong = attrib[0];																						//team_long attribute
 	//Need an option to vary what (if anything) is appended to the id/link hash. Another text field seems like it will make entering the data more confusing.
 //changed for brands			var id = teamLong.toLowerCase().split(" ").join("-") + "-apparel-merchandise";		//the id for the page (must match appendHash)
-			var id = teamLong.toLowerCase().split(" ").join("-") + "-gear";									//the id for the page (must match appendHash)
+//changed for apparel			var id = teamLong.toLowerCase().split(" ").join("-") + "-gear";									//the id for the page (must match appendHash)
+			var id = teamLong.toLowerCase().split(" ").join("-");												//the id for the page (must match appendHash)
 			var teamLongUpper = uppercaseFirst(teamLong);													//used for name on page and meta title
 			var desc = removeQuotes(attrib[1]);
 	//		var desc = attrib[1];
 			var teamLeague = attrib[2];																					//used to build key for baseFilter
-//changed for brands			teamLeague = "team_league_" + teamLeague.toLowerCase();								//now key is built (may need conditions for other cat types)
+//changed for brands			teamLeague = "team_league_" + teamLeague.toLowerCase();	//now key is built (may need conditions for other cat types)
 	//		var teamShort = attrib[3].toLowerCase();																//used to build value for baseFilter
-			var teamCode = attrib[4].replace(/ /g,'').toLowerCase();											//used to build value for baseFilter (some codes had trailing space, so replace to remove).
+//changed for apparel			var teamCode = attrib[4].replace(/ /g,'').toLowerCase();			//used to build value for baseFilter (some codes had trailing space, so replace to remove).
+			var teamCode = attrib[4].toLowerCase();																//used to build value for baseFilter (some codes had spaces, so could not remove any).
 	//		var imageAlt = attrib[5];																							//the image that goes in the cat thumb. (should be from media library)
 			subCat["id"] = id;
 			subCat["link"] = rootPath + id;
