@@ -8,120 +8,105 @@
 			"id" 				: "nba-shorts",
 			"link"				: "#!nba-apparel-merchandise/nba-shorts/", 
 			"img" 			: "",
-			"name"			: "NBA Shorts",
-			"page-title" 	: "NBA Shorts at CampusColors.com",
+			"name"			: "NBA Shorts Apparel & Merchandise",
+			"page-title" 	: "NBA Shorts Apparel & Merchandise at CampusColors.com",
 			"page-description" : "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
-			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "nba"}} , {"query" : {"query_string" : {"query":"shorts","fields":["prod_name"]}}}]},
+			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "nba"}} , {"term" : {"website_filter" : "shorts"}}]},
 			"optionList" 	: [
-				"user:team_conference",
-				"user:color_pallete",
+				"user:size_code",
 				"user:size_gender",
-				"user:vendor_code"
+				"user:vendor_code",
+				"user:color_pallete"
 			]
 		},
 		{
 			"id" 				: "nba-t-shirts",
 			"link"				: "#!nba-apparel-merchandise/nba-t-shirts/", 
 			"img" 			: "3_prongs_standard",
-			"name"			: "NBA T-shirts",
-			"page-title" 	: "NBA T-shirts at CampusColors.com",
+			"name"			: "NBA T-shirts Apparel & Merchandise",
+			"page-title" 	: "NBA T-shirts Apparel & Merchandise at CampusColors.com",
 			"page-description" : "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
-			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "nba"}} , {"query" : {"query_string" : {"query":"shirt","fields":["prod_name"]}}}]},
+			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "nba"}} , {"term" : {"website_filter" : "t-shirts"}}]},
 			"optionList" 	: [
-				"user:team_conference",
-				"user:color_pallete",
+				"user:size_code",
 				"user:size_gender",
-				"user:vendor_code"
+				"user:vendor_code",
+				"user:color_pallete"
 			]
 		},
 		{
 			"id" 				: "nba-sweatshirts",
 			"link"				: "#!nba-apparel-merchandise/nba-sweatshirts/", 
 			"img" 			: "9/93086_2",
-			"name"			: "NBA Sweatshirts",
-			"page-title" 	: "NBA Sweatshirts at CampusColors.com",
+			"name"			: "NBA Sweatshirts Apparel & Merchandise",
+			"page-title" 	: "NBA Sweatshirts Apparel & Merchandise at CampusColors.com",
 			"page-description" : "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
-			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "nba"}} , {"query" : {"query_string" : {"query":"sweatshirt","fields":["prod_name"]}}}]},
+			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "nba"}} , {"term" : {"website_filter" : "sweatshirts & fleece"}}]},
 			"optionList" 	: [
-				"user:team_conference",
-				"user:color_pallete",
+				"user:size_code",
 				"user:size_gender",
-				"user:vendor_code"
+				"user:vendor_code",
+				"user:color_pallete"
 			]
 		},
 		{
 			"id" 				: "nba-jerseys",
 			"link"				: "#!nba-apparel-merchandise/nba-jerseys/", 
 			"img" 			: "",
-			"name"			: "NBA Jerseys",
-			"page-title" 	: "NBA Jerseys at CampusColors.com",
+			"name"			: "NBA Jerseys Apparel & Merchandise",
+			"page-title" 	: "NBA Jerseys Apparel & Merchandise at CampusColors.com",
 			"page-description" : "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
-			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "nba"}} , {"query" : {"query_string" : {"query":"jersey","fields":["prod_name"]}}}]},
+			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "nba"}} , {"term" : {"website_filter" : "jerseys"}}]},
 			"optionList" 	: [
-				"user:team_conference",
-				"user:color_pallete",
+				"user:size_code",
 				"user:size_gender",
-				"user:vendor_code"
-			]
-		},
-		{
-			"id" 				: "nba-jackets",
-			"link"				: "#!nba-apparel-merchandise/nba-jackets/", 
-			"img" 			: "",
-			"name"			: "NBA Jackets",
-			"page-title" 	: "NBA Jackets at CampusColors.com",
-			"page-description" : "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
-			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "nba"}} , {"query" : {"query_string" : {"query":"jacket","fields":["prod_name"]}}}]},
-			"optionList" 	: [
-				"user:team_conference",
-				"user:color_pallete",
-				"user:size_gender",
-				"user:vendor_code"
+				"user:vendor_code",
+				"user:color_pallete"
 			]
 		},
 		{
 			"id" 				: "nba-pants",
 			"link"				: "#!nba-apparel-merchandise/nba-pants/", 
 			"img" 			: "",
-			"name"			: "NBA Pants",
-			"page-title" 	: "NBA Pants at CampusColors.com",
+			"name"			: "NBA Pants Apparel & Merchandise",
+			"page-title" 	: "NBA Pants Apparel & Merchandise at CampusColors.com",
 			"page-description" : "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
-			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "nba"}} , {"query" : {"query_string" : {"query":"pants","fields":["prod_name"]}}}]},
+			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "nba"}} , {"term" : {"website_filter" : "pants"}}]},
 			"optionList" 	: [
-				"user:team_conference",
-				"user:color_pallete",
+				"user:size_code",
 				"user:size_gender",
-				"user:vendor_code"
+				"user:vendor_code",
+				"user:color_pallete"
 			]
 		},
 		{
 			"id" 				: "nba-hats",
 			"link"				: "#!nba-apparel-merchandise/nba-hats/", 
 			"img" 			: "",
-			"name"			: "NBA Hats",
-			"page-title" 	: "NBA Hats at CampusColors.com",
+			"name"			: "NBA Hats Apparel & Merchandise",
+			"page-title" 	: "NBA Hats Apparel & Merchandise at CampusColors.com",
 			"page-description" : "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
-			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "nba"}} , {"query" : {"query_string" : {"query":"hat","fields":["prod_name"]}}}]},
+			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "nba"}} , {"term" : {"website_filter" : "hats"}}]},
 			"optionList" 	: [
-				"user:team_conference",
-				"user:color_pallete",
+				"user:size_code",
 				"user:size_gender",
-				"user:vendor_code"
+				"user:vendor_code",
+				"user:color_pallete"
 			]
 		},
 		{
 			"id" 				: "nba-accessories",
 			"link"				: "#!nba-apparel-merchandise/nba-accessories/", 
 			"img" 			: "",
-			"name"			: "NBA Accessories",
-			"page-title" 	: "NBA Accessories at CampusColors.com",
+			"name"			: "NBA Accessories Apparel & Merchandise",
+			"page-title" 	: "NBA Accessories Apparel & Merchandise at CampusColors.com",
 			"page-description" : "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
-			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "nba"}} , {"query" : {"query_string" : {"query":"accessory","fields":["prod_name"]}}}]},
+			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "nba"}} , {"term" : {"website_filter" : "novelties & accessories"}}]},
 			"optionList" 	: [
-				"user:team_conference",
-				"user:color_pallete",
+				"user:size_code",
 				"user:size_gender",
-				"user:vendor_code"
+				"user:vendor_code",
+				"user:color_pallete"
 			]
 		}
 	]

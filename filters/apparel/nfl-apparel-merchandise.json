@@ -8,135 +8,105 @@
 		"id" 				: "nfl-shorts",
 		"link"				: "#!nfl-apparel-merchandise/nfl-shorts/", 
 		"img" 			: "gbpa_536475-323_gr.jpg",
-		"name"			: "NFL Shorts",
-		"page-title" 	: "NFL Shorts at CampusColors.com",
+		"name"			: "NFL Shorts Apparel & Merchandise",
+		"page-title" 	: "NFL Shorts Apparel & Merchandise at CampusColors.com",
 		"page-description" : "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
-		"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "nfl"}} , {"query" : {"query_string" : {"query":"shorts","fields":["prod_name"]}}}]},
+		"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "nfl"}} , {"term" : {"website_filter" : "shorts"}}]},
 		"optionList" 	: [
-			"user:team_conference",
-			"user:color_pallete",
+			"user:size_code",
 			"user:size_gender",
-			"user:vendor_code"
+			"user:vendor_code",
+			"user:color_pallete"
 		]
 	},
 	{
 		"id" 				: "nfl-t-shirts",
 		"link"				: "#!nfl-apparel-merchandise/nfl-t-shirts/", 
 		"img" 			: "chbe_536087-063_sg.jpg",
-		"name"			: "NFL T-shirts",
-		"page-title" 	: "NFL T-shirts at CampusColors.com",
+		"name"			: "NFL T-shirts Apparel & Merchandise",
+		"page-title" 	: "NFL T-shirts Apparel & Merchandise at CampusColors.com",
 		"page-description" : "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
-		"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "nfl"}} , {"query" : {"query_string" : {"query":"shirt ","fields":["prod_name"]}}}]},
+		"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "nfl"}} , {"term" : {"website_filter" : "t-shirts"}}]},
 		"optionList" 	: [
-			"user:team_conference",
-			"user:color_pallete",
+			"user:size_code",
 			"user:size_gender",
-			"user:vendor_code"
+			"user:vendor_code",
+			"user:color_pallete"
 		]
 	},
 	{
 		"id" 				: "nfl-sweatshirts",
 		"link"				: "#!nfl-apparel-merchandise/nfl-sweatshirts/", 
 		"img" 			: "chbe_100223_sg.jpg",
-		"name"			: "NFL Sweatshirts",
-		"page-title" 	: "NFL Sweatshirts at CampusColors.com",
+		"name"			: "NFL Sweatshirts Apparel & Merchandise",
+		"page-title" 	: "NFL Sweatshirts Apparel & Merchandise at CampusColors.com",
 		"page-description" : "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
-		"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "nfl"}} , {"query" : {"query_string" : {"query":"sweatshirt","fields":["prod_name"]}}}]},
+		"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "nfl"}} , {"term" : {"website_filter" : "sweatshirts & fleece"}}]},
 		"optionList" 	: [
-			"user:team_conference",
-			"user:color_pallete",
+			"user:size_code",
 			"user:size_gender",
-			"user:vendor_code"
+			"user:vendor_code",
+			"user:color_pallete"
 		]
 	},
 	{
 		"id" 				: "nfl-jerseys",
 		"link"				: "#!nfl-apparel-merchandise/nfl-jerseys/", 
 		"img" 			: "chbe_16N9p_nv22.jpg.jpg",
-		"name"			: "NFL Jerseys",
-		"page-title" 	: "NFL Jerseys at CampusColors.com",
+		"name"			: "NFL Jerseys Apparel & Merchandise",
+		"page-title" 	: "NFL Jerseys Apparel & Merchandise at CampusColors.com",
 		"page-description" : "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
-		"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "nfl"}} , {"query" : {"query_string" : {"query":"jersey","fields":["prod_name"]}}}]},
+		"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "nfl"}} , {"term" : {"website_filter" : "jerseys"}}]},
 		"optionList" 	: [
-			"user:team_conference",
-			"user:color_pallete",
+			"user:size_code",
 			"user:size_gender",
-			"user:vendor_code"
-		]
-	},
-	{
-		"id" 				: "nfl-jackets",
-		"link"				: "#!nfl-apparel-merchandise/nfl-jackets/", 
-		"img" 			: "chbe_46705_nv.jpg",
-		"name"			: "NFL Jackets",
-		"page-title" 	: "NFL Jackets at CampusColors.com",
-		"page-description" : "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
-		"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "nfl"}} , {"query" : {"query_string" : {"query":"jacket","fields":["prod_name"]}}}]},
-		"optionList" 	: [
-			"user:team_conference",
-			"user:color_pallete",
-			"user:size_gender",
-			"user:vendor_code"
+			"user:vendor_code",
+			"user:color_pallete"
 		]
 	},
 	{
 		"id" 				: "nfl-pants",
 		"link"				: "#!nfl-apparel-merchandise/nfl-pants/", 
 		"img" 			: "chbe_18bpj.jpg",
-		"name"			: "NFL Pants",
-		"page-title" 	: "NFL Pants at CampusColors.com",
+		"name"			: "NFL Pants Apparel & Merchandise",
+		"page-title" 	: "NFL Pants Apparel & Merchandise at CampusColors.com",
 		"page-description" : "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
-		"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "nfl"}} , {"query" : {"query_string" : {"query":"pants","fields":["prod_name"]}}}]},
+		"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "nfl"}} , {"term" : {"website_filter" : "pants"}}]},
 		"optionList" 	: [
-			"user:team_conference",
-			"user:color_pallete",
+			"user:size_code",
 			"user:size_gender",
-			"user:vendor_code"
+			"user:vendor_code",
+			"user:color_pallete"
 		]
 	},
 	{
 		"id" 				: "nfl-hats",
 		"link"				: "#!nfl-apparel-merchandise/nfl-hats/", 
 		"img" 			: "nyjt_bdger_gr_1_sz.jpg",
-		"name"			: "NFL Hats",
-		"page-title" 	: "NFL Hats at CampusColors.com",
+		"name"			: "NFL Hats Apparel & Merchandise",
+		"page-title" 	: "NFL Hats Apparel & Merchandise at CampusColors.com",
 		"page-description" : "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
-		"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "nfl"}} , {"query" : {"query_string" : {"query":"hat","fields":["prod_name"]}}}]},
+		"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "nfl"}} , {"term" : {"website_filter" : "hats"}}]},
 		"optionList" 	: [
-			"user:team_conference",
-			"user:color_pallete",
+			"user:size_code",
 			"user:size_gender",
-			"user:vendor_code"
+			"user:vendor_code",
+			"user:color_pallete"
 		]
 	},
 	{
 		"id" 				: "nfl-accessories",
 		"link"				: "#!nfl-apparel-merchandise/nfl-accessories/", 
 		"img" 			: "chbe_4115ngl_nv.jpg",
-		"name"			: "NFL Accessories",
-		"page-title" 	: "NFL Accessories at CampusColors.com",
+		"name"			: "NFL Accessories Apparel & Merchandise",
+		"page-title" 	: "NFL Accessories Apparel & Merchandise at CampusColors.com",
 		"page-description" : "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
-		"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "nfl"}} , {"query" : {"query_string" : {"query":"accessory","fields":["prod_name"]}}}]},
+		"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "nfl"}} , {"term" : {"website_filter" : "novelties & accessories"}}]},
 		"optionList" 	: [
-			"user:team_conference",
-			"user:color_pallete",
+			"user:size_code",
 			"user:size_gender",
-			"user:vendor_code"
-		]
-	},
-	{
-		"id" 				: "nfl-best-sellers",
-		"link"				: "#!nfl-apparel-merchandise/nfl-best-sellers/", 
-		"img" 			: "",
-		"name"			: "NFL Best Sellers",
-		"page-title" 	: "NFL Best Sellers at CampusColors.com",
-		"page-description" : "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
-		"baseFilter" 	: {"term" : {"tags" : "IS_BESTSELLER"}},
-		"optionList" 	: [
-			"user:team_conference",
-			"user:color_pallete",
-			"user:size_gender",
-			"user:vendor_code"
+			"user:vendor_code",
+			"user:color_pallete"
 		]
 	}
 ]
