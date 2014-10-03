@@ -7,7 +7,7 @@
 				"height"	: "268",
 				"alt"			: "Tailgating Essentials",
 				"title"		: "Tailgating Essentials",
-				"href"		: ""
+				"href"		: "#!apparel-merchandise/accessories-and-novelties/"
 			},
 			{
 				"src"			: "banners/gameday_banner.jpg",
@@ -15,7 +15,7 @@
 				"height"	: "268",
 				"alt"			: "Game Day",
 				"title"		: "Game Day",
-				"href"		: ""
+				"href"		: "#!apparel-merchandise/jerseys/"
 			},
 			{
 				"src"			: "banners/bogo_banner.jpg",
@@ -23,7 +23,7 @@
 				"height"	: "268",
 				"alt"			: "Buy One Sweatshirt, Get One 30 percent off",
 				"title"		: "Buy One Sweatshirt, Get One 30 percent off",
-				"href"		: ""
+				"href"		: "#!apparel-merchandise/sweatshirts-and-fleece/"
 			}
 		]
 	},
