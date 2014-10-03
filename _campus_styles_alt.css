@@ -15,6 +15,7 @@ body {font-family:Oxygen, Helvetica, sans-serif;}
 .yearbook {font-family:Yearbook Solid W01, Times New Roman, serif;}
 *, *:before, *:after {-moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box;}
 .showTablet, .showDesktop, .hidePhone {display:none;}
+.quickview, .searchResultsProduct .quickView {display:none;}
 
 .clear {clear:both;}
 .center {text-align:center;}
@@ -567,6 +568,10 @@ header {position:relative;}
 	.splashPageTemplate {width:920px;}
 	.splashBanner p {left:140px;}
 	
+	.filteredSearchTemplate button.quickView.showQuickview, 
+	.productListTemplate button.quickView.showQuickview,
+	.searchResultsProduct button.quickView.showQuickview {display:inline-block;}
+	.prodlistRelatedContainer .searchResultsProduct button.quickView.showQuickview {display:none;}
 	.prodViewerContainer {width:908px;}
 	.prodMSRP, .savingsPercentage {font-size:2em;}
 	.basePrice {font-size:3em;}
