@@ -447,8 +447,9 @@ header {position:relative;}
 	.payment {width:233px; background-position:-75px -159px;}
 	.gtsLogo{background-position:0 -215px;}
 	
-	.homeBanner .mainBanImageCont {width:700px;}
-	.homeFeaturedCats .splashPageListTemplate {height:210px; width:310px; margin:0 10px; display:inline-block;}
+	.homeBanner .mainBanImageCont {height:268px; width:700px;}
+	.homeFeaturedCats .splashPageListTemplate {height:219px; width:310px; margin:0 10px; display:inline-block; padding:0;}
+	.homeFeaturedCats .splashPageListTemplate .title {heigth:auto; padding:10px;}
 	.homeBestSell {max-height:310px;}
 	.homeBestSell .productList.ccList > li {height:250px; width:210px; border:2px solid #000000; margin:1em;}
 	.homeBestSell .productList.ccList .prodInfo {display:block;}
@@ -578,7 +579,7 @@ header {position:relative;}
 	#appView {width:1080px; margin:0 auto; box-shadow:0px 1px 5px 5px #cccccc;}
 	.wrapper {width:950px;}
 	.homeMainWrapper {width:1080px; margin:0 auto;}
-	.homeFeaturedCats .splashPageListTemplate {height:230px; width:330px;}
+	.homeFeaturedCats .splashPageListTemplate {height:233px; width:330px;}
 	
 	.prodViewerContainer {width:948px;}
 	#shippingArticle h1 {font-size:1.8em;}

@@ -1085,10 +1085,10 @@ var store_cc = function(_app) {
 								width : width
 							},
 							scroll: {	fx: "directscroll"	},
-							auto: {
-								delay: 1000,
-								pauseOnHover:"immediate"
-							},
+							auto: false, // {
+				//				delay: 1000,
+				//				pauseOnHover:"immediate"
+				//			},
 							swipe: { 
 								onMouse: true,	
 								onTouch: true 
@@ -1236,17 +1236,20 @@ var store_cc = function(_app) {
 			
 /* HOMEPAGE UTILS */
 			showHomepageBanners : function() {
-//			dump('START showHomepageBanners');
+			dump('START showHomepageBanners'); dump(_app.ext.store_cc.vars.homepageBanners[1].featured);
 				var $container = $('.homeBanner', '#homepageTemplate_');
+				var $featuredContainer = $('[data-home-featured="container"]', '#homepageTemplate_');
 				if(!$container.hasClass('bannersRendered')) {
-					if(_app.ext.store_cc.vars.homepageBanners) {
+					if(_app.ext.store_cc.vars.homepageBanners && _app.ext.store_cc.vars.homepageBanners[0].main) {
 						$container.addClass('bannersRendered');
-						for(var i = 0; i < _app.ext.store_cc.vars.homepageBanners.length; i++) {
-							var thisBanner = _app.ext.store_cc.vars.homepageBanners[i];
+						for(var i = 0; i < _app.ext.store_cc.vars.homepageBanners[0].main.length; i++) {
+							var thisBanner = _app.ext.store_cc.vars.homepageBanners[0].main[i];
 							var bannerWidth = thisBanner.width == "" ? 620 : thisBanner.width;
 							var bannerHeight = thisBanner.height == "" ? 268 : thisBanner.height;
 							//dump('BANNER WIDTH & HEIGHT'); dump(bannerWidth); dump(bannerHeight);
-							$container.removeClass('loadingBG').append(_app.ext.store_cc.u.makeBanner(thisBanner,bannerWidth,bannerHeight,"ffffff"));
+							var $wrapper = $("<div class='mainBanImageCont'></div>");
+							$wrapper.append(_app.ext.store_cc.u.makeBanner(thisBanner,bannerWidth,bannerHeight,"ffffff"));
+							$container.removeClass('loadingBG').append($wrapper);
 						}
 						_app.ext.store_cc.u.runHomeMainBanner($('#homepageTemplate_'));
 					}
@@ -1254,6 +1257,24 @@ var store_cc = function(_app) {
 						setTimeout(this.showHomepageBanners,250);
 					}
 				}
+				if(!$featuredContainer.hasClass('bannersRendered')) {
+					if(_app.ext.store_cc.vars.homepageBanners && _app.ext.store_cc.vars.homepageBanners[1].featured) {
+						$featuredContainer.addClass('bannersRendered');
+						for(var j = 0; j < _app.ext.store_cc.vars.homepageBanners[1].featured.length; j++) {
+							var nextBanner = _app.ext.store_cc.vars.homepageBanners[1].featured[j];
+							var bannerWidth = nextBanner.width == "" ? 330 : nextBanner.width;
+							var bannerHeight = nextBanner.height == "" ? 230 : nextBanner.height;
+							var $destination = j == 0 ? $('[data-home-featured="first"]', '#homepageTemplate_') : $('[data-home-featured="second"]', '#homepageTemplate_');
+							$destination.removeClass('loadingBG').append(_app.ext.store_cc.u.makeBanner(nextBanner,bannerWidth,bannerHeight,"ffffff"));
+							if(nextBanner.label) {
+								var  $label = $("<h2 class='title center'></h2>");
+								$label.text(nextBanner.label);
+								$('a',$destination).append($label);
+							}
+						}
+					}
+				}
+				else { setTimeout(this.showHomepageBanners,250); }
 			},
 			
 			makeBanner : function(bannerJSON, w, h, b) {
@@ -1267,16 +1288,14 @@ var store_cc = function(_app) {
 					title	: bannerJSON.title
 				}));
 				if(bannerJSON.href) {
-					var $banner = $("<a class='mainBanImageCont'></a>");
+					var $banner = $("<a></a>");
 					$banner.append($img);
 					$banner.attr('href',bannerJSON.href);
 					return $banner;
 				}
 				else {
 					//just a banner!
-					var $banner = $("<div class='mainBanImageCont'></div>");
-					$banner.append($img);
-					return $banner;
+					return $img;
 				}
 			},
 			

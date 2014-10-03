@@ -1039,18 +1039,12 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 						<div class="secTitle yearbook">FEATURED CATEGORIES</div>
 					</div>
 				</div>
-				<ul class="listStyleNone">
-					<li class="splashPageListTemplate">
-						<a href=""> <!-- TODO : href here -->
-							<img data-apptimize="embed" src="images/main-banner_700x388.jpg" alt="Featured Category" width="320" height="220">
-							<div class="title center">NHL HOCKEY SHORTS</div>
-						</a>
+				<ul class="listStyleNone" data-home-featured="container">
+					<li class="splashPageListTemplate" data-home-featured="first">
+						<!-- THIS CONTENT LOADED VIA _banners.json in store_cc.u.showHomepageBanners() --> 
 					</li>
-					<li class="splashPageListTemplate">
-						<a href=""> <!-- TODO : href here -->
-							<img data-apptimize="embed" src="images/main-banner_700x388.jpg" alt="Featured Category"  width="320" height="220">
-							<div class="title center">NHL HOCKEY T-SHIRTS</div>
-						</a>
+					<li class="splashPageListTemplate" data-home-featured="second">
+						<!-- THIS CONTENT LOADED VIA _banners.json in store_cc.u.showHomepageBanners() --> 
 					</li>
 				</ul>
 			</div>

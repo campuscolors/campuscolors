@@ -1,42 +1,52 @@
 [
-	{
-		"src"			: "banners/tailgating_banner_alt.jpg",
-		"width"		: "700",
-		"height"	: "268",
-		"alt"			: "Tailgating Essentials",
-		"title"		: "Tailgating Essentials",
-		"href"		: ""
+	{ "main" : 
+		[
+			{
+				"src"			: "banners/tailgating_banner_alt.jpg",
+				"width"		: "700",
+				"height"	: "268",
+				"alt"			: "Tailgating Essentials",
+				"title"		: "Tailgating Essentials",
+				"href"		: ""
+			},
+			{
+				"src"			: "banners/gameday_banner.jpg",
+				"width"		: "700",
+				"height"	: "268",
+				"alt"			: "Game Day",
+				"title"		: "Game Day",
+				"href"		: ""
+			},
+			{
+				"src"			: "banners/bogo_banner.jpg",
+				"width"		: "700",
+				"height"	: "268",
+				"alt"			: "Buy One Sweatshirt, Get One 30 percent off",
+				"title"		: "Buy One Sweatshirt, Get One 30 percent off",
+				"href"		: ""
+			}
+		]
 	},
-	{
-		"src"			: "banners/gameday_banner.jpg",
-		"width"		: "700",
-		"height"	: "268",
-		"alt"			: "Game Day",
-		"title"		: "Game Day",
-		"href"		: ""
-	},
-	{
-		"src"			: "banners/bogo_banner.jpg",
-		"width"		: "700",
-		"height"	: "268",
-		"alt"			: "Buy One Sweatshirt, Get One 30 percent off",
-		"title"		: "Buy One Sweatshirt, Get One 30 percent off",
-		"href"		: ""
-	},
-	{
-		"src"			: "banners/collegesweatshirts.jpg",
-		"width"		: "700",
-		"height"	: "268",
-		"alt"			: "College Sweatshirts",
-		"title"		: "College Sweatshirts",
-		"href"		: ""
-	},
-	{
-		"src"			: "banners/nfl_hats.jpg",
-		"width"		: "700",
-		"height"	: "268",
-		"alt"			: "NFL Hats",
-		"title"		: "NFL Hats",
-		"href"		: ""
-	}
+	{ "featured" :
+		[
+			{
+				"src"			: "banners/collegesweatshirts.jpg",
+				"width"		: "330",
+				"height"	: "230",
+				"alt"			: "College Sweatshirts",
+				"title"		: "College Sweatshirts",
+				"label"		: "",
+				"href"		: "#!ncaa-apparel-merchandise/ncaa-sweatshirts/"
+			},
+			{
+				"src"			: "banners/nfl_hats.jpg",
+				"width"		: "330",
+				"height"	: "230",
+				"alt"			: "NFL Hats",
+				"title"		: "NFL Hats",
+				"label"		: "",
+				"href"		: "#!nfl-apparel-merchandise/nfl-hats/"
+			}
+		]
+	}	
 ]
