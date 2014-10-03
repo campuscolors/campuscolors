@@ -1084,28 +1084,31 @@ var store_cc = function(_app) {
 							items	: {
 								width : width
 							},
-							scroll: {	fx: "directscroll"	},
-							auto: false, // {
-				//				delay: 1000,
-				//				pauseOnHover:"immediate"
-				//			},
+							scroll: {	fx: "cover-fade"	},
+							auto:  {
+								delay : 1000,
+								duration : 1500,
+								timeoutDuration : 4000,
+								easing : 'linear',
+								pauseOnHover:"immediate"
+							},
 							swipe: { 
 								onMouse: true,	
 								onTouch: true 
-							}
-			/*				pagination: {
-								container: ".page",
+							},
+							pagination: {
+								container: ".mainPage",
 								keys: true
 							},
 							prev: {
-								button: ".prev",
+								button: ".mainPrev",
 								key: "left"
 							},
 							next: {
-								button: ".next",
+								button: ".mainNext",
 								key: "right"
 							}
-			*/			});
+						});
 					},2000); 
 				} //HOMEPAGE main banner CAROUSEL
 			},

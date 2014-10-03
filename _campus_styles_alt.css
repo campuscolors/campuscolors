@@ -199,6 +199,12 @@ header {position:relative;}
 .homeBanner {max-height:268px; margin:20px auto; text-align:center; overflow:hidden;}
 .homeBanner .mainBanImageCont {width:300px;}
 .homeBanner img {height:auto; max-width:100%;}
+.homeBannerCont {position:relative;}
+.mainPageCont {width:100%; position:absolute; left:0; bottom:10px; z-index:2;}
+.mainPage a {height:20px; width:20px; background-color:#fbe143; color:#fbe143; margin:0 15px; display:inline-block;}
+.mainPage a.selected {background-color:#194835; color:#194835;}
+.mainPrev, .mainNext {height:18px; width:17px; background-position:-430px -120px; display:inline-block; margin:0 15px;}
+.mainNext {background-position:-348px -48px;}
 .homeFeaturedCats {width:100%; position:relative;}
 .homeFeaturedCats .secTitleWrap.ghostTitle {width:300px; position:absolute; top:0; right:-300px; }
 .homeFeaturedCats .secTitle {margin:0 60px 0 0;}
@@ -447,7 +453,7 @@ header {position:relative;}
 	.payment {width:233px; background-position:-75px -159px;}
 	.gtsLogo{background-position:0 -215px;}
 	
-	.homeBanner .mainBanImageCont {height:268px; width:700px;}
+	.homeBanner .mainBanImageCont {width:700px;}
 	.homeFeaturedCats .splashPageListTemplate {height:219px; width:310px; margin:0 10px; display:inline-block; padding:0;}
 	.homeFeaturedCats .splashPageListTemplate .title {heigth:auto; padding:10px;}
 	.homeBestSell {max-height:310px;}
