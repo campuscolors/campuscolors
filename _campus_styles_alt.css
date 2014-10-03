@@ -390,6 +390,10 @@ header {position:relative;}
 #modalCart .footLogos {background-position: 0 -379px; width: 242px; height: 30px; margin:0 auto;}
 
 
+/* CHECKOUT */
+#checkoutContainer form {width:80%; margin:20px auto;}
+#checkoutContainer .applyButton.ccButton {padding:0;}
+
 
 @media screen and (min-width:400px) {
 	.headerTop {height:36px;}
