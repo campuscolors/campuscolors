@@ -1058,8 +1058,28 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 			<div class="vertNavBorder">
 				<div class="vertNavTitle whiteText marginTop">SHOP BY</div>
 				<!-- <div class="vertLinkCont marginTop"><a href="#!test-ncaa-team-apparel-merchandise/" class="bareWhiteLink bold">Test College</a></div> -->
-				<div class="vertLinkCont marginTop"><a href="#!ncaa-team-apparel-merchandise/" class="bareWhiteLink bold">College</a></div>
-				<div class="vertLinkCont"><a href="#!nfl-team-apparel-merchandise/" class="bareWhiteLink bold">NFL</a></div>
+				<div onmouseover="myApp.ext.store_cc.a.showDropOut($(this));" onmouseout="myApp.ext.store_cc.a.hideDropOut($(this));" class="vertLinkCont marginTop">
+					<a href="#!ncaa-team-apparel-merchandise/" class="bareWhiteLink bold">College</a>
+					<div data-dropout="1" data-width=230 class="vertDropout">
+						<div class="vertNavBorder">
+							<div class="sprite"></div>
+							<div><a href="#!nfl-team-apparel-merchandise/" class="bareWhiteLink bold">Links</a></div>
+							<div><a href="#!nfl-team-apparel-merchandise/" class="bareWhiteLink bold">For</a></div>
+							<div><a href="#!nfl-team-apparel-merchandise/" class="bareWhiteLink bold">Samplage</a></div>
+						</div>
+					</div>
+				</div>
+				<div onmouseover="myApp.ext.store_cc.a.showDropOut($(this));" onmouseout="myApp.ext.store_cc.a.hideDropOut($(this));" class="vertLinkCont">
+					<a href="#!nfl-team-apparel-merchandise/" class="bareWhiteLink bold">NFL</a>
+					<div data-dropout="1" data-width=230 class="vertDropout">
+						<div class="vertNavBorder">
+							<div class="sprite"></div>
+							<div><a href="#!nfl-team-apparel-merchandise/" class="bareWhiteLink bold">Links</a></div>
+							<div><a href="#!nfl-team-apparel-merchandise/" class="bareWhiteLink bold">For</a></div>
+							<div><a href="#!nfl-team-apparel-merchandise/" class="bareWhiteLink bold">Samplage</a></div>
+						</div>
+					</div>
+				</div>
 				<div class="vertLinkCont"><a href="#!nba-team-apparel-merchandise/" class="bareWhiteLink bold">NBA</a></div>
 				<div class="vertLinkCont"><a href="#!mlb-team-apparel-merchandise/" class="bareWhiteLink bold">MLB</a></div>
 				<div class="vertLinkCont"><a href="#!nhl-team-apparel-merchandise/" class="bareWhiteLink bold">NHL</a></div>

@@ -529,7 +529,43 @@ var store_cc = function(_app) {
 			togglerecover : function($tag) {
 				$("[data-slide='toggle']",$tag.parent()).slideToggle();
 				$tag.parent().toggleClass('open');
-			}
+			},
+			
+			showDropOut : function ($tag) {
+				//_app.u.dump('showing');
+				//console.log($tag.data('timeoutNoShow'));
+				if(!$tag.data('timeoutNoShow') || $tag.data('timeoutNoShow')=== "false") {
+					var $dropout = $("[data-dropout]", $tag);
+					var width = 0;
+					$dropout.show();
+					if($dropout.data('width')){
+						width = $dropout.data('width');
+					} else{
+						$dropout.children().each(function(){
+								width += $(this).outerWidth();
+						});
+					}
+					if($tag.data('timeout') && $tag.data('timeout')!== "false"){
+						clearTimeout($tag.data('timeout'));
+						$tag.data('timeout','false');
+							
+					}
+					$dropout.stop().animate({"width":width+"px"}, 500);
+					return true;
+				}
+				return false;
+			},
+			
+			hideDropOut : function ($tag) {
+				//_app.u.dump('hiding');
+				$("[data-dropout]", $tag).stop().animate({"width":"0px"}, 500);
+				if($tag.data('timeout') && $tag.data('timeout')!== "false"){
+					$tag.data('timeout')
+					$tag.data('timeout','false');
+				}
+				$tag.data('timeout',setTimeout(function(){$("[data-dropout]", $tag).hide();},500));
+				return true;
+			},
 		
 		}, //Actions
 
