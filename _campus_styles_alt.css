@@ -563,9 +563,12 @@ header {position:relative;}
 	.homeVertNav .vertLinkCont.vertNavLast {padding:0 0 5px 0;}
 	/*.vertNavArrow {height:50px; width:229px; position:absolute; bottom:-42px; right:0; background-position:-144px -210px;}*/
 	.vertNavArrow {height:auto; max-width:100%; position:absolute; bottom:-39px; right:0;}
-	.vertDropout {width:0; background:#781c2b; position:absolute; top:-39px; left:140px; z-index:1003; padding:5px; border-radius:4px;}
+	.vertDropout {width:0; position:absolute; top:-39px; left:100px; z-index:1003; border-radius:4px; overflow:hidden;}
+	.vertDropout .dropoutPositioning {width:246px; padding:0 0 0 32px; overflow:hidden;}
+	.vertDropout .dropoutVertNavCont {width:214px; padding:5px; border-radius:4px; background:#781c2b;}
 	.vertDropout .vertNavBorder {border:2px solid #ffffff; border-radius:4px; padding:20px;}
-	.vertDropout .sprite {height:82px; width:32px; position:absolute; top:10px; left:-25px; background-position:-467px -50px;}
+	.vertDropout .sprite {height:82px; width:32px; position:absolute; top:12px; left:7px; background-position:-467px -50px;}
+	.vertDropout .scrollDropout {max-height:370px; overflow-x:hidden; overflow-y:scroll;}
 	.vertDropout a {height:auto; width:160px;}
 	.homeBanner {margin:20px;}
 
