@@ -250,9 +250,9 @@ var store_filter = function(_app) {
 						var o = list[i];
 						var $t = $('<div data-filter="inputContainer"></div>');
 						$t.append('<label><input data-filter="filterCheckbox" type="checkbox" name="'+o.v+'" '+(o.checked ? 'checked="checked"' : '')+' />'+o.p+' <span data-filter="count"></span></label>');
-						//$('input', $t).on('change', function(event){
-						//	_app.ext.store_filter.e.execFilteredSearch($(this), event);
-						//	});
+						$('input', $t).on('change', function(event){
+							_app.ext.store_filter.e.execFilteredSearch($(this).closest('form'), event);
+						});
 						if(o.hidden){$t.addClass('displayNone');}
 						$tag.append($t);
 						}

@@ -624,8 +624,7 @@ var store_cc = function(_app) {
 						max : range.max,
 						step : range.step,
 						values : [range.min, range.max],
-//passing $(this) seems wrong, was failing when tried to process JSON, uncomment when fixed, submitting w/ button still works.
-// 						change : function(event, ui){_app.ext.store_filter.e.execFilteredSearch($(this), event);},
+						change : function(event, ui){_app.ext.store_filter.e.execFilteredSearch($(this).closest('form'), event);},
 						slide : function(event, ui){$('.sliderVal', ui.handle).text(ui.value);},
 						create : function(event, ui){
 							$(this).find(".ui-slider-handle").each(function(i){
