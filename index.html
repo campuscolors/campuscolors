@@ -1272,11 +1272,23 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 				</div>
 			</div>
 		</div>
-		
-		<div data-tlc="bind $var '.options.base_price'; if(is $var --blank;){{apply --tag --remove;}};" class="filterGroup priceFilter marginBottom">
+<!-- DIDN'T WANT TO USE SLIDER		
+		<div data-tlc="bind $var '.options.base_price'; if(is $var - -blank;){{apply - -tag - -remove;}};" class="filterGroup priceFilter marginBottom">
 			<div data-tlc="store_cc#showmobilefilter;" data-filterview='0' data-top='0' class="filterGroupTitle greyGradient">Price<span class="sprite"></span></div>
 			<div class="filterHider">
-				<div data-filter-range-mult="100" data-tlc="bind $range '.options.base_price'; if(is $range --notblank;){{store_cc#filterrange --index='base_price';}};"></div>
+				<div data-filter-range-mult="100" data-tlc="bind $range '.options.base_price'; if(is $range - -notblank;){{store_cc#filterrange - -index='base_price';}};"></div>
+			</div>
+		</div>
+-->		
+		<div data-tlc="bind $var '.options.base_price'; if(is $var --blank;){{apply --tag --remove;}};" class="filterGroup priceFilter marginBottom">
+			<div data-tlc="store_cc#showmobilefilter;" data-filterview='1' data-top='0' class="filterGroupTitle greyGradient">Price<span class="sprite"></span></div>
+			<div class="filterHider">
+				<div data-filter-range-mult="100" data-tlc="bind $range '.options.base_price'; if(is $range --notblank;){{store_cc#filterrangebox --index='base_price';}};">
+					<div><input type="checkbox" data-price="0|24.99" /><label>&#36;0.00 - &#36;24.99</label></div>
+					<div><input type="checkbox" data-price="25|49.99"><label>&#36;25.00 - &#36;49.99</label></div>
+					<div><input type="checkbox" data-price="50|74.99"><label>&#36;50.00 - &#36;74.99</label></div>
+					<div><input type="checkbox" data-price="75|max"><label>&#36;75.00 &#43;	<div class="qualifies">&#40;Qualifies for free shipping&#41;</div></label></div>
+				</div>
 			</div>
 		</div>
 		

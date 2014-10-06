@@ -641,6 +641,48 @@ var store_cc = function(_app) {
 				return true;
 				},
 				
+				filterrangebox : function(data, thisTLC){
+				var args = thisTLC.args2obj(data.command.args, data.globals);
+				if(typeof args.filterType === "undefined"){
+					args.filterType = 'rangebox';
+					}
+				if(args.index){
+					
+					var range = data.globals.binds[data.globals.focusBind];
+					range.min = range.min || 0;
+					range.step = range.step || 1;
+					var $tag = data.globals.tags[data.globals.focusTag];
+
+					$tag.attr('data-filter-index',args.index);
+					$tag.attr('data-filter-type',args.filterType);
+					$tag.attr('data-values',range.min+"|"+range.max);
+					
+					dump(range.min); dump(range.max); dump(range.min+"|"+range.max);
+					
+					$('[data-price]',$tag).each(function() {
+						$(this).on('change',function(event) {
+							if($(this).prop('checked') === true) {
+								$tag.attr('data-values',$(this).data('price'));
+								$('[data-price]',$tag).each(function(){ $(this).removeClass('active') });
+								$(this).addClass('active');
+								$('[data-price]',$tag).each(function(){ if(!$(this).hasClass('active')) { $(this).prop('checked',false) } });
+							}
+							else {
+								$('[data-price]',$tag).each(function(){ $(this).removeClass('active') });
+								$tag.attr('data-values',range.min+"|"+range.max);
+							}
+							_app.ext.store_filter.e.execFilteredSearch($(this).closest('form'), event);
+							dump('you clicked the option w/ price: '); dump($(this).data('price'));
+						});
+					});
+
+				}
+				else {
+					return false;
+					}
+				return true;
+				},
+				
 				addbreadcrumb : function(data, thisTLC) {
 					dump('START addbreadcrumb'); // dump(_app.ext.quickstart.vars.hotw);
 					var $tag = data.globals.tags[data.globals.focusTag];

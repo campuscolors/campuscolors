@@ -320,6 +320,19 @@ var store_filter = function(_app) {
 						}
 					elasticsearch.filter.and.push(f);
 					});
+				$('[data-filter-type=rangebox]', $form).each(function(){
+					var vals = $(this).attr('data-values').split('|');
+					var f = {"range" : {}};
+					var m =$(this).attr('data-filter-range-mult')
+					if(m){
+						vals = $.map(vals, function(e, i){ return e*m; });
+						}
+					f.range[$(this).attr('data-filter-index')] = {
+						"gte" : vals[0],
+						"lte" : vals[1]
+						}
+					elasticsearch.filter.and.push(f);
+					});
 				$('[data-filter-type=checkboxList]', $form).each(function(){
 					var filter = {"or" : []};
 					$('[data-filter=count]', $(this)).empty();
