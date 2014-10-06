@@ -139,8 +139,8 @@ header {position:relative;}
 .upperCartWrapper {position:relative;}
 .upperCartWrapper .sprite {height:25px; width:31px; background-position:-129px 0; position:absolute; top:-4px; left:20px;}
 .upperCartWrapper .cartItemCount {width:16px; position:absolute; bottom:4px; right:0; color:#ffffff;}
-.searchWrapper {padding:8px; border-radius:7px; border:2px outset #308c67; margin:0 0 5px 0;}
-.searchWrapper .productSearchKeyword {height:40px; width:220px; padding:10px; border:none; border-radius:5px 0 0 5px; background-color:#dddddd;}
+.searchWrapper {padding:8px; border-radius:7px; border:2px outset #308c67; margin:0 0 5px 0; display:inline-block;}
+.searchWrapper .productSearchKeyword {height:40px; width:220px; padding:10px; border:none; border-radius:5px 0 0 5px; background-color:#dddddd; float:left;}
 .searchWrapper .productSearchButton {height:40px; width:50px; border:1px outset #fbe143; background-color:#fbe143; background-position:12px 7px; background-repeat:no-repeat;}
 
 .headerLower {height:43px; width:100%; background-color:green; color:#ffffff; padding:8px 0 0 0; border-top:2px solid #000000; border-bottom:2px solid #000000; text-align:center; overflow:hidden;}
@@ -188,7 +188,7 @@ header {position:relative;}
 .newsLetterWrapper {width:100%; margin:10px auto 0 auto;}
 .newsLetterWrapper form {padding:8px; background-color:#fbe143; box-shadow:1px 1px 0px 0px #555;}
 .footEmail {height:40px; width:60%; padding:0 0 0 35px; border:none; color:#9e9e9e; background-position:-458px 0; background-repeat:no-repeat;}
-.footEmailSubmit {height:40px; width:40%; float:right; border:2px outset #b75970; color:#ffffff; font-size:18px;}
+.footEmailSubmit {height:40px; width:39%; float:right; border:2px outset #b75970; color:#ffffff; font-size:18px;}
 .footSocBanners {width:440px; margin:0 auto;}
 .facebookBanner, .twitterBanner, .pinterestBanner, .instagramBanner {height:54px; width:40px; display:inline-block; margin:0 8px; background-position:-313px -150px;}
 .twitterBanner {background-position:-360px -150px;}
