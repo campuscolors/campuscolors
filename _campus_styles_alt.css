@@ -42,8 +42,12 @@ body {font-family:Oxygen, Helvetica, sans-serif;}
 .secTitleBorder {border-top:2px solid #525252; border-bottom:2px solid #525252;}
 .secTitle {color:#525252; text-align:center;}
 
+/*modal title bar close changes*/
 .ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close, .ui-widget-header .ui-button.ui-state-default {background:none; border:none;}
 .ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close.ui-state-default .ui-icon, .ui-widget-header .ui-button.ui-state-default .ui-icon {background-image:url("images/ui-icons_ffffff_256x240.png");}
+/*anymessage appearance changes*/
+.ui-widget-anymessage {box-shadow:1px 1px 9px -2px #bfbfbf; border:1px solid #cccccc; text-align:center;}
+.ui-widget-anymessage button[title="close message"], .ui-widget-anymessage span.app-icon.app-icon-info {display:none;}
 
 .greyGradient,
 .tabbedProductContentTD .ui-tabs .ui-tabs-nav li.ui-state-default,

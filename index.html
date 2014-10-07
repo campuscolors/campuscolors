@@ -872,7 +872,7 @@ var _robots = {
 				<span class="signUpMsg center">STAY UPDATED WITH THE LATEST FROM CAMPUS COLORS!</span>
 				<div class="newsLetterWrapper">
 					<form data-app-submit="store_cc|newsletterSignup">
-						<input type="email" placeholder="Enter your e-mail address" name="email" class="footEmail sprite"/>
+						<input type="email" placeholder="Enter your e-mail address" required="required" name="email" class="footEmail sprite"/>
 						<input type="submit" value="SUBSCRIBE" class="footEmailSubmit yearbook redGradient"/>
 					</form>
 				</div>
@@ -2683,7 +2683,7 @@ subscribeListsArticle is used for authenticated buyers.
 				<form action='#' data-app-submit="quickstart|accountLoginSubmit" id="loginForm" class="marginBottom"> 
 					<input type="hidden" name="method" value="unsecure">
 					<input type="hidden" name="loginCallbackinline" id="loginCallbackinline" value=''><!-- used to save a callback action in -->
-					<input type="email" class="zform_textbox zform_email" required="required" name="login" value='' size="39" placeholder="E-mail address" id="modalLoginLogin">
+					<input type="email" class="zform_textbox zform_email" required="required" name="login" value='' size="39" placeholder="E-mail address" id="inlineLogin">
 					<input type="password" class="zform_textbox zform_password" required="required" name="password" value='' size="39" placeholder="Password" id="inlineLoginpassword">
 					<input type="submit" value="SIGN IN" class="applyButton ccButton">
 				</form>
@@ -3333,8 +3333,8 @@ The 'data-action' attribute is used to assign an onclick.
 			<form action='#' data-app-submit='quickstart|accountLoginSubmit' id='modalLoginForm'>
 				<input type='hidden' name='method' value='unsecure'>
 				<input type='hidden' name='loginCallback' id='loginCallback' value='' /><!-- used to save a callback action in -->
-				<input type='email' class='zform_textbox zform_email' name='login' id='modalLoginlogin' value='' size='20' placeholder='E-mail address' />
-				<input type='password' class='zform_textbox zform_password' name='password' id='modalLoginpassword' value='' size='20' placeholder='Password' />
+				<input type='email' class='zform_textbox zform_email' name='login' required="required" id='modalLoginlogin' value='' size='20' placeholder='E-mail address' />
+				<input type='password' class='zform_textbox zform_password' name='password' required="required" id='modalLoginpassword' value='' size='20' placeholder='Password' />
 				<input type='submit' value='Log In' class='ccButton ui-button logInModalSubmit' />
 			</form>
 			<div class='marginBottom recoverPasswordContainer'>
