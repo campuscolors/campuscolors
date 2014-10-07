@@ -1685,7 +1685,7 @@ Variations
 								var thisSelection = $this.attr('data-pogval');
 								$selectList.val(thisSelection);
 								dump('You have clicked on '+$this.attr('data-pogval')+' good sir');
-								$('span',$sizeDiv).each(function() {
+								$('.sizeOption',$sizeDiv).each(function() {
 									if($(this).hasClass('selectedSize')) $(this).removeClass('selectedSize').addClass('pointer');
 									if($(this).attr('data-pogval') == thisSelection) $(this).addClass('selectedSize').removeClass('pointer');
 								});
