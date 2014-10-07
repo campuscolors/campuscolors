@@ -126,8 +126,8 @@
 					case "accessories" : img = "products/images/acc_33158_tc"; break;
 				}
 				typeSubCat["img"] = img; //attrib[4];
-				typeSubCat["name"] = teamLongUpper + " Apparel & Merchandise " + thisUpperType;
-				typeSubCat["page-title"] = teamLongUpper + " Apparel & Merchandise " + thisUpperType + " | CampusColors.com";
+				typeSubCat["name"] = typeArray[m] == "All" ? teamLongUpper + " Apparel & Merchandise" : teamLongUpper + " Apparel & Merchandise " + thisUpperType;
+				typeSubCat["page-title"] = typeArray[m] == "All" ? teamLongUpper + " Apparel & Merchandise | CampusColors.com" : teamLongUpper + " Apparel & Merchandise " + thisUpperType + " | CampusColors.com";
 				typeSubCat["page-description"] = desc;
 				if(m > 0) { 
 					var baseFilterage = {"term" : {}};

@@ -21,7 +21,7 @@
 				{
 					"baseFilter": {
 						"term": {
-							"team_league_soccer": "aresenal fc"
+							"team_league_soccer": "arse"
 						}
 					},
 					"options": {
@@ -33,8 +33,8 @@
 					"id": "all/",
 					"link": "#!soccer-team-apparel-merchandise/arsenal-fc/all/",
 					"img": "teamlogos/arse.jpg",
-					"name": "Arsenal FC Apparel & Merchandise All",
-					"page-title": "Arsenal FC Apparel & Merchandise All | CampusColors.com",
+					"name": "Arsenal FC Apparel & Merchandise",
+					"page-title": "Arsenal FC Apparel & Merchandise | CampusColors.com",
 					"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 					"optionList": [
 						"user:size_code",
@@ -49,7 +49,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "aresenal fc"
+									"team_league_soccer": "arse"
 								}
 							},
 							{
@@ -84,7 +84,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "aresenal fc"
+									"team_league_soccer": "arse"
 								}
 							},
 							{
@@ -119,7 +119,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "aresenal fc"
+									"team_league_soccer": "arse"
 								}
 							},
 							{
@@ -154,7 +154,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "aresenal fc"
+									"team_league_soccer": "arse"
 								}
 							},
 							{
@@ -189,7 +189,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "aresenal fc"
+									"team_league_soccer": "arse"
 								}
 							},
 							{
@@ -224,7 +224,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "aresenal fc"
+									"team_league_soccer": "arse"
 								}
 							},
 							{
@@ -259,7 +259,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "aresenal fc"
+									"team_league_soccer": "arse"
 								}
 							},
 							{
@@ -304,7 +304,7 @@
 				{
 					"baseFilter": {
 						"term": {
-							"team_league_soccer": "brazil"
+							"team_league_soccer": "braz"
 						}
 					},
 					"options": {
@@ -316,8 +316,8 @@
 					"id": "all/",
 					"link": "#!soccer-team-apparel-merchandise/brazil-national-team/all/",
 					"img": "teamlogos/braz.jpg",
-					"name": "Brazil National Team Apparel & Merchandise All",
-					"page-title": "Brazil National Team Apparel & Merchandise All | CampusColors.com",
+					"name": "Brazil National Team Apparel & Merchandise",
+					"page-title": "Brazil National Team Apparel & Merchandise | CampusColors.com",
 					"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 					"optionList": [
 						"user:size_code",
@@ -332,7 +332,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "brazil"
+									"team_league_soccer": "braz"
 								}
 							},
 							{
@@ -367,7 +367,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "brazil"
+									"team_league_soccer": "braz"
 								}
 							},
 							{
@@ -402,7 +402,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "brazil"
+									"team_league_soccer": "braz"
 								}
 							},
 							{
@@ -437,7 +437,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "brazil"
+									"team_league_soccer": "braz"
 								}
 							},
 							{
@@ -472,7 +472,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "brazil"
+									"team_league_soccer": "braz"
 								}
 							},
 							{
@@ -507,7 +507,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "brazil"
+									"team_league_soccer": "braz"
 								}
 							},
 							{
@@ -542,7 +542,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "brazil"
+									"team_league_soccer": "braz"
 								}
 							},
 							{
@@ -587,7 +587,7 @@
 				{
 					"baseFilter": {
 						"term": {
-							"team_league_soccer": "celtic fc"
+							"team_league_soccer": "celt"
 						}
 					},
 					"options": {
@@ -599,8 +599,8 @@
 					"id": "all/",
 					"link": "#!soccer-team-apparel-merchandise/celtic-fc/all/",
 					"img": "teamlogos/celt.jpg",
-					"name": "Celtic FC Apparel & Merchandise All",
-					"page-title": "Celtic FC Apparel & Merchandise All | CampusColors.com",
+					"name": "Celtic FC Apparel & Merchandise",
+					"page-title": "Celtic FC Apparel & Merchandise | CampusColors.com",
 					"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 					"optionList": [
 						"user:size_code",
@@ -615,7 +615,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "celtic fc"
+									"team_league_soccer": "celt"
 								}
 							},
 							{
@@ -650,7 +650,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "celtic fc"
+									"team_league_soccer": "celt"
 								}
 							},
 							{
@@ -685,7 +685,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "celtic fc"
+									"team_league_soccer": "celt"
 								}
 							},
 							{
@@ -720,7 +720,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "celtic fc"
+									"team_league_soccer": "celt"
 								}
 							},
 							{
@@ -755,7 +755,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "celtic fc"
+									"team_league_soccer": "celt"
 								}
 							},
 							{
@@ -790,7 +790,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "celtic fc"
+									"team_league_soccer": "celt"
 								}
 							},
 							{
@@ -825,7 +825,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "celtic fc"
+									"team_league_soccer": "celt"
 								}
 							},
 							{
@@ -870,7 +870,7 @@
 				{
 					"baseFilter": {
 						"term": {
-							"team_league_soccer": "chicago"
+							"team_league_soccer": "fire"
 						}
 					},
 					"options": {
@@ -882,8 +882,8 @@
 					"id": "all/",
 					"link": "#!soccer-team-apparel-merchandise/chicago-fire/all/",
 					"img": "teamlogos/fire.jpg",
-					"name": "Chicago Fire Apparel & Merchandise All",
-					"page-title": "Chicago Fire Apparel & Merchandise All | CampusColors.com",
+					"name": "Chicago Fire Apparel & Merchandise",
+					"page-title": "Chicago Fire Apparel & Merchandise | CampusColors.com",
 					"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 					"optionList": [
 						"user:size_code",
@@ -898,7 +898,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "chicago"
+									"team_league_soccer": "fire"
 								}
 							},
 							{
@@ -933,7 +933,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "chicago"
+									"team_league_soccer": "fire"
 								}
 							},
 							{
@@ -968,7 +968,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "chicago"
+									"team_league_soccer": "fire"
 								}
 							},
 							{
@@ -1003,7 +1003,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "chicago"
+									"team_league_soccer": "fire"
 								}
 							},
 							{
@@ -1038,7 +1038,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "chicago"
+									"team_league_soccer": "fire"
 								}
 							},
 							{
@@ -1073,7 +1073,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "chicago"
+									"team_league_soccer": "fire"
 								}
 							},
 							{
@@ -1108,7 +1108,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "chicago"
+									"team_league_soccer": "fire"
 								}
 							},
 							{
@@ -1153,7 +1153,7 @@
 				{
 					"baseFilter": {
 						"term": {
-							"team_league_soccer": "club america"
+							"team_league_soccer": "clba"
 						}
 					},
 					"options": {
@@ -1165,8 +1165,8 @@
 					"id": "all/",
 					"link": "#!soccer-team-apparel-merchandise/club-america/all/",
 					"img": "teamlogos/clba.jpg",
-					"name": "Club America Apparel & Merchandise All",
-					"page-title": "Club America Apparel & Merchandise All | CampusColors.com",
+					"name": "Club America Apparel & Merchandise",
+					"page-title": "Club America Apparel & Merchandise | CampusColors.com",
 					"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 					"optionList": [
 						"user:size_code",
@@ -1181,7 +1181,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "club america"
+									"team_league_soccer": "clba"
 								}
 							},
 							{
@@ -1216,7 +1216,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "club america"
+									"team_league_soccer": "clba"
 								}
 							},
 							{
@@ -1251,7 +1251,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "club america"
+									"team_league_soccer": "clba"
 								}
 							},
 							{
@@ -1286,7 +1286,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "club america"
+									"team_league_soccer": "clba"
 								}
 							},
 							{
@@ -1321,7 +1321,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "club america"
+									"team_league_soccer": "clba"
 								}
 							},
 							{
@@ -1356,7 +1356,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "club america"
+									"team_league_soccer": "clba"
 								}
 							},
 							{
@@ -1391,7 +1391,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "club america"
+									"team_league_soccer": "clba"
 								}
 							},
 							{
@@ -1436,7 +1436,7 @@
 				{
 					"baseFilter": {
 						"term": {
-							"team_league_soccer": "dc united"
+							"team_league_soccer": "dcu"
 						}
 					},
 					"options": {
@@ -1448,8 +1448,8 @@
 					"id": "all/",
 					"link": "#!soccer-team-apparel-merchandise/dc-united/all/",
 					"img": "teamlogos/dcu.jpg",
-					"name": "DC United Apparel & Merchandise All",
-					"page-title": "DC United Apparel & Merchandise All | CampusColors.com",
+					"name": "DC United Apparel & Merchandise",
+					"page-title": "DC United Apparel & Merchandise | CampusColors.com",
 					"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 					"optionList": [
 						"user:size_code",
@@ -1464,7 +1464,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "dc united"
+									"team_league_soccer": "dcu"
 								}
 							},
 							{
@@ -1499,7 +1499,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "dc united"
+									"team_league_soccer": "dcu"
 								}
 							},
 							{
@@ -1534,7 +1534,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "dc united"
+									"team_league_soccer": "dcu"
 								}
 							},
 							{
@@ -1569,7 +1569,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "dc united"
+									"team_league_soccer": "dcu"
 								}
 							},
 							{
@@ -1604,7 +1604,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "dc united"
+									"team_league_soccer": "dcu"
 								}
 							},
 							{
@@ -1639,7 +1639,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "dc united"
+									"team_league_soccer": "dcu"
 								}
 							},
 							{
@@ -1674,7 +1674,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "dc united"
+									"team_league_soccer": "dcu"
 								}
 							},
 							{
@@ -1719,7 +1719,7 @@
 				{
 					"baseFilter": {
 						"term": {
-							"team_league_soccer": "fc barcelona"
+							"team_league_soccer": "barc"
 						}
 					},
 					"options": {
@@ -1731,8 +1731,8 @@
 					"id": "all/",
 					"link": "#!soccer-team-apparel-merchandise/fc-barcelona/all/",
 					"img": "teamlogos/barc.jpg",
-					"name": "FC Barcelona Apparel & Merchandise All",
-					"page-title": "FC Barcelona Apparel & Merchandise All | CampusColors.com",
+					"name": "FC Barcelona Apparel & Merchandise",
+					"page-title": "FC Barcelona Apparel & Merchandise | CampusColors.com",
 					"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 					"optionList": [
 						"user:size_code",
@@ -1747,7 +1747,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "fc barcelona"
+									"team_league_soccer": "barc"
 								}
 							},
 							{
@@ -1782,7 +1782,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "fc barcelona"
+									"team_league_soccer": "barc"
 								}
 							},
 							{
@@ -1817,7 +1817,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "fc barcelona"
+									"team_league_soccer": "barc"
 								}
 							},
 							{
@@ -1852,7 +1852,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "fc barcelona"
+									"team_league_soccer": "barc"
 								}
 							},
 							{
@@ -1887,7 +1887,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "fc barcelona"
+									"team_league_soccer": "barc"
 								}
 							},
 							{
@@ -1922,7 +1922,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "fc barcelona"
+									"team_league_soccer": "barc"
 								}
 							},
 							{
@@ -1957,7 +1957,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "fc barcelona"
+									"team_league_soccer": "barc"
 								}
 							},
 							{
@@ -2002,7 +2002,7 @@
 				{
 					"baseFilter": {
 						"term": {
-							"team_league_soccer": "france"
+							"team_league_soccer": "fran"
 						}
 					},
 					"options": {
@@ -2014,8 +2014,8 @@
 					"id": "all/",
 					"link": "#!soccer-team-apparel-merchandise/france-national-team/all/",
 					"img": "teamlogos/fran.jpg",
-					"name": "France National Team Apparel & Merchandise All",
-					"page-title": "France National Team Apparel & Merchandise All | CampusColors.com",
+					"name": "France National Team Apparel & Merchandise",
+					"page-title": "France National Team Apparel & Merchandise | CampusColors.com",
 					"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 					"optionList": [
 						"user:size_code",
@@ -2030,7 +2030,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "france"
+									"team_league_soccer": "fran"
 								}
 							},
 							{
@@ -2065,7 +2065,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "france"
+									"team_league_soccer": "fran"
 								}
 							},
 							{
@@ -2100,7 +2100,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "france"
+									"team_league_soccer": "fran"
 								}
 							},
 							{
@@ -2135,7 +2135,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "france"
+									"team_league_soccer": "fran"
 								}
 							},
 							{
@@ -2170,7 +2170,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "france"
+									"team_league_soccer": "fran"
 								}
 							},
 							{
@@ -2205,7 +2205,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "france"
+									"team_league_soccer": "fran"
 								}
 							},
 							{
@@ -2240,7 +2240,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "france"
+									"team_league_soccer": "fran"
 								}
 							},
 							{
@@ -2285,7 +2285,7 @@
 				{
 					"baseFilter": {
 						"term": {
-							"team_league_soccer": "inter milan"
+							"team_league_soccer": "inter"
 						}
 					},
 					"options": {
@@ -2297,8 +2297,8 @@
 					"id": "all/",
 					"link": "#!soccer-team-apparel-merchandise/inter-milan/all/",
 					"img": "teamlogos/inter.jpg",
-					"name": "Inter Milan Apparel & Merchandise All",
-					"page-title": "Inter Milan Apparel & Merchandise All | CampusColors.com",
+					"name": "Inter Milan Apparel & Merchandise",
+					"page-title": "Inter Milan Apparel & Merchandise | CampusColors.com",
 					"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 					"optionList": [
 						"user:size_code",
@@ -2313,7 +2313,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "inter milan"
+									"team_league_soccer": "inter"
 								}
 							},
 							{
@@ -2348,7 +2348,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "inter milan"
+									"team_league_soccer": "inter"
 								}
 							},
 							{
@@ -2383,7 +2383,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "inter milan"
+									"team_league_soccer": "inter"
 								}
 							},
 							{
@@ -2418,7 +2418,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "inter milan"
+									"team_league_soccer": "inter"
 								}
 							},
 							{
@@ -2453,7 +2453,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "inter milan"
+									"team_league_soccer": "inter"
 								}
 							},
 							{
@@ -2488,7 +2488,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "inter milan"
+									"team_league_soccer": "inter"
 								}
 							},
 							{
@@ -2523,7 +2523,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "inter milan"
+									"team_league_soccer": "inter"
 								}
 							},
 							{
@@ -2568,7 +2568,7 @@
 				{
 					"baseFilter": {
 						"term": {
-							"team_league_soccer": "italy"
+							"team_league_soccer": "itly"
 						}
 					},
 					"options": {
@@ -2580,8 +2580,8 @@
 					"id": "all/",
 					"link": "#!soccer-team-apparel-merchandise/italy-national-team/all/",
 					"img": "teamlogos/itly.jpg",
-					"name": "Italy National Team Apparel & Merchandise All",
-					"page-title": "Italy National Team Apparel & Merchandise All | CampusColors.com",
+					"name": "Italy National Team Apparel & Merchandise",
+					"page-title": "Italy National Team Apparel & Merchandise | CampusColors.com",
 					"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 					"optionList": [
 						"user:size_code",
@@ -2596,7 +2596,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "italy"
+									"team_league_soccer": "itly"
 								}
 							},
 							{
@@ -2631,7 +2631,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "italy"
+									"team_league_soccer": "itly"
 								}
 							},
 							{
@@ -2666,7 +2666,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "italy"
+									"team_league_soccer": "itly"
 								}
 							},
 							{
@@ -2701,7 +2701,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "italy"
+									"team_league_soccer": "itly"
 								}
 							},
 							{
@@ -2736,7 +2736,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "italy"
+									"team_league_soccer": "itly"
 								}
 							},
 							{
@@ -2771,7 +2771,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "italy"
+									"team_league_soccer": "itly"
 								}
 							},
 							{
@@ -2806,7 +2806,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "italy"
+									"team_league_soccer": "itly"
 								}
 							},
 							{
@@ -2851,7 +2851,7 @@
 				{
 					"baseFilter": {
 						"term": {
-							"team_league_soccer": "juventus fc"
+							"team_league_soccer": "juve"
 						}
 					},
 					"options": {
@@ -2863,8 +2863,8 @@
 					"id": "all/",
 					"link": "#!soccer-team-apparel-merchandise/juventus-fc/all/",
 					"img": "teamlogos/juve.jpg",
-					"name": "Juventus FC Apparel & Merchandise All",
-					"page-title": "Juventus FC Apparel & Merchandise All | CampusColors.com",
+					"name": "Juventus FC Apparel & Merchandise",
+					"page-title": "Juventus FC Apparel & Merchandise | CampusColors.com",
 					"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 					"optionList": [
 						"user:size_code",
@@ -2879,7 +2879,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "juventus fc"
+									"team_league_soccer": "juve"
 								}
 							},
 							{
@@ -2914,7 +2914,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "juventus fc"
+									"team_league_soccer": "juve"
 								}
 							},
 							{
@@ -2949,7 +2949,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "juventus fc"
+									"team_league_soccer": "juve"
 								}
 							},
 							{
@@ -2984,7 +2984,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "juventus fc"
+									"team_league_soccer": "juve"
 								}
 							},
 							{
@@ -3019,7 +3019,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "juventus fc"
+									"team_league_soccer": "juve"
 								}
 							},
 							{
@@ -3054,7 +3054,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "juventus fc"
+									"team_league_soccer": "juve"
 								}
 							},
 							{
@@ -3089,7 +3089,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "juventus fc"
+									"team_league_soccer": "juve"
 								}
 							},
 							{
@@ -3134,7 +3134,7 @@
 				{
 					"baseFilter": {
 						"term": {
-							"team_league_soccer": "los angeles"
+							"team_league_soccer": "gala"
 						}
 					},
 					"options": {
@@ -3146,8 +3146,8 @@
 					"id": "all/",
 					"link": "#!soccer-team-apparel-merchandise/los-angeles-galaxy/all/",
 					"img": "teamlogos/gala.jpg",
-					"name": "Los Angeles Galaxy Apparel & Merchandise All",
-					"page-title": "Los Angeles Galaxy Apparel & Merchandise All | CampusColors.com",
+					"name": "Los Angeles Galaxy Apparel & Merchandise",
+					"page-title": "Los Angeles Galaxy Apparel & Merchandise | CampusColors.com",
 					"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 					"optionList": [
 						"user:size_code",
@@ -3162,7 +3162,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "los angeles"
+									"team_league_soccer": "gala"
 								}
 							},
 							{
@@ -3197,7 +3197,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "los angeles"
+									"team_league_soccer": "gala"
 								}
 							},
 							{
@@ -3232,7 +3232,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "los angeles"
+									"team_league_soccer": "gala"
 								}
 							},
 							{
@@ -3267,7 +3267,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "los angeles"
+									"team_league_soccer": "gala"
 								}
 							},
 							{
@@ -3302,7 +3302,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "los angeles"
+									"team_league_soccer": "gala"
 								}
 							},
 							{
@@ -3337,7 +3337,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "los angeles"
+									"team_league_soccer": "gala"
 								}
 							},
 							{
@@ -3372,7 +3372,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "los angeles"
+									"team_league_soccer": "gala"
 								}
 							},
 							{
@@ -3417,7 +3417,7 @@
 				{
 					"baseFilter": {
 						"term": {
-							"team_league_soccer": "manchester"
+							"team_league_soccer": "manu"
 						}
 					},
 					"options": {
@@ -3429,8 +3429,8 @@
 					"id": "all/",
 					"link": "#!soccer-team-apparel-merchandise/manchester-united/all/",
 					"img": "teamlogos/manu.jpg",
-					"name": "Manchester United Apparel & Merchandise All",
-					"page-title": "Manchester United Apparel & Merchandise All | CampusColors.com",
+					"name": "Manchester United Apparel & Merchandise",
+					"page-title": "Manchester United Apparel & Merchandise | CampusColors.com",
 					"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 					"optionList": [
 						"user:size_code",
@@ -3445,7 +3445,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "manchester"
+									"team_league_soccer": "manu"
 								}
 							},
 							{
@@ -3480,7 +3480,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "manchester"
+									"team_league_soccer": "manu"
 								}
 							},
 							{
@@ -3515,7 +3515,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "manchester"
+									"team_league_soccer": "manu"
 								}
 							},
 							{
@@ -3550,7 +3550,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "manchester"
+									"team_league_soccer": "manu"
 								}
 							},
 							{
@@ -3585,7 +3585,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "manchester"
+									"team_league_soccer": "manu"
 								}
 							},
 							{
@@ -3620,7 +3620,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "manchester"
+									"team_league_soccer": "manu"
 								}
 							},
 							{
@@ -3655,7 +3655,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "manchester"
+									"team_league_soccer": "manu"
 								}
 							},
 							{
@@ -3700,7 +3700,7 @@
 				{
 					"baseFilter": {
 						"term": {
-							"team_league_soccer": "mexico"
+							"team_league_soccer": "mex"
 						}
 					},
 					"options": {
@@ -3712,8 +3712,8 @@
 					"id": "all/",
 					"link": "#!soccer-team-apparel-merchandise/mexico-national-team/all/",
 					"img": "teamlogos/mex.jpg",
-					"name": "Mexico National Team Apparel & Merchandise All",
-					"page-title": "Mexico National Team Apparel & Merchandise All | CampusColors.com",
+					"name": "Mexico National Team Apparel & Merchandise",
+					"page-title": "Mexico National Team Apparel & Merchandise | CampusColors.com",
 					"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 					"optionList": [
 						"user:size_code",
@@ -3728,7 +3728,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "mexico"
+									"team_league_soccer": "mex"
 								}
 							},
 							{
@@ -3763,7 +3763,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "mexico"
+									"team_league_soccer": "mex"
 								}
 							},
 							{
@@ -3798,7 +3798,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "mexico"
+									"team_league_soccer": "mex"
 								}
 							},
 							{
@@ -3833,7 +3833,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "mexico"
+									"team_league_soccer": "mex"
 								}
 							},
 							{
@@ -3868,7 +3868,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "mexico"
+									"team_league_soccer": "mex"
 								}
 							},
 							{
@@ -3903,7 +3903,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "mexico"
+									"team_league_soccer": "mex"
 								}
 							},
 							{
@@ -3938,7 +3938,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "mexico"
+									"team_league_soccer": "mex"
 								}
 							},
 							{
@@ -3983,7 +3983,7 @@
 				{
 					"baseFilter": {
 						"term": {
-							"team_league_soccer": "new york"
+							"team_league_soccer": "redb"
 						}
 					},
 					"options": {
@@ -3995,8 +3995,8 @@
 					"id": "all/",
 					"link": "#!soccer-team-apparel-merchandise/new-york-redbulls/all/",
 					"img": "teamlogos/redb.jpg",
-					"name": "New York Redbulls Apparel & Merchandise All",
-					"page-title": "New York Redbulls Apparel & Merchandise All | CampusColors.com",
+					"name": "New York Redbulls Apparel & Merchandise",
+					"page-title": "New York Redbulls Apparel & Merchandise | CampusColors.com",
 					"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 					"optionList": [
 						"user:size_code",
@@ -4011,7 +4011,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "new york"
+									"team_league_soccer": "redb"
 								}
 							},
 							{
@@ -4046,7 +4046,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "new york"
+									"team_league_soccer": "redb"
 								}
 							},
 							{
@@ -4081,7 +4081,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "new york"
+									"team_league_soccer": "redb"
 								}
 							},
 							{
@@ -4116,7 +4116,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "new york"
+									"team_league_soccer": "redb"
 								}
 							},
 							{
@@ -4151,7 +4151,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "new york"
+									"team_league_soccer": "redb"
 								}
 							},
 							{
@@ -4186,7 +4186,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "new york"
+									"team_league_soccer": "redb"
 								}
 							},
 							{
@@ -4221,7 +4221,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "new york"
+									"team_league_soccer": "redb"
 								}
 							},
 							{
@@ -4266,7 +4266,7 @@
 				{
 					"baseFilter": {
 						"term": {
-							"team_league_soccer": "soccer guys"
+							"team_league_soccer": "soccer"
 						}
 					},
 					"options": {
@@ -4278,8 +4278,8 @@
 					"id": "all/",
 					"link": "#!soccer-team-apparel-merchandise/soccer-guys/all/",
 					"img": "teamlogos/soccer.jpg",
-					"name": "Soccer Guys Apparel & Merchandise All",
-					"page-title": "Soccer Guys Apparel & Merchandise All | CampusColors.com",
+					"name": "Soccer Guys Apparel & Merchandise",
+					"page-title": "Soccer Guys Apparel & Merchandise | CampusColors.com",
 					"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 					"optionList": [
 						"user:size_code",
@@ -4294,7 +4294,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "soccer guys"
+									"team_league_soccer": "soccer"
 								}
 							},
 							{
@@ -4329,7 +4329,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "soccer guys"
+									"team_league_soccer": "soccer"
 								}
 							},
 							{
@@ -4364,7 +4364,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "soccer guys"
+									"team_league_soccer": "soccer"
 								}
 							},
 							{
@@ -4399,7 +4399,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "soccer guys"
+									"team_league_soccer": "soccer"
 								}
 							},
 							{
@@ -4434,7 +4434,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "soccer guys"
+									"team_league_soccer": "soccer"
 								}
 							},
 							{
@@ -4469,7 +4469,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "soccer guys"
+									"team_league_soccer": "soccer"
 								}
 							},
 							{
@@ -4504,7 +4504,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "soccer guys"
+									"team_league_soccer": "soccer"
 								}
 							},
 							{
@@ -4549,7 +4549,7 @@
 				{
 					"baseFilter": {
 						"term": {
-							"team_league_soccer": "south korea"
+							"team_league_soccer": "skor"
 						}
 					},
 					"options": {
@@ -4561,8 +4561,8 @@
 					"id": "all/",
 					"link": "#!soccer-team-apparel-merchandise/south-korea-national-team/all/",
 					"img": "teamlogos/skor.jpg",
-					"name": "South Korea National Team Apparel & Merchandise All",
-					"page-title": "South Korea National Team Apparel & Merchandise All | CampusColors.com",
+					"name": "South Korea National Team Apparel & Merchandise",
+					"page-title": "South Korea National Team Apparel & Merchandise | CampusColors.com",
 					"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 					"optionList": [
 						"user:size_code",
@@ -4577,7 +4577,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "south korea"
+									"team_league_soccer": "skor"
 								}
 							},
 							{
@@ -4612,7 +4612,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "south korea"
+									"team_league_soccer": "skor"
 								}
 							},
 							{
@@ -4647,7 +4647,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "south korea"
+									"team_league_soccer": "skor"
 								}
 							},
 							{
@@ -4682,7 +4682,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "south korea"
+									"team_league_soccer": "skor"
 								}
 							},
 							{
@@ -4717,7 +4717,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "south korea"
+									"team_league_soccer": "skor"
 								}
 							},
 							{
@@ -4752,7 +4752,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "south korea"
+									"team_league_soccer": "skor"
 								}
 							},
 							{
@@ -4787,7 +4787,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "south korea"
+									"team_league_soccer": "skor"
 								}
 							},
 							{
@@ -4844,8 +4844,8 @@
 					"id": "all/",
 					"link": "#!soccer-team-apparel-merchandise/usa-national-team/all/",
 					"img": "teamlogos/usa.jpg",
-					"name": "USA National Team Apparel & Merchandise All",
-					"page-title": "USA National Team Apparel & Merchandise All | CampusColors.com",
+					"name": "USA National Team Apparel & Merchandise",
+					"page-title": "USA National Team Apparel & Merchandise | CampusColors.com",
 					"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 					"optionList": [
 						"user:size_code",
@@ -5115,7 +5115,7 @@
 				{
 					"baseFilter": {
 						"term": {
-							"team_league_soccer": "usa"
+							"team_league_soccer": "usas"
 						}
 					},
 					"options": {
@@ -5127,8 +5127,8 @@
 					"id": "all/",
 					"link": "#!soccer-team-apparel-merchandise/united-states-national-team/all/",
 					"img": "teamlogos/usas.jpg",
-					"name": "United States National Team Apparel & Merchandise All",
-					"page-title": "United States National Team Apparel & Merchandise All | CampusColors.com",
+					"name": "United States National Team Apparel & Merchandise",
+					"page-title": "United States National Team Apparel & Merchandise | CampusColors.com",
 					"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 					"optionList": [
 						"user:size_code",
@@ -5143,7 +5143,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "usa"
+									"team_league_soccer": "usas"
 								}
 							},
 							{
@@ -5178,7 +5178,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "usa"
+									"team_league_soccer": "usas"
 								}
 							},
 							{
@@ -5213,7 +5213,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "usa"
+									"team_league_soccer": "usas"
 								}
 							},
 							{
@@ -5248,7 +5248,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "usa"
+									"team_league_soccer": "usas"
 								}
 							},
 							{
@@ -5283,7 +5283,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "usa"
+									"team_league_soccer": "usas"
 								}
 							},
 							{
@@ -5318,7 +5318,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "usa"
+									"team_league_soccer": "usas"
 								}
 							},
 							{
@@ -5353,7 +5353,7 @@
 						"and": [
 							{
 								"term": {
-									"team_league_soccer": "usa"
+									"team_league_soccer": "usas"
 								}
 							},
 							{
