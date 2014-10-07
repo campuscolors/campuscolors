@@ -1154,7 +1154,7 @@ var store_cc = function(_app) {
 				} //HEADER shipping CAROUSEL
 			},
 
-			//Turns best sellers ul on homepage into an auto scrolling carousel. 
+			//Turns large banners on homepage into an auto scrolling carousel. 
 			runHomeMainBanner : function($context) {
 //				_app.u.dump('----Running homepage banner carousels');	
 				var $target = $('.homeBanner ',$context);

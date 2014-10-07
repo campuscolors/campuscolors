@@ -171,18 +171,18 @@ header {position:relative;}
 
 /* FOOTER */
 .topBrands {background-color:#cdcdcd; border-bottom:2px solid #525252;}
-.footerTopBrandCarWrap {height:100px; width:770px; padding:20px 0 0 0; margin:0 auto;}
+.footerTopBrandCarWrap {height:100px;  padding:20px 0 0 0; margin:0 auto;}
 .footerTopBrandCar {max-height:60px; overflow:hidden;}
-.topBrandItem {height:60px; width:100px; margin:0 29px; background-position:0px -273px; background-repeat:no-repeat; overflow:hidden;}
+.topBrandItem {height:60px; width:100px; margin:0 39px; background-position:0px -273px; background-repeat:no-repeat; overflow:hidden;}
 .topBrandItem.adidasLogo {background-position:-212px -273px;}
 .topBrandItem.underArmorLogo {background-position:-111px -273px;}
 .topBrandItem.newEraLogo {background-position:-308px -274px;}
 .topBrandItem.reebokLogo {background-position:-307px -335px;}
-.topBrandItem.fortySevenLogo {background-position:-375px -208px;}
-.topBrandItem.retroLogo {background-position:-405px -273px;}
-.topBrandItem.tervicsLogo {background-position:-249px -377px;}
-.topBrandItem.topWorldLogo {background-position:-30px -442px;}
-.topBrandItem.gameLogo {background-position:-143px -443px;}
+.topBrandItem.fortySevenLogo {background-position:-405px -273px;}
+.topBrandItem.retroLogo {background-position:-375px -208px;}
+.topBrandItem.tervisLogo {background-position:-249px -377px;}
+.topBrandItem.topWorldLogo {background-position:-143px -443px;}
+.topBrandItem.gameLogo {background-position:-30px -442px;}
 
 .footBG1 {height:280px; padding:20px 0 0 0; position:relative;}
 .footerPromo {background-color:#fbe143; font-size:14px; border-top:5px solid #525252; border-bottom:5px solid #525252; padding:15px 0;}
@@ -561,7 +561,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.cartWrapper .cartItemCount {height:25px; width:25px; padding:1px 0 0 0; margin:0 5px 0 0; text-align:center; color:#ffffff; background-color:red; border-radius:15px; box-shadow:1px 1px 2px 0 #000000;}
 	.itemsInCart {margin:0 5px 0 0;}
 	
-	.footerTopBrandCarWrap {width:950px;}
+/*	.footerTopBrandCarWrap {width:950px;}*/
 	
 	.homeMain {width:75%; float:right;}
 	.homeVertNav {width:220px; padding:5px 5px 0 5px; position:relative;} /* compat-max-width:230px */
