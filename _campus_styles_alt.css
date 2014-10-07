@@ -250,7 +250,7 @@ header {position:relative;}
 .filteredSearchTemplate ul {clear:both;}
 .filterListTemplate {width:270px; margin:10px auto; overflow:hidden;}
 .filterGroup {width:46%; margin:0 5px; float:left;}
-.filterGroupTitle {padding:2px; border:1px solid #000000; color:#ffffff;}
+.filterGroupTitle {padding:2px; border:1px solid #000000; color:#ffffff; font-weight:bold;}
 .filterGroupTitle.filterOpen {margin-bottom:1em;}
 .filterGroup.priceFilter .ui-slider {height:20px; width:70%; margin:5px 13px;}
 .filterGroup.priceFilter .sliderValContainer  {padding:0 2px;}

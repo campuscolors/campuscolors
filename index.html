@@ -1244,12 +1244,12 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 	-->	
 	<form onSubmit="return false;" data-app-submit="store_filter|execFilteredSearch" data-tlc="bind $bf '.baseFilter'; stringify; apply --attrib='data-filter-base';" class="filterListTemplate">
 		<input data-tlc="bind $var '.base'; store_cc#assigndata  --attribute='filter-base' --legacy;" data-cc="filterBase" type="hidden">	
-		
+	<!-- INPUTS AUTO SUBMIT THE FORM	
 		<div class="filterControlContainer">
 			<span onClick="$(this).closest('form').trigger('submit');" data-reset-form="reset" class="redGradient yearbook filterButton pointer">Go!</span>
 			<span data-app-click="store_cc|resetFilter" class="ccButton filterButton pointer">Clear</span>
 		</div>
-		
+	-->	
 		<div data-tlc="bind $var '.options.user:size_gender'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
 			<div data-tlc="store_cc#showmobilefilter;" data-filterview='1' data-top='0' class="filterGroupTitle greyGradient">Gender<span class="sprite"></span></div>
 			<div class="filterHider">
@@ -1292,7 +1292,7 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 		</div>
 		
 		<div data-tlc="bind $var '.options.user:website_filter'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
-			<div data-tlc="store_cc#showmobilefilter;" data-filterview='1' data-top='0' class="filterGroupTitle greyGradient">Type / Style<span class="sprite"></span></div>
+			<div data-tlc="store_cc#showmobilefilter;" data-filterview='1' data-top='0' class="filterGroupTitle greyGradient">Department<span class="sprite"></span></div>
 			<div class="filterHider">
 				<div class="filterCheckboxList"
 					data-tlc="bind $index '.options.user:website_filter.index';
@@ -1303,7 +1303,7 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 		</div>
 
 		<div data-tlc="bind $var '.options.user:color_pallete'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
-			<div data-tlc="store_cc#showmobilefilter;" data-filterview='1' data-top='0' class="filterGroupTitle greyGradient">Color<span class="sprite"></span></div>
+			<div data-tlc="store_cc#showmobilefilter;" data-filterview='0' data-top='0' class="filterGroupTitle greyGradient">Color<span class="sprite"></span></div>
 			<div class="filterHider">
 				<div class="filterCheckboxList" 
 					data-tlc="bind $index '.options.user:color_pallete.index';
@@ -1314,7 +1314,7 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 		</div>
 
 		<div data-tlc="bind $var '.options.user:vendor_code'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
-			<div data-tlc="store_cc#showmobilefilter;" data-filterview='1' data-top='0' class="filterGroupTitle greyGradient">Brand<span class="sprite"></span></div>
+			<div data-tlc="store_cc#showmobilefilter;" data-filterview='0' data-top='0' class="filterGroupTitle greyGradient">Brand<span class="sprite"></span></div>
 			<div class="filterHider">
 				<div class="filterCheckboxList" 
 					data-tlc="bind $index '.options.user:vendor_code.index';
@@ -1400,54 +1400,12 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 				</div>
 			</div>
 		</div>
-
-		
-		
-	<!-- This filter shown on all filter lists- no need for data-binds 
-		<div class="marginBottom">
-			<h5 class="highlightText">
-				<input name="videoid" data-filter-type="checkboxList" data-filter-index="videoid" data-filter-type="hasAttribute" type="checkbox"> Has Video
-			</h5>
-		</div>
-		<div class="marginBottom">
-			<h5 class="highlightText">
-				<input name="prod_360_viewer_id" data-filter-type="checkboxList" data-filter-index="prod_360_viewer_id" data-filter-type="hasAttribute" type="checkbox"> Has 360 View
-			</h5>
-		</div>
-	-->
-	<!-- Samples of checkbox binds (for select list attribs) for reference once test products are available. TODO : Set up for test prods. 
-		<div data-tlc="bind $var '.options.user:primary_color'; if(is $var - -blank){{apply - -hide;}};" class="filterGroup marginBottom">
-			<h5 class="highlightBG_2">Name:</h5>
-			<div class="filterCheckboxList" 
-				data-tlc="bind $index '.options.user:primary_color.index';
-					bind $cbl '.options.user:primary_color.options'; 
-					store_filter#filtercheckboxlist - -index=$index;">
-			</div>
-		</div>
-		
-		<div data-tlc="bind $var '.options.user:app_brand'; if(is $var - -blank){{apply - -hide;}};" class="filterGroup marginBottom">
-			<h5 class="highlightBG_2">Brand:</h5>
-			<div class="filterCheckboxList" 
-				data-tlc="bind $index '.options.user:app_brand.index';
-					bind $cbl '.options.user:app_brand.options'; 
-					store_filter#filtercheckboxlist - -index=$index;"></div>
-		</div>
-		<div data-tlc="bind $var '.options.user:helmet_type'; if(is $var - -blank){{apply - -hide;}};" class="filterGroup marginBottom">
-			<h5 class="highlightBG_2">Helmet Type:</h5>
-			<div class="filterCheckboxList" 
-				data-tlc="bind $index '.options.user:helmet_type.index';
-					bind $cbl '.options.user:helmet_type.options'; 
-					store_filter#filtercheckboxlist - -index=$index;"></div>
-		</div>
-	-->
-		<!--
-		<select data-bind="var:filter(options); index:primary_color; format:filterSelect; extension:store_sac;"></select>
-		<select data-bind="var:filter(options); index:accent_color; format:filterSelect; extension:store_sac;"></select>
-		-->
+	<!-- INPUTS SET TO AUTO SUBMIT
 		<div class="filterControlContainer">
 			<span onClick="$(this).closest('form').trigger('submit');" class="redGradient yearbook filterButton pointer">Go!</span>
 			<span data-app-click="store_cc|resetFilter" class="ccButton filterButton pointer">Clear</span>
 		</div>
+	-->	
 	</form>
 
 	<ul data-filter="resultsList" class="listStyleNone fluidList noPadOrMargin productList ccList"></ul>
