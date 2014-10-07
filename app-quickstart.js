@@ -2526,7 +2526,18 @@ either templateID needs to be set OR showloading must be true. TemplateID will t
 								_app.ext.cco.calls.appCheckoutDestinations.init(_app.model.fetchCartID(),{},'mutable'); //needed for country list in address editor.
 								_app.model.addDispatchToQ({"_cmd":"buyerAddressList","_tag":{'callback':'tlc','jqObj':$article,'verb':'translate','datapointer':'buyerAddressList'}},'mutable');
 								break;
-/*campus*/			case 'createaccount':				
+/*campus*/			case 'createaccount':	
+								if('https:' == document.location.protocol || 'file:' == document.location.protocol){}
+								else {
+									$('#mainContentArea').empty().addClass('loadingBG').html("<h1>Transferring to Secure Login...</h1>");
+									// * changed from 'empty' to showLoading because empty could be a heavy operation if mainContentArea has a lot of content.
+									$('body').showLoading({'message':'Transferring to secure login'});							
+									var SSLlocation = _app.vars.secureURL+"?cartID="+_app.model.fetchCartID();
+									SSLlocation += "#!customer/"+infoObj.show
+									window[_app.vars.analyticsPointer]('linker:decorate', SSLlocation); //for cross domain tracking.
+									document.location = SSLlocation; //redir to secure url.
+								};
+								dump('you are here...'); dump(document.location);
 								break;
 							case 'logout':
 								$(document.body).removeClass('buyerLoggedIn');

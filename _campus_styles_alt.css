@@ -121,6 +121,7 @@ body {font-family:Oxygen, Helvetica, sans-serif;}
 /* HEADER */
 header {position:relative;}
 .headerTop {height:26px; width:100%; border-top:2px solid #ccc; border-bottom:2px solid #000000; color:#ffffff;}
+.headerMargin {margin:0 20px;}
 .links {width:75%; margin:0.3em auto 0 auto;}
 .liveChat {padding:0 0 0 19px; position:relative;}
 .liveChat .sprite {height:15px; width:19px; background-position:-178px 1px; background-repeat:no-repeat; position:absolute; left:0; top:0;}
@@ -422,8 +423,8 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.listWrapper, .standardNav .slideMenuBorder {width:690px;}
 	.secTitle {text-align:right;}
 	
-	.headerTop {font-size:0.65em;}
-	.links {width:72%; float:left;}
+	.headerTop {font-size:0.60em;}
+	.links {width:67%; float:left;}
 	.headerMid {height:90px;}
 	.login, .links, .upperCartWrapper {margin:0.8em auto 0 auto;}
 	.logo {width:55%; display:inline-block;}
@@ -540,6 +541,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.showDesktopBlock {display:block;}
 	.showDesktop {display:inline;}
 	.headerTop {font-size:13px} /* compat-0.8em;*/
+	.links {width:70%; float:left;}
 	.login, .links, .upperCartWrapper {margin:0.4em auto 0 auto;}
 	.standardNav .levelOne {width:115px;}
 	
@@ -614,6 +616,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 @media screen and (min-width : 1080px) {
 	#appView {width:1080px; margin:0 auto; box-shadow:0px 1px 5px 5px #cccccc;}
 	.wrapper {width:950px;}
+	.headerMargin {width:950px; margin:0 auto;}
 	.homeMainWrapper {width:1080px; margin:0 auto;}
 	.homeFeaturedCats .splashPageListTemplate {height:233px; width:330px;}
 	
