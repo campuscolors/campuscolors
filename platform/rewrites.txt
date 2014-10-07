@@ -26,7 +26,6 @@
 =path	/content--name-About-Us	/#!company/about/
 =path	/content--name-Privacy-Policy	/#!company/privacy/
 =path	/content--name-Pay-Methods	/#!company/payment/
-=path	/content--name-Sales-Tax	/#!company/payment/
 =path	/content--name-FAQ	/#!company/faq/
 =path	/ContactUs.aspx	/#!company/contact/
 =path	/content--name-Shipping-Methods-and-Cost	/#!company/shipping/
@@ -40,6 +39,7 @@
 =path	/content--name-Connect-With-Campus-Colors	/#!
 =path	/content--name-Wish-List	/#!
 =path	/content--name-customer-reviews	/#!
+=path	/content--name-Sales-Tax	/#!
 
 
 #redirect homepage
