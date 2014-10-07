@@ -1679,6 +1679,7 @@ this will likely become more flexible in the future. ###
 					<span data-tlc="bind $var '.%attribs.zoovy:prod_msrp';  if (is $var --notblank;) {{apply --hide;}};" class="sprite moneyAfter"></span>
 					<span class="savings floatRight">
 						<!-- <span data-useparentdata='1' data-tlc="quickstart#priceretailsavingsdifference - -legacy; apply - -append;" class="savingsDifference"></span> -->
+						
 						<span data-useparentdata='1' data-tlc="bind $var '.%attribs'; quickstart#priceretailsavingspercentage --legacy; apply --append;" class="savingsPercentage"></span>
 					</span>
 				</div>
@@ -2148,7 +2149,7 @@ if you change these, you should move them above this comment so that when you (o
 						shipping date, and we will refund your money. To view our return policy and instructions in detail, please visit our <a href="#!company/returns/">returns page</a>. 
 					</p>
 					<p>
-						&#42;Restrictions apply to clearance items and non&#45;saleable items. Please view the returns page for complete details
+						&#42;Restrictions apply to clearance items and non&#45;saleable items. Please view the returns page for complete details.
 					</p>
 				</div>
 			</div>
@@ -2191,20 +2192,20 @@ if you change these, you should move them above this comment so that when you (o
 			</div>
 
 
-
+		<!-- REMOVED AT REQUEST
 			<div class="displayNone textContentArea" id="paymentArticle">
 				<h1>PAYMENT POLICY</h1>
 				<div>
-				<!-- ::: add your payment policy here ::: -->
-				</div>
+		-->	<!-- ::: add your payment policy here ::: -->
+		<!--	</div>
 			</div>
-
+		-->
 
 			<div class="displayNone textContentArea" id="privacyArticle">
-				<h1>PRIVACY POLICY</h1>
+				<h1>TERMS AND PRIVACY POLICY</h1>
 		<p>Campus Colors has created this privacy statement in order to demonstrate our commitment to privacy. The following discloses the information gathering and dissemination practices for this website:</p>
 
-		<h5>Campus Colors tracks IP Addresses</h5>
+		<h3>Campus Colors tracks IP Addresses</h3>
 		<p>Your IP address is used to help diagnose problems with our server, and to administer the Web site, in addition your IP address is used to help identify you and your shopping cart (in conjunction with a cookie.) We also use cookies to deliver content specific to your interests and to save your password so you don't have to re-enter it each time you visit our site.</p>
 
 
@@ -2323,17 +2324,23 @@ if you change these, you should move them above this comment so that when you (o
 					</p>
 					
 					<h3>On a Deadline&#63;</h3>
-					Campus Colors offers discounted Priority, 2nd&#45;Day and 1&#45;Day shipping options.  See details on upgrade charges 
-					when you view your cart at checkout.  Items that are too heavy or too large will be shipped Ground delivery.  Packages may 
-					require a signature.  Does not include Saturday delivery.  For Saturday delivery please call customer service at 
-					866&#45;598&#45;2267. 
-					
+					<p>
+						Campus Colors offers discounted Priority, 2nd&#45;Day and 1&#45;Day shipping options.  See details on upgrade charges 
+						when you view your cart at checkout.  Items that are too heavy or too large will be shipped Ground delivery.  Packages may 
+						require a signature.  Does not include Saturday delivery.  For Saturday delivery please call customer service at 
+						866&#45;598&#45;2267. 
+					</p>
+						
 					<h3>Alaska, Hawaii &#38; US Territories</h3>
-					Orders to these addresses are subject to additional charges.  Shipping total will be displayed on the cart page before checkout.  
-					Priority, 2nd&#45;Day and 1&#45;Day delivery not available. 
+					<p>
+						Orders to these addresses are subject to additional charges.  Shipping total will be displayed on the cart page before checkout.  
+						Priority, 2nd&#45;Day and 1&#45;Day delivery not available. 
+					</p>
 					
 					<h3>PO APO &#38; FPO Addresses</h3>
-					These orders are shipped using our standard shipping and handling charges.
+					<p>
+						These orders are shipped using our standard shipping and handling charges.
+					</p>
 					<p>
 						Shipping confirmations along with tracking numbers are sent to the e&#45;mail on the order, the evening the order leaves the 
 						facility.  We recommend that customers choose a secure location when selecting a shipping address.  Campus Colors will not 
@@ -2362,7 +2369,7 @@ if you change these, you should move them above this comment so that when you (o
 			<div class="displayNone textContentArea" id="locationsArticle">
 				<h1>STORE LOCATIONS</h1>
 				<div class="locationBlock">
-					<img src="images/locations/water-tower_290x163.jpg" alt="Downtown Chicago" width="290" height="163" data-apptimize="embed">
+					<img src="images/water-tower_290x163.jpg" alt="Downtown Chicago" width="290" height="163" data-apptimize="embed">
 					<h4>Downtown Chicago</h4>
 					<p>
 						835 N Michigan Ave.<br>
@@ -2383,7 +2390,7 @@ if you change these, you should move them above this comment so that when you (o
 				</div>
 				
 				<div class="locationBlock">
-					<img src="images/locations/highland-park_290x218.jpg" alt="Highland Park" width="290" height="218" data-apptimize="embed">
+					<img src="images/highland-park_290x218.jpg" alt="Highland Park" width="290" height="218" data-apptimize="embed">
 					<h4>Highland Park</h4>
 					<p>
 						599 Central Ave.<br>
@@ -2403,7 +2410,7 @@ if you change these, you should move them above this comment so that when you (o
 				</div>
 				
 				<div class="locationBlock">
-					<img src="images/locations/kildeer_290x218.jpg" alt="Kildeer" width="290" height="218" data-apptimize="embed">
+					<img src="images/kildeer_290x218.jpg" alt="Kildeer" width="290" height="218" data-apptimize="embed">
 					<h4>Kildeer</h4>
 					<p>
 						20291 N. Rand Rd.<br>
@@ -2423,7 +2430,7 @@ if you change these, you should move them above this comment so that when you (o
 				</div>
 				
 				<div class="locationBlock">
-					<img src="images/locations/hinsdale_290x218.jpg" alt="Hinsdale" width="290" height="218" data-apptimize="embed">
+					<img src="images/hinsdale_290x218.jpg" alt="Hinsdale" width="290" height="218" data-apptimize="embed">
 					<h4>Hinsdale</h4>
 					<p>
 						777 N. York Rd.<br>
@@ -2444,7 +2451,7 @@ if you change these, you should move them above this comment so that when you (o
 				</div>
 				
 				<div class="locationBlock">
-					<img src="images/locations/mequon_290x218.jpg" alt="Mequon Wisconsin" width="290" height="218" data-apptimize="embed">
+					<img src="images/mequon_290x218.jpg" alt="Mequon Wisconsin" width="290" height="218" data-apptimize="embed">
 					<h4>Mequon&#45;Wisconsin</h4>
 					<p>
 						10906 N. Port Washington Rd.<br>
