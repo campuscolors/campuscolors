@@ -22,7 +22,7 @@
 				//console.log(raw);
 				var $a = $("<a></a>");
 				$a.attr("onclick","myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());");
-				var href = "#!"+league+"-team-apparel-merchandise/"+raw[i].toLowerCase().split(" ").join("-")+"/";
+				var href = "#!"+league+"-team-apparel-merchandise/"+raw[i].toLowerCase().split(" ").join("-")+"/all/";
 				$a.attr("href",href);
 				$a.text(raw[i]);
 				output += $('<div>').append($a.clone()).html()+"\n";
@@ -47,7 +47,7 @@
 			<textarea required="required" name="team_long"></textarea>
 		</div>
 		<p>
-			Enter the value for team_league in this field and press enter to get a list of anchor tags. 
+			Enter the value for team_league in this field and press enter to get a list of anchor tags. <br>(ie: nhl or ncaa)
 		</p>
 		<div>
 			<input type="text" required="required" name="team_league"></textarea>
