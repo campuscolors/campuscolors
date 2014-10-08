@@ -716,6 +716,44 @@ var store_cc = function(_app) {
 					$tag.append($bread);
 				}, //addbreadcrumb
 				
+				addbotlinks : function(data,thisTLC) {
+					var hash = document.location.hash;
+					if(hash.indexOf("team") != -1) {
+						var $tag = data.globals.tags[data.globals.focusTag];
+						var deezEnds = ["all","shorts","t-shirts","sweatshirts","jerseys","pants","hats","accessories"]
+						var hashArray = hash.split("/")
+						var thisEnd = hashArray[hashArray.length-2];
+						var thisTeam = hashArray[hashArray.length-3];
+						var newHash = "";
+						
+						dump(deezEnds);
+						//no need to show a link to the current page on the current page, remove it's end from the array.
+						if($.inArray(thisEnd, deezEnds) >= 0) {
+							deezEnds.splice($.inArray(thisEnd, deezEnds),1);
+						}
+						dump(deezEnds);
+						
+						for(var i = 0; i < hashArray.length-2; i++) {
+							newHash += hashArray[i] + "/";
+						}
+						for(var j = 0; j < deezEnds.length; j++) {
+							var $a = $("<a class='botLink'></a>");
+							if(deezEnds[j] == "all") { $a.text(_app.ext.store_cc.u.uppercaseFirst(deezEnds[j]) + " " + thisTeam); }
+							else { $a.text(_app.ext.store_cc.u.uppercaseFirst(deezEnds[j])); }
+							var thishref = newHash + deezEnds[j]+"/";
+							$a.attr('href',thishref);
+							$tag.append($a);
+						}
+						
+						
+						dump('new hash: '); dump(newHash);
+			/*			var team = hash[hash.length-3];
+						if(hash[hash.length-2] == "all") {
+							dump('this be d hash mon'); dump(hash);
+						}
+		*/			}
+				},
+				
 /*PRODUCT LIST TLC*/	
 			makelinkall : function(data, thisTLC) {
 				var $tag = data.globals.tags[data.globals.focusTag];
@@ -1475,6 +1513,20 @@ var store_cc = function(_app) {
 					$shipCont.animate({"height":h},500);
 					$("[data-cc='hawaii']",$context).animate({"height":0,"opacity":0},500);
 				});
+			},
+			
+			//makes first letter of each word uppercase
+			uppercaseFirst : function (phrase) {
+				var newPhrase = ""
+				phrase = phrase.split(" ");
+				for(l = 0; l < phrase.length; l++) {
+					if(l !== phrase.length - 1) {
+						newPhrase += phrase[l].substring(0,1).toUpperCase() + phrase[l].substring(1,phrase[l].length) + " ";
+					}
+					else { newPhrase += phrase[l].substring(0,1).toUpperCase() + phrase[l].substring(1,phrase[l].length); }
+				}
+//				dump(newPhrase);
+				return newPhrase;
 			}
 			
 			
