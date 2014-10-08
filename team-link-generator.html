@@ -18,15 +18,33 @@
 		function genLinks(name,league,$form) {
 			var raw = name.split('\n');
 			var output = "";
-			for(var i = 0; i < raw.length; i++) {
-				//console.log(raw);
-				var $a = $("<a></a>");
-				$a.attr("onclick","myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());");
-				var href = "#!"+league+"-team-apparel-merchandise/"+raw[i].toLowerCase().split(" ").join("-")+"/all/";
-				$a.attr("href",href);
-				$a.text(raw[i]);
-				output += $('<div>').append($a.clone()).html()+"\n";
+			
+			var option = $('input[name=type]:checked',$form).val();
+			console.log(option);
+			if(option == "dropdown") {
+				for(var i = 0; i < raw.length; i++) {
+					//console.log(raw);
+					var $a = $("<a></a>");
+					$a.attr("onclick","myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());");
+					var href = "#!"+league+"-team-apparel-merchandise/"+raw[i].toLowerCase().split(" ").join("-")+"/all/";
+					$a.attr("href",href);
+					$a.text(raw[i]);
+					output += $('<div>').append($a.clone()).html()+"\n";
+				}
 			}
+			else if (option == "dropout") {
+				for(var i = 0; i < raw.length; i++) {
+					//console.log(raw);
+					var $a = $("<a class='bareWhiteLink bold'></a>");
+					var $div = $("<div class='dropLinkCont'></div>");
+					var href = "#!"+league+"-team-apparel-merchandise/"+raw[i].toLowerCase().split(" ").join("-")+"/all/";
+					$a.attr("href",href);
+					$a.text(raw[i]);
+					$div.append($a);
+					output += $('<div>').append($div.clone()).html()+"\n";
+				}
+			}
+			else { var $a = $("<a>OH NO!! Something went wrong... </a>"); output += $('<div>').append($a.clone()).html()+"\n";  }
 //			console.log(output);			
 			$("#output").val(output);
 		}  
@@ -46,6 +64,10 @@
 		<div>
 			<textarea required="required" name="team_long"></textarea>
 		</div>
+		<p>
+			<input type="radio" name="type" value="dropdown">Check here to make dropdown links <br>
+			<input type="radio" name="type" value="dropout">Check here to make dropout links: 
+		</p>
 		<p>
 			Enter the value for team_league in this field and press enter to get a list of anchor tags. <br>(ie: nhl or ncaa)
 		</p>
