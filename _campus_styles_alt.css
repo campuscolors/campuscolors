@@ -12,6 +12,7 @@
  */
 html, body{padding:0px; margin: 0px;}
 body {font-family:Oxygen, Helvetica, sans-serif;}
+.oxygen {font-family:Oxygen, Helvetica, sans-serif;}
 .avant {font-family:AvantGardeGothicITCW01B 731069, Arial, sans-serif; font-weight:bold;}
 *, *:before, *:after {-moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box;}
 .showTablet, .showDesktop, .hidePhone {display:none;}

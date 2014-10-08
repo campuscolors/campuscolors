@@ -1167,7 +1167,7 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 	
 	<div class="filterBreadCrumb" data-tlc="bind $bc '.breadcrumb'; store_cc#addbreadcrumb;"></div>
 
-	<h1 data-tlc="bind $var '.name'; apply --append;" class="avant"></h1>
+	<h1 data-tlc="bind $var '.name'; apply --append;"></h1>
 	<div data-tlc="bind $var '.banner'; if(is $var --eq='blank') {{apply --hide;}};">
 		<a class="splashBanner" data-tlc="bind $href '.bannerlink'; apply --attrib='href';">
 			<p data-tlc="bind $var '.promo'; apply --append;"></p>
@@ -1183,7 +1183,7 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 	
 	<div class="filterBreadCrumb" data-tlc="bind $bc '.breadcrumb'; store_cc#addbreadcrumb;"></div>
 
-	<h1 data-tlc="bind $var '.name'; apply --append;" class="avant"></h1>
+	<h1 data-tlc="bind $var '.name'; apply --append;"></h1>
 	<div data-tlc="bind $var '.banner'; if(is $var --eq='blank') {{apply --hide;}};">
 		<a class="splashBanner" data-tlc="bind $href '.bannerlink'; apply --attrib='href';">
 			<p data-tlc="bind $var '.promo'; apply --append;"></p>
@@ -1220,7 +1220,7 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 
 	<div class="filterBreadCrumb" data-tlc="bind $bc '.breadcrumb'; store_cc#addbreadcrumb;"></div>
 	
-	<h2 data-tlc="bind $title '.name'; apply --append;"></h2>
+	<h1 data-tlc="bind $title '.name'; apply --append;"></h1>
 	<!-- <div onclick="myApp.ext.store_cc.a.showMobileFilter($(this),$('.filterListTemplate',$(this).parent()));" data-filterview='0' class="showHideFilters greyGradient avant"> -->
 	<div data-tlc="store_cc#showmobilefilter;" data-filterview='0' data-top='1' class="showHideFilters hideTablet greyGradient avant">
 		FILTERS
@@ -1650,7 +1650,7 @@ this will likely become more flexible in the future. ###
 	<div class="prodViewerContainer">
 	
 		<div class="imageContainer">
-			<h1 data-tlc="bind $var '.%attribs.zoovy:prod_name'; apply --append;" class="avant"></h1>
+			<h1 data-tlc="bind $var '.%attribs.zoovy:prod_name'; apply --append;" class="oxygen"></h1>
 			<section class="marginBottom marginTop clearfix hideTablet">
 				<span data-tlc="bind $var '.reviews.average'; if(is $var --notblank) {{format --prepend='review_'; apply --add --class=$var; }};" class="reviewSprite floatLeft marginRight"></span>
 				<span data-tlc="bind $var '.reviews.total'; if (is $var --notblank;) {{format --prepend=' Read All ' --append=' Reviews'; apply --append;}};" class='floatLeft productPageLink'></span>
