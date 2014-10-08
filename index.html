@@ -273,7 +273,7 @@ var _robots = {
 	<div class="headerLower greyGradient hideTablet hideDesktop">
 		<div data-ship-carousel="mobile">
 			<div class="shipCarItem">
-				<span class="promoOffer yearbook marginRight">
+				<span class="promoOffer avant marginRight">
 				<span class="shipLogo sprite">
 				</span>FREE SHIPPING ORDERS OVER $75</span>
 			</div>
@@ -293,18 +293,18 @@ var _robots = {
 		<div data-ship-carousel="notmobile">
 			<div class="shipCarItem">
 				<span class="promoCode marginRight"><span class="shipLogo sprite"></span><span class="bold">&#36;3.99 </span>Flat Rate Shipping</span>
-				<span class="promoOffer yearbook marginRight">FREE SHIPPING ORDERS OVER $75</span>
+				<span class="promoOffer avant marginRight">FREE SHIPPING ORDERS OVER $75</span>
 			</div>
 			<div class="shipCarItem">
 				<span class="promoCode marginRight"><span class="shipLogo sprite"></span>Ships same day if ordered by 3pm CT&#42;</span>
-				<span class="promoOffer yearbook marginRight">FREE SHIPPING ORDERS OVER $75</span>
+				<span class="promoOffer avant marginRight">FREE SHIPPING ORDERS OVER $75</span>
 			</div>
 		</div>
 	</div>
 	<div class="mobileSlideMenu standardNav">
 		<span class="mobileSlideMenuClose sprite" onclick="$('.mobileSlideMenu').animate({'left':'-275px'},500);"></span>
 		<div class="slideMenuBorder">
-			<div class="levelOne slideTitle yearbook">SHOP BY</div>
+			<div class="levelOne slideTitle avant">SHOP BY</div>
 			<div class="levelOne slideTop" onclick="myApp.ext.store_cc.a.showDropDownClick($(this));">
 				COLLEGE
 				<span class="sprite teamDrop"></span>
@@ -802,7 +802,7 @@ var _robots = {
 	<div class="topBrands hidePhone showTabletBlock showDesktopBlock">
 		<div class="secTitleWrap">
 			<div class="secTitleBorder">
-				<div class="secTitle yearbook wrapper">TOP BRANDS</div>
+				<div class="secTitle avant wrapper">TOP BRANDS</div>
 			</div>
 		</div>
 		<div class="footerTopBrandCarWrap">
@@ -869,7 +869,7 @@ var _robots = {
 				<div class="newsLetterWrapper">
 					<form data-app-submit="store_cc|newsletterSignup">
 						<input type="email" placeholder="Enter your e-mail address" required="required" name="email" class="footEmail sprite"/>
-						<input type="submit" value="SUBSCRIBE" class="footEmailSubmit yearbook redGradient"/>
+						<input type="submit" value="SUBSCRIBE" class="footEmailSubmit avant redGradient"/>
 					</form>
 				</div>
 				<!-- <ul class="footSocBanners listStyleNone"> MAYBE NEED FOR TABLET/DESKTOP LATER (MAYBE NOT) 
@@ -882,7 +882,7 @@ var _robots = {
 				<div class="hidePhone showTabletBlock">
 					<div class="clear"></div>
 					<div class="questions center">Questions or Concerns? Call Us!</div>
-					<a href="tel:+18665982267" class="footerPhone yearbook bareYellowLink center">(866) 598-2267</a>
+					<a href="tel:+18665982267" class="footerPhone avant bareYellowLink center">(866) 598-2267</a>
 					<div class="footerHours center">MONDAY - FRIDAY 9:30am - 5:00pm CST</div>
 					<div class="center"><a href="#!company/contact/" class="footerAfterHrs uYellowLink">After Hours</a></div> <!-- TODO : POSSIBLE SHOULD BE CHAT SUPPORT? -->
 				</div>
@@ -1031,13 +1031,13 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 	<!-- REMOVED, BUT COULD BE NEEDED LATER. KILL IT IF NOT USED BY PRODUCTION
 				<div class="secTitleWrap ghostTitle">  This element is duplicated here to overcome a design that didn't work well w/out it 
 					<div class="secTitleBorder">
-						<div class="secTitle yearbook">C</div>
+						<div class="secTitle avant">C</div>
 					</div>
 				</div>
 	-->
 				<div class="secTitleWrap">
 					<div class="secTitleBorder">
-						<div class="secTitle yearbook">FEATURED CATEGORIES</div>
+						<div class="secTitle avant">FEATURED CATEGORIES</div>
 					</div>
 				</div>
 				<ul class="listStyleNone" data-home-featured="container">
@@ -1142,7 +1142,7 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 	<div class="homeBestSell clear">
 		<div class="secTitleWrap">
 			<div class="secTitleBorder">
-				<div class="secTitle yearbook wrapper">BEST SELLERS</div>
+				<div class="secTitle avant wrapper">BEST SELLERS</div>
 			</div>
 		</div>
 		<ul data-tlc="quickstart#searchbytag --tag='IS_BESTSELLER' --size='8' --templateid='productListTemplateResultsNoPreview';" class='listStyleNone fluidList clearfix noPadOrMargin productList ccList homeCarousel'></ul>
@@ -1167,7 +1167,7 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 	
 	<div class="filterBreadCrumb" data-tlc="bind $bc '.breadcrumb'; store_cc#addbreadcrumb;"></div>
 
-	<h1 data-tlc="bind $var '.name'; apply --append;" class="yearbook"></h1>
+	<h1 data-tlc="bind $var '.name'; apply --append;" class="avant"></h1>
 	<div data-tlc="bind $var '.banner'; if(is $var --eq='blank') {{apply --hide;}};">
 		<a class="splashBanner" data-tlc="bind $href '.bannerlink'; apply --attrib='href';">
 			<p data-tlc="bind $var '.promo'; apply --append;"></p>
@@ -1183,7 +1183,7 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 	
 	<div class="filterBreadCrumb" data-tlc="bind $bc '.breadcrumb'; store_cc#addbreadcrumb;"></div>
 
-	<h1 data-tlc="bind $var '.name'; apply --append;" class="yearbook"></h1>
+	<h1 data-tlc="bind $var '.name'; apply --append;" class="avant"></h1>
 	<div data-tlc="bind $var '.banner'; if(is $var --eq='blank') {{apply --hide;}};">
 		<a class="splashBanner" data-tlc="bind $href '.bannerlink'; apply --attrib='href';">
 			<p data-tlc="bind $var '.promo'; apply --append;"></p>
@@ -1221,8 +1221,8 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 	<div class="filterBreadCrumb" data-tlc="bind $bc '.breadcrumb'; store_cc#addbreadcrumb;"></div>
 	
 	<h2 data-tlc="bind $title '.name'; apply --append;"></h2>
-	<!-- <div onclick="myApp.ext.store_cc.a.showMobileFilter($(this),$('.filterListTemplate',$(this).parent()));" data-filterview='0' class="showHideFilters greyGradient yearbook"> -->
-	<div data-tlc="store_cc#showmobilefilter;" data-filterview='0' data-top='1' class="showHideFilters hideTablet greyGradient yearbook">
+	<!-- <div onclick="myApp.ext.store_cc.a.showMobileFilter($(this),$('.filterListTemplate',$(this).parent()));" data-filterview='0' class="showHideFilters greyGradient avant"> -->
+	<div data-tlc="store_cc#showmobilefilter;" data-filterview='0' data-top='1' class="showHideFilters hideTablet greyGradient avant">
 		FILTERS
 		<span class="sprite"></span>
 	</div>
@@ -1242,7 +1242,7 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 		<input data-tlc="bind $var '.base'; store_cc#assigndata  --attribute='filter-base' --legacy;" data-cc="filterBase" type="hidden">	
 	<!-- INPUTS AUTO SUBMIT THE FORM	
 		<div class="filterControlContainer">
-			<span onClick="$(this).closest('form').trigger('submit');" data-reset-form="reset" class="redGradient yearbook filterButton pointer">Go!</span>
+			<span onClick="$(this).closest('form').trigger('submit');" data-reset-form="reset" class="redGradient avant filterButton pointer">Go!</span>
 			<span data-app-click="store_cc|resetFilter" class="ccButton filterButton pointer">Clear</span>
 		</div>
 	-->	
@@ -1398,7 +1398,7 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 		</div>
 	<!-- INPUTS SET TO AUTO SUBMIT
 		<div class="filterControlContainer">
-			<span onClick="$(this).closest('form').trigger('submit');" class="redGradient yearbook filterButton pointer">Go!</span>
+			<span onClick="$(this).closest('form').trigger('submit');" class="redGradient avant filterButton pointer">Go!</span>
 			<span data-app-click="store_cc|resetFilter" class="ccButton filterButton pointer">Clear</span>
 		</div>
 	-->	
@@ -1650,7 +1650,7 @@ this will likely become more flexible in the future. ###
 	<div class="prodViewerContainer">
 	
 		<div class="imageContainer">
-			<h1 data-tlc="bind $var '.%attribs.zoovy:prod_name'; apply --append;" class="yearbook"></h1>
+			<h1 data-tlc="bind $var '.%attribs.zoovy:prod_name'; apply --append;" class="avant"></h1>
 			<section class="marginBottom marginTop clearfix hideTablet">
 				<span data-tlc="bind $var '.reviews.average'; if(is $var --notblank) {{format --prepend='review_'; apply --add --class=$var; }};" class="reviewSprite floatLeft marginRight"></span>
 				<span data-tlc="bind $var '.reviews.total'; if (is $var --notblank;) {{format --prepend=' Read All ' --append=' Reviews'; apply --append;}};" class='floatLeft productPageLink'></span>
@@ -1667,7 +1667,7 @@ this will likely become more flexible in the future. ###
 	
 		<div class="prodSummaryContainer marginBottom no_underline">
 
-			<div class="yearbook greyGradient titleHead hidePhone showTabletBlock">PRODUCT DETAILS</div>
+			<div class="avant greyGradient titleHead hidePhone showTabletBlock">PRODUCT DETAILS</div>
 			<div class="prodSummaryUpper">
 				<div class="priceContainer marginBottom marginTop">
 					<h5 data-tlc="bind $var '.%attribs.zoovy:prod_msrp';  if (is $var --notblank;) {{format --currency='USD'; format --append='<span class=&quot;priceDesc&quot;>WAS</span>' apply --append;}};" class="prodMSRP floatLeft"></h5>
@@ -1692,7 +1692,7 @@ this will likely become more flexible in the future. ###
 					<!-- <fieldset data-tlc="bind $var '.'; store_product#atcquantityinput  - -defaultvalue='1' - -legacy;" class="borderNone inLine"></fieldset> -->
 					<div class='qtyATCWraper'>
 						<fieldset data-tlc="bind $var '.'; store_cc#atcquantityinput  --defaultvalue='1';" class="borderNone floatLeft"></fieldset>
-						<input data-tlc="bind $var '.pid'; store_product#addtocartbutton  --legacy;" value="Add to Cart" class="applyButton addtocartbutton yearbook displayNone floatRight" type="submit">
+						<input data-tlc="bind $var '.pid'; store_product#addtocartbutton  --legacy;" value="Add to Cart" class="applyButton addtocartbutton avant displayNone floatRight" type="submit">
 						<div data-tlc="bind $var '.'; store_cc#getitwhileitlasts;" class="displayNone center clear marginTop">
 							<h3>ORDER SOON!</h3>
 							<span class="leftInStock"></span>
@@ -1709,7 +1709,7 @@ this will likely become more flexible in the future. ###
 			
 			<div onclick="myApp.ext.store_cc.a.togglerecover($('.sprite'),$(this));" class="latency">
 				<span class="pointer sprite"></span>
-				<h3 class="yearbook pointer">SHIPS SAME DAY</h3>
+				<h3 class="avant pointer">SHIPS SAME DAY</h3>
 				<span class="pointer">&#40;if ordered before 3pm, CT&#41;&#42;</span>
 				<div class="latencyMessage marginTop" data-slide="toggle">&#42;Most orders ship same day. Orders containing multiple pieces may require an additional 1&#45;2 business days processing time.</div>
 			</div>
@@ -1718,7 +1718,7 @@ this will likely become more flexible in the future. ###
 			<div data-app-role="timeInTransit" class="displayNone"></div>
 	
 			<div data-tlc="bind $var '.%attribs.user:fit_tip'; if(is $var --notblank;) {{apply --show;}};" class="prodSummaryLower displayNone">
-				<div data-tlc="bind $var '.%attribs.user:fit_tip'; if (is $var --notblank;) {{format --prepend='<h2 class=&quot;yearbook&quot;>FIT TIP</h2>' format --append='<span data-app-click=&quot;store_cc|scrollToRevealTab&quot; data-scroll-tab=&quot;#sizeGuide&quot; class=&quot;pointer productPageLink&quot;>Click here for the Size Chart</span>' apply --append;}};" class="fitTip"></div>
+				<div data-tlc="bind $var '.%attribs.user:fit_tip'; if (is $var --notblank;) {{format --prepend='<h2 class=&quot;avant&quot;>FIT TIP</h2>' format --append='<span data-app-click=&quot;store_cc|scrollToRevealTab&quot; data-scroll-tab=&quot;#sizeGuide&quot; class=&quot;pointer productPageLink&quot;>Click here for the Size Chart</span>' apply --append;}};" class="fitTip"></div>
 			</div>
 
 			<div class="socialLinks"></div> <!-- TODO : addThis doesn't support Instagram... hmmm, AND pintrest is not customized... argh -->
@@ -1812,7 +1812,7 @@ this will likely become more flexible in the future. ###
 	<div class="productRecentCarousel clear">
 		<div class="secTitleWrap displayNone">
 			<div class="secTitleBorder">
-				<div class="secTitle yearbook wrapper">PREVIOUSLY VIEWED ITEMS</div>
+				<div class="secTitle avant wrapper">PREVIOUSLY VIEWED ITEMS</div>
 			</div>
 		</div>
 		<div class="recentEmpty"></div>
@@ -1944,7 +1944,7 @@ if you change these, you should move them above this comment so that when you (o
 <div id="companyTemplate" class="clearfix companyTemplate wrapper">
 
 	<div class="catSideline floatLeft hidePhone showTabletBlock">
-		<h3 class="title yearbook">NCAA APPAREL</h3>
+		<h3 class="title avant">NCAA APPAREL</h3>
 		<div>
 			<ul class="listStyleNone noPadOrMargin">
 				<li><a href="#!ncaa-apparel-merchandise/ncaa-shorts/">NCAA Basketball Shorts</a></li>
@@ -1957,7 +1957,7 @@ if you change these, you should move them above this comment so that when you (o
 				<li><a href="#!ncaa-apparel-merchandise/ncaa-accessories/">NCAA Accessories</a></li>
 			</ul>
 		</div>
-		<h3 class="title yearbook">NFL APPAREL</h3>
+		<h3 class="title avant">NFL APPAREL</h3>
 		<div>
 			<ul class="listStyleNone noPadOrMargin">
 				<li><a href="#!nfl-apparel-merchandise/nfl-shorts/">NFL Shorts</a></li>
@@ -1970,7 +1970,7 @@ if you change these, you should move them above this comment so that when you (o
 				<li><a href="#!nfl-apparel-merchandise/nfl-accessories/">NFL Accessories</a></li>
 			</ul>
 		</div>
-		<h3 class="title yearbook">MLB APPAREL</h3>
+		<h3 class="title avant">MLB APPAREL</h3>
 		<div>
 			<ul class="listStyleNone noPadOrMargin">
 				<li><a href="#!mlb-apparel-merchandise/mlb-shorts/">MLB Shorts</a></li>
@@ -1983,7 +1983,7 @@ if you change these, you should move them above this comment so that when you (o
 				<li><a href="#!mlb-apparel-merchandise/mlb-accessories/">MLB Accessories</a></li>
 			</ul>
 		</div>
-		<h3 class="title yearbook">NBA APPAREL</h3>
+		<h3 class="title avant">NBA APPAREL</h3>
 		<div>
 			<ul class="listStyleNone noPadOrMargin">
 				<li><a href="#!nba-apparel-merchandise/nba-shorts/">NBA Basketball Shorts</a></li>
@@ -1996,7 +1996,7 @@ if you change these, you should move them above this comment so that when you (o
 				<li><a href="#!nba-apparel-merchandise/nba-accessories/">NBA Accessories</a></li>
 			</ul>
 		</div>
-		<h3 class="title yearbook">NHL APPAREL</h3>
+		<h3 class="title avant">NHL APPAREL</h3>
 		<div>
 			<ul class="listStyleNone noPadOrMargin">
 				<li><a href="#!nhl-apparel-merchandise/nhl-t-shirts/">NHL T-Shirts</a></li>
@@ -2007,13 +2007,13 @@ if you change these, you should move them above this comment so that when you (o
 			</ul>
 		</div>
 <!-- TODO : no options for this in current sitemap, need list of future options.
-		<h3 class="title yearbook">SOCCER APPAREL</h3>
+		<h3 class="title avant">SOCCER APPAREL</h3>
 		<div>
 			<ul class="listStyleNone noPadOrMargin">
 			</ul>
 		</div>
 	TODO : CAN REMOVE IF NO TYPES ARE ADDED BACK IN FOR NIKE/ADIDAS SPECIFICLY
-		<h3 class="title yearbook">NIKE GEAR</h3>
+		<h3 class="title avant">NIKE GEAR</h3>
 		<div>
 			<ul class="listStyleNone noPadOrMargin">
 				<li><a href="#!nike-gear/nike-shorts/">Nike Shorts</a></li>
@@ -2025,7 +2025,7 @@ if you change these, you should move them above this comment so that when you (o
 				<li><a href="#!nike-gear/nike-hats/">Nike Hats</a></li>
 			</ul>
 		</div>
-		<h3 class="title yearbook">ADIDAS GEAR</h3>
+		<h3 class="title avant">ADIDAS GEAR</h3>
 		<div>
 			<ul class="listStyleNone noPadOrMargin">
 				<li><a href="#!adidas-gear/adidas-shorts/">Adidas Shorts</a></li>
@@ -2038,7 +2038,7 @@ if you change these, you should move them above this comment so that when you (o
 			</ul>
 		</div>
 -->	
-		<h3 class="title yearbook">BRAND APPAREL</h3>
+		<h3 class="title avant">BRAND APPAREL</h3>
 		<div>
 			<ul class="listStyleNone noPadOrMargin">
 				<li><a href="#!brands-apparel-merchandise/nike-gear/">Nike</a></li>
@@ -2048,7 +2048,7 @@ if you change these, you should move them above this comment so that when you (o
 	</div>
 
 	<div class="companyRight">
-		<div class="sideline center yearbook hidePhone showTabletBlock">
+		<div class="sideline center avant hidePhone showTabletBlock">
 			<nav id="companyNav">
 				<ul class="listStyleNone noPadOrMargin">
 					<!-- these are generated via javascript, based on the quickstart.pages object. -->
@@ -2469,7 +2469,7 @@ if you change these, you should move them above this comment so that when you (o
 	</div>	
 	
 	<div class="catSideline hideTablet">
-		<h3 class="title yearbook">NCAA APPAREL</h3>
+		<h3 class="title avant">NCAA APPAREL</h3>
 		<div>
 			<ul class="listStyleNone noPadOrMargin">
 				<li><a href="#!ncaa-apparel-merchandise/ncaa-shorts/">NCAA Basketball Shorts</a></li>
@@ -2482,7 +2482,7 @@ if you change these, you should move them above this comment so that when you (o
 				<li><a href="#!ncaa-apparel-merchandise/ncaa-accessories/">NCAA Accessories</a></li>
 			</ul>
 		</div>
-		<h3 class="title yearbook">NFL APPAREL</h3>
+		<h3 class="title avant">NFL APPAREL</h3>
 		<div>
 			<ul class="listStyleNone noPadOrMargin">
 				<li><a href="#!nfl-apparel-merchandise/nfl-shorts/">NFL Shorts</a></li>
@@ -2495,7 +2495,7 @@ if you change these, you should move them above this comment so that when you (o
 				<li><a href="#!nfl-apparel-merchandise/nfl-accessories/">NFL Accessories</a></li>
 			</ul>
 		</div>
-		<h3 class="title yearbook">MLB APPAREL</h3>
+		<h3 class="title avant">MLB APPAREL</h3>
 		<div>
 			<ul class="listStyleNone noPadOrMargin">
 				<li><a href="#!mlb-apparel-merchandise/mlb-shorts/">MLB Shorts</a></li>
@@ -2508,7 +2508,7 @@ if you change these, you should move them above this comment so that when you (o
 				<li><a href="#!mlb-apparel-merchandise/mlb-accessories/">MLB Accessories</a></li>
 			</ul>
 		</div>
-		<h3 class="title yearbook">NBA APPAREL</h3>
+		<h3 class="title avant">NBA APPAREL</h3>
 		<div>
 			<ul class="listStyleNone noPadOrMargin">
 				<li><a href="#!nba-apparel-merchandise/nba-shorts/">NBA Basketball Shorts</a></li>
@@ -2521,7 +2521,7 @@ if you change these, you should move them above this comment so that when you (o
 				<li><a href="#!nba-apparel-merchandise/nba-accessories/">NBA Accessories</a></li>
 			</ul>
 		</div>
-		<h3 class="title yearbook">NHL APPAREL</h3>
+		<h3 class="title avant">NHL APPAREL</h3>
 		<div>
 			<ul class="listStyleNone noPadOrMargin">
 				<li><a href="#!nhl-apparel-merchandise/nhl-t-shirts/">NHL T-Shirts</a></li>
@@ -2532,14 +2532,14 @@ if you change these, you should move them above this comment so that when you (o
 			</ul>
 		</div>
 <!-- TODO : no options for this in current sitemap, need list of future options.
-		<h3 class="title yearbook">SOCCER APPAREL</h3>
+		<h3 class="title avant">SOCCER APPAREL</h3>
 		<div>
 			<ul class="listStyleNone noPadOrMargin">
 			</ul>
 		</div>
 -->	
 		<!-- TODO : SEE CUSTOMER TEMPLATE IF NIKE/ADIDAS SPECIFIC NEEDS TO COME BACK -->
-		<h3 class="title yearbook">BRAND APPAREL</h3>
+		<h3 class="title avant">BRAND APPAREL</h3>
 		<div>
 			<ul class="listStyleNone noPadOrMargin">
 				<li><a href="#!brands-apparel-merchandise/nike-gear/">Nike</a></li>
@@ -2554,7 +2554,7 @@ if you change these, you should move them above this comment so that when you (o
 
 <div id="customerTemplate" class="clearfix smallButton wrapper customerTemplate">
 
-	<div class="sideline center yearbook" data-customer-sideline="1">
+	<div class="sideline center avant" data-customer-sideline="1">
 	<nav id="customerNav">
 	<ul class="listStyleNone noPadOrMargin">
 		<li><a href='#!customer/subscriberLists'>Newsletter Subscription</a></li>
@@ -2670,7 +2670,7 @@ subscribeListsArticle is used for authenticated buyers.
 		<div id='createaccountArticle' class="displayNone textContentArea wrapper createaccountArticle">
 			<p id='loginMessagingInline' class='marginBottom appMessaging loginMessaging'></p>
 			<div class="logContainer">
-				<div class="logTitle yearbook">SIGN IN</div>
+				<div class="logTitle avant">SIGN IN</div>
 				<p>
 					If you have an existing account, please sign in.
 				</p>
@@ -2702,7 +2702,7 @@ subscribeListsArticle is used for authenticated buyers.
 				</div><!-- //recoverPasswordContainer -->
 			</div> <!-- //login -->
 			<div class="logContainer logRight">
-				<div class="logTitle yearbook">NEW MEMBERS</div>
+				<div class="logTitle avant">NEW MEMBERS</div>
 				<p>
 					Note&#58; Entering a name, e-mail address, and password will allow you to check your order status online and recall your customer 
 					information for future orders.
@@ -2789,7 +2789,7 @@ subscribeListsArticle is used for authenticated buyers.
 				</form>
 			</div> <!-- //createaccount -->
 			<div class="logContainer">
-				<div class="logTitle yearbook">GUEST CHECKOUT</div>
+				<div class="logTitle avant">GUEST CHECKOUT</div>
 				<p>
 					No registration required
 				</p>
@@ -3311,7 +3311,7 @@ The 'data-action' attribute is used to assign an onclick.
 
 	<div id="loginFormContainer" class="loginFormContainer">
 		<div class="createAccount logContainer">
-			<div class="logTitle yearbook">First Time With Us?</div>
+			<div class="logTitle avant">First Time With Us?</div>
 			<p class="center">If you have never made a purchase at this web site and have never subscribed to this store's mailing list,
 				please choose this option.
 			</p>
@@ -3321,7 +3321,7 @@ The 'data-action' attribute is used to assign an onclick.
 		</div>
 
 		<div id="gotAccount" class='gotAccount logContainer'> 
-			<div class="logTitle yearbook">SIGN IN</div>
+			<div class="logTitle avant">SIGN IN</div>
 			<!-- Third parameter is id of message destination -->
 			<form action='#' data-app-submit='quickstart|accountLoginSubmit' id='modalLoginForm'>
 				<input type='hidden' name='method' value='unsecure'>
