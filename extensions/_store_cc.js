@@ -542,7 +542,7 @@ var store_cc = function(_app) {
 					var width = 0;
 					$dropout.show();
 					if($dropout.data('width')){
-						width = $dropout.data('width');
+						width = screen.width < 1080 ?  $dropout.data('low-width') : $dropout.data('width');
 					} else{
 						$dropout.children().each(function(){
 								width += $(this).outerWidth();
