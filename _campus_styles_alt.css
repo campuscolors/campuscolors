@@ -445,8 +445,8 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.standardNav .levelOne .sprite, .standardNav .levelOne .sprite.openMenu, .mobileSlideMenuClose {display:none;}
 	.standardNav .levelOne .levelTwo {background-color:#781c2b; padding:0 0 0 20px; box-shadow:2px 2px 2px 0 #000000; text-shadow:2px 2px 2px #000000; cursor:default; font-weight:normal;} /* width:217px;  */
 	.standardNav .levelOne .levelTwo a {width:50%; padding:2px 0; font-size:1em; border:none; float:left; text-align:left;}
-	.standardNav .levelOne .levelTwo.teamDrop {width:768px;}
-	.standardNav .levelOne .levelTwo.teamDrop a {height:20px; width:17%; margin:2px 10px; overflow:hidden;}
+	.standardNav .levelOne .levelTwo.teamDrop {width:auto; max-width:768px; padding:0 10px; column-count:5; -moz-column-count:5; -webkit-column-count:5;} /*columns will be alpha by row in IE9*/
+	.standardNav .levelOne .levelTwo.teamDrop a {height:20px; width:135px; margin:2px 10px; overflow:hidden;}
 	.standardNav .levelOne .levelTwo.ncaaDrop {left:-39px;}
 	.standardNav .levelOne .levelTwo.nflDrop {left:-125px;}
 	.standardNav .levelOne .levelTwo.nbaDrop {left:-211px;}
@@ -558,8 +558,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.homeMain .topBrandItem.fortySevenLogo {background-position:-194px -343px;}
 	.homeMain .topBrandItem.retroLogo {background-position:-235px -343px;}
 	.mobileSlideMenu.standardNav.hideOnHome {display:none;}
-	.standardNav .levelOne .levelTwo.teamDrop {width:950px;}
-	.standardNav .levelOne .levelTwo.teamDrop a {width:14%;}
+	.standardNav .levelOne .levelTwo.teamDrop {max-width:950px; column-count:6; -moz-column-count:6; -webkit-column-count:6;} /*columns will be alpha by row in IE9*/
 	.standardNav .levelOne .levelTwo.ncaaDrop {left:-15px;}
 	.standardNav .levelOne .levelTwo.nflDrop {left:-130px;}
 	.standardNav .levelOne .levelTwo.nbaDrop {left:-245px;}

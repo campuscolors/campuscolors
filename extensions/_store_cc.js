@@ -455,10 +455,21 @@ var store_cc = function(_app) {
 				if(!$tag.data('timeoutNoShow') || $tag.data('timeoutNoShow')=== "false") {
 					var $dropdown = $("[data-dropdown]", $tag);
 					var height = 0;
+					var screenWidth = screen.width;
 					$dropdown.show();
-					if($dropdown.data('height')){
+					if($dropdown.data('desk-height') && screenWidth > 959){
+						height = $dropdown.data('desk-height');
+					} 
+					else if($dropdown.data('tab-height') && screenWidth < 960 && screenWidth > 767) {
+						height = $dropdown.data('tab-height');
+					}
+					else if($dropdown.data('mobile-height') && screenWidth < 768) {
+						height = $dropdown.data('mobile-height');
+					}
+					else if($dropdown.data('height')){
 						height = $dropdown.data('height');
-					} else{
+					}
+					else{
 						$dropdown.children().each(function(){
 								height += $(this).outerHeight();
 						});
@@ -527,6 +538,12 @@ var store_cc = function(_app) {
 				$('.mobileSlideMenu').animate({"left":"-275px"},500);
 				$tag.data('timeoutNoShow', setTimeout(function(){$tag.data('timeoutNoShow', 'false');}, 500));
 			},
+			
+			hideOnLink : function($tag) {
+				$("[data-desk-drop]").each(function(){
+					_app.ext.store_cc.a.hideDropDownClick($(this));
+				});
+			}, 
 			
 			//toggles height on data-slide element within parent of the tag passed (made orig. for password recover, but could be used elsewhere).
 			togglerecover : function($tag) {
