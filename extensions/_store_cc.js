@@ -1224,8 +1224,8 @@ var store_cc = function(_app) {
 							pagination: {
 								container: ".mainPage",
 								keys: true
-							},
-							prev: {
+							}
+				/*			prev: {
 								button: ".mainPrev",
 								key: "left"
 							},
@@ -1233,7 +1233,7 @@ var store_cc = function(_app) {
 								button: ".mainNext",
 								key: "right"
 							}
-						});
+				*/		});
 					},2000); 
 				} //HOMEPAGE main banner CAROUSEL
 			},
