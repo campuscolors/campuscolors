@@ -330,7 +330,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 .tabbedProductContentTD .ui-tabs .ui-tabs-nav li.ui-state-default a {width:100%; color:#ffffff; text-align:center; font-family:Yearbook Solid W01, Times New Roman, serif;}
 .tabbedProductContentTD .ui-widget.ui-widget-content.ui-corner-bottom.ui-corner-tr {width:290px; margin:0 auto; background:none; border:none; border-radius:0;}
 .tabbedProductContentTD .tabContent.ui-tabs-panel.ui-widget-content.ui-corner-bottom {border:none;}
-.sizeGuide {height:auto; max-width:100%; box-shadow:1px 1px 3px 1px #444444;}
+.sizeGuide {height:auto; max-width:100%;} /*box-shadow:1px 1px 3px 1px #444444;*/
 
 .productRecentCarousel .mpControlContainer {display:none;}
 .ui-dialog.emailDialog {padding:5px; background:#781c2b;}
