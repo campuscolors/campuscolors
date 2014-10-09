@@ -30,7 +30,7 @@
 	{ "featured" :
 		[
 			{
-				"src"			: "banners/collegesweatshirts.jpg",
+				"src"			: "banners/college_sweatshirts.jpg",
 				"width"		: "330",
 				"height"	: "230",
 				"alt"			: "College Sweatshirts",
