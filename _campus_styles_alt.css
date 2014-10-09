@@ -410,7 +410,18 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 
 /* CHECKOUT */
 #checkoutContainer form {width:80%; margin:20px auto;}
-#checkoutContainer .applyButton.ccButton {padding:0;}
+.checkoutFormContainer .ccButton, .checkoutFormContainer .existingPrompt {padding:0.2em 0.7em;}
+.checkoutFormContainer .ccButton .ui-button-text {padding:0;}
+.checkoutFormContainer.customCheckout fieldset {padding:0; border:none;}
+.checkoutFormContainer fieldset legend {width:100%; background:#cccccc; border:none; color:#781c2b; padding:0.2em 1em; font-family:"AvantGardeGothicITCW01B 731069", Arial, sans-serif; font-weight:bold;}
+.checkoutFormContainer fieldset.shipInfo {width:50%; float:left;}
+.shipCenter {width:70%; margin:0 auto;}
+.checkoutFormContainer fieldset legend.plainLegend {background:none; color:#000000;}
+.checkoutFormContainer fieldset legend span {color:#333333;}
+.checkoutFormContainer fieldset .panelContent {padding:1em;}
+.chkLoginCont {width:70%; margin:0 auto;}
+/*.checkoutFormContainer [data-app-role='loginPasswordContainer'] {height:0; overflow:hidden;}*/
+
 
 
 @media screen and (min-width:400px) {
@@ -613,6 +624,9 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	
 	.logContainer {width:31%;}
 	.logRight {float:left;}
+	
+	.checkoutFormContainer .ccButton:hover {background:#781c2b; border-color:#b75970 #000000 #000000 #b75970; color:#ffffff;}
+	.checkoutFormContainer .ccButton:hover .ui-button-text {color:#ffffff;}
 }
 
 @media screen and (min-width : 1080px) {
