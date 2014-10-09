@@ -570,6 +570,10 @@ var store_cc = function(_app) {
 						$tag.data('timeout','false');
 							
 					}
+					if($dropout.data('height')) {
+						var height = $dropout.data('height');
+						$('.scrollDropout',$tag).css('height',height+"px");
+					}
 					$dropout.stop().animate({"width":width+"px"}, 500);
 					return true;
 				}
@@ -584,6 +588,7 @@ var store_cc = function(_app) {
 					$tag.data('timeout','false');
 				}
 				$tag.data('timeout',setTimeout(function(){$("[data-dropout]", $tag).hide();},500));
+				$('.scrollDropout',$tag).css('height',"auto");
 				return true;
 			},
 		

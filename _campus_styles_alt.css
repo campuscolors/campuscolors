@@ -213,7 +213,7 @@ header {position:relative;}
 .homeBanner {max-height:115px; margin:20px auto; text-align:center; overflow:hidden;}
 .homeBanner .mainBanImageCont {width:300px;}
 .homeBanner img {height:auto; max-width:100%;}
-.homeBannerCont {position:relative; margin:0 0 40px 0;}
+.homeBannerCont {position:relative;}
 .mainPageCont {position:absolute; right:60px; bottom:10px; z-index:2;}
 .mainPage a {height:15px; width:15px; background-color:#fbe143; color:#194835; margin:0 5px; padding:2px 0 0 0; display:inline-block; text-decoration:none;}
 .mainPage a.selected {background-color:#194835; color:#fbe143;}
@@ -547,16 +547,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.links {width:70%; float:left;}
 	.login, .links, .upperCartWrapper {margin:0.4em auto 0 auto;}
 	.standardNav .levelOne {width:115px;}
-	
 	.headerMid {height:120px;}
-	.homeTopBrands {width:654px; margin:0 auto 10px auto;}
-	.homeMain .topBrandItem {height:30px; width:50px; margin:0 20px; background-position:0px -343px; background-repeat:no-repeat; overflow:hidden; display:inline-block;}
-	.homeMain .topBrandItem.adidasLogo {background-position:-99px -343px;}
-	.homeMain .topBrandItem.underArmorLogo {background-position:-51px -343px;}
-	.homeMain .topBrandItem.newEraLogo {background-position:-147px -343px;}
-	.homeMain .topBrandItem.reebokLogo {background-position:-424px -344px;}
-	.homeMain .topBrandItem.fortySevenLogo {background-position:-194px -343px;}
-	.homeMain .topBrandItem.retroLogo {background-position:-235px -343px;}
 	.mobileSlideMenu.standardNav.hideOnHome {display:none;}
 	.standardNav .levelOne .levelTwo.teamDrop {max-width:950px; column-count:6; -moz-column-count:6; -webkit-column-count:6;} /*columns will be alpha by row in IE9*/
 	.standardNav .levelOne .levelTwo.ncaaDrop {left:-15px;}
@@ -584,10 +575,17 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.vertDropout .dropoutVertNavCont {padding:5px; border-radius:4px; background:#781c2b;}
 	.vertDropout .vertNavBorder {border:2px solid #ffffff; border-radius:4px; padding:20px;}
 	.vertDropout .sprite {height:82px; width:32px; position:absolute; top:12px; left:7px; background-position:-467px -50px;}
-	/*.vertDropout .scrollDropout {max-height:370px; overflow-x:hidden; overflow-y:scroll;}*/
-	.dropLinkCont {height:20px; width:17%; margin:0 10px; overflow:hidden;  padding:2px 0; font-size:0.7em; border:none; text-align:left; float:left; font-weight:normal; text-shadow:2px 2px 2px #000000;}
-	
+	.vertDropout .scrollDropout {column-count:5; -moz-column-count:5; -webkit-column-count:5;} /*columns will be alpha by row in IE9*/
+	.dropLinkCont {height:18px; width:135px; margin:1px 10px; overflow:hidden;  padding:2px 0; font-size:0.7em; border:none; text-align:left; float:left; font-weight:normal; text-shadow:2px 2px 2px #000000;}
 	.homeBanner {margin:20px;}
+	.homeTopBrands {width:654px; margin:0 auto 10px auto;}
+	.homeMain .topBrandItem {height:30px; width:50px; margin:0 20px; background-position:0px -343px; background-repeat:no-repeat; overflow:hidden; display:inline-block;}
+	.homeMain .topBrandItem.adidasLogo {background-position:-99px -343px;}
+	.homeMain .topBrandItem.underArmorLogo {background-position:-51px -343px;}
+	.homeMain .topBrandItem.newEraLogo {background-position:-147px -343px;}
+	.homeMain .topBrandItem.reebokLogo {background-position:-424px -344px;}
+	.homeMain .topBrandItem.fortySevenLogo {background-position:-194px -343px;}
+	.homeMain .topBrandItem.retroLogo {background-position:-235px -343px;}
 
 	.splashPageTemplate {width:920px;}
 	.splashBanner p {left:140px;}
