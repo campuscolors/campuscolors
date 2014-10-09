@@ -18,7 +18,7 @@
 =path	/Clearance.aspx	/#!clearance-apparel-merchandise/
 
 #redirct product pages
-~path	/Item--i-(.*?)	/#!product/$1/.*
+~path	/Item--i-(.*?)	/#!product/
 
 #redirct company pages
 =path	/content--name-Store-Locations	/#!company/locations/
