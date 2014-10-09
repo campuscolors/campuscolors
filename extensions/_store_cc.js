@@ -847,38 +847,49 @@ var store_cc = function(_app) {
 				var prod = data.globals.binds.var;
 				var pid = prod.pid;
 				var $input = $("<input class='displayNone' name='qty' \/>");
-				var $select = $("<select class='qtySelect' \/>");
+				var $select = $("<select class='qtySelect' data-select='qty' \/>");
 				var $selectWrapper = $("<div class='selectWrapper'></div>");
+				var variations = prod['@variations'];
 
 				if(_app.ext.store_product.u.productIsPurchaseable(data.globals.binds.var.pid)) {
 					$input.attr({'size':3,'min':0,'step':1,'type':'number'}).addClass('numberInput').appendTo($tag);
 					$input.on('keyup.classChange',function(){
 						if(Number($(this).val()) > 0){$(this).addClass('qtyChanged ui-state-highlight');}
 					});
-					
-						//a select list for qty selection is desired, let's build it...
-					var $defaultOption = $("<option value='1' selected='selected'>1</option>");
-					$defaultOption.appendTo($select);
-						//check to see what max inventory is and set the number of options accordingly, default to 10 if inventory can't be obtained
-					if(pid && prod['@inventory'] && prod['@inventory'][pid] && prod['@inventory'][pid].AVAILABLE)	{
-						var qty = Number(prod['@inventory'][pid].AVAILABLE) + 1; //+1 to compensate count for first option which was created already
-					}
-					else {
-						var qty = 11; 
-					}
-					if(qty > 1) { //only make additional options if the available qty is more than 1.
-						for(var i = 2; i < qty; i++) {
-							var $option = $("<option value="+i+">"+[i]+"</option>");
-							$option.appendTo($select);
+						
+					//if there aren't any variations there will only one inventory qty to deal w/, build the select here
+					if(!variations.length) {
+							//a select list for qty selection is desired, let's build it...
+						var $defaultOption = $("<option value='1' selected='selected'>1</option>");
+						$defaultOption.appendTo($select);
+							//check to see what max inventory is and set the number of options accordingly, default to 10 if inventory can't be obtained
+						if(pid && prod['@inventory'] && prod['@inventory'][pid] && prod['@inventory'][pid].AVAILABLE)	{
+							var qty = Number(prod['@inventory'][pid].AVAILABLE) + 1; //+1 to compensate count for first option which was created already
 						}
+						else {
+							var qty = 11; 
+						}
+						if(qty > 1) { //only make additional options if the available qty is more than 1.
+							for(var i = 2; i < qty; i++) {
+								var $option = $("<option value="+i+">"+[i]+"</option>");
+								$option.appendTo($select);
+							}
+						}
+						
+						//leaveing the default input field and changing that value to what is chosen in the select list is easier than rewriting 40 functions
+						$select.change(function() {
+							var selected = $(this).val();	//the option selected in select list
+							$input.val(selected);				//now the default input has the select value and can still be used for handleaddtocart.
+						});
 					}
-					
-					//leaveing the default input field and changing that value to what is chosen in the select list is easier than rewriting 40 functions
-					$select.change(function() {
-						var selected = $(this).val();	//the option selected in select list
-						$input.val(selected);				//now the default input has the select value and can still be used for handleaddtocart.
-					});
-					
+						
+					//but if there are variations, each will have an inventory to consider. build a placeholder select list that gets rebuilt w/ correct qty once a variation is selected.
+					else	{
+						var $defaultOption = $("<option value='' selected='selected'>-</option>");
+						$defaultOption.appendTo($select);
+						$select.off('click').on('click',function(){ $tag.closest('form').anymessage({"message":"Please select a size first."}); });
+					}
+						
 					$select.appendTo($selectWrapper);
 					$selectWrapper.appendTo($tag);
 				}
@@ -1737,6 +1748,39 @@ var store_cc = function(_app) {
 				});
 				dump('length:'); dump($('[data-reset-form]',$form).length);
 				$('[data-reset-form]',$form).trigger('click');
+			},
+			
+			//called on click of size variation. gets inventory available for the specific size and rebuilds the select list w/ that many options.
+			buildThisQty : function($ele,p) {
+				p.preventDefault();
+				dump('START buildThisQty');
+				var pid = $ele.closest("[data-templateid='productTemplate']").data("pid");
+				var prod = _app.data["appProductGet|"+pid];
+				var variationValue = $ele.data("variationval");
+				var variation = pid + ":" + variationValue;
+				var max = prod["@inventory"][variation].AVAILABLE;
+				var $form = $ele.closest("form");
+				var $select = $("[data-select='qty']",$form);
+				var $input = $("input[name=qty]",$form);
+				var $defaultOption = $("<option value='1' selected='selected'>1</option>");
+				
+				$select.empty().off("click");
+				$defaultOption.appendTo($select);
+				$select.attr("data-option-selected",variation);
+				//if there is more than one avialable there will need to be more than the default option
+				if(max > 1) {
+					for(var i = 2; i < max; i++) {
+						var $option = $("<option value="+i+">"+[i]+"</option>");
+						$option.appendTo($select);
+					}
+				}
+				
+				$select.change(function() {
+					var selected = $(this).val();	//the option selected in select list
+					$input.val(selected);				//now the default input has the select value and can still be used for handleaddtocart.
+				});
+				
+				return false;
 			}
 		
 		}, //e [app Events]
@@ -1787,8 +1831,9 @@ Variations
 						if(pog['@options'][j]['v']) {
 							var pogval  = (pog['@options'][j]['v']);
 							var prompt = (pog['@options'][j]['prompt']);
+							
 							dump(pogval);
-							var $sizeOption = $("<div class='sizeOption pointer floatLeft' data-pogval='"+pogval+"'></div>");
+							var $sizeOption = $("<div class='sizeOption pointer floatLeft' data-pogval='"+pogval+"' data-variationval='SZ"+pogval+"' data-app-click='store_cc|buildThisQty'></div>");
 							$sizeOption.text(prompt);
 							$sizeOption.click(function() {
 								var $this = $(this);
