@@ -1028,10 +1028,13 @@ var store_cc = function(_app) {
 /* CART TLC */
 			//adds qty to cart item, but hides the field and adds a select list to use for changing the qty.
 			//the input and the container the select list is added to must be children of the same container. 
+			//also checks to see if the qty of the item added is more than available and sets to max available if so.
 			cartitemqty : function(data, thisTLC)	{
 				var $tag = data.globals.tags[data.globals.focusTag];
 				var prod = data.globals.binds.var;
+				var thisSTID = prod.stid;
 				var $parent = ($tag.parent());
+				var $thisCartItem = ($tag.parent().parent());
 				var $select = $("<select class='qtySelect cartQtySelect' \/>");
 				var $selectWrapper = $("[data-select-container]",$parent);
 				dump('-----cartitemqty'); dump(prod);
@@ -1040,36 +1043,69 @@ var store_cc = function(_app) {
 		//			dump('store_cc cartitemqty item inventory: '+prod['%options'][index].inv);
 		//			var thisInventory = prod['%options'][index].inv;
 		//		}
-				
-				$tag.val(prod.qty);
-				
-				//for coupons and assemblies, no input desired, but qty display is needed. so the qty is inserted where the input was.
-				if((prod.stid && prod.stid[0] == '%') || prod.asm_master)	{
-					$tag.prop('disabled',true).css('border-width','0')
-					$("[data-cart-show='asm']",$parent).removeClass('displayNone');
-					} 
-				else	{
-					$("[data-cart-show='select']",$parent).removeClass('displayNone');
-					$tag.attr('data-stid',prod.stid);
-					$tag.addClass('displayNone');
-					
-						//a select list for qty selection is desired, let's build it...
-					for(var i = 1; i < 11; i++) {
-						if(i == prod.qty) { var $option = $("<option value="+i+" selected='selected'>"+[i]+"</option>"); }
-						else { var $option = $("<option value="+i+">"+[i]+"</option>"); }
-						$option.appendTo($select);
+		
+				if(thisSTID) {
+					var max = _app.data["appProductGet|"+thisSTID.split(':')[0]]["@inventory"][prod.sku].AVAILABLE;
+	
+					// if they want more than available, let them know no es posible, and change qty to max available.
+					if(Number(max) < Number(prod.qty))	{		
+						dump('yes we have no bananas');
+						$tag.val(max);
+						var thisQty = max;
+						
+						var thisCartID = _app.model.fetchCartID();
+						var vars = {"quantity":max,"stid":thisSTID,"_cartid":thisCartID};
+						_app.ext.cco.calls.cartItemUpdate.init(vars,{"max":max,"thisSKU":prod.sku,"thisCartID":thisCartID,"callback":function(rd){
+							if(_app.model.responseHasErrors(rd)){
+								$thisCartItem.anymessage({'message':rd});
+							}
+							else {
+								//qty succesfully changed, tell them it's different
+								$thisCartItem.anymessage({"message":"There are only "+rd.max+" of this item currently available. We appologize for any inconvinience, the quantity has been changed to "+rd.max+"."});
+								var order = _app.data["cartDetail|"+rd.thisCartID]["@ITEMS"];
+								for(var j = 0; j < order.length; j++) {
+									if(order[j].sku == rd.thisSKU) { order[j].qty = rd.max; }
+								}
+				//				_app.ext.cco.calls.cartSet.init({"_cartid":rd.thisCartID},{},'passive'); _app.model.dispatchThis('passive');
+				//				setTimeout(function(){_app.ext.quickstart.u.handleMinicartUpdate({'datapointer':'cartDetail|'+rd.thisCartID});},1000);
+							}
+						}});
 					}
-					
-					//leaving the default input field and changing that value to what is chosen in the select list is easier than rewriting 40 functions
-					$select.change(function() {
-						var selected = $(this).val();	//the option selected in select list
-						$tag.val(selected).change();				//now the default input has the select value and can still be used for handleaddtocart.
-					});
-					$parent.css({"position":"relative","top":"-7px"});
-					$select.appendTo($selectWrapper);
-					$selectWrapper.addClass('cartQtySelectWrapper');
+					//if the qty doesn't exceed the max, then we're cool
+					else {								
+						$tag.val(prod.qty);
+						var thisQty = prod.qty;
+					}
+				
+					//for coupons and assemblies, no input desired, but qty display is needed. so the qty is inserted where the input was.
+					if((prod.stid && prod.stid[0] == '%') || prod.asm_master)	{
+						$tag.prop('disabled',true).css('border-width','0')
+						$("[data-cart-show='asm']",$parent).removeClass('displayNone');
+						} 
+					else	{
+						$("[data-cart-show='select']",$parent).removeClass('displayNone');
+						$tag.attr('data-stid',prod.stid);
+						$tag.addClass('displayNone');
+						
+							//a select list for qty selection is desired, let's build it...
+						for(var i = 1; i <= max; i++) {
+							if(i == thisQty) { var $option = $("<option value="+i+" selected='selected'>"+[i]+"</option>"); }
+							else { var $option = $("<option value="+i+">"+[i]+"</option>"); }
+							$option.appendTo($select);
+						}
+						
+						//leaving the default input field and changing that value to what is chosen in the select list is easier than rewriting 40 functions
+						$select.change(function() {
+							var selected = $(this).val();	//the option selected in select list
+							$tag.val(selected).change();	//now the default input has the select value and can still be used for handleaddtocart.
+						});
+						$parent.css({"position":"relative","top":"-7px"});
+						$select.appendTo($selectWrapper);
+						$selectWrapper.addClass('cartQtySelectWrapper');
+					}
+					_app.model.dispatchThis('immutable');
 				}
-			},
+			}, //cartitemqty
 			
 			tillfreeship : function(data, thisTLC) {
 				var $tag = data.globals.tags[data.globals.focusTag];
