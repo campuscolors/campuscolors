@@ -290,6 +290,22 @@ var store_cc = function(_app) {
 						}
 					});
 					
+					_app.router.addAlias('promo', function(routeObj){
+						var path = routeObj.params.PATH;
+//						dump('promo Alias'); dump(path);
+							$.getJSON("filters/search/"+path+".json?_v="+(new Date()).getTime(), function(json){
+								dump('content shown from json');
+//								dump('THE SEARCH JSON IS...'); dump(routeObj.params);
+								routeObj.params.elasticsearch = json;
+								showContent('search',	routeObj.params);
+							})
+							.fail(function() {
+								dump('FILTER DATA FOR ' + path + 'COULD NOT BE LOADED.');
+								showContent('404');
+							}); 
+					});
+				
+					
 //APPEND
 					//Adds the listener for the url.  The route needs to match the page pushed into robots below
 
@@ -396,7 +412,9 @@ var store_cc = function(_app) {
 					}});
 					_app.router.appendHash({'type':'match','route':'apparel-merchandise/{{id}}/','pagefilter':'apparel-merchandise','callback':'filter'});
 					_app.ext.store_cc.u.pushFilter('apparel-merchandise');
-					
+
+//SEARCH APPENDS
+					_app.router.appendHash({'type':'match','route':'search/promo/{{PATH}}*','callback':'promo'});					
 					
 
 					
@@ -1133,7 +1151,37 @@ var store_cc = function(_app) {
 					/* catch in case itemsTotal is somehow undef or null, show no message in the cart in that case */ 
 					dump('In store_cc#tillFreeShip and the total for the items in the cart did not fall above or below the free shipping threshold... that should be investigated.');
 				}
-			}
+			},
+			
+			searchbytag : function(data,thisTLC) {
+				var path = data.globals.binds.var;
+				$.getJSON("filters/search/"+path+".json?_v="+(new Date()).getTime(), function(json){
+								dump('THE SEARCH JSON IS...'); dump(json);
+								
+								
+								
+								var dataset = $.extend(true, {}, $.grep(json.pages,function(e,i){
+									return e.id == b;
+								})[0]);
+			//					dump('GREP IS: '); dump(dataset);
+								dataset.breadcrumb = [routeObj.pagefilter,routeObj.params.id]
+								showContent('static',{'templateid':'splashPageTemplate','id':routeObj.params.id,'dataset':dataset});
+							})
+							.fail(function() {
+								dump('FILTER DATA FOR ' + a + 'COULD NOT BE LOADED.');
+								showContent('404');
+							});
+/*
+				var argObj = thisTLC.args2obj(data.command.args,data.globals); //this creates an object of the args
+					//check if there is a $var value to replace in the filter object (THERE IS PROBABLY A BETTER WAY TO DO THIS)
+				if(argObj.replacify) {argObj.filter = argObj.filter.replace('replacify',data.value);}
+	//			dump(argObj.replacify);
+				var query = JSON.parse(argObj.filter);
+	//	dump('----search by tag'); dump(data.value); dump(argObj.filter); dump(query);
+				_app.ext.store_search.calls.appPublicProductSearch.init(query,$.extend({'datapointer':'appPublicSearch|tag|'+argObj.tag,'templateID':argObj.templateid,'extension':'store_search','callback':'handleElasticResults','list':data.globals.tags[data.globals.focusTag]},argObj));
+				_app.model.dispatchThis('mutable');
+				return false; //in this case, we're off to do an ajax request. so we don't continue the statement.
+		*/	}
 			
 		}, //tlcFormats
 		
