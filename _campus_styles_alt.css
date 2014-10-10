@@ -402,6 +402,8 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 .ui-state-default.cartButtons {background:#ffffff; border:none;}
 .applyButton.continueShoppingButton.ccButton .ui-button-text {color:#ffffff;}
 #inStoreCheckoutButton .applyButton.ccButton.checkoutButton {border:2px outset #fbe143;}
+#inStoreCheckoutButton.thisButton {float:none; margin:0 0 0.4em 0;}
+ #paypalecbutton.thisButton {float:none; margin:0 0 0.1em 0;}
 .removeButton.ui-button.ui-button-icon-only {height:auto; width:auto; padding:1% 2%; background:none; border:none;}
 .removeButton.ui-button.ui-button-icon-only .ui-button-icon-primary {display:none;}
 .removeButton.ui-button.ui-button-icon-only .ui-button-text {padding:0; text-indent:0; color:#cccccc;}
