@@ -118,7 +118,7 @@ $(document).ready(function(){
 	if(!paramStr || paramStr.indexOf('_escaped_fragment_') < 0){
 		window.myApp = new initApp({
 			"_robotHasGreeted" : false, <!-- versionhere -->
-			"release":"201408.20141009024400",  //increment this  with each change. should solve caching issues. format: YYYYMMDDHHMMSS
+			"release":"201408.20141010004500",  //increment this  with each change. should solve caching issues. format: YYYYMMDDHHMMSS
 			"_clientid":"zmvc", //zmvc for store app, 1pc for one page checkout.
 			"baseURL":baseURL, //used in non-local mode.
 			"checkoutAuthMode" : "active",//can be passive, active or required
@@ -773,12 +773,8 @@ var _robots = {
 			<div class="levelOne oneLevel hideTablet">
 				<a href="#!apparel-merchandise/kids/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent());">KID&#39;S</a>
 			</div>
-			<div class="levelOne" onclick="myApp.ext.store_cc.a.showDropDownClick($(this));" data-desk-drop=1>
-				SALE
-				<span class="sprite"></span>
-				<div class="levelTwo" data-dropdown="1">
-					<a href="#!adidas-gear/adidas-shorts/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">TBD...</a>
-				</div>
+			<div class="levelOne oneLevel">
+				<a href="#!sale-apparel-merchandise/clearance/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent()); myApp.ext.store_cc.a.hideOnLink($(this).parent().parent());">SALE</a>
 			</div>
 		</div>
 	</div>
@@ -1510,7 +1506,7 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 				<div class="vertLinkCont marginTop"><a href="#!apparel-merchandise/mens/" class="bareWhiteLink bold">Men&#39;s</a></div>
 				<div class="vertLinkCont"><a href="#!apparel-merchandise/womens/" class="bareWhiteLink bold">Women&#39;s</a></div>
 				<div class="vertLinkCont"><a href="#!apparel-merchandise/kids/" class="bareWhiteLink bold">Kid&#39;s</a></div>
-				<div class="vertLinkCont marginTop vertNavLast"><a href="#!apparel-merchandise/mens/" class="bareWhiteLink bold">SALE</a></div>
+				<div class="vertLinkCont marginTop vertNavLast"><a href="#!sale-apparel-merchandise/clearance/" class="bareWhiteLink bold">SALE</a></div>
 			</div>
 			<img src="images/vert-nav-arrow_230x50.png" alt="Banner Bottom" class="vertNavArrow">
 			<!-- <div class="vertNavArrow sprite"></div> -->

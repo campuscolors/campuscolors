@@ -290,6 +290,7 @@ var store_cc = function(_app) {
 						}
 					});
 					
+					//sends passed object of attribs as a showContent search
 					_app.router.addAlias('promo', function(routeObj){
 						var path = routeObj.params.PATH;
 //						dump('promo Alias'); dump(path);
@@ -406,12 +407,19 @@ var store_cc = function(_app) {
 					_app.router.appendHash({'type':'match','route':'brands-apparel-merchandise/{{id}}/','pagefilter':'brands-apparel-merchandise','callback':'filter'});
 					_app.ext.store_cc.u.pushFilter('brands-apparel-merchandise');
 
-//TYPE/GENDER APPENDS					
+//TYPE/GENDER APPENDS
 					_app.router.appendHash({'type':'exact','route':'apparel-merchandise/','templateid':'splashPageTemplate','callback':function(routeObj){
 						_app.ext.store_cc.u.getCatJSON(routeObj);
 					}});
 					_app.router.appendHash({'type':'match','route':'apparel-merchandise/{{id}}/','pagefilter':'apparel-merchandise','callback':'filter'});
 					_app.ext.store_cc.u.pushFilter('apparel-merchandise');
+					
+//CLEARANCE APPENDS					
+					_app.router.appendHash({'type':'exact','route':'sale-apparel-merchandise/','templateid':'splashPageTemplate','callback':function(routeObj){
+						_app.ext.store_cc.u.getCatJSON(routeObj);
+					}});
+					_app.router.appendHash({'type':'match','route':'sale-apparel-merchandise/{{id}}/','pagefilter':'sale-apparel-merchandise','callback':'filter'});
+					_app.ext.store_cc.u.pushFilter('sale-apparel-merchandise');
 
 //SEARCH APPENDS
 					_app.router.appendHash({'type':'match','route':'search/promo/{{PATH}}*','callback':'promo'});					
@@ -724,9 +732,9 @@ var store_cc = function(_app) {
 				},
 				
 				addbreadcrumb : function(data, thisTLC) {
-					dump('START addbreadcrumb'); // dump(_app.ext.quickstart.vars.hotw);
+//					dump('START addbreadcrumb');  dump(_app.ext.quickstart.vars.hotw);
 					var $tag = data.globals.tags[data.globals.focusTag];
-					var bc = data.globals.binds.bc; dump(bc); 
+					var bc = data.globals.binds.bc; //dump(bc); 
 					var $bread = $("<div></div>");
 					var L = bc.length
 					$tag.empty(); //be sure there are no crumbs in the bed
@@ -797,7 +805,7 @@ var store_cc = function(_app) {
 /*PRODUCT LIST TLC*/	
 			makelinkall : function(data, thisTLC) {
 				var $tag = data.globals.tags[data.globals.focusTag];
-				var href = data.globals.binds.href; dump(href); 
+				var href = data.globals.binds.href; //dump(href); 
 				href = href + "all/";
 				$tag.attr("href",href);
 			},
@@ -1236,7 +1244,7 @@ var store_cc = function(_app) {
 			//if not, will get data from the JSON record and showContent w/ that. Shows 404 if data can't be found in vars or JSON record.
 			getCatJSON : function(routeObj) {
 				var route = routeObj.route;
-//				dump('START getCatJSON');
+//				dump('START getCatJSON'); dump(routeObj);
 				var route = route.split('/')[0];
 				
 				if(_app.ext.store_cc.vars[route]) {
@@ -1247,7 +1255,7 @@ var store_cc = function(_app) {
 				}
 				else {
 					$.getJSON("filters/apparel/"+route+".json?_v="+(new Date()).getTime(), function(json){
-						dump('THE CAT JSON IS...'); dump(json);
+//						dump('THE CAT JSON IS...'); dump(json);
 						var filterData = $.extend(true, {}, json);
 						filterData.breadcrumb = [filterData.id];
 						showContent('static',{'templateid':routeObj.templateid,'id':json.id,'dataset':filterData});
@@ -1481,7 +1489,7 @@ var store_cc = function(_app) {
 			
 /* HOMEPAGE UTILS */
 			showHomepageBanners : function() {
-			dump('START showHomepageBanners'); dump(_app.ext.store_cc.vars.homepageBanners[1].featured);
+//			dump('START showHomepageBanners'); dump(_app.ext.store_cc.vars.homepageBanners[1].featured);
 				var $container = $('.homeBanner', '#homepageTemplate_');
 				var $featuredContainer = $('[data-home-featured="container"]', '#homepageTemplate_');
 				if(!$container.hasClass('bannersRendered')) {
