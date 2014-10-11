@@ -418,6 +418,8 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 .checkoutFormContainer fieldset legend {width:100%; background:#cccccc; border:none; color:#781c2b; padding:0.2em 1em; font-family:"AvantGardeGothicITCW01B 731069", Arial, sans-serif; font-weight:bold;}
 .checkoutFormContainer fieldset.shipInfo {width:50%; float:left;}
 .shipCenter {width:70%; margin:0 auto;}
+.checkoutFormContainer .shipCenter input {width:100%;}
+.checkoutFormContainer .shipCenter input[type='checkbox'] {width:auto;}
 .checkoutFormContainer fieldset legend.plainLegend {background:none; color:#000000;}
 .checkoutFormContainer fieldset legend span {color:#333333;}
 .checkoutFormContainer fieldset .panelContent {padding:1em;}
