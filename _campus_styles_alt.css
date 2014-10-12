@@ -305,7 +305,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 .productPage .priceDesc {font-size:0.5em; display:block; color:#000000; font-weight:normal;}
 .variation_SZ .label_select {display:none;}
 .sizeOption, .qtySelect {color:#ffffff; background-color:#781c2b; padding:10px; text-align:center; font-weight:bold; margin:5px;}
-.sizeOption.selectedSize {color:#781c2b; background-color:#ffffff; border:1px solid #781c2b;}
+.sizeOption.selectedSize {color:#781c2b; background-color:#ffffff; border:1px solid #781c2b; margin:4px;}
 .prodViewerAddToCartForm .inLine {display:inline;}
 .prodViewerAddToCartForm .variationsWrapper {padding:0 15px;}
 .qtyATCWraper {width:90%; margin:0 auto;}
