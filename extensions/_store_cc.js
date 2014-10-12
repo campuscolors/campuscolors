@@ -1072,9 +1072,10 @@ var store_cc = function(_app) {
 				var thisSTID = prod.stid;
 				var $parent = ($tag.parent());
 				var $thisCartItem = ($tag.parent().parent());
+				var thisCartID = _app.model.fetchCartID();
 				var $select = $("<select class='qtySelect cartQtySelect' \/>");
 				var $selectWrapper = $("[data-select-container]",$parent);
-				dump('-----cartitemqty'); dump(prod);
+//				dump('-----cartitemqty'); dump(prod);
 				
 		//		for(index in prod['%options']){
 		//			dump('store_cc cartitemqty item inventory: '+prod['%options'][index].inv);
@@ -1082,7 +1083,15 @@ var store_cc = function(_app) {
 		//		}
 		
 				if(thisSTID) {
-					var max = _app.data["appProductGet|"+thisSTID.split(':')[0]]["@inventory"][prod.sku].AVAILABLE;
+//					dump('app cart detail'); dump(_app.data["cartDetail|"+thisCartID]["@ITEMS"]);
+					var cartItems = _app.data["cartDetail|"+thisCartID]["@ITEMS"];
+					for(var k = 0; k < cartItems.length; k++) {
+						//client indicated size is and would always be the only variation, if more are added, the check for the variation will need to account for that.
+						if(cartItems[k].sku == prod.sku && cartItems[k]["%options"][prod.sku.split(":")[1]] && cartItems[k]["%options"][prod.sku.split(":")[1]].inv) {
+							var max = cartItems[k]["%options"][prod.sku.split(":")[1]].inv;
+						}
+						else { dump('Error in store_cc#cartitemqty. Product sku does not match cart sku, the variation is not available, or there is no inventory listed for the item in the cart.'); }
+					}
 	
 					// if they want more than available, let them know no es posible, and change qty to max available.
 					if(Number(max) < Number(prod.qty))	{		
@@ -1090,7 +1099,6 @@ var store_cc = function(_app) {
 						$tag.val(max);
 						var thisQty = max;
 						
-						var thisCartID = _app.model.fetchCartID();
 						var vars = {"quantity":max,"stid":thisSTID,"_cartid":thisCartID};
 						_app.ext.cco.calls.cartItemUpdate.init(vars,{"max":max,"thisSKU":prod.sku,"thisCartID":thisCartID,"callback":function(rd){
 							if(_app.model.responseHasErrors(rd)){
