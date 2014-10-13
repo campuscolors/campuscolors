@@ -507,7 +507,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.filterListTemplate {height:auto;  padding:0; float:left; border:5px solid #bfbfbf;}
 	.filterGroup {width:100%; margin:0;}
 	.filterGroupTitle {width:100%; padding:4px 4px 4px 10px; border-bottom:2px solid #000000; border-top:none; border-left:none; border-right:none;}
-	.filterHider {padding:0 0 0 15px; margin:0 0 10px 0;}
+	.filterHider {max-height:210px; padding:0 0 0 15px; margin:0 0 10px 0; overflow-y:auto; overflow-x:hidden;}
 	.splashPageListTemplate .title {height:67px; bottom:0; color:#ffffff; background-color:rgba(1,1,1,0.5);}
 	.ccList .prodInfo {bottom:0;}
 	
