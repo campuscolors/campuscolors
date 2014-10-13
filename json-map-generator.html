@@ -32,11 +32,14 @@
 			var multiSubCat = $('input[name=type]:checked',$form).val();
 			var raw = input.split('\n');
 			var pages = [];
+			var siteMapLinksOnly = true;		//condition used to generate links for the node sitemap
+			var siteMapLinks = [];				//stores the links for the node sitemap
 			
 			
 			//make the rootCatgory JSON
 			var rootCat = genRootCat(raw[0],raw[1]); //make the rootCatgory JSON
 			var rootPath = "#!"+raw[1].split('\t')[0].toLowerCase()+"/";
+			if(siteMapLinksOnly) { siteMapLinks.push(rootPath); }  //store the root category path for sitemap
 //			console.log(rootPath);
 
 			//get checkboxes that are checked to make optionList from
@@ -56,37 +59,42 @@
 				//take this path if there will be type categories: ncaa > ncaa-shirts,ncaa-shorts,ncaa-all instead of just nike > all nike
 				if(multiSubCat == "team") {
 					console.log('we can tell a box is checked.');
-					var typeCat = genTypeCat(process, rootPath, optionArray);
-					var subPath = typeCat.link;
-					var subCat = genTypeSubCat(process, subPath, optionArray,$typeList);
-//					console.log(subCat);
+					var typeCat = genTypeCat(process, rootPath, optionArray, siteMapLinksOnly);
+					var subPath = ""; //if generating sitemap links, the link needed here isn't generated, so build it here in that case. 
+					siteMapLinksOnly ? subPath = rootPath + process[0].toLowerCase().split(" ").join("-") + "/" : subPath = typeCat.link;
+					var subCat = genTypeSubCat(process, subPath, optionArray,$typeList, siteMapLinksOnly);
+			//		console.log(subCat);
+					if(siteMapLinksOnly) { siteMapLinks.push(typeCat); siteMapLinks.push.apply(siteMapLinks, subCat); }  //add the links from the typeCat and typeSubCat
 		//			pages.push(subCat);
 					typeCat["pages"] = subCat;
 				}
 				//take this path if there will only be a root cat and a subcat: nike > all of nike
 				else {
-					var subCat = genSubCat(process, rootPath, optionArray, multiSubCat);
+					var subCat = genSubCat(process, rootPath, optionArray, multiSubCat, siteMapLinksOnly);
 					//console.log(process);
-					pages.push(subCat);
-					dump(pages);
+					if(siteMapLinksOnly) { siteMapLinks.push(subCat); }  //if just looking for sitemap links store the root category path for sitemap
+					else { pages.push(subCat); }  //otherwise push what should be the subCat object onto the categories pages array. 
 				}
 				//pages array may have been used to created typeCats, and add them to it for addition to the rootCat
 				if(multiSubCat == "team") { pages.push(typeCat); }
 			}
 			
-			rootCat["pages"] = pages;
-//			console.log(rootCat);
-			var output = JSON.stringify(rootCat,null,"\t");
-			//file download solution?
-			//	var url = 'data:text/json;charset=utf8,' + encodeURIComponent(output);
-			//	window.open(url, '_blank');
-			//	window.focus();
-			$("#output").val(output);
+			if(siteMapLinksOnly) { $("#output").val(siteMapLinks); }  //if just looking for the sitemap links, output that array that was made of them. 
+			else {   //ouput the entire cat object that was built. 
+				rootCat["pages"] = pages;
+	//			console.log(rootCat);
+				var output = JSON.stringify(rootCat,null,"\t");
+				//file download solution?
+				//	var url = 'data:text/json;charset=utf8,' + encodeURIComponent(output);
+				//	window.open(url, '_blank');
+				//	window.focus();
+				$("#output").val(output);
+			}
 		};
 		
 		
 		//will generate a leaf subCategory for categories with product type: #!rootCat/subCat/leafCat/, and will have a product list in it.
-		function genTypeSubCat(attrib,subPath,optionArray,$typeList) {
+		function genTypeSubCat(attrib,subPath,optionArray,$typeList, siteMapLinksOnly) {
 			var typeSubCatArray = []; //what gets returned, an array of each page list object generated.
 			var typeArray = ["All"]; //an array to hold the types of subcats that need to be generated
 			var count = 0;
@@ -141,14 +149,19 @@
 				else { typeSubCat.baseFilter.term[teamLeague] = teamCode; } //the all category has no AND w/ another attrib
 				typeSubCat.options.base_price["max"] = Number(attrib[6]);
 				typeSubCat["optionList"] = optionArray;
-				typeSubCatArray.push(typeSubCat);
+				
+				//if generating sitemap links, this array will be returned with just link instead of entire cat object
+				if(siteMapLinksOnly) { typeSubCatArray.push(subPath + thisLowerType+"/"); }
+				else { typeSubCatArray.push(typeSubCat); }
+				
+				
 			}
 //			console.log(typeSubCatArray);
 			return typeSubCatArray;
 		}
 		
 		//will generate a subCategory for categories with a product type: #!rootCat/subCat/, and will have a listing of type categories in it.
-		function genTypeCat(attrib,rootPath,optionArray) {
+		function genTypeCat(attrib,rootPath,optionArray,siteMapLinksOnly) {
 			console.log(attrib); console.log(rootPath); console.log(optionArray);
 			var typeCat = {};
 			var teamLong = attrib[0];																						//team_long attribute
@@ -172,7 +185,8 @@
 			typeCat["banneralt"] = teamLongUpper + " Promotion";
 	//		typeCat["promo"] = promo;
 //			console.log(typeCat);
-			return typeCat;
+			if(siteMapLinksOnly) { return rootPath + id }  //if just getting links for sitemap... same as the link set in the object above. 
+			else { return typeCat; }  //otherwise, return the whole cat object that was built. 
 	/*	sample data (it should look somewhat like this)	
 			"id": "duke-blue-devils-apparel-merchandise/",
 			"link": "#!test-ncaa-team-apparel-merchandise/duke-blue-devils-apparel-merchandise/",
@@ -188,7 +202,7 @@
 		}
 		
 		//will generate a leaf subCategory when there is only root/sub/product: #!rootCat/subCat/leafCat, and will have a product list in it.
-		function genSubCat(attrib,rootPath,optionArray, multiSubCat) {
+		function genSubCat(attrib,rootPath,optionArray, multiSubCat, siteMapLinksOnly) {
 //			console.log(attrib);
 			var subCat = {"baseFilter" : {"term" : {}},"options" : {"base_price" : {"min" : 0}}};
 			var teamLong = attrib[0];																						//team_long attribute
@@ -218,7 +232,8 @@
 			subCat["optionList"] = optionArray;
 //			console.log(subCat);
 			
-			return subCat;
+			if(siteMapLinksOnly) { return rootPath + id + "/"; }  //if just getting links for sitemap... same as the link set in the object above. 
+			else { return subCat; } //otherwise, return the whole cat object that was built
 		};
 		
 		//generates root category based on passed tab delimited title and title value
