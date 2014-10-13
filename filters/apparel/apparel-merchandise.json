@@ -21,7 +21,7 @@
 				}
 			},
 			"id": "shorts",
-			"link": "#!apparel-merchandise/shorts",
+			"link": "#!apparel-merchandise/shorts/",
 			"img": "shorts",
 			"name": "Shorts Apparel & Merchandise",
 			"page-title": "Shorts Apparel & Merchandise | CampusColors.com",
@@ -52,7 +52,7 @@
 				}
 			},
 			"id": "t-shirts",
-			"link": "#!apparel-merchandise/t-shirts",
+			"link": "#!apparel-merchandise/t-shirts/",
 			"img": "t-shirts",
 			"name": "T-Shirts Apparel & Merchandise",
 			"page-title": "T-Shirts Apparel & Merchandise | CampusColors.com",
@@ -83,7 +83,7 @@
 				}
 			},
 			"id": "sweatshirts-and-fleece",
-			"link": "#!apparel-merchandise/sweatshirts-and-fleece",
+			"link": "#!apparel-merchandise/sweatshirts-and-fleece/",
 			"img": "sweatshirts & fleece",
 			"name": "Sweatshirts & Fleece Apparel & Merchandise",
 			"page-title": "Sweatshirts & Fleece Apparel & Merchandise | CampusColors.com",
@@ -114,7 +114,7 @@
 				}
 			},
 			"id": "jerseys",
-			"link": "#!apparel-merchandise/jerseys",
+			"link": "#!apparel-merchandise/jerseys/",
 			"img": "Jerseys",
 			"name": "Jerseys Apparel & Merchandise",
 			"page-title": "Jerseys Apparel & Merchandise | CampusColors.com",
@@ -145,7 +145,7 @@
 				}
 			},
 			"id": "pants",
-			"link": "#!apparel-merchandise/pants",
+			"link": "#!apparel-merchandise/pants/",
 			"img": "pants",
 			"name": "Pants Apparel & Merchandise",
 			"page-title": "Pants Apparel & Merchandise | CampusColors.com",
@@ -176,7 +176,7 @@
 				}
 			},
 			"id": "hats",
-			"link": "#!apparel-merchandise/hats",
+			"link": "#!apparel-merchandise/hats/",
 			"img": "hats",
 			"name": "Hats Apparel & Merchandise",
 			"page-title": "Hats Apparel & Merchandise | CampusColors.com",
@@ -207,7 +207,7 @@
 				}
 			},
 			"id": "accessories-and-novelties",
-			"link": "#!apparel-merchandise/accessories-and-novelties",
+			"link": "#!apparel-merchandise/accessories-and-novelties/",
 			"img": "novelties & accessories",
 			"name": "Accessories & Novelties Apparel & Merchandise",
 			"page-title": "Accessories & Novelties Apparel & Merchandise | CampusColors.com",
@@ -238,7 +238,7 @@
 				}
 			},
 			"id": "mens",
-			"link": "#!apparel-merchandise/mens",
+			"link": "#!apparel-merchandise/mens/",
 			"img": "adult",
 			"name": "Men's Apparel & Merchandise",
 			"page-title": "Men's Apparel & Merchandise | CampusColors.com",
@@ -269,7 +269,7 @@
 				}
 			},
 			"id": "womens",
-			"link": "#!apparel-merchandise/womens",
+			"link": "#!apparel-merchandise/womens/",
 			"img": "womens",
 			"name": "Women's Apparel & Merchandise",
 			"page-title": "Women's Apparel & Merchandise | CampusColors.com",
@@ -300,7 +300,7 @@
 				}
 			},
 			"id": "kids",
-			"link": "#!apparel-merchandise/kids",
+			"link": "#!apparel-merchandise/kids/",
 			"img": "kids",
 			"name": "Kid's Apparel & Merchandise",
 			"page-title": "Kid's Apparel & Merchandise | CampusColors.com",
@@ -331,7 +331,7 @@
 				}
 			},
 			"id": "youth",
-			"link": "#!apparel-merchandise/youth",
+			"link": "#!apparel-merchandise/youth/",
 			"img": "youth",
 			"name": "Youth Apparel & Merchandise",
 			"page-title": "Youth Apparel & Merchandise | CampusColors.com",
@@ -362,7 +362,7 @@
 				}
 			},
 			"id": "toddler",
-			"link": "#!apparel-merchandise/toddler",
+			"link": "#!apparel-merchandise/toddler/",
 			"img": "toddler",
 			"name": "Toddler Apparel & Merchandise",
 			"page-title": "Toddler Apparel & Merchandise | CampusColors.com",
@@ -393,7 +393,7 @@
 				}
 			},
 			"id": "infant",
-			"link": "#!apparel-merchandise/infant",
+			"link": "#!apparel-merchandise/infant/",
 			"img": "infant",
 			"name": "Infant Apparel & Merchandise",
 			"page-title": "Infant Apparel & Merchandise | CampusColors.com",
