@@ -289,9 +289,28 @@
 		},
 		{
 			"baseFilter": {
-				"term": {
-					"size_gender": "kids"
-				}
+				"or": [
+					{
+						"term": {
+							"size_gender": "kids"
+						}
+					},
+					{
+						"term": {
+							"size_gender": "youth"
+						}
+					},
+					{
+						"term": {
+							"size_gender": "toddler"
+						}
+					},
+					{
+						"term": {
+							"size_gender": "infant"
+						}
+					}
+				]
 			},
 			"options": {
 				"base_price": {
