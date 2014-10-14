@@ -425,6 +425,8 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 .checkoutFormContainer fieldset .panelContent {padding:1em;}
 .chkLoginCont {width:70%; margin:0 auto;}
 /*.checkoutFormContainer [data-app-role='loginPasswordContainer'] {height:0; overflow:hidden;}*/
+.paycon.PAYPALEC, .paycon.CREDIT {height:16px; width:76px; display:block; float:left; margin:3px 10px 0 0; background:url(images/sprite_500x500.png) -377px -47px;}
+.paycon.CREDIT {background-position:-373px -65px;}
 .checkoutFormContainer .summaryPriceAlign, .checkoutFormContainer .orderShipMethod {width:150px; display:inline-block;}
 
 
