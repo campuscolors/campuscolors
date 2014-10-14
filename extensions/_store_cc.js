@@ -929,6 +929,7 @@ var store_cc = function(_app) {
 				$input.val(args.defaultvalue || 0); 
 			},
 			
+	//ACTION FOR THIS FUNCTION MOVED INTO buildThisQty, CAN BE REMOVED ONCE CONFIRMED IT'S NO LONGER NEEDED.
 			getitwhileitlasts : function(data, thisTLC) {
 				var $tag = data.globals.tags[data.globals.focusTag];
 				var prod = data.globals.binds.var;
@@ -1816,7 +1817,8 @@ var store_cc = function(_app) {
 				$('[data-reset-form]',$form).trigger('click');
 			},
 			
-			//called on click of size variation. gets inventory available for the specific size and rebuilds the select list w/ that many options.
+			//called on click of size variation. gets inventory available for the specific size and rebuilds the select list w/ that many options. 
+			//Also populates ORDER SOON if option has less than 10 items (formerly getitwhileitlasts)
 			buildThisQty : function($ele,p) {
 				p.preventDefault();
 				dump('START buildThisQty');
@@ -1828,8 +1830,12 @@ var store_cc = function(_app) {
 				var $form = $ele.closest("form");
 				var $select = $("[data-select='qty']",$form);
 				var $input = $("input[name=qty]",$form);
-				var $defaultOption = $("<option value='1' selected='selected'>1</option>");
 				
+				//make the default option ('1' if there is available inventory, '-' if there are zero)
+				if(max != 0) {	var $defaultOption = $("<option value='1' selected='selected'>1</option>"); }
+				else { var $defaultOption = $("<option value='0' selected='selected'>-</option>"); }
+				
+				//clear the select to prevent ghosts, add the default option, then add additional options in inventory dictates.
 				$select.empty().off("click");
 				$defaultOption.appendTo($select);
 				$select.attr("data-option-selected",variation);
@@ -1846,6 +1852,28 @@ var store_cc = function(_app) {
 					$input.val(selected);				//now the default input has the select value and can still be used for handleaddtocart.
 				});
 				
+				//show order soon if this option's available inventory is less than 10
+				if(max < 10 && max != 0) {
+					$(".addtocartbutton",$form).addClass("orderSoon").attr("type","submit").css({'opacity':1,'cursor':'pointer'});
+					$(".leftInStock",$form).empty().text("Only "+max+" In Stock");
+					$("[data-order-soon='1']",$form).show().animate({'height':'50px','margin':'0 0 15px 0'});		
+					$(".ui-widget-anymessage",$form).hide();
+				}
+				//hide order soon if no inventory (shouldn't get here, but who knows)
+				else if(max == 0) {
+					//shouldn't be zero, but just in case:
+					$("[data-order-soon='1']",$form).animate({'height':0,'margin':0});
+					$(".addtocartbutton",$form).attr("type","disabled").css({'opacity':0.3,'cursor':'not-allowed'});
+					$form.anymessage({"message":"We are sorry,<br> it appears as though this size has sold out!<br> Please select another."});
+				}
+				//hide order soon there is plenty of inventory available for this size
+				else { 
+					//"There were more than enough to go around, no need for alarm, but make sure the last size's order now option isn't showing still.
+					$("[data-order-soon='1']",$form).animate({'height':0,'margin':0}).hide();
+					$(".addtocartbutton",$form).attr("type","submit").css({'opacity':1,'cursor':'pointer'});
+					$(".ui-widget-anymessage",$form).hide();
+				}
+
 				return false;
 			}
 		

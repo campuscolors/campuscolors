@@ -2061,13 +2061,13 @@ this will likely become more flexible in the future. ###
 					<h5 data-tlc="bind $var '.%attribs.zoovy:prod_mfgid';  if (is $var --notblank;) {{format --prepend='Mfg ID: '; apply --append;}};"></h5>
 				</div>
 
-				<form data-tlc="bind $var '.pid'; store_product#atcform  --legacy; apply --append;" class="prodViewerAddToCartForm clearfix marginBottom" action="#" data-app-submit="quickstart|productAdd2Cart"> <!-- to show cart inline add: data-show="inline" -->
+				<form data-tlc="bind $var '.pid'; store_product#atcform  --legacy; apply --append;" class="prodViewerAddToCartForm clearfix" action="#" data-app-submit="quickstart|productAdd2Cart"> <!-- to show cart inline add: data-show="inline" -->
 					<fieldset data-tlc="bind $var '.pid'; store_product#atcvariations  --legacy; apply --append;" class="borderNone inLine variationsWrapper"></fieldset>
 					<!-- <fieldset data-tlc="bind $var '.'; store_product#atcquantityinput  - -defaultvalue='1' - -legacy;" class="borderNone inLine"></fieldset> -->
 					<div class='qtyATCWraper'>
 						<fieldset data-tlc="bind $var '.'; store_cc#atcquantityinput  --defaultvalue='1';" class="borderNone floatLeft"></fieldset>
 						<input data-tlc="bind $var '.pid'; store_product#addtocartbutton  --legacy;" value="Add to Cart" class="applyButton addtocartbutton avant displayNone floatRight" type="submit">
-						<div data-tlc="bind $var '.'; store_cc#getitwhileitlasts;" class="displayNone center clear marginTop">
+						<div class="center clear marginTop orderSoon" data-order-soon="1">
 							<h3>ORDER SOON!</h3>
 							<span class="leftInStock"></span>
 						</div>

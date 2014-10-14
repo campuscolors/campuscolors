@@ -306,6 +306,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 .variation_SZ .label_select {display:none;}
 .sizeOption, .qtySelect {color:#ffffff; background-color:#781c2b; padding:10px; text-align:center; font-weight:bold; margin:5px;}
 .sizeOption.selectedSize {color:#781c2b; background-color:#ffffff; border:1px solid #781c2b; margin:4px;}
+.prodViewerAddToCartForm {margin:0}
 .prodViewerAddToCartForm .inLine {display:inline;}
 .prodViewerAddToCartForm .variationsWrapper {padding:0 15px;}
 .qtyATCWraper {width:90%; margin:0 auto;}
@@ -313,8 +314,9 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 .selectWrapper .sprite {height:40px; width:20px; position:absolute; top:10px; right:5px; background-position:0 0;}
 .qtySelect {height:35px; min-width:74px; margin:10px 5px; padding:6px 2px; color:#781c2b; display:inline-block; background:url("images/sprite_500x500.png") no-repeat scroll 25px -463px #ffffff; border:1px solid #781c2b; text-align:left;}
 .prodViewerAddToCartForm .numberInput {height:40px; border:1px inset #000000; text-align:center;}
-.productPage .addtocartbutton {height:50px; width:290px; color:#000000; font-size:2.1em; border-top:2px outset #fbe143; border-right:2px outset #000000; border-bottom:2px outset #000000; border-left:2px outset #fbe143; box-shadow:2px 2px 0 0 #cccccc; border-radius:0;}
+.productPage .addtocartbutton {height:50px; width:250px; color:#000000; font-size:2.1em; border-top:2px outset #fbe143; border-right:2px outset #000000; border-bottom:2px outset #000000; border-left:2px outset #fbe143; box-shadow:2px 2px 0 0 #cccccc; border-radius:0;}
 .productPage .addtocartbutton.orderSoon {width:170px; font-size:1.9em;}
+[data-order-soon='1'] {height:0; overflow:hidden;}
 .latency {width: 290px; margin:10px auto; color:#194835; font-size:1.2em; background-color:#eeeeee; border:2px solid #cccccc; box-shadow:2px 2px 0 0 #cccccc; padding: 13px 0 0 0;}
 .latency .sprite {height:12px; width:16px; background-position:-351px -117px; display:inline-block;}
 .latency.open .sprite {background-position:-351px -131px;}
