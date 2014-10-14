@@ -332,17 +332,17 @@ the defaultVar on prodName & image is for promotions, which have a 'description'
 
 <section id="chkoutCartSummaryTemplate">
 	
-	<div data-tlc="bind $var '.sum.items_total'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='Subtotal: '; apply --add --class='orderSubtotal'; apply --append;}};"></div>
-	<div data-tlc="bind $var '.sum.tax_total'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='Tax: '; apply --add --class='orderTax'; apply --append;}};"></div>
+	<div data-tlc="bind $var '.sum.items_total'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='<span class=&quot;summaryPriceAlign&quot;>Subtotal: </span>'; apply --add --class='orderSubtotal'; apply --append;}};"></div>
+	<div data-tlc="bind $var '.sum.tax_total'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='<span class=&quot;summaryPriceAlign&quot;>Tax: </span>'; apply --add --class='orderTax'; apply --append;}};"></div>
 	<div data-tlc="bind $var '.'; cco#shipinfobyid  --legacy;" data-legacy-useparentdata="true" class="orderShipping"></div>
-	<div data-tlc="bind $var '.sum.hnd_total'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='Handling: '; apply --add --class='hndTotal'; apply --append;}};"></div>
-	<div data-tlc="bind $var '.sum.order_total'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='Order Total: '; apply --add --class='orderTotal'; apply --append;}};"></div>
-	<div data-tlc="bind $var '.sum.gfc_total'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='Giftcard(s): '; apply --add --class='orderGiftcardTotal'; apply --append;}};"></div>
-	<div data-tlc="bind $var '.sum.pnt_total'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='Reward Points: '; apply --add --class='rewardPointsTotal'; apply --append;}};"></div>
-	<div data-tlc="bind $var '.sum.rmc_total'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='Returns Credit: '; apply --add --class='returnsCreditTotal'; apply --append;}};"></div>
-	<div data-tlc="bind $var '.sum.spc_total'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='Specialty: '; apply --add --class='spcTotal'; apply --append;}};"></div>
+	<div data-tlc="bind $var '.sum.hnd_total'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='<span class=&quot;summaryPriceAlign&quot;>Handling: </span>'; apply --add --class='hndTotal'; apply --append;}};"></div>
+	<div data-tlc="bind $var '.sum.order_total'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='<span class=&quot;summaryPriceAlign&quot;>Order Total: </span>'; apply --add --class='orderTotal'; apply --append;}};"></div>
+	<div data-tlc="bind $var '.sum.gfc_total'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='<span class=&quot;summaryPriceAlign&quot;>Giftcard(s): </span>'; apply --add --class='orderGiftcardTotal'; apply --append;}};"></div>
+	<div data-tlc="bind $var '.sum.pnt_total'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='<span class=&quot;summaryPriceAlign&quot;>Reward Points: </span>'; apply --add --class='rewardPointsTotal'; apply --append;}};"></div>
+	<div data-tlc="bind $var '.sum.rmc_total'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='<span class=&quot;summaryPriceAlign&quot;>Returns Credit: </span>'; apply --add --class='returnsCreditTotal'; apply --append;}};"></div>
+	<div data-tlc="bind $var '.sum.spc_total'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='<span class=&quot;summaryPriceAlign&quot;>Specialty: </span>'; apply --add --class='spcTotal'; apply --append;}};"></div>
 
-	<div data-tlc="bind $var '.sum.balance_due_total'; cco#orderbalance  --classname='orderBalanceDue' --hidezero='false' --currencysign='$' --legacy;"></div>
+	<div data-tlc="bind $var '.sum.balance_due_total'; cco#orderbalance  --classname='orderBalanceDue' --hidezero='false' --currencysign='$' --legacy;" data-checkout="1"></div>
 
 	<div class="couponEntryContainer clearfix marginBottom" data-app-role="couponContainer">
 		<label for="coupon">Coupon/Promo Code:</label>

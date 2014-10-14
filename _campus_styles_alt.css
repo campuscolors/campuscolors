@@ -425,6 +425,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 .checkoutFormContainer fieldset .panelContent {padding:1em;}
 .chkLoginCont {width:70%; margin:0 auto;}
 /*.checkoutFormContainer [data-app-role='loginPasswordContainer'] {height:0; overflow:hidden;}*/
+.checkoutFormContainer .summaryPriceAlign, .checkoutFormContainer .orderShipMethod {width:150px; display:inline-block;}
 
 
 

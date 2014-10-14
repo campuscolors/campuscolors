@@ -1277,13 +1277,21 @@ in a reorder, that data needs to be converted to the variations format required 
 //if the total is less than 0, just show 0 instead of a negative amount. zero is handled here too, just to avoid a formatMoney call.
 //if the first character is a dash, it's a negative amount.  JS didn't like amount *1 (returned NAN)
 					if(amount * 1 <= 0){
-						o += data.bindData.currencySign ? data.bindData.currencySign : '$';
+						o += data.bindData.currencysign ? data.bindData.currencysign : '$';
 						o += '0.00';
 						}
 					else	{
-						o += _app.u.formatMoney(amount,data.bindData.currencySign,'',data.bindData.hideZero);
+						o += _app.u.formatMoney(amount,data.bindData.currencysign,'',data.bindData.hideZero);
 						}
-					$tag.text("Balance due: "+o);  //update DOM.
+/*campus*/	if($tag.data("checkout")) {
+/*campus*/		var $span = $("<span class='summaryPriceAlign'></span");
+/*campus*/		$span.text("Balance due: ");
+/*campus*/		$tag.append($span);
+/*campus*/		$tag.append(o);
+/*campus*/		}
+/*campus*/	else {
+						$tag.text("Balance due: "+o);  //update DOM.
+/*campus*/	}
 					}
 				}, //orderBalance
 
@@ -1301,7 +1309,7 @@ in a reorder, that data needs to be converted to the variations format required 
 							o = "<span class='orderShipMethod'>"+(shipMethods[i]['pretty'] ? shipMethods[i]['pretty'] : shipMethods[i]['name'])+": <\/span>";
 	//only show amount if not blank.
 							if(shipMethods[i].amount)	{
-								o += "<span class='orderShipAmount'>"+_app.u.formatMoney(shipMethods[i].amount,' $',2,false)+"<\/span>";
+/*campus*/				o += "<span class='orderShipAmount'>"+_app.u.formatMoney(shipMethods[i].amount,'$',2,false)+"<\/span>";
 								}
 							break; //once we hit a match, no need to continue. at this time, only one ship method/price is available.
 							}
