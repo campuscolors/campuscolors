@@ -1622,7 +1622,7 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 		</div>
 	-->	
 		<div data-tlc="bind $var '.options.user:size_gender'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
-			<div data-tlc="store_cc#showmobilefilter;" data-filterview='1' data-top='0' class="filterGroupTitle greyGradient">Gender<span class="sprite"></span></div>
+			<div data-tlc="store_cc#showmobilefilter;" data-filterview='1' data-top='0' class="filterGroupTitle greyGradient">Shop By<span class="sprite"></span></div>
 			<div class="filterHider">
 				<div class="filterCheckboxList" 
 					data-tlc="bind $index '.options.user:size_gender.index';
@@ -1631,17 +1631,18 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 				</div>
 			</div>
 		</div>
-		
-		<div data-tlc="bind $var '.options.user:size_code'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
+<!-- TODO : ATTRIB BASED SIZE NOT ALLOWING FOR DISPLAY OF ALL SIZE VARIATIONS REPLACE WHEN SIZES CAN BE OBTAINED
+		<div data-tlc="bind $var '.options.user:size_code'; if(is $var - -blank){{apply - -hide;}};" class="filterGroup marginBottom">
 			<div data-tlc="store_cc#showmobilefilter;" data-filterview='1' data-top='0' class="filterGroupTitle greyGradient">Size<span class="sprite"></span></div>
 			<div class="filterHider">
 				<div class="filterCheckboxList" 
 					data-tlc="bind $index '.options.user:size_code.index';
 						bind $cbl '.options.user:size_code.options'; 
-						store_filter#filtercheckboxlist --index=$index;">
+						store_filter#filtercheckboxlist - -index=$index;">
 				</div>
 			</div>
 		</div>
+-->
 <!-- DIDN'T WANT TO USE SLIDER		
 		<div data-tlc="bind $var '.options.base_price'; if(is $var - -blank;){{apply - -tag - -remove;}};" class="filterGroup priceFilter marginBottom">
 			<div data-tlc="store_cc#showmobilefilter;" data-filterview='0' data-top='0' class="filterGroupTitle greyGradient">Price<span class="sprite"></span></div>
