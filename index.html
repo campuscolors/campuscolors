@@ -118,7 +118,7 @@ $(document).ready(function(){
 	if(!paramStr || paramStr.indexOf('_escaped_fragment_') < 0){
 		window.myApp = new initApp({
 			"_robotHasGreeted" : false, <!-- versionhere -->
-			"release":"201408.20141013135900",  //increment this  with each change. should solve caching issues. format: YYYYMMDDHHMMSS
+			"release":"201408.20141013175000",  //increment this  with each change. should solve caching issues. format: YYYYMMDDHHMMSS
 			"_clientid":"zmvc", //zmvc for store app, 1pc for one page checkout.
 			"baseURL":baseURL, //used in non-local mode.
 			"checkoutAuthMode" : "active",//can be passive, active or required
@@ -3086,7 +3086,7 @@ subscribeListsArticle is used for authenticated buyers.
 					<input name="pass2" type="password" size="12" placeholder="Confirm Password" required="required" class="zform_textbox" />
 					<!--<div class="passwordInput"><b>Password</b><input name="password" size="30" placeholder="Password" required /></div>-->
 					<div onclick="myApp.ext.store_cc.a.togglerecover($(this));" class="center">
-						<span class="uRedLink pointer">Click here</span> to enter more info. and save time later.
+						<span class="uRedLink pointer">Click here</span> to enter more information and save time later.
 					</div>
 					<div data-slide="toggle">
 						<input name="address1" type="text" size="30" value="" placeholder="Address" class="zform_textbox" /> 
