@@ -17,22 +17,38 @@ item list and summary are separate just to give more control over location.
 <!-- define panel order -->
 	
 	<fieldset>
-		<div class="floatLeft ccButton marginBottom">Sign In</div> <!--campus-->
-		<div class="floatLeft existingPrompt marginBottom">Existing customers sign in for faster checkout</div> <!--campus-->
+		<div data-tlc="bind $var '.'; store_cc#toggleguestcheckout;" data-checkout-type="user">
+			<div class="floatLeft ccButton marginBottom" data-checkout-type="button">Sign In</div> <!--campus-->
+			<div class="floatLeft existingPrompt marginBottom">Existing customers sign in for faster checkout.</div> <!--campus-->
+		</div>
+		<div data-tlc="bind $var '.'; store_cc#toggleguestcheckout;" data-checkout-type="guest" class="displayNone">
+			<div class="floatLeft ccButton marginBottom" data-checkout-type="button">Guest Checkout</div> <!--campus-->
+			<div class="floatLeft existingPrompt marginBottom">Checkout as a Guest.</div> <!--campus-->
+		</div>
 	</fieldset>
 		
 	<fieldset data-app-role="chkoutPreflight" class="marginBottom">
 		<legend class="headerPadding"><span>1. </span>CONTACT INFO</legend> <!--campus-->
-		<div data-tlc="bind $var '.'; transmogrify --dataset=$var --templateid='chkoutPreflightTemplate'; apply --append;" data-legacy-useparentdata="true" class="panelContent"></div>
+		<div data-tlc="bind $var '.'; transmogrify --dataset=$var --templateid='chkoutPreflightTemplate'; apply --append;" data-checkout-as="orig" data-legacy-useparentdata="true" class="panelContent"></div>
+		<!-- <div data-checkout-as="user" class="panelContent"></div> -->
+		<div data-app-role="buyerLogout" class="displayNone pointer" data-app-click="order_create|buyerLogout">
+			Not you? <span class="lookLikeLink zlink">click here</span>.
+		</div>
+		
+	</fieldset>
+<!-- ORIG FIELDSET	
+	<fieldset data-app-role="chkoutPreflight" data-checkout-as="user" class="marginBottom">
+		<legend class="headerPadding"><span>1. </span>CONTACT INFO</legend> --> <!--campus-->
+<!--		<div data-tlc="bind $var '.'; transmogrify --dataset=$var --templateid='chkoutPreflightTemplate'; apply --append;" data-legacy-useparentdata="true" class="panelContent"></div>
 		<div data-app-role="buyerLogout" class="displayNone pointer" data-app-click="order_create|buyerLogout">
 			Not you? <span class="lookLikeLink zlink">click here</span>.
 		</div>
 	</fieldset>
-
+-->
 
 
 	<fieldset data-app-role="chkoutAccountCreate" class="displayNone marginBottom">
-		<legend class="headerPadding">Account Creation</legend>
+		<legend class="headerPadding"><span>1a. </span>Account Creation</legend>
 		<div data-tlc="bind $var '.'; transmogrify --dataset=$var --templateid='chkoutAccountCreateTemplate'; apply --append;" class="panelContent"></div>
 	</fieldset>
 
@@ -113,7 +129,6 @@ item list and summary are separate just to give more control over location.
 
 
 <section id="chkoutPreflightTemplate">
-
 	<h4 data-tlc="bind $var '.bill.email'; if(is $var --blank;) {{bind $var '.customer.login'; }}; if (is $var --notblank;) {{apply --append;}};" class="displayNone" data-app-role="username"></h4>
 	
 	<div data-app-role="login">
@@ -126,7 +141,19 @@ item list and summary are separate just to give more control over location.
 			<label class="accountCreateContainer"><input name="want/create_customer" data-app-change="order_create|tagAsAccountCreate" type="checkbox" >Create account&#63;</label> <!--campus-->
 		</div>
 	</div>
+	<label class="displayNone"><input name="want/sign_in" checked=true type="checkbox" data-app-change="store_cc|tagAsSignIn" class="">Be a guest</label> <!--campus-->
+</section>
 
+<section id="chkoutPreflightTemplateGuest">
+	<h4 data-tlc="bind $var '.bill.email'; if(is $var --blank;) {{bind $var '.customer.login'; }}; if (is $var --notblank;) {{apply --append;}};" class="displayNone" data-app-role="username"></h4>
+	
+	<div data-app-role="login">
+		<div class='marginBottom chkLoginCont'> <!--campus-->
+			<input data-tlc="bind $var '.bill.email'; if(is $var --blank;) {{bind $var '.customer.login'; }}; if(is $var --notblank;) {{apply --select=$var;}}; " required name="bill/email" size="30" placeholder="email address" data-app-blur="order_create|execBuyerEmailUpdate" type="email"><label>For order confirmation and tracking info</label><br> <!--campus-->
+			<label class="accountCreateContainer"><input name="want/create_customer" data-app-change="order_create|tagAsAccountCreate" type="checkbox" >Create account&#63;</label> <!--campus-->
+		</div>
+	</div>
+	<div data-app-click="store_cc|goToUserPreflight"></div>
 </section>
 
 

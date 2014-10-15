@@ -21,6 +21,7 @@ var order_create = function(_app) {
 	var theseTemplates = new Array(
 	'checkoutTemplate', //container for whole checkout page.
 	'chkoutPreflightTemplate',
+	'chkoutPreflightTemplateGuest',
 	'chkoutCartContentsTemplate', //cart contents
 	'chkoutCartItemTemplate', //cart contents list item template
 	'chkoutCartSummaryTemplate', //panel for order summary (subtotal, shipping, etc)
@@ -596,6 +597,7 @@ payment options, pricing, etc
 //				_app.u.dump("BEGIN order_create.panelDisplayLogic.chkoutPreflight");
 //If the user is logged in, no sense showing password or create account prompts.
 				$("[data-app-role='buyerLogout']").hide(); //make sure this is hidden. Will be shown when necessary.
+				dump('handlePanelContent formObj'); dump(formObj); 
 				if(_app.u.buyerIsAuthenticated() || _app.ext.cco.u.thisSessionIsPayPal())	{
 					_app.u.dump(" -> session is authenticated OR this is an authorized paypal transaction.");
 					$("[data-app-role='login']",$fieldset).hide();
@@ -611,6 +613,10 @@ payment options, pricing, etc
 					$("[data-app-role='username']",$fieldset).hide();
 					$("[data-app-role='loginPasswordContainer']",$fieldset).hide();
 					}
+//campus   //hides password container to indicate guest or user checkout to customer						
+/*campus*/else if(formObj['want/sign_in'] == 'on') {
+/*campus*/	$("[data-app-role='loginPasswordContainer']",$fieldset).hide();
+				}
 				else	{
 					$("[data-app-role='login']",$fieldset).show();
 					$("[data-app-role='username']",$fieldset).hide();

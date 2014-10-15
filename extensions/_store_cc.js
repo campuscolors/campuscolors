@@ -1175,21 +1175,18 @@ var store_cc = function(_app) {
 			searchbytag : function(data,thisTLC) {
 				var path = data.globals.binds.var;
 				$.getJSON("filters/search/"+path+".json?_v="+(new Date()).getTime(), function(json){
-								dump('THE SEARCH JSON IS...'); dump(json);
-								
-								
-								
-								var dataset = $.extend(true, {}, $.grep(json.pages,function(e,i){
-									return e.id == b;
-								})[0]);
-			//					dump('GREP IS: '); dump(dataset);
-								dataset.breadcrumb = [routeObj.pagefilter,routeObj.params.id]
-								showContent('static',{'templateid':'splashPageTemplate','id':routeObj.params.id,'dataset':dataset});
-							})
-							.fail(function() {
-								dump('FILTER DATA FOR ' + a + 'COULD NOT BE LOADED.');
-								showContent('404');
-							});
+					dump('THE SEARCH JSON IS...'); dump(json);
+					var dataset = $.extend(true, {}, $.grep(json.pages,function(e,i){
+						return e.id == b;
+					})[0]);
+//					dump('GREP IS: '); dump(dataset);
+					dataset.breadcrumb = [routeObj.pagefilter,routeObj.params.id]
+					showContent('static',{'templateid':'splashPageTemplate','id':routeObj.params.id,'dataset':dataset});
+				})
+				.fail(function() {
+					dump('FILTER DATA FOR ' + a + 'COULD NOT BE LOADED.');
+					showContent('404');
+				});
 /*
 				var argObj = thisTLC.args2obj(data.command.args,data.globals); //this creates an object of the args
 					//check if there is a $var value to replace in the filter object (THERE IS PROBABLY A BETTER WAY TO DO THIS)
@@ -1200,7 +1197,58 @@ var store_cc = function(_app) {
 				_app.ext.store_search.calls.appPublicProductSearch.init(query,$.extend({'datapointer':'appPublicSearch|tag|'+argObj.tag,'templateID':argObj.templateid,'extension':'store_search','callback':'handleElasticResults','list':data.globals.tags[data.globals.focusTag]},argObj));
 				_app.model.dispatchThis('mutable');
 				return false; //in this case, we're off to do an ajax request. so we don't continue the statement.
-		*/	}
+		*/	},
+		
+			toggleguestcheckout : function(data,thisTLC) {
+		//		var thisData = data.globals.binds.var;
+				var $tag = data.globals.tags[data.globals.focusTag];
+				var $button = $("[data-checkout-type='button']",$tag);
+				var $form = $tag.closest('form');
+				
+				switch($tag.data("checkout-type")) {
+					case "guest" :
+				//		var $target = $("[data-checkout-as='guest']",$form);
+						$button.off('click').on('click',function() {
+							dump('toggleguestcheckout guest was clicked'); //dump(thisData);
+							$("[data-checkout-type='guest']",$form).animate({"opacity":0},function(){
+								$(this).hide()
+								$("[data-checkout-type='user']",$form).show().animate({"opacity":1});
+							});
+							$('input[name="want/sign_in"]',$form).trigger("click");
+							_app.ext.order_create.u.handlePanel($form,'chkoutPreflight',['handleDisplayLogic']);
+				//			$("[data-app-click='store_cc|goToGuestPreflight']").trigger("click");
+				//			$("[data-checkout-as='orig']",$form).remove();
+				//			//$target.empty();
+				//			$target.tlc({"dataset":thisData,"templateid":"chkoutPreflightTemplateGuest","verb":"transmogrify"});
+				//			$target.attr("data-checkout-as","orig");
+				//			$target.after($("<div data-checkout-as='user' class='panelContent'></div>"));
+						});
+						break;
+					case "user" :
+				//		var $target = $("[data-checkout-as='user']",$form);
+						$tag.off('click').on('click',function() {
+							dump('toggleguestcheckout user was clicked'); //dump(thisData);
+							$("[data-checkout-type='user']",$form).animate({"opacity":0},function(){
+								$(this).hide()
+								$("[data-checkout-type='guest']",$form).show().animate({"opacity":1});
+							});
+							$('input[name="want/sign_in"]',$form).trigger("click");
+				//			$("[data-app-click='store_cc|goToUserPreflight']").trigger("click");
+				//			$("[data-checkout-as='orig']",$form).remove();
+				//			//$target.empty();
+				//			$target.tlc({"dataset":thisData,"templateid":"chkoutPreflightTemplate","verb":"transmogrify"});
+				//			$target.attr("data-checkout-as","orig");
+				//			$target.after($("<div data-checkout-as='guest' class='panelContent'></div>"));
+						});
+					break;
+					default :
+					dump("Translation element could not be determined in store_cc toggleguestcheckout"); 
+				}
+				
+				
+			//	$fl.tlc({'dataset':data.value, 'templateid':'filterListTemplate'});
+			// $p.tlc({'verb':'translate','dataset':prods[i]["_source"]});
+			}
 			
 		}, //tlcFormats
 		
@@ -1874,6 +1922,47 @@ var store_cc = function(_app) {
 					$(".ui-widget-anymessage",$form).hide();
 				}
 
+				return false;
+			},
+			
+			goToUserPreflight : function($ele,p) {
+				p.preventDefault();
+				dump('goToUserPreflight was clicked');
+				var $context = $ele.closest("[data-app-role=chkoutPreflight]");
+				var $panelContent = $(".panelContent",$context);
+				$panelContent.attr("data-tlc", "bind $var '.'; transmogrify --dataset=$var --templateid='chkoutPreflightTemplate'; apply --append;");
+				$panelContent.attr("data-legacy-useparentdata",true);
+				
+				_app.ext.order_create.u.handlePanel($context, "chkoutPreflight",["empty","translate","handleDisplayLogic"]);
+				
+				return false;
+			},
+			
+			//toggles password field to indicate guest checkout (w/ no sign in) or user checkout (signed in) state to user. 
+			//Is on a checkbox that is triggered w/ buttons above the actual template
+			//most of this stolen from order_create|tagAsAccountCreate
+			tagAsSignIn : function($ele,p)	{
+				p.preventDefault();
+				var $checkout = $ele.closest("[data-app-role='checkout']");
+				_app.ext.cco.calls.cartSet.init({'_cartid':$checkout.data('cartid'),'want/sign_in': $ele.is(':checked') ? 1 : 0}); //val of a cb is on or off, but we want 1 or 0.
+				_app.model.destroy('cartDetail|'+$checkout.data('cartid'));
+				_app.ext.order_create.u.handlePanel($ele.closest('form'),'chkoutPreflight',['handleDisplayLogic']);
+				_app.calls.cartDetail.init($checkout.data('cartid'));
+				_app.model.dispatchThis('immutable');
+				return false;
+			}, //tagAsSignIn
+			
+			
+			goToGuestPreflight : function($ele,p) {
+				p.preventDefault();
+				dump('goToUserPreflight was clicked');
+				var $context = $ele.closest("[data-app-role=chkoutPreflight]");
+				var $panelContent = $(".panelContent",$context);
+				$panelContent.attr("data-tlc", "bind $var '.'; transmogrify --dataset=$var --templateid='chkoutPreflightTemplateGuest'; apply --append;");
+				$panelContent.attr("data-legacy-useparentdata",true);
+				
+				_app.ext.order_create.u.handlePanel($context, "chkoutPreflight",["empty","translate","handleDisplayLogic"]);
+				
 				return false;
 			}
 		
