@@ -1200,14 +1200,12 @@ var store_cc = function(_app) {
 		*/	},
 		
 			toggleguestcheckout : function(data,thisTLC) {
-		//		var thisData = data.globals.binds.var;
 				var $tag = data.globals.tags[data.globals.focusTag];
 				var $button = $("[data-checkout-type='button']",$tag);
 				var $form = $tag.closest('form');
 				
 				switch($tag.data("checkout-type")) {
 					case "guest" :
-				//		var $target = $("[data-checkout-as='guest']",$form);
 						$button.off('click').on('click',function() {
 							dump('toggleguestcheckout guest was clicked'); //dump(thisData);
 							$("[data-checkout-type='guest']",$form).animate({"opacity":0},function(){
@@ -1216,16 +1214,9 @@ var store_cc = function(_app) {
 							});
 							$('input[name="want/sign_in"]',$form).trigger("click");
 							_app.ext.order_create.u.handlePanel($form,'chkoutPreflight',['handleDisplayLogic']);
-				//			$("[data-app-click='store_cc|goToGuestPreflight']").trigger("click");
-				//			$("[data-checkout-as='orig']",$form).remove();
-				//			//$target.empty();
-				//			$target.tlc({"dataset":thisData,"templateid":"chkoutPreflightTemplateGuest","verb":"transmogrify"});
-				//			$target.attr("data-checkout-as","orig");
-				//			$target.after($("<div data-checkout-as='user' class='panelContent'></div>"));
 						});
 						break;
 					case "user" :
-				//		var $target = $("[data-checkout-as='user']",$form);
 						$tag.off('click').on('click',function() {
 							dump('toggleguestcheckout user was clicked'); //dump(thisData);
 							$("[data-checkout-type='user']",$form).animate({"opacity":0},function(){
@@ -1233,16 +1224,10 @@ var store_cc = function(_app) {
 								$("[data-checkout-type='guest']",$form).show().animate({"opacity":1});
 							});
 							$('input[name="want/sign_in"]',$form).trigger("click");
-				//			$("[data-app-click='store_cc|goToUserPreflight']").trigger("click");
-				//			$("[data-checkout-as='orig']",$form).remove();
-				//			//$target.empty();
-				//			$target.tlc({"dataset":thisData,"templateid":"chkoutPreflightTemplate","verb":"transmogrify"});
-				//			$target.attr("data-checkout-as","orig");
-				//			$target.after($("<div data-checkout-as='guest' class='panelContent'></div>"));
 						});
 					break;
 					default :
-					dump("Translation element could not be determined in store_cc toggleguestcheckout"); 
+					dump("Translation type could not be determined in store_cc toggleguestcheckout"); 
 				}
 				
 				
@@ -1925,19 +1910,6 @@ var store_cc = function(_app) {
 				return false;
 			},
 			
-			goToUserPreflight : function($ele,p) {
-				p.preventDefault();
-				dump('goToUserPreflight was clicked');
-				var $context = $ele.closest("[data-app-role=chkoutPreflight]");
-				var $panelContent = $(".panelContent",$context);
-				$panelContent.attr("data-tlc", "bind $var '.'; transmogrify --dataset=$var --templateid='chkoutPreflightTemplate'; apply --append;");
-				$panelContent.attr("data-legacy-useparentdata",true);
-				
-				_app.ext.order_create.u.handlePanel($context, "chkoutPreflight",["empty","translate","handleDisplayLogic"]);
-				
-				return false;
-			},
-			
 			//toggles password field to indicate guest checkout (w/ no sign in) or user checkout (signed in) state to user. 
 			//Is on a checkbox that is triggered w/ buttons above the actual template
 			//most of this stolen from order_create|tagAsAccountCreate
@@ -1950,21 +1922,8 @@ var store_cc = function(_app) {
 				_app.calls.cartDetail.init($checkout.data('cartid'));
 				_app.model.dispatchThis('immutable');
 				return false;
-			}, //tagAsSignIn
-			
-			
-			goToGuestPreflight : function($ele,p) {
-				p.preventDefault();
-				dump('goToUserPreflight was clicked');
-				var $context = $ele.closest("[data-app-role=chkoutPreflight]");
-				var $panelContent = $(".panelContent",$context);
-				$panelContent.attr("data-tlc", "bind $var '.'; transmogrify --dataset=$var --templateid='chkoutPreflightTemplateGuest'; apply --append;");
-				$panelContent.attr("data-legacy-useparentdata",true);
-				
-				_app.ext.order_create.u.handlePanel($context, "chkoutPreflight",["empty","translate","handleDisplayLogic"]);
-				
-				return false;
-			}
+			} //tagAsSignIn
+
 		
 		}, //e [app Events]
 		
