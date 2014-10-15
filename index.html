@@ -1844,8 +1844,9 @@ don't modify the 'data-templateid' unless you are changing template names and up
 Used for the product in a product list (prodlist), usually in the body of a category or the homepage.
 the loadingBG class is removed (must be that classname) when the template is translated.
 remember to NOT put the button inside the href or two events will occur onclick.
--->
 <li id="productListTemplate" class="loadingBG productListTemplate" onmouseover="$('.quickView',$(this)).addClass('showQuickview');" onmouseout="$('.quickView').removeClass('showQuickview');">
+-->
+<li id="productListTemplate" class="loadingBG productListTemplate">
 
 	<button class="floatRight pointer quickView displayNone ccButton" data-app-click="quickstart|quickviewShow" data-loadstemplate="productTemplateQuickView">Quickview</button>
 	
@@ -1967,7 +1968,8 @@ SANITY -> if you change the height and width of this image, change the .minimalM
 	<!-- <a class="hideInMinimalMode pointer moreDetails" data-tlc="bind $seoname '.prod_name'; bind $var '.'; store_routing#seoanchor - -type='product' - -seo - -seoname=$seoname; apply - -attrib='href';">more details</a> -->
 </li>
 
-<li id="productListTemplateResultsNoPreview" class="loadingBG searchResultsProduct" onmouseover="$('.quickView',$(this)).addClass('showQuickview');" onmouseout="$('.quickView').removeClass('showQuickview');">
+<!-- <li id="productListTemplateResultsNoPreview" class="loadingBG searchResultsProduct" onmouseover="$('.quickView',$(this)).addClass('showQuickview');" onmouseout="$('.quickView').removeClass('showQuickview');"> -->
+<li id="productListTemplateResultsNoPreview" class="loadingBG searchResultsProduct">
 	
 	<button class="floatRight pointer quickView ccButton" data-app-click="quickstart|quickviewShow" data-loadstemplate="productTemplateQuickView">Quickview</button>
 	
