@@ -398,7 +398,17 @@ var store_cc = function(_app) {
 			//		_app.ext.store_cc.u.pushFilter('soccer-team-apparel-merchandise');
 /*LEAF*/		_app.router.appendHash({'type':'match','route':'soccer-team-apparel-merchandise/{{id}}/{{end}}/','pagefilter':'soccer-team-apparel-merchandise','callback':'subfilter'});
 					_app.ext.store_cc.u.pushFilter('soccer-team-apparel-merchandise');
-//END TEAM BY LEAGUE APPENDS					
+//END TEAM BY LEAGUE APPENDS	
+
+//LEAGUE APPENDS
+/*ROOT*/		_app.router.appendHash({'type':'exact','route':'league-apparel-merchandise/','pagefilter':'league-apparel-merchandise','templateid':'splashPageRootTemplate','callback':function(routeObj){
+						_app.ext.store_cc.u.getCatJSON(routeObj);
+					}});
+/*SUB*/			_app.router.appendHash({'type':'match','route':'league-apparel-merchandise/{{id}}/','pagefilter':'league-apparel-merchandise','callback':'subcat'});
+			//		_app.ext.store_cc.u.pushFilter('soccer-team-apparel-merchandise');
+/*LEAF*/		_app.router.appendHash({'type':'match','route':'league-apparel-merchandise/{{id}}/{{end}}/','pagefilter':'league-apparel-merchandise','callback':'subfilter'});
+					_app.ext.store_cc.u.pushFilter('league-apparel-merchandise');
+					
 
 //BRANDS APPENDS					
 					_app.router.appendHash({'type':'exact','route':'brands-apparel-merchandise/','templateid':'splashPageTemplate','callback':function(routeObj){
@@ -766,7 +776,7 @@ var store_cc = function(_app) {
 				
 				addbotlinks : function(data,thisTLC) {
 					var hash = document.location.hash;
-					if(hash.indexOf("team") != -1) {
+					if(hash.indexOf("team") != -1 || hash.indexOf("league") != -1) {
 						var $tag = data.globals.tags[data.globals.focusTag];
 						var deezEnds = ["all","shorts","t-shirts","sweatshirts","jerseys","pants","hats","novelties-and-accessories"]
 						var hashArray = hash.split("/")
@@ -774,19 +784,19 @@ var store_cc = function(_app) {
 						var thisTeam = hashArray[hashArray.length-3];
 						var newHash = "";
 						
-						dump(deezEnds);
-						//no need to show a link to the current page on the current page, remove it's end from the array.
+//						dump('botlinks league deezEnds hashArray thisEnd thisTeam'); dump(deezEnds); dump(hashArray); dump(thisEnd); dump(thisTeam);
+ 						//no need to show a link to the current page on the current page, remove it's end from the array.
 						if($.inArray(thisEnd, deezEnds) >= 0) {
 							deezEnds.splice($.inArray(thisEnd, deezEnds),1);
 						}
-						dump(deezEnds);
+//						dump(deezEnds);
 						
 						for(var i = 0; i < hashArray.length-2; i++) {
 							newHash += hashArray[i] + "/";
 						}
 						for(var j = 0; j < deezEnds.length; j++) {
 							var $a = $("<a class='botLink'></a>");
-					dump(deezEnds[j]);
+//							dump(deezEnds[j]);
 							if(deezEnds[j] == "all") { $a.text(_app.ext.store_cc.u.uppercaseFirst(deezEnds[j]) + " " + _app.ext.store_cc.u.uppercaseFirst(thisTeam)); }
 							else if (deezEnds[j] == "novelties-and-accessories") { $a.text("Novelties & Accessories") }
 							else { $a.text(_app.ext.store_cc.u.uppercaseFirst(deezEnds[j])); }
@@ -796,7 +806,7 @@ var store_cc = function(_app) {
 						}
 						
 						
-						dump('new hash: '); dump(newHash);
+//						dump('new hash: '); dump(newHash);
 			/*			var team = hash[hash.length-3];
 						if(hash[hash.length-2] == "all") {
 							dump('this be d hash mon'); dump(hash);
