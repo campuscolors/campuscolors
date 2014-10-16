@@ -768,7 +768,7 @@ var store_cc = function(_app) {
 					var hash = document.location.hash;
 					if(hash.indexOf("team") != -1) {
 						var $tag = data.globals.tags[data.globals.focusTag];
-						var deezEnds = ["all","shorts","t-shirts","sweatshirts","jerseys","pants","hats","accessories"]
+						var deezEnds = ["all","shorts","t-shirts","sweatshirts","jerseys","pants","hats","novelties-and-accessories"]
 						var hashArray = hash.split("/")
 						var thisEnd = hashArray[hashArray.length-2];
 						var thisTeam = hashArray[hashArray.length-3];
@@ -786,7 +786,9 @@ var store_cc = function(_app) {
 						}
 						for(var j = 0; j < deezEnds.length; j++) {
 							var $a = $("<a class='botLink'></a>");
-							if(deezEnds[j] == "all") { $a.text(_app.ext.store_cc.u.uppercaseFirst(deezEnds[j]) + " " + thisTeam); }
+					dump(deezEnds[j]);
+							if(deezEnds[j] == "all") { $a.text(_app.ext.store_cc.u.uppercaseFirst(deezEnds[j]) + " " + _app.ext.store_cc.u.uppercaseFirst(thisTeam)); }
+							else if (deezEnds[j] == "novelties-and-accessories") { $a.text("Novelties & Accessories") }
 							else { $a.text(_app.ext.store_cc.u.uppercaseFirst(deezEnds[j])); }
 							var thishref = newHash + deezEnds[j]+"/";
 							$a.attr('href',thishref);

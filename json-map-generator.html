@@ -32,7 +32,7 @@
 			var multiSubCat = $('input[name=type]:checked',$form).val();
 			var raw = input.split('\n');
 			var pages = [];
-			var siteMapLinksOnly = true;		//condition used to generate links for the node sitemap
+			var siteMapLinksOnly = false;		//condition used to generate links for the node sitemap
 			var siteMapLinks = [];				//stores the links for the node sitemap
 			
 			
@@ -108,7 +108,8 @@
 //			console.log('this is m'); console.log(m);
 				var typeSubCat = {"baseFilter" : {"term" : {}},"options" : {"base_price" : {"min" : 0}}};
 				if(m > 0) { typeSubCat = {"baseFilter" : { "and" : [] },"options" : {"base_price" : {"min" : 0}}}; }
-				var thisLowerType = typeArray[m].toLowerCase();
+				//novelties cat has an '&' in it, we don't want that in the url
+				var thisLowerType = typeArray[m] == "Novelties & Accessories" ? typeArray[m].split(" & ").join("-and-").toLowerCase() : typeArray[m].toLowerCase();
 				var thisUpperType = typeArray[m];
 				var teamLong = attrib[0];																													//team_long attribute
 				var id = teamLong.toLowerCase().split(" ").join("-") + "-apparel-merchandise-"+thisLowerType + "/";	//the id for the page (must match appendHash)
@@ -132,7 +133,7 @@
 					case "jerseys" :  img = "products/images/chbh_3264a_rd"; break;
 					case "pants" : img = "products/images/duke_28734x_bk"; break;
 					case "hats" : img = "products/images/cal_17142x_nv"; break;
-					case "accessories" : img = "products/images/acc_33158_tc"; break;
+					case "novelties-and-accessories" : img = "products/images/acc_33158_tc"; break;
 				}
 				typeSubCat["img"] = img; //attrib[4];
 				typeSubCat["name"] = typeArray[m] == "All" ? teamLongUpper + " Apparel & Merchandise" : teamLongUpper + " Apparel & Merchandise " + thisUpperType;
@@ -143,7 +144,8 @@
 					baseFilterage.term[teamLeague] = teamCode;
 					typeSubCat.baseFilter.and.push(baseFilterage);
 					baseFilterage = {"term" : {}};
-					baseFilterage.term["website_filter"] = thisLowerType;
+					//need to add '&' back into novelties for filter to work
+					baseFilterage.term["website_filter"] = typeArray[m] == "Novelties & Accessories" ? "novelties & accessories" : thisLowerType;
 					typeSubCat.baseFilter.and.push(baseFilterage);
 				}
 				else { typeSubCat.baseFilter.term[teamLeague] = teamCode; } //the all category has no AND w/ another attrib
@@ -323,7 +325,7 @@
 			<input type="checkbox" value="Jerseys"/>Jerseys
 			<input type="checkbox" value="Pants"/>Pants
 			<input type="checkbox" value="Hats"/>Hats
-			<input type="checkbox" value="Accessories"/>Accessories
+			<input type="checkbox" value="Novelties & Accessories"/>Accessories
 		</div>
 		<button onClick="genJSON($('textarea[name=productList]',$(this).parent()).val(),$('#form')); return false;">Generazizate</input>
 	</div>
