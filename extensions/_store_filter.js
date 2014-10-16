@@ -294,8 +294,11 @@ var store_filter = function(_app) {
 				var filterBase = JSON.parse($form.attr('data-filter-base'));
 				var elasticsearch = {
 					"filter" : {
-						"and" : [filterBase]
-						},
+						"and" : [
+							filterBase,
+							{"has_child":{"type":"sku","query": {"range":{"available":{"gte":1}}}}}//, //only return item w/ inventory
+						]
+					},
 					"facets" : {}
 					}
 				$('[data-filter-type=sort]', $form).each(function(){
