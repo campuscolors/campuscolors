@@ -571,12 +571,13 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.standardNav .levelOne {width:115px;}
 	.headerMid {height:120px;}
 	.mobileSlideMenu.standardNav.hideOnHome {display:none;}
-	.standardNav .levelOne .levelTwo.teamDrop {width:950px; max-width:950px; column-count:6; -moz-column-count:6; -webkit-column-count:6;} /*columns will be alpha by row in IE9*/
-	.standardNav .levelOne .levelTwo.ncaaDrop {left:-15px;}
-	.standardNav .levelOne .levelTwo.nflDrop {left:-130px;}
-	.standardNav .levelOne .levelTwo.nbaDrop {left:-245px;}
-	.standardNav .levelOne .levelTwo.mlbDrop {left:-360px;}
-	.standardNav .levelOne .levelTwo.nhlDrop {left:-475px;}
+	.standardNav .levelOne .levelTwo.teamDrop {width:960px; max-width:960px; column-count:6; -moz-column-count:6; -webkit-column-count:6;} /*columns will be alpha by row in IE9*/
+	.standardNav .levelOne .levelTwo.ncaaDrop {left:-20px;}
+	.standardNav .levelOne .levelTwo.nflDrop {left:-135px;}
+	.standardNav .levelOne .levelTwo.nbaDrop {left:-250px;}
+	.standardNav .levelOne .levelTwo.mlbDrop {left:-365px;}
+	.standardNav .levelOne .levelTwo.nhlDrop {left:-480px;}
+	.standardNav .levelOne .levelTwo.teamDrop a {width:145px;}
 	.newsLetterWrapper {width:80%;}
 	.cartWrapper .sprite {height:30px; width:30px; background-position:-39px 1px; margin:0 0 0 40px;}
 	.cartWrapper .cartItemCount {height:25px; width:25px; padding:1px 0 0 0; margin:0 5px 0 0; text-align:center; color:#ffffff; background-color:red; border-radius:15px; box-shadow:1px 1px 2px 0 #000000;}
@@ -643,6 +644,13 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	#appView {width:1080px; margin:0 auto; box-shadow:0px 1px 5px 5px #cccccc;}
 	.wrapper {width:950px;}
 	.headerMargin {width:950px; margin:0 auto;}
+	.standardNav .levelOne .levelTwo.teamDrop {width:1080px; max-width:1080px;}
+	.standardNav .levelOne .levelTwo.ncaaDrop {left:-80px;}
+	.standardNav .levelOne .levelTwo.nflDrop {left:-195px;}
+	.standardNav .levelOne .levelTwo.nbaDrop {left:-310px;}
+	.standardNav .levelOne .levelTwo.mlbDrop {left:-425px;}
+	.standardNav .levelOne .levelTwo.nhlDrop {left:-540px;}
+	.standardNav .levelOne .levelTwo.teamDrop a {width:165px;}
 	.homeMainWrapper {width:1080px; margin:0 auto;}
 	.homeFeaturedCats .splashPageListTemplate {height:233px; width:330px;}
 	
