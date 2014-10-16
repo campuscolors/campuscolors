@@ -10,9 +10,18 @@
 	"pages": [
 		{
 			"baseFilter": {
-				"term": {
-					"vendor_code": "adds"
-				}
+				"or": [
+					{
+						"term": {
+							"vendor_code": "adds"
+						}
+					},
+					{
+						"term": {
+							"vendor_code": "yadds"
+						}
+					}
+				]
 			},
 			"options": {
 				"base_price": {
@@ -1467,9 +1476,18 @@
 		},
 		{
 			"baseFilter": {
-				"term": {
-					"vendor_code": "nike"
-				}
+				"or": [
+					{
+						"term": {
+							"vendor_code": "nike"
+						}
+					},
+					{
+						"term": {
+							"vendor_code": "nike-y"
+						}
+					}
+				]
 			},
 			"options": {
 				"base_price": {
@@ -1480,37 +1498,6 @@
 			"id": "nike-gear",
 			"link": "#!brands-apparel-merchandise/nike-gear/",
 			"img": "NIKE  ",
-			"name": "Nike Apparel & Merchandise",
-			"page-title": "Nike Apparel & Merchandise | CampusColors.com",
-			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
-			"optionList": [
-				"user:size_code",
-				"user:size_gender",
-				"user:website_filter",
-				"user:color_pallete",
-				"user:team_league_ncaa",
-				"user:team_league_nfl",
-				"user:team_league_nba",
-				"user:team_league_mlb",
-				"user:team_league_nhl",
-				"user:team_conference"
-			]
-		},
-		{
-			"baseFilter": {
-				"term": {
-					"vendor_code": "nike-y"
-				}
-			},
-			"options": {
-				"base_price": {
-					"min": 0,
-					"max": 150
-				}
-			},
-			"id": "nike-gear",
-			"link": "#!brands-apparel-merchandise/nike-gear/",
-			"img": "NIKE-Y",
 			"name": "Nike Apparel & Merchandise",
 			"page-title": "Nike Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
@@ -2784,37 +2771,6 @@
 			"img": "WW    ",
 			"name": "Wes & Willy  Apparel & Merchandise",
 			"page-title": "Wes & Willy  Apparel & Merchandise | CampusColors.com",
-			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
-			"optionList": [
-				"user:size_code",
-				"user:size_gender",
-				"user:website_filter",
-				"user:color_pallete",
-				"user:team_league_ncaa",
-				"user:team_league_nfl",
-				"user:team_league_nba",
-				"user:team_league_mlb",
-				"user:team_league_nhl",
-				"user:team_conference"
-			]
-		},
-		{
-			"baseFilter": {
-				"term": {
-					"vendor_code": "yadds"
-				}
-			},
-			"options": {
-				"base_price": {
-					"min": 0,
-					"max": 150
-				}
-			},
-			"id": "adidas-gear",
-			"link": "#!brands-apparel-merchandise/adidas-gear/",
-			"img": "YADDS ",
-			"name": "Adidas Apparel & Merchandise",
-			"page-title": "Adidas Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
 				"user:size_code",
