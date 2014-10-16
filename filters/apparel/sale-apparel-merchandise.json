@@ -10,14 +10,8 @@
 	"pages": [
 		{
 			"baseFilter": {
-				"query" : {
-					"constant_score" : {
-						"filter" : {
-							"exists" : {
-								"field" : "prod_msrp"
-							}
-						}
-					}
+				"term" : {
+					"tags" : "IS_SALE"
 				}
 			},
 			"options": {
