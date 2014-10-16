@@ -73,7 +73,7 @@
 		{
 			"baseFilter": {
 				"term": {
-					"website_filter": "sweatshirts & fleece"
+					"website_filter": "sweatshirts"
 				}
 			},
 			"options": {
@@ -82,11 +82,11 @@
 					"max": 150
 				}
 			},
-			"id": "sweatshirts-and-fleece",
-			"link": "#!apparel-merchandise/sweatshirts-and-fleece/",
-			"img": "sweatshirts & fleece",
-			"name": "Sweatshirts & Fleece Apparel & Merchandise",
-			"page-title": "Sweatshirts & Fleece Apparel & Merchandise | CampusColors.com",
+			"id": "sweatshirts",
+			"link": "#!apparel-merchandise/sweatshirts/",
+			"img": "sweatshirts",
+			"name": "Sweatshirts Apparel & Merchandise",
+			"page-title": "Sweatshirts Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
 				"user:size_code",

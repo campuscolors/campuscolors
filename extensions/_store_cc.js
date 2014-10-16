@@ -1001,7 +1001,7 @@ var store_cc = function(_app) {
 				  
 					// Order specified by the client
 					var types = [
-						'shorts', 't-shirts', 'sweatshirts & fleece', 'pants', 'hats', 'jerseys', 'novelites & accessories'
+						'shorts', 't-shirts', 'sweatshirts', 'pants', 'hats', 'jerseys', 'novelties & accessories'
 					];
 					//remove the product type that we already have
 					if($.inArray(data.value['%attribs']['user:website_filter'], types) >= 0) {

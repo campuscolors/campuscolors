@@ -36,7 +36,7 @@
 			"link"				: "#!ncaa-apparel-merchandise/ncaa-sweatshirts/", 
 			"img" 			: "9/93086_2",
 			"name"			: "NCAA Sweatshirts Apparel & Merchandise",
-			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "ncaa"}} , {"term" : {"website_filter" : "sweatshirts & fleece"}}]},
+			"baseFilter" 	: { "and" : [ {"term" : {"team_league" : "ncaa"}} , {"term" : {"website_filter" : "sweatshirts"}}]},
 			"optionList" 	: [
 				"user:size_code",
 				"user:size_gender",

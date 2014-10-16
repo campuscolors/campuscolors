@@ -84,7 +84,7 @@
 			"name"			: "Adidas Sweatshirts",
 			"page-title" 	: "Adidas Sweatshirts at CampusColors.com",
 			"page-description" : "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
-			"baseFilter" 	: { "and" : [ {"term" : {"vendor_code" : "adidas"}} , {"term" : {"website_filter" : "sweatshirts & fleece"}}]},
+			"baseFilter" 	: { "and" : [ {"term" : {"vendor_code" : "adidas"}} , {"term" : {"website_filter" : "sweatshirts"}}]},
 			"options": {"base_price": {"min": 0,"max": 150}},
 			"optionList" 	: [
 				"user:team_conference",
