@@ -2382,7 +2382,8 @@ _app.model.dispatchThis('passive');
 					L = sMethods.length;
 					for(var i = 0; i < L; i += 1)	{
 						o += "<li class='headerPadding'><label><input type='radio'  name='want/shipping_id' value='"+sMethods[i].id+"' ";
-						o += "/>"+(sMethods[i].pretty ? sMethods[i].pretty : sMethods[i].name)+": <span >"+_app.u.formatMoney(sMethods[i].amount,'$','',false)+"<\/span><\/label><\/li>";
+/*campus*/		if(sMethods[i].amount == 0) { o += "/>"+(sMethods[i].pretty ? sMethods[i].pretty : sMethods[i].name)+": <span ><span class='bold'>FREE<\/span><\/label><\/li>";	}
+/*campus*/		else	{ o += "/>"+(sMethods[i].pretty ? sMethods[i].pretty : sMethods[i].name)+": <span >"+_app.u.formatMoney(sMethods[i].amount,'$','',false)+"<\/span><\/label><\/li>"; }
 						}
 					}
 				else	{
