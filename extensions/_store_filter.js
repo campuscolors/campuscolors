@@ -342,7 +342,8 @@ var store_filter = function(_app) {
 					$('input[data-filter=filterCheckbox]', $(this)).each(function(){
 						var index = $(this).closest('[data-filter-index]').attr('data-filter-index');
 						if(!elasticsearch.facets[index]){
-							elasticsearch.facets[index] = {"terms" : {"field":index}}
+							//elasticsearch.facets[index] = {"terms" : {"field":index}}
+							elasticsearch.facets[index] = {"terms" : {"field":index,"all_terms":true}}
 							}
 						if($(this).is(":checked")){
 							var f = {"term" : {}};
