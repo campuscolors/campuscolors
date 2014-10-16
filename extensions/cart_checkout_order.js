@@ -1309,8 +1309,13 @@ in a reorder, that data needs to be converted to the variations format required 
 							o = "<span class='orderShipMethod'>"+(shipMethods[i]['pretty'] ? shipMethods[i]['pretty'] : shipMethods[i]['name'])+": <\/span>";
 	//only show amount if not blank.
 							if(shipMethods[i].amount)	{
-/*campus*/				o += "<span class='orderShipAmount'>"+_app.u.formatMoney(shipMethods[i].amount,'$',2,false)+"<\/span>";
-								}
+/*campus*/				if(shipMethods[i].amount == 0) {
+/*campus*/					o += "<span class='orderShipAmount'><span class='redText bold'>FREE<\/span><\/span>";
+/*campus*/				}
+/*campus*/				else {
+/*campus*/					o += "<span class='orderShipAmount'>"+_app.u.formatMoney(shipMethods[i].amount,'$',2,false)+"<\/span>";
+/*campus*/				}
+							}
 							break; //once we hit a match, no need to continue. at this time, only one ship method/price is available.
 							}
 						}
