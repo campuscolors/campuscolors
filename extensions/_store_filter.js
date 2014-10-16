@@ -343,7 +343,8 @@ var store_filter = function(_app) {
 						var index = $(this).closest('[data-filter-index]').attr('data-filter-index');
 						if(!elasticsearch.facets[index]){
 							//elasticsearch.facets[index] = {"terms" : {"field":index}}
-							elasticsearch.facets[index] = {"terms" : {"field":index,"all_terms":true}}
+							//elasticsearch.facets[index] = {"terms" : {"field":index,"all_terms":true}}
+							elasticsearch.facets[index] = {"terms" : {"field":index,"size":2000}}
 							}
 						if($(this).is(":checked")){
 							var f = {"term" : {}};
