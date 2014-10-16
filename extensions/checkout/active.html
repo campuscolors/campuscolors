@@ -16,7 +16,7 @@ item list and summary are separate just to give more control over location.
 
 <!-- define panel order -->
 	
-	<fieldset> <!--campus-->
+	<div class="guestOrUser"> <!--campus-->
 		<div data-tlc="bind $var '.'; store_cc#toggleguestcheckout;" data-checkout-type="user"> <!--campus-->
 			<div class="floatLeft ccButton marginBottom" data-checkout-type="button">Sign In</div> <!--campus-->
 			<div class="floatLeft existingPrompt marginBottom">Existing customers sign in for faster checkout.</div> <!--campus-->
@@ -25,9 +25,9 @@ item list and summary are separate just to give more control over location.
 			<div class="floatLeft ccButton marginBottom" data-checkout-type="button">Guest Checkout</div> <!--campus-->
 			<div class="floatLeft existingPrompt marginBottom">Checkout as a Guest.</div> <!--campus-->
 		</div> <!--campus-->
-	</fieldset> <!--campus-->
+	</div> <!--campus-->
 		
-	<fieldset data-app-role="chkoutPreflight" class="marginBottom">
+	<fieldset data-app-role="chkoutPreflight" class="marginBottom clear">
 		<legend class="headerPadding"><span>1. </span>CONTACT INFO</legend> <!--campus-->
 		<div data-tlc="bind $var '.'; transmogrify --dataset=$var --templateid='chkoutPreflightTemplate'; apply --append;" data-legacy-useparentdata="true" class="panelContent"></div>
 		<div data-app-role="buyerLogout" class="displayNone pointer" data-app-click="order_create|buyerLogout">
@@ -42,7 +42,7 @@ item list and summary are separate just to give more control over location.
 	</fieldset>
 
 
-	<fieldset> <!--campus-->
+	<div class="fauxFieldset"> <!--campus-->
 		<legend class="headerPadding"><span>2. </span>SHIPPING INFORMATION</legend> <!--campus-->
 		<div class='shipCenter'> <!--campus-->
 		<fieldset data-app-role="chkoutAddressBill" data-app-addresstype="bill" class="marginBottom shipInfo"> <!--campus-->
@@ -70,11 +70,11 @@ item list and summary are separate just to give more control over location.
 			<div class="clearfix" data-app-role="addressExists"><button class="applyButton" data-app-click="order_create|showBuyerAddressAdd" data-app-addresstype="ship">Add New Shipping Address</button></div>
 		</fieldset>
 		</div> <!--campus-->
-	</fieldset> <!--campus-->
+	</div> <!--campus-->
 
 
 
-	<fieldset data-app-role="chkoutMethodsShip" class="marginBottom">
+	<fieldset data-app-role="chkoutMethodsShip" class="marginBottom clear">
 		<legend class="headerPadding"><span>3. </span>CHOOSE A SHIPPING METHOD</legend> <!--campus-->
 		<div data-tlc="bind $var '.'; transmogrify --dataset=$var --templateid='chkoutMethodsShipTemplate'; apply --append;" class="panelContent"></div>
 	</fieldset>

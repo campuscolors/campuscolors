@@ -414,10 +414,11 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 
 /* CHECKOUT */
 #checkoutContainer form {width:80%; margin:20px auto;}
+.buyerLoggedIn .guestOrUser {display:none;}
 .checkoutFormContainer .ccButton, .checkoutFormContainer .existingPrompt {padding:0.2em 0.7em;}
 .checkoutFormContainer .ccButton .ui-button-text {padding:0;}
 .checkoutFormContainer.customCheckout fieldset {padding:0; border:none;}
-.checkoutFormContainer fieldset legend {width:100%; background:#cccccc; border:none; color:#781c2b; padding:0.2em 1em; font-family:Arial, sans-serif; font-weight:bold;}
+.checkoutFormContainer fieldset legend, .checkoutFormContainer .fauxFieldset legend {width:100%; background:#cccccc; border:none; color:#781c2b; padding:0.2em 1em; font-family:Arial, sans-serif; font-weight:bold;}
 .checkoutFormContainer fieldset.shipInfo {width:50%; float:left;}
 .shipCenter {width:70%; margin:0 auto;}
 .checkoutFormContainer .shipCenter input {width:100%;}
