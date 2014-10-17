@@ -1247,7 +1247,7 @@ var store_cc = function(_app) {
 			//	$fl.tlc({'dataset':data.value, 'templateid':'filterListTemplate'});
 			// $p.tlc({'verb':'translate','dataset':prods[i]["_source"]});
 			}
-			
+
 		}, //tlcFormats
 		
 		
@@ -1953,7 +1953,24 @@ var store_cc = function(_app) {
 				_app.calls.cartDetail.init($checkout.data('cartid'));
 				_app.model.dispatchThis('immutable');
 				return false;
-			} //tagAsSignIn
+			}, //tagAsSignIn
+			
+			cartModelCheckout : function($ele, p) {
+				p.preventDefault();
+				dump('START youarehere');
+				var docLocation = document.location;
+		dump(docLocation);
+				var goingTo = "#!" + $ele.data("you-are-here");
+				if(docLocation.hash == goingTo) {
+					$ele.closest('.ui-dialog-content').dialog('close');
+				}
+				else {
+					document.location.hash = goingTo;
+					//_app.ext.quickstart.a.showContent($ele.data("you-are-here"));
+				}
+				
+				return false;
+			}
 
 		
 		}, //e [app Events]
