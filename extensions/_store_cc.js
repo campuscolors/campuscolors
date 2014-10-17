@@ -105,6 +105,7 @@ var store_cc = function(_app) {
 					_app.templates.productTemplate.on('complete.store_cc',function(event,$context,infoObj) {
 						_app.ext.store_cc.u.showRecentlyViewedItems($context);
 						_app.ext.store_cc.u.runPreviousCarousel($context);
+						_app.ext.store_cc.u.showHideVariation($context,infoObj);
 					});
 					
 					_app.templates.productTemplate.on('depart.store_cc',function(event,$context,infoObj) {
@@ -1708,6 +1709,24 @@ var store_cc = function(_app) {
 				}
 //				dump(newPhrase);
 				return newPhrase;
+			},
+			
+			//checks inventory of variations added on prod page and removes them if they are found to be less than 1
+			showHideVariation : function($context, infoObj) {
+				var data = _app.data['appProductGet|'+infoObj.pid];
+				var variations = data['@variations'];
+				if(variations.length == 1 /*&& variations[0].id.match(/A[BDEFGHM]/) */){
+					var id = variations[0].id;
+					//$('select[name='+id+'] option', $context).each(function(){
+					$("[data-variationval]", $context).each(function(){
+						var sku = infoObj.pid+":"+id+""+$(this).attr("data-pogval");
+//						dump(sku); dump(data["@inventory"][sku]);
+						if(data["@inventory"][sku] && data["@inventory"][sku].AVAILABLE <= 0){
+							//$(this).attr("disabled","disabled");
+							$(this).remove();
+						}
+					});
+				}
 			}
 			
 			
