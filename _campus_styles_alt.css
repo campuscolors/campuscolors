@@ -400,6 +400,8 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 .qtySelect.cartQtySelect {height:auto; margin:0; padding:0; background-position:25px -470px;}
 .cartSummaryTotalsContainer .ui-widget .cartRefreshButton,
 .removeButton.ui-button.ui-button-icon-only {height:20px; width:20px; margin:0;}
+.cartTemplateShippingContainer {width:98%;}
+.cartSummary {width:58%;}
 .applyButton.continueShoppingButton.ccButton {border:2px outset #b75970;}
 .ui-state-default.cartButtons {background:#ffffff; border:none;}
 .applyButton.continueShoppingButton.ccButton .ui-button-text {color:#ffffff;}
@@ -430,7 +432,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 /*.checkoutFormContainer [data-app-role='loginPasswordContainer'] {height:0; overflow:hidden;}*/
 .paycon.PAYPALEC, .paycon.CREDIT {height:16px; width:76px; display:block; float:left; margin:3px 10px 0 0; background:url(images/sprite_500x500.png) -377px -47px;}
 .paycon.CREDIT {background-position:-373px -65px;}
-.checkoutFormContainer .summaryPriceAlign, .checkoutFormContainer .orderShipMethod {width:150px; display:inline-block;}
+.checkoutFormContainer .summaryPriceAlign, .checkoutFormContainer .orderShipMethod {width:200px; display:inline-block;}
 
 
 
