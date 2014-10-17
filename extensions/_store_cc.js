@@ -760,7 +760,7 @@ var store_cc = function(_app) {
 					for(var i = 0; i < L; i++) {
 //					dump('------this turn = '); dump(i);
 						if(i == L-1) {
-							$bread.append($("<span class='crumbTween'>You are in&#58; </span><span class='crumbLeaf'>" + bc[i] + "</span>"));
+							$bread.append($("<span class='crumbLeaf'>" + bc[i] + "</span>")); //<span class='crumbTween'>You are in&#58; </span>
 						}
 						else {
 							var $crumb = $("<a></a>");
