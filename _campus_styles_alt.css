@@ -408,6 +408,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 #inStoreCheckoutButton .applyButton.ccButton.checkoutButton {border:2px outset #fbe143;}
 #inStoreCheckoutButton.thisButton {float:none; margin:0 0 0.4em 0;}
  #paypalecbutton.thisButton {float:none; margin:0 0 0.1em 0;}
+.cartStuffContainer .moveToWishlist {height:1.7em; width:1.8em; border:none;}
 .removeButton.ui-button.ui-button-icon-only {height:auto; width:auto; padding:1% 2%; background:none; border:none;}
 .removeButton.ui-button.ui-button-icon-only .ui-button-icon-primary {display:none;}
 .removeButton.ui-button.ui-button-icon-only .ui-button-text {padding:0; text-indent:0; color:#cccccc;}
@@ -558,6 +559,8 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	
 	.logContainer {width:48%; margin:1%; float:left; background-color:#f4f4f4; border:5px solid #cccccc;}
 	.logRight {float:right;}
+	
+	.cartStuffContainer .moveToWishlist {height:1.4em; width:1.4em; margin-top:4px;}
 }
 	
 	
