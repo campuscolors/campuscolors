@@ -1083,89 +1083,124 @@ var store_cc = function(_app) {
 			//the input and the container the select list is added to must be children of the same container. 
 			//also checks to see if the qty of the item added is more than available and sets to max available if so.
 			cartitemqty : function(data, thisTLC)	{
-				var $tag = data.globals.tags[data.globals.focusTag];
-				var prod = data.globals.binds.var;
-				var thisSTID = prod.stid;
-				var $parent = ($tag.parent());
-				var $thisCartItem = ($tag.parent().parent());
-				var thisCartID = _app.model.fetchCartID();
-				var $select = $("<select class='qtySelect cartQtySelect' \/>");
-				var $selectWrapper = $("[data-select-container]",$parent);
-//				dump('-----cartitemqty'); dump(prod);
-				
-		//		for(index in prod['%options']){
-		//			dump('store_cc cartitemqty item inventory: '+prod['%options'][index].inv);
-		//			var thisInventory = prod['%options'][index].inv;
-		//		}
-		
-				if(thisSTID) {
-//					dump('app cart detail'); dump(_app.data["cartDetail|"+thisCartID]["@ITEMS"]);
-					var cartItems = _app.data["cartDetail|"+thisCartID]["@ITEMS"];
-					for(var k = 0; k < cartItems.length; k++) {
-						//client indicated size is and would always be the only variation, if more are added, the check for the variation will need to account for that.
-						if(cartItems[k].sku == prod.sku && cartItems[k]["%options"][prod.sku.split(":")[1]] && cartItems[k]["%options"][prod.sku.split(":")[1]].inv) {
-							var max = cartItems[k]["%options"][prod.sku.split(":")[1]].inv;
-						}
-						else { dump('Error in store_cc#cartitemqty. Product sku does not match cart sku, the variation is not available, or there is no inventory listed for the item in the cart.'); }
-					}
-	
-					// if they want more than available, let them know no es posible, and change qty to max available.
-					if(Number(max) < Number(prod.qty))	{		
-						dump('yes we have no bananas');
-						$tag.val(max);
-						var thisQty = max;
-						
-						var vars = {"quantity":max,"stid":thisSTID,"_cartid":thisCartID};
-						_app.ext.cco.calls.cartItemUpdate.init(vars,{"max":max,"thisSKU":prod.sku,"thisCartID":thisCartID,"callback":function(rd){
-							if(_app.model.responseHasErrors(rd)){
-								$thisCartItem.anymessage({'message':rd});
-							}
-							else {
-								//qty succesfully changed, tell them it's different
-								$thisCartItem.anymessage({"message":"There are only "+rd.max+" of this item currently available. We appologize for any inconvinience, the quantity has been changed to "+rd.max+"."});
-								var order = _app.data["cartDetail|"+rd.thisCartID]["@ITEMS"];
-								for(var j = 0; j < order.length; j++) {
-									if(order[j].sku == rd.thisSKU) { order[j].qty = rd.max; }
-								}
-				//				_app.ext.cco.calls.cartSet.init({"_cartid":rd.thisCartID},{},'passive'); _app.model.dispatchThis('passive');
-				//				setTimeout(function(){_app.ext.quickstart.u.handleMinicartUpdate({'datapointer':'cartDetail|'+rd.thisCartID});},1000);
-							}
-						}});
-					}
-					//if the qty doesn't exceed the max, then we're cool
-					else {								
-						$tag.val(prod.qty);
-						var thisQty = prod.qty;
-					}
-				
-					//for coupons and assemblies, no input desired, but qty display is needed. so the qty is inserted where the input was.
-					if((prod.stid && prod.stid[0] == '%') || prod.asm_master)	{
-						$tag.prop('disabled',true).css('border-width','0')
-						$("[data-cart-show='asm']",$parent).removeClass('displayNone');
-						} 
-					else	{
-						$("[data-cart-show='select']",$parent).removeClass('displayNone');
-						$tag.attr('data-stid',prod.stid);
-						$tag.addClass('displayNone');
-						
-							//a select list for qty selection is desired, let's build it...
-						for(var i = 1; i <= max; i++) {
-							if(i == thisQty) { var $option = $("<option value="+i+" selected='selected'>"+[i]+"</option>"); }
-							else { var $option = $("<option value="+i+">"+[i]+"</option>"); }
-							$option.appendTo($select);
-						}
-						
-						//leaving the default input field and changing that value to what is chosen in the select list is easier than rewriting 40 functions
-						$select.change(function() {
-							var selected = $(this).val();	//the option selected in select list
-							$tag.val(selected).change();	//now the default input has the select value and can still be used for handleaddtocart.
-						});
-						$parent.css({"position":"relative","top":"-7px"});
-						$select.appendTo($selectWrapper);
-						$selectWrapper.addClass('cartQtySelectWrapper');
-					}
-					_app.model.dispatchThis('immutable');
+//				dump('START cartitemqty');
+				var thisCartDetail = _app.data['cartDetail|'+_app.model.fetchCartID()]['@ITEMS'];
+				var products = []; var productsStid = [];
+				for(var index in thisCartDetail){
+					products.push(thisCartDetail[index].product);
+					productsStid.push(thisCartDetail[index].stid);
 				}
+				
+				var numRequests = 0;
+				for(var index in products){
+					var _tag = {
+						"thisSTID" : productsStid[index],
+						'callback':function(rd){
+							if(_app.model.responseHasErrors(rd)){
+								//If an item in your cart gets an error, you're gonna have a bad time...
+								_app.u.throwMessage(rd);
+								}
+							else {
+//							dump(rd.thisPID); dump(rd.thisSTID);
+								var $thisCartItem = $("[data-stid='"+rd.thisSTID+"']","#modalCart");
+								'input[name="want/sign_in"]'
+								var $tag = $("input[name='quantity']",$thisCartItem);
+								var $parent = $tag.parent();
+								var $select = $("<select class='qtySelect cartQtySelect' \/>");
+								var $selectWrapper = $("[data-select-container]",$parent);
+								var prod = _app.data[rd.datapointer]; //the complete product record from appProductGet
+								var thisCartID = _app.model.fetchCartID();
+								var cartItems = _app.data["cartDetail|"+thisCartID]["@ITEMS"];
+								
+								//get the record for the matching item in the cart.
+								for(var k = 0; k < cartItems.length; k++) {
+//									dump('cartItems[k].sku'); dump(cartItems[k].sku);
+									if(cartItems[k].sku == rd.thisSTID) { var cartProd = cartItems[k]; } //the product record that is in the cart (needed for qty/asm/etc.)
+								}
+//								dump('cartitemqty cart items'); dump(cartProd);
+
+								
+								//check the max available qty of the item (w/ variation) for use later. 
+//								dump(prod["@inventory"]); dump(prod["@variations"]);
+								if(!$.isEmptyObject(prod["@inventory"]) && prod["@variations"].length && prod["@inventory"][rd.thisSTID]) {
+//									dump("THERE IS inventory and variations"); 
+									var max = prod["@inventory"][rd.thisSTID].AVAILABLE;
+								}
+								else if (!$.isEmptyObject(prod["@inventory"]) && !prod["@variations"].length) {
+//									dump("THERE IS inventory but not variations"); 
+									var max = prod["@inventory"][prod.pid].AVAILABLE;
+								}
+								else { 
+									dump("Error in store_cc#cartitemqty. The variation is not available, or there is no inventory listed for the item "+prod.pid+"."); 
+									max = false;
+								}
+								
+								if(max !== false && !$.isEmptyObject(cartProd)) {
+									// if they want more than available, let them know no es posible, and change qty to max available.
+									if(Number(max) < Number(cartProd.qty)){
+										dump('yes we have no bananas');
+										$tag.val(max);
+										var thisQty = max;
+										
+										//since the available was less than user requested qty, cart qty must be set to max and updated
+										var vars = {"quantity":max,"stid":rd.thisSTID,"_cartid":thisCartID};
+										_app.ext.cco.calls.cartItemUpdate.init(vars,{"max":max,"thisSKU":cartProd.sku,"thisCartID":thisCartID,"callback":function(rd2){
+											if(_app.model.responseHasErrors(rd2)){
+												$thisCartItem.anymessage({'message':rd2});
+											}
+											else {
+												//qty succesfully changed, tell them it's different
+												$thisCartItem.anymessage({"message":"There are only "+rd2.max+" of this item currently available. We appologize for any inconvinience, the quantity has been changed to "+rd.max+"."});
+												var order = _app.data["cartDetail|"+rd2.thisCartID]["@ITEMS"];
+												for(var j = 0; j < order.length; j++) {
+													if(order[j].sku == rd2.thisSKU) { order[j].qty = rd2.max; }
+												}
+								//				_app.ext.cco.calls.cartSet.init({"_cartid":rd2.thisCartID},{},'passive'); _app.model.dispatchThis('passive');
+								//				setTimeout(function(){_app.ext.quickstart.u.handleMinicartUpdate({'datapointer':'cartDetail|'+rd2.thisCartID});},1000);
+											}
+										}});
+									}
+									//if the qty doesn't exceed the max, then we're cool
+									else {								
+										$tag.val(cartProd.qty);
+										var thisQty = cartProd.qty;
+									}
+								
+									//for coupons and assemblies, no input desired, but qty display is needed. so the qty is inserted where the input was.
+									if((cartProd.stid && cartProd.stid[0] == '%') || cartProd.asm_master)	{
+										$tag.prop('disabled',true).css('border-width','0')
+										$("[data-cart-show='asm']",$parent).removeClass('displayNone');
+										} 
+									else	{
+										$("[data-cart-show='select']",$parent).removeClass('displayNone');
+										$tag.attr('data-stid',cartProd.stid);
+										$tag.addClass('displayNone booty');
+										
+											//a select list for qty selection is desired, let's build it...
+										for(var i = 1; i <= max; i++) {
+											if(i == thisQty) { var $option = $("<option value="+i+" selected='selected'>"+[i]+"</option>"); }
+											else { var $option = $("<option value="+i+">"+[i]+"</option>"); }
+											$option.appendTo($select);
+										}
+										
+										//leaving the default input field and changing that value to what is chosen in the select list is easier than rewriting 40 functions
+										$select.change(function() {
+											var selected = $(this).val();	//the option selected in select list
+											$tag.val(selected).change();	//now the default input has the select value and can still be used for handleaddtocart.
+										});
+										$parent.css({"position":"relative","top":"-7px"});
+										$select.appendTo($selectWrapper);
+										$selectWrapper.addClass('cartQtySelectWrapper');
+									}
+						//			_app.model.dispatchThis('immutable');
+								}
+							}
+						}
+					};
+					numRequests += _app.ext.store_product.calls.appProductGet.init(products[index],_tag, 'immutable');
+//					dump('numRequests'); dump(numRequests);
+				}
+				_app.model.dispatchThis('immutable');
 			}, //cartitemqty
 			
 			tillfreeship : function(data, thisTLC) {

@@ -3297,6 +3297,7 @@ This is the template used both within a dialog and inline, unless implicitly ove
 
 <div class="cartStuffContainer">
 	<ul data-tlc="bind $var '.@ITEMS'; controller#loop --templateid='productListTemplateCart'; if (is $var --notblank;) {{apply --append;}};" class="listStyleNone fluidList clearfix noPadOrMargin productList lineItemProdlist"></ul>
+	<span class="displayNone" data-tlc="bind $var '.'; store_cc#cartitemqty;"></span>
 </div>
 
 <div class="cartSummaryTotalsContainer">
@@ -3382,8 +3383,10 @@ This is the template used both within a dialog and inline, unless implicitly ove
 
 		<div>
 			<!-- qty: <input data-tlc="cco#cartitemqty  - -legacy;" class="qtyInput numberInput" data-app-change="cco|cartItemUpdateExec" data-bind="format:cartItemQty;extension:cco;useParentData:true;" name="quantity" type="number"> -->
-			<span class="displayNone" data-cart-show='select'>qty: </span><span data-select-container="1"><!-- select list added here through store_cc#cartitemqty on input tag below--></span>
-			<span class="displayNone" data-cart-show='asm'>qty: </span><input data-tlc="bind $var '.'; store_cc#cartitemqty;" class="qtyInput numberInput" data-app-change="cco|cartItemUpdateExec" name="quantity" type="number">
+			<span class="displayNone" data-cart-show='select'>qty: </span>
+			<span data-select-container="1"><!-- select list added here through store_cc#cartitemqty on input tag below--></span>
+			<span class="displayNone" data-cart-show='asm'>qty: </span>
+			<input class="qtyInput numberInput" data-app-change="cco|cartItemUpdateExec" name="quantity" type="number"> <!-- data-tlc="bind $var '.'; store_cc#cartitemqty;" -->
 			<button class="displayNone">update</button><!-- here to stop 'enter' in input above from closing modal -->
 			<span data-tlc="bind $var '.price'; if (is $var --notblank;) {{ format --currency='USD'; format --prepend=' x '; apply --append;}};"></span>
 			<span data-tlc="bind $var '.extended'; if (is $var --notblank;) {{format --currency='USD';  format --prepend='= '; apply --append;}};"></span>
