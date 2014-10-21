@@ -2010,7 +2010,9 @@ var store_cc = function(_app) {
 		dump(docLocation);
 				var goingTo = "#!" + $ele.data("you-are-here");
 				if(docLocation.hash == goingTo) {
-					$ele.closest('.ui-dialog-content').dialog('close');
+					$("#checkoutContainer").remove();
+					showContent("checkout");
+					//$ele.closest('.ui-dialog-content').dialog('close');
 				}
 				else {
 					document.location.hash = goingTo;

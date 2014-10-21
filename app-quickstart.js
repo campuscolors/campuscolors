@@ -2382,7 +2382,21 @@ either templateID needs to be set OR showloading must be true. TemplateID will t
 								$(this).attr('data-app-change','quickstart|cartShipMethodSelect');
 								});
 							});
-						$modal.dialog({modal: true,width:'80%'});  //browser doesn't like percentage for height
+//campus			$modal.dialog({modal: true,width:'80%'});  //browser doesn't like percentage for height
+/*campus*/		$modal.dialog({
+/*campus*/			modal: true,
+/*campus*/			width:'80%',   //browser doesn't like percentage for height
+/*campus*/			open : function(event, ui) {
+/*campus*/				$(".ui-dialog-titlebar-close").on("click.closeModal",function(){
+/*campus*/					if(document.location.hash == "#!checkout/") {
+/*campus*/						dump('it was checkout');
+/*campus*/						$("#checkoutContainer").remove();
+/*campus*/						showContent("checkout");
+/*campus*/					}
+/*campus*/				}); 
+/*campus*/			},
+/*campus*/			close : function(event, ui) { $(".ui-dialog-titlebar-close").off("click.closeModal"); }
+/*campus*/		});  
 						}
 
 					if(P.showLoading === true)	{
