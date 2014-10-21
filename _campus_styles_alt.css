@@ -289,10 +289,9 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 
 
 /* productTemplate */
-.imageContainer {width:300px; margin:0 auto; padding:0;}
+.imageContainer {width:300px; margin:0 auto; padding:0; position:relative;}
 .imageContainer img {height:auto; max-width:100%;}
-.imageContainer a {position:relative;}
-.prodZoom {width:560px; height:650px; position:absolute; top:-50px; left:425px; z-index:1; background:#ffffff; border:1px solid #000; box-shadow:0 0 4px 2px #000000;}
+.prodZoom {width:560px; height:650px; position:absolute; top:0; left:325px; z-index:1; background:#ffffff; border:1px solid #000; box-shadow:0 0 4px 2px #000000;}
 .logoUpSell {line-height:50px;}
 .productPageLink {padding:6px 0 0 0; color:#781c2b;}
 .prodSummaryContainer {width:300px; margin:10px auto; text-align:center;}
@@ -624,6 +623,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.searchResultsProduct button.quickView.showQuickview {display:inline-block;}
 	.prodlistRelatedContainer .searchResultsProduct button.quickView.showQuickview {display:none;}
 	.prodViewerContainer {width:908px;}
+	.prodZoom {left:425px;}
 	.prodMSRP, .savingsPercentage {font-size:2em;}
 	.basePrice {font-size:3em;}
 	.sizeOption:hover {background:#b75970;}
