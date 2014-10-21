@@ -31,7 +31,7 @@ item list and summary are separate just to give more control over location.
 		<legend class="headerPadding"><span>1. </span>CONTACT INFO</legend> <!--campus-->
 		<div data-tlc="bind $var '.'; transmogrify --dataset=$var --templateid='chkoutPreflightTemplate'; apply --append;" data-legacy-useparentdata="true" class="panelContent"></div>
 		<div data-app-role="buyerLogout" class="displayNone pointer" data-app-click="order_create|buyerLogout">
-			Not you? <span class="lookLikeLink zlink">click here</span>.
+			Not you? <span class="lookLikeLink zlink uRedLink" onclick="myApp.ext.store_cc.a.manualToggle()">click here</span>.
 		</div>
 	</fieldset>
 
@@ -120,6 +120,7 @@ item list and summary are separate just to give more control over location.
 <section id="chkoutPreflightTemplate">
 	
 	<h4 data-tlc="bind $var '.bill.email'; if(is $var --blank;) {{bind $var '.customer.login'; }}; if (is $var --notblank;) {{apply --append;}};" class="displayNone" data-app-role="username"></h4>
+	<span data-tlc="bind $var '.bill.email'; if(is $var --blank;) {{bind $var '.customer.login'; }}; store_cc#chkoutadduser;" class="displayNone"></span> <!--campus-->
 	
 	<div data-app-role="login">
 		<div class='marginBottom chkLoginCont'> <!--campus-->

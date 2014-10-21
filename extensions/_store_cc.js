@@ -629,6 +629,13 @@ var store_cc = function(_app) {
 				$('.scrollDropout',$tag).css('height',"auto");
 				return true;
 			},
+			
+			//guest/user checkout buttons need to be switched on logout from within checkout or they are backwards (showing "checkout as guest" when should be "user")
+			manualToggle : function() {
+				if($("[data-checkout-type='guest']","#checkoutContainer").css("opacity") == 1) {
+					setTimeout(function(){$("input[name='want/sign_in']","#checkoutContainer").trigger("click");},1000); //needed timeout for buttons to be accessable again
+				}
+			}
 		
 		}, //Actions
 
@@ -1158,6 +1165,12 @@ var store_cc = function(_app) {
 				
 			//	$fl.tlc({'dataset':data.value, 'templateid':'filterListTemplate'});
 			// $p.tlc({'verb':'translate','dataset':prods[i]["_source"]});
+			},
+			
+			chkoutadduser : function(data,thisTLC) {
+				var user = data.globals.binds.var;
+				dump('START chkoutadduser'); 
+				$('.username').empty().text(user);
 			}
 
 		}, //tlcFormats
