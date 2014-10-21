@@ -36,7 +36,7 @@
 				"alt"			: "College Sweatshirts",
 				"title"		: "College Sweatshirts",
 				"label"		: "",
-				"href"		: "#!ncaa-apparel-merchandise/ncaa-sweatshirts/"
+				"href"		: "#!league-apparel-merchandise/ncaa/sweatshirts/"
 			},
 			{
 				"src"			: "banners/nfl_hats.jpg",
@@ -45,7 +45,7 @@
 				"alt"			: "NFL Hats",
 				"title"		: "NFL Hats",
 				"label"		: "",
-				"href"		: "#!nfl-apparel-merchandise/nfl-hats/"
+				"href"		: "#!league-apparel-merchandise/nfl/hats/"
 			}
 		]
 	}	
