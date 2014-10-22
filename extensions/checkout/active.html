@@ -435,14 +435,14 @@ do NOT change the input name or id or checkout will likely break.
 
 <div id="chkoutCompletedTemplate" class="checkoutSuccess">
 
-	<div class="floatRight ocmThirdParty" data-app-role="thirdPartyContainer"></div>
-
+	<div class="floatRight ocmThirdParty displayNone" data-app-role="thirdPartyContainer"></div>
+	<a href="#!" class="confirmationContinue ccButton">Continue Shopping</a>
 
 	<div class="orderSummaryDetails">
-		<h2>Thank you! Your order has been placed.</h2>
+		<h2 class="marginBottom">Thank you! Your order has been placed.</h2>
 		<h3 data-tlc="bind $var '.orderid'; if (is $var --notblank;) {{format --prepend='Your order id is '; apply --append;}};"></h3>
 		<div class="pointer marginBottom" data-app-role="paymentMessaging">
-			Click here to view/print your invoice.
+			<span class="uRedLink">Click here to view/print your invoice.<br><br></span>
 			<div data-tlc="bind $var '.payment_status_msg'; if (is $var --notblank;) {{apply --append;}};" class="zwarn"></div><!-- displays payment issues/errors -->
 		</div>
 		<div data-tlc="bind $var '.payment_status_detail'; if (is $var --notblank;) {{apply --append;}};" class="marginBottom"></div>
@@ -454,12 +454,12 @@ do NOT change the input name or id or checkout will likely break.
 	<span id="BuySafeGuaranteeSpan"></span>
 	<div class="clearAll"></div>
 
-<div data-app-role="invoiceContainer">
+<div data-app-role="invoiceContainer" class="marginTop">
 	<table class="orderContentsTable fullWidth">
 	<tbody><tr>
 		<td colspan="2">
 	<div class="floatRight hide4Print">
-	<button class="applyButton" data-text="false" data-icon-primary="ui-icon-print" data-app-click="order_create|execInvoicePrint">Print Invoice</button>
+	<button class="applyButton ccButton" data-text="false" data-icon-primary="ui-icon-print" data-app-click="order_create|execInvoicePrint">Print Invoice</button>
 	</div>
 	
 	<h2 data-tlc="bind $var '.order.our.orderid'; if (is $var --notblank;) {{apply --append;}};"></h2>
@@ -511,6 +511,9 @@ do NOT change the input name or id or checkout will likely break.
 	
 	
 		</td>
+	</tr>
+	<tr class="rowSpacer"></tr> 
+	<tr>
 		<td class="orderContentsProdlistContainer">
 		<ul data-tlc="bind $var '.order.tracking'; store_crm#ordertrackinglinks --legacy;" class="displayNone noListStyle marginBottom"></ul>
 		<table class="listStyleNone lineItemProdlist">
@@ -564,7 +567,7 @@ If this gets recycled, test in order history after making changes.
 	
 	<td>
 	<div class="prodThumbContainer marginRight">
-	<img data-tlc="bind $var '.%attribs.zoovy:prod_image1'; if (is $var --notblank;) {{ apply --img --media=$var --width=55 --height=55 --bgcolor='#ffffff' --replace;}};" src="/media/graphics/blank.gif" class="prodThumb" height="55" width="55">
+	<img data-tlc="bind $var '.%attribs.zoovy:prod_image1'; if (is $var --notblank;) {{ apply --img --media=$var --width=75 --height=75 --bgcolor='#ffffff' --replace;}};" src="/media/graphics/blank.gif" class="prodThumb" height="75" width="75"> <!-- campus -->
 	</div>
 	</td>
 	
@@ -586,7 +589,7 @@ If this gets recycled, test in order history after making changes.
 	</td>
 	
 	<td class="alignRight hide4Print">
-	<button data-tlc="bind $var '.product'; apply --attrib='data-pid'; " class="writeReview applyButton" data-app-click="store_crm|productReviewShow">Write Review</button>	
+	<button data-tlc="bind $var '.product'; apply --attrib='data-pid'; " class="writeReview applyButton ccButton" data-app-click="store_crm|productReviewShow">Write Review</button>	<!-- campus -->
 	</td>
 
 

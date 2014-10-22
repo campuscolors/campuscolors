@@ -443,6 +443,10 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 .paycon.CREDIT {background-position:-373px -65px;}
 .checkoutFormContainer .summaryPriceAlign, .checkoutFormContainer .orderShipMethod {width:200px; display:inline-block;}
 
+.checkoutSuccess {padding:10px;}
+.confirmationContinue {float:right; text-decoration:none; font-weight:bold; margin:0 0 5px 0;}
+.rowSpacer {height:15px;}
+
 
 
 @media screen and (min-width:400px) {
@@ -570,6 +574,10 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	
 	.cartButtons .continueShoppingSpan {float:none; margin:0 auto 5px auto;}
 	.cartStuffContainer .moveToWishlist {height:1.4em; width:1.4em; margin-top:4px;}
+	
+	.checkoutSuccess {padding:30px;}
+	.orderContentsProdlistContainer .prodThumbContainer {border:2px solid #000000; box-shadow:2px 2px 0 0 #cccccc;}
+	.infoContainer {margin:0 10px 0 0;}
 }
 	
 	
@@ -654,6 +662,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.applyButton.continueShoppingButton.ccButton {min-width:210px;}
 	.checkoutFormContainer .ccButton:hover {background:#781c2b; border-color:#b75970 #000000 #000000 #b75970; color:#ffffff;}
 	.checkoutFormContainer .ccButton:hover .ui-button-text {color:#ffffff;}
+	.orderContentsTable .hide4Print .ui-state-default .ui-icon {background-image:url("images/ui-icons_ffffff_256x240.png");}
 }
 
 @media screen and (min-width : 1080px) {
