@@ -409,7 +409,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 .removeButton.ui-button.ui-button-icon-only {height:20px; width:20px; margin:0;}
 .cartTemplateShippingContainer {width:98%;}
 .cartSummary {width:58%;}
-.applyButton.continueShoppingButton.ccButton {border:2px outset #b75970; padding:0 1%;}
+.applyButton.continueShoppingButton.ccButton {min-width:150px; border:2px outset #b75970; padding:0 1%;}
 .ui-state-default.cartButtons {background:#ffffff; border:none;}
 .applyButton.continueShoppingButton.ccButton .ui-button-text {color:#ffffff;}
 #inStoreCheckoutButton .applyButton.ccButton.checkoutButton {border:2px outset #fbe143;  padding:0 1%;}
@@ -567,6 +567,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.logContainer {width:48%; margin:1%; float:left; background-color:#f4f4f4; border:5px solid #cccccc;}
 	.logRight {float:right;}
 	
+	.cartButtons .continueShoppingSpan {float:none; margin:0 auto 5px auto;}
 	.cartStuffContainer .moveToWishlist {height:1.4em; width:1.4em; margin-top:4px;}
 }
 	
@@ -649,6 +650,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.logContainer {width:31%;}
 	.logRight {float:left;}
 	
+	.applyButton.continueShoppingButton.ccButton {min-width:210px;}
 	.checkoutFormContainer .ccButton:hover {background:#781c2b; border-color:#b75970 #000000 #000000 #b75970; color:#ffffff;}
 	.checkoutFormContainer .ccButton:hover .ui-button-text {color:#ffffff;}
 }
@@ -670,4 +672,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.prodViewerContainer {width:948px;}
 	#shippingArticle h1 {font-size:1.8em;}
 	.companyRight .sideline {margin:20px 21px 20px 0;}
+	
+	.chkButCont {float:right;}
+	.cartButtons .continueShoppingSpan {float:left; margin:0;}
 }
