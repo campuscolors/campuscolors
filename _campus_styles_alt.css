@@ -312,7 +312,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 .qtyATCWraper {width:90%; margin:0 auto;}
 .selectWrapper {width:61px; position:relative; overflow:hidden;}
 .selectWrapper .sprite {height:40px; width:20px; position:absolute; top:10px; right:5px; background-position:0 0;}
-.qtySelect {height:35px; min-width:74px; margin:10px 5px; padding:6px 2px; color:#781c2b; display:inline-block; background:url("images/sprite_500x500.png") no-repeat scroll 25px -463px #ffffff; border:1px solid #781c2b; text-align:left;}
+.qtySelect {height:35px; min-width:84px; margin:10px 5px; padding:6px 2px; color:#781c2b; display:inline-block; background:url("images/sprite_500x500.png") no-repeat scroll 25px -463px #ffffff; border:1px solid #781c2b; text-align:left;}
 .prodViewerAddToCartForm .numberInput {height:40px; border:1px inset #000000; text-align:center;}
 .productPage .addtocartbutton {height:50px; width:250px; color:#000000; font-size:2.1em; border-top:2px outset #fbe143; border-right:2px outset #000000; border-bottom:2px outset #000000; border-left:2px outset #fbe143; box-shadow:2px 2px 0 0 #cccccc; border-radius:0;}
 .productPage .addtocartbutton.orderSoon {width:170px; font-size:1.9em;}
@@ -402,10 +402,10 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 .removeButton.ui-button.ui-button-icon-only {height:20px; width:20px; margin:0;}
 .cartTemplateShippingContainer {width:98%;}
 .cartSummary {width:58%;}
-.applyButton.continueShoppingButton.ccButton {border:2px outset #b75970;}
+.applyButton.continueShoppingButton.ccButton {border:2px outset #b75970; padding:0 1%;}
 .ui-state-default.cartButtons {background:#ffffff; border:none;}
 .applyButton.continueShoppingButton.ccButton .ui-button-text {color:#ffffff;}
-#inStoreCheckoutButton .applyButton.ccButton.checkoutButton {border:2px outset #fbe143;}
+#inStoreCheckoutButton .applyButton.ccButton.checkoutButton {border:2px outset #fbe143;  padding:0 1%;}
 #inStoreCheckoutButton.thisButton {float:none; margin:0 0 0.4em 0;}
  #paypalecbutton.thisButton {float:none; margin:0 0 0.1em 0;}
 .cartStuffContainer .moveToWishlist {height:1.7em; width:1.8em; border:none;}

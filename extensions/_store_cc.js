@@ -1762,7 +1762,7 @@ var store_cc = function(_app) {
 											var selected = $(this).val();	//the option selected in select list
 											$tag.val(selected).change();	//now the default input has the select value and can still be used for handleaddtocart.
 										});
-										$parent.css({"position":"relative","top":"-7px"});
+										$parent.css({"position":"relative","top":"-7px","margin":"5px 0"});
 										$select.appendTo($selectWrapper);
 										$selectWrapper.addClass('cartQtySelectWrapper');
 									}
