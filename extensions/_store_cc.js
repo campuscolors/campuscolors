@@ -530,11 +530,11 @@ var store_cc = function(_app) {
 			showDropDownClick : function($tag){
 				//_app.u.dump('showClick');
 				if(this.showDropDown($tag)){
-					$('[data-dropdown]',$tag).unbind('click');
-					$('[data-dropdown]',$tag).click(function(event){event.stopPropagation()});
-					$tag.attr('onClick','').unbind('click');
+					$('[data-dropdown]',$tag).off('click.dropdown');
+					$('[data-dropdown]',$tag).on('click.dropdown',function(event){event.stopPropagation()});
+					$tag.attr('onClick','').off('click.dropdown');
 					setTimeout(function(){
-						$('#appView').off('click').on('click',function() {
+						$('#appView').off('click.dropdown').on('click.dropdown',function() {
 							_app.ext.store_cc.a.hideDropDownClick($tag);
 						});
 					}, 500);
@@ -559,8 +559,8 @@ var store_cc = function(_app) {
 			hideDropDownClick : function($tag){
 				//_app.u.dump('hideClick');
 				if(this.hideDropDown($tag)){
-					$tag.click(function(){_app.ext.store_cc.a.showDropDownClick($(this));});
-					$('#appView').off('click');
+					$tag.on('click.dropdown',function(){_app.ext.store_cc.a.showDropDownClick($(this));});
+					$('#appView').off('click.dropdown');
 				}
 			},
 			
