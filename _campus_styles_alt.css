@@ -19,8 +19,8 @@ body {font-family:Oxygen, Helvetica, sans-serif;}
 .quickview, .searchResultsProduct .quickView {display:none;}
 input[type='search'] {
 	-webkit-appearance:none;
-	-webkit-border-radius:5px 0 0 5px;
-	border-radius:5px 0 0 5px;
+	-webkit-border-radius:0;
+	border-radius:0;
 }
 
 .clear {clear:both;}

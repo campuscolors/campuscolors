@@ -79,7 +79,7 @@ var store_cc = function(_app) {
 					$.extend(handlePogs.prototype,_app.ext.store_cc.variations);
 
 					_app.ext.store_cc.u.runHeaderCarousel();
-					_app.ext.store_cc.u.swipeMobileNav($(".mobileSlideMenu"));
+		//			_app.ext.store_cc.u.swipeMobileNav($(".mobileSlideMenu"));
 					_app.ext.store_cc.u.runFooterCarousel();
 					
 					//make sure minicart stays up to date. 
