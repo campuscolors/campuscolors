@@ -120,7 +120,7 @@ $(document).ready(function(){
 	if(!paramStr || paramStr.indexOf('_escaped_fragment_') < 0){
 		window.myApp = new initApp({
 			"_robotHasGreeted" : false, <!-- versionhere -->
-			"release":"201408.20141021181800",  //increment this  with each change. should solve caching issues. format: YYYYMMDDHHMMSS
+			"release":"201408.20141022001200",  //increment this  with each change. should solve caching issues. format: YYYYMMDDHHMMSS
 			"_clientid":"zmvc", //zmvc for store app, 1pc for one page checkout.
 			"baseURL":baseURL, //used in non-local mode.
 			"checkoutAuthMode" : "active",//can be passive, active or required
@@ -3702,16 +3702,16 @@ This is the template used both within a dialog and inline, unless implicitly ove
 
 		<div>
 			<!-- qty: <input data-tlc="cco#cartitemqty  - -legacy;" class="qtyInput numberInput" data-app-change="cco|cartItemUpdateExec" data-bind="format:cartItemQty;extension:cco;useParentData:true;" name="quantity" type="number"> -->
-			<span class="displayNone" data-cart-show='select'>qty: </span>
-			<span data-select-container="1"><!-- select list added here through store_cc#cartitemqty on input tag below--></span>
+			<div class="qtyAligner"><span class="displayNone" data-cart-show='select'>qty: </span></div>
+			<span class="floatLeft" data-select-container="1"><!-- select list added here through store_cc#cartitemqty on input tag below--></span>
 			<span class="displayNone" data-cart-show='asm'>qty: </span>
 			<input class="qtyInput numberInput displayNone" data-app-change="cco|cartItemUpdateExec" name="quantity" type="number"> <!-- data-tlc="bind $var '.'; store_cc#cartitemqty;" -->
 			<button class="displayNone">update</button><!-- here to stop 'enter' in input above from closing modal -->
-			<span data-tlc="bind $var '.price'; if (is $var --notblank;) {{ format --currency='USD'; format --prepend=' x '; apply --append;}};"></span>
-			<span data-tlc="bind $var '.extended'; if (is $var --notblank;) {{format --currency='USD';  format --prepend='= '; apply --append;}};"></span>
+			<div class="qtyAligner"><span data-tlc="bind $var '.price'; if (is $var --notblank;) {{ format --currency='USD'; format --prepend=' x '; apply --append;}};"></span></div>
+			<div class="qtyAligner"><span data-tlc="bind $var '.extended'; if (is $var --notblank;) {{format --currency='USD';  format --prepend=' = '; apply --append;}};"></span></div>
 		</div>
 
-		<div data-tlc="bind $var '.%options'; controller#selectedoptionsdisplay --legacy;  if (is $var --notblank;) {{apply --append;}};" class="ztable_row_small prodOptions"></div>
+		<div data-tlc="bind $var '.%options'; controller#selectedoptionsdisplay --legacy;  if (is $var --notblank;) {{apply --append;}};" class="ztable_row_small prodOptions clear"></div>
 	</li>
 </ul>
 

@@ -402,8 +402,9 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 
 
 /* CART / CART LIST */
+.qtyAligner {position:relative; top:3px; float:left; margin:0 4px 0 0;}
 .ccButton .ui-button-text {COLOR:#000000;}
-.cartQtySelectWrapper {display:inline; width:56px; display:inline-block; overflow:hidden; position:relative; top:7px;}
+.cartQtySelectWrapper {display:inline; width:56px; display:inline-block; overflow:hidden; position:relative; top:3px; margin:0 4px 0 0;}
 .qtySelect.cartQtySelect {height:auto; margin:0; padding:0; background-position:25px -470px;}
 .cartSummaryTotalsContainer .ui-widget .cartRefreshButton,
 .removeButton.ui-button.ui-button-icon-only {height:20px; width:20px; margin:0;}
