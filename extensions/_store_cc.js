@@ -1945,7 +1945,7 @@ var store_cc = function(_app) {
 				var prod = _app.data["appProductGet|"+pid];
 				var variationValue = $ele.data("variationval");
 				var variation = pid + ":" + variationValue;
-				var max = prod["@inventory"][variation].AVAILABLE;
+				var max = prod["@inventory"][variation].AVAILABLE; dump('available'); dump(max);
 				var $form = $ele.closest("form");
 				var $select = $("[data-select='qty']",$form);
 				var $input = $("input[name=qty]",$form);
@@ -1960,7 +1960,7 @@ var store_cc = function(_app) {
 				$select.attr("data-option-selected",variation);
 				//if there is more than one avialable there will need to be more than the default option
 				if(max > 1) {
-					for(var i = 2; i < max; i++) {
+					for(var i = 2; i <= max; i++) {
 						var $option = $("<option value="+i+">"+[i]+"</option>");
 						$option.appendTo($select);
 					}
