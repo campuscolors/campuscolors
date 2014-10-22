@@ -476,9 +476,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.standardNav .slideMenuBorder {border:none; border-radius:0; padding:0; margin:0 auto;}
 	.standardNav .levelOne.slideTitle {display:none;}
 	.standardNav .levelOne {width:86px; padding:10px 5px; float:left; border:none; color:#781c2b; text-align:center; font-size:1em; text-shadow:2px 2px 2px #cccccc; cursor:pointer; font-weight:bold; text-decoration:none;}
-	.standardNav .levelOne:hover {background:#781c2b; color:#fbe143; box-shadow:2px 2px 0 0 #cccccc; text-shadow:2px 2px 2px #000000;}
 	.mobileSlideMenu .levelOne.oneLevel a {color:#781c2b;}
-	.mobileSlideMenu .levelOne.oneLevel:hover a {color:#fbe143;}
 	.standardNav .levelOne .sprite, .standardNav .levelOne .sprite.openMenu, .mobileSlideMenuClose {display:none;}
 	.standardNav .levelOne .levelTwo {background-color:#781c2b; padding:0 0 0 20px; box-shadow:2px 2px 2px 0 #000000; text-shadow:2px 2px 2px #000000; cursor:default; font-weight:normal;} /* width:217px;  */
 	.standardNav .levelOne .levelTwo a {width:50%; padding:2px 0; font-size:1em; border:none; float:left; text-align:left;}
@@ -592,6 +590,8 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.login, .links, .upperCartWrapper {margin:0.4em auto 0 auto;}
 	.standardNav .levelOne {width:115px;}
 	.headerMid {height:120px;}
+	.standardNav .levelOne:hover {background:#781c2b; color:#fbe143; box-shadow:2px 2px 0 0 #cccccc; text-shadow:2px 2px 2px #000000;}
+	.mobileSlideMenu .levelOne.oneLevel:hover a {color:#fbe143;}
 	.mobileSlideMenu.standardNav.hideOnHome {display:none;}
 	.standardNav .levelOne .levelTwo.teamDrop {width:960px; max-width:960px; column-count:6; -moz-column-count:6; -webkit-column-count:6;} /*columns will be alpha by row in IE9*/
 	.standardNav .levelOne .levelTwo.ncaaDrop {left:-20px;}
