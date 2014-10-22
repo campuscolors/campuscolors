@@ -1097,7 +1097,6 @@ for legacy browsers. That means old browsers will use the anchor to retain 'back
 	
 					case 'company':
 						_app.ext.quickstart.u.showCompany(infoObj);
-/*campus*/		$('.catSideline').accordion();
 						$new = $('#mainContentArea_company');
 						break;
 	

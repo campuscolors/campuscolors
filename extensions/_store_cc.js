@@ -597,7 +597,11 @@ var store_cc = function(_app) {
 					var width = 0;
 					$dropout.show();
 					if($dropout.data('width')){
-						width = screen.width < 1080 ?  $dropout.data('low-width') : $dropout.data('width');
+						if(screen.width < 1080 && screen.width > 959) { width = $dropout.data('low-width'); }
+						else if(screen.width < 960) { width = $dropout.data('tab-width'); }
+						else { width = $dropout.data('width'); }
+						dump(width);
+						//width = screen.width < 1080 ?  $dropout.data('low-width') : $dropout.data('width');
 					} else{
 						$dropout.children().each(function(){
 								width += $(this).outerWidth();
@@ -609,7 +613,10 @@ var store_cc = function(_app) {
 							
 					}
 					if($dropout.data('height')) {
-						var height = $dropout.data('height');
+						var height = 0;
+						if(screen.width < 1080 && screen.width > 959) { height = $dropout.data('low-height'); }
+						else if(screen.width < 960) { height = $dropout.data('tab-height'); }
+						else { height = $dropout.data('height'); }
 						$('.scrollDropout',$tag).css('height',height+"px");
 					}
 					$dropout.stop().animate({"width":width+"px"}, 500);

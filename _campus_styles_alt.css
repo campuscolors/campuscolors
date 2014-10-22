@@ -373,12 +373,19 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 #locationsArticle a {color:#781c2b; text-decoration:none;}
 #locationsArticle a:hover {#194835;}
 
-.catSideline {width:290px; border:2px solid #cccccc; box-shadow:2px 2px 0 0 #cccccc;}
-.catSideline .title {text-align:center; padding:5px 0; color:#ffffff; margin:0;}
-.catSideline .ui-accordion-content {border:none; background:none;}
-.catSideline span.ui-accordion-header-icon {display:none;}
-.catSideline li {padding:5px 0;}
-.catSideline a {color:#000000;}
+.catSideline {height:400px; width:180px; margin:0 auto;}
+.catSideline .homeVertNav {width:180px; padding:5px 4px 0 4px; position:relative;}
+.vertNavBorder {border-left:3px solid #ffffff; border-right:3px solid #ffffff; border-top:3px solid #ffffff; border-radius:4px 4px 0 0; pading:0 0 11px 0;}
+.catSideline .homeVertNav .vertLinkCont, .catSideline .vertNavTitle {margin-left:13%; margin-right:33%; position:relative;}
+.catSideline .homeVertNav .vertLinkCont.vertNavLast {padding:0 0 5px 0;}
+.vertNavArrow {height:auto; max-width:100%; position:absolute; bottom:-39px; right:0;}
+.vertDropout {width:0; position:absolute; top:-39px; left:100px; z-index:1003; border-radius:4px; overflow:hidden;}
+.vertDropout .dropoutPositioning {padding:0 0 0 32px;}
+.vertDropout .dropoutVertNavCont {padding:5px; border-radius:4px; background:#781c2b;}
+.vertDropout .vertNavBorder {border:2px solid #ffffff; border-radius:4px; padding:20px;}
+.vertDropout .sprite {height:82px; width:32px; position:absolute; top:12px; left:7px; background-position:-467px -50px;}
+.vertDropout .scrollDropout {column-count:4; -moz-column-count:4; -webkit-column-count:4;} /*columns will be alpha by row in IE9*/
+.dropLinkCont {height:18px; width:135px; margin:1px 10px; overflow:hidden;  padding:2px 0; font-size:0.7em; border:none; text-align:left; float:left; font-weight:normal; text-shadow:2px 2px 2px #000000;}
 
 
 
