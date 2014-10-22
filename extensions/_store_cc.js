@@ -530,14 +530,27 @@ var store_cc = function(_app) {
 			showDropDownClick : function($tag){
 				//_app.u.dump('showClick');
 				if(this.showDropDown($tag)){
-					$('[data-dropdown]',$tag).off('click.dropdown');
-					$('[data-dropdown]',$tag).on('click.dropdown',function(event){event.stopPropagation()});
-					$tag.attr('onClick','').off('click.dropdown');
-					setTimeout(function(){
-						$('#appView').off('click.dropdown').on('click.dropdown',function() {
-							_app.ext.store_cc.a.hideDropDownClick($tag);
-						});
-					}, 500);
+					var iOS = /(iPad|iPhone|iPod)/g.test( navigator.userAgent );
+					if(!iOS) {
+						$('[data-dropdown]',$tag).off('click.dropdown');
+						$('[data-dropdown]',$tag).on('click.dropdown',function(event){event.stopPropagation()});
+						$tag.attr('onClick','').off('click.dropdown');
+						setTimeout(function(){
+							$('#appView').off('click.dropdown').on('click.dropdown',function() {
+								_app.ext.store_cc.a.hideDropDownClick($tag);
+							});
+						}, 500);
+					}
+					else {
+						$('[data-dropdown]',$tag).off('touchstart.dropdown');
+						$('[data-dropdown]',$tag).on('touchstart.dropdown',function(event){event.stopPropagation()});
+						$tag.attr('onClick','').off('touchstart.dropdown');
+						setTimeout(function(){
+							$('#appView').off('touchstart.dropdown').on('touchstart.dropdown',function() {
+								_app.ext.store_cc.a.hideDropDownClick($tag);
+							});
+						}, 500);
+					}
 				}
 			},
 			
@@ -559,8 +572,16 @@ var store_cc = function(_app) {
 			hideDropDownClick : function($tag){
 				//_app.u.dump('hideClick');
 				if(this.hideDropDown($tag)){
-					$tag.on('click.dropdown',function(){_app.ext.store_cc.a.showDropDownClick($(this));});
-					$('#appView').off('click.dropdown');
+					var iOS = /(iPad|iPhone|iPod)/g.test( navigator.userAgent );
+					if(!iOS) {
+						$tag.on('click.dropdown',function(){_app.ext.store_cc.a.showDropDownClick($(this));});
+						$('#appView').off('click.dropdown');
+					}
+					else {
+						$("#appversion").css('color','green');
+						$tag.on('touchstart.dropdown',function(){_app.ext.store_cc.a.showDropDownClick($(this));});
+						$('#appView').off('touchstart.dropdown');
+					}
 				}
 			},
 			
