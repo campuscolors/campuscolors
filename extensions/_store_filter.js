@@ -48,106 +48,6 @@ var store_filter = function(_app) {
 				_app.model.addDispatchToQ({"_cmd":"appResource","filename":"elastic_public.json","_tag":{"datapointer":"appResource|elastic_public", "callback":"handleElasticFields","extension":"store_filter"}},'mutable');
 				_app.model.dispatchThis('mutable');
 				
-				function loadPage(id, successCallback, failCallback){
-					var pageObj = _app.ext.store_filter.vars.filterPageLoadQueue[id];
-//		dump('pageObj passed to loadPage in store_filter'); dump(pageObj);
-					if(pageObj){
-						$.getJSON(pageObj.jsonPath+"?_v="+(new Date()).getTime(), function(json){
-							_app.ext.store_filter.filterData[pageObj.id] = json;
-							if(typeof successCallback == 'function'){
-								successCallback();
-								}
-							})
-							.fail(function(){
-								dump("FILTER DATA FOR PAGE: "+pageObj.id+" UNAVAILABLE AT PATH: "+pageObj.jsonPath);
-								if(typeof failCallback == 'function'){
-									failCallback();
-									}
-								});
-						}
-					else {
-						if(typeof failCallback == 'function'){
-							failCallback();
-							}
-						}
-					};
-					
-				function queuePage(pageObj){
-					_app.ext.store_filter.vars.filterPageLoadQueue[pageObj.id] = pageObj;
-					};
-				
-				for(var i in _app.ext.store_filter.vars.filterPages){
-					queuePage(_app.ext.store_filter.vars.filterPages[i]);
-					}
-				_app.ext.store_filter.vars.filterPages = {push : queuePage}
-				
-				function showPage(routeObj){
-//		dump('START showPage'); dump(routeObj);
-					routeObj.params.templateid = routeObj.params.templateID || "filteredSearchTemplate";
-					routeObj.params.dataset = $.extend(true, {}, _app.ext.store_filter.filterData[routeObj.params.id]);
-//		dump('routeObj.params.dataset'); dump(routeObj.params.id); dump(routeObj.params.dataset);
-					
-					var optStrs = routeObj.params.dataset.optionList;
-					routeObj.params.dataset.options = routeObj.params.dataset.options || {};
-					for(var i in optStrs){
-						var o = optStrs[i];
-						if(_app.ext.store_filter.vars.elasticFields[o]){
-							routeObj.params.dataset.options[o] = $.extend(true, {}, _app.ext.store_filter.vars.elasticFields[o]);
-							if(routeObj.hashParams[o]){
-								var values = routeObj.hashParams[o].split('|');
-								for(var i in routeObj.params.dataset.options[o].options){
-									var option = routeObj.params.dataset.options[o].options[i];
-									if($.inArray(option.v, values) >= 0){
-										option.checked = "checked";
-										}
-									}
-								}
-							}
-						else {
-							dump("Unrecognized option "+o+" on filter page "+routeObj.params.id);
-							}
-						}
-					routeObj.params.loadFullList = _app.ext.seo_robots.u.isRobotPresent();
-					showContent('static',routeObj.params);
-					}
-					
-				_app.router.addAlias('filter', function(routeObj){
-		dump('ADD ALIAS filter callback routeObj'); dump(routeObj.params); 
-		
-	//	var data = $.grep(_app.ext.store_cc.vars.nhl.pages, function(e,i) {
-	//	var data = $.grep(routeObj.params.dataset, function(e,i) {
-//			dump('appendHash data & e: '); dump(e); 
-	//		return e.id == routeObj.params.filterid;
-	//	})[0];
-		
-					if(_app.ext.store_filter.filterData[routeObj.params.id]){
-						showPage(routeObj);
-						}
-					else {
-						loadPage(
-							routeObj.params.id, 
-							function(){showPage(routeObj);}, 
-							function(){showContent('404');}
-							);
-						}
-					});
-				
-				_app.router.addAlias('brandFilter', function(routeObj){
-					routeObj.params.templateID = "filteredSearchTemplateBrand"
-					if(_app.ext.store_filter.filterData[routeObj.params.id]){
-						showPage(routeObj);
-						}
-					else {
-						loadPage(
-							routeObj.params.id, 
-							function(){showPage(routeObj);}, 
-							function(){showContent('404');}
-							);
-						}
-					});
-				
-				//_app.router.appendHash({'type':'match','route':'filter/{{id}}*','callback':});
-				
 				//if there is any functionality required for this extension to load, put it here. such as a check for async google, the FB object, etc. return false if dependencies are not present. don't check for other extensions.
 				r = true;
 
@@ -157,16 +57,6 @@ var store_filter = function(_app) {
 //errors will get reported for this callback as part of the extensions loading.  This is here for extra error handling purposes.
 //you may or may not need it.
 				_app.u.dump('BEGIN store_filter.callbacks.init.onError');
-				}
-			},
-		attachEventHandlers : {
-			onSuccess : function(){
-				_app.templates.filteredSearchTemplate.on('complete.filter', function(event, $context, infoObj){
-					//$('form[data-filter=filterList]', $context).trigger('submit');
-					});
-				},
-			onError : function(){
-				_app.u.dump('BEGIN store_filter.callbacks.attachEventHandlers.onError');
 				}
 			},
 		handleElasticFields : {
@@ -437,7 +327,12 @@ var store_filter = function(_app) {
 				_app.model.dispatchThis();
 				
 				}
-			} //e [app Events]
+			}, //e [app Events]
+		couplers : {
+			pushFilterPage : function(args){
+				_app.ext.store_filter.vars.filterPages.push(args);
+				}
+			}
 		} //r object.
 	return r;
 	}

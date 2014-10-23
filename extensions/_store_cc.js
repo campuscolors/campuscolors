@@ -76,237 +76,37 @@ var store_cc = function(_app) {
 			addEventHandlers : {
 				onSuccess : function() {
 				
-					$.extend(handlePogs.prototype,_app.ext.store_cc.variations);
-
-					_app.ext.store_cc.u.runHeaderCarousel();
-		//			_app.ext.store_cc.u.swipeMobileNav($(".mobileSlideMenu"));
-					_app.ext.store_cc.u.runFooterCarousel();
+					/**********************************
+						RYAN-
+						Anything still in this function, I have not yet handled.
+						This callback doesn't get called as part of the load process, though you could call it manually.
+					**********************************/
 					
-					//make sure minicart stays up to date. 
-					_app.ext.store_cc.vars.mcSetInterval = setInterval(function(){
-						_app.ext.quickstart.u.handleMinicartUpdate({'datapointer':'cartDetail|'+_app.model.fetchCartID()});
-					},4000);
-				
-					_app.templates.homepageTemplate.on('complete.store_cc',function(event,$context,infoObj) {
-						$(".mobileSlideMenu.standardNav").addClass("hideOnHome");
-						_app.ext.store_cc.u.showHomepageBanners();
-						_app.ext.store_cc.u.runHomeCarousel($context);
-					});
 					
-					_app.templates.homepageTemplate.on('depart.store_cc',function(event,$context,infoObj) {
-						$(".mobileSlideMenu.standardNav").removeClass("hideOnHome");
-					});
-					
-					_app.templates.filteredSearchTemplate.on('complete.store_cc',function(event,$context,infoObj) {
-						dump('START filteredSearchTemplate.on complete'); dump(infoObj.loadFullList);
-						$('form',$context).data('loadFullList', infoObj.loadFullList).trigger('submit');
-					});
-					
-					_app.templates.productTemplate.on('complete.store_cc',function(event,$context,infoObj) {
-						_app.ext.store_cc.u.showRecentlyViewedItems($context);
-						_app.ext.store_cc.u.runPreviousCarousel($context);
-						_app.ext.store_cc.u.showHideVariation($context,infoObj);
-					});
-					
-					_app.templates.productTemplate.on('depart.store_cc',function(event,$context,infoObj) {
-						_app.ext.store_cc.u.addRecentlyViewedItems($context, infoObj.pid);
-					});
-					
+					//createaccount page will be separate template, just change there
 					_app.templates.customerTemplate.on('complete.store_accountcreate',function(event,$context,infoObj) {
 						var $sideline = $('[data-customer-sideline]', $context);
 						if(infoObj.show == "createaccount") { $sideline.hide(); }
 						else { $sideline.show(); }
 					});
 					
+					//I know you've had issues with carts, so I left these here for you to convert and test
 					_app.templates.cartTemplate.on('complete.store_cc',function(event,$context,infoObj) {
 						_app.ext.store_cc.u.cartitemqty($context);
 						_app.ext.store_cc.u.getShipContainerHeight($context);
 					});
 					
 
-					function loadPage(id, successCallback, failCallback){
-//					dump('loadPage id:'); dump(id);
-					var pageObj = _app.ext.store_filter.vars.filterPageLoadQueue[id];
-//					dump('pageObj passed to loadPage in store_filter'); dump(pageObj);
-					if(pageObj){
-						$.getJSON(pageObj.jsonPath+"?_v="+(new Date()).getTime(), function(json){
-							_app.ext.store_filter.filterData[pageObj.id] = json;
-//							dump('this is the json that was stored in filterData'); dump(_app.ext.store_filter.filterData[pageObj.id]);
-							if(typeof successCallback == 'function'){
-								successCallback();
-								}
-							})
-							.fail(function(){
-								dump("FILTER DATA FOR PAGE: "+pageObj.id+" UNAVAILABLE AT PATH: "+pageObj.jsonPath);
-								if(typeof failCallback == 'function'){
-									failCallback();
-									}
-								});
-						}
-					else {
-						if(typeof failCallback == 'function'){
-							failCallback();
-							}
-						}
-					};
 					
-					function showPage(routeObj,parentID){
-//					dump('START showPage'); dump(routeObj);
-					routeObj.params.templateid = routeObj.params.templateID || "filteredSearchTemplate";
-//					dump(parentID);
-					routeObj.params.dataset = $.extend(true, {}, $.grep(_app.ext.store_filter.filterData[parentID].pages,function(e,i){
-						return e.id == routeObj.params.id;
-					})[0]);
-//					dump('routeObj.params.dataset');  dump(routeObj.params.dataset.optionList);
-					
-					var optStrs = routeObj.params.dataset.optionList;
-					routeObj.params.dataset.options = routeObj.params.dataset.options || {};
-					for(var i in optStrs){
-//						dump('optStrs[i]'); dump(optStrs[i]);
-						var o = optStrs[i];
-						if(_app.ext.store_filter.vars.elasticFields[o]){
-							routeObj.params.dataset.options[o] = $.extend(true, {}, _app.ext.store_filter.vars.elasticFields[o]);
-							if(routeObj.hashParams[o]){
-								var values = routeObj.hashParams[o].split('|');
-								for(var i in routeObj.params.dataset.options[o].options){
-									var option = routeObj.params.dataset.options[o].options[i];
-									if($.inArray(option.v, values) >= 0){
-										option.checked = "checked";
-										}
-									}
-								}
-							}
-						else {
-							dump("Unrecognized option "+o+" on filter page "+routeObj.params.id);
-							}
-						}
-					routeObj.params.dataset.breadcrumb = [parentID,routeObj.params.id]	
-					routeObj.params.loadFullList = _app.ext.seo_robots.u.isRobotPresent();
-					showContent('static',routeObj.params);
-					}
-					
-					
-					function showSubPage(routeObj,parentID){
-//					dump('START showSubPage'); dump(routeObj);
-					routeObj.params.templateid = routeObj.params.templateID || "filteredSearchTemplate";
-//					dump(parentID); dump(_app.ext.store_filter.filterData);
-					var filterData = _app.ext.store_filter.filterData[parentID]; //gets the top level data
-//					dump('filtterData after gets top level data'); dump(filterData); dump(routeObj.params.id);
-					filterData = $.grep(filterData.pages,function(e,i){
-						return e.id == routeObj.params.id+"/";	//gets mid level data
-					})[0];
-
-//					dump(filterData);
-					filterData = $.grep(filterData.pages,function(e,i){
-						return e.id == routeObj.params.end+"/";	//gets the lowest level data
-					})[0];
-					routeObj.params.dataset = $.extend(true, {}, filterData);	//deep copy to avoid pass by reference bugs
-					
-					var optStrs = routeObj.params.dataset.optionList;
-					routeObj.params.dataset.options = routeObj.params.dataset.options || {};
-					for(var i in optStrs){
-//						dump('optStrs[i]'); dump(optStrs[i]);
-						var o = optStrs[i];
-						if(_app.ext.store_filter.vars.elasticFields[o]){
-							routeObj.params.dataset.options[o] = $.extend(true, {}, _app.ext.store_filter.vars.elasticFields[o]);
-							if(routeObj.hashParams[o]){
-								var values = routeObj.hashParams[o].split('|');
-								for(var i in routeObj.params.dataset.options[o].options){
-									var option = routeObj.params.dataset.options[o].options[i];
-									if($.inArray(option.v, values) >= 0){
-										option.checked = "checked";
-										}
-									}
-								}
-							}
-						else {
-							dump("Unrecognized option "+o+" on filter page "+routeObj.params.id);
-							}
-						}
-					routeObj.params.loadFullList = _app.ext.seo_robots.u.isRobotPresent();
-					routeObj.params.dataset.breadcrumb = [parentID,routeObj.params.id,routeObj.params.end]
-					routeObj.params.id = routeObj.params.id + "-" + routeObj.params.end;
-					showContent('static',routeObj.params);
-//					 dump('----showContent info: '); dump(routeObj.params.id); dump(routeObj.params.end); dump(routeObj.params.id + "-" + routeObj.params.end); dump(routeObj.params.templateid); dump(routeObj.params.dataset);
-//					showContent('static',{"id" : routeObj.params.id + "-" + routeObj.params.end,"templateID" : routeObj.params.templateid,"dataset" : routeObj.params.dataset});
-					}
 					
 					
 					
 	//TODO : TEST PUSH TO ROBOTS @ THE END OF EACH APPENDhASH
 					
 //ALIAS				
-					_app.router.addAlias('subcat', function(routeObj) {
-//						dump('START subcat alias: '); dump(routeObj);
-						var a = routeObj.pagefilter;
-						var b = routeObj.params.id+'/';
-//						dump('b'); dump(b); 
-			//			showContent('static',{'templateid':'splashPageTemplate','id':b,'dataset':_app.ext.store_cc.vars[a.b]});
-						$.getJSON("filters/apparel/"+a+".json?_v="+(new Date()).getTime(), function(json){
-//								dump('THE SUBCAT JSON IS...'); dump(json);
-								var dataset = $.extend(true, {}, $.grep(json.pages,function(e,i){
-									return e.id == b;
-								})[0]);
-			//					dump('GREP IS: '); dump(dataset);
-								dataset.breadcrumb = [routeObj.pagefilter,routeObj.params.id]
-								showContent('static',{'templateid':'splashPageTemplate','id':routeObj.params.id,'dataset':dataset});
-							})
-							.fail(function() {
-								dump('FILTER DATA FOR ' + a + 'COULD NOT BE LOADED.');
-								showContent('404');
-							});
-					});
+					
 	
-					_app.router.addAlias('filter', function(routeObj){
-//						dump('filter alias routeObj: '); dump(routeObj);
-						//decides if filter JSON is in local var or if it needs to be retrieved
-						var filterpage = routeObj.pagefilter;
-						if(_app.ext.store_filter.filterData[filterpage]){
-//							dump('RUNNING showPage');
-							showPage(routeObj,filterpage);
-						}
-						else {
-//							dump('RUNNING loadPage');
-							loadPage(
-								filterpage, 
-								function(){showPage(routeObj,filterpage);}, 
-								function(){showContent('404');}
-							);
-						}
-					});
 					
-					_app.router.addAlias('subfilter', function(routeObj){
-						//decides if filter JSON is in local var or if it needs to be retrieved
-						var filterpage = routeObj.pagefilter;
-						if(_app.ext.store_filter.filterData[filterpage]){
-//							dump('RUNNING showPage');
-							showSubPage(routeObj,filterpage);
-						}
-						else {
-//							dump('RUNNING loadPage');
-							loadPage(
-								filterpage, 
-								function(){showSubPage(routeObj,filterpage);}, 
-								function(){showContent('404');}
-							);
-						}
-					});
-					
-					//sends passed object of attribs as a showContent search
-					_app.router.addAlias('promo', function(routeObj){
-						var path = routeObj.params.PATH;
-//						dump('promo Alias'); dump(path);
-							$.getJSON("filters/search/"+path+".json?_v="+(new Date()).getTime(), function(json){
-								dump('content shown from json');
-//								dump('THE SEARCH JSON IS...'); dump(routeObj.params);
-								routeObj.params.elasticsearch = json;
-								showContent('search',	routeObj.params);
-							})
-							.fail(function() {
-								dump('FILTER DATA FOR ' + path + 'COULD NOT BE LOADED.');
-								showContent('404');
-							}); 
-					});
 				
 					
 //APPEND
@@ -1231,30 +1031,6 @@ var store_cc = function(_app) {
 /* FILTER SEARCH UTILS */		
 			//for top level category (ie: nhl-apparel) will check if data object has been loaded in vars and show content w/ it if it has,
 			//if not, will get data from the JSON record and showContent w/ that. Shows 404 if data can't be found in vars or JSON record.
-			getCatJSON : function(routeObj) {
-				var route = routeObj.route;
-//				dump('START getCatJSON'); dump(routeObj);
-				var route = route.split('/')[0];
-				
-				if(_app.ext.store_cc.vars[route]) {
-					dump('IT WAS ALREADY THERE...');
-					var filterData = $.extend(true, {}, _app.ext.store_cc.vars[route]);
-					filterData.breadcrumb = [filterData.id];
-					showContent('static',{'templateid':routeObj.templateid,'id':data.id,'dataset':filterData});
-				}
-				else {
-					$.getJSON("filters/apparel/"+route+".json?_v="+(new Date()).getTime(), function(json){
-//						dump('THE CAT JSON IS...'); dump(json);
-						var filterData = $.extend(true, {}, json);
-						filterData.breadcrumb = [filterData.id];
-						showContent('static',{'templateid':routeObj.templateid,'id':json.id,'dataset':filterData});
-					})
-					.fail(function() {
-						dump('FILTER DATA FOR ' + route + 'COULD NOT BE LOADED.');
-						showContent('404');
-					});
-				}
-			},
 			
 			//saves filter to store_filter var, and pushes each page in the filter to robots
 			pushFilter : function(endPath) {
