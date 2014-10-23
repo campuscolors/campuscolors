@@ -428,9 +428,10 @@ function showSubPage(routeObj,parentID){
 	}
 
 _app.router.addAlias('subcat', function(routeObj) {
-	var a = routeObj.pagefilter;
-	var b = routeObj.params.id+'/';
-	$.getJSON("filters/apparel/"+a+".json?_v="+(new Date()).getTime(), function(json){
+	_app.require(['store_cc','store_filter','store_search','store_routing','prodlist_infinite','store_prodlist', 'templates.html'], function(){
+		var a = routeObj.pagefilter;
+		var b = routeObj.params.id+'/';
+		$.getJSON("filters/apparel/"+a+".json?_v="+(new Date()).getTime(), function(json){
 			var dataset = $.extend(true, {}, $.grep(json.pages,function(e,i){
 				return e.id == b;
 			})[0]);
@@ -442,50 +443,56 @@ _app.router.addAlias('subcat', function(routeObj) {
 			dump('FILTER DATA FOR ' + a + 'COULD NOT BE LOADED.');
 			_app.router.handleURIChange('/404');
 		});
+	});
 });	
 
 _app.router.addAlias('filter', function(routeObj){
-//						dump('filter alias routeObj: '); dump(routeObj);
-	//decides if filter JSON is in local var or if it needs to be retrieved
-	var filterpage = routeObj.pagefilter;
-	if(_app.ext.store_filter.filterData[filterpage]){
-//							dump('RUNNING showPage');
-		showPage(routeObj,filterpage);
-	}
-	else {
-//							dump('RUNNING loadPage');
-		loadPage(
-			filterpage, 
-			function(){showPage(routeObj,filterpage);}, 
-			function(){_app.router.handleURIChange('/404');}
-		);
-	}
+	_app.require(['store_cc','store_filter','store_search','store_routing','prodlist_infinite','store_prodlist', 'templates.html'], function(){
+//		dump('filter alias routeObj: '); dump(routeObj);
+		//decides if filter JSON is in local var or if it needs to be retrieved
+		var filterpage = routeObj.pagefilter;
+			if(_app.ext.store_filter.filterData[filterpage]){
+//			dump('RUNNING showPage');
+			showPage(routeObj,filterpage);
+		}
+		else {
+			dump('RUNNING filter loadPage');
+			loadPage(
+				filterpage, 
+				function(){showPage(routeObj,filterpage);}, 
+				function(){_app.router.handleURIChange('/404');}
+			);
+		}
+	});
 });
 
 _app.router.addAlias('subfilter', function(routeObj){
-	//decides if filter JSON is in local var or if it needs to be retrieved
-	var filterpage = routeObj.pagefilter;
-	if(_app.ext.store_filter.filterData[filterpage]){
-//							dump('RUNNING showPage');
-		showSubPage(routeObj,filterpage);
-	}
-	else {
-//							dump('RUNNING loadPage');
-		loadPage(
-			filterpage, 
-			function(){showSubPage(routeObj,filterpage);}, 
-			function(){_app.router.handleURIChange('/404');}
-		);
-	}
+	_app.require(['store_cc','store_filter','store_search','store_routing','prodlist_infinite','store_prodlist', 'templates.html'], function(){
+		//decides if filter JSON is in local var or if it needs to be retrieved
+		var filterpage = routeObj.pagefilter;
+		if(_app.ext.store_filter.filterData[filterpage]){
+	//							dump('RUNNING showPage');
+			showSubPage(routeObj,filterpage);
+		}
+		else {
+								dump('RUNNING subfilter loadPage');
+			loadPage(
+				filterpage, 
+				function(){showSubPage(routeObj,filterpage);}, 
+				function(){_app.router.handleURIChange('/404');}
+			);
+		}
+	});
 });
 
 //sends passed object of attribs as a showContent search
 _app.router.addAlias('promo', function(routeObj){
-	var path = routeObj.params.PATH;
-//						dump('promo Alias'); dump(path);
+	_app.require(['store_cc','store_filter','store_search','store_routing','prodlist_infinite','store_prodlist', 'templates.html'], function(){
+		var path = routeObj.params.PATH;
+//		dump('promo Alias'); dump(path);
 		$.getJSON("filters/search/"+path+".json?_v="+(new Date()).getTime(), function(json){
 			dump('content shown from json');
-//								dump('THE SEARCH JSON IS...'); dump(routeObj.params);
+//			dump('THE SEARCH JSON IS...'); dump(routeObj.params);
 			routeObj.params.elasticsearch = json;
 			showContent('search',	routeObj.params);
 		})
@@ -493,34 +500,36 @@ _app.router.addAlias('promo', function(routeObj){
 			dump('FILTER DATA FOR ' + path + 'COULD NOT BE LOADED.');
 			_app.router.handleURIChange('/404');
 		}); 
+	});
 });
 
 _app.router.addAlias('root', function(routeObj){
-	var route = routeObj.route;
-	var route = route.split('/')[0];
-	
-	if(_app.ext.store_cc.vars[route]) {
-		dump('IT WAS ALREADY THERE...');
-		var filterData = $.extend(true, {}, _app.ext.store_cc.vars[route]);
-		$.extend(true, routeObj.params, {'templateid':routeObj.templateid,'id':json.id,'dataset':filterData});
-		_app.ext.quickstart.a.newShowContent(routeObj.value,routeObj.params);
-		}
-	else {
-		$.getJSON("filters/apparel/"+route+".json?_v="+(new Date()).getTime(), function(json){
-			json.breadcrumb = [json.id];
-			_app.ext.store_cc.vars[route] = json;
-			//Deep copy into the routeObj.params, and that becomes our new "infoObj"
-			//Need to pass through routeObj.params at this moment, as it is expected to become infoObj
-			//This may change later.
-			$.extend(true, routeObj.params, {'pageType':'static','templateid':routeObj.templateid,'id':json.id,'dataset':json});
+	_app.require(['store_cc','store_filter','store_search','store_routing','prodlist_infinite','store_prodlist', 'templates.html'], function(){
+		var route = routeObj.route;
+		var route = route.split('/')[0];
+
+		if(_app.ext.store_cc.vars[route]) {
+			dump('IT WAS ALREADY THERE...');
+			var filterData = $.extend(true, {}, _app.ext.store_cc.vars[route]);
+			$.extend(true, routeObj.params, {'templateid':routeObj.templateid,'id':json.id,'dataset':filterData});
 			_app.ext.quickstart.a.newShowContent(routeObj.value,routeObj.params);
+		}
+		else {
+			$.getJSON("filters/apparel/"+route+".json?_v="+(new Date()).getTime(), function(json){
+				json.breadcrumb = [json.id];
+				_app.ext.store_cc.vars[route] = json;
+				//Deep copy into the routeObj.params, and that becomes our new "infoObj"
+				//Need to pass through routeObj.params at this moment, as it is expected to become infoObj
+				//This may change later.
+				$.extend(true, routeObj.params, {'pageType':'static','templateid':routeObj.templateid,'id':json.id,'dataset':json});
+				_app.ext.quickstart.a.newShowContent(routeObj.value,routeObj.params);
 			})
-		.fail(function() {
-			dump('FILTER DATA FOR ' + route + 'COULD NOT BE LOADED.');
-			
+			.fail(function() {
+				dump('FILTER DATA FOR ' + route + 'COULD NOT BE LOADED.');
 			});
 		}
 	});
+});
 
 function createFilterPages(root, filter, subfilter){
 	_app.router.appendHash({'type':'exact','route':'/'+root+'/','templateid':'splashPageTemplate','callback':'root'});
@@ -536,6 +545,7 @@ function createFilterPages(root, filter, subfilter){
 createFilterPages('ncaa-apparel-merchandise', true);
 createFilterPages('nfl-apparel-merchandise', true);
 createFilterPages('nba-apparel-merchandise', true);
+createFilterPages('ncaa-team-apparel-merchandise', true, true);
 				//DO THIS FOR ALL THOSE BELOW:	
 					
 					_app.router.appendHash({'type':'exact','route':'/mlb-apparel-merchandise/','templateid':'splashPageTemplate','callback':'root'});
