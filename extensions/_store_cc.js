@@ -1097,10 +1097,10 @@ var store_cc = function(_app) {
 			},
 			
 /* HOMEPAGE UTILS */
-			showHomepageBanners : function() {
-			dump('START showHomepageBanners'); dump(_app.ext.store_cc.vars.homepageBanners[1].featured);
-				var $container = $('.homeBanner', '.homeTemplate');
-				var $featuredContainer = $('[data-home-featured="container"]', '.homeTemplate');
+			showHomepageBanners : function($context) {
+//			dump('START showHomepageBanners'); dump(_app.ext.store_cc.vars.homepageBanners[1].featured);
+				var $container = $('.homeBanner', $context);
+				var $featuredContainer = $('[data-home-featured="container"]', $context);
 				if(!$container.hasClass('bannersRendered')) {
 					if(_app.ext.store_cc.vars.homepageBanners && _app.ext.store_cc.vars.homepageBanners[0].main) {
 						$container.addClass('bannersRendered');
@@ -1113,7 +1113,7 @@ var store_cc = function(_app) {
 							$wrapper.append(_app.ext.store_cc.u.makeBanner(thisBanner,bannerWidth,bannerHeight,"ffffff"));
 							$container.removeClass('loadingBG').append($wrapper);
 						}
-						_app.ext.store_cc.u.runHomeMainBanner($('.homeTemplate'));
+						_app.ext.store_cc.u.runHomeMainBanner($($context));
 					}
 					else {
 						setTimeout(this.showHomepageBanners,250);
@@ -1126,7 +1126,7 @@ var store_cc = function(_app) {
 							var nextBanner = _app.ext.store_cc.vars.homepageBanners[1].featured[j];
 							var bannerWidth = nextBanner.width == "" ? 330 : nextBanner.width;
 							var bannerHeight = nextBanner.height == "" ? 230 : nextBanner.height;
-							var $destination = j == 0 ? $('[data-home-featured="first"]', '.homeTemplate') : $('[data-home-featured="second"]', '.homeTemplate');
+							var $destination = j == 0 ? $('[data-home-featured="first"]', $context) : $('[data-home-featured="second"]', $context);
 							$destination.removeClass('loadingBG').append(_app.ext.store_cc.u.makeBanner(nextBanner,bannerWidth,bannerHeight,"ffffff"));
 							if(nextBanner.label) {
 								var  $label = $("<h2 class='title center'></h2>");
