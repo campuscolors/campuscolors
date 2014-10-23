@@ -255,6 +255,14 @@ _app.router.appendHash({'type':'exact','route':'/shipping_policy/','callback':fu
 		});
 	_app.ext.quickstart.a.newShowContent(routeObj.value,routeObj.params);
 	}});
+_app.router.appendHash({'type':'exact','route':'/store_locations/','callback':function(routeObj){
+	$.extend(routeObj.params,{
+		'pageType':'static',
+		'templateID':'locationTemplate',
+		'require':['templates.html']
+		});
+	_app.ext.quickstart.a.newShowContent(routeObj.value,routeObj.params);
+	}});
 	
 _app.u.bindTemplateEvent('myAccountTemplate','complete.customer',function(event, $context, infoObj){
 	_app.ext.cco.calls.appCheckoutDestinations.init(_app.model.fetchCartID(),{},'mutable'); //needed for country list in address editor.
