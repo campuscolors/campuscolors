@@ -792,9 +792,9 @@ _app.couple('order_create','addOrderCompleteHandler',{
 
 //Generate meta information
 _app.u.bindTemplateEvent(function(){return true;}, 'complete.metainformation',function(event, $context, infoObj){
-	var defaultTitle = "Chicago Cubs Apparel & Merchandise";
+	var defaultTitle = "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!";
 	var titlePrefix = "";
-	var titlePostfix = " | SportsWorldChicago.com";
+	var titlePostfix = " | CampusColors.com";
 	
 	var baseTitle = $('[data-seo-title]', $context).attr('data-seo-title') || defaultTitle;
 	var desc = $('[data-seo-desc]', $context).attr('data-seo-desc') || '';
