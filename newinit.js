@@ -852,11 +852,15 @@ _app.extend({
 	"namespace" : "store_product",
 	"filename" : "extensions/store_product.js"
 	});
-
-
+	
+_app.extend({
+	"namespace" : "tools_zoom",
+	"filename" : "extensions/tools_zoom/tools_zoom.js"
+	});
+	
 _app.couple('quickstart','addPageHandler',{
 	"pageType" : "product",
-	"require" : ['store_product','store_navcats', 'store_routing', 'store_search', 'templates.html', 'jerseypreview'],
+	"require" : ['store_product','store_navcats', 'store_routing', 'store_search', 'templates.html', 'tools_zoom'],
 	"handler" : function($container, infoObj, require){
 		infoObj.deferred = $.Deferred();
 		infoObj.defPipeline.addDeferred(infoObj.deferred);
