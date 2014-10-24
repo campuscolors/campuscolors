@@ -2342,85 +2342,93 @@ if you change these, you should move them above this comment so that when you (o
 			<li><a href="/my_account/" rel="nofollow">MY ACCOUNT</a></li>
 			<li><a href="/change_password/" rel="nofollow">CHANGE PASSWORD</a></li>
 			<li><a href="/my_order_history/" rel="nofollow">ORDER HISTORY</a></li>
-			<li><a href="/my_wishlist/" rel="nofollow">MANAGE LISTS</a></li>
+			<li><a href="/my_wishlist/" rel="nofollow">WISHLIST</a></li>
 			<!-- <li class="hideIfLoggedOut" rel="nofollow"><a href="/customer/logout/">Log Out</a></li> -->
 		</ul>
 	</nav>
 </div>
 
-<div id="newsletterTemplate">
+
+<div id="myAccountTemplate" class="clearfix smallButton wrapper customerTemplate">
+	<div data-tlc="transmogrify --templateid='customerSidelineTemplate'; apply --append;"></div>
 	<div class="mainColumn">
-<!-- .textContentArea is used as a selector because IE8 doesn't play well  with tag type article as a selector -->
-<!-- newsletterArticle is intended for buyers who are not logged in or do not have an account. -->
-		<div id="newsletterArticle" class="displayNone textContentArea">
-			<h1>Subscribe to our Newsletter and Save!</h1>
-			<form action="#" name="subscribeFrm" data-app-submit="quickstart|subscribeSubmit" class='alignedForm'>
-				<fieldset class="userInfo borderNone">
-					<label>
-					<input placeholder="email address" maxlength="50" size="30" required name="email" value="" type="email" data-tlc="bind $var '.customer.login'; if(is $var --notblank;) {{apply --select=$var;}};">
-					</label>
-				</fieldset>
-				<fieldset data-tlc="apply --empty; bind $var '.@lists'; controller#loop --templateid='subscriberListItemTemplate'; apply --append;" class="borderNone subscriberLists"></fieldset>
-				<input class="applyButton" value="Subscribe" type="submit">
-			</form>
-		</div>
-	</div>
-</div>
-<!--
-subscribeListsArticle is used for authenticated buyers.
--->
-		<div id="subscriberListsArticle" class="displayNone textContentArea">
-			<h1>Manage your Subscriptions</h1>
-
-			<form action="#" name="subscribeFrm" data-app-submit="store_crm|buyerUpdate" class='alignedForm' onSubmit="return false">
-				<!-- buyer is logged in. Don't need email/name inputs -->
-				<fieldset data-update-verb='tags' data-tlc="apply --empty; bind $tags '.%info.@tags'; bind $var '.@lists'; controller#loop --templateid='subscriberListItemTemplate'; apply --append;" class="borderNone subscriberLists"></fieldset>
-				<input class="applyButton" value="Subscribe" type="submit">
-			</form>
-
-		</div>
-
-		<div id="myAccountTemplate" class="displayNone textContentArea">
+		<div class="textContentArea">
 			<h1>My Account</h1>
-
 			<section>
-
-<div class="billAddressContainer" data-app-role="addressContainer" data-app-addresstype="bill">
-	<div class="marginBottom">
-		<button class="floatRight applyButton" data-icon-primary="ui-icon-plus" data-app-click="quickstart|showBuyerAddressAdd">New Billing Address</button>
-		<h2>Billing Address(es)</h2>
-	</div>
-	<div data-tlc="bind $var '.@bill'; controller#loop --templateid='billAddressTemplate'; if (is $var --notblank;) {{apply --empty; apply --append;}};" class="billAddresses"></div>
-</div>
-
-<div class="shipAddressContainer" data-app-role="addressContainer" data-app-addresstype="ship">
-	<div class="marginBottom">
-		<button class="floatRight applyButton" data-icon-primary="ui-icon-plus" data-app-click="quickstart|showBuyerAddressAdd">New Shipping Address</button>
-		<h2>Shipping Address(es)</h2>
-	</div>
-	<div data-tlc="bind $var '.@ship'; controller#loop --templateid='shipAddressTemplate'; if (is $var --notblank;) {{apply --empty; apply --append;}};" class="billAddresses"></div>
-</div>
-
-
+				<div class="billAddressContainer" data-app-role="addressContainer" data-app-addresstype="bill">
+					<div class="marginBottom">
+						<button class="floatRight applyButton" data-icon-primary="ui-icon-plus" data-app-click="quickstart|showBuyerAddressAdd">New Billing Address</button>
+						<h2>Billing Address(es)</h2>
+					</div>
+					<div data-tlc="bind $var '.@bill'; controller#loop --templateid='billAddressTemplate'; if (is $var --notblank;) {{apply --empty; apply --append;}};" class="billAddresses"></div>
+				</div>
+				<div class="shipAddressContainer" data-app-role="addressContainer" data-app-addresstype="ship">
+					<div class="marginBottom">
+						<button class="floatRight applyButton" data-icon-primary="ui-icon-plus" data-app-click="quickstart|showBuyerAddressAdd">New Shipping Address</button>
+						<h2>Shipping Address(es)</h2>
+					</div>
+					<div data-tlc="bind $var '.@ship'; controller#loop --templateid='shipAddressTemplate'; if (is $var --notblank;) {{apply --empty; apply --append;}};" class="billAddresses"></div>
+				</div>
 			</section>
-
-
 		</div>
+	</div>
+</div>
 
 
-		<div id="ordersArticle" class="displayNone textContentArea">
+<div id="orderHistoryTemplate" class="clearfix smallButton wrapper customerTemplate">
+	<div data-tlc="transmogrify --templateid='customerSidelineTemplate'; apply --append;"></div>
+	<div class="mainColumn">
+		<div class="textContentArea">
 			<h1>Order History</h1>
 			<div data-tlc="bind $var '.@orders'; controller#loop --templateid='orderLineItemTemplate'; if (is $var --notblank;) {{apply --append;}};" data-app-role="orderList" class="ui-accordion ui-widget ui-helper-reset ui-accordion-icons "></div>
 		</div>
+	</div>
+</div>
 
 
-		<div id="invoiceArticle" class="displayNone textContentArea">
+<!--
+subscribeListsArticle is used for authenticated buyers.
+-->
+<div id="subscribeTemplate" class="clearfix smallButton wrapper customerTemplate">
+	<div data-tlc="transmogrify --templateid='customerSidelineTemplate'; apply --append;"></div>
+	<div class="mainColumn">
+		<div class="textContentArea">
+			<h1>Manage your Subscriptions</h1>
+			<form action="#" name="subscribeFrm">
+				<fieldset data-tlc="bind $var '.@lists'; store_crm#subscribecheckboxes  --legacy; apply --append;" class="borderNone subscriberLists"></fieldset>
+			</form>
+		</div>
+	</div>
+</div>
+
+
+<div id="newsletterTemplate" class="clearfix smallButton wrapper customerTemplate">
+	<div data-tlc="transmogrify --templateid='customerSidelineTemplate'; apply --append;"></div>
+	<div class="mainColumn">
+<!-- .textContentArea is used as a selector because IE8 doesn't play well  with tag type article as a selector -->
+<!-- newsletterArticle is intended for buyers who are not logged in or do not have an account. -->
+		<div class="textContentArea">
+			<h1>Subscribe to our Newsletter and Save!</h1>
+			<div data-tlc="bind $var '.'; transmogrify --dataset=$var --templateid='subscribeFormTemplate'; apply --append;"></div>
+		</div>
+	</div>
+</div>
+
+
+<div id="customerInvoiceTemplate" class="clearfix smallButton wrapper customerTemplate">
+	<div data-tlc="transmogrify --templateid='customerSidelineTemplate'; apply --append;"></div>
+	<div class="mainColumn">
+		<div class="textContentArea">
 			<div data-tlc="bind $var '.'; transmogrify --dataset=$var --templateid='invoiceTemplate'; apply --append;" data-bind="format:loadsTemplate; loadsTemplate: invoiceTemplate; useParentData:true;"></div>
 		</div>
+	</div>
+</div>
 
 
-
-		<div id="changepasswordArticle" class="displayNone textContentArea">
+<div id="changePasswordTemplate" class="clearfix smallButton wrapper customerTemplate">
+	<div data-tlc="transmogrify --templateid='customerSidelineTemplate'; apply --append;"></div>
+	<div class="mainColumn">
+		<div class="textContentArea">
 			<h1>Change Password</h1>
 			<form action="#" name="changePasswordForm" data-app-submit="quickstart|passwordChangeSubmit" class='alignedForm'>
 			<fieldset class="borderNone">
@@ -2432,19 +2440,35 @@ subscribeListsArticle is used for authenticated buyers.
 			</fieldset>
 			</form>
 		</div>
+	</div>
+</div>
 
-		<div id="listsArticle" class="displayNone textContentArea">
-			<h1>List Manager</h1>
+
+<div id="customerListsTemplate" class="clearfix smallButton wrapper customerTemplate">
+	<div data-tlc="transmogrify --templateid='customerSidelineTemplate'; apply --append;"></div>
+	<div class="mainColumn">
+		<div class="textContentArea">
+			<h1>Wishlist</h1>
 			<div class='applyAccordion' data-tlc="apply --empty; bind $var '.@lists'; controller#loop --templateid='buyerListTemplate'; apply --append; bind $content '.@lists'; controller#loop --templateid='buyerListProdlistContainerTemplate'; apply --append;"></div>
 		</div>
+	</div>
+</div>
 
-		<div id="forgetmeArticle" class="displayNone textContentArea">
+
+<div id="customerForgetMeTemplate" class="clearfix smallButton wrapper customerTemplate">
+	<div data-tlc="transmogrify --templateid='customerSidelineTemplate'; apply --append;"></div>
+	<div class="mainColumn">
+		<div class="textContentArea">
 			<h1>Your 'Forget Me' list</h1>
 			<p>Items on this list will not show up anywhere on the site. Use it for items you never want to see again. If you add an item to the list by mistake, use this page to remove it from the list and it will start re-appearing during your shopping experience.</p>
 			<ul id="forgetmeContainer" class="prodlist ">
 			</ul>
 		</div>
+	</div>
+</div>
 
+		
+		<!-- Create account was moved into the login modal, this will need updating to a template if it is to be used again -->
 		<div id='createaccountArticle' class="displayNone textContentArea wrapper createaccountArticle">
 			<p id='loginMessagingInline' class='marginBottom appMessaging loginMessaging'></p>
 			<div class="logContainer">
@@ -2584,13 +2608,12 @@ subscribeListsArticle is used for authenticated buyers.
 
 
 <ul>
-
-<li id='subscriberListItemTemplate'>
-	<label data-tlc="bind $var '.EXEC_SUMMARY'; apply --attrib='title';" >
-	<input type='checkbox'  data-tlc="bind $id '.ID'; format --prepend='USER#SUB'; apply --attrib='name'; set $checked ''; store_crm#buyersubscribe --id=$id; if(is $checked --notblank;) {{ apply --attrib='checked';}};" /></label>
-	<span data-tlc="bind $var '.NAME'; apply --append;"></span>
-</li>
-
+	<li id='subscriberListItemTemplate'>
+		<label data-tlc="bind $var '.EXEC_SUMMARY'; apply --attrib='title';" >
+			<input type='checkbox'  data-tlc="bind $id '.ID'; format --prepend='USER#SUB'; apply --attrib='name'; set $checked ''; store_crm#buyersubscribe --id=$id; if(is $checked --notblank;) {{ apply --attrib='checked';}};" />
+			<span data-tlc="bind $var '.NAME'; apply --append;"></span>
+		</label>
+	</li>
 </ul>
 
 <h2 id='buyerListTemplate' data-tlc="bind $id '.id'; apply --append; bind $items '.items'; if (is $items --notblank;) {{format --prepend=' (' --append=')'; apply --append;}};"></h2>
@@ -2611,9 +2634,9 @@ subscribeListsArticle is used for authenticated buyers.
 	<!-- the div is use to show a detailed view of a product. should be hidden by default. -->
 	<div class="previewProductDetail displayNone"></div>
 
-	<div class="previewListContainer listWrapper">
+	<div class="previewListContainer">
 		<!-- productListTemplateResults gets loaded into here -->
-		<ul data-app-role="resultsContainer" class="listStyleNone fluidList noPadOrMargin productList ccList"></ul>
+		<ul id="resultsProductListContainer" class="listStyleNone fluidList noPadOrMargin productList"></ul>
 	</div>
 
 </div>
