@@ -10,19 +10,7 @@ _app.u.loadScript(configURI,function(){
 	_app.vars.domain = zGlobals.appSettings.sdomain; //passed in ajax requests.
 	_app.vars.jqurl = (document.location.protocol === 'file:') ? _app.vars.testURL+'jsonapi/' : '/jsonapi/';
 	
-	var startupRequires = ['quickstart','store_cc']
-	
-	if(_robots._robotGreeting){
-		startupRequires.push('seo_robots');
-		}
-	else{
-		_robots.hello = function(){
-			_app.require('seo_robots', function(){
-				//The init process of the ext should change the implementation of _robots.hello before it gets called here
-				_robots.hello();
-				});
-			}
-		}
+	var startupRequires = ['quickstart','store_cc', 'store_filter']
 	
 	_app.require(startupRequires, function(){
 		_app.ext.quickstart.callbacks.startMyProgram.onSuccess();
@@ -38,10 +26,6 @@ _app.u.loadScript(configURI,function(){
 		_app.ext.store_cc.vars.mcSetInterval = setInterval(function(){
 			_app.ext.quickstart.u.handleMinicartUpdate({'datapointer':'cartDetail|'+_app.model.fetchCartID()});
 		},4000);
-		
-		if(_robots._robotGreeting){
-			_app.ext.seo_robots.u.welcomeRobot(_robots._robotGreeting);
-			}
 		});
 	}); //The config.js is dynamically generated.
 	
@@ -529,8 +513,8 @@ function showPage(routeObj,parentID){
 		var o = optStrs[i];
 		if(_app.ext.store_filter.vars.elasticFields[o]){
 			routeObj.params.dataset.options[o] = $.extend(true, {}, _app.ext.store_filter.vars.elasticFields[o]);
-			if(routeObj.hashParams[o]){
-				var values = routeObj.hashParams[o].split('|');
+			if(routeObj.searchParams && routeObj.searchParams[o]){
+				var values = routeObj.searchParams[o].split('|');
 				for(var i in routeObj.params.dataset.options[o].options){
 					var option = routeObj.params.dataset.options[o].options[i];
 					if($.inArray(option.v, values) >= 0){
@@ -573,8 +557,8 @@ function showSubPage(routeObj,parentID){
 		var o = optStrs[i];
 		if(_app.ext.store_filter.vars.elasticFields[o]){
 			routeObj.params.dataset.options[o] = $.extend(true, {}, _app.ext.store_filter.vars.elasticFields[o]);
-			if(routeObj.hashParams[o]){
-				var values = routeObj.hashParams[o].split('|');
+			if(routeObj.searchParams && routeObj.searchParams[o]){
+				var values = routeObj.searchParams[o].split('|');
 				for(var i in routeObj.params.dataset.options[o].options){
 					var option = routeObj.params.dataset.options[o].options[i];
 					if($.inArray(option.v, values) >= 0){
