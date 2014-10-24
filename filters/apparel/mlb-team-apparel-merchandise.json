@@ -10,7 +10,7 @@
 	"pages": [
 		{
 			"id": "american-league/",
-			"link": "#!mlb-team-apparel-merchandise/american-league/",
+			"link": "/mlb-team-apparel-merchandise/american-league/",
 			"img": "teamlogos/AL.jpg",
 			"name": "American League Apparel & Merchandise",
 			"page-title": "American League Apparel & Merchandise | CampusColors.com",
@@ -31,7 +31,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!mlb-team-apparel-merchandise/american-league/all/",
+					"link": "/mlb-team-apparel-merchandise/american-league/all/",
 					"img": "teamlogos/al.jpg",
 					"name": "American League Apparel & Merchandise",
 					"page-title": "American League Apparel & Merchandise | CampusColors.com",
@@ -66,7 +66,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!mlb-team-apparel-merchandise/american-league/shorts/",
+					"link": "/mlb-team-apparel-merchandise/american-league/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "American League Apparel & Merchandise Shorts",
 					"page-title": "American League Apparel & Merchandise Shorts | CampusColors.com",
@@ -101,7 +101,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!mlb-team-apparel-merchandise/american-league/t-shirts/",
+					"link": "/mlb-team-apparel-merchandise/american-league/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "American League Apparel & Merchandise T-Shirts",
 					"page-title": "American League Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -136,7 +136,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!mlb-team-apparel-merchandise/american-league/sweatshirts/",
+					"link": "/mlb-team-apparel-merchandise/american-league/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "American League Apparel & Merchandise Sweatshirts",
 					"page-title": "American League Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -171,7 +171,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!mlb-team-apparel-merchandise/american-league/jerseys/",
+					"link": "/mlb-team-apparel-merchandise/american-league/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "American League Apparel & Merchandise Jerseys",
 					"page-title": "American League Apparel & Merchandise Jerseys | CampusColors.com",
@@ -206,7 +206,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!mlb-team-apparel-merchandise/american-league/pants/",
+					"link": "/mlb-team-apparel-merchandise/american-league/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "American League Apparel & Merchandise Pants",
 					"page-title": "American League Apparel & Merchandise Pants | CampusColors.com",
@@ -241,7 +241,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!mlb-team-apparel-merchandise/american-league/hats/",
+					"link": "/mlb-team-apparel-merchandise/american-league/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "American League Apparel & Merchandise Hats",
 					"page-title": "American League Apparel & Merchandise Hats | CampusColors.com",
@@ -276,7 +276,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!mlb-team-apparel-merchandise/american-league/novelties-and-accessories/",
+					"link": "/mlb-team-apparel-merchandise/american-league/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "American League Apparel & Merchandise Novelties & Accessories",
 					"page-title": "American League Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -293,7 +293,7 @@
 		},
 		{
 			"id": "arizona-diamondbacks/",
-			"link": "#!mlb-team-apparel-merchandise/arizona-diamondbacks/",
+			"link": "/mlb-team-apparel-merchandise/arizona-diamondbacks/",
 			"img": "teamlogos/AZDB.jpg",
 			"name": "Arizona Diamondbacks Apparel & Merchandise",
 			"page-title": "Arizona Diamondbacks Apparel & Merchandise | CampusColors.com",
@@ -314,7 +314,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!mlb-team-apparel-merchandise/arizona-diamondbacks/all/",
+					"link": "/mlb-team-apparel-merchandise/arizona-diamondbacks/all/",
 					"img": "teamlogos/azdb.jpg",
 					"name": "Arizona Diamondbacks Apparel & Merchandise",
 					"page-title": "Arizona Diamondbacks Apparel & Merchandise | CampusColors.com",
@@ -349,7 +349,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!mlb-team-apparel-merchandise/arizona-diamondbacks/shorts/",
+					"link": "/mlb-team-apparel-merchandise/arizona-diamondbacks/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Arizona Diamondbacks Apparel & Merchandise Shorts",
 					"page-title": "Arizona Diamondbacks Apparel & Merchandise Shorts | CampusColors.com",
@@ -384,7 +384,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!mlb-team-apparel-merchandise/arizona-diamondbacks/t-shirts/",
+					"link": "/mlb-team-apparel-merchandise/arizona-diamondbacks/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Arizona Diamondbacks Apparel & Merchandise T-Shirts",
 					"page-title": "Arizona Diamondbacks Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -419,7 +419,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!mlb-team-apparel-merchandise/arizona-diamondbacks/sweatshirts/",
+					"link": "/mlb-team-apparel-merchandise/arizona-diamondbacks/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Arizona Diamondbacks Apparel & Merchandise Sweatshirts",
 					"page-title": "Arizona Diamondbacks Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -454,7 +454,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!mlb-team-apparel-merchandise/arizona-diamondbacks/jerseys/",
+					"link": "/mlb-team-apparel-merchandise/arizona-diamondbacks/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Arizona Diamondbacks Apparel & Merchandise Jerseys",
 					"page-title": "Arizona Diamondbacks Apparel & Merchandise Jerseys | CampusColors.com",
@@ -489,7 +489,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!mlb-team-apparel-merchandise/arizona-diamondbacks/pants/",
+					"link": "/mlb-team-apparel-merchandise/arizona-diamondbacks/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Arizona Diamondbacks Apparel & Merchandise Pants",
 					"page-title": "Arizona Diamondbacks Apparel & Merchandise Pants | CampusColors.com",
@@ -524,7 +524,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!mlb-team-apparel-merchandise/arizona-diamondbacks/hats/",
+					"link": "/mlb-team-apparel-merchandise/arizona-diamondbacks/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Arizona Diamondbacks Apparel & Merchandise Hats",
 					"page-title": "Arizona Diamondbacks Apparel & Merchandise Hats | CampusColors.com",
@@ -559,7 +559,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!mlb-team-apparel-merchandise/arizona-diamondbacks/novelties-and-accessories/",
+					"link": "/mlb-team-apparel-merchandise/arizona-diamondbacks/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Arizona Diamondbacks Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Arizona Diamondbacks Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -576,7 +576,7 @@
 		},
 		{
 			"id": "atlanta-braves/",
-			"link": "#!mlb-team-apparel-merchandise/atlanta-braves/",
+			"link": "/mlb-team-apparel-merchandise/atlanta-braves/",
 			"img": "teamlogos/ATLB.jpg",
 			"name": "Atlanta Braves Apparel & Merchandise",
 			"page-title": "Atlanta Braves Apparel & Merchandise | CampusColors.com",
@@ -597,7 +597,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!mlb-team-apparel-merchandise/atlanta-braves/all/",
+					"link": "/mlb-team-apparel-merchandise/atlanta-braves/all/",
 					"img": "teamlogos/atlb.jpg",
 					"name": "Atlanta Braves Apparel & Merchandise",
 					"page-title": "Atlanta Braves Apparel & Merchandise | CampusColors.com",
@@ -632,7 +632,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!mlb-team-apparel-merchandise/atlanta-braves/shorts/",
+					"link": "/mlb-team-apparel-merchandise/atlanta-braves/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Atlanta Braves Apparel & Merchandise Shorts",
 					"page-title": "Atlanta Braves Apparel & Merchandise Shorts | CampusColors.com",
@@ -667,7 +667,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!mlb-team-apparel-merchandise/atlanta-braves/t-shirts/",
+					"link": "/mlb-team-apparel-merchandise/atlanta-braves/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Atlanta Braves Apparel & Merchandise T-Shirts",
 					"page-title": "Atlanta Braves Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -702,7 +702,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!mlb-team-apparel-merchandise/atlanta-braves/sweatshirts/",
+					"link": "/mlb-team-apparel-merchandise/atlanta-braves/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Atlanta Braves Apparel & Merchandise Sweatshirts",
 					"page-title": "Atlanta Braves Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -737,7 +737,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!mlb-team-apparel-merchandise/atlanta-braves/jerseys/",
+					"link": "/mlb-team-apparel-merchandise/atlanta-braves/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Atlanta Braves Apparel & Merchandise Jerseys",
 					"page-title": "Atlanta Braves Apparel & Merchandise Jerseys | CampusColors.com",
@@ -772,7 +772,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!mlb-team-apparel-merchandise/atlanta-braves/pants/",
+					"link": "/mlb-team-apparel-merchandise/atlanta-braves/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Atlanta Braves Apparel & Merchandise Pants",
 					"page-title": "Atlanta Braves Apparel & Merchandise Pants | CampusColors.com",
@@ -807,7 +807,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!mlb-team-apparel-merchandise/atlanta-braves/hats/",
+					"link": "/mlb-team-apparel-merchandise/atlanta-braves/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Atlanta Braves Apparel & Merchandise Hats",
 					"page-title": "Atlanta Braves Apparel & Merchandise Hats | CampusColors.com",
@@ -842,7 +842,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!mlb-team-apparel-merchandise/atlanta-braves/novelties-and-accessories/",
+					"link": "/mlb-team-apparel-merchandise/atlanta-braves/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Atlanta Braves Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Atlanta Braves Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -859,7 +859,7 @@
 		},
 		{
 			"id": "baltimore-orioles/",
-			"link": "#!mlb-team-apparel-merchandise/baltimore-orioles/",
+			"link": "/mlb-team-apparel-merchandise/baltimore-orioles/",
 			"img": "teamlogos/BAOR.jpg",
 			"name": "Baltimore Orioles Apparel & Merchandise",
 			"page-title": "Baltimore Orioles Apparel & Merchandise | CampusColors.com",
@@ -880,7 +880,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!mlb-team-apparel-merchandise/baltimore-orioles/all/",
+					"link": "/mlb-team-apparel-merchandise/baltimore-orioles/all/",
 					"img": "teamlogos/baor.jpg",
 					"name": "Baltimore Orioles Apparel & Merchandise",
 					"page-title": "Baltimore Orioles Apparel & Merchandise | CampusColors.com",
@@ -915,7 +915,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!mlb-team-apparel-merchandise/baltimore-orioles/shorts/",
+					"link": "/mlb-team-apparel-merchandise/baltimore-orioles/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Baltimore Orioles Apparel & Merchandise Shorts",
 					"page-title": "Baltimore Orioles Apparel & Merchandise Shorts | CampusColors.com",
@@ -950,7 +950,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!mlb-team-apparel-merchandise/baltimore-orioles/t-shirts/",
+					"link": "/mlb-team-apparel-merchandise/baltimore-orioles/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Baltimore Orioles Apparel & Merchandise T-Shirts",
 					"page-title": "Baltimore Orioles Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -985,7 +985,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!mlb-team-apparel-merchandise/baltimore-orioles/sweatshirts/",
+					"link": "/mlb-team-apparel-merchandise/baltimore-orioles/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Baltimore Orioles Apparel & Merchandise Sweatshirts",
 					"page-title": "Baltimore Orioles Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -1020,7 +1020,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!mlb-team-apparel-merchandise/baltimore-orioles/jerseys/",
+					"link": "/mlb-team-apparel-merchandise/baltimore-orioles/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Baltimore Orioles Apparel & Merchandise Jerseys",
 					"page-title": "Baltimore Orioles Apparel & Merchandise Jerseys | CampusColors.com",
@@ -1055,7 +1055,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!mlb-team-apparel-merchandise/baltimore-orioles/pants/",
+					"link": "/mlb-team-apparel-merchandise/baltimore-orioles/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Baltimore Orioles Apparel & Merchandise Pants",
 					"page-title": "Baltimore Orioles Apparel & Merchandise Pants | CampusColors.com",
@@ -1090,7 +1090,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!mlb-team-apparel-merchandise/baltimore-orioles/hats/",
+					"link": "/mlb-team-apparel-merchandise/baltimore-orioles/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Baltimore Orioles Apparel & Merchandise Hats",
 					"page-title": "Baltimore Orioles Apparel & Merchandise Hats | CampusColors.com",
@@ -1125,7 +1125,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!mlb-team-apparel-merchandise/baltimore-orioles/novelties-and-accessories/",
+					"link": "/mlb-team-apparel-merchandise/baltimore-orioles/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Baltimore Orioles Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Baltimore Orioles Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -1142,7 +1142,7 @@
 		},
 		{
 			"id": "baseball-guys/",
-			"link": "#!mlb-team-apparel-merchandise/baseball-guys/",
+			"link": "/mlb-team-apparel-merchandise/baseball-guys/",
 			"img": "teamlogos/BASE.jpg",
 			"name": "Baseball Guys Apparel & Merchandise",
 			"page-title": "Baseball Guys Apparel & Merchandise | CampusColors.com",
@@ -1163,7 +1163,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!mlb-team-apparel-merchandise/baseball-guys/all/",
+					"link": "/mlb-team-apparel-merchandise/baseball-guys/all/",
 					"img": "teamlogos/base.jpg",
 					"name": "Baseball Guys Apparel & Merchandise",
 					"page-title": "Baseball Guys Apparel & Merchandise | CampusColors.com",
@@ -1198,7 +1198,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!mlb-team-apparel-merchandise/baseball-guys/shorts/",
+					"link": "/mlb-team-apparel-merchandise/baseball-guys/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Baseball Guys Apparel & Merchandise Shorts",
 					"page-title": "Baseball Guys Apparel & Merchandise Shorts | CampusColors.com",
@@ -1233,7 +1233,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!mlb-team-apparel-merchandise/baseball-guys/t-shirts/",
+					"link": "/mlb-team-apparel-merchandise/baseball-guys/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Baseball Guys Apparel & Merchandise T-Shirts",
 					"page-title": "Baseball Guys Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -1268,7 +1268,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!mlb-team-apparel-merchandise/baseball-guys/sweatshirts/",
+					"link": "/mlb-team-apparel-merchandise/baseball-guys/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Baseball Guys Apparel & Merchandise Sweatshirts",
 					"page-title": "Baseball Guys Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -1303,7 +1303,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!mlb-team-apparel-merchandise/baseball-guys/jerseys/",
+					"link": "/mlb-team-apparel-merchandise/baseball-guys/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Baseball Guys Apparel & Merchandise Jerseys",
 					"page-title": "Baseball Guys Apparel & Merchandise Jerseys | CampusColors.com",
@@ -1338,7 +1338,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!mlb-team-apparel-merchandise/baseball-guys/pants/",
+					"link": "/mlb-team-apparel-merchandise/baseball-guys/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Baseball Guys Apparel & Merchandise Pants",
 					"page-title": "Baseball Guys Apparel & Merchandise Pants | CampusColors.com",
@@ -1373,7 +1373,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!mlb-team-apparel-merchandise/baseball-guys/hats/",
+					"link": "/mlb-team-apparel-merchandise/baseball-guys/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Baseball Guys Apparel & Merchandise Hats",
 					"page-title": "Baseball Guys Apparel & Merchandise Hats | CampusColors.com",
@@ -1408,7 +1408,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!mlb-team-apparel-merchandise/baseball-guys/novelties-and-accessories/",
+					"link": "/mlb-team-apparel-merchandise/baseball-guys/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Baseball Guys Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Baseball Guys Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -1425,7 +1425,7 @@
 		},
 		{
 			"id": "boston-red-sox/",
-			"link": "#!mlb-team-apparel-merchandise/boston-red-sox/",
+			"link": "/mlb-team-apparel-merchandise/boston-red-sox/",
 			"img": "teamlogos/BOSX.jpg",
 			"name": "Boston Red Sox Apparel & Merchandise",
 			"page-title": "Boston Red Sox Apparel & Merchandise | CampusColors.com",
@@ -1446,7 +1446,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!mlb-team-apparel-merchandise/boston-red-sox/all/",
+					"link": "/mlb-team-apparel-merchandise/boston-red-sox/all/",
 					"img": "teamlogos/bosx.jpg",
 					"name": "Boston Red Sox Apparel & Merchandise",
 					"page-title": "Boston Red Sox Apparel & Merchandise | CampusColors.com",
@@ -1481,7 +1481,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!mlb-team-apparel-merchandise/boston-red-sox/shorts/",
+					"link": "/mlb-team-apparel-merchandise/boston-red-sox/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Boston Red Sox Apparel & Merchandise Shorts",
 					"page-title": "Boston Red Sox Apparel & Merchandise Shorts | CampusColors.com",
@@ -1516,7 +1516,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!mlb-team-apparel-merchandise/boston-red-sox/t-shirts/",
+					"link": "/mlb-team-apparel-merchandise/boston-red-sox/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Boston Red Sox Apparel & Merchandise T-Shirts",
 					"page-title": "Boston Red Sox Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -1551,7 +1551,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!mlb-team-apparel-merchandise/boston-red-sox/sweatshirts/",
+					"link": "/mlb-team-apparel-merchandise/boston-red-sox/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Boston Red Sox Apparel & Merchandise Sweatshirts",
 					"page-title": "Boston Red Sox Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -1586,7 +1586,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!mlb-team-apparel-merchandise/boston-red-sox/jerseys/",
+					"link": "/mlb-team-apparel-merchandise/boston-red-sox/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Boston Red Sox Apparel & Merchandise Jerseys",
 					"page-title": "Boston Red Sox Apparel & Merchandise Jerseys | CampusColors.com",
@@ -1621,7 +1621,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!mlb-team-apparel-merchandise/boston-red-sox/pants/",
+					"link": "/mlb-team-apparel-merchandise/boston-red-sox/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Boston Red Sox Apparel & Merchandise Pants",
 					"page-title": "Boston Red Sox Apparel & Merchandise Pants | CampusColors.com",
@@ -1656,7 +1656,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!mlb-team-apparel-merchandise/boston-red-sox/hats/",
+					"link": "/mlb-team-apparel-merchandise/boston-red-sox/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Boston Red Sox Apparel & Merchandise Hats",
 					"page-title": "Boston Red Sox Apparel & Merchandise Hats | CampusColors.com",
@@ -1691,7 +1691,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!mlb-team-apparel-merchandise/boston-red-sox/novelties-and-accessories/",
+					"link": "/mlb-team-apparel-merchandise/boston-red-sox/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Boston Red Sox Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Boston Red Sox Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -1708,7 +1708,7 @@
 		},
 		{
 			"id": "brooklyn-dodgers/",
-			"link": "#!mlb-team-apparel-merchandise/brooklyn-dodgers/",
+			"link": "/mlb-team-apparel-merchandise/brooklyn-dodgers/",
 			"img": "teamlogos/BRDO.jpg",
 			"name": "Brooklyn Dodgers Apparel & Merchandise",
 			"page-title": "Brooklyn Dodgers Apparel & Merchandise | CampusColors.com",
@@ -1729,7 +1729,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!mlb-team-apparel-merchandise/brooklyn-dodgers/all/",
+					"link": "/mlb-team-apparel-merchandise/brooklyn-dodgers/all/",
 					"img": "teamlogos/brdo.jpg",
 					"name": "Brooklyn Dodgers Apparel & Merchandise",
 					"page-title": "Brooklyn Dodgers Apparel & Merchandise | CampusColors.com",
@@ -1764,7 +1764,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!mlb-team-apparel-merchandise/brooklyn-dodgers/shorts/",
+					"link": "/mlb-team-apparel-merchandise/brooklyn-dodgers/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Brooklyn Dodgers Apparel & Merchandise Shorts",
 					"page-title": "Brooklyn Dodgers Apparel & Merchandise Shorts | CampusColors.com",
@@ -1799,7 +1799,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!mlb-team-apparel-merchandise/brooklyn-dodgers/t-shirts/",
+					"link": "/mlb-team-apparel-merchandise/brooklyn-dodgers/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Brooklyn Dodgers Apparel & Merchandise T-Shirts",
 					"page-title": "Brooklyn Dodgers Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -1834,7 +1834,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!mlb-team-apparel-merchandise/brooklyn-dodgers/sweatshirts/",
+					"link": "/mlb-team-apparel-merchandise/brooklyn-dodgers/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Brooklyn Dodgers Apparel & Merchandise Sweatshirts",
 					"page-title": "Brooklyn Dodgers Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -1869,7 +1869,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!mlb-team-apparel-merchandise/brooklyn-dodgers/jerseys/",
+					"link": "/mlb-team-apparel-merchandise/brooklyn-dodgers/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Brooklyn Dodgers Apparel & Merchandise Jerseys",
 					"page-title": "Brooklyn Dodgers Apparel & Merchandise Jerseys | CampusColors.com",
@@ -1904,7 +1904,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!mlb-team-apparel-merchandise/brooklyn-dodgers/pants/",
+					"link": "/mlb-team-apparel-merchandise/brooklyn-dodgers/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Brooklyn Dodgers Apparel & Merchandise Pants",
 					"page-title": "Brooklyn Dodgers Apparel & Merchandise Pants | CampusColors.com",
@@ -1939,7 +1939,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!mlb-team-apparel-merchandise/brooklyn-dodgers/hats/",
+					"link": "/mlb-team-apparel-merchandise/brooklyn-dodgers/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Brooklyn Dodgers Apparel & Merchandise Hats",
 					"page-title": "Brooklyn Dodgers Apparel & Merchandise Hats | CampusColors.com",
@@ -1974,7 +1974,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!mlb-team-apparel-merchandise/brooklyn-dodgers/novelties-and-accessories/",
+					"link": "/mlb-team-apparel-merchandise/brooklyn-dodgers/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Brooklyn Dodgers Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Brooklyn Dodgers Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -1991,7 +1991,7 @@
 		},
 		{
 			"id": "chicago-cubs/",
-			"link": "#!mlb-team-apparel-merchandise/chicago-cubs/",
+			"link": "/mlb-team-apparel-merchandise/chicago-cubs/",
 			"img": "teamlogos/CHCU.jpg",
 			"name": "Chicago Cubs Apparel & Merchandise",
 			"page-title": "Chicago Cubs Apparel & Merchandise | CampusColors.com",
@@ -2012,7 +2012,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!mlb-team-apparel-merchandise/chicago-cubs/all/",
+					"link": "/mlb-team-apparel-merchandise/chicago-cubs/all/",
 					"img": "teamlogos/chcu.jpg",
 					"name": "Chicago Cubs Apparel & Merchandise",
 					"page-title": "Chicago Cubs Apparel & Merchandise | CampusColors.com",
@@ -2047,7 +2047,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!mlb-team-apparel-merchandise/chicago-cubs/shorts/",
+					"link": "/mlb-team-apparel-merchandise/chicago-cubs/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Chicago Cubs Apparel & Merchandise Shorts",
 					"page-title": "Chicago Cubs Apparel & Merchandise Shorts | CampusColors.com",
@@ -2082,7 +2082,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!mlb-team-apparel-merchandise/chicago-cubs/t-shirts/",
+					"link": "/mlb-team-apparel-merchandise/chicago-cubs/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Chicago Cubs Apparel & Merchandise T-Shirts",
 					"page-title": "Chicago Cubs Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -2117,7 +2117,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!mlb-team-apparel-merchandise/chicago-cubs/sweatshirts/",
+					"link": "/mlb-team-apparel-merchandise/chicago-cubs/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Chicago Cubs Apparel & Merchandise Sweatshirts",
 					"page-title": "Chicago Cubs Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -2152,7 +2152,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!mlb-team-apparel-merchandise/chicago-cubs/jerseys/",
+					"link": "/mlb-team-apparel-merchandise/chicago-cubs/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Chicago Cubs Apparel & Merchandise Jerseys",
 					"page-title": "Chicago Cubs Apparel & Merchandise Jerseys | CampusColors.com",
@@ -2187,7 +2187,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!mlb-team-apparel-merchandise/chicago-cubs/pants/",
+					"link": "/mlb-team-apparel-merchandise/chicago-cubs/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Chicago Cubs Apparel & Merchandise Pants",
 					"page-title": "Chicago Cubs Apparel & Merchandise Pants | CampusColors.com",
@@ -2222,7 +2222,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!mlb-team-apparel-merchandise/chicago-cubs/hats/",
+					"link": "/mlb-team-apparel-merchandise/chicago-cubs/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Chicago Cubs Apparel & Merchandise Hats",
 					"page-title": "Chicago Cubs Apparel & Merchandise Hats | CampusColors.com",
@@ -2257,7 +2257,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!mlb-team-apparel-merchandise/chicago-cubs/novelties-and-accessories/",
+					"link": "/mlb-team-apparel-merchandise/chicago-cubs/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Chicago Cubs Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Chicago Cubs Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -2274,7 +2274,7 @@
 		},
 		{
 			"id": "chicago-white-sox/",
-			"link": "#!mlb-team-apparel-merchandise/chicago-white-sox/",
+			"link": "/mlb-team-apparel-merchandise/chicago-white-sox/",
 			"img": "teamlogos/CHWS.jpg",
 			"name": "Chicago White Sox Apparel & Merchandise",
 			"page-title": "Chicago White Sox Apparel & Merchandise | CampusColors.com",
@@ -2295,7 +2295,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!mlb-team-apparel-merchandise/chicago-white-sox/all/",
+					"link": "/mlb-team-apparel-merchandise/chicago-white-sox/all/",
 					"img": "teamlogos/chws.jpg",
 					"name": "Chicago White Sox Apparel & Merchandise",
 					"page-title": "Chicago White Sox Apparel & Merchandise | CampusColors.com",
@@ -2330,7 +2330,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!mlb-team-apparel-merchandise/chicago-white-sox/shorts/",
+					"link": "/mlb-team-apparel-merchandise/chicago-white-sox/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Chicago White Sox Apparel & Merchandise Shorts",
 					"page-title": "Chicago White Sox Apparel & Merchandise Shorts | CampusColors.com",
@@ -2365,7 +2365,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!mlb-team-apparel-merchandise/chicago-white-sox/t-shirts/",
+					"link": "/mlb-team-apparel-merchandise/chicago-white-sox/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Chicago White Sox Apparel & Merchandise T-Shirts",
 					"page-title": "Chicago White Sox Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -2400,7 +2400,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!mlb-team-apparel-merchandise/chicago-white-sox/sweatshirts/",
+					"link": "/mlb-team-apparel-merchandise/chicago-white-sox/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Chicago White Sox Apparel & Merchandise Sweatshirts",
 					"page-title": "Chicago White Sox Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -2435,7 +2435,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!mlb-team-apparel-merchandise/chicago-white-sox/jerseys/",
+					"link": "/mlb-team-apparel-merchandise/chicago-white-sox/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Chicago White Sox Apparel & Merchandise Jerseys",
 					"page-title": "Chicago White Sox Apparel & Merchandise Jerseys | CampusColors.com",
@@ -2470,7 +2470,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!mlb-team-apparel-merchandise/chicago-white-sox/pants/",
+					"link": "/mlb-team-apparel-merchandise/chicago-white-sox/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Chicago White Sox Apparel & Merchandise Pants",
 					"page-title": "Chicago White Sox Apparel & Merchandise Pants | CampusColors.com",
@@ -2505,7 +2505,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!mlb-team-apparel-merchandise/chicago-white-sox/hats/",
+					"link": "/mlb-team-apparel-merchandise/chicago-white-sox/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Chicago White Sox Apparel & Merchandise Hats",
 					"page-title": "Chicago White Sox Apparel & Merchandise Hats | CampusColors.com",
@@ -2540,7 +2540,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!mlb-team-apparel-merchandise/chicago-white-sox/novelties-and-accessories/",
+					"link": "/mlb-team-apparel-merchandise/chicago-white-sox/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Chicago White Sox Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Chicago White Sox Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -2557,7 +2557,7 @@
 		},
 		{
 			"id": "cincinnati-reds/",
-			"link": "#!mlb-team-apparel-merchandise/cincinnati-reds/",
+			"link": "/mlb-team-apparel-merchandise/cincinnati-reds/",
 			"img": "teamlogos/CNRD.jpg",
 			"name": "Cincinnati Reds Apparel & Merchandise",
 			"page-title": "Cincinnati Reds Apparel & Merchandise | CampusColors.com",
@@ -2578,7 +2578,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!mlb-team-apparel-merchandise/cincinnati-reds/all/",
+					"link": "/mlb-team-apparel-merchandise/cincinnati-reds/all/",
 					"img": "teamlogos/cnrd.jpg",
 					"name": "Cincinnati Reds Apparel & Merchandise",
 					"page-title": "Cincinnati Reds Apparel & Merchandise | CampusColors.com",
@@ -2613,7 +2613,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!mlb-team-apparel-merchandise/cincinnati-reds/shorts/",
+					"link": "/mlb-team-apparel-merchandise/cincinnati-reds/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Cincinnati Reds Apparel & Merchandise Shorts",
 					"page-title": "Cincinnati Reds Apparel & Merchandise Shorts | CampusColors.com",
@@ -2648,7 +2648,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!mlb-team-apparel-merchandise/cincinnati-reds/t-shirts/",
+					"link": "/mlb-team-apparel-merchandise/cincinnati-reds/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Cincinnati Reds Apparel & Merchandise T-Shirts",
 					"page-title": "Cincinnati Reds Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -2683,7 +2683,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!mlb-team-apparel-merchandise/cincinnati-reds/sweatshirts/",
+					"link": "/mlb-team-apparel-merchandise/cincinnati-reds/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Cincinnati Reds Apparel & Merchandise Sweatshirts",
 					"page-title": "Cincinnati Reds Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -2718,7 +2718,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!mlb-team-apparel-merchandise/cincinnati-reds/jerseys/",
+					"link": "/mlb-team-apparel-merchandise/cincinnati-reds/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Cincinnati Reds Apparel & Merchandise Jerseys",
 					"page-title": "Cincinnati Reds Apparel & Merchandise Jerseys | CampusColors.com",
@@ -2753,7 +2753,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!mlb-team-apparel-merchandise/cincinnati-reds/pants/",
+					"link": "/mlb-team-apparel-merchandise/cincinnati-reds/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Cincinnati Reds Apparel & Merchandise Pants",
 					"page-title": "Cincinnati Reds Apparel & Merchandise Pants | CampusColors.com",
@@ -2788,7 +2788,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!mlb-team-apparel-merchandise/cincinnati-reds/hats/",
+					"link": "/mlb-team-apparel-merchandise/cincinnati-reds/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Cincinnati Reds Apparel & Merchandise Hats",
 					"page-title": "Cincinnati Reds Apparel & Merchandise Hats | CampusColors.com",
@@ -2823,7 +2823,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!mlb-team-apparel-merchandise/cincinnati-reds/novelties-and-accessories/",
+					"link": "/mlb-team-apparel-merchandise/cincinnati-reds/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Cincinnati Reds Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Cincinnati Reds Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -2840,7 +2840,7 @@
 		},
 		{
 			"id": "cleveland-indians/",
-			"link": "#!mlb-team-apparel-merchandise/cleveland-indians/",
+			"link": "/mlb-team-apparel-merchandise/cleveland-indians/",
 			"img": "teamlogos/CLIN.jpg",
 			"name": "Cleveland Indians Apparel & Merchandise",
 			"page-title": "Cleveland Indians Apparel & Merchandise | CampusColors.com",
@@ -2861,7 +2861,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!mlb-team-apparel-merchandise/cleveland-indians/all/",
+					"link": "/mlb-team-apparel-merchandise/cleveland-indians/all/",
 					"img": "teamlogos/clin.jpg",
 					"name": "Cleveland Indians Apparel & Merchandise",
 					"page-title": "Cleveland Indians Apparel & Merchandise | CampusColors.com",
@@ -2896,7 +2896,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!mlb-team-apparel-merchandise/cleveland-indians/shorts/",
+					"link": "/mlb-team-apparel-merchandise/cleveland-indians/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Cleveland Indians Apparel & Merchandise Shorts",
 					"page-title": "Cleveland Indians Apparel & Merchandise Shorts | CampusColors.com",
@@ -2931,7 +2931,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!mlb-team-apparel-merchandise/cleveland-indians/t-shirts/",
+					"link": "/mlb-team-apparel-merchandise/cleveland-indians/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Cleveland Indians Apparel & Merchandise T-Shirts",
 					"page-title": "Cleveland Indians Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -2966,7 +2966,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!mlb-team-apparel-merchandise/cleveland-indians/sweatshirts/",
+					"link": "/mlb-team-apparel-merchandise/cleveland-indians/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Cleveland Indians Apparel & Merchandise Sweatshirts",
 					"page-title": "Cleveland Indians Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -3001,7 +3001,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!mlb-team-apparel-merchandise/cleveland-indians/jerseys/",
+					"link": "/mlb-team-apparel-merchandise/cleveland-indians/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Cleveland Indians Apparel & Merchandise Jerseys",
 					"page-title": "Cleveland Indians Apparel & Merchandise Jerseys | CampusColors.com",
@@ -3036,7 +3036,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!mlb-team-apparel-merchandise/cleveland-indians/pants/",
+					"link": "/mlb-team-apparel-merchandise/cleveland-indians/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Cleveland Indians Apparel & Merchandise Pants",
 					"page-title": "Cleveland Indians Apparel & Merchandise Pants | CampusColors.com",
@@ -3071,7 +3071,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!mlb-team-apparel-merchandise/cleveland-indians/hats/",
+					"link": "/mlb-team-apparel-merchandise/cleveland-indians/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Cleveland Indians Apparel & Merchandise Hats",
 					"page-title": "Cleveland Indians Apparel & Merchandise Hats | CampusColors.com",
@@ -3106,7 +3106,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!mlb-team-apparel-merchandise/cleveland-indians/novelties-and-accessories/",
+					"link": "/mlb-team-apparel-merchandise/cleveland-indians/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Cleveland Indians Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Cleveland Indians Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -3123,7 +3123,7 @@
 		},
 		{
 			"id": "colorado-rockies/",
-			"link": "#!mlb-team-apparel-merchandise/colorado-rockies/",
+			"link": "/mlb-team-apparel-merchandise/colorado-rockies/",
 			"img": "teamlogos/CORO.jpg",
 			"name": "Colorado Rockies Apparel & Merchandise",
 			"page-title": "Colorado Rockies Apparel & Merchandise | CampusColors.com",
@@ -3144,7 +3144,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!mlb-team-apparel-merchandise/colorado-rockies/all/",
+					"link": "/mlb-team-apparel-merchandise/colorado-rockies/all/",
 					"img": "teamlogos/coro.jpg",
 					"name": "Colorado Rockies Apparel & Merchandise",
 					"page-title": "Colorado Rockies Apparel & Merchandise | CampusColors.com",
@@ -3179,7 +3179,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!mlb-team-apparel-merchandise/colorado-rockies/shorts/",
+					"link": "/mlb-team-apparel-merchandise/colorado-rockies/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Colorado Rockies Apparel & Merchandise Shorts",
 					"page-title": "Colorado Rockies Apparel & Merchandise Shorts | CampusColors.com",
@@ -3214,7 +3214,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!mlb-team-apparel-merchandise/colorado-rockies/t-shirts/",
+					"link": "/mlb-team-apparel-merchandise/colorado-rockies/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Colorado Rockies Apparel & Merchandise T-Shirts",
 					"page-title": "Colorado Rockies Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -3249,7 +3249,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!mlb-team-apparel-merchandise/colorado-rockies/sweatshirts/",
+					"link": "/mlb-team-apparel-merchandise/colorado-rockies/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Colorado Rockies Apparel & Merchandise Sweatshirts",
 					"page-title": "Colorado Rockies Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -3284,7 +3284,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!mlb-team-apparel-merchandise/colorado-rockies/jerseys/",
+					"link": "/mlb-team-apparel-merchandise/colorado-rockies/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Colorado Rockies Apparel & Merchandise Jerseys",
 					"page-title": "Colorado Rockies Apparel & Merchandise Jerseys | CampusColors.com",
@@ -3319,7 +3319,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!mlb-team-apparel-merchandise/colorado-rockies/pants/",
+					"link": "/mlb-team-apparel-merchandise/colorado-rockies/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Colorado Rockies Apparel & Merchandise Pants",
 					"page-title": "Colorado Rockies Apparel & Merchandise Pants | CampusColors.com",
@@ -3354,7 +3354,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!mlb-team-apparel-merchandise/colorado-rockies/hats/",
+					"link": "/mlb-team-apparel-merchandise/colorado-rockies/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Colorado Rockies Apparel & Merchandise Hats",
 					"page-title": "Colorado Rockies Apparel & Merchandise Hats | CampusColors.com",
@@ -3389,7 +3389,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!mlb-team-apparel-merchandise/colorado-rockies/novelties-and-accessories/",
+					"link": "/mlb-team-apparel-merchandise/colorado-rockies/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Colorado Rockies Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Colorado Rockies Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -3406,7 +3406,7 @@
 		},
 		{
 			"id": "detroit-tigers/",
-			"link": "#!mlb-team-apparel-merchandise/detroit-tigers/",
+			"link": "/mlb-team-apparel-merchandise/detroit-tigers/",
 			"img": "teamlogos/DETG.jpg",
 			"name": "Detroit Tigers Apparel & Merchandise",
 			"page-title": "Detroit Tigers Apparel & Merchandise | CampusColors.com",
@@ -3427,7 +3427,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!mlb-team-apparel-merchandise/detroit-tigers/all/",
+					"link": "/mlb-team-apparel-merchandise/detroit-tigers/all/",
 					"img": "teamlogos/detg.jpg",
 					"name": "Detroit Tigers Apparel & Merchandise",
 					"page-title": "Detroit Tigers Apparel & Merchandise | CampusColors.com",
@@ -3462,7 +3462,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!mlb-team-apparel-merchandise/detroit-tigers/shorts/",
+					"link": "/mlb-team-apparel-merchandise/detroit-tigers/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Detroit Tigers Apparel & Merchandise Shorts",
 					"page-title": "Detroit Tigers Apparel & Merchandise Shorts | CampusColors.com",
@@ -3497,7 +3497,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!mlb-team-apparel-merchandise/detroit-tigers/t-shirts/",
+					"link": "/mlb-team-apparel-merchandise/detroit-tigers/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Detroit Tigers Apparel & Merchandise T-Shirts",
 					"page-title": "Detroit Tigers Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -3532,7 +3532,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!mlb-team-apparel-merchandise/detroit-tigers/sweatshirts/",
+					"link": "/mlb-team-apparel-merchandise/detroit-tigers/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Detroit Tigers Apparel & Merchandise Sweatshirts",
 					"page-title": "Detroit Tigers Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -3567,7 +3567,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!mlb-team-apparel-merchandise/detroit-tigers/jerseys/",
+					"link": "/mlb-team-apparel-merchandise/detroit-tigers/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Detroit Tigers Apparel & Merchandise Jerseys",
 					"page-title": "Detroit Tigers Apparel & Merchandise Jerseys | CampusColors.com",
@@ -3602,7 +3602,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!mlb-team-apparel-merchandise/detroit-tigers/pants/",
+					"link": "/mlb-team-apparel-merchandise/detroit-tigers/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Detroit Tigers Apparel & Merchandise Pants",
 					"page-title": "Detroit Tigers Apparel & Merchandise Pants | CampusColors.com",
@@ -3637,7 +3637,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!mlb-team-apparel-merchandise/detroit-tigers/hats/",
+					"link": "/mlb-team-apparel-merchandise/detroit-tigers/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Detroit Tigers Apparel & Merchandise Hats",
 					"page-title": "Detroit Tigers Apparel & Merchandise Hats | CampusColors.com",
@@ -3672,7 +3672,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!mlb-team-apparel-merchandise/detroit-tigers/novelties-and-accessories/",
+					"link": "/mlb-team-apparel-merchandise/detroit-tigers/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Detroit Tigers Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Detroit Tigers Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -3689,7 +3689,7 @@
 		},
 		{
 			"id": "florida-marlins/",
-			"link": "#!mlb-team-apparel-merchandise/florida-marlins/",
+			"link": "/mlb-team-apparel-merchandise/florida-marlins/",
 			"img": "teamlogos/FLMR.jpg",
 			"name": "Florida Marlins Apparel & Merchandise",
 			"page-title": "Florida Marlins Apparel & Merchandise | CampusColors.com",
@@ -3710,7 +3710,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!mlb-team-apparel-merchandise/florida-marlins/all/",
+					"link": "/mlb-team-apparel-merchandise/florida-marlins/all/",
 					"img": "teamlogos/flmr.jpg",
 					"name": "Florida Marlins Apparel & Merchandise",
 					"page-title": "Florida Marlins Apparel & Merchandise | CampusColors.com",
@@ -3745,7 +3745,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!mlb-team-apparel-merchandise/florida-marlins/shorts/",
+					"link": "/mlb-team-apparel-merchandise/florida-marlins/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Florida Marlins Apparel & Merchandise Shorts",
 					"page-title": "Florida Marlins Apparel & Merchandise Shorts | CampusColors.com",
@@ -3780,7 +3780,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!mlb-team-apparel-merchandise/florida-marlins/t-shirts/",
+					"link": "/mlb-team-apparel-merchandise/florida-marlins/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Florida Marlins Apparel & Merchandise T-Shirts",
 					"page-title": "Florida Marlins Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -3815,7 +3815,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!mlb-team-apparel-merchandise/florida-marlins/sweatshirts/",
+					"link": "/mlb-team-apparel-merchandise/florida-marlins/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Florida Marlins Apparel & Merchandise Sweatshirts",
 					"page-title": "Florida Marlins Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -3850,7 +3850,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!mlb-team-apparel-merchandise/florida-marlins/jerseys/",
+					"link": "/mlb-team-apparel-merchandise/florida-marlins/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Florida Marlins Apparel & Merchandise Jerseys",
 					"page-title": "Florida Marlins Apparel & Merchandise Jerseys | CampusColors.com",
@@ -3885,7 +3885,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!mlb-team-apparel-merchandise/florida-marlins/pants/",
+					"link": "/mlb-team-apparel-merchandise/florida-marlins/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Florida Marlins Apparel & Merchandise Pants",
 					"page-title": "Florida Marlins Apparel & Merchandise Pants | CampusColors.com",
@@ -3920,7 +3920,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!mlb-team-apparel-merchandise/florida-marlins/hats/",
+					"link": "/mlb-team-apparel-merchandise/florida-marlins/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Florida Marlins Apparel & Merchandise Hats",
 					"page-title": "Florida Marlins Apparel & Merchandise Hats | CampusColors.com",
@@ -3955,7 +3955,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!mlb-team-apparel-merchandise/florida-marlins/novelties-and-accessories/",
+					"link": "/mlb-team-apparel-merchandise/florida-marlins/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Florida Marlins Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Florida Marlins Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -3972,7 +3972,7 @@
 		},
 		{
 			"id": "houston-astros/",
-			"link": "#!mlb-team-apparel-merchandise/houston-astros/",
+			"link": "/mlb-team-apparel-merchandise/houston-astros/",
 			"img": "teamlogos/HOAS.jpg",
 			"name": "Houston Astros Apparel & Merchandise",
 			"page-title": "Houston Astros Apparel & Merchandise | CampusColors.com",
@@ -3993,7 +3993,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!mlb-team-apparel-merchandise/houston-astros/all/",
+					"link": "/mlb-team-apparel-merchandise/houston-astros/all/",
 					"img": "teamlogos/hoas.jpg",
 					"name": "Houston Astros Apparel & Merchandise",
 					"page-title": "Houston Astros Apparel & Merchandise | CampusColors.com",
@@ -4028,7 +4028,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!mlb-team-apparel-merchandise/houston-astros/shorts/",
+					"link": "/mlb-team-apparel-merchandise/houston-astros/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Houston Astros Apparel & Merchandise Shorts",
 					"page-title": "Houston Astros Apparel & Merchandise Shorts | CampusColors.com",
@@ -4063,7 +4063,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!mlb-team-apparel-merchandise/houston-astros/t-shirts/",
+					"link": "/mlb-team-apparel-merchandise/houston-astros/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Houston Astros Apparel & Merchandise T-Shirts",
 					"page-title": "Houston Astros Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -4098,7 +4098,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!mlb-team-apparel-merchandise/houston-astros/sweatshirts/",
+					"link": "/mlb-team-apparel-merchandise/houston-astros/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Houston Astros Apparel & Merchandise Sweatshirts",
 					"page-title": "Houston Astros Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -4133,7 +4133,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!mlb-team-apparel-merchandise/houston-astros/jerseys/",
+					"link": "/mlb-team-apparel-merchandise/houston-astros/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Houston Astros Apparel & Merchandise Jerseys",
 					"page-title": "Houston Astros Apparel & Merchandise Jerseys | CampusColors.com",
@@ -4168,7 +4168,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!mlb-team-apparel-merchandise/houston-astros/pants/",
+					"link": "/mlb-team-apparel-merchandise/houston-astros/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Houston Astros Apparel & Merchandise Pants",
 					"page-title": "Houston Astros Apparel & Merchandise Pants | CampusColors.com",
@@ -4203,7 +4203,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!mlb-team-apparel-merchandise/houston-astros/hats/",
+					"link": "/mlb-team-apparel-merchandise/houston-astros/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Houston Astros Apparel & Merchandise Hats",
 					"page-title": "Houston Astros Apparel & Merchandise Hats | CampusColors.com",
@@ -4238,7 +4238,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!mlb-team-apparel-merchandise/houston-astros/novelties-and-accessories/",
+					"link": "/mlb-team-apparel-merchandise/houston-astros/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Houston Astros Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Houston Astros Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -4255,7 +4255,7 @@
 		},
 		{
 			"id": "kansas-city-royals/",
-			"link": "#!mlb-team-apparel-merchandise/kansas-city-royals/",
+			"link": "/mlb-team-apparel-merchandise/kansas-city-royals/",
 			"img": "teamlogos/KCRY.jpg",
 			"name": "Kansas City Royals Apparel & Merchandise",
 			"page-title": "Kansas City Royals Apparel & Merchandise | CampusColors.com",
@@ -4276,7 +4276,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!mlb-team-apparel-merchandise/kansas-city-royals/all/",
+					"link": "/mlb-team-apparel-merchandise/kansas-city-royals/all/",
 					"img": "teamlogos/kcry.jpg",
 					"name": "Kansas City Royals Apparel & Merchandise",
 					"page-title": "Kansas City Royals Apparel & Merchandise | CampusColors.com",
@@ -4311,7 +4311,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!mlb-team-apparel-merchandise/kansas-city-royals/shorts/",
+					"link": "/mlb-team-apparel-merchandise/kansas-city-royals/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Kansas City Royals Apparel & Merchandise Shorts",
 					"page-title": "Kansas City Royals Apparel & Merchandise Shorts | CampusColors.com",
@@ -4346,7 +4346,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!mlb-team-apparel-merchandise/kansas-city-royals/t-shirts/",
+					"link": "/mlb-team-apparel-merchandise/kansas-city-royals/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Kansas City Royals Apparel & Merchandise T-Shirts",
 					"page-title": "Kansas City Royals Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -4381,7 +4381,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!mlb-team-apparel-merchandise/kansas-city-royals/sweatshirts/",
+					"link": "/mlb-team-apparel-merchandise/kansas-city-royals/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Kansas City Royals Apparel & Merchandise Sweatshirts",
 					"page-title": "Kansas City Royals Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -4416,7 +4416,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!mlb-team-apparel-merchandise/kansas-city-royals/jerseys/",
+					"link": "/mlb-team-apparel-merchandise/kansas-city-royals/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Kansas City Royals Apparel & Merchandise Jerseys",
 					"page-title": "Kansas City Royals Apparel & Merchandise Jerseys | CampusColors.com",
@@ -4451,7 +4451,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!mlb-team-apparel-merchandise/kansas-city-royals/pants/",
+					"link": "/mlb-team-apparel-merchandise/kansas-city-royals/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Kansas City Royals Apparel & Merchandise Pants",
 					"page-title": "Kansas City Royals Apparel & Merchandise Pants | CampusColors.com",
@@ -4486,7 +4486,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!mlb-team-apparel-merchandise/kansas-city-royals/hats/",
+					"link": "/mlb-team-apparel-merchandise/kansas-city-royals/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Kansas City Royals Apparel & Merchandise Hats",
 					"page-title": "Kansas City Royals Apparel & Merchandise Hats | CampusColors.com",
@@ -4521,7 +4521,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!mlb-team-apparel-merchandise/kansas-city-royals/novelties-and-accessories/",
+					"link": "/mlb-team-apparel-merchandise/kansas-city-royals/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Kansas City Royals Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Kansas City Royals Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -4538,7 +4538,7 @@
 		},
 		{
 			"id": "los-angeles-dodgers/",
-			"link": "#!mlb-team-apparel-merchandise/los-angeles-dodgers/",
+			"link": "/mlb-team-apparel-merchandise/los-angeles-dodgers/",
 			"img": "teamlogos/LADO.jpg",
 			"name": "Los Angeles Dodgers Apparel & Merchandise",
 			"page-title": "Los Angeles Dodgers Apparel & Merchandise | CampusColors.com",
@@ -4559,7 +4559,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!mlb-team-apparel-merchandise/los-angeles-dodgers/all/",
+					"link": "/mlb-team-apparel-merchandise/los-angeles-dodgers/all/",
 					"img": "teamlogos/lado.jpg",
 					"name": "Los Angeles Dodgers Apparel & Merchandise",
 					"page-title": "Los Angeles Dodgers Apparel & Merchandise | CampusColors.com",
@@ -4594,7 +4594,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!mlb-team-apparel-merchandise/los-angeles-dodgers/shorts/",
+					"link": "/mlb-team-apparel-merchandise/los-angeles-dodgers/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Los Angeles Dodgers Apparel & Merchandise Shorts",
 					"page-title": "Los Angeles Dodgers Apparel & Merchandise Shorts | CampusColors.com",
@@ -4629,7 +4629,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!mlb-team-apparel-merchandise/los-angeles-dodgers/t-shirts/",
+					"link": "/mlb-team-apparel-merchandise/los-angeles-dodgers/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Los Angeles Dodgers Apparel & Merchandise T-Shirts",
 					"page-title": "Los Angeles Dodgers Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -4664,7 +4664,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!mlb-team-apparel-merchandise/los-angeles-dodgers/sweatshirts/",
+					"link": "/mlb-team-apparel-merchandise/los-angeles-dodgers/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Los Angeles Dodgers Apparel & Merchandise Sweatshirts",
 					"page-title": "Los Angeles Dodgers Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -4699,7 +4699,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!mlb-team-apparel-merchandise/los-angeles-dodgers/jerseys/",
+					"link": "/mlb-team-apparel-merchandise/los-angeles-dodgers/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Los Angeles Dodgers Apparel & Merchandise Jerseys",
 					"page-title": "Los Angeles Dodgers Apparel & Merchandise Jerseys | CampusColors.com",
@@ -4734,7 +4734,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!mlb-team-apparel-merchandise/los-angeles-dodgers/pants/",
+					"link": "/mlb-team-apparel-merchandise/los-angeles-dodgers/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Los Angeles Dodgers Apparel & Merchandise Pants",
 					"page-title": "Los Angeles Dodgers Apparel & Merchandise Pants | CampusColors.com",
@@ -4769,7 +4769,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!mlb-team-apparel-merchandise/los-angeles-dodgers/hats/",
+					"link": "/mlb-team-apparel-merchandise/los-angeles-dodgers/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Los Angeles Dodgers Apparel & Merchandise Hats",
 					"page-title": "Los Angeles Dodgers Apparel & Merchandise Hats | CampusColors.com",
@@ -4804,7 +4804,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!mlb-team-apparel-merchandise/los-angeles-dodgers/novelties-and-accessories/",
+					"link": "/mlb-team-apparel-merchandise/los-angeles-dodgers/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Los Angeles Dodgers Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Los Angeles Dodgers Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -4821,7 +4821,7 @@
 		},
 		{
 			"id": "los-angeles-anaheim-angels/",
-			"link": "#!mlb-team-apparel-merchandise/los-angeles-anaheim-angels/",
+			"link": "/mlb-team-apparel-merchandise/los-angeles-anaheim-angels/",
 			"img": "teamlogos/LAAA.jpg",
 			"name": "Los Angeles-Anaheim Angels Apparel & Merchandise",
 			"page-title": "Los Angeles-Anaheim Angels Apparel & Merchandise | CampusColors.com",
@@ -4842,7 +4842,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!mlb-team-apparel-merchandise/los-angeles-anaheim-angels/all/",
+					"link": "/mlb-team-apparel-merchandise/los-angeles-anaheim-angels/all/",
 					"img": "teamlogos/laaa.jpg",
 					"name": "Los Angeles-Anaheim Angels Apparel & Merchandise",
 					"page-title": "Los Angeles-Anaheim Angels Apparel & Merchandise | CampusColors.com",
@@ -4877,7 +4877,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!mlb-team-apparel-merchandise/los-angeles-anaheim-angels/shorts/",
+					"link": "/mlb-team-apparel-merchandise/los-angeles-anaheim-angels/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Los Angeles-Anaheim Angels Apparel & Merchandise Shorts",
 					"page-title": "Los Angeles-Anaheim Angels Apparel & Merchandise Shorts | CampusColors.com",
@@ -4912,7 +4912,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!mlb-team-apparel-merchandise/los-angeles-anaheim-angels/t-shirts/",
+					"link": "/mlb-team-apparel-merchandise/los-angeles-anaheim-angels/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Los Angeles-Anaheim Angels Apparel & Merchandise T-Shirts",
 					"page-title": "Los Angeles-Anaheim Angels Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -4947,7 +4947,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!mlb-team-apparel-merchandise/los-angeles-anaheim-angels/sweatshirts/",
+					"link": "/mlb-team-apparel-merchandise/los-angeles-anaheim-angels/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Los Angeles-Anaheim Angels Apparel & Merchandise Sweatshirts",
 					"page-title": "Los Angeles-Anaheim Angels Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -4982,7 +4982,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!mlb-team-apparel-merchandise/los-angeles-anaheim-angels/jerseys/",
+					"link": "/mlb-team-apparel-merchandise/los-angeles-anaheim-angels/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Los Angeles-Anaheim Angels Apparel & Merchandise Jerseys",
 					"page-title": "Los Angeles-Anaheim Angels Apparel & Merchandise Jerseys | CampusColors.com",
@@ -5017,7 +5017,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!mlb-team-apparel-merchandise/los-angeles-anaheim-angels/pants/",
+					"link": "/mlb-team-apparel-merchandise/los-angeles-anaheim-angels/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Los Angeles-Anaheim Angels Apparel & Merchandise Pants",
 					"page-title": "Los Angeles-Anaheim Angels Apparel & Merchandise Pants | CampusColors.com",
@@ -5052,7 +5052,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!mlb-team-apparel-merchandise/los-angeles-anaheim-angels/hats/",
+					"link": "/mlb-team-apparel-merchandise/los-angeles-anaheim-angels/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Los Angeles-Anaheim Angels Apparel & Merchandise Hats",
 					"page-title": "Los Angeles-Anaheim Angels Apparel & Merchandise Hats | CampusColors.com",
@@ -5087,7 +5087,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!mlb-team-apparel-merchandise/los-angeles-anaheim-angels/novelties-and-accessories/",
+					"link": "/mlb-team-apparel-merchandise/los-angeles-anaheim-angels/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Los Angeles-Anaheim Angels Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Los Angeles-Anaheim Angels Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -5104,7 +5104,7 @@
 		},
 		{
 			"id": "miami-marlins/",
-			"link": "#!mlb-team-apparel-merchandise/miami-marlins/",
+			"link": "/mlb-team-apparel-merchandise/miami-marlins/",
 			"img": "teamlogos/MIMR.jpg",
 			"name": "Miami Marlins Apparel & Merchandise",
 			"page-title": "Miami Marlins Apparel & Merchandise | CampusColors.com",
@@ -5125,7 +5125,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!mlb-team-apparel-merchandise/miami-marlins/all/",
+					"link": "/mlb-team-apparel-merchandise/miami-marlins/all/",
 					"img": "teamlogos/mimr.jpg",
 					"name": "Miami Marlins Apparel & Merchandise",
 					"page-title": "Miami Marlins Apparel & Merchandise | CampusColors.com",
@@ -5160,7 +5160,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!mlb-team-apparel-merchandise/miami-marlins/shorts/",
+					"link": "/mlb-team-apparel-merchandise/miami-marlins/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Miami Marlins Apparel & Merchandise Shorts",
 					"page-title": "Miami Marlins Apparel & Merchandise Shorts | CampusColors.com",
@@ -5195,7 +5195,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!mlb-team-apparel-merchandise/miami-marlins/t-shirts/",
+					"link": "/mlb-team-apparel-merchandise/miami-marlins/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Miami Marlins Apparel & Merchandise T-Shirts",
 					"page-title": "Miami Marlins Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -5230,7 +5230,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!mlb-team-apparel-merchandise/miami-marlins/sweatshirts/",
+					"link": "/mlb-team-apparel-merchandise/miami-marlins/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Miami Marlins Apparel & Merchandise Sweatshirts",
 					"page-title": "Miami Marlins Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -5265,7 +5265,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!mlb-team-apparel-merchandise/miami-marlins/jerseys/",
+					"link": "/mlb-team-apparel-merchandise/miami-marlins/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Miami Marlins Apparel & Merchandise Jerseys",
 					"page-title": "Miami Marlins Apparel & Merchandise Jerseys | CampusColors.com",
@@ -5300,7 +5300,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!mlb-team-apparel-merchandise/miami-marlins/pants/",
+					"link": "/mlb-team-apparel-merchandise/miami-marlins/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Miami Marlins Apparel & Merchandise Pants",
 					"page-title": "Miami Marlins Apparel & Merchandise Pants | CampusColors.com",
@@ -5335,7 +5335,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!mlb-team-apparel-merchandise/miami-marlins/hats/",
+					"link": "/mlb-team-apparel-merchandise/miami-marlins/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Miami Marlins Apparel & Merchandise Hats",
 					"page-title": "Miami Marlins Apparel & Merchandise Hats | CampusColors.com",
@@ -5370,7 +5370,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!mlb-team-apparel-merchandise/miami-marlins/novelties-and-accessories/",
+					"link": "/mlb-team-apparel-merchandise/miami-marlins/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Miami Marlins Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Miami Marlins Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -5387,7 +5387,7 @@
 		},
 		{
 			"id": "milwaukee-brewers/",
-			"link": "#!mlb-team-apparel-merchandise/milwaukee-brewers/",
+			"link": "/mlb-team-apparel-merchandise/milwaukee-brewers/",
 			"img": "teamlogos/MWBR.jpg",
 			"name": "Milwaukee Brewers Apparel & Merchandise",
 			"page-title": "Milwaukee Brewers Apparel & Merchandise | CampusColors.com",
@@ -5408,7 +5408,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!mlb-team-apparel-merchandise/milwaukee-brewers/all/",
+					"link": "/mlb-team-apparel-merchandise/milwaukee-brewers/all/",
 					"img": "teamlogos/mwbr.jpg",
 					"name": "Milwaukee Brewers Apparel & Merchandise",
 					"page-title": "Milwaukee Brewers Apparel & Merchandise | CampusColors.com",
@@ -5443,7 +5443,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!mlb-team-apparel-merchandise/milwaukee-brewers/shorts/",
+					"link": "/mlb-team-apparel-merchandise/milwaukee-brewers/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Milwaukee Brewers Apparel & Merchandise Shorts",
 					"page-title": "Milwaukee Brewers Apparel & Merchandise Shorts | CampusColors.com",
@@ -5478,7 +5478,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!mlb-team-apparel-merchandise/milwaukee-brewers/t-shirts/",
+					"link": "/mlb-team-apparel-merchandise/milwaukee-brewers/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Milwaukee Brewers Apparel & Merchandise T-Shirts",
 					"page-title": "Milwaukee Brewers Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -5513,7 +5513,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!mlb-team-apparel-merchandise/milwaukee-brewers/sweatshirts/",
+					"link": "/mlb-team-apparel-merchandise/milwaukee-brewers/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Milwaukee Brewers Apparel & Merchandise Sweatshirts",
 					"page-title": "Milwaukee Brewers Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -5548,7 +5548,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!mlb-team-apparel-merchandise/milwaukee-brewers/jerseys/",
+					"link": "/mlb-team-apparel-merchandise/milwaukee-brewers/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Milwaukee Brewers Apparel & Merchandise Jerseys",
 					"page-title": "Milwaukee Brewers Apparel & Merchandise Jerseys | CampusColors.com",
@@ -5583,7 +5583,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!mlb-team-apparel-merchandise/milwaukee-brewers/pants/",
+					"link": "/mlb-team-apparel-merchandise/milwaukee-brewers/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Milwaukee Brewers Apparel & Merchandise Pants",
 					"page-title": "Milwaukee Brewers Apparel & Merchandise Pants | CampusColors.com",
@@ -5618,7 +5618,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!mlb-team-apparel-merchandise/milwaukee-brewers/hats/",
+					"link": "/mlb-team-apparel-merchandise/milwaukee-brewers/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Milwaukee Brewers Apparel & Merchandise Hats",
 					"page-title": "Milwaukee Brewers Apparel & Merchandise Hats | CampusColors.com",
@@ -5653,7 +5653,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!mlb-team-apparel-merchandise/milwaukee-brewers/novelties-and-accessories/",
+					"link": "/mlb-team-apparel-merchandise/milwaukee-brewers/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Milwaukee Brewers Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Milwaukee Brewers Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -5670,7 +5670,7 @@
 		},
 		{
 			"id": "minnesota-twins/",
-			"link": "#!mlb-team-apparel-merchandise/minnesota-twins/",
+			"link": "/mlb-team-apparel-merchandise/minnesota-twins/",
 			"img": "teamlogos/MNTW.jpg",
 			"name": "Minnesota Twins Apparel & Merchandise",
 			"page-title": "Minnesota Twins Apparel & Merchandise | CampusColors.com",
@@ -5691,7 +5691,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!mlb-team-apparel-merchandise/minnesota-twins/all/",
+					"link": "/mlb-team-apparel-merchandise/minnesota-twins/all/",
 					"img": "teamlogos/mntw.jpg",
 					"name": "Minnesota Twins Apparel & Merchandise",
 					"page-title": "Minnesota Twins Apparel & Merchandise | CampusColors.com",
@@ -5726,7 +5726,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!mlb-team-apparel-merchandise/minnesota-twins/shorts/",
+					"link": "/mlb-team-apparel-merchandise/minnesota-twins/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Minnesota Twins Apparel & Merchandise Shorts",
 					"page-title": "Minnesota Twins Apparel & Merchandise Shorts | CampusColors.com",
@@ -5761,7 +5761,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!mlb-team-apparel-merchandise/minnesota-twins/t-shirts/",
+					"link": "/mlb-team-apparel-merchandise/minnesota-twins/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Minnesota Twins Apparel & Merchandise T-Shirts",
 					"page-title": "Minnesota Twins Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -5796,7 +5796,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!mlb-team-apparel-merchandise/minnesota-twins/sweatshirts/",
+					"link": "/mlb-team-apparel-merchandise/minnesota-twins/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Minnesota Twins Apparel & Merchandise Sweatshirts",
 					"page-title": "Minnesota Twins Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -5831,7 +5831,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!mlb-team-apparel-merchandise/minnesota-twins/jerseys/",
+					"link": "/mlb-team-apparel-merchandise/minnesota-twins/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Minnesota Twins Apparel & Merchandise Jerseys",
 					"page-title": "Minnesota Twins Apparel & Merchandise Jerseys | CampusColors.com",
@@ -5866,7 +5866,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!mlb-team-apparel-merchandise/minnesota-twins/pants/",
+					"link": "/mlb-team-apparel-merchandise/minnesota-twins/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Minnesota Twins Apparel & Merchandise Pants",
 					"page-title": "Minnesota Twins Apparel & Merchandise Pants | CampusColors.com",
@@ -5901,7 +5901,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!mlb-team-apparel-merchandise/minnesota-twins/hats/",
+					"link": "/mlb-team-apparel-merchandise/minnesota-twins/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Minnesota Twins Apparel & Merchandise Hats",
 					"page-title": "Minnesota Twins Apparel & Merchandise Hats | CampusColors.com",
@@ -5936,7 +5936,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!mlb-team-apparel-merchandise/minnesota-twins/novelties-and-accessories/",
+					"link": "/mlb-team-apparel-merchandise/minnesota-twins/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Minnesota Twins Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Minnesota Twins Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -5953,7 +5953,7 @@
 		},
 		{
 			"id": "major-league-baseball/",
-			"link": "#!mlb-team-apparel-merchandise/major-league-baseball/",
+			"link": "/mlb-team-apparel-merchandise/major-league-baseball/",
 			"img": "teamlogos/MLB.jpg",
 			"name": "Major League Baseball Apparel & Merchandise",
 			"page-title": "Major League Baseball Apparel & Merchandise | CampusColors.com",
@@ -5974,7 +5974,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!mlb-team-apparel-merchandise/major-league-baseball/all/",
+					"link": "/mlb-team-apparel-merchandise/major-league-baseball/all/",
 					"img": "teamlogos/mlb.jpg",
 					"name": "Major League Baseball Apparel & Merchandise",
 					"page-title": "Major League Baseball Apparel & Merchandise | CampusColors.com",
@@ -6009,7 +6009,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!mlb-team-apparel-merchandise/major-league-baseball/shorts/",
+					"link": "/mlb-team-apparel-merchandise/major-league-baseball/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Major League Baseball Apparel & Merchandise Shorts",
 					"page-title": "Major League Baseball Apparel & Merchandise Shorts | CampusColors.com",
@@ -6044,7 +6044,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!mlb-team-apparel-merchandise/major-league-baseball/t-shirts/",
+					"link": "/mlb-team-apparel-merchandise/major-league-baseball/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Major League Baseball Apparel & Merchandise T-Shirts",
 					"page-title": "Major League Baseball Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -6079,7 +6079,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!mlb-team-apparel-merchandise/major-league-baseball/sweatshirts/",
+					"link": "/mlb-team-apparel-merchandise/major-league-baseball/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Major League Baseball Apparel & Merchandise Sweatshirts",
 					"page-title": "Major League Baseball Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -6114,7 +6114,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!mlb-team-apparel-merchandise/major-league-baseball/jerseys/",
+					"link": "/mlb-team-apparel-merchandise/major-league-baseball/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Major League Baseball Apparel & Merchandise Jerseys",
 					"page-title": "Major League Baseball Apparel & Merchandise Jerseys | CampusColors.com",
@@ -6149,7 +6149,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!mlb-team-apparel-merchandise/major-league-baseball/pants/",
+					"link": "/mlb-team-apparel-merchandise/major-league-baseball/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Major League Baseball Apparel & Merchandise Pants",
 					"page-title": "Major League Baseball Apparel & Merchandise Pants | CampusColors.com",
@@ -6184,7 +6184,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!mlb-team-apparel-merchandise/major-league-baseball/hats/",
+					"link": "/mlb-team-apparel-merchandise/major-league-baseball/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Major League Baseball Apparel & Merchandise Hats",
 					"page-title": "Major League Baseball Apparel & Merchandise Hats | CampusColors.com",
@@ -6219,7 +6219,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!mlb-team-apparel-merchandise/major-league-baseball/novelties-and-accessories/",
+					"link": "/mlb-team-apparel-merchandise/major-league-baseball/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Major League Baseball Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Major League Baseball Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -6236,7 +6236,7 @@
 		},
 		{
 			"id": "montreal-expos/",
-			"link": "#!mlb-team-apparel-merchandise/montreal-expos/",
+			"link": "/mlb-team-apparel-merchandise/montreal-expos/",
 			"img": "teamlogos/MOEX.jpg",
 			"name": "Montreal Expos Apparel & Merchandise",
 			"page-title": "Montreal Expos Apparel & Merchandise | CampusColors.com",
@@ -6257,7 +6257,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!mlb-team-apparel-merchandise/montreal-expos/all/",
+					"link": "/mlb-team-apparel-merchandise/montreal-expos/all/",
 					"img": "teamlogos/moex.jpg",
 					"name": "Montreal Expos Apparel & Merchandise",
 					"page-title": "Montreal Expos Apparel & Merchandise | CampusColors.com",
@@ -6292,7 +6292,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!mlb-team-apparel-merchandise/montreal-expos/shorts/",
+					"link": "/mlb-team-apparel-merchandise/montreal-expos/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Montreal Expos Apparel & Merchandise Shorts",
 					"page-title": "Montreal Expos Apparel & Merchandise Shorts | CampusColors.com",
@@ -6327,7 +6327,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!mlb-team-apparel-merchandise/montreal-expos/t-shirts/",
+					"link": "/mlb-team-apparel-merchandise/montreal-expos/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Montreal Expos Apparel & Merchandise T-Shirts",
 					"page-title": "Montreal Expos Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -6362,7 +6362,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!mlb-team-apparel-merchandise/montreal-expos/sweatshirts/",
+					"link": "/mlb-team-apparel-merchandise/montreal-expos/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Montreal Expos Apparel & Merchandise Sweatshirts",
 					"page-title": "Montreal Expos Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -6397,7 +6397,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!mlb-team-apparel-merchandise/montreal-expos/jerseys/",
+					"link": "/mlb-team-apparel-merchandise/montreal-expos/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Montreal Expos Apparel & Merchandise Jerseys",
 					"page-title": "Montreal Expos Apparel & Merchandise Jerseys | CampusColors.com",
@@ -6432,7 +6432,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!mlb-team-apparel-merchandise/montreal-expos/pants/",
+					"link": "/mlb-team-apparel-merchandise/montreal-expos/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Montreal Expos Apparel & Merchandise Pants",
 					"page-title": "Montreal Expos Apparel & Merchandise Pants | CampusColors.com",
@@ -6467,7 +6467,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!mlb-team-apparel-merchandise/montreal-expos/hats/",
+					"link": "/mlb-team-apparel-merchandise/montreal-expos/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Montreal Expos Apparel & Merchandise Hats",
 					"page-title": "Montreal Expos Apparel & Merchandise Hats | CampusColors.com",
@@ -6502,7 +6502,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!mlb-team-apparel-merchandise/montreal-expos/novelties-and-accessories/",
+					"link": "/mlb-team-apparel-merchandise/montreal-expos/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Montreal Expos Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Montreal Expos Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -6519,7 +6519,7 @@
 		},
 		{
 			"id": "new-york-mets/",
-			"link": "#!mlb-team-apparel-merchandise/new-york-mets/",
+			"link": "/mlb-team-apparel-merchandise/new-york-mets/",
 			"img": "teamlogos/NYMT.jpg",
 			"name": "New York Mets Apparel & Merchandise",
 			"page-title": "New York Mets Apparel & Merchandise | CampusColors.com",
@@ -6540,7 +6540,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!mlb-team-apparel-merchandise/new-york-mets/all/",
+					"link": "/mlb-team-apparel-merchandise/new-york-mets/all/",
 					"img": "teamlogos/nymt.jpg",
 					"name": "New York Mets Apparel & Merchandise",
 					"page-title": "New York Mets Apparel & Merchandise | CampusColors.com",
@@ -6575,7 +6575,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!mlb-team-apparel-merchandise/new-york-mets/shorts/",
+					"link": "/mlb-team-apparel-merchandise/new-york-mets/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "New York Mets Apparel & Merchandise Shorts",
 					"page-title": "New York Mets Apparel & Merchandise Shorts | CampusColors.com",
@@ -6610,7 +6610,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!mlb-team-apparel-merchandise/new-york-mets/t-shirts/",
+					"link": "/mlb-team-apparel-merchandise/new-york-mets/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "New York Mets Apparel & Merchandise T-Shirts",
 					"page-title": "New York Mets Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -6645,7 +6645,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!mlb-team-apparel-merchandise/new-york-mets/sweatshirts/",
+					"link": "/mlb-team-apparel-merchandise/new-york-mets/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "New York Mets Apparel & Merchandise Sweatshirts",
 					"page-title": "New York Mets Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -6680,7 +6680,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!mlb-team-apparel-merchandise/new-york-mets/jerseys/",
+					"link": "/mlb-team-apparel-merchandise/new-york-mets/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "New York Mets Apparel & Merchandise Jerseys",
 					"page-title": "New York Mets Apparel & Merchandise Jerseys | CampusColors.com",
@@ -6715,7 +6715,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!mlb-team-apparel-merchandise/new-york-mets/pants/",
+					"link": "/mlb-team-apparel-merchandise/new-york-mets/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "New York Mets Apparel & Merchandise Pants",
 					"page-title": "New York Mets Apparel & Merchandise Pants | CampusColors.com",
@@ -6750,7 +6750,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!mlb-team-apparel-merchandise/new-york-mets/hats/",
+					"link": "/mlb-team-apparel-merchandise/new-york-mets/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "New York Mets Apparel & Merchandise Hats",
 					"page-title": "New York Mets Apparel & Merchandise Hats | CampusColors.com",
@@ -6785,7 +6785,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!mlb-team-apparel-merchandise/new-york-mets/novelties-and-accessories/",
+					"link": "/mlb-team-apparel-merchandise/new-york-mets/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "New York Mets Apparel & Merchandise Novelties & Accessories",
 					"page-title": "New York Mets Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -6802,7 +6802,7 @@
 		},
 		{
 			"id": "new-york-yankees/",
-			"link": "#!mlb-team-apparel-merchandise/new-york-yankees/",
+			"link": "/mlb-team-apparel-merchandise/new-york-yankees/",
 			"img": "teamlogos/NYYK.jpg",
 			"name": "New York Yankees Apparel & Merchandise",
 			"page-title": "New York Yankees Apparel & Merchandise | CampusColors.com",
@@ -6823,7 +6823,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!mlb-team-apparel-merchandise/new-york-yankees/all/",
+					"link": "/mlb-team-apparel-merchandise/new-york-yankees/all/",
 					"img": "teamlogos/nyyk.jpg",
 					"name": "New York Yankees Apparel & Merchandise",
 					"page-title": "New York Yankees Apparel & Merchandise | CampusColors.com",
@@ -6858,7 +6858,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!mlb-team-apparel-merchandise/new-york-yankees/shorts/",
+					"link": "/mlb-team-apparel-merchandise/new-york-yankees/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "New York Yankees Apparel & Merchandise Shorts",
 					"page-title": "New York Yankees Apparel & Merchandise Shorts | CampusColors.com",
@@ -6893,7 +6893,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!mlb-team-apparel-merchandise/new-york-yankees/t-shirts/",
+					"link": "/mlb-team-apparel-merchandise/new-york-yankees/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "New York Yankees Apparel & Merchandise T-Shirts",
 					"page-title": "New York Yankees Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -6928,7 +6928,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!mlb-team-apparel-merchandise/new-york-yankees/sweatshirts/",
+					"link": "/mlb-team-apparel-merchandise/new-york-yankees/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "New York Yankees Apparel & Merchandise Sweatshirts",
 					"page-title": "New York Yankees Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -6963,7 +6963,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!mlb-team-apparel-merchandise/new-york-yankees/jerseys/",
+					"link": "/mlb-team-apparel-merchandise/new-york-yankees/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "New York Yankees Apparel & Merchandise Jerseys",
 					"page-title": "New York Yankees Apparel & Merchandise Jerseys | CampusColors.com",
@@ -6998,7 +6998,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!mlb-team-apparel-merchandise/new-york-yankees/pants/",
+					"link": "/mlb-team-apparel-merchandise/new-york-yankees/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "New York Yankees Apparel & Merchandise Pants",
 					"page-title": "New York Yankees Apparel & Merchandise Pants | CampusColors.com",
@@ -7033,7 +7033,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!mlb-team-apparel-merchandise/new-york-yankees/hats/",
+					"link": "/mlb-team-apparel-merchandise/new-york-yankees/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "New York Yankees Apparel & Merchandise Hats",
 					"page-title": "New York Yankees Apparel & Merchandise Hats | CampusColors.com",
@@ -7068,7 +7068,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!mlb-team-apparel-merchandise/new-york-yankees/novelties-and-accessories/",
+					"link": "/mlb-team-apparel-merchandise/new-york-yankees/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "New York Yankees Apparel & Merchandise Novelties & Accessories",
 					"page-title": "New York Yankees Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -7085,7 +7085,7 @@
 		},
 		{
 			"id": "national-league/",
-			"link": "#!mlb-team-apparel-merchandise/national-league/",
+			"link": "/mlb-team-apparel-merchandise/national-league/",
 			"img": "teamlogos/NL.jpg",
 			"name": "National League Apparel & Merchandise",
 			"page-title": "National League Apparel & Merchandise | CampusColors.com",
@@ -7106,7 +7106,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!mlb-team-apparel-merchandise/national-league/all/",
+					"link": "/mlb-team-apparel-merchandise/national-league/all/",
 					"img": "teamlogos/nl.jpg",
 					"name": "National League Apparel & Merchandise",
 					"page-title": "National League Apparel & Merchandise | CampusColors.com",
@@ -7141,7 +7141,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!mlb-team-apparel-merchandise/national-league/shorts/",
+					"link": "/mlb-team-apparel-merchandise/national-league/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "National League Apparel & Merchandise Shorts",
 					"page-title": "National League Apparel & Merchandise Shorts | CampusColors.com",
@@ -7176,7 +7176,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!mlb-team-apparel-merchandise/national-league/t-shirts/",
+					"link": "/mlb-team-apparel-merchandise/national-league/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "National League Apparel & Merchandise T-Shirts",
 					"page-title": "National League Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -7211,7 +7211,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!mlb-team-apparel-merchandise/national-league/sweatshirts/",
+					"link": "/mlb-team-apparel-merchandise/national-league/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "National League Apparel & Merchandise Sweatshirts",
 					"page-title": "National League Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -7246,7 +7246,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!mlb-team-apparel-merchandise/national-league/jerseys/",
+					"link": "/mlb-team-apparel-merchandise/national-league/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "National League Apparel & Merchandise Jerseys",
 					"page-title": "National League Apparel & Merchandise Jerseys | CampusColors.com",
@@ -7281,7 +7281,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!mlb-team-apparel-merchandise/national-league/pants/",
+					"link": "/mlb-team-apparel-merchandise/national-league/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "National League Apparel & Merchandise Pants",
 					"page-title": "National League Apparel & Merchandise Pants | CampusColors.com",
@@ -7316,7 +7316,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!mlb-team-apparel-merchandise/national-league/hats/",
+					"link": "/mlb-team-apparel-merchandise/national-league/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "National League Apparel & Merchandise Hats",
 					"page-title": "National League Apparel & Merchandise Hats | CampusColors.com",
@@ -7351,7 +7351,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!mlb-team-apparel-merchandise/national-league/novelties-and-accessories/",
+					"link": "/mlb-team-apparel-merchandise/national-league/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "National League Apparel & Merchandise Novelties & Accessories",
 					"page-title": "National League Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -7368,7 +7368,7 @@
 		},
 		{
 			"id": "oakland-athletics/",
-			"link": "#!mlb-team-apparel-merchandise/oakland-athletics/",
+			"link": "/mlb-team-apparel-merchandise/oakland-athletics/",
 			"img": "teamlogos/OAKA.jpg",
 			"name": "Oakland Athletics Apparel & Merchandise",
 			"page-title": "Oakland Athletics Apparel & Merchandise | CampusColors.com",
@@ -7389,7 +7389,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!mlb-team-apparel-merchandise/oakland-athletics/all/",
+					"link": "/mlb-team-apparel-merchandise/oakland-athletics/all/",
 					"img": "teamlogos/oaka.jpg",
 					"name": "Oakland Athletics Apparel & Merchandise",
 					"page-title": "Oakland Athletics Apparel & Merchandise | CampusColors.com",
@@ -7424,7 +7424,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!mlb-team-apparel-merchandise/oakland-athletics/shorts/",
+					"link": "/mlb-team-apparel-merchandise/oakland-athletics/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Oakland Athletics Apparel & Merchandise Shorts",
 					"page-title": "Oakland Athletics Apparel & Merchandise Shorts | CampusColors.com",
@@ -7459,7 +7459,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!mlb-team-apparel-merchandise/oakland-athletics/t-shirts/",
+					"link": "/mlb-team-apparel-merchandise/oakland-athletics/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Oakland Athletics Apparel & Merchandise T-Shirts",
 					"page-title": "Oakland Athletics Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -7494,7 +7494,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!mlb-team-apparel-merchandise/oakland-athletics/sweatshirts/",
+					"link": "/mlb-team-apparel-merchandise/oakland-athletics/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Oakland Athletics Apparel & Merchandise Sweatshirts",
 					"page-title": "Oakland Athletics Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -7529,7 +7529,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!mlb-team-apparel-merchandise/oakland-athletics/jerseys/",
+					"link": "/mlb-team-apparel-merchandise/oakland-athletics/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Oakland Athletics Apparel & Merchandise Jerseys",
 					"page-title": "Oakland Athletics Apparel & Merchandise Jerseys | CampusColors.com",
@@ -7564,7 +7564,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!mlb-team-apparel-merchandise/oakland-athletics/pants/",
+					"link": "/mlb-team-apparel-merchandise/oakland-athletics/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Oakland Athletics Apparel & Merchandise Pants",
 					"page-title": "Oakland Athletics Apparel & Merchandise Pants | CampusColors.com",
@@ -7599,7 +7599,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!mlb-team-apparel-merchandise/oakland-athletics/hats/",
+					"link": "/mlb-team-apparel-merchandise/oakland-athletics/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Oakland Athletics Apparel & Merchandise Hats",
 					"page-title": "Oakland Athletics Apparel & Merchandise Hats | CampusColors.com",
@@ -7634,7 +7634,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!mlb-team-apparel-merchandise/oakland-athletics/novelties-and-accessories/",
+					"link": "/mlb-team-apparel-merchandise/oakland-athletics/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Oakland Athletics Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Oakland Athletics Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -7651,7 +7651,7 @@
 		},
 		{
 			"id": "philadelphia-phillies/",
-			"link": "#!mlb-team-apparel-merchandise/philadelphia-phillies/",
+			"link": "/mlb-team-apparel-merchandise/philadelphia-phillies/",
 			"img": "teamlogos/PHPH.jpg",
 			"name": "Philadelphia Phillies Apparel & Merchandise",
 			"page-title": "Philadelphia Phillies Apparel & Merchandise | CampusColors.com",
@@ -7672,7 +7672,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!mlb-team-apparel-merchandise/philadelphia-phillies/all/",
+					"link": "/mlb-team-apparel-merchandise/philadelphia-phillies/all/",
 					"img": "teamlogos/phph.jpg",
 					"name": "Philadelphia Phillies Apparel & Merchandise",
 					"page-title": "Philadelphia Phillies Apparel & Merchandise | CampusColors.com",
@@ -7707,7 +7707,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!mlb-team-apparel-merchandise/philadelphia-phillies/shorts/",
+					"link": "/mlb-team-apparel-merchandise/philadelphia-phillies/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Philadelphia Phillies Apparel & Merchandise Shorts",
 					"page-title": "Philadelphia Phillies Apparel & Merchandise Shorts | CampusColors.com",
@@ -7742,7 +7742,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!mlb-team-apparel-merchandise/philadelphia-phillies/t-shirts/",
+					"link": "/mlb-team-apparel-merchandise/philadelphia-phillies/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Philadelphia Phillies Apparel & Merchandise T-Shirts",
 					"page-title": "Philadelphia Phillies Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -7777,7 +7777,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!mlb-team-apparel-merchandise/philadelphia-phillies/sweatshirts/",
+					"link": "/mlb-team-apparel-merchandise/philadelphia-phillies/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Philadelphia Phillies Apparel & Merchandise Sweatshirts",
 					"page-title": "Philadelphia Phillies Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -7812,7 +7812,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!mlb-team-apparel-merchandise/philadelphia-phillies/jerseys/",
+					"link": "/mlb-team-apparel-merchandise/philadelphia-phillies/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Philadelphia Phillies Apparel & Merchandise Jerseys",
 					"page-title": "Philadelphia Phillies Apparel & Merchandise Jerseys | CampusColors.com",
@@ -7847,7 +7847,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!mlb-team-apparel-merchandise/philadelphia-phillies/pants/",
+					"link": "/mlb-team-apparel-merchandise/philadelphia-phillies/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Philadelphia Phillies Apparel & Merchandise Pants",
 					"page-title": "Philadelphia Phillies Apparel & Merchandise Pants | CampusColors.com",
@@ -7882,7 +7882,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!mlb-team-apparel-merchandise/philadelphia-phillies/hats/",
+					"link": "/mlb-team-apparel-merchandise/philadelphia-phillies/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Philadelphia Phillies Apparel & Merchandise Hats",
 					"page-title": "Philadelphia Phillies Apparel & Merchandise Hats | CampusColors.com",
@@ -7917,7 +7917,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!mlb-team-apparel-merchandise/philadelphia-phillies/novelties-and-accessories/",
+					"link": "/mlb-team-apparel-merchandise/philadelphia-phillies/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Philadelphia Phillies Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Philadelphia Phillies Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -7934,7 +7934,7 @@
 		},
 		{
 			"id": "pittsburgh-pirates/",
-			"link": "#!mlb-team-apparel-merchandise/pittsburgh-pirates/",
+			"link": "/mlb-team-apparel-merchandise/pittsburgh-pirates/",
 			"img": "teamlogos/PIPI.jpg",
 			"name": "Pittsburgh Pirates Apparel & Merchandise",
 			"page-title": "Pittsburgh Pirates Apparel & Merchandise | CampusColors.com",
@@ -7955,7 +7955,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!mlb-team-apparel-merchandise/pittsburgh-pirates/all/",
+					"link": "/mlb-team-apparel-merchandise/pittsburgh-pirates/all/",
 					"img": "teamlogos/pipi.jpg",
 					"name": "Pittsburgh Pirates Apparel & Merchandise",
 					"page-title": "Pittsburgh Pirates Apparel & Merchandise | CampusColors.com",
@@ -7990,7 +7990,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!mlb-team-apparel-merchandise/pittsburgh-pirates/shorts/",
+					"link": "/mlb-team-apparel-merchandise/pittsburgh-pirates/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Pittsburgh Pirates Apparel & Merchandise Shorts",
 					"page-title": "Pittsburgh Pirates Apparel & Merchandise Shorts | CampusColors.com",
@@ -8025,7 +8025,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!mlb-team-apparel-merchandise/pittsburgh-pirates/t-shirts/",
+					"link": "/mlb-team-apparel-merchandise/pittsburgh-pirates/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Pittsburgh Pirates Apparel & Merchandise T-Shirts",
 					"page-title": "Pittsburgh Pirates Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -8060,7 +8060,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!mlb-team-apparel-merchandise/pittsburgh-pirates/sweatshirts/",
+					"link": "/mlb-team-apparel-merchandise/pittsburgh-pirates/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Pittsburgh Pirates Apparel & Merchandise Sweatshirts",
 					"page-title": "Pittsburgh Pirates Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -8095,7 +8095,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!mlb-team-apparel-merchandise/pittsburgh-pirates/jerseys/",
+					"link": "/mlb-team-apparel-merchandise/pittsburgh-pirates/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Pittsburgh Pirates Apparel & Merchandise Jerseys",
 					"page-title": "Pittsburgh Pirates Apparel & Merchandise Jerseys | CampusColors.com",
@@ -8130,7 +8130,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!mlb-team-apparel-merchandise/pittsburgh-pirates/pants/",
+					"link": "/mlb-team-apparel-merchandise/pittsburgh-pirates/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Pittsburgh Pirates Apparel & Merchandise Pants",
 					"page-title": "Pittsburgh Pirates Apparel & Merchandise Pants | CampusColors.com",
@@ -8165,7 +8165,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!mlb-team-apparel-merchandise/pittsburgh-pirates/hats/",
+					"link": "/mlb-team-apparel-merchandise/pittsburgh-pirates/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Pittsburgh Pirates Apparel & Merchandise Hats",
 					"page-title": "Pittsburgh Pirates Apparel & Merchandise Hats | CampusColors.com",
@@ -8200,7 +8200,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!mlb-team-apparel-merchandise/pittsburgh-pirates/novelties-and-accessories/",
+					"link": "/mlb-team-apparel-merchandise/pittsburgh-pirates/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Pittsburgh Pirates Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Pittsburgh Pirates Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -8217,7 +8217,7 @@
 		},
 		{
 			"id": "san-diego-padres/",
-			"link": "#!mlb-team-apparel-merchandise/san-diego-padres/",
+			"link": "/mlb-team-apparel-merchandise/san-diego-padres/",
 			"img": "teamlogos/SDPA.jpg",
 			"name": "San Diego Padres Apparel & Merchandise",
 			"page-title": "San Diego Padres Apparel & Merchandise | CampusColors.com",
@@ -8238,7 +8238,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!mlb-team-apparel-merchandise/san-diego-padres/all/",
+					"link": "/mlb-team-apparel-merchandise/san-diego-padres/all/",
 					"img": "teamlogos/sdpa.jpg",
 					"name": "San Diego Padres Apparel & Merchandise",
 					"page-title": "San Diego Padres Apparel & Merchandise | CampusColors.com",
@@ -8273,7 +8273,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!mlb-team-apparel-merchandise/san-diego-padres/shorts/",
+					"link": "/mlb-team-apparel-merchandise/san-diego-padres/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "San Diego Padres Apparel & Merchandise Shorts",
 					"page-title": "San Diego Padres Apparel & Merchandise Shorts | CampusColors.com",
@@ -8308,7 +8308,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!mlb-team-apparel-merchandise/san-diego-padres/t-shirts/",
+					"link": "/mlb-team-apparel-merchandise/san-diego-padres/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "San Diego Padres Apparel & Merchandise T-Shirts",
 					"page-title": "San Diego Padres Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -8343,7 +8343,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!mlb-team-apparel-merchandise/san-diego-padres/sweatshirts/",
+					"link": "/mlb-team-apparel-merchandise/san-diego-padres/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "San Diego Padres Apparel & Merchandise Sweatshirts",
 					"page-title": "San Diego Padres Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -8378,7 +8378,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!mlb-team-apparel-merchandise/san-diego-padres/jerseys/",
+					"link": "/mlb-team-apparel-merchandise/san-diego-padres/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "San Diego Padres Apparel & Merchandise Jerseys",
 					"page-title": "San Diego Padres Apparel & Merchandise Jerseys | CampusColors.com",
@@ -8413,7 +8413,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!mlb-team-apparel-merchandise/san-diego-padres/pants/",
+					"link": "/mlb-team-apparel-merchandise/san-diego-padres/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "San Diego Padres Apparel & Merchandise Pants",
 					"page-title": "San Diego Padres Apparel & Merchandise Pants | CampusColors.com",
@@ -8448,7 +8448,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!mlb-team-apparel-merchandise/san-diego-padres/hats/",
+					"link": "/mlb-team-apparel-merchandise/san-diego-padres/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "San Diego Padres Apparel & Merchandise Hats",
 					"page-title": "San Diego Padres Apparel & Merchandise Hats | CampusColors.com",
@@ -8483,7 +8483,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!mlb-team-apparel-merchandise/san-diego-padres/novelties-and-accessories/",
+					"link": "/mlb-team-apparel-merchandise/san-diego-padres/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "San Diego Padres Apparel & Merchandise Novelties & Accessories",
 					"page-title": "San Diego Padres Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -8500,7 +8500,7 @@
 		},
 		{
 			"id": "san-francisco-giants/",
-			"link": "#!mlb-team-apparel-merchandise/san-francisco-giants/",
+			"link": "/mlb-team-apparel-merchandise/san-francisco-giants/",
 			"img": "teamlogos/SFGI.jpg",
 			"name": "San Francisco Giants Apparel & Merchandise",
 			"page-title": "San Francisco Giants Apparel & Merchandise | CampusColors.com",
@@ -8521,7 +8521,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!mlb-team-apparel-merchandise/san-francisco-giants/all/",
+					"link": "/mlb-team-apparel-merchandise/san-francisco-giants/all/",
 					"img": "teamlogos/sfgi.jpg",
 					"name": "San Francisco Giants Apparel & Merchandise",
 					"page-title": "San Francisco Giants Apparel & Merchandise | CampusColors.com",
@@ -8556,7 +8556,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!mlb-team-apparel-merchandise/san-francisco-giants/shorts/",
+					"link": "/mlb-team-apparel-merchandise/san-francisco-giants/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "San Francisco Giants Apparel & Merchandise Shorts",
 					"page-title": "San Francisco Giants Apparel & Merchandise Shorts | CampusColors.com",
@@ -8591,7 +8591,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!mlb-team-apparel-merchandise/san-francisco-giants/t-shirts/",
+					"link": "/mlb-team-apparel-merchandise/san-francisco-giants/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "San Francisco Giants Apparel & Merchandise T-Shirts",
 					"page-title": "San Francisco Giants Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -8626,7 +8626,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!mlb-team-apparel-merchandise/san-francisco-giants/sweatshirts/",
+					"link": "/mlb-team-apparel-merchandise/san-francisco-giants/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "San Francisco Giants Apparel & Merchandise Sweatshirts",
 					"page-title": "San Francisco Giants Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -8661,7 +8661,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!mlb-team-apparel-merchandise/san-francisco-giants/jerseys/",
+					"link": "/mlb-team-apparel-merchandise/san-francisco-giants/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "San Francisco Giants Apparel & Merchandise Jerseys",
 					"page-title": "San Francisco Giants Apparel & Merchandise Jerseys | CampusColors.com",
@@ -8696,7 +8696,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!mlb-team-apparel-merchandise/san-francisco-giants/pants/",
+					"link": "/mlb-team-apparel-merchandise/san-francisco-giants/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "San Francisco Giants Apparel & Merchandise Pants",
 					"page-title": "San Francisco Giants Apparel & Merchandise Pants | CampusColors.com",
@@ -8731,7 +8731,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!mlb-team-apparel-merchandise/san-francisco-giants/hats/",
+					"link": "/mlb-team-apparel-merchandise/san-francisco-giants/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "San Francisco Giants Apparel & Merchandise Hats",
 					"page-title": "San Francisco Giants Apparel & Merchandise Hats | CampusColors.com",
@@ -8766,7 +8766,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!mlb-team-apparel-merchandise/san-francisco-giants/novelties-and-accessories/",
+					"link": "/mlb-team-apparel-merchandise/san-francisco-giants/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "San Francisco Giants Apparel & Merchandise Novelties & Accessories",
 					"page-title": "San Francisco Giants Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -8783,7 +8783,7 @@
 		},
 		{
 			"id": "seattle-mariners/",
-			"link": "#!mlb-team-apparel-merchandise/seattle-mariners/",
+			"link": "/mlb-team-apparel-merchandise/seattle-mariners/",
 			"img": "teamlogos/SEMR.jpg",
 			"name": "Seattle Mariners Apparel & Merchandise",
 			"page-title": "Seattle Mariners Apparel & Merchandise | CampusColors.com",
@@ -8804,7 +8804,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!mlb-team-apparel-merchandise/seattle-mariners/all/",
+					"link": "/mlb-team-apparel-merchandise/seattle-mariners/all/",
 					"img": "teamlogos/semr.jpg",
 					"name": "Seattle Mariners Apparel & Merchandise",
 					"page-title": "Seattle Mariners Apparel & Merchandise | CampusColors.com",
@@ -8839,7 +8839,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!mlb-team-apparel-merchandise/seattle-mariners/shorts/",
+					"link": "/mlb-team-apparel-merchandise/seattle-mariners/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Seattle Mariners Apparel & Merchandise Shorts",
 					"page-title": "Seattle Mariners Apparel & Merchandise Shorts | CampusColors.com",
@@ -8874,7 +8874,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!mlb-team-apparel-merchandise/seattle-mariners/t-shirts/",
+					"link": "/mlb-team-apparel-merchandise/seattle-mariners/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Seattle Mariners Apparel & Merchandise T-Shirts",
 					"page-title": "Seattle Mariners Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -8909,7 +8909,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!mlb-team-apparel-merchandise/seattle-mariners/sweatshirts/",
+					"link": "/mlb-team-apparel-merchandise/seattle-mariners/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Seattle Mariners Apparel & Merchandise Sweatshirts",
 					"page-title": "Seattle Mariners Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -8944,7 +8944,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!mlb-team-apparel-merchandise/seattle-mariners/jerseys/",
+					"link": "/mlb-team-apparel-merchandise/seattle-mariners/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Seattle Mariners Apparel & Merchandise Jerseys",
 					"page-title": "Seattle Mariners Apparel & Merchandise Jerseys | CampusColors.com",
@@ -8979,7 +8979,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!mlb-team-apparel-merchandise/seattle-mariners/pants/",
+					"link": "/mlb-team-apparel-merchandise/seattle-mariners/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Seattle Mariners Apparel & Merchandise Pants",
 					"page-title": "Seattle Mariners Apparel & Merchandise Pants | CampusColors.com",
@@ -9014,7 +9014,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!mlb-team-apparel-merchandise/seattle-mariners/hats/",
+					"link": "/mlb-team-apparel-merchandise/seattle-mariners/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Seattle Mariners Apparel & Merchandise Hats",
 					"page-title": "Seattle Mariners Apparel & Merchandise Hats | CampusColors.com",
@@ -9049,7 +9049,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!mlb-team-apparel-merchandise/seattle-mariners/novelties-and-accessories/",
+					"link": "/mlb-team-apparel-merchandise/seattle-mariners/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Seattle Mariners Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Seattle Mariners Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -9066,7 +9066,7 @@
 		},
 		{
 			"id": "st.-louis-cardinals/",
-			"link": "#!mlb-team-apparel-merchandise/st.-louis-cardinals/",
+			"link": "/mlb-team-apparel-merchandise/st.-louis-cardinals/",
 			"img": "teamlogos/STLC.jpg",
 			"name": "St. Louis Cardinals Apparel & Merchandise",
 			"page-title": "St. Louis Cardinals Apparel & Merchandise | CampusColors.com",
@@ -9087,7 +9087,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!mlb-team-apparel-merchandise/st.-louis-cardinals/all/",
+					"link": "/mlb-team-apparel-merchandise/st.-louis-cardinals/all/",
 					"img": "teamlogos/stlc.jpg",
 					"name": "St. Louis Cardinals Apparel & Merchandise",
 					"page-title": "St. Louis Cardinals Apparel & Merchandise | CampusColors.com",
@@ -9122,7 +9122,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!mlb-team-apparel-merchandise/st.-louis-cardinals/shorts/",
+					"link": "/mlb-team-apparel-merchandise/st.-louis-cardinals/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "St. Louis Cardinals Apparel & Merchandise Shorts",
 					"page-title": "St. Louis Cardinals Apparel & Merchandise Shorts | CampusColors.com",
@@ -9157,7 +9157,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!mlb-team-apparel-merchandise/st.-louis-cardinals/t-shirts/",
+					"link": "/mlb-team-apparel-merchandise/st.-louis-cardinals/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "St. Louis Cardinals Apparel & Merchandise T-Shirts",
 					"page-title": "St. Louis Cardinals Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -9192,7 +9192,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!mlb-team-apparel-merchandise/st.-louis-cardinals/sweatshirts/",
+					"link": "/mlb-team-apparel-merchandise/st.-louis-cardinals/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "St. Louis Cardinals Apparel & Merchandise Sweatshirts",
 					"page-title": "St. Louis Cardinals Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -9227,7 +9227,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!mlb-team-apparel-merchandise/st.-louis-cardinals/jerseys/",
+					"link": "/mlb-team-apparel-merchandise/st.-louis-cardinals/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "St. Louis Cardinals Apparel & Merchandise Jerseys",
 					"page-title": "St. Louis Cardinals Apparel & Merchandise Jerseys | CampusColors.com",
@@ -9262,7 +9262,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!mlb-team-apparel-merchandise/st.-louis-cardinals/pants/",
+					"link": "/mlb-team-apparel-merchandise/st.-louis-cardinals/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "St. Louis Cardinals Apparel & Merchandise Pants",
 					"page-title": "St. Louis Cardinals Apparel & Merchandise Pants | CampusColors.com",
@@ -9297,7 +9297,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!mlb-team-apparel-merchandise/st.-louis-cardinals/hats/",
+					"link": "/mlb-team-apparel-merchandise/st.-louis-cardinals/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "St. Louis Cardinals Apparel & Merchandise Hats",
 					"page-title": "St. Louis Cardinals Apparel & Merchandise Hats | CampusColors.com",
@@ -9332,7 +9332,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!mlb-team-apparel-merchandise/st.-louis-cardinals/novelties-and-accessories/",
+					"link": "/mlb-team-apparel-merchandise/st.-louis-cardinals/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "St. Louis Cardinals Apparel & Merchandise Novelties & Accessories",
 					"page-title": "St. Louis Cardinals Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -9349,7 +9349,7 @@
 		},
 		{
 			"id": "tampa-bay-rays/",
-			"link": "#!mlb-team-apparel-merchandise/tampa-bay-rays/",
+			"link": "/mlb-team-apparel-merchandise/tampa-bay-rays/",
 			"img": "teamlogos/TBRY.jpg",
 			"name": "Tampa Bay Rays Apparel & Merchandise",
 			"page-title": "Tampa Bay Rays Apparel & Merchandise | CampusColors.com",
@@ -9370,7 +9370,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!mlb-team-apparel-merchandise/tampa-bay-rays/all/",
+					"link": "/mlb-team-apparel-merchandise/tampa-bay-rays/all/",
 					"img": "teamlogos/tbry.jpg",
 					"name": "Tampa Bay Rays Apparel & Merchandise",
 					"page-title": "Tampa Bay Rays Apparel & Merchandise | CampusColors.com",
@@ -9405,7 +9405,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!mlb-team-apparel-merchandise/tampa-bay-rays/shorts/",
+					"link": "/mlb-team-apparel-merchandise/tampa-bay-rays/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Tampa Bay Rays Apparel & Merchandise Shorts",
 					"page-title": "Tampa Bay Rays Apparel & Merchandise Shorts | CampusColors.com",
@@ -9440,7 +9440,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!mlb-team-apparel-merchandise/tampa-bay-rays/t-shirts/",
+					"link": "/mlb-team-apparel-merchandise/tampa-bay-rays/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Tampa Bay Rays Apparel & Merchandise T-Shirts",
 					"page-title": "Tampa Bay Rays Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -9475,7 +9475,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!mlb-team-apparel-merchandise/tampa-bay-rays/sweatshirts/",
+					"link": "/mlb-team-apparel-merchandise/tampa-bay-rays/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Tampa Bay Rays Apparel & Merchandise Sweatshirts",
 					"page-title": "Tampa Bay Rays Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -9510,7 +9510,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!mlb-team-apparel-merchandise/tampa-bay-rays/jerseys/",
+					"link": "/mlb-team-apparel-merchandise/tampa-bay-rays/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Tampa Bay Rays Apparel & Merchandise Jerseys",
 					"page-title": "Tampa Bay Rays Apparel & Merchandise Jerseys | CampusColors.com",
@@ -9545,7 +9545,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!mlb-team-apparel-merchandise/tampa-bay-rays/pants/",
+					"link": "/mlb-team-apparel-merchandise/tampa-bay-rays/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Tampa Bay Rays Apparel & Merchandise Pants",
 					"page-title": "Tampa Bay Rays Apparel & Merchandise Pants | CampusColors.com",
@@ -9580,7 +9580,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!mlb-team-apparel-merchandise/tampa-bay-rays/hats/",
+					"link": "/mlb-team-apparel-merchandise/tampa-bay-rays/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Tampa Bay Rays Apparel & Merchandise Hats",
 					"page-title": "Tampa Bay Rays Apparel & Merchandise Hats | CampusColors.com",
@@ -9615,7 +9615,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!mlb-team-apparel-merchandise/tampa-bay-rays/novelties-and-accessories/",
+					"link": "/mlb-team-apparel-merchandise/tampa-bay-rays/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Tampa Bay Rays Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Tampa Bay Rays Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -9632,7 +9632,7 @@
 		},
 		{
 			"id": "texas-rangers/",
-			"link": "#!mlb-team-apparel-merchandise/texas-rangers/",
+			"link": "/mlb-team-apparel-merchandise/texas-rangers/",
 			"img": "teamlogos/TXRN.jpg",
 			"name": "Texas Rangers Apparel & Merchandise",
 			"page-title": "Texas Rangers Apparel & Merchandise | CampusColors.com",
@@ -9653,7 +9653,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!mlb-team-apparel-merchandise/texas-rangers/all/",
+					"link": "/mlb-team-apparel-merchandise/texas-rangers/all/",
 					"img": "teamlogos/txrn.jpg",
 					"name": "Texas Rangers Apparel & Merchandise",
 					"page-title": "Texas Rangers Apparel & Merchandise | CampusColors.com",
@@ -9688,7 +9688,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!mlb-team-apparel-merchandise/texas-rangers/shorts/",
+					"link": "/mlb-team-apparel-merchandise/texas-rangers/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Texas Rangers Apparel & Merchandise Shorts",
 					"page-title": "Texas Rangers Apparel & Merchandise Shorts | CampusColors.com",
@@ -9723,7 +9723,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!mlb-team-apparel-merchandise/texas-rangers/t-shirts/",
+					"link": "/mlb-team-apparel-merchandise/texas-rangers/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Texas Rangers Apparel & Merchandise T-Shirts",
 					"page-title": "Texas Rangers Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -9758,7 +9758,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!mlb-team-apparel-merchandise/texas-rangers/sweatshirts/",
+					"link": "/mlb-team-apparel-merchandise/texas-rangers/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Texas Rangers Apparel & Merchandise Sweatshirts",
 					"page-title": "Texas Rangers Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -9793,7 +9793,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!mlb-team-apparel-merchandise/texas-rangers/jerseys/",
+					"link": "/mlb-team-apparel-merchandise/texas-rangers/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Texas Rangers Apparel & Merchandise Jerseys",
 					"page-title": "Texas Rangers Apparel & Merchandise Jerseys | CampusColors.com",
@@ -9828,7 +9828,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!mlb-team-apparel-merchandise/texas-rangers/pants/",
+					"link": "/mlb-team-apparel-merchandise/texas-rangers/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Texas Rangers Apparel & Merchandise Pants",
 					"page-title": "Texas Rangers Apparel & Merchandise Pants | CampusColors.com",
@@ -9863,7 +9863,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!mlb-team-apparel-merchandise/texas-rangers/hats/",
+					"link": "/mlb-team-apparel-merchandise/texas-rangers/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Texas Rangers Apparel & Merchandise Hats",
 					"page-title": "Texas Rangers Apparel & Merchandise Hats | CampusColors.com",
@@ -9898,7 +9898,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!mlb-team-apparel-merchandise/texas-rangers/novelties-and-accessories/",
+					"link": "/mlb-team-apparel-merchandise/texas-rangers/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Texas Rangers Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Texas Rangers Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -9915,7 +9915,7 @@
 		},
 		{
 			"id": "toronto-blue-jays/",
-			"link": "#!mlb-team-apparel-merchandise/toronto-blue-jays/",
+			"link": "/mlb-team-apparel-merchandise/toronto-blue-jays/",
 			"img": "teamlogos/TOBJ.jpg",
 			"name": "Toronto Blue Jays Apparel & Merchandise",
 			"page-title": "Toronto Blue Jays Apparel & Merchandise | CampusColors.com",
@@ -9936,7 +9936,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!mlb-team-apparel-merchandise/toronto-blue-jays/all/",
+					"link": "/mlb-team-apparel-merchandise/toronto-blue-jays/all/",
 					"img": "teamlogos/tobj.jpg",
 					"name": "Toronto Blue Jays Apparel & Merchandise",
 					"page-title": "Toronto Blue Jays Apparel & Merchandise | CampusColors.com",
@@ -9971,7 +9971,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!mlb-team-apparel-merchandise/toronto-blue-jays/shorts/",
+					"link": "/mlb-team-apparel-merchandise/toronto-blue-jays/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Toronto Blue Jays Apparel & Merchandise Shorts",
 					"page-title": "Toronto Blue Jays Apparel & Merchandise Shorts | CampusColors.com",
@@ -10006,7 +10006,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!mlb-team-apparel-merchandise/toronto-blue-jays/t-shirts/",
+					"link": "/mlb-team-apparel-merchandise/toronto-blue-jays/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Toronto Blue Jays Apparel & Merchandise T-Shirts",
 					"page-title": "Toronto Blue Jays Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -10041,7 +10041,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!mlb-team-apparel-merchandise/toronto-blue-jays/sweatshirts/",
+					"link": "/mlb-team-apparel-merchandise/toronto-blue-jays/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Toronto Blue Jays Apparel & Merchandise Sweatshirts",
 					"page-title": "Toronto Blue Jays Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -10076,7 +10076,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!mlb-team-apparel-merchandise/toronto-blue-jays/jerseys/",
+					"link": "/mlb-team-apparel-merchandise/toronto-blue-jays/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Toronto Blue Jays Apparel & Merchandise Jerseys",
 					"page-title": "Toronto Blue Jays Apparel & Merchandise Jerseys | CampusColors.com",
@@ -10111,7 +10111,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!mlb-team-apparel-merchandise/toronto-blue-jays/pants/",
+					"link": "/mlb-team-apparel-merchandise/toronto-blue-jays/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Toronto Blue Jays Apparel & Merchandise Pants",
 					"page-title": "Toronto Blue Jays Apparel & Merchandise Pants | CampusColors.com",
@@ -10146,7 +10146,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!mlb-team-apparel-merchandise/toronto-blue-jays/hats/",
+					"link": "/mlb-team-apparel-merchandise/toronto-blue-jays/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Toronto Blue Jays Apparel & Merchandise Hats",
 					"page-title": "Toronto Blue Jays Apparel & Merchandise Hats | CampusColors.com",
@@ -10181,7 +10181,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!mlb-team-apparel-merchandise/toronto-blue-jays/novelties-and-accessories/",
+					"link": "/mlb-team-apparel-merchandise/toronto-blue-jays/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Toronto Blue Jays Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Toronto Blue Jays Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -10198,7 +10198,7 @@
 		},
 		{
 			"id": "washington-nationals/",
-			"link": "#!mlb-team-apparel-merchandise/washington-nationals/",
+			"link": "/mlb-team-apparel-merchandise/washington-nationals/",
 			"img": "teamlogos/WANA.jpg",
 			"name": "Washington Nationals Apparel & Merchandise",
 			"page-title": "Washington Nationals Apparel & Merchandise | CampusColors.com",
@@ -10219,7 +10219,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!mlb-team-apparel-merchandise/washington-nationals/all/",
+					"link": "/mlb-team-apparel-merchandise/washington-nationals/all/",
 					"img": "teamlogos/wana.jpg",
 					"name": "Washington Nationals Apparel & Merchandise",
 					"page-title": "Washington Nationals Apparel & Merchandise | CampusColors.com",
@@ -10254,7 +10254,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!mlb-team-apparel-merchandise/washington-nationals/shorts/",
+					"link": "/mlb-team-apparel-merchandise/washington-nationals/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Washington Nationals Apparel & Merchandise Shorts",
 					"page-title": "Washington Nationals Apparel & Merchandise Shorts | CampusColors.com",
@@ -10289,7 +10289,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!mlb-team-apparel-merchandise/washington-nationals/t-shirts/",
+					"link": "/mlb-team-apparel-merchandise/washington-nationals/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Washington Nationals Apparel & Merchandise T-Shirts",
 					"page-title": "Washington Nationals Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -10324,7 +10324,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!mlb-team-apparel-merchandise/washington-nationals/sweatshirts/",
+					"link": "/mlb-team-apparel-merchandise/washington-nationals/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Washington Nationals Apparel & Merchandise Sweatshirts",
 					"page-title": "Washington Nationals Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -10359,7 +10359,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!mlb-team-apparel-merchandise/washington-nationals/jerseys/",
+					"link": "/mlb-team-apparel-merchandise/washington-nationals/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Washington Nationals Apparel & Merchandise Jerseys",
 					"page-title": "Washington Nationals Apparel & Merchandise Jerseys | CampusColors.com",
@@ -10394,7 +10394,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!mlb-team-apparel-merchandise/washington-nationals/pants/",
+					"link": "/mlb-team-apparel-merchandise/washington-nationals/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Washington Nationals Apparel & Merchandise Pants",
 					"page-title": "Washington Nationals Apparel & Merchandise Pants | CampusColors.com",
@@ -10429,7 +10429,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!mlb-team-apparel-merchandise/washington-nationals/hats/",
+					"link": "/mlb-team-apparel-merchandise/washington-nationals/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Washington Nationals Apparel & Merchandise Hats",
 					"page-title": "Washington Nationals Apparel & Merchandise Hats | CampusColors.com",
@@ -10464,7 +10464,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!mlb-team-apparel-merchandise/washington-nationals/novelties-and-accessories/",
+					"link": "/mlb-team-apparel-merchandise/washington-nationals/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Washington Nationals Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Washington Nationals Apparel & Merchandise Novelties & Accessories | CampusColors.com",

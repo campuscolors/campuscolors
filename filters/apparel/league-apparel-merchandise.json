@@ -10,7 +10,7 @@
 	"pages": [
 		{
 			"id": "ncaa/",
-			"link": "#!league-apparel-merchandise/ncaa/",
+			"link": "/league-apparel-merchandise/ncaa/",
 			"img": "teamlogos/ncaa.jpg",
 			"name": "NCAA Apparel & Merchandise",
 			"page-title": "NCAA Apparel & Merchandise | CampusColors.com",
@@ -31,7 +31,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!league-apparel-merchandise/ncaa/all/",
+					"link": "/league-apparel-merchandise/ncaa/all/",
 					"img": "teamlogos/ncaa.jpg",
 					"name": "NCAA Apparel & Merchandise",
 					"page-title": "NCAA Apparel & Merchandise | CampusColors.com",
@@ -72,7 +72,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!league-apparel-merchandise/ncaa/shorts/",
+					"link": "/league-apparel-merchandise/ncaa/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "NCAA Apparel & Merchandise Shorts",
 					"page-title": "NCAA Apparel & Merchandise Shorts | CampusColors.com",
@@ -113,7 +113,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!league-apparel-merchandise/ncaa/t-shirts/",
+					"link": "/league-apparel-merchandise/ncaa/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "NCAA Apparel & Merchandise T-Shirts",
 					"page-title": "NCAA Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -154,7 +154,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!league-apparel-merchandise/ncaa/sweatshirts/",
+					"link": "/league-apparel-merchandise/ncaa/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "NCAA Apparel & Merchandise Sweatshirts",
 					"page-title": "NCAA Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -195,7 +195,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!league-apparel-merchandise/ncaa/jerseys/",
+					"link": "/league-apparel-merchandise/ncaa/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "NCAA Apparel & Merchandise Jerseys",
 					"page-title": "NCAA Apparel & Merchandise Jerseys | CampusColors.com",
@@ -236,7 +236,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!league-apparel-merchandise/ncaa/pants/",
+					"link": "/league-apparel-merchandise/ncaa/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "NCAA Apparel & Merchandise Pants",
 					"page-title": "NCAA Apparel & Merchandise Pants | CampusColors.com",
@@ -277,7 +277,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!league-apparel-merchandise/ncaa/hats/",
+					"link": "/league-apparel-merchandise/ncaa/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "NCAA Apparel & Merchandise Hats",
 					"page-title": "NCAA Apparel & Merchandise Hats | CampusColors.com",
@@ -318,7 +318,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!league-apparel-merchandise/ncaa/novelties-and-accessories/",
+					"link": "/league-apparel-merchandise/ncaa/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "NCAA Apparel & Merchandise Novelties & Accessories",
 					"page-title": "NCAA Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -341,7 +341,7 @@
 		},
 		{
 			"id": "nfl/",
-			"link": "#!league-apparel-merchandise/nfl/",
+			"link": "/league-apparel-merchandise/nfl/",
 			"img": "teamlogos/NFL.jpg",
 			"name": "NFL Apparel & Merchandise",
 			"page-title": "NFL Apparel & Merchandise | CampusColors.com",
@@ -362,7 +362,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!league-apparel-merchandise/nfl/all/",
+					"link": "/league-apparel-merchandise/nfl/all/",
 					"img": "teamlogos/nfl.jpg",
 					"name": "NFL Apparel & Merchandise",
 					"page-title": "NFL Apparel & Merchandise | CampusColors.com",
@@ -403,7 +403,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!league-apparel-merchandise/nfl/shorts/",
+					"link": "/league-apparel-merchandise/nfl/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "NFL Apparel & Merchandise Shorts",
 					"page-title": "NFL Apparel & Merchandise Shorts | CampusColors.com",
@@ -444,7 +444,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!league-apparel-merchandise/nfl/t-shirts/",
+					"link": "/league-apparel-merchandise/nfl/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "NFL Apparel & Merchandise T-Shirts",
 					"page-title": "NFL Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -485,7 +485,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!league-apparel-merchandise/nfl/sweatshirts/",
+					"link": "/league-apparel-merchandise/nfl/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "NFL Apparel & Merchandise Sweatshirts",
 					"page-title": "NFL Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -526,7 +526,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!league-apparel-merchandise/nfl/jerseys/",
+					"link": "/league-apparel-merchandise/nfl/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "NFL Apparel & Merchandise Jerseys",
 					"page-title": "NFL Apparel & Merchandise Jerseys | CampusColors.com",
@@ -567,7 +567,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!league-apparel-merchandise/nfl/pants/",
+					"link": "/league-apparel-merchandise/nfl/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "NFL Apparel & Merchandise Pants",
 					"page-title": "NFL Apparel & Merchandise Pants | CampusColors.com",
@@ -608,7 +608,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!league-apparel-merchandise/nfl/hats/",
+					"link": "/league-apparel-merchandise/nfl/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "NFL Apparel & Merchandise Hats",
 					"page-title": "NFL Apparel & Merchandise Hats | CampusColors.com",
@@ -649,7 +649,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!league-apparel-merchandise/nfl/novelties-and-accessories/",
+					"link": "/league-apparel-merchandise/nfl/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "NFL Apparel & Merchandise Novelties & Accessories",
 					"page-title": "NFL Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -672,7 +672,7 @@
 		},
 		{
 			"id": "nba/",
-			"link": "#!league-apparel-merchandise/nba/",
+			"link": "/league-apparel-merchandise/nba/",
 			"img": "teamlogos/NBA.jpg",
 			"name": "NBA Apparel & Merchandise",
 			"page-title": "NBA Apparel & Merchandise | CampusColors.com",
@@ -693,7 +693,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!league-apparel-merchandise/nba/all/",
+					"link": "/league-apparel-merchandise/nba/all/",
 					"img": "teamlogos/nba.jpg",
 					"name": "NBA Apparel & Merchandise",
 					"page-title": "NBA Apparel & Merchandise | CampusColors.com",
@@ -734,7 +734,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!league-apparel-merchandise/nba/shorts/",
+					"link": "/league-apparel-merchandise/nba/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "NBA Apparel & Merchandise Shorts",
 					"page-title": "NBA Apparel & Merchandise Shorts | CampusColors.com",
@@ -775,7 +775,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!league-apparel-merchandise/nba/t-shirts/",
+					"link": "/league-apparel-merchandise/nba/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "NBA Apparel & Merchandise T-Shirts",
 					"page-title": "NBA Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -816,7 +816,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!league-apparel-merchandise/nba/sweatshirts/",
+					"link": "/league-apparel-merchandise/nba/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "NBA Apparel & Merchandise Sweatshirts",
 					"page-title": "NBA Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -857,7 +857,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!league-apparel-merchandise/nba/jerseys/",
+					"link": "/league-apparel-merchandise/nba/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "NBA Apparel & Merchandise Jerseys",
 					"page-title": "NBA Apparel & Merchandise Jerseys | CampusColors.com",
@@ -898,7 +898,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!league-apparel-merchandise/nba/pants/",
+					"link": "/league-apparel-merchandise/nba/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "NBA Apparel & Merchandise Pants",
 					"page-title": "NBA Apparel & Merchandise Pants | CampusColors.com",
@@ -939,7 +939,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!league-apparel-merchandise/nba/hats/",
+					"link": "/league-apparel-merchandise/nba/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "NBA Apparel & Merchandise Hats",
 					"page-title": "NBA Apparel & Merchandise Hats | CampusColors.com",
@@ -980,7 +980,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!league-apparel-merchandise/nba/novelties-and-accessories/",
+					"link": "/league-apparel-merchandise/nba/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "NBA Apparel & Merchandise Novelties & Accessories",
 					"page-title": "NBA Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -1003,7 +1003,7 @@
 		},
 		{
 			"id": "mlb/",
-			"link": "#!league-apparel-merchandise/mlb/",
+			"link": "/league-apparel-merchandise/mlb/",
 			"img": "teamlogos/MLB.jpg",
 			"name": "MLB Apparel & Merchandise",
 			"page-title": "MLB Apparel & Merchandise | CampusColors.com",
@@ -1024,7 +1024,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!league-apparel-merchandise/mlb/all/",
+					"link": "/league-apparel-merchandise/mlb/all/",
 					"img": "teamlogos/mlb.jpg",
 					"name": "MLB Apparel & Merchandise",
 					"page-title": "MLB Apparel & Merchandise | CampusColors.com",
@@ -1065,7 +1065,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!league-apparel-merchandise/mlb/shorts/",
+					"link": "/league-apparel-merchandise/mlb/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "MLB Apparel & Merchandise Shorts",
 					"page-title": "MLB Apparel & Merchandise Shorts | CampusColors.com",
@@ -1106,7 +1106,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!league-apparel-merchandise/mlb/t-shirts/",
+					"link": "/league-apparel-merchandise/mlb/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "MLB Apparel & Merchandise T-Shirts",
 					"page-title": "MLB Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -1147,7 +1147,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!league-apparel-merchandise/mlb/sweatshirts/",
+					"link": "/league-apparel-merchandise/mlb/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "MLB Apparel & Merchandise Sweatshirts",
 					"page-title": "MLB Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -1188,7 +1188,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!league-apparel-merchandise/mlb/jerseys/",
+					"link": "/league-apparel-merchandise/mlb/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "MLB Apparel & Merchandise Jerseys",
 					"page-title": "MLB Apparel & Merchandise Jerseys | CampusColors.com",
@@ -1229,7 +1229,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!league-apparel-merchandise/mlb/pants/",
+					"link": "/league-apparel-merchandise/mlb/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "MLB Apparel & Merchandise Pants",
 					"page-title": "MLB Apparel & Merchandise Pants | CampusColors.com",
@@ -1270,7 +1270,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!league-apparel-merchandise/mlb/hats/",
+					"link": "/league-apparel-merchandise/mlb/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "MLB Apparel & Merchandise Hats",
 					"page-title": "MLB Apparel & Merchandise Hats | CampusColors.com",
@@ -1311,7 +1311,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!league-apparel-merchandise/mlb/novelties-and-accessories/",
+					"link": "/league-apparel-merchandise/mlb/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "MLB Apparel & Merchandise Novelties & Accessories",
 					"page-title": "MLB Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -1334,7 +1334,7 @@
 		},
 		{
 			"id": "nhl/",
-			"link": "#!league-apparel-merchandise/nhl/",
+			"link": "/league-apparel-merchandise/nhl/",
 			"img": "teamlogos/HOCKEY.jpg",
 			"name": "NHL Apparel & Merchandise",
 			"page-title": "NHL Apparel & Merchandise | CampusColors.com",
@@ -1355,7 +1355,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!league-apparel-merchandise/nhl/all/",
+					"link": "/league-apparel-merchandise/nhl/all/",
 					"img": "teamlogos/hockey.jpg",
 					"name": "NHL Apparel & Merchandise",
 					"page-title": "NHL Apparel & Merchandise | CampusColors.com",
@@ -1396,7 +1396,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!league-apparel-merchandise/nhl/shorts/",
+					"link": "/league-apparel-merchandise/nhl/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "NHL Apparel & Merchandise Shorts",
 					"page-title": "NHL Apparel & Merchandise Shorts | CampusColors.com",
@@ -1437,7 +1437,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!league-apparel-merchandise/nhl/t-shirts/",
+					"link": "/league-apparel-merchandise/nhl/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "NHL Apparel & Merchandise T-Shirts",
 					"page-title": "NHL Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -1478,7 +1478,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!league-apparel-merchandise/nhl/sweatshirts/",
+					"link": "/league-apparel-merchandise/nhl/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "NHL Apparel & Merchandise Sweatshirts",
 					"page-title": "NHL Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -1519,7 +1519,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!league-apparel-merchandise/nhl/jerseys/",
+					"link": "/league-apparel-merchandise/nhl/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "NHL Apparel & Merchandise Jerseys",
 					"page-title": "NHL Apparel & Merchandise Jerseys | CampusColors.com",
@@ -1560,7 +1560,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!league-apparel-merchandise/nhl/pants/",
+					"link": "/league-apparel-merchandise/nhl/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "NHL Apparel & Merchandise Pants",
 					"page-title": "NHL Apparel & Merchandise Pants | CampusColors.com",
@@ -1601,7 +1601,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!league-apparel-merchandise/nhl/hats/",
+					"link": "/league-apparel-merchandise/nhl/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "NHL Apparel & Merchandise Hats",
 					"page-title": "NHL Apparel & Merchandise Hats | CampusColors.com",
@@ -1642,7 +1642,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!league-apparel-merchandise/nhl/novelties-and-accessories/",
+					"link": "/league-apparel-merchandise/nhl/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "NHL Apparel & Merchandise Novelties & Accessories",
 					"page-title": "NHL Apparel & Merchandise Novelties & Accessories | CampusColors.com",

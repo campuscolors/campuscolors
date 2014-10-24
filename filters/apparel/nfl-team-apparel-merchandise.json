@@ -10,7 +10,7 @@
 	"pages": [
 		{
 			"id": "american-football-conference/",
-			"link": "#!nfl-team-apparel-merchandise/american-football-conference/",
+			"link": "/nfl-team-apparel-merchandise/american-football-conference/",
 			"img": "teamlogos/AFC.jpg",
 			"name": "American Football Conference Apparel & Merchandise",
 			"page-title": "American Football Conference Apparel & Merchandise | CampusColors.com",
@@ -31,7 +31,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!nfl-team-apparel-merchandise/american-football-conference/all/",
+					"link": "/nfl-team-apparel-merchandise/american-football-conference/all/",
 					"img": "teamlogos/afc.jpg",
 					"name": "American Football Conference Apparel & Merchandise",
 					"page-title": "American Football Conference Apparel & Merchandise | CampusColors.com",
@@ -66,7 +66,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!nfl-team-apparel-merchandise/american-football-conference/shorts/",
+					"link": "/nfl-team-apparel-merchandise/american-football-conference/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "American Football Conference Apparel & Merchandise Shorts",
 					"page-title": "American Football Conference Apparel & Merchandise Shorts | CampusColors.com",
@@ -101,7 +101,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!nfl-team-apparel-merchandise/american-football-conference/t-shirts/",
+					"link": "/nfl-team-apparel-merchandise/american-football-conference/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "American Football Conference Apparel & Merchandise T-Shirts",
 					"page-title": "American Football Conference Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -136,7 +136,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!nfl-team-apparel-merchandise/american-football-conference/sweatshirts/",
+					"link": "/nfl-team-apparel-merchandise/american-football-conference/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "American Football Conference Apparel & Merchandise Sweatshirts",
 					"page-title": "American Football Conference Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -171,7 +171,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!nfl-team-apparel-merchandise/american-football-conference/jerseys/",
+					"link": "/nfl-team-apparel-merchandise/american-football-conference/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "American Football Conference Apparel & Merchandise Jerseys",
 					"page-title": "American Football Conference Apparel & Merchandise Jerseys | CampusColors.com",
@@ -206,7 +206,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!nfl-team-apparel-merchandise/american-football-conference/pants/",
+					"link": "/nfl-team-apparel-merchandise/american-football-conference/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "American Football Conference Apparel & Merchandise Pants",
 					"page-title": "American Football Conference Apparel & Merchandise Pants | CampusColors.com",
@@ -241,7 +241,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!nfl-team-apparel-merchandise/american-football-conference/hats/",
+					"link": "/nfl-team-apparel-merchandise/american-football-conference/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "American Football Conference Apparel & Merchandise Hats",
 					"page-title": "American Football Conference Apparel & Merchandise Hats | CampusColors.com",
@@ -276,7 +276,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!nfl-team-apparel-merchandise/american-football-conference/novelties-and-accessories/",
+					"link": "/nfl-team-apparel-merchandise/american-football-conference/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "American Football Conference Apparel & Merchandise Novelties & Accessories",
 					"page-title": "American Football Conference Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -293,7 +293,7 @@
 		},
 		{
 			"id": "arizona-cardinals/",
-			"link": "#!nfl-team-apparel-merchandise/arizona-cardinals/",
+			"link": "/nfl-team-apparel-merchandise/arizona-cardinals/",
 			"img": "teamlogos/AZCD.jpg",
 			"name": "Arizona Cardinals Apparel & Merchandise",
 			"page-title": "Arizona Cardinals Apparel & Merchandise | CampusColors.com",
@@ -314,7 +314,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!nfl-team-apparel-merchandise/arizona-cardinals/all/",
+					"link": "/nfl-team-apparel-merchandise/arizona-cardinals/all/",
 					"img": "teamlogos/azcd.jpg",
 					"name": "Arizona Cardinals Apparel & Merchandise",
 					"page-title": "Arizona Cardinals Apparel & Merchandise | CampusColors.com",
@@ -349,7 +349,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!nfl-team-apparel-merchandise/arizona-cardinals/shorts/",
+					"link": "/nfl-team-apparel-merchandise/arizona-cardinals/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Arizona Cardinals Apparel & Merchandise Shorts",
 					"page-title": "Arizona Cardinals Apparel & Merchandise Shorts | CampusColors.com",
@@ -384,7 +384,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!nfl-team-apparel-merchandise/arizona-cardinals/t-shirts/",
+					"link": "/nfl-team-apparel-merchandise/arizona-cardinals/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Arizona Cardinals Apparel & Merchandise T-Shirts",
 					"page-title": "Arizona Cardinals Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -419,7 +419,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!nfl-team-apparel-merchandise/arizona-cardinals/sweatshirts/",
+					"link": "/nfl-team-apparel-merchandise/arizona-cardinals/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Arizona Cardinals Apparel & Merchandise Sweatshirts",
 					"page-title": "Arizona Cardinals Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -454,7 +454,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!nfl-team-apparel-merchandise/arizona-cardinals/jerseys/",
+					"link": "/nfl-team-apparel-merchandise/arizona-cardinals/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Arizona Cardinals Apparel & Merchandise Jerseys",
 					"page-title": "Arizona Cardinals Apparel & Merchandise Jerseys | CampusColors.com",
@@ -489,7 +489,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!nfl-team-apparel-merchandise/arizona-cardinals/pants/",
+					"link": "/nfl-team-apparel-merchandise/arizona-cardinals/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Arizona Cardinals Apparel & Merchandise Pants",
 					"page-title": "Arizona Cardinals Apparel & Merchandise Pants | CampusColors.com",
@@ -524,7 +524,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!nfl-team-apparel-merchandise/arizona-cardinals/hats/",
+					"link": "/nfl-team-apparel-merchandise/arizona-cardinals/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Arizona Cardinals Apparel & Merchandise Hats",
 					"page-title": "Arizona Cardinals Apparel & Merchandise Hats | CampusColors.com",
@@ -559,7 +559,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!nfl-team-apparel-merchandise/arizona-cardinals/novelties-and-accessories/",
+					"link": "/nfl-team-apparel-merchandise/arizona-cardinals/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Arizona Cardinals Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Arizona Cardinals Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -576,7 +576,7 @@
 		},
 		{
 			"id": "atlanta-falcons/",
-			"link": "#!nfl-team-apparel-merchandise/atlanta-falcons/",
+			"link": "/nfl-team-apparel-merchandise/atlanta-falcons/",
 			"img": "teamlogos/ATLF.jpg",
 			"name": "Atlanta Falcons Apparel & Merchandise",
 			"page-title": "Atlanta Falcons Apparel & Merchandise | CampusColors.com",
@@ -597,7 +597,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!nfl-team-apparel-merchandise/atlanta-falcons/all/",
+					"link": "/nfl-team-apparel-merchandise/atlanta-falcons/all/",
 					"img": "teamlogos/atlf.jpg",
 					"name": "Atlanta Falcons Apparel & Merchandise",
 					"page-title": "Atlanta Falcons Apparel & Merchandise | CampusColors.com",
@@ -632,7 +632,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!nfl-team-apparel-merchandise/atlanta-falcons/shorts/",
+					"link": "/nfl-team-apparel-merchandise/atlanta-falcons/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Atlanta Falcons Apparel & Merchandise Shorts",
 					"page-title": "Atlanta Falcons Apparel & Merchandise Shorts | CampusColors.com",
@@ -667,7 +667,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!nfl-team-apparel-merchandise/atlanta-falcons/t-shirts/",
+					"link": "/nfl-team-apparel-merchandise/atlanta-falcons/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Atlanta Falcons Apparel & Merchandise T-Shirts",
 					"page-title": "Atlanta Falcons Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -702,7 +702,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!nfl-team-apparel-merchandise/atlanta-falcons/sweatshirts/",
+					"link": "/nfl-team-apparel-merchandise/atlanta-falcons/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Atlanta Falcons Apparel & Merchandise Sweatshirts",
 					"page-title": "Atlanta Falcons Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -737,7 +737,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!nfl-team-apparel-merchandise/atlanta-falcons/jerseys/",
+					"link": "/nfl-team-apparel-merchandise/atlanta-falcons/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Atlanta Falcons Apparel & Merchandise Jerseys",
 					"page-title": "Atlanta Falcons Apparel & Merchandise Jerseys | CampusColors.com",
@@ -772,7 +772,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!nfl-team-apparel-merchandise/atlanta-falcons/pants/",
+					"link": "/nfl-team-apparel-merchandise/atlanta-falcons/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Atlanta Falcons Apparel & Merchandise Pants",
 					"page-title": "Atlanta Falcons Apparel & Merchandise Pants | CampusColors.com",
@@ -807,7 +807,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!nfl-team-apparel-merchandise/atlanta-falcons/hats/",
+					"link": "/nfl-team-apparel-merchandise/atlanta-falcons/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Atlanta Falcons Apparel & Merchandise Hats",
 					"page-title": "Atlanta Falcons Apparel & Merchandise Hats | CampusColors.com",
@@ -842,7 +842,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!nfl-team-apparel-merchandise/atlanta-falcons/novelties-and-accessories/",
+					"link": "/nfl-team-apparel-merchandise/atlanta-falcons/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Atlanta Falcons Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Atlanta Falcons Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -859,7 +859,7 @@
 		},
 		{
 			"id": "baltimore-ravens/",
-			"link": "#!nfl-team-apparel-merchandise/baltimore-ravens/",
+			"link": "/nfl-team-apparel-merchandise/baltimore-ravens/",
 			"img": "teamlogos/BARA.jpg",
 			"name": "Baltimore Ravens Apparel & Merchandise",
 			"page-title": "Baltimore Ravens Apparel & Merchandise | CampusColors.com",
@@ -880,7 +880,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!nfl-team-apparel-merchandise/baltimore-ravens/all/",
+					"link": "/nfl-team-apparel-merchandise/baltimore-ravens/all/",
 					"img": "teamlogos/bara.jpg",
 					"name": "Baltimore Ravens Apparel & Merchandise",
 					"page-title": "Baltimore Ravens Apparel & Merchandise | CampusColors.com",
@@ -915,7 +915,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!nfl-team-apparel-merchandise/baltimore-ravens/shorts/",
+					"link": "/nfl-team-apparel-merchandise/baltimore-ravens/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Baltimore Ravens Apparel & Merchandise Shorts",
 					"page-title": "Baltimore Ravens Apparel & Merchandise Shorts | CampusColors.com",
@@ -950,7 +950,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!nfl-team-apparel-merchandise/baltimore-ravens/t-shirts/",
+					"link": "/nfl-team-apparel-merchandise/baltimore-ravens/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Baltimore Ravens Apparel & Merchandise T-Shirts",
 					"page-title": "Baltimore Ravens Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -985,7 +985,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!nfl-team-apparel-merchandise/baltimore-ravens/sweatshirts/",
+					"link": "/nfl-team-apparel-merchandise/baltimore-ravens/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Baltimore Ravens Apparel & Merchandise Sweatshirts",
 					"page-title": "Baltimore Ravens Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -1020,7 +1020,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!nfl-team-apparel-merchandise/baltimore-ravens/jerseys/",
+					"link": "/nfl-team-apparel-merchandise/baltimore-ravens/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Baltimore Ravens Apparel & Merchandise Jerseys",
 					"page-title": "Baltimore Ravens Apparel & Merchandise Jerseys | CampusColors.com",
@@ -1055,7 +1055,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!nfl-team-apparel-merchandise/baltimore-ravens/pants/",
+					"link": "/nfl-team-apparel-merchandise/baltimore-ravens/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Baltimore Ravens Apparel & Merchandise Pants",
 					"page-title": "Baltimore Ravens Apparel & Merchandise Pants | CampusColors.com",
@@ -1090,7 +1090,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!nfl-team-apparel-merchandise/baltimore-ravens/hats/",
+					"link": "/nfl-team-apparel-merchandise/baltimore-ravens/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Baltimore Ravens Apparel & Merchandise Hats",
 					"page-title": "Baltimore Ravens Apparel & Merchandise Hats | CampusColors.com",
@@ -1125,7 +1125,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!nfl-team-apparel-merchandise/baltimore-ravens/novelties-and-accessories/",
+					"link": "/nfl-team-apparel-merchandise/baltimore-ravens/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Baltimore Ravens Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Baltimore Ravens Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -1142,7 +1142,7 @@
 		},
 		{
 			"id": "buffalo-bills/",
-			"link": "#!nfl-team-apparel-merchandise/buffalo-bills/",
+			"link": "/nfl-team-apparel-merchandise/buffalo-bills/",
 			"img": "teamlogos/BUBI.jpg",
 			"name": "Buffalo Bills Apparel & Merchandise",
 			"page-title": "Buffalo Bills Apparel & Merchandise | CampusColors.com",
@@ -1163,7 +1163,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!nfl-team-apparel-merchandise/buffalo-bills/all/",
+					"link": "/nfl-team-apparel-merchandise/buffalo-bills/all/",
 					"img": "teamlogos/bubi.jpg",
 					"name": "Buffalo Bills Apparel & Merchandise",
 					"page-title": "Buffalo Bills Apparel & Merchandise | CampusColors.com",
@@ -1198,7 +1198,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!nfl-team-apparel-merchandise/buffalo-bills/shorts/",
+					"link": "/nfl-team-apparel-merchandise/buffalo-bills/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Buffalo Bills Apparel & Merchandise Shorts",
 					"page-title": "Buffalo Bills Apparel & Merchandise Shorts | CampusColors.com",
@@ -1233,7 +1233,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!nfl-team-apparel-merchandise/buffalo-bills/t-shirts/",
+					"link": "/nfl-team-apparel-merchandise/buffalo-bills/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Buffalo Bills Apparel & Merchandise T-Shirts",
 					"page-title": "Buffalo Bills Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -1268,7 +1268,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!nfl-team-apparel-merchandise/buffalo-bills/sweatshirts/",
+					"link": "/nfl-team-apparel-merchandise/buffalo-bills/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Buffalo Bills Apparel & Merchandise Sweatshirts",
 					"page-title": "Buffalo Bills Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -1303,7 +1303,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!nfl-team-apparel-merchandise/buffalo-bills/jerseys/",
+					"link": "/nfl-team-apparel-merchandise/buffalo-bills/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Buffalo Bills Apparel & Merchandise Jerseys",
 					"page-title": "Buffalo Bills Apparel & Merchandise Jerseys | CampusColors.com",
@@ -1338,7 +1338,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!nfl-team-apparel-merchandise/buffalo-bills/pants/",
+					"link": "/nfl-team-apparel-merchandise/buffalo-bills/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Buffalo Bills Apparel & Merchandise Pants",
 					"page-title": "Buffalo Bills Apparel & Merchandise Pants | CampusColors.com",
@@ -1373,7 +1373,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!nfl-team-apparel-merchandise/buffalo-bills/hats/",
+					"link": "/nfl-team-apparel-merchandise/buffalo-bills/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Buffalo Bills Apparel & Merchandise Hats",
 					"page-title": "Buffalo Bills Apparel & Merchandise Hats | CampusColors.com",
@@ -1408,7 +1408,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!nfl-team-apparel-merchandise/buffalo-bills/novelties-and-accessories/",
+					"link": "/nfl-team-apparel-merchandise/buffalo-bills/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Buffalo Bills Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Buffalo Bills Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -1425,7 +1425,7 @@
 		},
 		{
 			"id": "carolina-panthers/",
-			"link": "#!nfl-team-apparel-merchandise/carolina-panthers/",
+			"link": "/nfl-team-apparel-merchandise/carolina-panthers/",
 			"img": "teamlogos/CAPA.jpg",
 			"name": "Carolina Panthers Apparel & Merchandise",
 			"page-title": "Carolina Panthers Apparel & Merchandise | CampusColors.com",
@@ -1446,7 +1446,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!nfl-team-apparel-merchandise/carolina-panthers/all/",
+					"link": "/nfl-team-apparel-merchandise/carolina-panthers/all/",
 					"img": "teamlogos/capa.jpg",
 					"name": "Carolina Panthers Apparel & Merchandise",
 					"page-title": "Carolina Panthers Apparel & Merchandise | CampusColors.com",
@@ -1481,7 +1481,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!nfl-team-apparel-merchandise/carolina-panthers/shorts/",
+					"link": "/nfl-team-apparel-merchandise/carolina-panthers/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Carolina Panthers Apparel & Merchandise Shorts",
 					"page-title": "Carolina Panthers Apparel & Merchandise Shorts | CampusColors.com",
@@ -1516,7 +1516,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!nfl-team-apparel-merchandise/carolina-panthers/t-shirts/",
+					"link": "/nfl-team-apparel-merchandise/carolina-panthers/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Carolina Panthers Apparel & Merchandise T-Shirts",
 					"page-title": "Carolina Panthers Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -1551,7 +1551,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!nfl-team-apparel-merchandise/carolina-panthers/sweatshirts/",
+					"link": "/nfl-team-apparel-merchandise/carolina-panthers/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Carolina Panthers Apparel & Merchandise Sweatshirts",
 					"page-title": "Carolina Panthers Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -1586,7 +1586,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!nfl-team-apparel-merchandise/carolina-panthers/jerseys/",
+					"link": "/nfl-team-apparel-merchandise/carolina-panthers/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Carolina Panthers Apparel & Merchandise Jerseys",
 					"page-title": "Carolina Panthers Apparel & Merchandise Jerseys | CampusColors.com",
@@ -1621,7 +1621,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!nfl-team-apparel-merchandise/carolina-panthers/pants/",
+					"link": "/nfl-team-apparel-merchandise/carolina-panthers/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Carolina Panthers Apparel & Merchandise Pants",
 					"page-title": "Carolina Panthers Apparel & Merchandise Pants | CampusColors.com",
@@ -1656,7 +1656,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!nfl-team-apparel-merchandise/carolina-panthers/hats/",
+					"link": "/nfl-team-apparel-merchandise/carolina-panthers/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Carolina Panthers Apparel & Merchandise Hats",
 					"page-title": "Carolina Panthers Apparel & Merchandise Hats | CampusColors.com",
@@ -1691,7 +1691,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!nfl-team-apparel-merchandise/carolina-panthers/novelties-and-accessories/",
+					"link": "/nfl-team-apparel-merchandise/carolina-panthers/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Carolina Panthers Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Carolina Panthers Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -1708,7 +1708,7 @@
 		},
 		{
 			"id": "chicago-bears/",
-			"link": "#!nfl-team-apparel-merchandise/chicago-bears/",
+			"link": "/nfl-team-apparel-merchandise/chicago-bears/",
 			"img": "teamlogos/CHBE.jpg",
 			"name": "Chicago Bears Apparel & Merchandise",
 			"page-title": "Chicago Bears Apparel & Merchandise | CampusColors.com",
@@ -1729,7 +1729,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!nfl-team-apparel-merchandise/chicago-bears/all/",
+					"link": "/nfl-team-apparel-merchandise/chicago-bears/all/",
 					"img": "teamlogos/chbe.jpg",
 					"name": "Chicago Bears Apparel & Merchandise",
 					"page-title": "Chicago Bears Apparel & Merchandise | CampusColors.com",
@@ -1764,7 +1764,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!nfl-team-apparel-merchandise/chicago-bears/shorts/",
+					"link": "/nfl-team-apparel-merchandise/chicago-bears/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Chicago Bears Apparel & Merchandise Shorts",
 					"page-title": "Chicago Bears Apparel & Merchandise Shorts | CampusColors.com",
@@ -1799,7 +1799,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!nfl-team-apparel-merchandise/chicago-bears/t-shirts/",
+					"link": "/nfl-team-apparel-merchandise/chicago-bears/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Chicago Bears Apparel & Merchandise T-Shirts",
 					"page-title": "Chicago Bears Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -1834,7 +1834,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!nfl-team-apparel-merchandise/chicago-bears/sweatshirts/",
+					"link": "/nfl-team-apparel-merchandise/chicago-bears/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Chicago Bears Apparel & Merchandise Sweatshirts",
 					"page-title": "Chicago Bears Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -1869,7 +1869,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!nfl-team-apparel-merchandise/chicago-bears/jerseys/",
+					"link": "/nfl-team-apparel-merchandise/chicago-bears/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Chicago Bears Apparel & Merchandise Jerseys",
 					"page-title": "Chicago Bears Apparel & Merchandise Jerseys | CampusColors.com",
@@ -1904,7 +1904,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!nfl-team-apparel-merchandise/chicago-bears/pants/",
+					"link": "/nfl-team-apparel-merchandise/chicago-bears/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Chicago Bears Apparel & Merchandise Pants",
 					"page-title": "Chicago Bears Apparel & Merchandise Pants | CampusColors.com",
@@ -1939,7 +1939,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!nfl-team-apparel-merchandise/chicago-bears/hats/",
+					"link": "/nfl-team-apparel-merchandise/chicago-bears/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Chicago Bears Apparel & Merchandise Hats",
 					"page-title": "Chicago Bears Apparel & Merchandise Hats | CampusColors.com",
@@ -1974,7 +1974,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!nfl-team-apparel-merchandise/chicago-bears/novelties-and-accessories/",
+					"link": "/nfl-team-apparel-merchandise/chicago-bears/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Chicago Bears Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Chicago Bears Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -1991,7 +1991,7 @@
 		},
 		{
 			"id": "cincinnati-bengals/",
-			"link": "#!nfl-team-apparel-merchandise/cincinnati-bengals/",
+			"link": "/nfl-team-apparel-merchandise/cincinnati-bengals/",
 			"img": "teamlogos/CNBE.jpg",
 			"name": "Cincinnati Bengals Apparel & Merchandise",
 			"page-title": "Cincinnati Bengals Apparel & Merchandise | CampusColors.com",
@@ -2012,7 +2012,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!nfl-team-apparel-merchandise/cincinnati-bengals/all/",
+					"link": "/nfl-team-apparel-merchandise/cincinnati-bengals/all/",
 					"img": "teamlogos/cnbe.jpg",
 					"name": "Cincinnati Bengals Apparel & Merchandise",
 					"page-title": "Cincinnati Bengals Apparel & Merchandise | CampusColors.com",
@@ -2047,7 +2047,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!nfl-team-apparel-merchandise/cincinnati-bengals/shorts/",
+					"link": "/nfl-team-apparel-merchandise/cincinnati-bengals/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Cincinnati Bengals Apparel & Merchandise Shorts",
 					"page-title": "Cincinnati Bengals Apparel & Merchandise Shorts | CampusColors.com",
@@ -2082,7 +2082,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!nfl-team-apparel-merchandise/cincinnati-bengals/t-shirts/",
+					"link": "/nfl-team-apparel-merchandise/cincinnati-bengals/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Cincinnati Bengals Apparel & Merchandise T-Shirts",
 					"page-title": "Cincinnati Bengals Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -2117,7 +2117,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!nfl-team-apparel-merchandise/cincinnati-bengals/sweatshirts/",
+					"link": "/nfl-team-apparel-merchandise/cincinnati-bengals/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Cincinnati Bengals Apparel & Merchandise Sweatshirts",
 					"page-title": "Cincinnati Bengals Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -2152,7 +2152,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!nfl-team-apparel-merchandise/cincinnati-bengals/jerseys/",
+					"link": "/nfl-team-apparel-merchandise/cincinnati-bengals/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Cincinnati Bengals Apparel & Merchandise Jerseys",
 					"page-title": "Cincinnati Bengals Apparel & Merchandise Jerseys | CampusColors.com",
@@ -2187,7 +2187,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!nfl-team-apparel-merchandise/cincinnati-bengals/pants/",
+					"link": "/nfl-team-apparel-merchandise/cincinnati-bengals/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Cincinnati Bengals Apparel & Merchandise Pants",
 					"page-title": "Cincinnati Bengals Apparel & Merchandise Pants | CampusColors.com",
@@ -2222,7 +2222,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!nfl-team-apparel-merchandise/cincinnati-bengals/hats/",
+					"link": "/nfl-team-apparel-merchandise/cincinnati-bengals/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Cincinnati Bengals Apparel & Merchandise Hats",
 					"page-title": "Cincinnati Bengals Apparel & Merchandise Hats | CampusColors.com",
@@ -2257,7 +2257,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!nfl-team-apparel-merchandise/cincinnati-bengals/novelties-and-accessories/",
+					"link": "/nfl-team-apparel-merchandise/cincinnati-bengals/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Cincinnati Bengals Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Cincinnati Bengals Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -2274,7 +2274,7 @@
 		},
 		{
 			"id": "cleveland-browns/",
-			"link": "#!nfl-team-apparel-merchandise/cleveland-browns/",
+			"link": "/nfl-team-apparel-merchandise/cleveland-browns/",
 			"img": "teamlogos/CLBR.jpg",
 			"name": "Cleveland Browns Apparel & Merchandise",
 			"page-title": "Cleveland Browns Apparel & Merchandise | CampusColors.com",
@@ -2295,7 +2295,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!nfl-team-apparel-merchandise/cleveland-browns/all/",
+					"link": "/nfl-team-apparel-merchandise/cleveland-browns/all/",
 					"img": "teamlogos/clbr.jpg",
 					"name": "Cleveland Browns Apparel & Merchandise",
 					"page-title": "Cleveland Browns Apparel & Merchandise | CampusColors.com",
@@ -2330,7 +2330,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!nfl-team-apparel-merchandise/cleveland-browns/shorts/",
+					"link": "/nfl-team-apparel-merchandise/cleveland-browns/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Cleveland Browns Apparel & Merchandise Shorts",
 					"page-title": "Cleveland Browns Apparel & Merchandise Shorts | CampusColors.com",
@@ -2365,7 +2365,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!nfl-team-apparel-merchandise/cleveland-browns/t-shirts/",
+					"link": "/nfl-team-apparel-merchandise/cleveland-browns/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Cleveland Browns Apparel & Merchandise T-Shirts",
 					"page-title": "Cleveland Browns Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -2400,7 +2400,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!nfl-team-apparel-merchandise/cleveland-browns/sweatshirts/",
+					"link": "/nfl-team-apparel-merchandise/cleveland-browns/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Cleveland Browns Apparel & Merchandise Sweatshirts",
 					"page-title": "Cleveland Browns Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -2435,7 +2435,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!nfl-team-apparel-merchandise/cleveland-browns/jerseys/",
+					"link": "/nfl-team-apparel-merchandise/cleveland-browns/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Cleveland Browns Apparel & Merchandise Jerseys",
 					"page-title": "Cleveland Browns Apparel & Merchandise Jerseys | CampusColors.com",
@@ -2470,7 +2470,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!nfl-team-apparel-merchandise/cleveland-browns/pants/",
+					"link": "/nfl-team-apparel-merchandise/cleveland-browns/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Cleveland Browns Apparel & Merchandise Pants",
 					"page-title": "Cleveland Browns Apparel & Merchandise Pants | CampusColors.com",
@@ -2505,7 +2505,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!nfl-team-apparel-merchandise/cleveland-browns/hats/",
+					"link": "/nfl-team-apparel-merchandise/cleveland-browns/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Cleveland Browns Apparel & Merchandise Hats",
 					"page-title": "Cleveland Browns Apparel & Merchandise Hats | CampusColors.com",
@@ -2540,7 +2540,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!nfl-team-apparel-merchandise/cleveland-browns/novelties-and-accessories/",
+					"link": "/nfl-team-apparel-merchandise/cleveland-browns/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Cleveland Browns Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Cleveland Browns Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -2557,7 +2557,7 @@
 		},
 		{
 			"id": "dallas-cowboys/",
-			"link": "#!nfl-team-apparel-merchandise/dallas-cowboys/",
+			"link": "/nfl-team-apparel-merchandise/dallas-cowboys/",
 			"img": "teamlogos/DACB.jpg",
 			"name": "Dallas Cowboys Apparel & Merchandise",
 			"page-title": "Dallas Cowboys Apparel & Merchandise | CampusColors.com",
@@ -2578,7 +2578,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!nfl-team-apparel-merchandise/dallas-cowboys/all/",
+					"link": "/nfl-team-apparel-merchandise/dallas-cowboys/all/",
 					"img": "teamlogos/dacb.jpg",
 					"name": "Dallas Cowboys Apparel & Merchandise",
 					"page-title": "Dallas Cowboys Apparel & Merchandise | CampusColors.com",
@@ -2613,7 +2613,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!nfl-team-apparel-merchandise/dallas-cowboys/shorts/",
+					"link": "/nfl-team-apparel-merchandise/dallas-cowboys/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Dallas Cowboys Apparel & Merchandise Shorts",
 					"page-title": "Dallas Cowboys Apparel & Merchandise Shorts | CampusColors.com",
@@ -2648,7 +2648,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!nfl-team-apparel-merchandise/dallas-cowboys/t-shirts/",
+					"link": "/nfl-team-apparel-merchandise/dallas-cowboys/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Dallas Cowboys Apparel & Merchandise T-Shirts",
 					"page-title": "Dallas Cowboys Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -2683,7 +2683,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!nfl-team-apparel-merchandise/dallas-cowboys/sweatshirts/",
+					"link": "/nfl-team-apparel-merchandise/dallas-cowboys/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Dallas Cowboys Apparel & Merchandise Sweatshirts",
 					"page-title": "Dallas Cowboys Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -2718,7 +2718,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!nfl-team-apparel-merchandise/dallas-cowboys/jerseys/",
+					"link": "/nfl-team-apparel-merchandise/dallas-cowboys/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Dallas Cowboys Apparel & Merchandise Jerseys",
 					"page-title": "Dallas Cowboys Apparel & Merchandise Jerseys | CampusColors.com",
@@ -2753,7 +2753,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!nfl-team-apparel-merchandise/dallas-cowboys/pants/",
+					"link": "/nfl-team-apparel-merchandise/dallas-cowboys/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Dallas Cowboys Apparel & Merchandise Pants",
 					"page-title": "Dallas Cowboys Apparel & Merchandise Pants | CampusColors.com",
@@ -2788,7 +2788,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!nfl-team-apparel-merchandise/dallas-cowboys/hats/",
+					"link": "/nfl-team-apparel-merchandise/dallas-cowboys/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Dallas Cowboys Apparel & Merchandise Hats",
 					"page-title": "Dallas Cowboys Apparel & Merchandise Hats | CampusColors.com",
@@ -2823,7 +2823,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!nfl-team-apparel-merchandise/dallas-cowboys/novelties-and-accessories/",
+					"link": "/nfl-team-apparel-merchandise/dallas-cowboys/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Dallas Cowboys Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Dallas Cowboys Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -2840,7 +2840,7 @@
 		},
 		{
 			"id": "denver-broncos/",
-			"link": "#!nfl-team-apparel-merchandise/denver-broncos/",
+			"link": "/nfl-team-apparel-merchandise/denver-broncos/",
 			"img": "teamlogos/DEBR.jpg",
 			"name": "Denver Broncos Apparel & Merchandise",
 			"page-title": "Denver Broncos Apparel & Merchandise | CampusColors.com",
@@ -2861,7 +2861,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!nfl-team-apparel-merchandise/denver-broncos/all/",
+					"link": "/nfl-team-apparel-merchandise/denver-broncos/all/",
 					"img": "teamlogos/debr.jpg",
 					"name": "Denver Broncos Apparel & Merchandise",
 					"page-title": "Denver Broncos Apparel & Merchandise | CampusColors.com",
@@ -2896,7 +2896,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!nfl-team-apparel-merchandise/denver-broncos/shorts/",
+					"link": "/nfl-team-apparel-merchandise/denver-broncos/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Denver Broncos Apparel & Merchandise Shorts",
 					"page-title": "Denver Broncos Apparel & Merchandise Shorts | CampusColors.com",
@@ -2931,7 +2931,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!nfl-team-apparel-merchandise/denver-broncos/t-shirts/",
+					"link": "/nfl-team-apparel-merchandise/denver-broncos/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Denver Broncos Apparel & Merchandise T-Shirts",
 					"page-title": "Denver Broncos Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -2966,7 +2966,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!nfl-team-apparel-merchandise/denver-broncos/sweatshirts/",
+					"link": "/nfl-team-apparel-merchandise/denver-broncos/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Denver Broncos Apparel & Merchandise Sweatshirts",
 					"page-title": "Denver Broncos Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -3001,7 +3001,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!nfl-team-apparel-merchandise/denver-broncos/jerseys/",
+					"link": "/nfl-team-apparel-merchandise/denver-broncos/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Denver Broncos Apparel & Merchandise Jerseys",
 					"page-title": "Denver Broncos Apparel & Merchandise Jerseys | CampusColors.com",
@@ -3036,7 +3036,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!nfl-team-apparel-merchandise/denver-broncos/pants/",
+					"link": "/nfl-team-apparel-merchandise/denver-broncos/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Denver Broncos Apparel & Merchandise Pants",
 					"page-title": "Denver Broncos Apparel & Merchandise Pants | CampusColors.com",
@@ -3071,7 +3071,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!nfl-team-apparel-merchandise/denver-broncos/hats/",
+					"link": "/nfl-team-apparel-merchandise/denver-broncos/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Denver Broncos Apparel & Merchandise Hats",
 					"page-title": "Denver Broncos Apparel & Merchandise Hats | CampusColors.com",
@@ -3106,7 +3106,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!nfl-team-apparel-merchandise/denver-broncos/novelties-and-accessories/",
+					"link": "/nfl-team-apparel-merchandise/denver-broncos/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Denver Broncos Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Denver Broncos Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -3123,7 +3123,7 @@
 		},
 		{
 			"id": "detroit-lions/",
-			"link": "#!nfl-team-apparel-merchandise/detroit-lions/",
+			"link": "/nfl-team-apparel-merchandise/detroit-lions/",
 			"img": "teamlogos/DELI.jpg",
 			"name": "Detroit Lions Apparel & Merchandise",
 			"page-title": "Detroit Lions Apparel & Merchandise | CampusColors.com",
@@ -3144,7 +3144,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!nfl-team-apparel-merchandise/detroit-lions/all/",
+					"link": "/nfl-team-apparel-merchandise/detroit-lions/all/",
 					"img": "teamlogos/deli.jpg",
 					"name": "Detroit Lions Apparel & Merchandise",
 					"page-title": "Detroit Lions Apparel & Merchandise | CampusColors.com",
@@ -3179,7 +3179,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!nfl-team-apparel-merchandise/detroit-lions/shorts/",
+					"link": "/nfl-team-apparel-merchandise/detroit-lions/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Detroit Lions Apparel & Merchandise Shorts",
 					"page-title": "Detroit Lions Apparel & Merchandise Shorts | CampusColors.com",
@@ -3214,7 +3214,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!nfl-team-apparel-merchandise/detroit-lions/t-shirts/",
+					"link": "/nfl-team-apparel-merchandise/detroit-lions/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Detroit Lions Apparel & Merchandise T-Shirts",
 					"page-title": "Detroit Lions Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -3249,7 +3249,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!nfl-team-apparel-merchandise/detroit-lions/sweatshirts/",
+					"link": "/nfl-team-apparel-merchandise/detroit-lions/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Detroit Lions Apparel & Merchandise Sweatshirts",
 					"page-title": "Detroit Lions Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -3284,7 +3284,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!nfl-team-apparel-merchandise/detroit-lions/jerseys/",
+					"link": "/nfl-team-apparel-merchandise/detroit-lions/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Detroit Lions Apparel & Merchandise Jerseys",
 					"page-title": "Detroit Lions Apparel & Merchandise Jerseys | CampusColors.com",
@@ -3319,7 +3319,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!nfl-team-apparel-merchandise/detroit-lions/pants/",
+					"link": "/nfl-team-apparel-merchandise/detroit-lions/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Detroit Lions Apparel & Merchandise Pants",
 					"page-title": "Detroit Lions Apparel & Merchandise Pants | CampusColors.com",
@@ -3354,7 +3354,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!nfl-team-apparel-merchandise/detroit-lions/hats/",
+					"link": "/nfl-team-apparel-merchandise/detroit-lions/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Detroit Lions Apparel & Merchandise Hats",
 					"page-title": "Detroit Lions Apparel & Merchandise Hats | CampusColors.com",
@@ -3389,7 +3389,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!nfl-team-apparel-merchandise/detroit-lions/novelties-and-accessories/",
+					"link": "/nfl-team-apparel-merchandise/detroit-lions/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Detroit Lions Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Detroit Lions Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -3406,7 +3406,7 @@
 		},
 		{
 			"id": "drafted/",
-			"link": "#!nfl-team-apparel-merchandise/drafted/",
+			"link": "/nfl-team-apparel-merchandise/drafted/",
 			"img": "teamlogos/DRAFTED.jpg",
 			"name": "Drafted Apparel & Merchandise",
 			"page-title": "Drafted Apparel & Merchandise | CampusColors.com",
@@ -3427,7 +3427,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!nfl-team-apparel-merchandise/drafted/all/",
+					"link": "/nfl-team-apparel-merchandise/drafted/all/",
 					"img": "teamlogos/drafted.jpg",
 					"name": "Drafted Apparel & Merchandise",
 					"page-title": "Drafted Apparel & Merchandise | CampusColors.com",
@@ -3462,7 +3462,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!nfl-team-apparel-merchandise/drafted/shorts/",
+					"link": "/nfl-team-apparel-merchandise/drafted/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Drafted Apparel & Merchandise Shorts",
 					"page-title": "Drafted Apparel & Merchandise Shorts | CampusColors.com",
@@ -3497,7 +3497,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!nfl-team-apparel-merchandise/drafted/t-shirts/",
+					"link": "/nfl-team-apparel-merchandise/drafted/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Drafted Apparel & Merchandise T-Shirts",
 					"page-title": "Drafted Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -3532,7 +3532,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!nfl-team-apparel-merchandise/drafted/sweatshirts/",
+					"link": "/nfl-team-apparel-merchandise/drafted/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Drafted Apparel & Merchandise Sweatshirts",
 					"page-title": "Drafted Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -3567,7 +3567,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!nfl-team-apparel-merchandise/drafted/jerseys/",
+					"link": "/nfl-team-apparel-merchandise/drafted/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Drafted Apparel & Merchandise Jerseys",
 					"page-title": "Drafted Apparel & Merchandise Jerseys | CampusColors.com",
@@ -3602,7 +3602,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!nfl-team-apparel-merchandise/drafted/pants/",
+					"link": "/nfl-team-apparel-merchandise/drafted/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Drafted Apparel & Merchandise Pants",
 					"page-title": "Drafted Apparel & Merchandise Pants | CampusColors.com",
@@ -3637,7 +3637,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!nfl-team-apparel-merchandise/drafted/hats/",
+					"link": "/nfl-team-apparel-merchandise/drafted/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Drafted Apparel & Merchandise Hats",
 					"page-title": "Drafted Apparel & Merchandise Hats | CampusColors.com",
@@ -3672,7 +3672,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!nfl-team-apparel-merchandise/drafted/novelties-and-accessories/",
+					"link": "/nfl-team-apparel-merchandise/drafted/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Drafted Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Drafted Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -3689,7 +3689,7 @@
 		},
 		{
 			"id": "green-bay-packers/",
-			"link": "#!nfl-team-apparel-merchandise/green-bay-packers/",
+			"link": "/nfl-team-apparel-merchandise/green-bay-packers/",
 			"img": "teamlogos/GBPA.jpg",
 			"name": "Green Bay Packers Apparel & Merchandise",
 			"page-title": "Green Bay Packers Apparel & Merchandise | CampusColors.com",
@@ -3710,7 +3710,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!nfl-team-apparel-merchandise/green-bay-packers/all/",
+					"link": "/nfl-team-apparel-merchandise/green-bay-packers/all/",
 					"img": "teamlogos/gbpa.jpg",
 					"name": "Green Bay Packers Apparel & Merchandise",
 					"page-title": "Green Bay Packers Apparel & Merchandise | CampusColors.com",
@@ -3745,7 +3745,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!nfl-team-apparel-merchandise/green-bay-packers/shorts/",
+					"link": "/nfl-team-apparel-merchandise/green-bay-packers/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Green Bay Packers Apparel & Merchandise Shorts",
 					"page-title": "Green Bay Packers Apparel & Merchandise Shorts | CampusColors.com",
@@ -3780,7 +3780,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!nfl-team-apparel-merchandise/green-bay-packers/t-shirts/",
+					"link": "/nfl-team-apparel-merchandise/green-bay-packers/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Green Bay Packers Apparel & Merchandise T-Shirts",
 					"page-title": "Green Bay Packers Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -3815,7 +3815,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!nfl-team-apparel-merchandise/green-bay-packers/sweatshirts/",
+					"link": "/nfl-team-apparel-merchandise/green-bay-packers/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Green Bay Packers Apparel & Merchandise Sweatshirts",
 					"page-title": "Green Bay Packers Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -3850,7 +3850,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!nfl-team-apparel-merchandise/green-bay-packers/jerseys/",
+					"link": "/nfl-team-apparel-merchandise/green-bay-packers/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Green Bay Packers Apparel & Merchandise Jerseys",
 					"page-title": "Green Bay Packers Apparel & Merchandise Jerseys | CampusColors.com",
@@ -3885,7 +3885,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!nfl-team-apparel-merchandise/green-bay-packers/pants/",
+					"link": "/nfl-team-apparel-merchandise/green-bay-packers/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Green Bay Packers Apparel & Merchandise Pants",
 					"page-title": "Green Bay Packers Apparel & Merchandise Pants | CampusColors.com",
@@ -3920,7 +3920,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!nfl-team-apparel-merchandise/green-bay-packers/hats/",
+					"link": "/nfl-team-apparel-merchandise/green-bay-packers/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Green Bay Packers Apparel & Merchandise Hats",
 					"page-title": "Green Bay Packers Apparel & Merchandise Hats | CampusColors.com",
@@ -3955,7 +3955,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!nfl-team-apparel-merchandise/green-bay-packers/novelties-and-accessories/",
+					"link": "/nfl-team-apparel-merchandise/green-bay-packers/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Green Bay Packers Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Green Bay Packers Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -3972,7 +3972,7 @@
 		},
 		{
 			"id": "houston-oilers/",
-			"link": "#!nfl-team-apparel-merchandise/houston-oilers/",
+			"link": "/nfl-team-apparel-merchandise/houston-oilers/",
 			"img": "teamlogos/HOOL.jpg",
 			"name": "Houston Oilers Apparel & Merchandise",
 			"page-title": "Houston Oilers Apparel & Merchandise | CampusColors.com",
@@ -3993,7 +3993,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!nfl-team-apparel-merchandise/houston-oilers/all/",
+					"link": "/nfl-team-apparel-merchandise/houston-oilers/all/",
 					"img": "teamlogos/hool.jpg",
 					"name": "Houston Oilers Apparel & Merchandise",
 					"page-title": "Houston Oilers Apparel & Merchandise | CampusColors.com",
@@ -4028,7 +4028,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!nfl-team-apparel-merchandise/houston-oilers/shorts/",
+					"link": "/nfl-team-apparel-merchandise/houston-oilers/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Houston Oilers Apparel & Merchandise Shorts",
 					"page-title": "Houston Oilers Apparel & Merchandise Shorts | CampusColors.com",
@@ -4063,7 +4063,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!nfl-team-apparel-merchandise/houston-oilers/t-shirts/",
+					"link": "/nfl-team-apparel-merchandise/houston-oilers/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Houston Oilers Apparel & Merchandise T-Shirts",
 					"page-title": "Houston Oilers Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -4098,7 +4098,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!nfl-team-apparel-merchandise/houston-oilers/sweatshirts/",
+					"link": "/nfl-team-apparel-merchandise/houston-oilers/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Houston Oilers Apparel & Merchandise Sweatshirts",
 					"page-title": "Houston Oilers Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -4133,7 +4133,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!nfl-team-apparel-merchandise/houston-oilers/jerseys/",
+					"link": "/nfl-team-apparel-merchandise/houston-oilers/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Houston Oilers Apparel & Merchandise Jerseys",
 					"page-title": "Houston Oilers Apparel & Merchandise Jerseys | CampusColors.com",
@@ -4168,7 +4168,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!nfl-team-apparel-merchandise/houston-oilers/pants/",
+					"link": "/nfl-team-apparel-merchandise/houston-oilers/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Houston Oilers Apparel & Merchandise Pants",
 					"page-title": "Houston Oilers Apparel & Merchandise Pants | CampusColors.com",
@@ -4203,7 +4203,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!nfl-team-apparel-merchandise/houston-oilers/hats/",
+					"link": "/nfl-team-apparel-merchandise/houston-oilers/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Houston Oilers Apparel & Merchandise Hats",
 					"page-title": "Houston Oilers Apparel & Merchandise Hats | CampusColors.com",
@@ -4238,7 +4238,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!nfl-team-apparel-merchandise/houston-oilers/novelties-and-accessories/",
+					"link": "/nfl-team-apparel-merchandise/houston-oilers/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Houston Oilers Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Houston Oilers Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -4255,7 +4255,7 @@
 		},
 		{
 			"id": "houston-texans/",
-			"link": "#!nfl-team-apparel-merchandise/houston-texans/",
+			"link": "/nfl-team-apparel-merchandise/houston-texans/",
 			"img": "teamlogos/HOTE.jpg",
 			"name": "Houston Texans Apparel & Merchandise",
 			"page-title": "Houston Texans Apparel & Merchandise | CampusColors.com",
@@ -4276,7 +4276,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!nfl-team-apparel-merchandise/houston-texans/all/",
+					"link": "/nfl-team-apparel-merchandise/houston-texans/all/",
 					"img": "teamlogos/hote.jpg",
 					"name": "Houston Texans Apparel & Merchandise",
 					"page-title": "Houston Texans Apparel & Merchandise | CampusColors.com",
@@ -4311,7 +4311,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!nfl-team-apparel-merchandise/houston-texans/shorts/",
+					"link": "/nfl-team-apparel-merchandise/houston-texans/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Houston Texans Apparel & Merchandise Shorts",
 					"page-title": "Houston Texans Apparel & Merchandise Shorts | CampusColors.com",
@@ -4346,7 +4346,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!nfl-team-apparel-merchandise/houston-texans/t-shirts/",
+					"link": "/nfl-team-apparel-merchandise/houston-texans/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Houston Texans Apparel & Merchandise T-Shirts",
 					"page-title": "Houston Texans Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -4381,7 +4381,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!nfl-team-apparel-merchandise/houston-texans/sweatshirts/",
+					"link": "/nfl-team-apparel-merchandise/houston-texans/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Houston Texans Apparel & Merchandise Sweatshirts",
 					"page-title": "Houston Texans Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -4416,7 +4416,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!nfl-team-apparel-merchandise/houston-texans/jerseys/",
+					"link": "/nfl-team-apparel-merchandise/houston-texans/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Houston Texans Apparel & Merchandise Jerseys",
 					"page-title": "Houston Texans Apparel & Merchandise Jerseys | CampusColors.com",
@@ -4451,7 +4451,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!nfl-team-apparel-merchandise/houston-texans/pants/",
+					"link": "/nfl-team-apparel-merchandise/houston-texans/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Houston Texans Apparel & Merchandise Pants",
 					"page-title": "Houston Texans Apparel & Merchandise Pants | CampusColors.com",
@@ -4486,7 +4486,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!nfl-team-apparel-merchandise/houston-texans/hats/",
+					"link": "/nfl-team-apparel-merchandise/houston-texans/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Houston Texans Apparel & Merchandise Hats",
 					"page-title": "Houston Texans Apparel & Merchandise Hats | CampusColors.com",
@@ -4521,7 +4521,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!nfl-team-apparel-merchandise/houston-texans/novelties-and-accessories/",
+					"link": "/nfl-team-apparel-merchandise/houston-texans/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Houston Texans Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Houston Texans Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -4538,7 +4538,7 @@
 		},
 		{
 			"id": "indianapolis-colts/",
-			"link": "#!nfl-team-apparel-merchandise/indianapolis-colts/",
+			"link": "/nfl-team-apparel-merchandise/indianapolis-colts/",
 			"img": "teamlogos/INCO.jpg",
 			"name": "Indianapolis Colts Apparel & Merchandise",
 			"page-title": "Indianapolis Colts Apparel & Merchandise | CampusColors.com",
@@ -4559,7 +4559,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!nfl-team-apparel-merchandise/indianapolis-colts/all/",
+					"link": "/nfl-team-apparel-merchandise/indianapolis-colts/all/",
 					"img": "teamlogos/inco.jpg",
 					"name": "Indianapolis Colts Apparel & Merchandise",
 					"page-title": "Indianapolis Colts Apparel & Merchandise | CampusColors.com",
@@ -4594,7 +4594,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!nfl-team-apparel-merchandise/indianapolis-colts/shorts/",
+					"link": "/nfl-team-apparel-merchandise/indianapolis-colts/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Indianapolis Colts Apparel & Merchandise Shorts",
 					"page-title": "Indianapolis Colts Apparel & Merchandise Shorts | CampusColors.com",
@@ -4629,7 +4629,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!nfl-team-apparel-merchandise/indianapolis-colts/t-shirts/",
+					"link": "/nfl-team-apparel-merchandise/indianapolis-colts/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Indianapolis Colts Apparel & Merchandise T-Shirts",
 					"page-title": "Indianapolis Colts Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -4664,7 +4664,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!nfl-team-apparel-merchandise/indianapolis-colts/sweatshirts/",
+					"link": "/nfl-team-apparel-merchandise/indianapolis-colts/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Indianapolis Colts Apparel & Merchandise Sweatshirts",
 					"page-title": "Indianapolis Colts Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -4699,7 +4699,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!nfl-team-apparel-merchandise/indianapolis-colts/jerseys/",
+					"link": "/nfl-team-apparel-merchandise/indianapolis-colts/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Indianapolis Colts Apparel & Merchandise Jerseys",
 					"page-title": "Indianapolis Colts Apparel & Merchandise Jerseys | CampusColors.com",
@@ -4734,7 +4734,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!nfl-team-apparel-merchandise/indianapolis-colts/pants/",
+					"link": "/nfl-team-apparel-merchandise/indianapolis-colts/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Indianapolis Colts Apparel & Merchandise Pants",
 					"page-title": "Indianapolis Colts Apparel & Merchandise Pants | CampusColors.com",
@@ -4769,7 +4769,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!nfl-team-apparel-merchandise/indianapolis-colts/hats/",
+					"link": "/nfl-team-apparel-merchandise/indianapolis-colts/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Indianapolis Colts Apparel & Merchandise Hats",
 					"page-title": "Indianapolis Colts Apparel & Merchandise Hats | CampusColors.com",
@@ -4804,7 +4804,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!nfl-team-apparel-merchandise/indianapolis-colts/novelties-and-accessories/",
+					"link": "/nfl-team-apparel-merchandise/indianapolis-colts/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Indianapolis Colts Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Indianapolis Colts Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -4821,7 +4821,7 @@
 		},
 		{
 			"id": "jacksonville-jaguars/",
-			"link": "#!nfl-team-apparel-merchandise/jacksonville-jaguars/",
+			"link": "/nfl-team-apparel-merchandise/jacksonville-jaguars/",
 			"img": "teamlogos/JAJA.jpg",
 			"name": "Jacksonville Jaguars Apparel & Merchandise",
 			"page-title": "Jacksonville Jaguars Apparel & Merchandise | CampusColors.com",
@@ -4842,7 +4842,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!nfl-team-apparel-merchandise/jacksonville-jaguars/all/",
+					"link": "/nfl-team-apparel-merchandise/jacksonville-jaguars/all/",
 					"img": "teamlogos/jaja.jpg",
 					"name": "Jacksonville Jaguars Apparel & Merchandise",
 					"page-title": "Jacksonville Jaguars Apparel & Merchandise | CampusColors.com",
@@ -4877,7 +4877,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!nfl-team-apparel-merchandise/jacksonville-jaguars/shorts/",
+					"link": "/nfl-team-apparel-merchandise/jacksonville-jaguars/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Jacksonville Jaguars Apparel & Merchandise Shorts",
 					"page-title": "Jacksonville Jaguars Apparel & Merchandise Shorts | CampusColors.com",
@@ -4912,7 +4912,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!nfl-team-apparel-merchandise/jacksonville-jaguars/t-shirts/",
+					"link": "/nfl-team-apparel-merchandise/jacksonville-jaguars/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Jacksonville Jaguars Apparel & Merchandise T-Shirts",
 					"page-title": "Jacksonville Jaguars Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -4947,7 +4947,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!nfl-team-apparel-merchandise/jacksonville-jaguars/sweatshirts/",
+					"link": "/nfl-team-apparel-merchandise/jacksonville-jaguars/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Jacksonville Jaguars Apparel & Merchandise Sweatshirts",
 					"page-title": "Jacksonville Jaguars Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -4982,7 +4982,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!nfl-team-apparel-merchandise/jacksonville-jaguars/jerseys/",
+					"link": "/nfl-team-apparel-merchandise/jacksonville-jaguars/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Jacksonville Jaguars Apparel & Merchandise Jerseys",
 					"page-title": "Jacksonville Jaguars Apparel & Merchandise Jerseys | CampusColors.com",
@@ -5017,7 +5017,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!nfl-team-apparel-merchandise/jacksonville-jaguars/pants/",
+					"link": "/nfl-team-apparel-merchandise/jacksonville-jaguars/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Jacksonville Jaguars Apparel & Merchandise Pants",
 					"page-title": "Jacksonville Jaguars Apparel & Merchandise Pants | CampusColors.com",
@@ -5052,7 +5052,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!nfl-team-apparel-merchandise/jacksonville-jaguars/hats/",
+					"link": "/nfl-team-apparel-merchandise/jacksonville-jaguars/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Jacksonville Jaguars Apparel & Merchandise Hats",
 					"page-title": "Jacksonville Jaguars Apparel & Merchandise Hats | CampusColors.com",
@@ -5087,7 +5087,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!nfl-team-apparel-merchandise/jacksonville-jaguars/novelties-and-accessories/",
+					"link": "/nfl-team-apparel-merchandise/jacksonville-jaguars/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Jacksonville Jaguars Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Jacksonville Jaguars Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -5104,7 +5104,7 @@
 		},
 		{
 			"id": "kansas-city-chiefs/",
-			"link": "#!nfl-team-apparel-merchandise/kansas-city-chiefs/",
+			"link": "/nfl-team-apparel-merchandise/kansas-city-chiefs/",
 			"img": "teamlogos/KCCH.jpg",
 			"name": "Kansas City Chiefs Apparel & Merchandise",
 			"page-title": "Kansas City Chiefs Apparel & Merchandise | CampusColors.com",
@@ -5125,7 +5125,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!nfl-team-apparel-merchandise/kansas-city-chiefs/all/",
+					"link": "/nfl-team-apparel-merchandise/kansas-city-chiefs/all/",
 					"img": "teamlogos/kcch.jpg",
 					"name": "Kansas City Chiefs Apparel & Merchandise",
 					"page-title": "Kansas City Chiefs Apparel & Merchandise | CampusColors.com",
@@ -5160,7 +5160,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!nfl-team-apparel-merchandise/kansas-city-chiefs/shorts/",
+					"link": "/nfl-team-apparel-merchandise/kansas-city-chiefs/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Kansas City Chiefs Apparel & Merchandise Shorts",
 					"page-title": "Kansas City Chiefs Apparel & Merchandise Shorts | CampusColors.com",
@@ -5195,7 +5195,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!nfl-team-apparel-merchandise/kansas-city-chiefs/t-shirts/",
+					"link": "/nfl-team-apparel-merchandise/kansas-city-chiefs/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Kansas City Chiefs Apparel & Merchandise T-Shirts",
 					"page-title": "Kansas City Chiefs Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -5230,7 +5230,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!nfl-team-apparel-merchandise/kansas-city-chiefs/sweatshirts/",
+					"link": "/nfl-team-apparel-merchandise/kansas-city-chiefs/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Kansas City Chiefs Apparel & Merchandise Sweatshirts",
 					"page-title": "Kansas City Chiefs Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -5265,7 +5265,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!nfl-team-apparel-merchandise/kansas-city-chiefs/jerseys/",
+					"link": "/nfl-team-apparel-merchandise/kansas-city-chiefs/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Kansas City Chiefs Apparel & Merchandise Jerseys",
 					"page-title": "Kansas City Chiefs Apparel & Merchandise Jerseys | CampusColors.com",
@@ -5300,7 +5300,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!nfl-team-apparel-merchandise/kansas-city-chiefs/pants/",
+					"link": "/nfl-team-apparel-merchandise/kansas-city-chiefs/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Kansas City Chiefs Apparel & Merchandise Pants",
 					"page-title": "Kansas City Chiefs Apparel & Merchandise Pants | CampusColors.com",
@@ -5335,7 +5335,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!nfl-team-apparel-merchandise/kansas-city-chiefs/hats/",
+					"link": "/nfl-team-apparel-merchandise/kansas-city-chiefs/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Kansas City Chiefs Apparel & Merchandise Hats",
 					"page-title": "Kansas City Chiefs Apparel & Merchandise Hats | CampusColors.com",
@@ -5370,7 +5370,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!nfl-team-apparel-merchandise/kansas-city-chiefs/novelties-and-accessories/",
+					"link": "/nfl-team-apparel-merchandise/kansas-city-chiefs/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Kansas City Chiefs Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Kansas City Chiefs Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -5387,7 +5387,7 @@
 		},
 		{
 			"id": "miami-dolphins/",
-			"link": "#!nfl-team-apparel-merchandise/miami-dolphins/",
+			"link": "/nfl-team-apparel-merchandise/miami-dolphins/",
 			"img": "teamlogos/MIDO.jpg",
 			"name": "Miami Dolphins Apparel & Merchandise",
 			"page-title": "Miami Dolphins Apparel & Merchandise | CampusColors.com",
@@ -5408,7 +5408,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!nfl-team-apparel-merchandise/miami-dolphins/all/",
+					"link": "/nfl-team-apparel-merchandise/miami-dolphins/all/",
 					"img": "teamlogos/mido.jpg",
 					"name": "Miami Dolphins Apparel & Merchandise",
 					"page-title": "Miami Dolphins Apparel & Merchandise | CampusColors.com",
@@ -5443,7 +5443,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!nfl-team-apparel-merchandise/miami-dolphins/shorts/",
+					"link": "/nfl-team-apparel-merchandise/miami-dolphins/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Miami Dolphins Apparel & Merchandise Shorts",
 					"page-title": "Miami Dolphins Apparel & Merchandise Shorts | CampusColors.com",
@@ -5478,7 +5478,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!nfl-team-apparel-merchandise/miami-dolphins/t-shirts/",
+					"link": "/nfl-team-apparel-merchandise/miami-dolphins/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Miami Dolphins Apparel & Merchandise T-Shirts",
 					"page-title": "Miami Dolphins Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -5513,7 +5513,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!nfl-team-apparel-merchandise/miami-dolphins/sweatshirts/",
+					"link": "/nfl-team-apparel-merchandise/miami-dolphins/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Miami Dolphins Apparel & Merchandise Sweatshirts",
 					"page-title": "Miami Dolphins Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -5548,7 +5548,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!nfl-team-apparel-merchandise/miami-dolphins/jerseys/",
+					"link": "/nfl-team-apparel-merchandise/miami-dolphins/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Miami Dolphins Apparel & Merchandise Jerseys",
 					"page-title": "Miami Dolphins Apparel & Merchandise Jerseys | CampusColors.com",
@@ -5583,7 +5583,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!nfl-team-apparel-merchandise/miami-dolphins/pants/",
+					"link": "/nfl-team-apparel-merchandise/miami-dolphins/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Miami Dolphins Apparel & Merchandise Pants",
 					"page-title": "Miami Dolphins Apparel & Merchandise Pants | CampusColors.com",
@@ -5618,7 +5618,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!nfl-team-apparel-merchandise/miami-dolphins/hats/",
+					"link": "/nfl-team-apparel-merchandise/miami-dolphins/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Miami Dolphins Apparel & Merchandise Hats",
 					"page-title": "Miami Dolphins Apparel & Merchandise Hats | CampusColors.com",
@@ -5653,7 +5653,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!nfl-team-apparel-merchandise/miami-dolphins/novelties-and-accessories/",
+					"link": "/nfl-team-apparel-merchandise/miami-dolphins/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Miami Dolphins Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Miami Dolphins Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -5670,7 +5670,7 @@
 		},
 		{
 			"id": "minnesota-vikings/",
-			"link": "#!nfl-team-apparel-merchandise/minnesota-vikings/",
+			"link": "/nfl-team-apparel-merchandise/minnesota-vikings/",
 			"img": "teamlogos/MNVI.jpg",
 			"name": "Minnesota Vikings Apparel & Merchandise",
 			"page-title": "Minnesota Vikings Apparel & Merchandise | CampusColors.com",
@@ -5691,7 +5691,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!nfl-team-apparel-merchandise/minnesota-vikings/all/",
+					"link": "/nfl-team-apparel-merchandise/minnesota-vikings/all/",
 					"img": "teamlogos/mnvi.jpg",
 					"name": "Minnesota Vikings Apparel & Merchandise",
 					"page-title": "Minnesota Vikings Apparel & Merchandise | CampusColors.com",
@@ -5726,7 +5726,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!nfl-team-apparel-merchandise/minnesota-vikings/shorts/",
+					"link": "/nfl-team-apparel-merchandise/minnesota-vikings/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Minnesota Vikings Apparel & Merchandise Shorts",
 					"page-title": "Minnesota Vikings Apparel & Merchandise Shorts | CampusColors.com",
@@ -5761,7 +5761,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!nfl-team-apparel-merchandise/minnesota-vikings/t-shirts/",
+					"link": "/nfl-team-apparel-merchandise/minnesota-vikings/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Minnesota Vikings Apparel & Merchandise T-Shirts",
 					"page-title": "Minnesota Vikings Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -5796,7 +5796,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!nfl-team-apparel-merchandise/minnesota-vikings/sweatshirts/",
+					"link": "/nfl-team-apparel-merchandise/minnesota-vikings/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Minnesota Vikings Apparel & Merchandise Sweatshirts",
 					"page-title": "Minnesota Vikings Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -5831,7 +5831,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!nfl-team-apparel-merchandise/minnesota-vikings/jerseys/",
+					"link": "/nfl-team-apparel-merchandise/minnesota-vikings/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Minnesota Vikings Apparel & Merchandise Jerseys",
 					"page-title": "Minnesota Vikings Apparel & Merchandise Jerseys | CampusColors.com",
@@ -5866,7 +5866,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!nfl-team-apparel-merchandise/minnesota-vikings/pants/",
+					"link": "/nfl-team-apparel-merchandise/minnesota-vikings/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Minnesota Vikings Apparel & Merchandise Pants",
 					"page-title": "Minnesota Vikings Apparel & Merchandise Pants | CampusColors.com",
@@ -5901,7 +5901,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!nfl-team-apparel-merchandise/minnesota-vikings/hats/",
+					"link": "/nfl-team-apparel-merchandise/minnesota-vikings/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Minnesota Vikings Apparel & Merchandise Hats",
 					"page-title": "Minnesota Vikings Apparel & Merchandise Hats | CampusColors.com",
@@ -5936,7 +5936,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!nfl-team-apparel-merchandise/minnesota-vikings/novelties-and-accessories/",
+					"link": "/nfl-team-apparel-merchandise/minnesota-vikings/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Minnesota Vikings Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Minnesota Vikings Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -5953,7 +5953,7 @@
 		},
 		{
 			"id": "new-england-patriots/",
-			"link": "#!nfl-team-apparel-merchandise/new-england-patriots/",
+			"link": "/nfl-team-apparel-merchandise/new-england-patriots/",
 			"img": "teamlogos/NEPA.jpg",
 			"name": "New England Patriots Apparel & Merchandise",
 			"page-title": "New England Patriots Apparel & Merchandise | CampusColors.com",
@@ -5974,7 +5974,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!nfl-team-apparel-merchandise/new-england-patriots/all/",
+					"link": "/nfl-team-apparel-merchandise/new-england-patriots/all/",
 					"img": "teamlogos/nepa.jpg",
 					"name": "New England Patriots Apparel & Merchandise",
 					"page-title": "New England Patriots Apparel & Merchandise | CampusColors.com",
@@ -6009,7 +6009,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!nfl-team-apparel-merchandise/new-england-patriots/shorts/",
+					"link": "/nfl-team-apparel-merchandise/new-england-patriots/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "New England Patriots Apparel & Merchandise Shorts",
 					"page-title": "New England Patriots Apparel & Merchandise Shorts | CampusColors.com",
@@ -6044,7 +6044,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!nfl-team-apparel-merchandise/new-england-patriots/t-shirts/",
+					"link": "/nfl-team-apparel-merchandise/new-england-patriots/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "New England Patriots Apparel & Merchandise T-Shirts",
 					"page-title": "New England Patriots Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -6079,7 +6079,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!nfl-team-apparel-merchandise/new-england-patriots/sweatshirts/",
+					"link": "/nfl-team-apparel-merchandise/new-england-patriots/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "New England Patriots Apparel & Merchandise Sweatshirts",
 					"page-title": "New England Patriots Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -6114,7 +6114,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!nfl-team-apparel-merchandise/new-england-patriots/jerseys/",
+					"link": "/nfl-team-apparel-merchandise/new-england-patriots/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "New England Patriots Apparel & Merchandise Jerseys",
 					"page-title": "New England Patriots Apparel & Merchandise Jerseys | CampusColors.com",
@@ -6149,7 +6149,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!nfl-team-apparel-merchandise/new-england-patriots/pants/",
+					"link": "/nfl-team-apparel-merchandise/new-england-patriots/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "New England Patriots Apparel & Merchandise Pants",
 					"page-title": "New England Patriots Apparel & Merchandise Pants | CampusColors.com",
@@ -6184,7 +6184,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!nfl-team-apparel-merchandise/new-england-patriots/hats/",
+					"link": "/nfl-team-apparel-merchandise/new-england-patriots/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "New England Patriots Apparel & Merchandise Hats",
 					"page-title": "New England Patriots Apparel & Merchandise Hats | CampusColors.com",
@@ -6219,7 +6219,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!nfl-team-apparel-merchandise/new-england-patriots/novelties-and-accessories/",
+					"link": "/nfl-team-apparel-merchandise/new-england-patriots/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "New England Patriots Apparel & Merchandise Novelties & Accessories",
 					"page-title": "New England Patriots Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -6236,7 +6236,7 @@
 		},
 		{
 			"id": "new-orleans-saints/",
-			"link": "#!nfl-team-apparel-merchandise/new-orleans-saints/",
+			"link": "/nfl-team-apparel-merchandise/new-orleans-saints/",
 			"img": "teamlogos/NOSA.jpg",
 			"name": "New Orleans Saints Apparel & Merchandise",
 			"page-title": "New Orleans Saints Apparel & Merchandise | CampusColors.com",
@@ -6257,7 +6257,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!nfl-team-apparel-merchandise/new-orleans-saints/all/",
+					"link": "/nfl-team-apparel-merchandise/new-orleans-saints/all/",
 					"img": "teamlogos/nosa.jpg",
 					"name": "New Orleans Saints Apparel & Merchandise",
 					"page-title": "New Orleans Saints Apparel & Merchandise | CampusColors.com",
@@ -6292,7 +6292,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!nfl-team-apparel-merchandise/new-orleans-saints/shorts/",
+					"link": "/nfl-team-apparel-merchandise/new-orleans-saints/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "New Orleans Saints Apparel & Merchandise Shorts",
 					"page-title": "New Orleans Saints Apparel & Merchandise Shorts | CampusColors.com",
@@ -6327,7 +6327,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!nfl-team-apparel-merchandise/new-orleans-saints/t-shirts/",
+					"link": "/nfl-team-apparel-merchandise/new-orleans-saints/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "New Orleans Saints Apparel & Merchandise T-Shirts",
 					"page-title": "New Orleans Saints Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -6362,7 +6362,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!nfl-team-apparel-merchandise/new-orleans-saints/sweatshirts/",
+					"link": "/nfl-team-apparel-merchandise/new-orleans-saints/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "New Orleans Saints Apparel & Merchandise Sweatshirts",
 					"page-title": "New Orleans Saints Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -6397,7 +6397,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!nfl-team-apparel-merchandise/new-orleans-saints/jerseys/",
+					"link": "/nfl-team-apparel-merchandise/new-orleans-saints/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "New Orleans Saints Apparel & Merchandise Jerseys",
 					"page-title": "New Orleans Saints Apparel & Merchandise Jerseys | CampusColors.com",
@@ -6432,7 +6432,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!nfl-team-apparel-merchandise/new-orleans-saints/pants/",
+					"link": "/nfl-team-apparel-merchandise/new-orleans-saints/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "New Orleans Saints Apparel & Merchandise Pants",
 					"page-title": "New Orleans Saints Apparel & Merchandise Pants | CampusColors.com",
@@ -6467,7 +6467,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!nfl-team-apparel-merchandise/new-orleans-saints/hats/",
+					"link": "/nfl-team-apparel-merchandise/new-orleans-saints/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "New Orleans Saints Apparel & Merchandise Hats",
 					"page-title": "New Orleans Saints Apparel & Merchandise Hats | CampusColors.com",
@@ -6502,7 +6502,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!nfl-team-apparel-merchandise/new-orleans-saints/novelties-and-accessories/",
+					"link": "/nfl-team-apparel-merchandise/new-orleans-saints/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "New Orleans Saints Apparel & Merchandise Novelties & Accessories",
 					"page-title": "New Orleans Saints Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -6519,7 +6519,7 @@
 		},
 		{
 			"id": "new-york-giants/",
-			"link": "#!nfl-team-apparel-merchandise/new-york-giants/",
+			"link": "/nfl-team-apparel-merchandise/new-york-giants/",
 			"img": "teamlogos/NYGI.jpg",
 			"name": "New York Giants Apparel & Merchandise",
 			"page-title": "New York Giants Apparel & Merchandise | CampusColors.com",
@@ -6540,7 +6540,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!nfl-team-apparel-merchandise/new-york-giants/all/",
+					"link": "/nfl-team-apparel-merchandise/new-york-giants/all/",
 					"img": "teamlogos/nygi.jpg",
 					"name": "New York Giants Apparel & Merchandise",
 					"page-title": "New York Giants Apparel & Merchandise | CampusColors.com",
@@ -6575,7 +6575,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!nfl-team-apparel-merchandise/new-york-giants/shorts/",
+					"link": "/nfl-team-apparel-merchandise/new-york-giants/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "New York Giants Apparel & Merchandise Shorts",
 					"page-title": "New York Giants Apparel & Merchandise Shorts | CampusColors.com",
@@ -6610,7 +6610,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!nfl-team-apparel-merchandise/new-york-giants/t-shirts/",
+					"link": "/nfl-team-apparel-merchandise/new-york-giants/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "New York Giants Apparel & Merchandise T-Shirts",
 					"page-title": "New York Giants Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -6645,7 +6645,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!nfl-team-apparel-merchandise/new-york-giants/sweatshirts/",
+					"link": "/nfl-team-apparel-merchandise/new-york-giants/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "New York Giants Apparel & Merchandise Sweatshirts",
 					"page-title": "New York Giants Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -6680,7 +6680,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!nfl-team-apparel-merchandise/new-york-giants/jerseys/",
+					"link": "/nfl-team-apparel-merchandise/new-york-giants/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "New York Giants Apparel & Merchandise Jerseys",
 					"page-title": "New York Giants Apparel & Merchandise Jerseys | CampusColors.com",
@@ -6715,7 +6715,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!nfl-team-apparel-merchandise/new-york-giants/pants/",
+					"link": "/nfl-team-apparel-merchandise/new-york-giants/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "New York Giants Apparel & Merchandise Pants",
 					"page-title": "New York Giants Apparel & Merchandise Pants | CampusColors.com",
@@ -6750,7 +6750,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!nfl-team-apparel-merchandise/new-york-giants/hats/",
+					"link": "/nfl-team-apparel-merchandise/new-york-giants/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "New York Giants Apparel & Merchandise Hats",
 					"page-title": "New York Giants Apparel & Merchandise Hats | CampusColors.com",
@@ -6785,7 +6785,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!nfl-team-apparel-merchandise/new-york-giants/novelties-and-accessories/",
+					"link": "/nfl-team-apparel-merchandise/new-york-giants/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "New York Giants Apparel & Merchandise Novelties & Accessories",
 					"page-title": "New York Giants Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -6802,7 +6802,7 @@
 		},
 		{
 			"id": "new-york-jets/",
-			"link": "#!nfl-team-apparel-merchandise/new-york-jets/",
+			"link": "/nfl-team-apparel-merchandise/new-york-jets/",
 			"img": "teamlogos/NYJT.jpg",
 			"name": "New York Jets Apparel & Merchandise",
 			"page-title": "New York Jets Apparel & Merchandise | CampusColors.com",
@@ -6823,7 +6823,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!nfl-team-apparel-merchandise/new-york-jets/all/",
+					"link": "/nfl-team-apparel-merchandise/new-york-jets/all/",
 					"img": "teamlogos/nyjt.jpg",
 					"name": "New York Jets Apparel & Merchandise",
 					"page-title": "New York Jets Apparel & Merchandise | CampusColors.com",
@@ -6858,7 +6858,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!nfl-team-apparel-merchandise/new-york-jets/shorts/",
+					"link": "/nfl-team-apparel-merchandise/new-york-jets/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "New York Jets Apparel & Merchandise Shorts",
 					"page-title": "New York Jets Apparel & Merchandise Shorts | CampusColors.com",
@@ -6893,7 +6893,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!nfl-team-apparel-merchandise/new-york-jets/t-shirts/",
+					"link": "/nfl-team-apparel-merchandise/new-york-jets/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "New York Jets Apparel & Merchandise T-Shirts",
 					"page-title": "New York Jets Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -6928,7 +6928,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!nfl-team-apparel-merchandise/new-york-jets/sweatshirts/",
+					"link": "/nfl-team-apparel-merchandise/new-york-jets/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "New York Jets Apparel & Merchandise Sweatshirts",
 					"page-title": "New York Jets Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -6963,7 +6963,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!nfl-team-apparel-merchandise/new-york-jets/jerseys/",
+					"link": "/nfl-team-apparel-merchandise/new-york-jets/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "New York Jets Apparel & Merchandise Jerseys",
 					"page-title": "New York Jets Apparel & Merchandise Jerseys | CampusColors.com",
@@ -6998,7 +6998,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!nfl-team-apparel-merchandise/new-york-jets/pants/",
+					"link": "/nfl-team-apparel-merchandise/new-york-jets/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "New York Jets Apparel & Merchandise Pants",
 					"page-title": "New York Jets Apparel & Merchandise Pants | CampusColors.com",
@@ -7033,7 +7033,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!nfl-team-apparel-merchandise/new-york-jets/hats/",
+					"link": "/nfl-team-apparel-merchandise/new-york-jets/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "New York Jets Apparel & Merchandise Hats",
 					"page-title": "New York Jets Apparel & Merchandise Hats | CampusColors.com",
@@ -7068,7 +7068,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!nfl-team-apparel-merchandise/new-york-jets/novelties-and-accessories/",
+					"link": "/nfl-team-apparel-merchandise/new-york-jets/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "New York Jets Apparel & Merchandise Novelties & Accessories",
 					"page-title": "New York Jets Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -7085,7 +7085,7 @@
 		},
 		{
 			"id": "national-football-conference/",
-			"link": "#!nfl-team-apparel-merchandise/national-football-conference/",
+			"link": "/nfl-team-apparel-merchandise/national-football-conference/",
 			"img": "teamlogos/NFC.jpg",
 			"name": "National Football Conference Apparel & Merchandise",
 			"page-title": "National Football Conference Apparel & Merchandise | CampusColors.com",
@@ -7106,7 +7106,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!nfl-team-apparel-merchandise/national-football-conference/all/",
+					"link": "/nfl-team-apparel-merchandise/national-football-conference/all/",
 					"img": "teamlogos/nfc.jpg",
 					"name": "National Football Conference Apparel & Merchandise",
 					"page-title": "National Football Conference Apparel & Merchandise | CampusColors.com",
@@ -7141,7 +7141,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!nfl-team-apparel-merchandise/national-football-conference/shorts/",
+					"link": "/nfl-team-apparel-merchandise/national-football-conference/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "National Football Conference Apparel & Merchandise Shorts",
 					"page-title": "National Football Conference Apparel & Merchandise Shorts | CampusColors.com",
@@ -7176,7 +7176,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!nfl-team-apparel-merchandise/national-football-conference/t-shirts/",
+					"link": "/nfl-team-apparel-merchandise/national-football-conference/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "National Football Conference Apparel & Merchandise T-Shirts",
 					"page-title": "National Football Conference Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -7211,7 +7211,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!nfl-team-apparel-merchandise/national-football-conference/sweatshirts/",
+					"link": "/nfl-team-apparel-merchandise/national-football-conference/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "National Football Conference Apparel & Merchandise Sweatshirts",
 					"page-title": "National Football Conference Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -7246,7 +7246,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!nfl-team-apparel-merchandise/national-football-conference/jerseys/",
+					"link": "/nfl-team-apparel-merchandise/national-football-conference/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "National Football Conference Apparel & Merchandise Jerseys",
 					"page-title": "National Football Conference Apparel & Merchandise Jerseys | CampusColors.com",
@@ -7281,7 +7281,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!nfl-team-apparel-merchandise/national-football-conference/pants/",
+					"link": "/nfl-team-apparel-merchandise/national-football-conference/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "National Football Conference Apparel & Merchandise Pants",
 					"page-title": "National Football Conference Apparel & Merchandise Pants | CampusColors.com",
@@ -7316,7 +7316,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!nfl-team-apparel-merchandise/national-football-conference/hats/",
+					"link": "/nfl-team-apparel-merchandise/national-football-conference/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "National Football Conference Apparel & Merchandise Hats",
 					"page-title": "National Football Conference Apparel & Merchandise Hats | CampusColors.com",
@@ -7351,7 +7351,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!nfl-team-apparel-merchandise/national-football-conference/novelties-and-accessories/",
+					"link": "/nfl-team-apparel-merchandise/national-football-conference/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "National Football Conference Apparel & Merchandise Novelties & Accessories",
 					"page-title": "National Football Conference Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -7368,7 +7368,7 @@
 		},
 		{
 			"id": "national-football-league/",
-			"link": "#!nfl-team-apparel-merchandise/national-football-league/",
+			"link": "/nfl-team-apparel-merchandise/national-football-league/",
 			"img": "teamlogos/NFL.jpg",
 			"name": "National Football League Apparel & Merchandise",
 			"page-title": "National Football League Apparel & Merchandise | CampusColors.com",
@@ -7389,7 +7389,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!nfl-team-apparel-merchandise/national-football-league/all/",
+					"link": "/nfl-team-apparel-merchandise/national-football-league/all/",
 					"img": "teamlogos/nfl.jpg",
 					"name": "National Football League Apparel & Merchandise",
 					"page-title": "National Football League Apparel & Merchandise | CampusColors.com",
@@ -7424,7 +7424,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!nfl-team-apparel-merchandise/national-football-league/shorts/",
+					"link": "/nfl-team-apparel-merchandise/national-football-league/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "National Football League Apparel & Merchandise Shorts",
 					"page-title": "National Football League Apparel & Merchandise Shorts | CampusColors.com",
@@ -7459,7 +7459,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!nfl-team-apparel-merchandise/national-football-league/t-shirts/",
+					"link": "/nfl-team-apparel-merchandise/national-football-league/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "National Football League Apparel & Merchandise T-Shirts",
 					"page-title": "National Football League Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -7494,7 +7494,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!nfl-team-apparel-merchandise/national-football-league/sweatshirts/",
+					"link": "/nfl-team-apparel-merchandise/national-football-league/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "National Football League Apparel & Merchandise Sweatshirts",
 					"page-title": "National Football League Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -7529,7 +7529,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!nfl-team-apparel-merchandise/national-football-league/jerseys/",
+					"link": "/nfl-team-apparel-merchandise/national-football-league/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "National Football League Apparel & Merchandise Jerseys",
 					"page-title": "National Football League Apparel & Merchandise Jerseys | CampusColors.com",
@@ -7564,7 +7564,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!nfl-team-apparel-merchandise/national-football-league/pants/",
+					"link": "/nfl-team-apparel-merchandise/national-football-league/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "National Football League Apparel & Merchandise Pants",
 					"page-title": "National Football League Apparel & Merchandise Pants | CampusColors.com",
@@ -7599,7 +7599,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!nfl-team-apparel-merchandise/national-football-league/hats/",
+					"link": "/nfl-team-apparel-merchandise/national-football-league/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "National Football League Apparel & Merchandise Hats",
 					"page-title": "National Football League Apparel & Merchandise Hats | CampusColors.com",
@@ -7634,7 +7634,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!nfl-team-apparel-merchandise/national-football-league/novelties-and-accessories/",
+					"link": "/nfl-team-apparel-merchandise/national-football-league/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "National Football League Apparel & Merchandise Novelties & Accessories",
 					"page-title": "National Football League Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -7651,7 +7651,7 @@
 		},
 		{
 			"id": "oakland-raiders/",
-			"link": "#!nfl-team-apparel-merchandise/oakland-raiders/",
+			"link": "/nfl-team-apparel-merchandise/oakland-raiders/",
 			"img": "teamlogos/OAKR.jpg",
 			"name": "Oakland Raiders Apparel & Merchandise",
 			"page-title": "Oakland Raiders Apparel & Merchandise | CampusColors.com",
@@ -7672,7 +7672,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!nfl-team-apparel-merchandise/oakland-raiders/all/",
+					"link": "/nfl-team-apparel-merchandise/oakland-raiders/all/",
 					"img": "teamlogos/oakr.jpg",
 					"name": "Oakland Raiders Apparel & Merchandise",
 					"page-title": "Oakland Raiders Apparel & Merchandise | CampusColors.com",
@@ -7707,7 +7707,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!nfl-team-apparel-merchandise/oakland-raiders/shorts/",
+					"link": "/nfl-team-apparel-merchandise/oakland-raiders/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Oakland Raiders Apparel & Merchandise Shorts",
 					"page-title": "Oakland Raiders Apparel & Merchandise Shorts | CampusColors.com",
@@ -7742,7 +7742,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!nfl-team-apparel-merchandise/oakland-raiders/t-shirts/",
+					"link": "/nfl-team-apparel-merchandise/oakland-raiders/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Oakland Raiders Apparel & Merchandise T-Shirts",
 					"page-title": "Oakland Raiders Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -7777,7 +7777,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!nfl-team-apparel-merchandise/oakland-raiders/sweatshirts/",
+					"link": "/nfl-team-apparel-merchandise/oakland-raiders/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Oakland Raiders Apparel & Merchandise Sweatshirts",
 					"page-title": "Oakland Raiders Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -7812,7 +7812,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!nfl-team-apparel-merchandise/oakland-raiders/jerseys/",
+					"link": "/nfl-team-apparel-merchandise/oakland-raiders/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Oakland Raiders Apparel & Merchandise Jerseys",
 					"page-title": "Oakland Raiders Apparel & Merchandise Jerseys | CampusColors.com",
@@ -7847,7 +7847,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!nfl-team-apparel-merchandise/oakland-raiders/pants/",
+					"link": "/nfl-team-apparel-merchandise/oakland-raiders/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Oakland Raiders Apparel & Merchandise Pants",
 					"page-title": "Oakland Raiders Apparel & Merchandise Pants | CampusColors.com",
@@ -7882,7 +7882,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!nfl-team-apparel-merchandise/oakland-raiders/hats/",
+					"link": "/nfl-team-apparel-merchandise/oakland-raiders/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Oakland Raiders Apparel & Merchandise Hats",
 					"page-title": "Oakland Raiders Apparel & Merchandise Hats | CampusColors.com",
@@ -7917,7 +7917,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!nfl-team-apparel-merchandise/oakland-raiders/novelties-and-accessories/",
+					"link": "/nfl-team-apparel-merchandise/oakland-raiders/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Oakland Raiders Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Oakland Raiders Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -7934,7 +7934,7 @@
 		},
 		{
 			"id": "philadelphia-eagles/",
-			"link": "#!nfl-team-apparel-merchandise/philadelphia-eagles/",
+			"link": "/nfl-team-apparel-merchandise/philadelphia-eagles/",
 			"img": "teamlogos/PHEA.jpg",
 			"name": "Philadelphia Eagles Apparel & Merchandise",
 			"page-title": "Philadelphia Eagles Apparel & Merchandise | CampusColors.com",
@@ -7955,7 +7955,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!nfl-team-apparel-merchandise/philadelphia-eagles/all/",
+					"link": "/nfl-team-apparel-merchandise/philadelphia-eagles/all/",
 					"img": "teamlogos/phea.jpg",
 					"name": "Philadelphia Eagles Apparel & Merchandise",
 					"page-title": "Philadelphia Eagles Apparel & Merchandise | CampusColors.com",
@@ -7990,7 +7990,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!nfl-team-apparel-merchandise/philadelphia-eagles/shorts/",
+					"link": "/nfl-team-apparel-merchandise/philadelphia-eagles/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Philadelphia Eagles Apparel & Merchandise Shorts",
 					"page-title": "Philadelphia Eagles Apparel & Merchandise Shorts | CampusColors.com",
@@ -8025,7 +8025,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!nfl-team-apparel-merchandise/philadelphia-eagles/t-shirts/",
+					"link": "/nfl-team-apparel-merchandise/philadelphia-eagles/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Philadelphia Eagles Apparel & Merchandise T-Shirts",
 					"page-title": "Philadelphia Eagles Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -8060,7 +8060,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!nfl-team-apparel-merchandise/philadelphia-eagles/sweatshirts/",
+					"link": "/nfl-team-apparel-merchandise/philadelphia-eagles/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Philadelphia Eagles Apparel & Merchandise Sweatshirts",
 					"page-title": "Philadelphia Eagles Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -8095,7 +8095,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!nfl-team-apparel-merchandise/philadelphia-eagles/jerseys/",
+					"link": "/nfl-team-apparel-merchandise/philadelphia-eagles/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Philadelphia Eagles Apparel & Merchandise Jerseys",
 					"page-title": "Philadelphia Eagles Apparel & Merchandise Jerseys | CampusColors.com",
@@ -8130,7 +8130,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!nfl-team-apparel-merchandise/philadelphia-eagles/pants/",
+					"link": "/nfl-team-apparel-merchandise/philadelphia-eagles/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Philadelphia Eagles Apparel & Merchandise Pants",
 					"page-title": "Philadelphia Eagles Apparel & Merchandise Pants | CampusColors.com",
@@ -8165,7 +8165,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!nfl-team-apparel-merchandise/philadelphia-eagles/hats/",
+					"link": "/nfl-team-apparel-merchandise/philadelphia-eagles/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Philadelphia Eagles Apparel & Merchandise Hats",
 					"page-title": "Philadelphia Eagles Apparel & Merchandise Hats | CampusColors.com",
@@ -8200,7 +8200,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!nfl-team-apparel-merchandise/philadelphia-eagles/novelties-and-accessories/",
+					"link": "/nfl-team-apparel-merchandise/philadelphia-eagles/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Philadelphia Eagles Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Philadelphia Eagles Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -8217,7 +8217,7 @@
 		},
 		{
 			"id": "pittsburgh-steelers/",
-			"link": "#!nfl-team-apparel-merchandise/pittsburgh-steelers/",
+			"link": "/nfl-team-apparel-merchandise/pittsburgh-steelers/",
 			"img": "teamlogos/PIST.jpg",
 			"name": "Pittsburgh Steelers Apparel & Merchandise",
 			"page-title": "Pittsburgh Steelers Apparel & Merchandise | CampusColors.com",
@@ -8238,7 +8238,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!nfl-team-apparel-merchandise/pittsburgh-steelers/all/",
+					"link": "/nfl-team-apparel-merchandise/pittsburgh-steelers/all/",
 					"img": "teamlogos/pist.jpg",
 					"name": "Pittsburgh Steelers Apparel & Merchandise",
 					"page-title": "Pittsburgh Steelers Apparel & Merchandise | CampusColors.com",
@@ -8273,7 +8273,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!nfl-team-apparel-merchandise/pittsburgh-steelers/shorts/",
+					"link": "/nfl-team-apparel-merchandise/pittsburgh-steelers/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Pittsburgh Steelers Apparel & Merchandise Shorts",
 					"page-title": "Pittsburgh Steelers Apparel & Merchandise Shorts | CampusColors.com",
@@ -8308,7 +8308,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!nfl-team-apparel-merchandise/pittsburgh-steelers/t-shirts/",
+					"link": "/nfl-team-apparel-merchandise/pittsburgh-steelers/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Pittsburgh Steelers Apparel & Merchandise T-Shirts",
 					"page-title": "Pittsburgh Steelers Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -8343,7 +8343,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!nfl-team-apparel-merchandise/pittsburgh-steelers/sweatshirts/",
+					"link": "/nfl-team-apparel-merchandise/pittsburgh-steelers/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Pittsburgh Steelers Apparel & Merchandise Sweatshirts",
 					"page-title": "Pittsburgh Steelers Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -8378,7 +8378,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!nfl-team-apparel-merchandise/pittsburgh-steelers/jerseys/",
+					"link": "/nfl-team-apparel-merchandise/pittsburgh-steelers/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Pittsburgh Steelers Apparel & Merchandise Jerseys",
 					"page-title": "Pittsburgh Steelers Apparel & Merchandise Jerseys | CampusColors.com",
@@ -8413,7 +8413,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!nfl-team-apparel-merchandise/pittsburgh-steelers/pants/",
+					"link": "/nfl-team-apparel-merchandise/pittsburgh-steelers/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Pittsburgh Steelers Apparel & Merchandise Pants",
 					"page-title": "Pittsburgh Steelers Apparel & Merchandise Pants | CampusColors.com",
@@ -8448,7 +8448,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!nfl-team-apparel-merchandise/pittsburgh-steelers/hats/",
+					"link": "/nfl-team-apparel-merchandise/pittsburgh-steelers/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Pittsburgh Steelers Apparel & Merchandise Hats",
 					"page-title": "Pittsburgh Steelers Apparel & Merchandise Hats | CampusColors.com",
@@ -8483,7 +8483,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!nfl-team-apparel-merchandise/pittsburgh-steelers/novelties-and-accessories/",
+					"link": "/nfl-team-apparel-merchandise/pittsburgh-steelers/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Pittsburgh Steelers Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Pittsburgh Steelers Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -8500,7 +8500,7 @@
 		},
 		{
 			"id": "san-diego-chargers/",
-			"link": "#!nfl-team-apparel-merchandise/san-diego-chargers/",
+			"link": "/nfl-team-apparel-merchandise/san-diego-chargers/",
 			"img": "teamlogos/SDCH.jpg",
 			"name": "San Diego Chargers Apparel & Merchandise",
 			"page-title": "San Diego Chargers Apparel & Merchandise | CampusColors.com",
@@ -8521,7 +8521,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!nfl-team-apparel-merchandise/san-diego-chargers/all/",
+					"link": "/nfl-team-apparel-merchandise/san-diego-chargers/all/",
 					"img": "teamlogos/sdch.jpg",
 					"name": "San Diego Chargers Apparel & Merchandise",
 					"page-title": "San Diego Chargers Apparel & Merchandise | CampusColors.com",
@@ -8556,7 +8556,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!nfl-team-apparel-merchandise/san-diego-chargers/shorts/",
+					"link": "/nfl-team-apparel-merchandise/san-diego-chargers/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "San Diego Chargers Apparel & Merchandise Shorts",
 					"page-title": "San Diego Chargers Apparel & Merchandise Shorts | CampusColors.com",
@@ -8591,7 +8591,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!nfl-team-apparel-merchandise/san-diego-chargers/t-shirts/",
+					"link": "/nfl-team-apparel-merchandise/san-diego-chargers/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "San Diego Chargers Apparel & Merchandise T-Shirts",
 					"page-title": "San Diego Chargers Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -8626,7 +8626,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!nfl-team-apparel-merchandise/san-diego-chargers/sweatshirts/",
+					"link": "/nfl-team-apparel-merchandise/san-diego-chargers/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "San Diego Chargers Apparel & Merchandise Sweatshirts",
 					"page-title": "San Diego Chargers Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -8661,7 +8661,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!nfl-team-apparel-merchandise/san-diego-chargers/jerseys/",
+					"link": "/nfl-team-apparel-merchandise/san-diego-chargers/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "San Diego Chargers Apparel & Merchandise Jerseys",
 					"page-title": "San Diego Chargers Apparel & Merchandise Jerseys | CampusColors.com",
@@ -8696,7 +8696,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!nfl-team-apparel-merchandise/san-diego-chargers/pants/",
+					"link": "/nfl-team-apparel-merchandise/san-diego-chargers/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "San Diego Chargers Apparel & Merchandise Pants",
 					"page-title": "San Diego Chargers Apparel & Merchandise Pants | CampusColors.com",
@@ -8731,7 +8731,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!nfl-team-apparel-merchandise/san-diego-chargers/hats/",
+					"link": "/nfl-team-apparel-merchandise/san-diego-chargers/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "San Diego Chargers Apparel & Merchandise Hats",
 					"page-title": "San Diego Chargers Apparel & Merchandise Hats | CampusColors.com",
@@ -8766,7 +8766,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!nfl-team-apparel-merchandise/san-diego-chargers/novelties-and-accessories/",
+					"link": "/nfl-team-apparel-merchandise/san-diego-chargers/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "San Diego Chargers Apparel & Merchandise Novelties & Accessories",
 					"page-title": "San Diego Chargers Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -8783,7 +8783,7 @@
 		},
 		{
 			"id": "san-francisco-49ers/",
-			"link": "#!nfl-team-apparel-merchandise/san-francisco-49ers/",
+			"link": "/nfl-team-apparel-merchandise/san-francisco-49ers/",
 			"img": "teamlogos/SF49.jpg",
 			"name": "San Francisco 49ers Apparel & Merchandise",
 			"page-title": "San Francisco 49ers Apparel & Merchandise | CampusColors.com",
@@ -8804,7 +8804,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!nfl-team-apparel-merchandise/san-francisco-49ers/all/",
+					"link": "/nfl-team-apparel-merchandise/san-francisco-49ers/all/",
 					"img": "teamlogos/sf49.jpg",
 					"name": "San Francisco 49ers Apparel & Merchandise",
 					"page-title": "San Francisco 49ers Apparel & Merchandise | CampusColors.com",
@@ -8839,7 +8839,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!nfl-team-apparel-merchandise/san-francisco-49ers/shorts/",
+					"link": "/nfl-team-apparel-merchandise/san-francisco-49ers/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "San Francisco 49ers Apparel & Merchandise Shorts",
 					"page-title": "San Francisco 49ers Apparel & Merchandise Shorts | CampusColors.com",
@@ -8874,7 +8874,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!nfl-team-apparel-merchandise/san-francisco-49ers/t-shirts/",
+					"link": "/nfl-team-apparel-merchandise/san-francisco-49ers/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "San Francisco 49ers Apparel & Merchandise T-Shirts",
 					"page-title": "San Francisco 49ers Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -8909,7 +8909,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!nfl-team-apparel-merchandise/san-francisco-49ers/sweatshirts/",
+					"link": "/nfl-team-apparel-merchandise/san-francisco-49ers/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "San Francisco 49ers Apparel & Merchandise Sweatshirts",
 					"page-title": "San Francisco 49ers Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -8944,7 +8944,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!nfl-team-apparel-merchandise/san-francisco-49ers/jerseys/",
+					"link": "/nfl-team-apparel-merchandise/san-francisco-49ers/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "San Francisco 49ers Apparel & Merchandise Jerseys",
 					"page-title": "San Francisco 49ers Apparel & Merchandise Jerseys | CampusColors.com",
@@ -8979,7 +8979,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!nfl-team-apparel-merchandise/san-francisco-49ers/pants/",
+					"link": "/nfl-team-apparel-merchandise/san-francisco-49ers/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "San Francisco 49ers Apparel & Merchandise Pants",
 					"page-title": "San Francisco 49ers Apparel & Merchandise Pants | CampusColors.com",
@@ -9014,7 +9014,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!nfl-team-apparel-merchandise/san-francisco-49ers/hats/",
+					"link": "/nfl-team-apparel-merchandise/san-francisco-49ers/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "San Francisco 49ers Apparel & Merchandise Hats",
 					"page-title": "San Francisco 49ers Apparel & Merchandise Hats | CampusColors.com",
@@ -9049,7 +9049,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!nfl-team-apparel-merchandise/san-francisco-49ers/novelties-and-accessories/",
+					"link": "/nfl-team-apparel-merchandise/san-francisco-49ers/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "San Francisco 49ers Apparel & Merchandise Novelties & Accessories",
 					"page-title": "San Francisco 49ers Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -9066,7 +9066,7 @@
 		},
 		{
 			"id": "seattle-seahawks/",
-			"link": "#!nfl-team-apparel-merchandise/seattle-seahawks/",
+			"link": "/nfl-team-apparel-merchandise/seattle-seahawks/",
 			"img": "teamlogos/SESH.jpg",
 			"name": "Seattle Seahawks Apparel & Merchandise",
 			"page-title": "Seattle Seahawks Apparel & Merchandise | CampusColors.com",
@@ -9087,7 +9087,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!nfl-team-apparel-merchandise/seattle-seahawks/all/",
+					"link": "/nfl-team-apparel-merchandise/seattle-seahawks/all/",
 					"img": "teamlogos/sesh.jpg",
 					"name": "Seattle Seahawks Apparel & Merchandise",
 					"page-title": "Seattle Seahawks Apparel & Merchandise | CampusColors.com",
@@ -9122,7 +9122,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!nfl-team-apparel-merchandise/seattle-seahawks/shorts/",
+					"link": "/nfl-team-apparel-merchandise/seattle-seahawks/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Seattle Seahawks Apparel & Merchandise Shorts",
 					"page-title": "Seattle Seahawks Apparel & Merchandise Shorts | CampusColors.com",
@@ -9157,7 +9157,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!nfl-team-apparel-merchandise/seattle-seahawks/t-shirts/",
+					"link": "/nfl-team-apparel-merchandise/seattle-seahawks/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Seattle Seahawks Apparel & Merchandise T-Shirts",
 					"page-title": "Seattle Seahawks Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -9192,7 +9192,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!nfl-team-apparel-merchandise/seattle-seahawks/sweatshirts/",
+					"link": "/nfl-team-apparel-merchandise/seattle-seahawks/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Seattle Seahawks Apparel & Merchandise Sweatshirts",
 					"page-title": "Seattle Seahawks Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -9227,7 +9227,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!nfl-team-apparel-merchandise/seattle-seahawks/jerseys/",
+					"link": "/nfl-team-apparel-merchandise/seattle-seahawks/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Seattle Seahawks Apparel & Merchandise Jerseys",
 					"page-title": "Seattle Seahawks Apparel & Merchandise Jerseys | CampusColors.com",
@@ -9262,7 +9262,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!nfl-team-apparel-merchandise/seattle-seahawks/pants/",
+					"link": "/nfl-team-apparel-merchandise/seattle-seahawks/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Seattle Seahawks Apparel & Merchandise Pants",
 					"page-title": "Seattle Seahawks Apparel & Merchandise Pants | CampusColors.com",
@@ -9297,7 +9297,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!nfl-team-apparel-merchandise/seattle-seahawks/hats/",
+					"link": "/nfl-team-apparel-merchandise/seattle-seahawks/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Seattle Seahawks Apparel & Merchandise Hats",
 					"page-title": "Seattle Seahawks Apparel & Merchandise Hats | CampusColors.com",
@@ -9332,7 +9332,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!nfl-team-apparel-merchandise/seattle-seahawks/novelties-and-accessories/",
+					"link": "/nfl-team-apparel-merchandise/seattle-seahawks/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Seattle Seahawks Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Seattle Seahawks Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -9349,7 +9349,7 @@
 		},
 		{
 			"id": "st.-louis-rams/",
-			"link": "#!nfl-team-apparel-merchandise/st.-louis-rams/",
+			"link": "/nfl-team-apparel-merchandise/st.-louis-rams/",
 			"img": "teamlogos/STLR.jpg",
 			"name": "St. Louis Rams Apparel & Merchandise",
 			"page-title": "St. Louis Rams Apparel & Merchandise | CampusColors.com",
@@ -9370,7 +9370,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!nfl-team-apparel-merchandise/st.-louis-rams/all/",
+					"link": "/nfl-team-apparel-merchandise/st.-louis-rams/all/",
 					"img": "teamlogos/stlr.jpg",
 					"name": "St. Louis Rams Apparel & Merchandise",
 					"page-title": "St. Louis Rams Apparel & Merchandise | CampusColors.com",
@@ -9405,7 +9405,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!nfl-team-apparel-merchandise/st.-louis-rams/shorts/",
+					"link": "/nfl-team-apparel-merchandise/st.-louis-rams/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "St. Louis Rams Apparel & Merchandise Shorts",
 					"page-title": "St. Louis Rams Apparel & Merchandise Shorts | CampusColors.com",
@@ -9440,7 +9440,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!nfl-team-apparel-merchandise/st.-louis-rams/t-shirts/",
+					"link": "/nfl-team-apparel-merchandise/st.-louis-rams/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "St. Louis Rams Apparel & Merchandise T-Shirts",
 					"page-title": "St. Louis Rams Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -9475,7 +9475,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!nfl-team-apparel-merchandise/st.-louis-rams/sweatshirts/",
+					"link": "/nfl-team-apparel-merchandise/st.-louis-rams/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "St. Louis Rams Apparel & Merchandise Sweatshirts",
 					"page-title": "St. Louis Rams Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -9510,7 +9510,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!nfl-team-apparel-merchandise/st.-louis-rams/jerseys/",
+					"link": "/nfl-team-apparel-merchandise/st.-louis-rams/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "St. Louis Rams Apparel & Merchandise Jerseys",
 					"page-title": "St. Louis Rams Apparel & Merchandise Jerseys | CampusColors.com",
@@ -9545,7 +9545,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!nfl-team-apparel-merchandise/st.-louis-rams/pants/",
+					"link": "/nfl-team-apparel-merchandise/st.-louis-rams/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "St. Louis Rams Apparel & Merchandise Pants",
 					"page-title": "St. Louis Rams Apparel & Merchandise Pants | CampusColors.com",
@@ -9580,7 +9580,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!nfl-team-apparel-merchandise/st.-louis-rams/hats/",
+					"link": "/nfl-team-apparel-merchandise/st.-louis-rams/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "St. Louis Rams Apparel & Merchandise Hats",
 					"page-title": "St. Louis Rams Apparel & Merchandise Hats | CampusColors.com",
@@ -9615,7 +9615,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!nfl-team-apparel-merchandise/st.-louis-rams/novelties-and-accessories/",
+					"link": "/nfl-team-apparel-merchandise/st.-louis-rams/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "St. Louis Rams Apparel & Merchandise Novelties & Accessories",
 					"page-title": "St. Louis Rams Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -9632,7 +9632,7 @@
 		},
 		{
 			"id": "tampa-bay-buccaneers/",
-			"link": "#!nfl-team-apparel-merchandise/tampa-bay-buccaneers/",
+			"link": "/nfl-team-apparel-merchandise/tampa-bay-buccaneers/",
 			"img": "teamlogos/TBBU.jpg",
 			"name": "Tampa Bay Buccaneers Apparel & Merchandise",
 			"page-title": "Tampa Bay Buccaneers Apparel & Merchandise | CampusColors.com",
@@ -9653,7 +9653,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!nfl-team-apparel-merchandise/tampa-bay-buccaneers/all/",
+					"link": "/nfl-team-apparel-merchandise/tampa-bay-buccaneers/all/",
 					"img": "teamlogos/tbbu.jpg",
 					"name": "Tampa Bay Buccaneers Apparel & Merchandise",
 					"page-title": "Tampa Bay Buccaneers Apparel & Merchandise | CampusColors.com",
@@ -9688,7 +9688,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!nfl-team-apparel-merchandise/tampa-bay-buccaneers/shorts/",
+					"link": "/nfl-team-apparel-merchandise/tampa-bay-buccaneers/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Tampa Bay Buccaneers Apparel & Merchandise Shorts",
 					"page-title": "Tampa Bay Buccaneers Apparel & Merchandise Shorts | CampusColors.com",
@@ -9723,7 +9723,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!nfl-team-apparel-merchandise/tampa-bay-buccaneers/t-shirts/",
+					"link": "/nfl-team-apparel-merchandise/tampa-bay-buccaneers/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Tampa Bay Buccaneers Apparel & Merchandise T-Shirts",
 					"page-title": "Tampa Bay Buccaneers Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -9758,7 +9758,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!nfl-team-apparel-merchandise/tampa-bay-buccaneers/sweatshirts/",
+					"link": "/nfl-team-apparel-merchandise/tampa-bay-buccaneers/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Tampa Bay Buccaneers Apparel & Merchandise Sweatshirts",
 					"page-title": "Tampa Bay Buccaneers Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -9793,7 +9793,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!nfl-team-apparel-merchandise/tampa-bay-buccaneers/jerseys/",
+					"link": "/nfl-team-apparel-merchandise/tampa-bay-buccaneers/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Tampa Bay Buccaneers Apparel & Merchandise Jerseys",
 					"page-title": "Tampa Bay Buccaneers Apparel & Merchandise Jerseys | CampusColors.com",
@@ -9828,7 +9828,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!nfl-team-apparel-merchandise/tampa-bay-buccaneers/pants/",
+					"link": "/nfl-team-apparel-merchandise/tampa-bay-buccaneers/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Tampa Bay Buccaneers Apparel & Merchandise Pants",
 					"page-title": "Tampa Bay Buccaneers Apparel & Merchandise Pants | CampusColors.com",
@@ -9863,7 +9863,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!nfl-team-apparel-merchandise/tampa-bay-buccaneers/hats/",
+					"link": "/nfl-team-apparel-merchandise/tampa-bay-buccaneers/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Tampa Bay Buccaneers Apparel & Merchandise Hats",
 					"page-title": "Tampa Bay Buccaneers Apparel & Merchandise Hats | CampusColors.com",
@@ -9898,7 +9898,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!nfl-team-apparel-merchandise/tampa-bay-buccaneers/novelties-and-accessories/",
+					"link": "/nfl-team-apparel-merchandise/tampa-bay-buccaneers/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Tampa Bay Buccaneers Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Tampa Bay Buccaneers Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -9915,7 +9915,7 @@
 		},
 		{
 			"id": "tennessee-titans/",
-			"link": "#!nfl-team-apparel-merchandise/tennessee-titans/",
+			"link": "/nfl-team-apparel-merchandise/tennessee-titans/",
 			"img": "teamlogos/TETI.jpg",
 			"name": "Tennessee Titans Apparel & Merchandise",
 			"page-title": "Tennessee Titans Apparel & Merchandise | CampusColors.com",
@@ -9936,7 +9936,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!nfl-team-apparel-merchandise/tennessee-titans/all/",
+					"link": "/nfl-team-apparel-merchandise/tennessee-titans/all/",
 					"img": "teamlogos/teti.jpg",
 					"name": "Tennessee Titans Apparel & Merchandise",
 					"page-title": "Tennessee Titans Apparel & Merchandise | CampusColors.com",
@@ -9971,7 +9971,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!nfl-team-apparel-merchandise/tennessee-titans/shorts/",
+					"link": "/nfl-team-apparel-merchandise/tennessee-titans/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Tennessee Titans Apparel & Merchandise Shorts",
 					"page-title": "Tennessee Titans Apparel & Merchandise Shorts | CampusColors.com",
@@ -10006,7 +10006,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!nfl-team-apparel-merchandise/tennessee-titans/t-shirts/",
+					"link": "/nfl-team-apparel-merchandise/tennessee-titans/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Tennessee Titans Apparel & Merchandise T-Shirts",
 					"page-title": "Tennessee Titans Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -10041,7 +10041,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!nfl-team-apparel-merchandise/tennessee-titans/sweatshirts/",
+					"link": "/nfl-team-apparel-merchandise/tennessee-titans/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Tennessee Titans Apparel & Merchandise Sweatshirts",
 					"page-title": "Tennessee Titans Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -10076,7 +10076,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!nfl-team-apparel-merchandise/tennessee-titans/jerseys/",
+					"link": "/nfl-team-apparel-merchandise/tennessee-titans/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Tennessee Titans Apparel & Merchandise Jerseys",
 					"page-title": "Tennessee Titans Apparel & Merchandise Jerseys | CampusColors.com",
@@ -10111,7 +10111,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!nfl-team-apparel-merchandise/tennessee-titans/pants/",
+					"link": "/nfl-team-apparel-merchandise/tennessee-titans/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Tennessee Titans Apparel & Merchandise Pants",
 					"page-title": "Tennessee Titans Apparel & Merchandise Pants | CampusColors.com",
@@ -10146,7 +10146,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!nfl-team-apparel-merchandise/tennessee-titans/hats/",
+					"link": "/nfl-team-apparel-merchandise/tennessee-titans/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Tennessee Titans Apparel & Merchandise Hats",
 					"page-title": "Tennessee Titans Apparel & Merchandise Hats | CampusColors.com",
@@ -10181,7 +10181,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!nfl-team-apparel-merchandise/tennessee-titans/novelties-and-accessories/",
+					"link": "/nfl-team-apparel-merchandise/tennessee-titans/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Tennessee Titans Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Tennessee Titans Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -10198,7 +10198,7 @@
 		},
 		{
 			"id": "washington-redskins/",
-			"link": "#!nfl-team-apparel-merchandise/washington-redskins/",
+			"link": "/nfl-team-apparel-merchandise/washington-redskins/",
 			"img": "teamlogos/WARS.jpg",
 			"name": "Washington Redskins Apparel & Merchandise",
 			"page-title": "Washington Redskins Apparel & Merchandise | CampusColors.com",
@@ -10219,7 +10219,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!nfl-team-apparel-merchandise/washington-redskins/all/",
+					"link": "/nfl-team-apparel-merchandise/washington-redskins/all/",
 					"img": "teamlogos/wars.jpg",
 					"name": "Washington Redskins Apparel & Merchandise",
 					"page-title": "Washington Redskins Apparel & Merchandise | CampusColors.com",
@@ -10254,7 +10254,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!nfl-team-apparel-merchandise/washington-redskins/shorts/",
+					"link": "/nfl-team-apparel-merchandise/washington-redskins/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Washington Redskins Apparel & Merchandise Shorts",
 					"page-title": "Washington Redskins Apparel & Merchandise Shorts | CampusColors.com",
@@ -10289,7 +10289,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!nfl-team-apparel-merchandise/washington-redskins/t-shirts/",
+					"link": "/nfl-team-apparel-merchandise/washington-redskins/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Washington Redskins Apparel & Merchandise T-Shirts",
 					"page-title": "Washington Redskins Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -10324,7 +10324,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!nfl-team-apparel-merchandise/washington-redskins/sweatshirts/",
+					"link": "/nfl-team-apparel-merchandise/washington-redskins/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Washington Redskins Apparel & Merchandise Sweatshirts",
 					"page-title": "Washington Redskins Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -10359,7 +10359,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!nfl-team-apparel-merchandise/washington-redskins/jerseys/",
+					"link": "/nfl-team-apparel-merchandise/washington-redskins/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Washington Redskins Apparel & Merchandise Jerseys",
 					"page-title": "Washington Redskins Apparel & Merchandise Jerseys | CampusColors.com",
@@ -10394,7 +10394,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!nfl-team-apparel-merchandise/washington-redskins/pants/",
+					"link": "/nfl-team-apparel-merchandise/washington-redskins/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Washington Redskins Apparel & Merchandise Pants",
 					"page-title": "Washington Redskins Apparel & Merchandise Pants | CampusColors.com",
@@ -10429,7 +10429,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!nfl-team-apparel-merchandise/washington-redskins/hats/",
+					"link": "/nfl-team-apparel-merchandise/washington-redskins/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Washington Redskins Apparel & Merchandise Hats",
 					"page-title": "Washington Redskins Apparel & Merchandise Hats | CampusColors.com",
@@ -10464,7 +10464,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!nfl-team-apparel-merchandise/washington-redskins/novelties-and-accessories/",
+					"link": "/nfl-team-apparel-merchandise/washington-redskins/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Washington Redskins Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Washington Redskins Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -10481,7 +10481,7 @@
 		},
 		{
 			"id": "winner/",
-			"link": "#!nfl-team-apparel-merchandise/winner/",
+			"link": "/nfl-team-apparel-merchandise/winner/",
 			"img": "teamlogos/WINNER.jpg",
 			"name": "Winner Apparel & Merchandise",
 			"page-title": "Winner Apparel & Merchandise | CampusColors.com",
@@ -10502,7 +10502,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!nfl-team-apparel-merchandise/winner/all/",
+					"link": "/nfl-team-apparel-merchandise/winner/all/",
 					"img": "teamlogos/winner.jpg",
 					"name": "Winner Apparel & Merchandise",
 					"page-title": "Winner Apparel & Merchandise | CampusColors.com",
@@ -10537,7 +10537,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!nfl-team-apparel-merchandise/winner/shorts/",
+					"link": "/nfl-team-apparel-merchandise/winner/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Winner Apparel & Merchandise Shorts",
 					"page-title": "Winner Apparel & Merchandise Shorts | CampusColors.com",
@@ -10572,7 +10572,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!nfl-team-apparel-merchandise/winner/t-shirts/",
+					"link": "/nfl-team-apparel-merchandise/winner/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Winner Apparel & Merchandise T-Shirts",
 					"page-title": "Winner Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -10607,7 +10607,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!nfl-team-apparel-merchandise/winner/sweatshirts/",
+					"link": "/nfl-team-apparel-merchandise/winner/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Winner Apparel & Merchandise Sweatshirts",
 					"page-title": "Winner Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -10642,7 +10642,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!nfl-team-apparel-merchandise/winner/jerseys/",
+					"link": "/nfl-team-apparel-merchandise/winner/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Winner Apparel & Merchandise Jerseys",
 					"page-title": "Winner Apparel & Merchandise Jerseys | CampusColors.com",
@@ -10677,7 +10677,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!nfl-team-apparel-merchandise/winner/pants/",
+					"link": "/nfl-team-apparel-merchandise/winner/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Winner Apparel & Merchandise Pants",
 					"page-title": "Winner Apparel & Merchandise Pants | CampusColors.com",
@@ -10712,7 +10712,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!nfl-team-apparel-merchandise/winner/hats/",
+					"link": "/nfl-team-apparel-merchandise/winner/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Winner Apparel & Merchandise Hats",
 					"page-title": "Winner Apparel & Merchandise Hats | CampusColors.com",
@@ -10747,7 +10747,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!nfl-team-apparel-merchandise/winner/novelties-and-accessories/",
+					"link": "/nfl-team-apparel-merchandise/winner/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Winner Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Winner Apparel & Merchandise Novelties & Accessories | CampusColors.com",

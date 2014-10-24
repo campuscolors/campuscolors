@@ -723,34 +723,22 @@ function createPagesSubcatSubfilter(root){
 function createPagesPromoFilter(root) {
 	_app.router.appendHash({'type':'exact','route':'/'+root+'/','pagefilter':root,'callback':'promo'});
 }
+
 createPagesPromoFilter('promo');
 
-createPagesRootFilter('ncaa-apparel-merchandise');
-createPagesRootFilter('nfl-apparel-merchandise');
-createPagesRootFilter('nba-apparel-merchandise');
-createPagesRootFilter('mlb-apparel-merchandise');
-createPagesRootFilter('nhl-apparel-merchandise');
 createPagesRootFilter('team-apparel-merchandise');
 createPagesRootFilter('apparel-merchandise');
 createPagesRootFilter('sale-apparel-merchandise');
-createPagesRootFilter('adidas-gear');
-createPagesRootFilter('apparel');
-createPagesRootFilter('mens-apparel-merchandise');
-createPagesRootFilter('womens-apparel-merchandise');
-createPagesRootFilter('kids-apparel-merchandise');
-createPagesRootFilter('kids-apparel-merchandise');
 createPagesRootFilter('brands-apparel-merchandise');
 
-createPagesSubcatSubfilter('ncaa-team-apparel-merchandise');
-createPagesSubcatSubfilter('nfl-team-apparel-merchandise');
+createPagesSubcatSubfilter('ncaa-team-apparel-merchandise');	
+createPagesSubcatSubfilter('nfl-team-apparel-merchandise');	
 createPagesSubcatSubfilter('nba-team-apparel-merchandise');
 createPagesSubcatSubfilter('mlb-team-apparel-merchandise');
 createPagesSubcatSubfilter('nhl-team-apparel-merchandise');
 createPagesSubcatSubfilter('soccer-team-apparel-merchandise');
 createPagesSubcatSubfilter('league-apparel-merchandise');
-createPagesSubcatSubfilter('');
-				//DO THIS FOR ALL THOSE BELOW:	
-					
+	
 //SEARCH APPENDS
 _app.router.appendHash({'type':'match','route':'/search/promo/{{PATH}}*','callback':'promo'});					
 					

@@ -9,7 +9,7 @@
 		"pages" : [
 			{
 				"id" 				: "college-teams",
-				"link"				: "#!team-apparel-merchandise/college-teams/", 
+				"link"				: "/team-apparel-merchandise/college-teams/", 
 				"img" 			: "",
 				"name"			: "College Teams",
 				"page-title" 	: "College Teams at CampusColors.com",
@@ -21,7 +21,7 @@
 			},
 			{
 				"id" 				: "duke-blue-devils-apparel-merchandise.html",
-				"link"				: "#!team-apparel-merchandise/duke-blue-devils-apparel-merchandise.html", 
+				"link"				: "/team-apparel-merchandise/duke-blue-devils-apparel-merchandise.html", 
 				"img" 			: "",
 				"name"			: "Duke Blue Devils Apparel & Merchandise",
 				"page-title" 	: "Duke Blue Devils Apparel & Merchandise | CampusColors.com",
@@ -39,7 +39,7 @@
 			},
 			{
 				"id" 				: "illinois-fighting-illini-apparel-merchandise.html",
-				"link"				: "#!team-apparel-merchandise/illinois-fighting-illini-apparel-merchandise.html", 
+				"link"				: "/team-apparel-merchandise/illinois-fighting-illini-apparel-merchandise.html", 
 				"img" 			: "",
 				"name"			: "College Teams Illinois Fighting Illini",
 				"page-title" 	: "College Teams Illinois Fighting Illini at CampusColors.com",
@@ -55,7 +55,7 @@
 			},
 			{
 				"id" 				: "illinois-state-redbirds-apparel-merchandise.html",
-				"link"				: "#!team-apparel-merchandise/illinois-state-redbirds-apparel-merchandise.html", 
+				"link"				: "/team-apparel-merchandise/illinois-state-redbirds-apparel-merchandise.html", 
 				"img" 			: "",
 				"name"			: "College Teams Illinois State Redbirds",
 				"page-title" 	: "College Teams Illinois State Redbirds at CampusColors.com",
@@ -71,7 +71,7 @@
 			},
 			{
 				"id" 				: "indiana-hoosiers-apparel-merchandise.html",
-				"link"				: "#!team-apparel-merchandise/indiana-hoosiers-apparel-merchandise.html", 
+				"link"				: "/team-apparel-merchandise/indiana-hoosiers-apparel-merchandise.html", 
 				"img" 			: "",
 				"name"			: "College Teams Indiana Hoosiers",
 				"page-title" 	: "College Teams Indiana Hoosiers at CampusColors.com",
@@ -87,7 +87,7 @@
 			},
 			{
 				"id" 				: "iowa-hawkeyes-apparel-merchandise.html",
-				"link"				: "#!team-apparel-merchandise/iowa-hawkeyes-apparel-merchandise.html", 
+				"link"				: "/team-apparel-merchandise/iowa-hawkeyes-apparel-merchandise.html", 
 				"img" 			: "",
 				"name"			: "College Teams Iowa Hawkeyes",
 				"page-title" 	: "College Teams Iowa Hawkeyes at CampusColors.com",
@@ -103,7 +103,7 @@
 			},
 			{
 				"id" 				: "nfl-teams",
-				"link"				: "#!team-apparel-merchandise/nfl-teams/", 
+				"link"				: "/team-apparel-merchandise/nfl-teams/", 
 				"img" 			: "",
 				"name"			: "NFL Teams",
 				"page-title" 	: "NFL Shorts at CampusColors.com",
@@ -115,7 +115,7 @@
 			},
 			{
 				"id" 				: "nba-teams",
-				"link"				: "#!team-apparel-merchandise/nba-teams/", 
+				"link"				: "/team-apparel-merchandise/nba-teams/", 
 				"img" 			: "",
 				"name"			: "NBA Teams",
 				"page-title" 	: "NBA Shorts at CampusColors.com",
@@ -127,7 +127,7 @@
 			},
 			{
 				"id" 				: "mlb-teams",
-				"link"				: "#!team-apparel-merchandise/mlb-teams/", 
+				"link"				: "/team-apparel-merchandise/mlb-teams/", 
 				"img" 			: "",
 				"name"			: "MLB Teams",
 				"page-title" 	: "MLB Shorts at CampusColors.com",
@@ -139,7 +139,7 @@
 			},
 			{
 				"id" 				: "nhl-teams",
-				"link"				: "#!team-apparel-merchandise/nhl-teams/", 
+				"link"				: "/team-apparel-merchandise/nhl-teams/", 
 				"img" 			: "",
 				"name"			: "NHL Teams",
 				"page-title" 	: "NHL Shorts at CampusColors.com",
@@ -151,7 +151,7 @@
 			},
 			{
 				"id" 				: "soccer-teams",
-				"link"				: "#!team-apparel-merchandise/soccer-teams/", 
+				"link"				: "/team-apparel-merchandise/soccer-teams/", 
 				"img" 			: "",
 				"name"			: "SOCCER Teams",
 				"page-title" 	: "SOCCER Shorts at CampusColors.com",

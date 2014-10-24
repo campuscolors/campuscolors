@@ -10,7 +10,7 @@
 	"pages": [
 		{
 			"id": "arsenal-fc/",
-			"link": "#!soccer-team-apparel-merchandise/arsenal-fc/",
+			"link": "/soccer-team-apparel-merchandise/arsenal-fc/",
 			"img": "teamlogos/ARSE.jpg",
 			"name": "Arsenal FC Apparel & Merchandise",
 			"page-title": "Arsenal FC Apparel & Merchandise | CampusColors.com",
@@ -31,7 +31,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!soccer-team-apparel-merchandise/arsenal-fc/all/",
+					"link": "/soccer-team-apparel-merchandise/arsenal-fc/all/",
 					"img": "teamlogos/arse.jpg",
 					"name": "Arsenal FC Apparel & Merchandise",
 					"page-title": "Arsenal FC Apparel & Merchandise | CampusColors.com",
@@ -66,7 +66,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!soccer-team-apparel-merchandise/arsenal-fc/shorts/",
+					"link": "/soccer-team-apparel-merchandise/arsenal-fc/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Arsenal FC Apparel & Merchandise Shorts",
 					"page-title": "Arsenal FC Apparel & Merchandise Shorts | CampusColors.com",
@@ -101,7 +101,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!soccer-team-apparel-merchandise/arsenal-fc/t-shirts/",
+					"link": "/soccer-team-apparel-merchandise/arsenal-fc/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Arsenal FC Apparel & Merchandise T-Shirts",
 					"page-title": "Arsenal FC Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -136,7 +136,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!soccer-team-apparel-merchandise/arsenal-fc/sweatshirts/",
+					"link": "/soccer-team-apparel-merchandise/arsenal-fc/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Arsenal FC Apparel & Merchandise Sweatshirts",
 					"page-title": "Arsenal FC Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -171,7 +171,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!soccer-team-apparel-merchandise/arsenal-fc/jerseys/",
+					"link": "/soccer-team-apparel-merchandise/arsenal-fc/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Arsenal FC Apparel & Merchandise Jerseys",
 					"page-title": "Arsenal FC Apparel & Merchandise Jerseys | CampusColors.com",
@@ -206,7 +206,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!soccer-team-apparel-merchandise/arsenal-fc/pants/",
+					"link": "/soccer-team-apparel-merchandise/arsenal-fc/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Arsenal FC Apparel & Merchandise Pants",
 					"page-title": "Arsenal FC Apparel & Merchandise Pants | CampusColors.com",
@@ -241,7 +241,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!soccer-team-apparel-merchandise/arsenal-fc/hats/",
+					"link": "/soccer-team-apparel-merchandise/arsenal-fc/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Arsenal FC Apparel & Merchandise Hats",
 					"page-title": "Arsenal FC Apparel & Merchandise Hats | CampusColors.com",
@@ -276,7 +276,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!soccer-team-apparel-merchandise/arsenal-fc/novelties-and-accessories/",
+					"link": "/soccer-team-apparel-merchandise/arsenal-fc/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Arsenal FC Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Arsenal FC Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -293,7 +293,7 @@
 		},
 		{
 			"id": "brazil-national-team/",
-			"link": "#!soccer-team-apparel-merchandise/brazil-national-team/",
+			"link": "/soccer-team-apparel-merchandise/brazil-national-team/",
 			"img": "teamlogos/BRAZ.jpg",
 			"name": "Brazil National Team Apparel & Merchandise",
 			"page-title": "Brazil National Team Apparel & Merchandise | CampusColors.com",
@@ -314,7 +314,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!soccer-team-apparel-merchandise/brazil-national-team/all/",
+					"link": "/soccer-team-apparel-merchandise/brazil-national-team/all/",
 					"img": "teamlogos/braz.jpg",
 					"name": "Brazil National Team Apparel & Merchandise",
 					"page-title": "Brazil National Team Apparel & Merchandise | CampusColors.com",
@@ -349,7 +349,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!soccer-team-apparel-merchandise/brazil-national-team/shorts/",
+					"link": "/soccer-team-apparel-merchandise/brazil-national-team/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Brazil National Team Apparel & Merchandise Shorts",
 					"page-title": "Brazil National Team Apparel & Merchandise Shorts | CampusColors.com",
@@ -384,7 +384,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!soccer-team-apparel-merchandise/brazil-national-team/t-shirts/",
+					"link": "/soccer-team-apparel-merchandise/brazil-national-team/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Brazil National Team Apparel & Merchandise T-Shirts",
 					"page-title": "Brazil National Team Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -419,7 +419,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!soccer-team-apparel-merchandise/brazil-national-team/sweatshirts/",
+					"link": "/soccer-team-apparel-merchandise/brazil-national-team/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Brazil National Team Apparel & Merchandise Sweatshirts",
 					"page-title": "Brazil National Team Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -454,7 +454,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!soccer-team-apparel-merchandise/brazil-national-team/jerseys/",
+					"link": "/soccer-team-apparel-merchandise/brazil-national-team/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Brazil National Team Apparel & Merchandise Jerseys",
 					"page-title": "Brazil National Team Apparel & Merchandise Jerseys | CampusColors.com",
@@ -489,7 +489,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!soccer-team-apparel-merchandise/brazil-national-team/pants/",
+					"link": "/soccer-team-apparel-merchandise/brazil-national-team/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Brazil National Team Apparel & Merchandise Pants",
 					"page-title": "Brazil National Team Apparel & Merchandise Pants | CampusColors.com",
@@ -524,7 +524,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!soccer-team-apparel-merchandise/brazil-national-team/hats/",
+					"link": "/soccer-team-apparel-merchandise/brazil-national-team/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Brazil National Team Apparel & Merchandise Hats",
 					"page-title": "Brazil National Team Apparel & Merchandise Hats | CampusColors.com",
@@ -559,7 +559,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!soccer-team-apparel-merchandise/brazil-national-team/novelties-and-accessories/",
+					"link": "/soccer-team-apparel-merchandise/brazil-national-team/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Brazil National Team Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Brazil National Team Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -576,7 +576,7 @@
 		},
 		{
 			"id": "celtic-fc/",
-			"link": "#!soccer-team-apparel-merchandise/celtic-fc/",
+			"link": "/soccer-team-apparel-merchandise/celtic-fc/",
 			"img": "teamlogos/CELT.jpg",
 			"name": "Celtic FC Apparel & Merchandise",
 			"page-title": "Celtic FC Apparel & Merchandise | CampusColors.com",
@@ -597,7 +597,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!soccer-team-apparel-merchandise/celtic-fc/all/",
+					"link": "/soccer-team-apparel-merchandise/celtic-fc/all/",
 					"img": "teamlogos/celt.jpg",
 					"name": "Celtic FC Apparel & Merchandise",
 					"page-title": "Celtic FC Apparel & Merchandise | CampusColors.com",
@@ -632,7 +632,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!soccer-team-apparel-merchandise/celtic-fc/shorts/",
+					"link": "/soccer-team-apparel-merchandise/celtic-fc/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Celtic FC Apparel & Merchandise Shorts",
 					"page-title": "Celtic FC Apparel & Merchandise Shorts | CampusColors.com",
@@ -667,7 +667,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!soccer-team-apparel-merchandise/celtic-fc/t-shirts/",
+					"link": "/soccer-team-apparel-merchandise/celtic-fc/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Celtic FC Apparel & Merchandise T-Shirts",
 					"page-title": "Celtic FC Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -702,7 +702,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!soccer-team-apparel-merchandise/celtic-fc/sweatshirts/",
+					"link": "/soccer-team-apparel-merchandise/celtic-fc/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Celtic FC Apparel & Merchandise Sweatshirts",
 					"page-title": "Celtic FC Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -737,7 +737,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!soccer-team-apparel-merchandise/celtic-fc/jerseys/",
+					"link": "/soccer-team-apparel-merchandise/celtic-fc/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Celtic FC Apparel & Merchandise Jerseys",
 					"page-title": "Celtic FC Apparel & Merchandise Jerseys | CampusColors.com",
@@ -772,7 +772,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!soccer-team-apparel-merchandise/celtic-fc/pants/",
+					"link": "/soccer-team-apparel-merchandise/celtic-fc/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Celtic FC Apparel & Merchandise Pants",
 					"page-title": "Celtic FC Apparel & Merchandise Pants | CampusColors.com",
@@ -807,7 +807,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!soccer-team-apparel-merchandise/celtic-fc/hats/",
+					"link": "/soccer-team-apparel-merchandise/celtic-fc/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Celtic FC Apparel & Merchandise Hats",
 					"page-title": "Celtic FC Apparel & Merchandise Hats | CampusColors.com",
@@ -842,7 +842,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!soccer-team-apparel-merchandise/celtic-fc/novelties-and-accessories/",
+					"link": "/soccer-team-apparel-merchandise/celtic-fc/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Celtic FC Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Celtic FC Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -859,7 +859,7 @@
 		},
 		{
 			"id": "chicago-fire/",
-			"link": "#!soccer-team-apparel-merchandise/chicago-fire/",
+			"link": "/soccer-team-apparel-merchandise/chicago-fire/",
 			"img": "teamlogos/FIRE.jpg",
 			"name": "Chicago Fire Apparel & Merchandise",
 			"page-title": "Chicago Fire Apparel & Merchandise | CampusColors.com",
@@ -880,7 +880,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!soccer-team-apparel-merchandise/chicago-fire/all/",
+					"link": "/soccer-team-apparel-merchandise/chicago-fire/all/",
 					"img": "teamlogos/fire.jpg",
 					"name": "Chicago Fire Apparel & Merchandise",
 					"page-title": "Chicago Fire Apparel & Merchandise | CampusColors.com",
@@ -915,7 +915,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!soccer-team-apparel-merchandise/chicago-fire/shorts/",
+					"link": "/soccer-team-apparel-merchandise/chicago-fire/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Chicago Fire Apparel & Merchandise Shorts",
 					"page-title": "Chicago Fire Apparel & Merchandise Shorts | CampusColors.com",
@@ -950,7 +950,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!soccer-team-apparel-merchandise/chicago-fire/t-shirts/",
+					"link": "/soccer-team-apparel-merchandise/chicago-fire/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Chicago Fire Apparel & Merchandise T-Shirts",
 					"page-title": "Chicago Fire Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -985,7 +985,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!soccer-team-apparel-merchandise/chicago-fire/sweatshirts/",
+					"link": "/soccer-team-apparel-merchandise/chicago-fire/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Chicago Fire Apparel & Merchandise Sweatshirts",
 					"page-title": "Chicago Fire Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -1020,7 +1020,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!soccer-team-apparel-merchandise/chicago-fire/jerseys/",
+					"link": "/soccer-team-apparel-merchandise/chicago-fire/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Chicago Fire Apparel & Merchandise Jerseys",
 					"page-title": "Chicago Fire Apparel & Merchandise Jerseys | CampusColors.com",
@@ -1055,7 +1055,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!soccer-team-apparel-merchandise/chicago-fire/pants/",
+					"link": "/soccer-team-apparel-merchandise/chicago-fire/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Chicago Fire Apparel & Merchandise Pants",
 					"page-title": "Chicago Fire Apparel & Merchandise Pants | CampusColors.com",
@@ -1090,7 +1090,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!soccer-team-apparel-merchandise/chicago-fire/hats/",
+					"link": "/soccer-team-apparel-merchandise/chicago-fire/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Chicago Fire Apparel & Merchandise Hats",
 					"page-title": "Chicago Fire Apparel & Merchandise Hats | CampusColors.com",
@@ -1125,7 +1125,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!soccer-team-apparel-merchandise/chicago-fire/novelties-and-accessories/",
+					"link": "/soccer-team-apparel-merchandise/chicago-fire/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Chicago Fire Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Chicago Fire Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -1142,7 +1142,7 @@
 		},
 		{
 			"id": "club-america/",
-			"link": "#!soccer-team-apparel-merchandise/club-america/",
+			"link": "/soccer-team-apparel-merchandise/club-america/",
 			"img": "teamlogos/CLBA.jpg",
 			"name": "Club America Apparel & Merchandise",
 			"page-title": "Club America Apparel & Merchandise | CampusColors.com",
@@ -1163,7 +1163,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!soccer-team-apparel-merchandise/club-america/all/",
+					"link": "/soccer-team-apparel-merchandise/club-america/all/",
 					"img": "teamlogos/clba.jpg",
 					"name": "Club America Apparel & Merchandise",
 					"page-title": "Club America Apparel & Merchandise | CampusColors.com",
@@ -1198,7 +1198,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!soccer-team-apparel-merchandise/club-america/shorts/",
+					"link": "/soccer-team-apparel-merchandise/club-america/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Club America Apparel & Merchandise Shorts",
 					"page-title": "Club America Apparel & Merchandise Shorts | CampusColors.com",
@@ -1233,7 +1233,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!soccer-team-apparel-merchandise/club-america/t-shirts/",
+					"link": "/soccer-team-apparel-merchandise/club-america/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Club America Apparel & Merchandise T-Shirts",
 					"page-title": "Club America Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -1268,7 +1268,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!soccer-team-apparel-merchandise/club-america/sweatshirts/",
+					"link": "/soccer-team-apparel-merchandise/club-america/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Club America Apparel & Merchandise Sweatshirts",
 					"page-title": "Club America Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -1303,7 +1303,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!soccer-team-apparel-merchandise/club-america/jerseys/",
+					"link": "/soccer-team-apparel-merchandise/club-america/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Club America Apparel & Merchandise Jerseys",
 					"page-title": "Club America Apparel & Merchandise Jerseys | CampusColors.com",
@@ -1338,7 +1338,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!soccer-team-apparel-merchandise/club-america/pants/",
+					"link": "/soccer-team-apparel-merchandise/club-america/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Club America Apparel & Merchandise Pants",
 					"page-title": "Club America Apparel & Merchandise Pants | CampusColors.com",
@@ -1373,7 +1373,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!soccer-team-apparel-merchandise/club-america/hats/",
+					"link": "/soccer-team-apparel-merchandise/club-america/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Club America Apparel & Merchandise Hats",
 					"page-title": "Club America Apparel & Merchandise Hats | CampusColors.com",
@@ -1408,7 +1408,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!soccer-team-apparel-merchandise/club-america/novelties-and-accessories/",
+					"link": "/soccer-team-apparel-merchandise/club-america/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Club America Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Club America Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -1425,7 +1425,7 @@
 		},
 		{
 			"id": "dc-united/",
-			"link": "#!soccer-team-apparel-merchandise/dc-united/",
+			"link": "/soccer-team-apparel-merchandise/dc-united/",
 			"img": "teamlogos/DCU.jpg",
 			"name": "DC United Apparel & Merchandise",
 			"page-title": "DC United Apparel & Merchandise | CampusColors.com",
@@ -1446,7 +1446,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!soccer-team-apparel-merchandise/dc-united/all/",
+					"link": "/soccer-team-apparel-merchandise/dc-united/all/",
 					"img": "teamlogos/dcu.jpg",
 					"name": "DC United Apparel & Merchandise",
 					"page-title": "DC United Apparel & Merchandise | CampusColors.com",
@@ -1481,7 +1481,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!soccer-team-apparel-merchandise/dc-united/shorts/",
+					"link": "/soccer-team-apparel-merchandise/dc-united/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "DC United Apparel & Merchandise Shorts",
 					"page-title": "DC United Apparel & Merchandise Shorts | CampusColors.com",
@@ -1516,7 +1516,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!soccer-team-apparel-merchandise/dc-united/t-shirts/",
+					"link": "/soccer-team-apparel-merchandise/dc-united/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "DC United Apparel & Merchandise T-Shirts",
 					"page-title": "DC United Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -1551,7 +1551,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!soccer-team-apparel-merchandise/dc-united/sweatshirts/",
+					"link": "/soccer-team-apparel-merchandise/dc-united/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "DC United Apparel & Merchandise Sweatshirts",
 					"page-title": "DC United Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -1586,7 +1586,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!soccer-team-apparel-merchandise/dc-united/jerseys/",
+					"link": "/soccer-team-apparel-merchandise/dc-united/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "DC United Apparel & Merchandise Jerseys",
 					"page-title": "DC United Apparel & Merchandise Jerseys | CampusColors.com",
@@ -1621,7 +1621,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!soccer-team-apparel-merchandise/dc-united/pants/",
+					"link": "/soccer-team-apparel-merchandise/dc-united/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "DC United Apparel & Merchandise Pants",
 					"page-title": "DC United Apparel & Merchandise Pants | CampusColors.com",
@@ -1656,7 +1656,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!soccer-team-apparel-merchandise/dc-united/hats/",
+					"link": "/soccer-team-apparel-merchandise/dc-united/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "DC United Apparel & Merchandise Hats",
 					"page-title": "DC United Apparel & Merchandise Hats | CampusColors.com",
@@ -1691,7 +1691,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!soccer-team-apparel-merchandise/dc-united/novelties-and-accessories/",
+					"link": "/soccer-team-apparel-merchandise/dc-united/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "DC United Apparel & Merchandise Novelties & Accessories",
 					"page-title": "DC United Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -1708,7 +1708,7 @@
 		},
 		{
 			"id": "fc-barcelona/",
-			"link": "#!soccer-team-apparel-merchandise/fc-barcelona/",
+			"link": "/soccer-team-apparel-merchandise/fc-barcelona/",
 			"img": "teamlogos/BARC.jpg",
 			"name": "FC Barcelona Apparel & Merchandise",
 			"page-title": "FC Barcelona Apparel & Merchandise | CampusColors.com",
@@ -1729,7 +1729,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!soccer-team-apparel-merchandise/fc-barcelona/all/",
+					"link": "/soccer-team-apparel-merchandise/fc-barcelona/all/",
 					"img": "teamlogos/barc.jpg",
 					"name": "FC Barcelona Apparel & Merchandise",
 					"page-title": "FC Barcelona Apparel & Merchandise | CampusColors.com",
@@ -1764,7 +1764,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!soccer-team-apparel-merchandise/fc-barcelona/shorts/",
+					"link": "/soccer-team-apparel-merchandise/fc-barcelona/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "FC Barcelona Apparel & Merchandise Shorts",
 					"page-title": "FC Barcelona Apparel & Merchandise Shorts | CampusColors.com",
@@ -1799,7 +1799,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!soccer-team-apparel-merchandise/fc-barcelona/t-shirts/",
+					"link": "/soccer-team-apparel-merchandise/fc-barcelona/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "FC Barcelona Apparel & Merchandise T-Shirts",
 					"page-title": "FC Barcelona Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -1834,7 +1834,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!soccer-team-apparel-merchandise/fc-barcelona/sweatshirts/",
+					"link": "/soccer-team-apparel-merchandise/fc-barcelona/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "FC Barcelona Apparel & Merchandise Sweatshirts",
 					"page-title": "FC Barcelona Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -1869,7 +1869,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!soccer-team-apparel-merchandise/fc-barcelona/jerseys/",
+					"link": "/soccer-team-apparel-merchandise/fc-barcelona/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "FC Barcelona Apparel & Merchandise Jerseys",
 					"page-title": "FC Barcelona Apparel & Merchandise Jerseys | CampusColors.com",
@@ -1904,7 +1904,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!soccer-team-apparel-merchandise/fc-barcelona/pants/",
+					"link": "/soccer-team-apparel-merchandise/fc-barcelona/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "FC Barcelona Apparel & Merchandise Pants",
 					"page-title": "FC Barcelona Apparel & Merchandise Pants | CampusColors.com",
@@ -1939,7 +1939,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!soccer-team-apparel-merchandise/fc-barcelona/hats/",
+					"link": "/soccer-team-apparel-merchandise/fc-barcelona/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "FC Barcelona Apparel & Merchandise Hats",
 					"page-title": "FC Barcelona Apparel & Merchandise Hats | CampusColors.com",
@@ -1974,7 +1974,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!soccer-team-apparel-merchandise/fc-barcelona/novelties-and-accessories/",
+					"link": "/soccer-team-apparel-merchandise/fc-barcelona/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "FC Barcelona Apparel & Merchandise Novelties & Accessories",
 					"page-title": "FC Barcelona Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -1991,7 +1991,7 @@
 		},
 		{
 			"id": "france-national-team/",
-			"link": "#!soccer-team-apparel-merchandise/france-national-team/",
+			"link": "/soccer-team-apparel-merchandise/france-national-team/",
 			"img": "teamlogos/FRAN.jpg",
 			"name": "France National Team Apparel & Merchandise",
 			"page-title": "France National Team Apparel & Merchandise | CampusColors.com",
@@ -2012,7 +2012,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!soccer-team-apparel-merchandise/france-national-team/all/",
+					"link": "/soccer-team-apparel-merchandise/france-national-team/all/",
 					"img": "teamlogos/fran.jpg",
 					"name": "France National Team Apparel & Merchandise",
 					"page-title": "France National Team Apparel & Merchandise | CampusColors.com",
@@ -2047,7 +2047,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!soccer-team-apparel-merchandise/france-national-team/shorts/",
+					"link": "/soccer-team-apparel-merchandise/france-national-team/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "France National Team Apparel & Merchandise Shorts",
 					"page-title": "France National Team Apparel & Merchandise Shorts | CampusColors.com",
@@ -2082,7 +2082,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!soccer-team-apparel-merchandise/france-national-team/t-shirts/",
+					"link": "/soccer-team-apparel-merchandise/france-national-team/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "France National Team Apparel & Merchandise T-Shirts",
 					"page-title": "France National Team Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -2117,7 +2117,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!soccer-team-apparel-merchandise/france-national-team/sweatshirts/",
+					"link": "/soccer-team-apparel-merchandise/france-national-team/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "France National Team Apparel & Merchandise Sweatshirts",
 					"page-title": "France National Team Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -2152,7 +2152,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!soccer-team-apparel-merchandise/france-national-team/jerseys/",
+					"link": "/soccer-team-apparel-merchandise/france-national-team/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "France National Team Apparel & Merchandise Jerseys",
 					"page-title": "France National Team Apparel & Merchandise Jerseys | CampusColors.com",
@@ -2187,7 +2187,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!soccer-team-apparel-merchandise/france-national-team/pants/",
+					"link": "/soccer-team-apparel-merchandise/france-national-team/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "France National Team Apparel & Merchandise Pants",
 					"page-title": "France National Team Apparel & Merchandise Pants | CampusColors.com",
@@ -2222,7 +2222,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!soccer-team-apparel-merchandise/france-national-team/hats/",
+					"link": "/soccer-team-apparel-merchandise/france-national-team/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "France National Team Apparel & Merchandise Hats",
 					"page-title": "France National Team Apparel & Merchandise Hats | CampusColors.com",
@@ -2257,7 +2257,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!soccer-team-apparel-merchandise/france-national-team/novelties-and-accessories/",
+					"link": "/soccer-team-apparel-merchandise/france-national-team/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "France National Team Apparel & Merchandise Novelties & Accessories",
 					"page-title": "France National Team Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -2274,7 +2274,7 @@
 		},
 		{
 			"id": "inter-milan/",
-			"link": "#!soccer-team-apparel-merchandise/inter-milan/",
+			"link": "/soccer-team-apparel-merchandise/inter-milan/",
 			"img": "teamlogos/INTER.jpg",
 			"name": "Inter Milan Apparel & Merchandise",
 			"page-title": "Inter Milan Apparel & Merchandise | CampusColors.com",
@@ -2295,7 +2295,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!soccer-team-apparel-merchandise/inter-milan/all/",
+					"link": "/soccer-team-apparel-merchandise/inter-milan/all/",
 					"img": "teamlogos/inter.jpg",
 					"name": "Inter Milan Apparel & Merchandise",
 					"page-title": "Inter Milan Apparel & Merchandise | CampusColors.com",
@@ -2330,7 +2330,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!soccer-team-apparel-merchandise/inter-milan/shorts/",
+					"link": "/soccer-team-apparel-merchandise/inter-milan/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Inter Milan Apparel & Merchandise Shorts",
 					"page-title": "Inter Milan Apparel & Merchandise Shorts | CampusColors.com",
@@ -2365,7 +2365,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!soccer-team-apparel-merchandise/inter-milan/t-shirts/",
+					"link": "/soccer-team-apparel-merchandise/inter-milan/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Inter Milan Apparel & Merchandise T-Shirts",
 					"page-title": "Inter Milan Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -2400,7 +2400,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!soccer-team-apparel-merchandise/inter-milan/sweatshirts/",
+					"link": "/soccer-team-apparel-merchandise/inter-milan/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Inter Milan Apparel & Merchandise Sweatshirts",
 					"page-title": "Inter Milan Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -2435,7 +2435,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!soccer-team-apparel-merchandise/inter-milan/jerseys/",
+					"link": "/soccer-team-apparel-merchandise/inter-milan/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Inter Milan Apparel & Merchandise Jerseys",
 					"page-title": "Inter Milan Apparel & Merchandise Jerseys | CampusColors.com",
@@ -2470,7 +2470,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!soccer-team-apparel-merchandise/inter-milan/pants/",
+					"link": "/soccer-team-apparel-merchandise/inter-milan/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Inter Milan Apparel & Merchandise Pants",
 					"page-title": "Inter Milan Apparel & Merchandise Pants | CampusColors.com",
@@ -2505,7 +2505,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!soccer-team-apparel-merchandise/inter-milan/hats/",
+					"link": "/soccer-team-apparel-merchandise/inter-milan/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Inter Milan Apparel & Merchandise Hats",
 					"page-title": "Inter Milan Apparel & Merchandise Hats | CampusColors.com",
@@ -2540,7 +2540,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!soccer-team-apparel-merchandise/inter-milan/novelties-and-accessories/",
+					"link": "/soccer-team-apparel-merchandise/inter-milan/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Inter Milan Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Inter Milan Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -2557,7 +2557,7 @@
 		},
 		{
 			"id": "italy-national-team/",
-			"link": "#!soccer-team-apparel-merchandise/italy-national-team/",
+			"link": "/soccer-team-apparel-merchandise/italy-national-team/",
 			"img": "teamlogos/ITLY.jpg",
 			"name": "Italy National Team Apparel & Merchandise",
 			"page-title": "Italy National Team Apparel & Merchandise | CampusColors.com",
@@ -2578,7 +2578,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!soccer-team-apparel-merchandise/italy-national-team/all/",
+					"link": "/soccer-team-apparel-merchandise/italy-national-team/all/",
 					"img": "teamlogos/itly.jpg",
 					"name": "Italy National Team Apparel & Merchandise",
 					"page-title": "Italy National Team Apparel & Merchandise | CampusColors.com",
@@ -2613,7 +2613,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!soccer-team-apparel-merchandise/italy-national-team/shorts/",
+					"link": "/soccer-team-apparel-merchandise/italy-national-team/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Italy National Team Apparel & Merchandise Shorts",
 					"page-title": "Italy National Team Apparel & Merchandise Shorts | CampusColors.com",
@@ -2648,7 +2648,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!soccer-team-apparel-merchandise/italy-national-team/t-shirts/",
+					"link": "/soccer-team-apparel-merchandise/italy-national-team/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Italy National Team Apparel & Merchandise T-Shirts",
 					"page-title": "Italy National Team Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -2683,7 +2683,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!soccer-team-apparel-merchandise/italy-national-team/sweatshirts/",
+					"link": "/soccer-team-apparel-merchandise/italy-national-team/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Italy National Team Apparel & Merchandise Sweatshirts",
 					"page-title": "Italy National Team Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -2718,7 +2718,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!soccer-team-apparel-merchandise/italy-national-team/jerseys/",
+					"link": "/soccer-team-apparel-merchandise/italy-national-team/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Italy National Team Apparel & Merchandise Jerseys",
 					"page-title": "Italy National Team Apparel & Merchandise Jerseys | CampusColors.com",
@@ -2753,7 +2753,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!soccer-team-apparel-merchandise/italy-national-team/pants/",
+					"link": "/soccer-team-apparel-merchandise/italy-national-team/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Italy National Team Apparel & Merchandise Pants",
 					"page-title": "Italy National Team Apparel & Merchandise Pants | CampusColors.com",
@@ -2788,7 +2788,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!soccer-team-apparel-merchandise/italy-national-team/hats/",
+					"link": "/soccer-team-apparel-merchandise/italy-national-team/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Italy National Team Apparel & Merchandise Hats",
 					"page-title": "Italy National Team Apparel & Merchandise Hats | CampusColors.com",
@@ -2823,7 +2823,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!soccer-team-apparel-merchandise/italy-national-team/novelties-and-accessories/",
+					"link": "/soccer-team-apparel-merchandise/italy-national-team/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Italy National Team Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Italy National Team Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -2840,7 +2840,7 @@
 		},
 		{
 			"id": "juventus-fc/",
-			"link": "#!soccer-team-apparel-merchandise/juventus-fc/",
+			"link": "/soccer-team-apparel-merchandise/juventus-fc/",
 			"img": "teamlogos/JUVE.jpg",
 			"name": "Juventus FC Apparel & Merchandise",
 			"page-title": "Juventus FC Apparel & Merchandise | CampusColors.com",
@@ -2861,7 +2861,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!soccer-team-apparel-merchandise/juventus-fc/all/",
+					"link": "/soccer-team-apparel-merchandise/juventus-fc/all/",
 					"img": "teamlogos/juve.jpg",
 					"name": "Juventus FC Apparel & Merchandise",
 					"page-title": "Juventus FC Apparel & Merchandise | CampusColors.com",
@@ -2896,7 +2896,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!soccer-team-apparel-merchandise/juventus-fc/shorts/",
+					"link": "/soccer-team-apparel-merchandise/juventus-fc/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Juventus FC Apparel & Merchandise Shorts",
 					"page-title": "Juventus FC Apparel & Merchandise Shorts | CampusColors.com",
@@ -2931,7 +2931,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!soccer-team-apparel-merchandise/juventus-fc/t-shirts/",
+					"link": "/soccer-team-apparel-merchandise/juventus-fc/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Juventus FC Apparel & Merchandise T-Shirts",
 					"page-title": "Juventus FC Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -2966,7 +2966,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!soccer-team-apparel-merchandise/juventus-fc/sweatshirts/",
+					"link": "/soccer-team-apparel-merchandise/juventus-fc/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Juventus FC Apparel & Merchandise Sweatshirts",
 					"page-title": "Juventus FC Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -3001,7 +3001,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!soccer-team-apparel-merchandise/juventus-fc/jerseys/",
+					"link": "/soccer-team-apparel-merchandise/juventus-fc/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Juventus FC Apparel & Merchandise Jerseys",
 					"page-title": "Juventus FC Apparel & Merchandise Jerseys | CampusColors.com",
@@ -3036,7 +3036,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!soccer-team-apparel-merchandise/juventus-fc/pants/",
+					"link": "/soccer-team-apparel-merchandise/juventus-fc/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Juventus FC Apparel & Merchandise Pants",
 					"page-title": "Juventus FC Apparel & Merchandise Pants | CampusColors.com",
@@ -3071,7 +3071,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!soccer-team-apparel-merchandise/juventus-fc/hats/",
+					"link": "/soccer-team-apparel-merchandise/juventus-fc/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Juventus FC Apparel & Merchandise Hats",
 					"page-title": "Juventus FC Apparel & Merchandise Hats | CampusColors.com",
@@ -3106,7 +3106,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!soccer-team-apparel-merchandise/juventus-fc/novelties-and-accessories/",
+					"link": "/soccer-team-apparel-merchandise/juventus-fc/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Juventus FC Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Juventus FC Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -3123,7 +3123,7 @@
 		},
 		{
 			"id": "los-angeles-galaxy/",
-			"link": "#!soccer-team-apparel-merchandise/los-angeles-galaxy/",
+			"link": "/soccer-team-apparel-merchandise/los-angeles-galaxy/",
 			"img": "teamlogos/GALA.jpg",
 			"name": "Los Angeles Galaxy Apparel & Merchandise",
 			"page-title": "Los Angeles Galaxy Apparel & Merchandise | CampusColors.com",
@@ -3144,7 +3144,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!soccer-team-apparel-merchandise/los-angeles-galaxy/all/",
+					"link": "/soccer-team-apparel-merchandise/los-angeles-galaxy/all/",
 					"img": "teamlogos/gala.jpg",
 					"name": "Los Angeles Galaxy Apparel & Merchandise",
 					"page-title": "Los Angeles Galaxy Apparel & Merchandise | CampusColors.com",
@@ -3179,7 +3179,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!soccer-team-apparel-merchandise/los-angeles-galaxy/shorts/",
+					"link": "/soccer-team-apparel-merchandise/los-angeles-galaxy/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Los Angeles Galaxy Apparel & Merchandise Shorts",
 					"page-title": "Los Angeles Galaxy Apparel & Merchandise Shorts | CampusColors.com",
@@ -3214,7 +3214,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!soccer-team-apparel-merchandise/los-angeles-galaxy/t-shirts/",
+					"link": "/soccer-team-apparel-merchandise/los-angeles-galaxy/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Los Angeles Galaxy Apparel & Merchandise T-Shirts",
 					"page-title": "Los Angeles Galaxy Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -3249,7 +3249,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!soccer-team-apparel-merchandise/los-angeles-galaxy/sweatshirts/",
+					"link": "/soccer-team-apparel-merchandise/los-angeles-galaxy/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Los Angeles Galaxy Apparel & Merchandise Sweatshirts",
 					"page-title": "Los Angeles Galaxy Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -3284,7 +3284,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!soccer-team-apparel-merchandise/los-angeles-galaxy/jerseys/",
+					"link": "/soccer-team-apparel-merchandise/los-angeles-galaxy/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Los Angeles Galaxy Apparel & Merchandise Jerseys",
 					"page-title": "Los Angeles Galaxy Apparel & Merchandise Jerseys | CampusColors.com",
@@ -3319,7 +3319,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!soccer-team-apparel-merchandise/los-angeles-galaxy/pants/",
+					"link": "/soccer-team-apparel-merchandise/los-angeles-galaxy/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Los Angeles Galaxy Apparel & Merchandise Pants",
 					"page-title": "Los Angeles Galaxy Apparel & Merchandise Pants | CampusColors.com",
@@ -3354,7 +3354,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!soccer-team-apparel-merchandise/los-angeles-galaxy/hats/",
+					"link": "/soccer-team-apparel-merchandise/los-angeles-galaxy/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Los Angeles Galaxy Apparel & Merchandise Hats",
 					"page-title": "Los Angeles Galaxy Apparel & Merchandise Hats | CampusColors.com",
@@ -3389,7 +3389,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!soccer-team-apparel-merchandise/los-angeles-galaxy/novelties-and-accessories/",
+					"link": "/soccer-team-apparel-merchandise/los-angeles-galaxy/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Los Angeles Galaxy Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Los Angeles Galaxy Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -3406,7 +3406,7 @@
 		},
 		{
 			"id": "manchester-united/",
-			"link": "#!soccer-team-apparel-merchandise/manchester-united/",
+			"link": "/soccer-team-apparel-merchandise/manchester-united/",
 			"img": "teamlogos/MANU.jpg",
 			"name": "Manchester United Apparel & Merchandise",
 			"page-title": "Manchester United Apparel & Merchandise | CampusColors.com",
@@ -3427,7 +3427,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!soccer-team-apparel-merchandise/manchester-united/all/",
+					"link": "/soccer-team-apparel-merchandise/manchester-united/all/",
 					"img": "teamlogos/manu.jpg",
 					"name": "Manchester United Apparel & Merchandise",
 					"page-title": "Manchester United Apparel & Merchandise | CampusColors.com",
@@ -3462,7 +3462,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!soccer-team-apparel-merchandise/manchester-united/shorts/",
+					"link": "/soccer-team-apparel-merchandise/manchester-united/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Manchester United Apparel & Merchandise Shorts",
 					"page-title": "Manchester United Apparel & Merchandise Shorts | CampusColors.com",
@@ -3497,7 +3497,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!soccer-team-apparel-merchandise/manchester-united/t-shirts/",
+					"link": "/soccer-team-apparel-merchandise/manchester-united/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Manchester United Apparel & Merchandise T-Shirts",
 					"page-title": "Manchester United Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -3532,7 +3532,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!soccer-team-apparel-merchandise/manchester-united/sweatshirts/",
+					"link": "/soccer-team-apparel-merchandise/manchester-united/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Manchester United Apparel & Merchandise Sweatshirts",
 					"page-title": "Manchester United Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -3567,7 +3567,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!soccer-team-apparel-merchandise/manchester-united/jerseys/",
+					"link": "/soccer-team-apparel-merchandise/manchester-united/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Manchester United Apparel & Merchandise Jerseys",
 					"page-title": "Manchester United Apparel & Merchandise Jerseys | CampusColors.com",
@@ -3602,7 +3602,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!soccer-team-apparel-merchandise/manchester-united/pants/",
+					"link": "/soccer-team-apparel-merchandise/manchester-united/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Manchester United Apparel & Merchandise Pants",
 					"page-title": "Manchester United Apparel & Merchandise Pants | CampusColors.com",
@@ -3637,7 +3637,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!soccer-team-apparel-merchandise/manchester-united/hats/",
+					"link": "/soccer-team-apparel-merchandise/manchester-united/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Manchester United Apparel & Merchandise Hats",
 					"page-title": "Manchester United Apparel & Merchandise Hats | CampusColors.com",
@@ -3672,7 +3672,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!soccer-team-apparel-merchandise/manchester-united/novelties-and-accessories/",
+					"link": "/soccer-team-apparel-merchandise/manchester-united/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Manchester United Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Manchester United Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -3689,7 +3689,7 @@
 		},
 		{
 			"id": "mexico-national-team/",
-			"link": "#!soccer-team-apparel-merchandise/mexico-national-team/",
+			"link": "/soccer-team-apparel-merchandise/mexico-national-team/",
 			"img": "teamlogos/MEX.jpg",
 			"name": "Mexico National Team Apparel & Merchandise",
 			"page-title": "Mexico National Team Apparel & Merchandise | CampusColors.com",
@@ -3710,7 +3710,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!soccer-team-apparel-merchandise/mexico-national-team/all/",
+					"link": "/soccer-team-apparel-merchandise/mexico-national-team/all/",
 					"img": "teamlogos/mex.jpg",
 					"name": "Mexico National Team Apparel & Merchandise",
 					"page-title": "Mexico National Team Apparel & Merchandise | CampusColors.com",
@@ -3745,7 +3745,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!soccer-team-apparel-merchandise/mexico-national-team/shorts/",
+					"link": "/soccer-team-apparel-merchandise/mexico-national-team/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Mexico National Team Apparel & Merchandise Shorts",
 					"page-title": "Mexico National Team Apparel & Merchandise Shorts | CampusColors.com",
@@ -3780,7 +3780,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!soccer-team-apparel-merchandise/mexico-national-team/t-shirts/",
+					"link": "/soccer-team-apparel-merchandise/mexico-national-team/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Mexico National Team Apparel & Merchandise T-Shirts",
 					"page-title": "Mexico National Team Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -3815,7 +3815,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!soccer-team-apparel-merchandise/mexico-national-team/sweatshirts/",
+					"link": "/soccer-team-apparel-merchandise/mexico-national-team/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Mexico National Team Apparel & Merchandise Sweatshirts",
 					"page-title": "Mexico National Team Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -3850,7 +3850,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!soccer-team-apparel-merchandise/mexico-national-team/jerseys/",
+					"link": "/soccer-team-apparel-merchandise/mexico-national-team/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Mexico National Team Apparel & Merchandise Jerseys",
 					"page-title": "Mexico National Team Apparel & Merchandise Jerseys | CampusColors.com",
@@ -3885,7 +3885,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!soccer-team-apparel-merchandise/mexico-national-team/pants/",
+					"link": "/soccer-team-apparel-merchandise/mexico-national-team/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Mexico National Team Apparel & Merchandise Pants",
 					"page-title": "Mexico National Team Apparel & Merchandise Pants | CampusColors.com",
@@ -3920,7 +3920,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!soccer-team-apparel-merchandise/mexico-national-team/hats/",
+					"link": "/soccer-team-apparel-merchandise/mexico-national-team/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Mexico National Team Apparel & Merchandise Hats",
 					"page-title": "Mexico National Team Apparel & Merchandise Hats | CampusColors.com",
@@ -3955,7 +3955,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!soccer-team-apparel-merchandise/mexico-national-team/novelties-and-accessories/",
+					"link": "/soccer-team-apparel-merchandise/mexico-national-team/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Mexico National Team Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Mexico National Team Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -3972,7 +3972,7 @@
 		},
 		{
 			"id": "new-york-redbulls/",
-			"link": "#!soccer-team-apparel-merchandise/new-york-redbulls/",
+			"link": "/soccer-team-apparel-merchandise/new-york-redbulls/",
 			"img": "teamlogos/REDB.jpg",
 			"name": "New York Redbulls Apparel & Merchandise",
 			"page-title": "New York Redbulls Apparel & Merchandise | CampusColors.com",
@@ -3993,7 +3993,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!soccer-team-apparel-merchandise/new-york-redbulls/all/",
+					"link": "/soccer-team-apparel-merchandise/new-york-redbulls/all/",
 					"img": "teamlogos/redb.jpg",
 					"name": "New York Redbulls Apparel & Merchandise",
 					"page-title": "New York Redbulls Apparel & Merchandise | CampusColors.com",
@@ -4028,7 +4028,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!soccer-team-apparel-merchandise/new-york-redbulls/shorts/",
+					"link": "/soccer-team-apparel-merchandise/new-york-redbulls/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "New York Redbulls Apparel & Merchandise Shorts",
 					"page-title": "New York Redbulls Apparel & Merchandise Shorts | CampusColors.com",
@@ -4063,7 +4063,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!soccer-team-apparel-merchandise/new-york-redbulls/t-shirts/",
+					"link": "/soccer-team-apparel-merchandise/new-york-redbulls/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "New York Redbulls Apparel & Merchandise T-Shirts",
 					"page-title": "New York Redbulls Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -4098,7 +4098,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!soccer-team-apparel-merchandise/new-york-redbulls/sweatshirts/",
+					"link": "/soccer-team-apparel-merchandise/new-york-redbulls/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "New York Redbulls Apparel & Merchandise Sweatshirts",
 					"page-title": "New York Redbulls Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -4133,7 +4133,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!soccer-team-apparel-merchandise/new-york-redbulls/jerseys/",
+					"link": "/soccer-team-apparel-merchandise/new-york-redbulls/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "New York Redbulls Apparel & Merchandise Jerseys",
 					"page-title": "New York Redbulls Apparel & Merchandise Jerseys | CampusColors.com",
@@ -4168,7 +4168,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!soccer-team-apparel-merchandise/new-york-redbulls/pants/",
+					"link": "/soccer-team-apparel-merchandise/new-york-redbulls/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "New York Redbulls Apparel & Merchandise Pants",
 					"page-title": "New York Redbulls Apparel & Merchandise Pants | CampusColors.com",
@@ -4203,7 +4203,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!soccer-team-apparel-merchandise/new-york-redbulls/hats/",
+					"link": "/soccer-team-apparel-merchandise/new-york-redbulls/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "New York Redbulls Apparel & Merchandise Hats",
 					"page-title": "New York Redbulls Apparel & Merchandise Hats | CampusColors.com",
@@ -4238,7 +4238,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!soccer-team-apparel-merchandise/new-york-redbulls/novelties-and-accessories/",
+					"link": "/soccer-team-apparel-merchandise/new-york-redbulls/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "New York Redbulls Apparel & Merchandise Novelties & Accessories",
 					"page-title": "New York Redbulls Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -4255,7 +4255,7 @@
 		},
 		{
 			"id": "soccer-guys/",
-			"link": "#!soccer-team-apparel-merchandise/soccer-guys/",
+			"link": "/soccer-team-apparel-merchandise/soccer-guys/",
 			"img": "teamlogos/SOCCER.jpg",
 			"name": "Soccer Guys Apparel & Merchandise",
 			"page-title": "Soccer Guys Apparel & Merchandise | CampusColors.com",
@@ -4276,7 +4276,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!soccer-team-apparel-merchandise/soccer-guys/all/",
+					"link": "/soccer-team-apparel-merchandise/soccer-guys/all/",
 					"img": "teamlogos/soccer.jpg",
 					"name": "Soccer Guys Apparel & Merchandise",
 					"page-title": "Soccer Guys Apparel & Merchandise | CampusColors.com",
@@ -4311,7 +4311,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!soccer-team-apparel-merchandise/soccer-guys/shorts/",
+					"link": "/soccer-team-apparel-merchandise/soccer-guys/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "Soccer Guys Apparel & Merchandise Shorts",
 					"page-title": "Soccer Guys Apparel & Merchandise Shorts | CampusColors.com",
@@ -4346,7 +4346,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!soccer-team-apparel-merchandise/soccer-guys/t-shirts/",
+					"link": "/soccer-team-apparel-merchandise/soccer-guys/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "Soccer Guys Apparel & Merchandise T-Shirts",
 					"page-title": "Soccer Guys Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -4381,7 +4381,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!soccer-team-apparel-merchandise/soccer-guys/sweatshirts/",
+					"link": "/soccer-team-apparel-merchandise/soccer-guys/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "Soccer Guys Apparel & Merchandise Sweatshirts",
 					"page-title": "Soccer Guys Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -4416,7 +4416,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!soccer-team-apparel-merchandise/soccer-guys/jerseys/",
+					"link": "/soccer-team-apparel-merchandise/soccer-guys/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "Soccer Guys Apparel & Merchandise Jerseys",
 					"page-title": "Soccer Guys Apparel & Merchandise Jerseys | CampusColors.com",
@@ -4451,7 +4451,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!soccer-team-apparel-merchandise/soccer-guys/pants/",
+					"link": "/soccer-team-apparel-merchandise/soccer-guys/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "Soccer Guys Apparel & Merchandise Pants",
 					"page-title": "Soccer Guys Apparel & Merchandise Pants | CampusColors.com",
@@ -4486,7 +4486,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!soccer-team-apparel-merchandise/soccer-guys/hats/",
+					"link": "/soccer-team-apparel-merchandise/soccer-guys/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "Soccer Guys Apparel & Merchandise Hats",
 					"page-title": "Soccer Guys Apparel & Merchandise Hats | CampusColors.com",
@@ -4521,7 +4521,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!soccer-team-apparel-merchandise/soccer-guys/novelties-and-accessories/",
+					"link": "/soccer-team-apparel-merchandise/soccer-guys/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "Soccer Guys Apparel & Merchandise Novelties & Accessories",
 					"page-title": "Soccer Guys Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -4538,7 +4538,7 @@
 		},
 		{
 			"id": "south-korea-national-team/",
-			"link": "#!soccer-team-apparel-merchandise/south-korea-national-team/",
+			"link": "/soccer-team-apparel-merchandise/south-korea-national-team/",
 			"img": "teamlogos/SKOR.jpg",
 			"name": "South Korea National Team Apparel & Merchandise",
 			"page-title": "South Korea National Team Apparel & Merchandise | CampusColors.com",
@@ -4559,7 +4559,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!soccer-team-apparel-merchandise/south-korea-national-team/all/",
+					"link": "/soccer-team-apparel-merchandise/south-korea-national-team/all/",
 					"img": "teamlogos/skor.jpg",
 					"name": "South Korea National Team Apparel & Merchandise",
 					"page-title": "South Korea National Team Apparel & Merchandise | CampusColors.com",
@@ -4594,7 +4594,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!soccer-team-apparel-merchandise/south-korea-national-team/shorts/",
+					"link": "/soccer-team-apparel-merchandise/south-korea-national-team/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "South Korea National Team Apparel & Merchandise Shorts",
 					"page-title": "South Korea National Team Apparel & Merchandise Shorts | CampusColors.com",
@@ -4629,7 +4629,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!soccer-team-apparel-merchandise/south-korea-national-team/t-shirts/",
+					"link": "/soccer-team-apparel-merchandise/south-korea-national-team/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "South Korea National Team Apparel & Merchandise T-Shirts",
 					"page-title": "South Korea National Team Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -4664,7 +4664,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!soccer-team-apparel-merchandise/south-korea-national-team/sweatshirts/",
+					"link": "/soccer-team-apparel-merchandise/south-korea-national-team/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "South Korea National Team Apparel & Merchandise Sweatshirts",
 					"page-title": "South Korea National Team Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -4699,7 +4699,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!soccer-team-apparel-merchandise/south-korea-national-team/jerseys/",
+					"link": "/soccer-team-apparel-merchandise/south-korea-national-team/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "South Korea National Team Apparel & Merchandise Jerseys",
 					"page-title": "South Korea National Team Apparel & Merchandise Jerseys | CampusColors.com",
@@ -4734,7 +4734,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!soccer-team-apparel-merchandise/south-korea-national-team/pants/",
+					"link": "/soccer-team-apparel-merchandise/south-korea-national-team/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "South Korea National Team Apparel & Merchandise Pants",
 					"page-title": "South Korea National Team Apparel & Merchandise Pants | CampusColors.com",
@@ -4769,7 +4769,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!soccer-team-apparel-merchandise/south-korea-national-team/hats/",
+					"link": "/soccer-team-apparel-merchandise/south-korea-national-team/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "South Korea National Team Apparel & Merchandise Hats",
 					"page-title": "South Korea National Team Apparel & Merchandise Hats | CampusColors.com",
@@ -4804,7 +4804,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!soccer-team-apparel-merchandise/south-korea-national-team/novelties-and-accessories/",
+					"link": "/soccer-team-apparel-merchandise/south-korea-national-team/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "South Korea National Team Apparel & Merchandise Novelties & Accessories",
 					"page-title": "South Korea National Team Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -4821,7 +4821,7 @@
 		},
 		{
 			"id": "usa-national-team/",
-			"link": "#!soccer-team-apparel-merchandise/usa-national-team/",
+			"link": "/soccer-team-apparel-merchandise/usa-national-team/",
 			"img": "teamlogos/USA.jpg",
 			"name": "USA National Team Apparel & Merchandise",
 			"page-title": "USA National Team Apparel & Merchandise | CampusColors.com",
@@ -4842,7 +4842,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!soccer-team-apparel-merchandise/usa-national-team/all/",
+					"link": "/soccer-team-apparel-merchandise/usa-national-team/all/",
 					"img": "teamlogos/usa.jpg",
 					"name": "USA National Team Apparel & Merchandise",
 					"page-title": "USA National Team Apparel & Merchandise | CampusColors.com",
@@ -4877,7 +4877,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!soccer-team-apparel-merchandise/usa-national-team/shorts/",
+					"link": "/soccer-team-apparel-merchandise/usa-national-team/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "USA National Team Apparel & Merchandise Shorts",
 					"page-title": "USA National Team Apparel & Merchandise Shorts | CampusColors.com",
@@ -4912,7 +4912,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!soccer-team-apparel-merchandise/usa-national-team/t-shirts/",
+					"link": "/soccer-team-apparel-merchandise/usa-national-team/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "USA National Team Apparel & Merchandise T-Shirts",
 					"page-title": "USA National Team Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -4947,7 +4947,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!soccer-team-apparel-merchandise/usa-national-team/sweatshirts/",
+					"link": "/soccer-team-apparel-merchandise/usa-national-team/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "USA National Team Apparel & Merchandise Sweatshirts",
 					"page-title": "USA National Team Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -4982,7 +4982,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!soccer-team-apparel-merchandise/usa-national-team/jerseys/",
+					"link": "/soccer-team-apparel-merchandise/usa-national-team/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "USA National Team Apparel & Merchandise Jerseys",
 					"page-title": "USA National Team Apparel & Merchandise Jerseys | CampusColors.com",
@@ -5017,7 +5017,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!soccer-team-apparel-merchandise/usa-national-team/pants/",
+					"link": "/soccer-team-apparel-merchandise/usa-national-team/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "USA National Team Apparel & Merchandise Pants",
 					"page-title": "USA National Team Apparel & Merchandise Pants | CampusColors.com",
@@ -5052,7 +5052,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!soccer-team-apparel-merchandise/usa-national-team/hats/",
+					"link": "/soccer-team-apparel-merchandise/usa-national-team/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "USA National Team Apparel & Merchandise Hats",
 					"page-title": "USA National Team Apparel & Merchandise Hats | CampusColors.com",
@@ -5087,7 +5087,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!soccer-team-apparel-merchandise/usa-national-team/novelties-and-accessories/",
+					"link": "/soccer-team-apparel-merchandise/usa-national-team/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "USA National Team Apparel & Merchandise Novelties & Accessories",
 					"page-title": "USA National Team Apparel & Merchandise Novelties & Accessories | CampusColors.com",
@@ -5104,7 +5104,7 @@
 		},
 		{
 			"id": "united-states-national-team/",
-			"link": "#!soccer-team-apparel-merchandise/united-states-national-team/",
+			"link": "/soccer-team-apparel-merchandise/united-states-national-team/",
 			"img": "teamlogos/USAS.jpg",
 			"name": "United States National Team Apparel & Merchandise",
 			"page-title": "United States National Team Apparel & Merchandise | CampusColors.com",
@@ -5125,7 +5125,7 @@
 						}
 					},
 					"id": "all/",
-					"link": "#!soccer-team-apparel-merchandise/united-states-national-team/all/",
+					"link": "/soccer-team-apparel-merchandise/united-states-national-team/all/",
 					"img": "teamlogos/usas.jpg",
 					"name": "United States National Team Apparel & Merchandise",
 					"page-title": "United States National Team Apparel & Merchandise | CampusColors.com",
@@ -5160,7 +5160,7 @@
 						}
 					},
 					"id": "shorts/",
-					"link": "#!soccer-team-apparel-merchandise/united-states-national-team/shorts/",
+					"link": "/soccer-team-apparel-merchandise/united-states-national-team/shorts/",
 					"img": "products/images/unc_26641x_gy",
 					"name": "United States National Team Apparel & Merchandise Shorts",
 					"page-title": "United States National Team Apparel & Merchandise Shorts | CampusColors.com",
@@ -5195,7 +5195,7 @@
 						}
 					},
 					"id": "t-shirts/",
-					"link": "#!soccer-team-apparel-merchandise/united-states-national-team/t-shirts/",
+					"link": "/soccer-team-apparel-merchandise/united-states-national-team/t-shirts/",
 					"img": "products/images/org_24003x_bk",
 					"name": "United States National Team Apparel & Merchandise T-Shirts",
 					"page-title": "United States National Team Apparel & Merchandise T-Shirts | CampusColors.com",
@@ -5230,7 +5230,7 @@
 						}
 					},
 					"id": "sweatshirts/",
-					"link": "#!soccer-team-apparel-merchandise/united-states-national-team/sweatshirts/",
+					"link": "/soccer-team-apparel-merchandise/united-states-national-team/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
 					"name": "United States National Team Apparel & Merchandise Sweatshirts",
 					"page-title": "United States National Team Apparel & Merchandise Sweatshirts | CampusColors.com",
@@ -5265,7 +5265,7 @@
 						}
 					},
 					"id": "jerseys/",
-					"link": "#!soccer-team-apparel-merchandise/united-states-national-team/jerseys/",
+					"link": "/soccer-team-apparel-merchandise/united-states-national-team/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
 					"name": "United States National Team Apparel & Merchandise Jerseys",
 					"page-title": "United States National Team Apparel & Merchandise Jerseys | CampusColors.com",
@@ -5300,7 +5300,7 @@
 						}
 					},
 					"id": "pants/",
-					"link": "#!soccer-team-apparel-merchandise/united-states-national-team/pants/",
+					"link": "/soccer-team-apparel-merchandise/united-states-national-team/pants/",
 					"img": "products/images/duke_28734x_bk",
 					"name": "United States National Team Apparel & Merchandise Pants",
 					"page-title": "United States National Team Apparel & Merchandise Pants | CampusColors.com",
@@ -5335,7 +5335,7 @@
 						}
 					},
 					"id": "hats/",
-					"link": "#!soccer-team-apparel-merchandise/united-states-national-team/hats/",
+					"link": "/soccer-team-apparel-merchandise/united-states-national-team/hats/",
 					"img": "products/images/cal_17142x_nv",
 					"name": "United States National Team Apparel & Merchandise Hats",
 					"page-title": "United States National Team Apparel & Merchandise Hats | CampusColors.com",
@@ -5370,7 +5370,7 @@
 						}
 					},
 					"id": "novelties-and-accessories/",
-					"link": "#!soccer-team-apparel-merchandise/united-states-national-team/novelties-and-accessories/",
+					"link": "/soccer-team-apparel-merchandise/united-states-national-team/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
 					"name": "United States National Team Apparel & Merchandise Novelties & Accessories",
 					"page-title": "United States National Team Apparel & Merchandise Novelties & Accessories | CampusColors.com",
