@@ -209,6 +209,7 @@ var store_cc = function(_app) {
 				this.hideDropDownClick($tag);
 				$('.mobileSlideMenu').animate({"left":"-275px"},500);
 				$tag.data('timeoutNoShow', setTimeout(function(){$tag.data('timeoutNoShow', 'false');}, 500));
+				return true;
 			},
 			
 			hideOnLink : function($tag) {
@@ -1409,6 +1410,13 @@ var store_cc = function(_app) {
 				_app.model.dispatchThis('immutable');
 			}, //cartitemqty
 			
+			//make sure any open dropdowns are closed when a link is clicked (or page changes) so that the view isn't obstructed by them.
+			dismissAllDrop : function() {
+				dump('START dismissAllDrop');
+				//if a dropdown is open, and the page changes, lets make sure the dropdowns are ready to open again later but close them before changing pages.
+				$("[data-app-click='store_cc|dismissDrop']",".standardNav").each(function(){ $(this).attr("store_cc|expandDrop"); });
+				$("[data-dropnav]",".standardNav").each(function(){ $(this).removeClass("expand"); });
+			},
 			
 		/*	This may be a better way to do this, but it doesn't work if the page isn't reloaded. If tablet goes from 
 				portrait to landscape, the nav isn't hidden properly. Uses hideOnHome class for now.
@@ -1652,9 +1660,50 @@ var store_cc = function(_app) {
 				}
 				
 				return false;
+			},
+			
+			//adds class to open header dropdown menus with css animation. Also sets closing action on the triggering element for next click.
+			expandDrop : function($ele,p) {
+				//dismissDrop is in utils and runs on any template depart
+				$ele.removeAttr('data-app-click');
+				//if a dropdown is open, and another is clicked, lets make sure all are ready to open again later but close them before opening a new one.
+				$("[data-app-click='store_cc|dismissDrop']",".standardNav").each(function(){ $(this).attr("store_cc|expandDrop"); });
+				$("[data-dropnav]",".standardNav").each(function(){ $(this).removeClass("expand"); });
+				$ele.attr('data-app-click','store_cc|dismissDrop'); //make sure this one is ready to close when if clicked later.
+				$("[data-dropnav]",$ele).addClass("expand"); //the class that does the magic
+				$(".sprite",$ele).addClass("openMenu"); //turn arrow in mobile menu to show menu can be closed
+				dump("clicked expand");
+				return false;
+			},
+			
+			//adds class to close header dropdown menus with css animation Also sets open action on the triggering element for next click.
+			//there is also a similar util function (dismissAllDrop) that gets run on template departure to ensure that the menus close if another link outside the menu is clicked.
+			dismissDrop : function($ele,p) {
+				$ele.removeAttr('data-app-click').attr('data-app-click','store_cc|expandDrop'); //make it ready to open again later
+				$("[data-dropnav]",$ele).removeClass("expand"); //the class that does the magic
+				$(".sprite",".slideMenuBorder").removeClass("openMenu"); //turn arrow in mobile menu to show menu can be opened
+				dump("clicked dismiss");
+				return false;
+			},
+			
+			//adds class to open mobile slideout menus with css animation. 
+			//These are the same menus as header, but styled for mobile res, different class to animate different styles for different actions.
+			expandMobilNav : function() {
+				if(screen.width < 768) {  //this is only shown below tablet res so no need to run it at higher res.
+			//		$(".mobileSlideMenu").animate({"left":"-5px"},500);
+					$(".mobileSlideMenu").addClass("mobileExpand");
+				}
+			},
+			
+			//adds class to close mobile slideout menus with css animation (same notes for open action apply here).
+			dismissMobilNav : function() {
+				if(screen.width < 768) {  //this is only shown below tablet res so no need to run it at higher res.
+			//		$(".mobileSlideMenu").animate({"left":"-275px"},500);
+					$(".mobileSlideMenu").removeClass("mobileExpand");
+				}
 			}
-
-		
+			
+			
 		}, //e [app Events]
 		
 /*

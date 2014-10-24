@@ -164,7 +164,8 @@ header {position:relative;}
 .headerLower .shipLogo {height:30px; width:45px; display:inline-block; background-position:-398px -3px; position:absolute; top:0; left:0;}
 .headerLower .promoCode {font-size:1.125em; position:relative; padding:0 0 0 50px;}
 
-.mobileSlideMenu {width:266px; background-color:#999999; padding:0 5px 5px 0; position:absolute; top:0; left:-275px; z-index:1001; border-radius:0 0 4px 0;}
+.mobileSlideMenu {width:266px; transition:all 0.4s; background-color:#999999; padding:0 5px 5px 0; position:absolute; top:0; left:-275px; z-index:1001; border-radius:0 0 4px 0;}
+.mobileSlideMenu.mobileExpand {left:-5px;}
 .slideMenuBorder {border-right:3px solid #ffffff; border-bottom:3px solid #ffffff; border-radius:0 0 4px 0; padding:30px 0;}
 .mobileSlideMenu .levelOne, .mobileSlideMenu .levelOne .levelTwo > a  {width:100%; padding:10px 0 10px 12px; border-top:1px solid #adadad; position:relative; font-size:1.3em;}
 .mobileSlideMenu .levelOne.oneLevel a {display:block; color:#000000; text-decoration:none; font-size:1em; padding:0; border:none;} #781c2b
@@ -175,7 +176,10 @@ header {position:relative;}
 .mobileSlideMenu .levelOne .sprite, .mobileSlideMenuClose {height:17px; width:12px; background-position:-351px -48px; background-repeat:no-repeat; display:inline-block; position:absolute; top:10px; right:10px;}
 .mobileSlideMenuClose {background-position:-351px -94px; right:20px; cursor:pointer;}
 .mobileSlideMenu .levelOne .sprite.openMenu {height:12px; width:17px; background-position:-348px -73px;}
-.mobileSlideMenu .levelOne .levelTwo {height:0; width:257px; overflow:hidden; padding:0 30px; position:absolute; top:35px; left:0;  z-index:1002; background-color:#999999; font-size:0.8em;}
+.mobileSlideMenu .levelOne .levelTwo {height:0; width:257px; transition:all 2s; overflow:hidden; padding:0 30px; position:absolute; top:35px; left:0;  z-index:1002; background-color:#999999; font-size:0.8em;}
+.mobileSlideMenu .levelOne .levelTwo.expand {height:auto;}
+
+
 .mobileSlideMenu .levelOne:hover .levelTwo {color:#000000;}
 .mobileSlideMenu .levelOne .levelTwo > a {padding:10px 0 10px 0; display:block; color:#ffffff; text-decoration:none;}
 .mobileSlideMenu .levelOne .levelTwo > a:hover {color:#fbe143;}
@@ -485,13 +489,16 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.standardNav .levelOne .sprite, .standardNav .levelOne .sprite.openMenu, .mobileSlideMenuClose {display:none;}
 	.standardNav .levelOne .levelTwo {background-color:#781c2b; padding:0 0 0 20px; box-shadow:2px 2px 2px 0 #000000; text-shadow:2px 2px 2px #000000; cursor:default; font-weight:normal;} /* width:217px;  */
 	.standardNav .levelOne .levelTwo a {width:50%; padding:2px 0; font-size:1em; border:none; float:left; text-align:left;}
-	.standardNav .levelOne .levelTwo.teamDrop {width:auto; width:768px; max-width:768px; padding:0 10px; column-count:5; -moz-column-count:5; -webkit-column-count:5;} /*columns will be alpha by row in IE9*/
+	.standardNav .levelOne .levelTwo.teamDrop {height:0; width:768px; max-width:768px; transition: all 0.4s; padding:0 10px; column-count:5; -moz-column-count:5; -webkit-column-count:5;} /*columns will be alpha by row in IE9*/
+	.standardNav .levelOne .levelTwo.teamDrop.expand {height:200;}
 	.standardNav .levelOne .levelTwo.teamDrop a {height:20px; width:135px; margin:2px 10px; overflow:hidden;}
 	.standardNav .levelOne .levelTwo.ncaaDrop {left:-39px;}
+	.standardNav .levelOne .levelTwo.ncaaDrop.expand {height:1070px;}
 	.standardNav .levelOne .levelTwo.nflDrop {left:-125px;}
 	.standardNav .levelOne .levelTwo.nbaDrop {left:-211px;}
 	.standardNav .levelOne .levelTwo.mlbDrop {left:-297px;}
 	.standardNav .levelOne .levelTwo.nhlDrop {left:-383px;}
+	.standardNav .levelOne .levelTwo.nhlDrop {height:230px;}
 	
 	.footBG1 {height:740px; background-color:#9e9e9e;}
 	.footLeft {width:40%; position:relative; z-index:1;}
@@ -598,8 +605,10 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.standardNav .levelOne:hover {background:#781c2b; color:#fbe143; box-shadow:2px 2px 0 0 #cccccc; text-shadow:2px 2px 2px #000000;}
 	.mobileSlideMenu .levelOne.oneLevel:hover a {color:#fbe143;}
 	.mobileSlideMenu.standardNav.hideOnHome {display:none;}
-	.standardNav .levelOne .levelTwo.teamDrop {width:960px; max-width:960px; column-count:6; -moz-column-count:6; -webkit-column-count:6;} /*columns will be alpha by row in IE9*/
+	.standardNav .levelOne .levelTwo.teamDrop.expand {height:180px;}
+	.standardNav .levelOne .levelTwo.teamDrop {height:0; width:960px; max-width:960px; transition: all 0.4s; column-count:6; -moz-column-count:6; -webkit-column-count:6;} /*columns will be alpha by row in IE9*/
 	.standardNav .levelOne .levelTwo.ncaaDrop {left:-20px;}
+	.standardNav .levelOne .levelTwo.ncaaDrop.expand {height:900px;}
 	.standardNav .levelOne .levelTwo.nflDrop {left:-135px;}
 	.standardNav .levelOne .levelTwo.nbaDrop {left:-250px;}
 	.standardNav .levelOne .levelTwo.mlbDrop {left:-365px;}

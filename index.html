@@ -230,7 +230,7 @@ var _robots = {
 					<span class="pointer uYellowLink underline" onclick="myApp.ext.quickstart.u.showLoginModal();">SIGN UP</span>
 					&#41;
 				</span>
-				<a href="/customer/myaccount/"><span class="loginShow username uYellowLink"></span></a>
+				<a href="/my_account/"><span class="loginShow username uYellowLink">myacc</span></a>
 				<a href="/customer/logout/"><span class="loginShow uYellowLink">LOG OUT</span></a>
 			</div>
 			<div class="links">
@@ -269,7 +269,7 @@ var _robots = {
 		</div>
 	</div>
 	<div class="mobileNav greenGradient hideTablet hideDesktop">
-		<div class="mobileMenu sprite pointer" onclick="$('.mobileSlideMenu').animate({'left':'-5px'},500);"><span class="bareWhiteLink">Menu</span></div>
+		<div class="mobileMenu sprite pointer" data-app-click="store_cc|expandMobilNav"><span class="bareWhiteLink">Menu</span></div>
 		<span class="spacer"></span>
 		<a href="/customer/myaccount/" class="mobileAcct sprite"><span class="bareWhiteLink">Account</span></a>
 		<span class="spacer"></span>
@@ -312,479 +312,479 @@ var _robots = {
 		</div>
 	</div>
 	<div class="mobileSlideMenu standardNav">
-		<span class="mobileSlideMenuClose sprite" onclick="$('.mobileSlideMenu').animate({'left':'-275px'},500);"></span>
+		<span class="mobileSlideMenuClose sprite" data-app-click="store_cc|dismissMobilNav"></span>
 		<div class="slideMenuBorder">
 			<div class="levelOne slideTitle arial">SHOP BY</div>
-			<div class="levelOne slideTop pointer" onclick="myApp.ext.store_cc.a.showDropDownClick($(this));" data-desk-drop=1>
+			<div class="levelOne slideTop pointer" data-app-click="store_cc|expandDrop" data-desk-drop=1>
 				COLLEGE
 				<span class="sprite teamDrop"></span>
-				<div class="levelTwo teamDrop ncaaDrop" data-dropdown="1" data-desk-height=900 data-tab-height=1070>
-					<a href="/ncaa-team-apparel-merchandise/atlantic-coast-conference/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Atlantic Coast Conference</a>
-					<a href="/ncaa-team-apparel-merchandise/air-force-falcons/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Air Force Falcons</a>
-					<a href="/ncaa-team-apparel-merchandise/akron-zips/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Akron Zips</a>
-					<a href="/ncaa-team-apparel-merchandise/alabama-crimson-tide/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Alabama Crimson Tide</a>
-					<a href="/ncaa-team-apparel-merchandise/albany-great-danes/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Albany Great Danes</a>
-					<a href="/ncaa-team-apparel-merchandise/american-eagles/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">American Eagles</a>
-					<a href="/ncaa-team-apparel-merchandise/appalachian-state-mountaineers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Appalachian State Mountaineers</a>
-					<a href="/ncaa-team-apparel-merchandise/arizona-wildcats/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Arizona Wildcats</a>
-					<a href="/ncaa-team-apparel-merchandise/arizona-state-sun-devils/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Arizona State Sun Devils</a>
-					<a href="/ncaa-team-apparel-merchandise/arkansas-razorbacks/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Arkansas Razorbacks</a>
-					<a href="/ncaa-team-apparel-merchandise/army-black-knights/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Army Black Knights</a>
-					<a href="/ncaa-team-apparel-merchandise/auburn-tigers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Auburn Tigers</a>
-					<a href="/ncaa-team-apparel-merchandise/ball-state-cardinals/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Ball State Cardinals</a>
-					<a href="/ncaa-team-apparel-merchandise/baylor-bears/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Baylor Bears</a>
-					<a href="/ncaa-team-apparel-merchandise/bcs-national-championship/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">BCS National Championship</a>
-					<a href="/ncaa-team-apparel-merchandise/big-12-conference/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Big 12 Conference</a>
-					<a href="/ncaa-team-apparel-merchandise/big-east-conference/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Big East Conference</a>
-					<a href="/ncaa-team-apparel-merchandise/big-ten-conference/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Big Ten Conference</a>
-					<a href="/ncaa-team-apparel-merchandise/binghamton-bearcats/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Binghamton Bearcats</a>
-					<a href="/ncaa-team-apparel-merchandise/boise-state-broncos-/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Boise State Broncos </a>
-					<a href="/ncaa-team-apparel-merchandise/boston-terriers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Boston Terriers</a>
-					<a href="/ncaa-team-apparel-merchandise/boston-college-eagles/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Boston College Eagles</a>
-					<a href="/ncaa-team-apparel-merchandise/bowling-green-state-falcons/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Bowling Green State Falcons</a>
-					<a href="/ncaa-team-apparel-merchandise/bradley-braves/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Bradley Braves</a>
-					<a href="/ncaa-team-apparel-merchandise/brown-bears/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Brown Bears</a>
-					<a href="/ncaa-team-apparel-merchandise/bucknell-bison/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Bucknell Bison</a>
-					<a href="/ncaa-team-apparel-merchandise/butler-bulldogs/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Butler Bulldogs</a>
-					<a href="/ncaa-team-apparel-merchandise/byu-cougars/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">BYU Cougars</a>
-					<a href="/ncaa-team-apparel-merchandise/cal-golden-bears/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Cal Golden Bears</a>
-					<a href="/ncaa-team-apparel-merchandise/cal-state-fullerton-titans/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Cal State Fullerton Titans</a>
-					<a href="/ncaa-team-apparel-merchandise/case-western-reserve-spartans/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Case Western Reserve Spartans</a>
-					<a href="/ncaa-team-apparel-merchandise/central-collegiate-hockey-association/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Central Collegiate Hockey Association</a>
-					<a href="/ncaa-team-apparel-merchandise/central-michigan-chippewas/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Central Michigan Chippewas</a>
-					<a href="/ncaa-team-apparel-merchandise/charlotte-49ers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Charlotte 49ers</a>
-					<a href="/ncaa-team-apparel-merchandise/chicago-maroons/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Chicago Maroons</a>
-					<a href="/ncaa-team-apparel-merchandise/cincinnati--bearcats/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Cincinnati  Bearcats</a>
-					<a href="/ncaa-team-apparel-merchandise/clemson-tigers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Clemson Tigers</a>
-					<a href="/ncaa-team-apparel-merchandise/colgate-raiders/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Colgate Raiders</a>
-					<a href="/ncaa-team-apparel-merchandise/colorado-buffaloes/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Colorado Buffaloes</a>
-					<a href="/ncaa-team-apparel-merchandise/colorado-state-rams/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Colorado State Rams</a>
-					<a href="/ncaa-team-apparel-merchandise/columbia-lions/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Columbia Lions</a>
-					<a href="/ncaa-team-apparel-merchandise/cornell-big-red/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Cornell Big Red</a>
-					<a href="/ncaa-team-apparel-merchandise/creighton-blue-jays/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Creighton Blue Jays</a>
-					<a href="/ncaa-team-apparel-merchandise/dartmouth-big-green/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Dartmouth Big Green</a>
-					<a href="/ncaa-team-apparel-merchandise/davidson-wildcats/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Davidson Wildcats</a>
-					<a href="/ncaa-team-apparel-merchandise/dayton-flyers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Dayton Flyers</a>
-					<a href="/ncaa-team-apparel-merchandise/denver-pioneers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Denver Pioneers</a>
-					<a href="/ncaa-team-apparel-merchandise/depaul-blue-demons/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">DePaul Blue Demons</a>
-					<a href="/ncaa-team-apparel-merchandise/depauw-tigers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">DePauw Tigers</a>
-					<a href="/ncaa-team-apparel-merchandise/drake-bulldogs/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Drake Bulldogs</a>
-					<a href="/ncaa-team-apparel-merchandise/duke-blue-devils/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Duke Blue Devils</a>
-					<a href="/ncaa-team-apparel-merchandise/eastern-illinois-panthers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Eastern Illinois Panthers</a>
-					<a href="/ncaa-team-apparel-merchandise/eastern-michigan-eagles/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Eastern Michigan Eagles</a>
-					<a href="/ncaa-team-apparel-merchandise/east-carolina-pirates/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">East Carolina Pirates</a>
-					<a href="/ncaa-team-apparel-merchandise/embry-riddle-eagles/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Embry-Riddle Eagles</a>
-					<a href="/ncaa-team-apparel-merchandise/emory-eagles/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Emory Eagles</a>
-					<a href="/ncaa-team-apparel-merchandise/emporia-state-hornets/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Emporia State Hornets</a>
-					<a href="/ncaa-team-apparel-merchandise/ferris-state-bulldogs/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Ferris State Bulldogs</a>
-					<a href="/ncaa-team-apparel-merchandise/final-four/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Final Four</a>
-					<a href="/ncaa-team-apparel-merchandise/florida-gators/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Florida Gators</a>
-					<a href="/ncaa-team-apparel-merchandise/florida-state-seminoles/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Florida State Seminoles</a>
-					<a href="/ncaa-team-apparel-merchandise/fresno-state-bulldogs/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Fresno State Bulldogs</a>
-					<a href="/ncaa-team-apparel-merchandise/furman-paladins/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Furman Paladins</a>
-					<a href="/ncaa-team-apparel-merchandise/george-mason-patriots/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">George Mason Patriots</a>
-					<a href="/ncaa-team-apparel-merchandise/george-washington-colonials/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">George Washington Colonials</a>
-					<a href="/ncaa-team-apparel-merchandise/georgetown-hoyas/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Georgetown Hoyas</a>
-					<a href="/ncaa-team-apparel-merchandise/georgia-bulldogs/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Georgia Bulldogs</a>
-					<a href="/ncaa-team-apparel-merchandise/georgia-southern-eagles/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Georgia Southern Eagles</a>
-					<a href="/ncaa-team-apparel-merchandise/georgia-tech-yellowjackets/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Georgia Tech Yellowjackets</a>
-					<a href="/ncaa-team-apparel-merchandise/gonzaga-bulldogs/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Gonzaga Bulldogs</a>
-					<a href="/ncaa-team-apparel-merchandise/harvard-crimson/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Harvard Crimson</a>
-					<a href="/ncaa-team-apparel-merchandise/hawaii-warriors/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Hawaii Warriors</a>
-					<a href="/ncaa-team-apparel-merchandise/hofstra-pride/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Hofstra Pride</a>
-					<a href="/ncaa-team-apparel-merchandise/illinois-fighting-illini/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Illinois Fighting Illini</a>
-					<a href="/ncaa-team-apparel-merchandise/illinois-state-redbirds/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Illinois State Redbirds</a>
-					<a href="/ncaa-team-apparel-merchandise/indiana-hoosiers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Indiana Hoosiers</a>
-					<a href="/ncaa-team-apparel-merchandise/iowa-hawkeyes/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Iowa Hawkeyes</a>
-					<a href="/ncaa-team-apparel-merchandise/iowa-state-cyclones/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Iowa State Cyclones</a>
-					<a href="/ncaa-team-apparel-merchandise/johns-hopkins-blue-jays/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Johns Hopkins Blue Jays</a>
-					<a href="/ncaa-team-apparel-merchandise/kalamazoo-hornets/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Kalamazoo Hornets</a>
-					<a href="/ncaa-team-apparel-merchandise/kansas-jayhawks/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Kansas Jayhawks</a>
-					<a href="/ncaa-team-apparel-merchandise/kansas-state-wildcats/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Kansas State Wildcats</a>
-					<a href="/ncaa-team-apparel-merchandise/kentucky-wildcats/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Kentucky Wildcats</a>
-					<a href="/ncaa-team-apparel-merchandise/lehigh-mountainhawks/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Lehigh Mountainhawks</a>
-					<a href="/ncaa-team-apparel-merchandise/long-beach-state-49ers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Long Beach State 49ers</a>
-					<a href="/ncaa-team-apparel-merchandise/louisville-cardinals/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Louisville Cardinals</a>
-					<a href="/ncaa-team-apparel-merchandise/lousiana-layfayette-ragin'-cajuns/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Lousiana-Layfayette Ragin' Cajuns</a>
-					<a href="/ncaa-team-apparel-merchandise/loyola-chicago-ramblers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Loyola Chicago Ramblers</a>
-					<a href="/ncaa-team-apparel-merchandise/loyola-maryland-greyhounds/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Loyola Maryland Greyhounds</a>
-					<a href="/ncaa-team-apparel-merchandise/lsu-tigers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">LSU Tigers</a>
-					<a href="/ncaa-team-apparel-merchandise/maine-black-bears/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Maine Black Bears</a>
-					<a href="/ncaa-team-apparel-merchandise/marquette-golden-eagles/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Marquette Golden Eagles</a>
-					<a href="/ncaa-team-apparel-merchandise/marshall-thundering-herd/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Marshall Thundering Herd</a>
-					<a href="/ncaa-team-apparel-merchandise/maryland-terrapins/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Maryland Terrapins</a>
-					<a href="/ncaa-team-apparel-merchandise/memphis--tigers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Memphis  Tigers</a>
-					<a href="/ncaa-team-apparel-merchandise/miami-hurricanes/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Miami Hurricanes</a>
-					<a href="/ncaa-team-apparel-merchandise/miami-redhawks/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Miami Redhawks</a>
-					<a href="/ncaa-team-apparel-merchandise/michigan/michigan-state/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Michigan/Michigan State</a>
-					<a href="/ncaa-team-apparel-merchandise/michigan-wolverines/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Michigan Wolverines</a>
-					<a href="/ncaa-team-apparel-merchandise/michigan-state-spartans/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Michigan State Spartans</a>
-					<a href="/ncaa-team-apparel-merchandise/minnesota-golden-gophers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Minnesota Golden Gophers</a>
-					<a href="/ncaa-team-apparel-merchandise/mississippi-state-bulldogs/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Mississippi State Bulldogs</a>
-					<a href="/ncaa-team-apparel-merchandise/missouri-tigers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Missouri Tigers</a>
-					<a href="/ncaa-team-apparel-merchandise/mit-engineers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">MIT Engineers</a>
-					<a href="/ncaa-team-apparel-merchandise/montana-grizzlies/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Montana Grizzlies</a>
-					<a href="/ncaa-team-apparel-merchandise/murray-state-racers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Murray State Racers</a>
-					<a href="/ncaa-team-apparel-merchandise/mountain-west-conference/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Mountain West Conference</a>
-					<a href="/ncaa-team-apparel-merchandise/navy-midshipmen/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Navy Midshipmen</a>
-					<a href="/ncaa-team-apparel-merchandise/nc-state-wolfpack/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">NC State Wolfpack</a>
-					<a href="/ncaa-team-apparel-merchandise/notre-dame-vs-alabama/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Notre Dame vs Alabama</a>
-					<a href="/ncaa-team-apparel-merchandise/notre-dame-vs-miami-oh/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Notre Dame vs Miami-OH</a>
-					<a href="/ncaa-team-apparel-merchandise/nebraska-cornhuskers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Nebraska Cornhuskers</a>
-					<a href="/ncaa-team-apparel-merchandise/nevada-wolf-pack/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Nevada Wolf Pack</a>
-					<a href="/ncaa-team-apparel-merchandise/new-hampshire-wildcats/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">New Hampshire Wildcats</a>
-					<a href="/ncaa-team-apparel-merchandise/new-mexico-state-lobos/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">New Mexico State Lobos</a>
-					<a href="/ncaa-team-apparel-merchandise/north-alabama-lions/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">North Alabama Lions</a>
-					<a href="/ncaa-team-apparel-merchandise/north-carolina-tar-heels/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">North Carolina Tar Heels</a>
-					<a href="/ncaa-team-apparel-merchandise/north-dakota/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">North Dakota</a>
-					<a href="/ncaa-team-apparel-merchandise/northern-illinois-huskies/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Northern Illinois Huskies</a>
-					<a href="/ncaa-team-apparel-merchandise/northern-iowa-panthers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Northern Iowa Panthers</a>
-					<a href="/ncaa-team-apparel-merchandise/northern-michigan-wildcats/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Northern Michigan Wildcats</a>
-					<a href="/ncaa-team-apparel-merchandise/northwestern-wildcats/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Northwestern Wildcats</a>
-					<a href="/ncaa-team-apparel-merchandise/notre-dame-fighting-irish/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Notre Dame Fighting Irish</a>
-					<a href="/ncaa-team-apparel-merchandise/nyu-violets/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">NYU Violets</a>
-					<a href="/ncaa-team-apparel-merchandise/ohio-bobcats/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Ohio Bobcats</a>
-					<a href="/ncaa-team-apparel-merchandise/ohio-state-buckeyes/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Ohio State Buckeyes</a>
-					<a href="/ncaa-team-apparel-merchandise/oklahoma-sooners/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Oklahoma Sooners</a>
-					<a href="/ncaa-team-apparel-merchandise/oklahoma-state-cowboys/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Oklahoma State Cowboys</a>
-					<a href="/ncaa-team-apparel-merchandise/ole-miss-rebels/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Ole Miss Rebels</a>
-					<a href="/ncaa-team-apparel-merchandise/oregon-ducks/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Oregon Ducks</a>
-					<a href="/ncaa-team-apparel-merchandise/oregon-state-beavers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Oregon State Beavers</a>
-					<a href="/ncaa-team-apparel-merchandise/pacific-10-conference/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Pacific 10 Conference</a>
-					<a href="/ncaa-team-apparel-merchandise/pacific-10-conference/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Pacific 10 Conference</a>
-					<a href="/ncaa-team-apparel-merchandise/pacific-12-conference/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Pacific 12 Conference</a>
-					<a href="/ncaa-team-apparel-merchandise/penn-quakers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Penn Quakers</a>
-					<a href="/ncaa-team-apparel-merchandise/penn-state-nittany-lions/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Penn State Nittany Lions</a>
-					<a href="/ncaa-team-apparel-merchandise/pepperdine-waves/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Pepperdine Waves</a>
-					<a href="/ncaa-team-apparel-merchandise/pitt-panthers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Pitt Panthers</a>
-					<a href="/ncaa-team-apparel-merchandise/portland-state-vikings/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Portland State Vikings</a>
-					<a href="/ncaa-team-apparel-merchandise/princeton-tigers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Princeton Tigers</a>
-					<a href="/ncaa-team-apparel-merchandise/providence-friars/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Providence Friars</a>
-					<a href="/ncaa-team-apparel-merchandise/purdue-boilermakers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Purdue Boilermakers</a>
-					<a href="/ncaa-team-apparel-merchandise/rice-owls/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Rice Owls</a>
-					<a href="/ncaa-team-apparel-merchandise/richmond-spiders/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Richmond Spiders</a>
-					<a href="/ncaa-team-apparel-merchandise/rochester-yellowjackets/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Rochester Yellowjackets</a>
-					<a href="/ncaa-team-apparel-merchandise/rose-bowl/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Rose Bowl</a>
-					<a href="/ncaa-team-apparel-merchandise/rutgers-scarlet-knights/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Rutgers Scarlet Knights</a>
-					<a href="/ncaa-team-apparel-merchandise/saint-louis-bilikens/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Saint Louis Bilikens</a>
-					<a href="/ncaa-team-apparel-merchandise/san-diego-state-aztecs/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">San Diego State Aztecs</a>
-					<a href="/ncaa-team-apparel-merchandise/san-diego-toreros/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">San Diego Toreros</a>
-					<a href="/ncaa-team-apparel-merchandise/seton-hall-pirates/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Seton Hall Pirates</a>
-					<a href="/ncaa-team-apparel-merchandise/southeastern-conference/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Southeastern Conference</a>
-					<a href="/ncaa-team-apparel-merchandise/slippery-rock/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Slippery Rock</a>
-					<a href="/ncaa-team-apparel-merchandise/smu-mustangs/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">SMU Mustangs</a>
-					<a href="/ncaa-team-apparel-merchandise/south-carolina-gamecocks/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">South Carolina Gamecocks</a>
-					<a href="/ncaa-team-apparel-merchandise/south-dakota-state-jackrabbits/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">South Dakota State Jackrabbits</a>
-					<a href="/ncaa-team-apparel-merchandise/southern-illinois-salukis/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Southern Illinois Salukis</a>
-					<a href="/ncaa-team-apparel-merchandise/southern-miss-golden-eagles/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Southern Miss Golden Eagles</a>
-					<a href="/ncaa-team-apparel-merchandise/st.-joseph's-hawks/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">St. Joseph's Hawks</a>
-					<a href="/ncaa-team-apparel-merchandise/st.-john's-red-storm/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">St. John's Red Storm</a>
-					<a href="/ncaa-team-apparel-merchandise/stanford-cardinal/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Stanford Cardinal</a>
-					<a href="/ncaa-team-apparel-merchandise/sugar-bowl/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Sugar Bowl</a>
-					<a href="/ncaa-team-apparel-merchandise/syracuse-orange/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Syracuse Orange</a>
-					<a href="/ncaa-team-apparel-merchandise/tcu-horned-frogs/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">TCU Horned Frogs</a>
-					<a href="/ncaa-team-apparel-merchandise/temple-owls/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Temple Owls</a>
-					<a href="/ncaa-team-apparel-merchandise/tennessee-volunteers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Tennessee Volunteers</a>
-					<a href="/ncaa-team-apparel-merchandise/texas-longhorns/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Texas Longhorns</a>
-					<a href="/ncaa-team-apparel-merchandise/texas-a&amp;m-aggies/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Texas A&amp;M Aggies</a>
-					<a href="/ncaa-team-apparel-merchandise/texas-state-bobcats/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Texas State Bobcats</a>
-					<a href="/ncaa-team-apparel-merchandise/texas-tech-red-raiders/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Texas Tech Red Raiders</a>
-					<a href="/ncaa-team-apparel-merchandise/the-citadel-bulldogs/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">The Citadel Bulldogs</a>
-					<a href="/ncaa-team-apparel-merchandise/toledo-rockets/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Toledo Rockets</a>
-					<a href="/ncaa-team-apparel-merchandise/tufts-jumbos/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Tufts Jumbos</a>
-					<a href="/ncaa-team-apparel-merchandise/tulane-green-wave/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Tulane Green Wave</a>
-					<a href="/ncaa-team-apparel-merchandise/central-florida-knights/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Central Florida Knights</a>
-					<a href="/ncaa-team-apparel-merchandise/uc-irvine-anteaters/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">UC-Irvine Anteaters</a>
-					<a href="/ncaa-team-apparel-merchandise/ucla-bruins/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">UCLA Bruins</a>
-					<a href="/ncaa-team-apparel-merchandise/uconn-huskies/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">UCONN Huskies</a>
-					<a href="/ncaa-team-apparel-merchandise/ucsb-banana-slugs/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">UCSB Banana Slugs</a>
-					<a href="/ncaa-team-apparel-merchandise/uic-flames/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">UIC Flames</a>
-					<a href="/ncaa-team-apparel-merchandise/umass-minutemen/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">UMass Minutemen</a>
-					<a href="/ncaa-team-apparel-merchandise/unlv-rebels/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">UNLV Rebels</a>
-					<a href="/ncaa-team-apparel-merchandise/usc-trojans/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">USC Trojans</a>
-					<a href="/ncaa-team-apparel-merchandise/usf-bulls/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">USF Bulls</a>
-					<a href="/ncaa-team-apparel-merchandise/united-states-marine-corps-bulldogs/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">United States Marine Corps Bulldogs</a>
-					<a href="/ncaa-team-apparel-merchandise/utah-utes/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Utah Utes</a>
-					<a href="/ncaa-team-apparel-merchandise/utep-miners/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">UTEP Miners</a>
-					<a href="/ncaa-team-apparel-merchandise/valparaiso-crusaders/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Valparaiso Crusaders</a>
-					<a href="/ncaa-team-apparel-merchandise/vanderbilt-commodores/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Vanderbilt Commodores</a>
-					<a href="/ncaa-team-apparel-merchandise/vcu-rams/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">VCU Rams</a>
-					<a href="/ncaa-team-apparel-merchandise/vermont-catamounts/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Vermont Catamounts</a>
-					<a href="/ncaa-team-apparel-merchandise/villanova-wildcats/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Villanova Wildcats</a>
-					<a href="/ncaa-team-apparel-merchandise/virginia-cavaliers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Virginia Cavaliers</a>
-					<a href="/ncaa-team-apparel-merchandise/virginia-tech-hokies/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Virginia Tech Hokies</a>
-					<a href="/ncaa-team-apparel-merchandise/vmi-keydets/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">VMI Keydets</a>
-					<a href="/ncaa-team-apparel-merchandise/wake-forest-demon-deacons/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Wake Forest Demon Deacons</a>
-					<a href="/ncaa-team-apparel-merchandise/washington-huskies/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Washington Huskies</a>
-					<a href="/ncaa-team-apparel-merchandise/washington-lee-generals/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Washington-Lee Generals</a>
-					<a href="/ncaa-team-apparel-merchandise/washington-state-cougars/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Washington State Cougars</a>
-					<a href="/ncaa-team-apparel-merchandise/washington-st-louis-bears/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Washington-St Louis Bears</a>
-					<a href="/ncaa-team-apparel-merchandise/wayne-state-warriors/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Wayne State Warriors</a>
-					<a href="/ncaa-team-apparel-merchandise/weber-state-wildcats/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Weber State Wildcats</a>
-					<a href="/ncaa-team-apparel-merchandise/west-virginia-mountaineers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">West Virginia Mountaineers</a>
-					<a href="/ncaa-team-apparel-merchandise/western-illinois-leathernecks/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Western Illinois Leathernecks</a>
-					<a href="/ncaa-team-apparel-merchandise/western-michigan-broncos/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Western Michigan Broncos</a>
-					<a href="/ncaa-team-apparel-merchandise/wichita-state-shockers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Wichita State Shockers</a>
-					<a href="/ncaa-team-apparel-merchandise/wisconsin-vs-minnesota/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Wisconsin vs Minnesota</a>
-					<a href="/ncaa-team-apparel-merchandise/wisconsin-badgers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Wisconsin Badgers</a>
-					<a href="/ncaa-team-apparel-merchandise/wisconsin-eau-claire-blugold/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Wisconsin-Eau Claire Blugold</a>
-					<a href="/ncaa-team-apparel-merchandise/wisconsin-green-bay-phoenix-/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Wisconsin-Green Bay Phoenix </a>
-					<a href="/ncaa-team-apparel-merchandise/wisconsin-la-crosse-eagles/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Wisconsin-La Crosse Eagles</a>
-					<a href="/ncaa-team-apparel-merchandise/wisconsin-milwaukee-panthers-/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Wisconsin-Milwaukee Panthers </a>
-					<a href="/ncaa-team-apparel-merchandise/wisconsin-oshkosh-titans-/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Wisconsin-Oshkosh Titans </a>
-					<a href="/ncaa-team-apparel-merchandise/wisconsin-stevens-point-pointers-/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Wisconsin-Stevens Point Pointers </a>
-					<a href="/ncaa-team-apparel-merchandise/wisconsin-stout-blue-devils/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Wisconsin-Stout Blue Devils</a>
-					<a href="/ncaa-team-apparel-merchandise/wisconsin-whitewater-warhawks/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Wisconsin-Whitewater Warhawks</a>
-					<a href="/ncaa-team-apparel-merchandise/wyoming-cowboys/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Wyoming Cowboys</a>
-					<a href="/ncaa-team-apparel-merchandise/xavier-musketeers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Xavier Musketeers</a>
-					<a href="/ncaa-team-apparel-merchandise/yale-bulldogs/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Yale Bulldogs</a>
+				<div class="levelTwo teamDrop ncaaDrop" data-dropnav="1" data-desk-height=900 data-tab-height=1070>
+					<a href="/ncaa-team-apparel-merchandise/atlantic-coast-conference/all/" data-app-click="store_cc|dismissMobilNav">Atlantic Coast Conference</a>
+					<a href="/ncaa-team-apparel-merchandise/air-force-falcons/all/" data-app-click="store_cc|dismissMobilNav">Air Force Falcons</a>
+					<a href="/ncaa-team-apparel-merchandise/akron-zips/all/" data-app-click="store_cc|dismissMobilNav">Akron Zips</a>
+					<a href="/ncaa-team-apparel-merchandise/alabama-crimson-tide/all/" data-app-click="store_cc|dismissMobilNav">Alabama Crimson Tide</a>
+					<a href="/ncaa-team-apparel-merchandise/albany-great-danes/all/" data-app-click="store_cc|dismissMobilNav">Albany Great Danes</a>
+					<a href="/ncaa-team-apparel-merchandise/american-eagles/all/" data-app-click="store_cc|dismissMobilNav">American Eagles</a>
+					<a href="/ncaa-team-apparel-merchandise/appalachian-state-mountaineers/all/" data-app-click="store_cc|dismissMobilNav">Appalachian State Mountaineers</a>
+					<a href="/ncaa-team-apparel-merchandise/arizona-wildcats/all/" data-app-click="store_cc|dismissMobilNav">Arizona Wildcats</a>
+					<a href="/ncaa-team-apparel-merchandise/arizona-state-sun-devils/all/" data-app-click="store_cc|dismissMobilNav">Arizona State Sun Devils</a>
+					<a href="/ncaa-team-apparel-merchandise/arkansas-razorbacks/all/" data-app-click="store_cc|dismissMobilNav">Arkansas Razorbacks</a>
+					<a href="/ncaa-team-apparel-merchandise/army-black-knights/all/" data-app-click="store_cc|dismissMobilNav">Army Black Knights</a>
+					<a href="/ncaa-team-apparel-merchandise/auburn-tigers/all/" data-app-click="store_cc|dismissMobilNav">Auburn Tigers</a>
+					<a href="/ncaa-team-apparel-merchandise/ball-state-cardinals/all/" data-app-click="store_cc|dismissMobilNav">Ball State Cardinals</a>
+					<a href="/ncaa-team-apparel-merchandise/baylor-bears/all/" data-app-click="store_cc|dismissMobilNav">Baylor Bears</a>
+					<a href="/ncaa-team-apparel-merchandise/bcs-national-championship/all/" data-app-click="store_cc|dismissMobilNav">BCS National Championship</a>
+					<a href="/ncaa-team-apparel-merchandise/big-12-conference/all/" data-app-click="store_cc|dismissMobilNav">Big 12 Conference</a>
+					<a href="/ncaa-team-apparel-merchandise/big-east-conference/all/" data-app-click="store_cc|dismissMobilNav">Big East Conference</a>
+					<a href="/ncaa-team-apparel-merchandise/big-ten-conference/all/" data-app-click="store_cc|dismissMobilNav">Big Ten Conference</a>
+					<a href="/ncaa-team-apparel-merchandise/binghamton-bearcats/all/" data-app-click="store_cc|dismissMobilNav">Binghamton Bearcats</a>
+					<a href="/ncaa-team-apparel-merchandise/boise-state-broncos-/all/" data-app-click="store_cc|dismissMobilNav">Boise State Broncos </a>
+					<a href="/ncaa-team-apparel-merchandise/boston-terriers/all/" data-app-click="store_cc|dismissMobilNav">Boston Terriers</a>
+					<a href="/ncaa-team-apparel-merchandise/boston-college-eagles/all/" data-app-click="store_cc|dismissMobilNav">Boston College Eagles</a>
+					<a href="/ncaa-team-apparel-merchandise/bowling-green-state-falcons/all/" data-app-click="store_cc|dismissMobilNav">Bowling Green State Falcons</a>
+					<a href="/ncaa-team-apparel-merchandise/bradley-braves/all/" data-app-click="store_cc|dismissMobilNav">Bradley Braves</a>
+					<a href="/ncaa-team-apparel-merchandise/brown-bears/all/" data-app-click="store_cc|dismissMobilNav">Brown Bears</a>
+					<a href="/ncaa-team-apparel-merchandise/bucknell-bison/all/" data-app-click="store_cc|dismissMobilNav">Bucknell Bison</a>
+					<a href="/ncaa-team-apparel-merchandise/butler-bulldogs/all/" data-app-click="store_cc|dismissMobilNav">Butler Bulldogs</a>
+					<a href="/ncaa-team-apparel-merchandise/byu-cougars/all/" data-app-click="store_cc|dismissMobilNav">BYU Cougars</a>
+					<a href="/ncaa-team-apparel-merchandise/cal-golden-bears/all/" data-app-click="store_cc|dismissMobilNav">Cal Golden Bears</a>
+					<a href="/ncaa-team-apparel-merchandise/cal-state-fullerton-titans/all/" data-app-click="store_cc|dismissMobilNav">Cal State Fullerton Titans</a>
+					<a href="/ncaa-team-apparel-merchandise/case-western-reserve-spartans/all/" data-app-click="store_cc|dismissMobilNav">Case Western Reserve Spartans</a>
+					<a href="/ncaa-team-apparel-merchandise/central-collegiate-hockey-association/all/" data-app-click="store_cc|dismissMobilNav">Central Collegiate Hockey Association</a>
+					<a href="/ncaa-team-apparel-merchandise/central-michigan-chippewas/all/" data-app-click="store_cc|dismissMobilNav">Central Michigan Chippewas</a>
+					<a href="/ncaa-team-apparel-merchandise/charlotte-49ers/all/" data-app-click="store_cc|dismissMobilNav">Charlotte 49ers</a>
+					<a href="/ncaa-team-apparel-merchandise/chicago-maroons/all/" data-app-click="store_cc|dismissMobilNav">Chicago Maroons</a>
+					<a href="/ncaa-team-apparel-merchandise/cincinnati--bearcats/all/" data-app-click="store_cc|dismissMobilNav">Cincinnati  Bearcats</a>
+					<a href="/ncaa-team-apparel-merchandise/clemson-tigers/all/" data-app-click="store_cc|dismissMobilNav">Clemson Tigers</a>
+					<a href="/ncaa-team-apparel-merchandise/colgate-raiders/all/" data-app-click="store_cc|dismissMobilNav">Colgate Raiders</a>
+					<a href="/ncaa-team-apparel-merchandise/colorado-buffaloes/all/" data-app-click="store_cc|dismissMobilNav">Colorado Buffaloes</a>
+					<a href="/ncaa-team-apparel-merchandise/colorado-state-rams/all/" data-app-click="store_cc|dismissMobilNav">Colorado State Rams</a>
+					<a href="/ncaa-team-apparel-merchandise/columbia-lions/all/" data-app-click="store_cc|dismissMobilNav">Columbia Lions</a>
+					<a href="/ncaa-team-apparel-merchandise/cornell-big-red/all/" data-app-click="store_cc|dismissMobilNav">Cornell Big Red</a>
+					<a href="/ncaa-team-apparel-merchandise/creighton-blue-jays/all/" data-app-click="store_cc|dismissMobilNav">Creighton Blue Jays</a>
+					<a href="/ncaa-team-apparel-merchandise/dartmouth-big-green/all/" data-app-click="store_cc|dismissMobilNav">Dartmouth Big Green</a>
+					<a href="/ncaa-team-apparel-merchandise/davidson-wildcats/all/" data-app-click="store_cc|dismissMobilNav">Davidson Wildcats</a>
+					<a href="/ncaa-team-apparel-merchandise/dayton-flyers/all/" data-app-click="store_cc|dismissMobilNav">Dayton Flyers</a>
+					<a href="/ncaa-team-apparel-merchandise/denver-pioneers/all/" data-app-click="store_cc|dismissMobilNav">Denver Pioneers</a>
+					<a href="/ncaa-team-apparel-merchandise/depaul-blue-demons/all/" data-app-click="store_cc|dismissMobilNav">DePaul Blue Demons</a>
+					<a href="/ncaa-team-apparel-merchandise/depauw-tigers/all/" data-app-click="store_cc|dismissMobilNav">DePauw Tigers</a>
+					<a href="/ncaa-team-apparel-merchandise/drake-bulldogs/all/" data-app-click="store_cc|dismissMobilNav">Drake Bulldogs</a>
+					<a href="/ncaa-team-apparel-merchandise/duke-blue-devils/all/" data-app-click="store_cc|dismissMobilNav">Duke Blue Devils</a>
+					<a href="/ncaa-team-apparel-merchandise/eastern-illinois-panthers/all/" data-app-click="store_cc|dismissMobilNav">Eastern Illinois Panthers</a>
+					<a href="/ncaa-team-apparel-merchandise/eastern-michigan-eagles/all/" data-app-click="store_cc|dismissMobilNav">Eastern Michigan Eagles</a>
+					<a href="/ncaa-team-apparel-merchandise/east-carolina-pirates/all/" data-app-click="store_cc|dismissMobilNav">East Carolina Pirates</a>
+					<a href="/ncaa-team-apparel-merchandise/embry-riddle-eagles/all/" data-app-click="store_cc|dismissMobilNav">Embry-Riddle Eagles</a>
+					<a href="/ncaa-team-apparel-merchandise/emory-eagles/all/" data-app-click="store_cc|dismissMobilNav">Emory Eagles</a>
+					<a href="/ncaa-team-apparel-merchandise/emporia-state-hornets/all/" data-app-click="store_cc|dismissMobilNav">Emporia State Hornets</a>
+					<a href="/ncaa-team-apparel-merchandise/ferris-state-bulldogs/all/" data-app-click="store_cc|dismissMobilNav">Ferris State Bulldogs</a>
+					<a href="/ncaa-team-apparel-merchandise/final-four/all/" data-app-click="store_cc|dismissMobilNav">Final Four</a>
+					<a href="/ncaa-team-apparel-merchandise/florida-gators/all/" data-app-click="store_cc|dismissMobilNav">Florida Gators</a>
+					<a href="/ncaa-team-apparel-merchandise/florida-state-seminoles/all/" data-app-click="store_cc|dismissMobilNav">Florida State Seminoles</a>
+					<a href="/ncaa-team-apparel-merchandise/fresno-state-bulldogs/all/" data-app-click="store_cc|dismissMobilNav">Fresno State Bulldogs</a>
+					<a href="/ncaa-team-apparel-merchandise/furman-paladins/all/" data-app-click="store_cc|dismissMobilNav">Furman Paladins</a>
+					<a href="/ncaa-team-apparel-merchandise/george-mason-patriots/all/" data-app-click="store_cc|dismissMobilNav">George Mason Patriots</a>
+					<a href="/ncaa-team-apparel-merchandise/george-washington-colonials/all/" data-app-click="store_cc|dismissMobilNav">George Washington Colonials</a>
+					<a href="/ncaa-team-apparel-merchandise/georgetown-hoyas/all/" data-app-click="store_cc|dismissMobilNav">Georgetown Hoyas</a>
+					<a href="/ncaa-team-apparel-merchandise/georgia-bulldogs/all/" data-app-click="store_cc|dismissMobilNav">Georgia Bulldogs</a>
+					<a href="/ncaa-team-apparel-merchandise/georgia-southern-eagles/all/" data-app-click="store_cc|dismissMobilNav">Georgia Southern Eagles</a>
+					<a href="/ncaa-team-apparel-merchandise/georgia-tech-yellowjackets/all/" data-app-click="store_cc|dismissMobilNav">Georgia Tech Yellowjackets</a>
+					<a href="/ncaa-team-apparel-merchandise/gonzaga-bulldogs/all/" data-app-click="store_cc|dismissMobilNav">Gonzaga Bulldogs</a>
+					<a href="/ncaa-team-apparel-merchandise/harvard-crimson/all/" data-app-click="store_cc|dismissMobilNav">Harvard Crimson</a>
+					<a href="/ncaa-team-apparel-merchandise/hawaii-warriors/all/" data-app-click="store_cc|dismissMobilNav">Hawaii Warriors</a>
+					<a href="/ncaa-team-apparel-merchandise/hofstra-pride/all/" data-app-click="store_cc|dismissMobilNav">Hofstra Pride</a>
+					<a href="/ncaa-team-apparel-merchandise/illinois-fighting-illini/all/" data-app-click="store_cc|dismissMobilNav">Illinois Fighting Illini</a>
+					<a href="/ncaa-team-apparel-merchandise/illinois-state-redbirds/all/" data-app-click="store_cc|dismissMobilNav">Illinois State Redbirds</a>
+					<a href="/ncaa-team-apparel-merchandise/indiana-hoosiers/all/" data-app-click="store_cc|dismissMobilNav">Indiana Hoosiers</a>
+					<a href="/ncaa-team-apparel-merchandise/iowa-hawkeyes/all/" data-app-click="store_cc|dismissMobilNav">Iowa Hawkeyes</a>
+					<a href="/ncaa-team-apparel-merchandise/iowa-state-cyclones/all/" data-app-click="store_cc|dismissMobilNav">Iowa State Cyclones</a>
+					<a href="/ncaa-team-apparel-merchandise/johns-hopkins-blue-jays/all/" data-app-click="store_cc|dismissMobilNav">Johns Hopkins Blue Jays</a>
+					<a href="/ncaa-team-apparel-merchandise/kalamazoo-hornets/all/" data-app-click="store_cc|dismissMobilNav">Kalamazoo Hornets</a>
+					<a href="/ncaa-team-apparel-merchandise/kansas-jayhawks/all/" data-app-click="store_cc|dismissMobilNav">Kansas Jayhawks</a>
+					<a href="/ncaa-team-apparel-merchandise/kansas-state-wildcats/all/" data-app-click="store_cc|dismissMobilNav">Kansas State Wildcats</a>
+					<a href="/ncaa-team-apparel-merchandise/kentucky-wildcats/all/" data-app-click="store_cc|dismissMobilNav">Kentucky Wildcats</a>
+					<a href="/ncaa-team-apparel-merchandise/lehigh-mountainhawks/all/" data-app-click="store_cc|dismissMobilNav">Lehigh Mountainhawks</a>
+					<a href="/ncaa-team-apparel-merchandise/long-beach-state-49ers/all/" data-app-click="store_cc|dismissMobilNav">Long Beach State 49ers</a>
+					<a href="/ncaa-team-apparel-merchandise/louisville-cardinals/all/" data-app-click="store_cc|dismissMobilNav">Louisville Cardinals</a>
+					<a href="/ncaa-team-apparel-merchandise/lousiana-layfayette-ragin'-cajuns/all/" data-app-click="store_cc|dismissMobilNav">Lousiana-Layfayette Ragin' Cajuns</a>
+					<a href="/ncaa-team-apparel-merchandise/loyola-chicago-ramblers/all/" data-app-click="store_cc|dismissMobilNav">Loyola Chicago Ramblers</a>
+					<a href="/ncaa-team-apparel-merchandise/loyola-maryland-greyhounds/all/" data-app-click="store_cc|dismissMobilNav">Loyola Maryland Greyhounds</a>
+					<a href="/ncaa-team-apparel-merchandise/lsu-tigers/all/" data-app-click="store_cc|dismissMobilNav">LSU Tigers</a>
+					<a href="/ncaa-team-apparel-merchandise/maine-black-bears/all/" data-app-click="store_cc|dismissMobilNav">Maine Black Bears</a>
+					<a href="/ncaa-team-apparel-merchandise/marquette-golden-eagles/all/" data-app-click="store_cc|dismissMobilNav">Marquette Golden Eagles</a>
+					<a href="/ncaa-team-apparel-merchandise/marshall-thundering-herd/all/" data-app-click="store_cc|dismissMobilNav">Marshall Thundering Herd</a>
+					<a href="/ncaa-team-apparel-merchandise/maryland-terrapins/all/" data-app-click="store_cc|dismissMobilNav">Maryland Terrapins</a>
+					<a href="/ncaa-team-apparel-merchandise/memphis--tigers/all/" data-app-click="store_cc|dismissMobilNav">Memphis  Tigers</a>
+					<a href="/ncaa-team-apparel-merchandise/miami-hurricanes/all/" data-app-click="store_cc|dismissMobilNav">Miami Hurricanes</a>
+					<a href="/ncaa-team-apparel-merchandise/miami-redhawks/all/" data-app-click="store_cc|dismissMobilNav">Miami Redhawks</a>
+					<a href="/ncaa-team-apparel-merchandise/michigan/michigan-state/all/" data-app-click="store_cc|dismissMobilNav">Michigan/Michigan State</a>
+					<a href="/ncaa-team-apparel-merchandise/michigan-wolverines/all/" data-app-click="store_cc|dismissMobilNav">Michigan Wolverines</a>
+					<a href="/ncaa-team-apparel-merchandise/michigan-state-spartans/all/" data-app-click="store_cc|dismissMobilNav">Michigan State Spartans</a>
+					<a href="/ncaa-team-apparel-merchandise/minnesota-golden-gophers/all/" data-app-click="store_cc|dismissMobilNav">Minnesota Golden Gophers</a>
+					<a href="/ncaa-team-apparel-merchandise/mississippi-state-bulldogs/all/" data-app-click="store_cc|dismissMobilNav">Mississippi State Bulldogs</a>
+					<a href="/ncaa-team-apparel-merchandise/missouri-tigers/all/" data-app-click="store_cc|dismissMobilNav">Missouri Tigers</a>
+					<a href="/ncaa-team-apparel-merchandise/mit-engineers/all/" data-app-click="store_cc|dismissMobilNav">MIT Engineers</a>
+					<a href="/ncaa-team-apparel-merchandise/montana-grizzlies/all/" data-app-click="store_cc|dismissMobilNav">Montana Grizzlies</a>
+					<a href="/ncaa-team-apparel-merchandise/murray-state-racers/all/" data-app-click="store_cc|dismissMobilNav">Murray State Racers</a>
+					<a href="/ncaa-team-apparel-merchandise/mountain-west-conference/all/" data-app-click="store_cc|dismissMobilNav">Mountain West Conference</a>
+					<a href="/ncaa-team-apparel-merchandise/navy-midshipmen/all/" data-app-click="store_cc|dismissMobilNav">Navy Midshipmen</a>
+					<a href="/ncaa-team-apparel-merchandise/nc-state-wolfpack/all/" data-app-click="store_cc|dismissMobilNav">NC State Wolfpack</a>
+					<a href="/ncaa-team-apparel-merchandise/notre-dame-vs-alabama/all/" data-app-click="store_cc|dismissMobilNav">Notre Dame vs Alabama</a>
+					<a href="/ncaa-team-apparel-merchandise/notre-dame-vs-miami-oh/all/" data-app-click="store_cc|dismissMobilNav">Notre Dame vs Miami-OH</a>
+					<a href="/ncaa-team-apparel-merchandise/nebraska-cornhuskers/all/" data-app-click="store_cc|dismissMobilNav">Nebraska Cornhuskers</a>
+					<a href="/ncaa-team-apparel-merchandise/nevada-wolf-pack/all/" data-app-click="store_cc|dismissMobilNav">Nevada Wolf Pack</a>
+					<a href="/ncaa-team-apparel-merchandise/new-hampshire-wildcats/all/" data-app-click="store_cc|dismissMobilNav">New Hampshire Wildcats</a>
+					<a href="/ncaa-team-apparel-merchandise/new-mexico-state-lobos/all/" data-app-click="store_cc|dismissMobilNav">New Mexico State Lobos</a>
+					<a href="/ncaa-team-apparel-merchandise/north-alabama-lions/all/" data-app-click="store_cc|dismissMobilNav">North Alabama Lions</a>
+					<a href="/ncaa-team-apparel-merchandise/north-carolina-tar-heels/all/" data-app-click="store_cc|dismissMobilNav">North Carolina Tar Heels</a>
+					<a href="/ncaa-team-apparel-merchandise/north-dakota/all/" data-app-click="store_cc|dismissMobilNav">North Dakota</a>
+					<a href="/ncaa-team-apparel-merchandise/northern-illinois-huskies/all/" data-app-click="store_cc|dismissMobilNav">Northern Illinois Huskies</a>
+					<a href="/ncaa-team-apparel-merchandise/northern-iowa-panthers/all/" data-app-click="store_cc|dismissMobilNav">Northern Iowa Panthers</a>
+					<a href="/ncaa-team-apparel-merchandise/northern-michigan-wildcats/all/" data-app-click="store_cc|dismissMobilNav">Northern Michigan Wildcats</a>
+					<a href="/ncaa-team-apparel-merchandise/northwestern-wildcats/all/" data-app-click="store_cc|dismissMobilNav">Northwestern Wildcats</a>
+					<a href="/ncaa-team-apparel-merchandise/notre-dame-fighting-irish/all/" data-app-click="store_cc|dismissMobilNav">Notre Dame Fighting Irish</a>
+					<a href="/ncaa-team-apparel-merchandise/nyu-violets/all/" data-app-click="store_cc|dismissMobilNav">NYU Violets</a>
+					<a href="/ncaa-team-apparel-merchandise/ohio-bobcats/all/" data-app-click="store_cc|dismissMobilNav">Ohio Bobcats</a>
+					<a href="/ncaa-team-apparel-merchandise/ohio-state-buckeyes/all/" data-app-click="store_cc|dismissMobilNav">Ohio State Buckeyes</a>
+					<a href="/ncaa-team-apparel-merchandise/oklahoma-sooners/all/" data-app-click="store_cc|dismissMobilNav">Oklahoma Sooners</a>
+					<a href="/ncaa-team-apparel-merchandise/oklahoma-state-cowboys/all/" data-app-click="store_cc|dismissMobilNav">Oklahoma State Cowboys</a>
+					<a href="/ncaa-team-apparel-merchandise/ole-miss-rebels/all/" data-app-click="store_cc|dismissMobilNav">Ole Miss Rebels</a>
+					<a href="/ncaa-team-apparel-merchandise/oregon-ducks/all/" data-app-click="store_cc|dismissMobilNav">Oregon Ducks</a>
+					<a href="/ncaa-team-apparel-merchandise/oregon-state-beavers/all/" data-app-click="store_cc|dismissMobilNav">Oregon State Beavers</a>
+					<a href="/ncaa-team-apparel-merchandise/pacific-10-conference/all/" data-app-click="store_cc|dismissMobilNav">Pacific 10 Conference</a>
+					<a href="/ncaa-team-apparel-merchandise/pacific-10-conference/all/" data-app-click="store_cc|dismissMobilNav">Pacific 10 Conference</a>
+					<a href="/ncaa-team-apparel-merchandise/pacific-12-conference/all/" data-app-click="store_cc|dismissMobilNav">Pacific 12 Conference</a>
+					<a href="/ncaa-team-apparel-merchandise/penn-quakers/all/" data-app-click="store_cc|dismissMobilNav">Penn Quakers</a>
+					<a href="/ncaa-team-apparel-merchandise/penn-state-nittany-lions/all/" data-app-click="store_cc|dismissMobilNav">Penn State Nittany Lions</a>
+					<a href="/ncaa-team-apparel-merchandise/pepperdine-waves/all/" data-app-click="store_cc|dismissMobilNav">Pepperdine Waves</a>
+					<a href="/ncaa-team-apparel-merchandise/pitt-panthers/all/" data-app-click="store_cc|dismissMobilNav">Pitt Panthers</a>
+					<a href="/ncaa-team-apparel-merchandise/portland-state-vikings/all/" data-app-click="store_cc|dismissMobilNav">Portland State Vikings</a>
+					<a href="/ncaa-team-apparel-merchandise/princeton-tigers/all/" data-app-click="store_cc|dismissMobilNav">Princeton Tigers</a>
+					<a href="/ncaa-team-apparel-merchandise/providence-friars/all/" data-app-click="store_cc|dismissMobilNav">Providence Friars</a>
+					<a href="/ncaa-team-apparel-merchandise/purdue-boilermakers/all/" data-app-click="store_cc|dismissMobilNav">Purdue Boilermakers</a>
+					<a href="/ncaa-team-apparel-merchandise/rice-owls/all/" data-app-click="store_cc|dismissMobilNav">Rice Owls</a>
+					<a href="/ncaa-team-apparel-merchandise/richmond-spiders/all/" data-app-click="store_cc|dismissMobilNav">Richmond Spiders</a>
+					<a href="/ncaa-team-apparel-merchandise/rochester-yellowjackets/all/" data-app-click="store_cc|dismissMobilNav">Rochester Yellowjackets</a>
+					<a href="/ncaa-team-apparel-merchandise/rose-bowl/all/" data-app-click="store_cc|dismissMobilNav">Rose Bowl</a>
+					<a href="/ncaa-team-apparel-merchandise/rutgers-scarlet-knights/all/" data-app-click="store_cc|dismissMobilNav">Rutgers Scarlet Knights</a>
+					<a href="/ncaa-team-apparel-merchandise/saint-louis-bilikens/all/" data-app-click="store_cc|dismissMobilNav">Saint Louis Bilikens</a>
+					<a href="/ncaa-team-apparel-merchandise/san-diego-state-aztecs/all/" data-app-click="store_cc|dismissMobilNav">San Diego State Aztecs</a>
+					<a href="/ncaa-team-apparel-merchandise/san-diego-toreros/all/" data-app-click="store_cc|dismissMobilNav">San Diego Toreros</a>
+					<a href="/ncaa-team-apparel-merchandise/seton-hall-pirates/all/" data-app-click="store_cc|dismissMobilNav">Seton Hall Pirates</a>
+					<a href="/ncaa-team-apparel-merchandise/southeastern-conference/all/" data-app-click="store_cc|dismissMobilNav">Southeastern Conference</a>
+					<a href="/ncaa-team-apparel-merchandise/slippery-rock/all/" data-app-click="store_cc|dismissMobilNav">Slippery Rock</a>
+					<a href="/ncaa-team-apparel-merchandise/smu-mustangs/all/" data-app-click="store_cc|dismissMobilNav">SMU Mustangs</a>
+					<a href="/ncaa-team-apparel-merchandise/south-carolina-gamecocks/all/" data-app-click="store_cc|dismissMobilNav">South Carolina Gamecocks</a>
+					<a href="/ncaa-team-apparel-merchandise/south-dakota-state-jackrabbits/all/" data-app-click="store_cc|dismissMobilNav">South Dakota State Jackrabbits</a>
+					<a href="/ncaa-team-apparel-merchandise/southern-illinois-salukis/all/" data-app-click="store_cc|dismissMobilNav">Southern Illinois Salukis</a>
+					<a href="/ncaa-team-apparel-merchandise/southern-miss-golden-eagles/all/" data-app-click="store_cc|dismissMobilNav">Southern Miss Golden Eagles</a>
+					<a href="/ncaa-team-apparel-merchandise/st.-joseph's-hawks/all/" data-app-click="store_cc|dismissMobilNav">St. Joseph's Hawks</a>
+					<a href="/ncaa-team-apparel-merchandise/st.-john's-red-storm/all/" data-app-click="store_cc|dismissMobilNav">St. John's Red Storm</a>
+					<a href="/ncaa-team-apparel-merchandise/stanford-cardinal/all/" data-app-click="store_cc|dismissMobilNav">Stanford Cardinal</a>
+					<a href="/ncaa-team-apparel-merchandise/sugar-bowl/all/" data-app-click="store_cc|dismissMobilNav">Sugar Bowl</a>
+					<a href="/ncaa-team-apparel-merchandise/syracuse-orange/all/" data-app-click="store_cc|dismissMobilNav">Syracuse Orange</a>
+					<a href="/ncaa-team-apparel-merchandise/tcu-horned-frogs/all/" data-app-click="store_cc|dismissMobilNav">TCU Horned Frogs</a>
+					<a href="/ncaa-team-apparel-merchandise/temple-owls/all/" data-app-click="store_cc|dismissMobilNav">Temple Owls</a>
+					<a href="/ncaa-team-apparel-merchandise/tennessee-volunteers/all/" data-app-click="store_cc|dismissMobilNav">Tennessee Volunteers</a>
+					<a href="/ncaa-team-apparel-merchandise/texas-longhorns/all/" data-app-click="store_cc|dismissMobilNav">Texas Longhorns</a>
+					<a href="/ncaa-team-apparel-merchandise/texas-a&amp;m-aggies/all/" data-app-click="store_cc|dismissMobilNav">Texas A&amp;M Aggies</a>
+					<a href="/ncaa-team-apparel-merchandise/texas-state-bobcats/all/" data-app-click="store_cc|dismissMobilNav">Texas State Bobcats</a>
+					<a href="/ncaa-team-apparel-merchandise/texas-tech-red-raiders/all/" data-app-click="store_cc|dismissMobilNav">Texas Tech Red Raiders</a>
+					<a href="/ncaa-team-apparel-merchandise/the-citadel-bulldogs/all/" data-app-click="store_cc|dismissMobilNav">The Citadel Bulldogs</a>
+					<a href="/ncaa-team-apparel-merchandise/toledo-rockets/all/" data-app-click="store_cc|dismissMobilNav">Toledo Rockets</a>
+					<a href="/ncaa-team-apparel-merchandise/tufts-jumbos/all/" data-app-click="store_cc|dismissMobilNav">Tufts Jumbos</a>
+					<a href="/ncaa-team-apparel-merchandise/tulane-green-wave/all/" data-app-click="store_cc|dismissMobilNav">Tulane Green Wave</a>
+					<a href="/ncaa-team-apparel-merchandise/central-florida-knights/all/" data-app-click="store_cc|dismissMobilNav">Central Florida Knights</a>
+					<a href="/ncaa-team-apparel-merchandise/uc-irvine-anteaters/all/" data-app-click="store_cc|dismissMobilNav">UC-Irvine Anteaters</a>
+					<a href="/ncaa-team-apparel-merchandise/ucla-bruins/all/" data-app-click="store_cc|dismissMobilNav">UCLA Bruins</a>
+					<a href="/ncaa-team-apparel-merchandise/uconn-huskies/all/" data-app-click="store_cc|dismissMobilNav">UCONN Huskies</a>
+					<a href="/ncaa-team-apparel-merchandise/ucsb-banana-slugs/all/" data-app-click="store_cc|dismissMobilNav">UCSB Banana Slugs</a>
+					<a href="/ncaa-team-apparel-merchandise/uic-flames/all/" data-app-click="store_cc|dismissMobilNav">UIC Flames</a>
+					<a href="/ncaa-team-apparel-merchandise/umass-minutemen/all/" data-app-click="store_cc|dismissMobilNav">UMass Minutemen</a>
+					<a href="/ncaa-team-apparel-merchandise/unlv-rebels/all/" data-app-click="store_cc|dismissMobilNav">UNLV Rebels</a>
+					<a href="/ncaa-team-apparel-merchandise/usc-trojans/all/" data-app-click="store_cc|dismissMobilNav">USC Trojans</a>
+					<a href="/ncaa-team-apparel-merchandise/usf-bulls/all/" data-app-click="store_cc|dismissMobilNav">USF Bulls</a>
+					<a href="/ncaa-team-apparel-merchandise/united-states-marine-corps-bulldogs/all/" data-app-click="store_cc|dismissMobilNav">United States Marine Corps Bulldogs</a>
+					<a href="/ncaa-team-apparel-merchandise/utah-utes/all/" data-app-click="store_cc|dismissMobilNav">Utah Utes</a>
+					<a href="/ncaa-team-apparel-merchandise/utep-miners/all/" data-app-click="store_cc|dismissMobilNav">UTEP Miners</a>
+					<a href="/ncaa-team-apparel-merchandise/valparaiso-crusaders/all/" data-app-click="store_cc|dismissMobilNav">Valparaiso Crusaders</a>
+					<a href="/ncaa-team-apparel-merchandise/vanderbilt-commodores/all/" data-app-click="store_cc|dismissMobilNav">Vanderbilt Commodores</a>
+					<a href="/ncaa-team-apparel-merchandise/vcu-rams/all/" data-app-click="store_cc|dismissMobilNav">VCU Rams</a>
+					<a href="/ncaa-team-apparel-merchandise/vermont-catamounts/all/" data-app-click="store_cc|dismissMobilNav">Vermont Catamounts</a>
+					<a href="/ncaa-team-apparel-merchandise/villanova-wildcats/all/" data-app-click="store_cc|dismissMobilNav">Villanova Wildcats</a>
+					<a href="/ncaa-team-apparel-merchandise/virginia-cavaliers/all/" data-app-click="store_cc|dismissMobilNav">Virginia Cavaliers</a>
+					<a href="/ncaa-team-apparel-merchandise/virginia-tech-hokies/all/" data-app-click="store_cc|dismissMobilNav">Virginia Tech Hokies</a>
+					<a href="/ncaa-team-apparel-merchandise/vmi-keydets/all/" data-app-click="store_cc|dismissMobilNav">VMI Keydets</a>
+					<a href="/ncaa-team-apparel-merchandise/wake-forest-demon-deacons/all/" data-app-click="store_cc|dismissMobilNav">Wake Forest Demon Deacons</a>
+					<a href="/ncaa-team-apparel-merchandise/washington-huskies/all/" data-app-click="store_cc|dismissMobilNav">Washington Huskies</a>
+					<a href="/ncaa-team-apparel-merchandise/washington-lee-generals/all/" data-app-click="store_cc|dismissMobilNav">Washington-Lee Generals</a>
+					<a href="/ncaa-team-apparel-merchandise/washington-state-cougars/all/" data-app-click="store_cc|dismissMobilNav">Washington State Cougars</a>
+					<a href="/ncaa-team-apparel-merchandise/washington-st-louis-bears/all/" data-app-click="store_cc|dismissMobilNav">Washington-St Louis Bears</a>
+					<a href="/ncaa-team-apparel-merchandise/wayne-state-warriors/all/" data-app-click="store_cc|dismissMobilNav">Wayne State Warriors</a>
+					<a href="/ncaa-team-apparel-merchandise/weber-state-wildcats/all/" data-app-click="store_cc|dismissMobilNav">Weber State Wildcats</a>
+					<a href="/ncaa-team-apparel-merchandise/west-virginia-mountaineers/all/" data-app-click="store_cc|dismissMobilNav">West Virginia Mountaineers</a>
+					<a href="/ncaa-team-apparel-merchandise/western-illinois-leathernecks/all/" data-app-click="store_cc|dismissMobilNav">Western Illinois Leathernecks</a>
+					<a href="/ncaa-team-apparel-merchandise/western-michigan-broncos/all/" data-app-click="store_cc|dismissMobilNav">Western Michigan Broncos</a>
+					<a href="/ncaa-team-apparel-merchandise/wichita-state-shockers/all/" data-app-click="store_cc|dismissMobilNav">Wichita State Shockers</a>
+					<a href="/ncaa-team-apparel-merchandise/wisconsin-vs-minnesota/all/" data-app-click="store_cc|dismissMobilNav">Wisconsin vs Minnesota</a>
+					<a href="/ncaa-team-apparel-merchandise/wisconsin-badgers/all/" data-app-click="store_cc|dismissMobilNav">Wisconsin Badgers</a>
+					<a href="/ncaa-team-apparel-merchandise/wisconsin-eau-claire-blugold/all/" data-app-click="store_cc|dismissMobilNav">Wisconsin-Eau Claire Blugold</a>
+					<a href="/ncaa-team-apparel-merchandise/wisconsin-green-bay-phoenix-/all/" data-app-click="store_cc|dismissMobilNav">Wisconsin-Green Bay Phoenix </a>
+					<a href="/ncaa-team-apparel-merchandise/wisconsin-la-crosse-eagles/all/" data-app-click="store_cc|dismissMobilNav">Wisconsin-La Crosse Eagles</a>
+					<a href="/ncaa-team-apparel-merchandise/wisconsin-milwaukee-panthers-/all/" data-app-click="store_cc|dismissMobilNav">Wisconsin-Milwaukee Panthers </a>
+					<a href="/ncaa-team-apparel-merchandise/wisconsin-oshkosh-titans-/all/" data-app-click="store_cc|dismissMobilNav">Wisconsin-Oshkosh Titans </a>
+					<a href="/ncaa-team-apparel-merchandise/wisconsin-stevens-point-pointers-/all/" data-app-click="store_cc|dismissMobilNav">Wisconsin-Stevens Point Pointers </a>
+					<a href="/ncaa-team-apparel-merchandise/wisconsin-stout-blue-devils/all/" data-app-click="store_cc|dismissMobilNav">Wisconsin-Stout Blue Devils</a>
+					<a href="/ncaa-team-apparel-merchandise/wisconsin-whitewater-warhawks/all/" data-app-click="store_cc|dismissMobilNav">Wisconsin-Whitewater Warhawks</a>
+					<a href="/ncaa-team-apparel-merchandise/wyoming-cowboys/all/" data-app-click="store_cc|dismissMobilNav">Wyoming Cowboys</a>
+					<a href="/ncaa-team-apparel-merchandise/xavier-musketeers/all/" data-app-click="store_cc|dismissMobilNav">Xavier Musketeers</a>
+					<a href="/ncaa-team-apparel-merchandise/yale-bulldogs/all/" data-app-click="store_cc|dismissMobilNav">Yale Bulldogs</a>
 				</div>
 			</div>
-			<div class="levelOne" onclick="myApp.ext.store_cc.a.showDropDownClick($(this));" data-desk-drop=1>
+			<div class="levelOne" data-app-click="store_cc|expandDrop" data-desk-drop=1>
 				NFL
 				<span class="sprite"></span>
-				<div class="levelTwo teamDrop nflDrop" data-dropdown="1" data-desk-height=180 data-tab-height=200>
-					<a href="/nfl-team-apparel-merchandise/american-football-conference/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">American Football Conference</a>
-					<a href="/nfl-team-apparel-merchandise/arizona-cardinals/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Arizona Cardinals</a>
-					<a href="/nfl-team-apparel-merchandise/atlanta-falcons/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Atlanta Falcons</a>
-					<a href="/nfl-team-apparel-merchandise/baltimore-ravens/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Baltimore Ravens</a>
-					<a href="/nfl-team-apparel-merchandise/buffalo-bills/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Buffalo Bills</a>
-					<a href="/nfl-team-apparel-merchandise/carolina-panthers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Carolina Panthers</a>
-					<a href="/nfl-team-apparel-merchandise/chicago-bears/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Chicago Bears</a>
-					<a href="/nfl-team-apparel-merchandise/cincinnati-bengals/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Cincinnati Bengals</a>
-					<a href="/nfl-team-apparel-merchandise/cleveland-browns/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Cleveland Browns</a>
-					<a href="/nfl-team-apparel-merchandise/dallas-cowboys/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Dallas Cowboys</a>
-					<a href="/nfl-team-apparel-merchandise/denver-broncos/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Denver Broncos</a>
-					<a href="/nfl-team-apparel-merchandise/detroit-lions/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Detroit Lions</a>
-					<a href="/nfl-team-apparel-merchandise/drafted/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Drafted</a>
-					<a href="/nfl-team-apparel-merchandise/green-bay-packers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Green Bay Packers</a>
-					<a href="/nfl-team-apparel-merchandise/houston-oilers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Houston Oilers</a>
-					<a href="/nfl-team-apparel-merchandise/houston-texans/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Houston Texans</a>
-					<a href="/nfl-team-apparel-merchandise/indianapolis-colts/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Indianapolis Colts</a>
-					<a href="/nfl-team-apparel-merchandise/jacksonville-jaguars/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Jacksonville Jaguars</a>
-					<a href="/nfl-team-apparel-merchandise/kansas-city-chiefs/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Kansas City Chiefs</a>
-					<a href="/nfl-team-apparel-merchandise/miami-dolphins/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Miami Dolphins</a>
-					<a href="/nfl-team-apparel-merchandise/minnesota-vikings/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Minnesota Vikings</a>
-					<a href="/nfl-team-apparel-merchandise/new-england-patriots/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">New England Patriots</a>
-					<a href="/nfl-team-apparel-merchandise/new-orleans-saints/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">New Orleans Saints</a>
-					<a href="/nfl-team-apparel-merchandise/new-york-giants/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">New York Giants</a>
-					<a href="/nfl-team-apparel-merchandise/new-york-jets/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">New York Jets</a>
-					<a href="/nfl-team-apparel-merchandise/national-football-conference/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">National Football Conference</a>
-					<a href="/nfl-team-apparel-merchandise/national-football-league/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">National Football League</a>
-					<a href="/nfl-team-apparel-merchandise/oakland-raiders/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Oakland Raiders</a>
-					<a href="/nfl-team-apparel-merchandise/philadelphia-eagles/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Philadelphia Eagles</a>
-					<a href="/nfl-team-apparel-merchandise/pittsburgh-steelers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Pittsburgh Steelers</a>
-					<a href="/nfl-team-apparel-merchandise/san-diego-chargers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">San Diego Chargers</a>
-					<a href="/nfl-team-apparel-merchandise/san-francisco-49ers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">San Francisco 49ers</a>
-					<a href="/nfl-team-apparel-merchandise/seattle-seahawks/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Seattle Seahawks</a>
-					<a href="/nfl-team-apparel-merchandise/st.-louis-rams/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">St. Louis Rams</a>
-					<a href="/nfl-team-apparel-merchandise/tampa-bay-buccaneers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Tampa Bay Buccaneers</a>
-					<a href="/nfl-team-apparel-merchandise/tennessee-titans/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Tennessee Titans</a>
-					<a href="/nfl-team-apparel-merchandise/washington-redskins/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Washington Redskins</a>
-					<a href="/nfl-team-apparel-merchandise/winner/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Winner</a>
+				<div class="levelTwo teamDrop nflDrop" data-dropnav="1" data-desk-height=180 data-tab-height=200>
+					<a href="/nfl-team-apparel-merchandise/american-football-conference/all/" data-app-click="store_cc|dismissMobilNav">American Football Conference</a>
+					<a href="/nfl-team-apparel-merchandise/arizona-cardinals/all/" data-app-click="store_cc|dismissMobilNav">Arizona Cardinals</a>
+					<a href="/nfl-team-apparel-merchandise/atlanta-falcons/all/" data-app-click="store_cc|dismissMobilNav">Atlanta Falcons</a>
+					<a href="/nfl-team-apparel-merchandise/baltimore-ravens/all/" data-app-click="store_cc|dismissMobilNav">Baltimore Ravens</a>
+					<a href="/nfl-team-apparel-merchandise/buffalo-bills/all/" data-app-click="store_cc|dismissMobilNav">Buffalo Bills</a>
+					<a href="/nfl-team-apparel-merchandise/carolina-panthers/all/" data-app-click="store_cc|dismissMobilNav">Carolina Panthers</a>
+					<a href="/nfl-team-apparel-merchandise/chicago-bears/all/" data-app-click="store_cc|dismissMobilNav">Chicago Bears</a>
+					<a href="/nfl-team-apparel-merchandise/cincinnati-bengals/all/" data-app-click="store_cc|dismissMobilNav">Cincinnati Bengals</a>
+					<a href="/nfl-team-apparel-merchandise/cleveland-browns/all/" data-app-click="store_cc|dismissMobilNav">Cleveland Browns</a>
+					<a href="/nfl-team-apparel-merchandise/dallas-cowboys/all/" data-app-click="store_cc|dismissMobilNav">Dallas Cowboys</a>
+					<a href="/nfl-team-apparel-merchandise/denver-broncos/all/" data-app-click="store_cc|dismissMobilNav">Denver Broncos</a>
+					<a href="/nfl-team-apparel-merchandise/detroit-lions/all/" data-app-click="store_cc|dismissMobilNav">Detroit Lions</a>
+					<a href="/nfl-team-apparel-merchandise/drafted/all/" data-app-click="store_cc|dismissMobilNav">Drafted</a>
+					<a href="/nfl-team-apparel-merchandise/green-bay-packers/all/" data-app-click="store_cc|dismissMobilNav">Green Bay Packers</a>
+					<a href="/nfl-team-apparel-merchandise/houston-oilers/all/" data-app-click="store_cc|dismissMobilNav">Houston Oilers</a>
+					<a href="/nfl-team-apparel-merchandise/houston-texans/all/" data-app-click="store_cc|dismissMobilNav">Houston Texans</a>
+					<a href="/nfl-team-apparel-merchandise/indianapolis-colts/all/" data-app-click="store_cc|dismissMobilNav">Indianapolis Colts</a>
+					<a href="/nfl-team-apparel-merchandise/jacksonville-jaguars/all/" data-app-click="store_cc|dismissMobilNav">Jacksonville Jaguars</a>
+					<a href="/nfl-team-apparel-merchandise/kansas-city-chiefs/all/" data-app-click="store_cc|dismissMobilNav">Kansas City Chiefs</a>
+					<a href="/nfl-team-apparel-merchandise/miami-dolphins/all/" data-app-click="store_cc|dismissMobilNav">Miami Dolphins</a>
+					<a href="/nfl-team-apparel-merchandise/minnesota-vikings/all/" data-app-click="store_cc|dismissMobilNav">Minnesota Vikings</a>
+					<a href="/nfl-team-apparel-merchandise/new-england-patriots/all/" data-app-click="store_cc|dismissMobilNav">New England Patriots</a>
+					<a href="/nfl-team-apparel-merchandise/new-orleans-saints/all/" data-app-click="store_cc|dismissMobilNav">New Orleans Saints</a>
+					<a href="/nfl-team-apparel-merchandise/new-york-giants/all/" data-app-click="store_cc|dismissMobilNav">New York Giants</a>
+					<a href="/nfl-team-apparel-merchandise/new-york-jets/all/" data-app-click="store_cc|dismissMobilNav">New York Jets</a>
+					<a href="/nfl-team-apparel-merchandise/national-football-conference/all/" data-app-click="store_cc|dismissMobilNav">National Football Conference</a>
+					<a href="/nfl-team-apparel-merchandise/national-football-league/all/" data-app-click="store_cc|dismissMobilNav">National Football League</a>
+					<a href="/nfl-team-apparel-merchandise/oakland-raiders/all/" data-app-click="store_cc|dismissMobilNav">Oakland Raiders</a>
+					<a href="/nfl-team-apparel-merchandise/philadelphia-eagles/all/" data-app-click="store_cc|dismissMobilNav">Philadelphia Eagles</a>
+					<a href="/nfl-team-apparel-merchandise/pittsburgh-steelers/all/" data-app-click="store_cc|dismissMobilNav">Pittsburgh Steelers</a>
+					<a href="/nfl-team-apparel-merchandise/san-diego-chargers/all/" data-app-click="store_cc|dismissMobilNav">San Diego Chargers</a>
+					<a href="/nfl-team-apparel-merchandise/san-francisco-49ers/all/" data-app-click="store_cc|dismissMobilNav">San Francisco 49ers</a>
+					<a href="/nfl-team-apparel-merchandise/seattle-seahawks/all/" data-app-click="store_cc|dismissMobilNav">Seattle Seahawks</a>
+					<a href="/nfl-team-apparel-merchandise/st.-louis-rams/all/" data-app-click="store_cc|dismissMobilNav">St. Louis Rams</a>
+					<a href="/nfl-team-apparel-merchandise/tampa-bay-buccaneers/all/" data-app-click="store_cc|dismissMobilNav">Tampa Bay Buccaneers</a>
+					<a href="/nfl-team-apparel-merchandise/tennessee-titans/all/" data-app-click="store_cc|dismissMobilNav">Tennessee Titans</a>
+					<a href="/nfl-team-apparel-merchandise/washington-redskins/all/" data-app-click="store_cc|dismissMobilNav">Washington Redskins</a>
+					<a href="/nfl-team-apparel-merchandise/winner/all/" data-app-click="store_cc|dismissMobilNav">Winner</a>
 				</div>
 			</div>
-			<div class="levelOne" onclick="myApp.ext.store_cc.a.showDropDownClick($(this));" data-desk-drop=1>
+			<div class="levelOne" data-app-click="store_cc|expandDrop" data-desk-drop=1>
 				NBA
 				<span class="sprite"></span>
-				<div class="levelTwo teamDrop nbaDrop" data-dropdown="1" data-desk-height=180 data-tab-height=200>
-					<a href="/nba-team-apparel-merchandise/atlanta-hawks/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Atlanta Hawks</a>
-					<a href="/nba-team-apparel-merchandise/boston-celtics/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Boston Celtics</a>
-					<a href="/nba-team-apparel-merchandise/brooklyn-nets/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Brooklyn Nets</a>
-					<a href="/nba-team-apparel-merchandise/charlotte-bobcats/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Charlotte Bobcats</a>
-					<a href="/nba-team-apparel-merchandise/charlotte-hornets/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Charlotte Hornets</a>
-					<a href="/nba-team-apparel-merchandise/chicago-bulls/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Chicago Bulls</a>
-					<a href="/nba-team-apparel-merchandise/cleveland-cavaliers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Cleveland Cavaliers</a>
-					<a href="/nba-team-apparel-merchandise/dallas-mavericks/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Dallas Mavericks</a>
-					<a href="/nba-team-apparel-merchandise/denver-nuggets/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Denver Nuggets</a>
-					<a href="/nba-team-apparel-merchandise/detroit-pistons/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Detroit Pistons</a>
-					<a href="/nba-team-apparel-merchandise/golden-state-warriors/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Golden State Warriors</a>
-					<a href="/nba-team-apparel-merchandise/houston-rockets/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Houston Rockets</a>
-					<a href="/nba-team-apparel-merchandise/indiana-pacers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Indiana Pacers</a>
-					<a href="/nba-team-apparel-merchandise/jeremy-lin/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Jeremy Lin</a>
-					<a href="/nba-team-apparel-merchandise/los-angeles-clippers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Los Angeles Clippers</a>
-					<a href="/nba-team-apparel-merchandise/los-angeles-lakers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Los Angeles Lakers</a>
-					<a href="/nba-team-apparel-merchandise/memphis-grizzlies/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Memphis Grizzlies</a>
-					<a href="/nba-team-apparel-merchandise/miami-heat/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Miami Heat</a>
-					<a href="/nba-team-apparel-merchandise/milwaukee-bucks/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Milwaukee Bucks</a>
-					<a href="/nba-team-apparel-merchandise/minneapolis-lakers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Minneapolis Lakers</a>
-					<a href="/nba-team-apparel-merchandise/minnesota-timberwolves/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Minnesota Timberwolves</a>
-					<a href="/nba-team-apparel-merchandise/national-basketball-association/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">National Basketball Association</a>
-					<a href="/nba-team-apparel-merchandise/new-jersey-nets/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">New Jersey Nets</a>
-					<a href="/nba-team-apparel-merchandise/new-orleans-hornets/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">New Orleans Hornets</a>
-					<a href="/nba-team-apparel-merchandise/new-orleans-pelicans/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">New Orleans Pelicans</a>
-					<a href="/nba-team-apparel-merchandise/new-york-knicks/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">New York Knicks</a>
-					<a href="/nba-team-apparel-merchandise/oklahoma-city-thunder/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Oklahoma City Thunder</a>
-					<a href="/nba-team-apparel-merchandise/orlando-magic/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Orlando Magic</a>
-					<a href="/nba-team-apparel-merchandise/philadelphia-76ers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Philadelphia 76ers</a>
-					<a href="/nba-team-apparel-merchandise/phoenix-suns/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Phoenix Suns</a>
-					<a href="/nba-team-apparel-merchandise/portland-trail-blazers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Portland Trail Blazers</a>
-					<a href="/nba-team-apparel-merchandise/sacramento-kings/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Sacramento Kings</a>
-					<a href="/nba-team-apparel-merchandise/san-antonio-spurs/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">San Antonio Spurs</a>
-					<a href="/nba-team-apparel-merchandise/seattle-supersonics/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Seattle Supersonics</a>
-					<a href="/nba-team-apparel-merchandise/team-usa-basketball/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Team USA Basketball</a>
-					<a href="/nba-team-apparel-merchandise/toronto-raptors/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Toronto Raptors</a>
-					<a href="/nba-team-apparel-merchandise/utah-jazz/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Utah Jazz</a>
-					<a href="/nba-team-apparel-merchandise/washington-wizards/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Washington Wizards</a>
+				<div class="levelTwo teamDrop nbaDrop" data-dropnav="1" data-desk-height=180 data-tab-height=200>
+					<a href="/nba-team-apparel-merchandise/atlanta-hawks/all/" data-app-click="store_cc|dismissMobilNav">Atlanta Hawks</a>
+					<a href="/nba-team-apparel-merchandise/boston-celtics/all/" data-app-click="store_cc|dismissMobilNav">Boston Celtics</a>
+					<a href="/nba-team-apparel-merchandise/brooklyn-nets/all/" data-app-click="store_cc|dismissMobilNav">Brooklyn Nets</a>
+					<a href="/nba-team-apparel-merchandise/charlotte-bobcats/all/" data-app-click="store_cc|dismissMobilNav">Charlotte Bobcats</a>
+					<a href="/nba-team-apparel-merchandise/charlotte-hornets/all/" data-app-click="store_cc|dismissMobilNav">Charlotte Hornets</a>
+					<a href="/nba-team-apparel-merchandise/chicago-bulls/all/" data-app-click="store_cc|dismissMobilNav">Chicago Bulls</a>
+					<a href="/nba-team-apparel-merchandise/cleveland-cavaliers/all/" data-app-click="store_cc|dismissMobilNav">Cleveland Cavaliers</a>
+					<a href="/nba-team-apparel-merchandise/dallas-mavericks/all/" data-app-click="store_cc|dismissMobilNav">Dallas Mavericks</a>
+					<a href="/nba-team-apparel-merchandise/denver-nuggets/all/" data-app-click="store_cc|dismissMobilNav">Denver Nuggets</a>
+					<a href="/nba-team-apparel-merchandise/detroit-pistons/all/" data-app-click="store_cc|dismissMobilNav">Detroit Pistons</a>
+					<a href="/nba-team-apparel-merchandise/golden-state-warriors/all/" data-app-click="store_cc|dismissMobilNav">Golden State Warriors</a>
+					<a href="/nba-team-apparel-merchandise/houston-rockets/all/" data-app-click="store_cc|dismissMobilNav">Houston Rockets</a>
+					<a href="/nba-team-apparel-merchandise/indiana-pacers/all/" data-app-click="store_cc|dismissMobilNav">Indiana Pacers</a>
+					<a href="/nba-team-apparel-merchandise/jeremy-lin/all/" data-app-click="store_cc|dismissMobilNav">Jeremy Lin</a>
+					<a href="/nba-team-apparel-merchandise/los-angeles-clippers/all/" data-app-click="store_cc|dismissMobilNav">Los Angeles Clippers</a>
+					<a href="/nba-team-apparel-merchandise/los-angeles-lakers/all/" data-app-click="store_cc|dismissMobilNav">Los Angeles Lakers</a>
+					<a href="/nba-team-apparel-merchandise/memphis-grizzlies/all/" data-app-click="store_cc|dismissMobilNav">Memphis Grizzlies</a>
+					<a href="/nba-team-apparel-merchandise/miami-heat/all/" data-app-click="store_cc|dismissMobilNav">Miami Heat</a>
+					<a href="/nba-team-apparel-merchandise/milwaukee-bucks/all/" data-app-click="store_cc|dismissMobilNav">Milwaukee Bucks</a>
+					<a href="/nba-team-apparel-merchandise/minneapolis-lakers/all/" data-app-click="store_cc|dismissMobilNav">Minneapolis Lakers</a>
+					<a href="/nba-team-apparel-merchandise/minnesota-timberwolves/all/" data-app-click="store_cc|dismissMobilNav">Minnesota Timberwolves</a>
+					<a href="/nba-team-apparel-merchandise/national-basketball-association/all/" data-app-click="store_cc|dismissMobilNav">National Basketball Association</a>
+					<a href="/nba-team-apparel-merchandise/new-jersey-nets/all/" data-app-click="store_cc|dismissMobilNav">New Jersey Nets</a>
+					<a href="/nba-team-apparel-merchandise/new-orleans-hornets/all/" data-app-click="store_cc|dismissMobilNav">New Orleans Hornets</a>
+					<a href="/nba-team-apparel-merchandise/new-orleans-pelicans/all/" data-app-click="store_cc|dismissMobilNav">New Orleans Pelicans</a>
+					<a href="/nba-team-apparel-merchandise/new-york-knicks/all/" data-app-click="store_cc|dismissMobilNav">New York Knicks</a>
+					<a href="/nba-team-apparel-merchandise/oklahoma-city-thunder/all/" data-app-click="store_cc|dismissMobilNav">Oklahoma City Thunder</a>
+					<a href="/nba-team-apparel-merchandise/orlando-magic/all/" data-app-click="store_cc|dismissMobilNav">Orlando Magic</a>
+					<a href="/nba-team-apparel-merchandise/philadelphia-76ers/all/" data-app-click="store_cc|dismissMobilNav">Philadelphia 76ers</a>
+					<a href="/nba-team-apparel-merchandise/phoenix-suns/all/" data-app-click="store_cc|dismissMobilNav">Phoenix Suns</a>
+					<a href="/nba-team-apparel-merchandise/portland-trail-blazers/all/" data-app-click="store_cc|dismissMobilNav">Portland Trail Blazers</a>
+					<a href="/nba-team-apparel-merchandise/sacramento-kings/all/" data-app-click="store_cc|dismissMobilNav">Sacramento Kings</a>
+					<a href="/nba-team-apparel-merchandise/san-antonio-spurs/all/" data-app-click="store_cc|dismissMobilNav">San Antonio Spurs</a>
+					<a href="/nba-team-apparel-merchandise/seattle-supersonics/all/" data-app-click="store_cc|dismissMobilNav">Seattle Supersonics</a>
+					<a href="/nba-team-apparel-merchandise/team-usa-basketball/all/" data-app-click="store_cc|dismissMobilNav">Team USA Basketball</a>
+					<a href="/nba-team-apparel-merchandise/toronto-raptors/all/" data-app-click="store_cc|dismissMobilNav">Toronto Raptors</a>
+					<a href="/nba-team-apparel-merchandise/utah-jazz/all/" data-app-click="store_cc|dismissMobilNav">Utah Jazz</a>
+					<a href="/nba-team-apparel-merchandise/washington-wizards/all/" data-app-click="store_cc|dismissMobilNav">Washington Wizards</a>
 				</div>
 			</div>
-			<div class="levelOne" onclick="myApp.ext.store_cc.a.showDropDownClick($(this));" data-desk-drop=1>
+			<div class="levelOne" data-app-click="store_cc|expandDrop" data-desk-drop=1>
 				MLB
 				<span class="sprite"></span>
-				<div class="levelTwo teamDrop mlbDrop" data-dropdown="1" data-desk-height=180 data-tab-height=200>
-					<a href="/mlb-team-apparel-merchandise/american-league/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">American League</a>
-					<a href="/mlb-team-apparel-merchandise/arizona-diamondbacks/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Arizona Diamondbacks</a>
-					<a href="/mlb-team-apparel-merchandise/atlanta-braves/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Atlanta Braves</a>
-					<a href="/mlb-team-apparel-merchandise/baltimore-orioles/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Baltimore Orioles</a>
-					<a href="/mlb-team-apparel-merchandise/baseball-guys/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Baseball Guys</a>
-					<a href="/mlb-team-apparel-merchandise/boston-red-sox/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Boston Red Sox</a>
-					<a href="/mlb-team-apparel-merchandise/brooklyn-dodgers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Brooklyn Dodgers</a>
-					<a href="/mlb-team-apparel-merchandise/chicago-cubs/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Chicago Cubs</a>
-					<a href="/mlb-team-apparel-merchandise/chicago-white-sox/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Chicago White Sox</a>
-					<a href="/mlb-team-apparel-merchandise/cincinnati-reds/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Cincinnati Reds</a>
-					<a href="/mlb-team-apparel-merchandise/cleveland-indians/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Cleveland Indians</a>
-					<a href="/mlb-team-apparel-merchandise/colorado-rockies/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Colorado Rockies</a>
-					<a href="/mlb-team-apparel-merchandise/detroit-tigers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Detroit Tigers</a>
-					<a href="/mlb-team-apparel-merchandise/florida-marlins/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Florida Marlins</a>
-					<a href="/mlb-team-apparel-merchandise/houston-astros/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Houston Astros</a>
-					<a href="/mlb-team-apparel-merchandise/kansas-city-royals/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Kansas City Royals</a>
-					<a href="/mlb-team-apparel-merchandise/los-angeles-dodgers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Los Angeles Dodgers</a>
-					<a href="/mlb-team-apparel-merchandise/los-angeles-anaheim-angels/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Los Angeles-Anaheim Angels</a>
-					<a href="/mlb-team-apparel-merchandise/miami-marlins/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Miami Marlins</a>
-					<a href="/mlb-team-apparel-merchandise/milwaukee-brewers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Milwaukee Brewers</a>
-					<a href="/mlb-team-apparel-merchandise/minnesota-twins/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Minnesota Twins</a>
-					<a href="/mlb-team-apparel-merchandise/major-league-baseball/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Major League Baseball</a>
-					<a href="/mlb-team-apparel-merchandise/montreal-expos/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Montreal Expos</a>
-					<a href="/mlb-team-apparel-merchandise/new-york-mets/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">New York Mets</a>
-					<a href="/mlb-team-apparel-merchandise/new-york-yankees/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">New York Yankees</a>
-					<a href="/mlb-team-apparel-merchandise/national-league/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">National League</a>
-					<a href="/mlb-team-apparel-merchandise/oakland-athletics/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Oakland Athletics</a>
-					<a href="/mlb-team-apparel-merchandise/philadelphia-phillies/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Philadelphia Phillies</a>
-					<a href="/mlb-team-apparel-merchandise/pittsburgh-pirates/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Pittsburgh Pirates</a>
-					<a href="/mlb-team-apparel-merchandise/san-diego-padres/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">San Diego Padres</a>
-					<a href="/mlb-team-apparel-merchandise/san-francisco-giants/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">San Francisco Giants</a>
-					<a href="/mlb-team-apparel-merchandise/seattle-mariners/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Seattle Mariners</a>
-					<a href="/mlb-team-apparel-merchandise/st.-louis-cardinals/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">St. Louis Cardinals</a>
-					<a href="/mlb-team-apparel-merchandise/tampa-bay-rays/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Tampa Bay Rays</a>
-					<a href="/mlb-team-apparel-merchandise/texas-rangers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Texas Rangers</a>
-					<a href="/mlb-team-apparel-merchandise/toronto-blue-jays/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Toronto Blue Jays</a>
-					<a href="/mlb-team-apparel-merchandise/washington-nationals/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Washington Nationals</a>
+				<div class="levelTwo teamDrop mlbDrop" data-dropnav="1" data-desk-height=180 data-tab-height=200>
+					<a href="/mlb-team-apparel-merchandise/american-league/all/" data-app-click="store_cc|dismissMobilNav">American League</a>
+					<a href="/mlb-team-apparel-merchandise/arizona-diamondbacks/all/" data-app-click="store_cc|dismissMobilNav">Arizona Diamondbacks</a>
+					<a href="/mlb-team-apparel-merchandise/atlanta-braves/all/" data-app-click="store_cc|dismissMobilNav">Atlanta Braves</a>
+					<a href="/mlb-team-apparel-merchandise/baltimore-orioles/all/" data-app-click="store_cc|dismissMobilNav">Baltimore Orioles</a>
+					<a href="/mlb-team-apparel-merchandise/baseball-guys/all/" data-app-click="store_cc|dismissMobilNav">Baseball Guys</a>
+					<a href="/mlb-team-apparel-merchandise/boston-red-sox/all/" data-app-click="store_cc|dismissMobilNav">Boston Red Sox</a>
+					<a href="/mlb-team-apparel-merchandise/brooklyn-dodgers/all/" data-app-click="store_cc|dismissMobilNav">Brooklyn Dodgers</a>
+					<a href="/mlb-team-apparel-merchandise/chicago-cubs/all/" data-app-click="store_cc|dismissMobilNav">Chicago Cubs</a>
+					<a href="/mlb-team-apparel-merchandise/chicago-white-sox/all/" data-app-click="store_cc|dismissMobilNav">Chicago White Sox</a>
+					<a href="/mlb-team-apparel-merchandise/cincinnati-reds/all/" data-app-click="store_cc|dismissMobilNav">Cincinnati Reds</a>
+					<a href="/mlb-team-apparel-merchandise/cleveland-indians/all/" data-app-click="store_cc|dismissMobilNav">Cleveland Indians</a>
+					<a href="/mlb-team-apparel-merchandise/colorado-rockies/all/" data-app-click="store_cc|dismissMobilNav">Colorado Rockies</a>
+					<a href="/mlb-team-apparel-merchandise/detroit-tigers/all/" data-app-click="store_cc|dismissMobilNav">Detroit Tigers</a>
+					<a href="/mlb-team-apparel-merchandise/florida-marlins/all/" data-app-click="store_cc|dismissMobilNav">Florida Marlins</a>
+					<a href="/mlb-team-apparel-merchandise/houston-astros/all/" data-app-click="store_cc|dismissMobilNav">Houston Astros</a>
+					<a href="/mlb-team-apparel-merchandise/kansas-city-royals/all/" data-app-click="store_cc|dismissMobilNav">Kansas City Royals</a>
+					<a href="/mlb-team-apparel-merchandise/los-angeles-dodgers/all/" data-app-click="store_cc|dismissMobilNav">Los Angeles Dodgers</a>
+					<a href="/mlb-team-apparel-merchandise/los-angeles-anaheim-angels/all/" data-app-click="store_cc|dismissMobilNav">Los Angeles-Anaheim Angels</a>
+					<a href="/mlb-team-apparel-merchandise/miami-marlins/all/" data-app-click="store_cc|dismissMobilNav">Miami Marlins</a>
+					<a href="/mlb-team-apparel-merchandise/milwaukee-brewers/all/" data-app-click="store_cc|dismissMobilNav">Milwaukee Brewers</a>
+					<a href="/mlb-team-apparel-merchandise/minnesota-twins/all/" data-app-click="store_cc|dismissMobilNav">Minnesota Twins</a>
+					<a href="/mlb-team-apparel-merchandise/major-league-baseball/all/" data-app-click="store_cc|dismissMobilNav">Major League Baseball</a>
+					<a href="/mlb-team-apparel-merchandise/montreal-expos/all/" data-app-click="store_cc|dismissMobilNav">Montreal Expos</a>
+					<a href="/mlb-team-apparel-merchandise/new-york-mets/all/" data-app-click="store_cc|dismissMobilNav">New York Mets</a>
+					<a href="/mlb-team-apparel-merchandise/new-york-yankees/all/" data-app-click="store_cc|dismissMobilNav">New York Yankees</a>
+					<a href="/mlb-team-apparel-merchandise/national-league/all/" data-app-click="store_cc|dismissMobilNav">National League</a>
+					<a href="/mlb-team-apparel-merchandise/oakland-athletics/all/" data-app-click="store_cc|dismissMobilNav">Oakland Athletics</a>
+					<a href="/mlb-team-apparel-merchandise/philadelphia-phillies/all/" data-app-click="store_cc|dismissMobilNav">Philadelphia Phillies</a>
+					<a href="/mlb-team-apparel-merchandise/pittsburgh-pirates/all/" data-app-click="store_cc|dismissMobilNav">Pittsburgh Pirates</a>
+					<a href="/mlb-team-apparel-merchandise/san-diego-padres/all/" data-app-click="store_cc|dismissMobilNav">San Diego Padres</a>
+					<a href="/mlb-team-apparel-merchandise/san-francisco-giants/all/" data-app-click="store_cc|dismissMobilNav">San Francisco Giants</a>
+					<a href="/mlb-team-apparel-merchandise/seattle-mariners/all/" data-app-click="store_cc|dismissMobilNav">Seattle Mariners</a>
+					<a href="/mlb-team-apparel-merchandise/st.-louis-cardinals/all/" data-app-click="store_cc|dismissMobilNav">St. Louis Cardinals</a>
+					<a href="/mlb-team-apparel-merchandise/tampa-bay-rays/all/" data-app-click="store_cc|dismissMobilNav">Tampa Bay Rays</a>
+					<a href="/mlb-team-apparel-merchandise/texas-rangers/all/" data-app-click="store_cc|dismissMobilNav">Texas Rangers</a>
+					<a href="/mlb-team-apparel-merchandise/toronto-blue-jays/all/" data-app-click="store_cc|dismissMobilNav">Toronto Blue Jays</a>
+					<a href="/mlb-team-apparel-merchandise/washington-nationals/all/" data-app-click="store_cc|dismissMobilNav">Washington Nationals</a>
 				</div>
 			</div>
-			<div class="levelOne" onclick="myApp.ext.store_cc.a.showDropDownClick($(this));" data-desk-drop=1>
+			<div class="levelOne" data-app-click="store_cc|expandDrop" data-desk-drop=1>
 				NHL
 				<span class="sprite"></span>
-				<div class="levelTwo teamDrop nhlDrop" data-dropdown="1" data-desk-height=180 data-tab-height=230>
-					<a href="/nhl-team-apparel-merchandise/nhl-2nd-six-expansion-class/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">NHL 2nd Six Expansion Class</a>
-					<a href="/nhl-team-apparel-merchandise/anaheim-ducks/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Anaheim Ducks</a>
-					<a href="/nhl-team-apparel-merchandise/atlanta-thrashers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Atlanta Thrashers</a>
-					<a href="/nhl-team-apparel-merchandise/boston--bruins/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Boston  Bruins</a>
-					<a href="/nhl-team-apparel-merchandise/buffalo-sabres/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Buffalo Sabres</a>
-					<a href="/nhl-team-apparel-merchandise/calgary-flames/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Calgary Flames</a>
-					<a href="/nhl-team-apparel-merchandise/carolina-hurricanes/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Carolina Hurricanes</a>
-					<a href="/nhl-team-apparel-merchandise/chicago-blackhawks/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Chicago Blackhawks</a>
-					<a href="/nhl-team-apparel-merchandise/colorado-avalanche/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Colorado Avalanche</a>
-					<a href="/nhl-team-apparel-merchandise/columbus-blue-jackets/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Columbus Blue Jackets</a>
-					<a href="/nhl-team-apparel-merchandise/dallas-stars/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Dallas Stars</a>
-					<a href="/nhl-team-apparel-merchandise/detroit-red-wings/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Detroit Red Wings</a>
-					<a href="/nhl-team-apparel-merchandise/edmonton-oilers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Edmonton Oilers</a>
-					<a href="/nhl-team-apparel-merchandise/finland-leijonat/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Finland Leijonat</a>
-					<a href="/nhl-team-apparel-merchandise/florida-panthers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Florida Panthers</a>
-					<a href="/nhl-team-apparel-merchandise/hartford-whalers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Hartford Whalers</a>
-					<a href="/nhl-team-apparel-merchandise/hockey-guys/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Hockey Guys</a>
-					<a href="/nhl-team-apparel-merchandise/los-angeles-kings/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Los Angeles Kings</a>
-					<a href="/nhl-team-apparel-merchandise/minnesota-wild/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Minnesota Wild</a>
-					<a href="/nhl-team-apparel-merchandise/minnesota-north-stars/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Minnesota North Stars</a>
-					<a href="/nhl-team-apparel-merchandise/montreal-canadiens/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Montreal Canadiens</a>
-					<a href="/nhl-team-apparel-merchandise/nashville-predators/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Nashville Predators</a>
-					<a href="/nhl-team-apparel-merchandise/new-jersey-devils/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">New Jersey Devils</a>
-					<a href="/nhl-team-apparel-merchandise/new-york-islanders/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">New York Islanders</a>
-					<a href="/nhl-team-apparel-merchandise/new-york-rangers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">New York Rangers</a>
-					<a href="/nhl-team-apparel-merchandise/national-hockey-league/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">National Hockey League</a>
-					<a href="/nhl-team-apparel-merchandise/original-six/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Original Six</a>
-					<a href="/nhl-team-apparel-merchandise/ottawa-senators/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Ottawa Senators</a>
-					<a href="/nhl-team-apparel-merchandise/philadelphia-flyers/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Philadelphia Flyers</a>
-					<a href="/nhl-team-apparel-merchandise/phoenix-coyotes/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Phoenix Coyotes</a>
-					<a href="/nhl-team-apparel-merchandise/penguins/capitals/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Penguins/Capitals</a>
-					<a href="/nhl-team-apparel-merchandise/pittsburgh-penguins/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Pittsburgh Penguins</a>
-					<a href="/nhl-team-apparel-merchandise/quebec-nordiques/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Quebec Nordiques</a>
-					<a href="/nhl-team-apparel-merchandise/russia-big-red-machine/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Russia Big Red Machine</a>
-					<a href="/nhl-team-apparel-merchandise/san-jose-sharks/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">San Jose Sharks</a>
-					<a href="/nhl-team-apparel-merchandise/st.-louis-blues/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">St. Louis Blues</a>
-					<a href="/nhl-team-apparel-merchandise/tampa-bay-lightning/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Tampa Bay Lightning</a>
-					<a href="/nhl-team-apparel-merchandise/toronto-maple-leafs/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Toronto Maple Leafs</a>
-					<a href="/nhl-team-apparel-merchandise/sweden-tre-kronor/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Sweden Tre Kronor</a>
-					<a href="/nhl-team-apparel-merchandise/vancouver-canucks/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Vancouver Canucks</a>
-					<a href="/nhl-team-apparel-merchandise/washington-capitals/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Washington Capitals</a>
-					<a href="/nhl-team-apparel-merchandise/winnipeg-jets/all/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Winnipeg Jets</a>
+				<div class="levelTwo teamDrop nhlDrop" data-dropnav="1" data-desk-height=180 data-tab-height=230>
+					<a href="/nhl-team-apparel-merchandise/nhl-2nd-six-expansion-class/all/" data-app-click="store_cc|dismissMobilNav">NHL 2nd Six Expansion Class</a>
+					<a href="/nhl-team-apparel-merchandise/anaheim-ducks/all/" data-app-click="store_cc|dismissMobilNav">Anaheim Ducks</a>
+					<a href="/nhl-team-apparel-merchandise/atlanta-thrashers/all/" data-app-click="store_cc|dismissMobilNav">Atlanta Thrashers</a>
+					<a href="/nhl-team-apparel-merchandise/boston--bruins/all/" data-app-click="store_cc|dismissMobilNav">Boston  Bruins</a>
+					<a href="/nhl-team-apparel-merchandise/buffalo-sabres/all/" data-app-click="store_cc|dismissMobilNav">Buffalo Sabres</a>
+					<a href="/nhl-team-apparel-merchandise/calgary-flames/all/" data-app-click="store_cc|dismissMobilNav">Calgary Flames</a>
+					<a href="/nhl-team-apparel-merchandise/carolina-hurricanes/all/" data-app-click="store_cc|dismissMobilNav">Carolina Hurricanes</a>
+					<a href="/nhl-team-apparel-merchandise/chicago-blackhawks/all/" data-app-click="store_cc|dismissMobilNav">Chicago Blackhawks</a>
+					<a href="/nhl-team-apparel-merchandise/colorado-avalanche/all/" data-app-click="store_cc|dismissMobilNav">Colorado Avalanche</a>
+					<a href="/nhl-team-apparel-merchandise/columbus-blue-jackets/all/" data-app-click="store_cc|dismissMobilNav">Columbus Blue Jackets</a>
+					<a href="/nhl-team-apparel-merchandise/dallas-stars/all/" data-app-click="store_cc|dismissMobilNav">Dallas Stars</a>
+					<a href="/nhl-team-apparel-merchandise/detroit-red-wings/all/" data-app-click="store_cc|dismissMobilNav">Detroit Red Wings</a>
+					<a href="/nhl-team-apparel-merchandise/edmonton-oilers/all/" data-app-click="store_cc|dismissMobilNav">Edmonton Oilers</a>
+					<a href="/nhl-team-apparel-merchandise/finland-leijonat/all/" data-app-click="store_cc|dismissMobilNav">Finland Leijonat</a>
+					<a href="/nhl-team-apparel-merchandise/florida-panthers/all/" data-app-click="store_cc|dismissMobilNav">Florida Panthers</a>
+					<a href="/nhl-team-apparel-merchandise/hartford-whalers/all/" data-app-click="store_cc|dismissMobilNav">Hartford Whalers</a>
+					<a href="/nhl-team-apparel-merchandise/hockey-guys/all/" data-app-click="store_cc|dismissMobilNav">Hockey Guys</a>
+					<a href="/nhl-team-apparel-merchandise/los-angeles-kings/all/" data-app-click="store_cc|dismissMobilNav">Los Angeles Kings</a>
+					<a href="/nhl-team-apparel-merchandise/minnesota-wild/all/" data-app-click="store_cc|dismissMobilNav">Minnesota Wild</a>
+					<a href="/nhl-team-apparel-merchandise/minnesota-north-stars/all/" data-app-click="store_cc|dismissMobilNav">Minnesota North Stars</a>
+					<a href="/nhl-team-apparel-merchandise/montreal-canadiens/all/" data-app-click="store_cc|dismissMobilNav">Montreal Canadiens</a>
+					<a href="/nhl-team-apparel-merchandise/nashville-predators/all/" data-app-click="store_cc|dismissMobilNav">Nashville Predators</a>
+					<a href="/nhl-team-apparel-merchandise/new-jersey-devils/all/" data-app-click="store_cc|dismissMobilNav">New Jersey Devils</a>
+					<a href="/nhl-team-apparel-merchandise/new-york-islanders/all/" data-app-click="store_cc|dismissMobilNav">New York Islanders</a>
+					<a href="/nhl-team-apparel-merchandise/new-york-rangers/all/" data-app-click="store_cc|dismissMobilNav">New York Rangers</a>
+					<a href="/nhl-team-apparel-merchandise/national-hockey-league/all/" data-app-click="store_cc|dismissMobilNav">National Hockey League</a>
+					<a href="/nhl-team-apparel-merchandise/original-six/all/" data-app-click="store_cc|dismissMobilNav">Original Six</a>
+					<a href="/nhl-team-apparel-merchandise/ottawa-senators/all/" data-app-click="store_cc|dismissMobilNav">Ottawa Senators</a>
+					<a href="/nhl-team-apparel-merchandise/philadelphia-flyers/all/" data-app-click="store_cc|dismissMobilNav">Philadelphia Flyers</a>
+					<a href="/nhl-team-apparel-merchandise/phoenix-coyotes/all/" data-app-click="store_cc|dismissMobilNav">Phoenix Coyotes</a>
+					<a href="/nhl-team-apparel-merchandise/penguins/capitals/all/" data-app-click="store_cc|dismissMobilNav">Penguins/Capitals</a>
+					<a href="/nhl-team-apparel-merchandise/pittsburgh-penguins/all/" data-app-click="store_cc|dismissMobilNav">Pittsburgh Penguins</a>
+					<a href="/nhl-team-apparel-merchandise/quebec-nordiques/all/" data-app-click="store_cc|dismissMobilNav">Quebec Nordiques</a>
+					<a href="/nhl-team-apparel-merchandise/russia-big-red-machine/all/" data-app-click="store_cc|dismissMobilNav">Russia Big Red Machine</a>
+					<a href="/nhl-team-apparel-merchandise/san-jose-sharks/all/" data-app-click="store_cc|dismissMobilNav">San Jose Sharks</a>
+					<a href="/nhl-team-apparel-merchandise/st.-louis-blues/all/" data-app-click="store_cc|dismissMobilNav">St. Louis Blues</a>
+					<a href="/nhl-team-apparel-merchandise/tampa-bay-lightning/all/" data-app-click="store_cc|dismissMobilNav">Tampa Bay Lightning</a>
+					<a href="/nhl-team-apparel-merchandise/toronto-maple-leafs/all/" data-app-click="store_cc|dismissMobilNav">Toronto Maple Leafs</a>
+					<a href="/nhl-team-apparel-merchandise/sweden-tre-kronor/all/" data-app-click="store_cc|dismissMobilNav">Sweden Tre Kronor</a>
+					<a href="/nhl-team-apparel-merchandise/vancouver-canucks/all/" data-app-click="store_cc|dismissMobilNav">Vancouver Canucks</a>
+					<a href="/nhl-team-apparel-merchandise/washington-capitals/all/" data-app-click="store_cc|dismissMobilNav">Washington Capitals</a>
+					<a href="/nhl-team-apparel-merchandise/winnipeg-jets/all/" data-app-click="store_cc|dismissMobilNav">Winnipeg Jets</a>
 				</div>
 			</div>
 			<div class="levelOne oneLevel">
-				<a href="/brands-apparel-merchandise/nike-gear/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent()); myApp.ext.store_cc.a.hideOnLink($(this).parent().parent())">NIKE</a>
+				<a href="/brands-apparel-merchandise/nike-gear/" data-app-click="store_cc|dismissMobilNav">NIKE</a>
 			</div> 
 	<!--	ENTIRELY POSSIBLE THAT THE SUBCATEGORIES MAY ONE DAY BE ADDED BACK IN HERE...
 			<div class="levelOne" onclick="myApp.ext.store_cc.a.showDropDownClick($(this));">
 				NIKE
 				<span class="sprite"></span>
 				<div class="levelTwo" data-dropdown="1">
-					<a href="/nike-gear/nike-shorts/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Shorts</a>
-					<a href="/nike-gear/nike-t-shirts/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">T-Shirts</a>
-					<a href="/nike-gear/nike-sweatshirts/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Sweatshirts</a>
-					<a href="/nike-gear/nike-jerseys/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Jerseys</a>
-					<a href="/nike-gear/nike-pants/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Pants</a>
-					<a href="/nike-gear/nike-hats/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Hats</a>
-					<a href="/nike-gear/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">All Nike</a>
+					<a href="/nike-gear/nike-shorts/" data-app-click="store_cc|dismissMobilNav">Shorts</a>
+					<a href="/nike-gear/nike-t-shirts/" data-app-click="store_cc|dismissMobilNav">T-Shirts</a>
+					<a href="/nike-gear/nike-sweatshirts/" data-app-click="store_cc|dismissMobilNav">Sweatshirts</a>
+					<a href="/nike-gear/nike-jerseys/" data-app-click="store_cc|dismissMobilNav">Jerseys</a>
+					<a href="/nike-gear/nike-pants/" data-app-click="store_cc|dismissMobilNav">Pants</a>
+					<a href="/nike-gear/nike-hats/" data-app-click="store_cc|dismissMobilNav">Hats</a>
+					<a href="/nike-gear/" data-app-click="store_cc|dismissMobilNav">All Nike</a>
 				</div>
 			</div>
 	-->
 			<div class="levelOne oneLevel">
-				<a href="/brands-apparel-merchandise/adidas-gear/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent()); myApp.ext.store_cc.a.hideOnLink($(this).parent().parent());">ADIDAS</a>
+				<a href="/brands-apparel-merchandise/adidas-gear/" data-app-click="store_cc|dismissMobilNav">ADIDAS</a>
 			</div>
 	<!--		
 			<div class="levelOne" onclick="myApp.ext.store_cc.a.showDropDownClick($(this));">
 				<span class="sprite"></span>
 				ADIDAS
 				<div class="levelTwo" data-dropdown="1">
-					<a href="/adidas-gear/adidas-shorts/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Shorts</a>
-					<a href="/adidas-gear/adidas-t-shirts/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">T-Shirts</a>
-					<a href="/adidas-gear/adidas-sweatshirts/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Sweatshirts</a>
-					<a href="/adidas-gear/adidas-jerseys/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Jerseys</a>
-					<a href="/adidas-gear/adidas-jackets/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Jackets</a>
-					<a href="/adidas-gear/adidas-pants/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Pants</a>
-					<a href="/adidas-gear/adidas-hats/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">Hats</a>
-					<a href="/adidas-gear/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent().parent());">All Adidas</a>
+					<a href="/adidas-gear/adidas-shorts/" data-app-click="store_cc|dismissMobilNav">Shorts</a>
+					<a href="/adidas-gear/adidas-t-shirts/" data-app-click="store_cc|dismissMobilNav">T-Shirts</a>
+					<a href="/adidas-gear/adidas-sweatshirts/" data-app-click="store_cc|dismissMobilNav">Sweatshirts</a>
+					<a href="/adidas-gear/adidas-jerseys/" data-app-click="store_cc|dismissMobilNav">Jerseys</a>
+					<a href="/adidas-gear/adidas-jackets/" data-app-click="store_cc|dismissMobilNav">Jackets</a>
+					<a href="/adidas-gear/adidas-pants/" data-app-click="store_cc|dismissMobilNav">Pants</a>
+					<a href="/adidas-gear/adidas-hats/" data-app-click="store_cc|dismissMobilNav">Hats</a>
+					<a href="/adidas-gear/" data-app-click="store_cc|dismissMobilNav">All Adidas</a>
 				</div>
 			</div>
 	-->
 			<div class="levelOne oneLevel hideTablet">
-				<a href="/apparel-merchandise/shorts/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent());">SHORTS</a>
+				<a href="/apparel-merchandise/shorts/" data-app-click="store_cc|dismissMobilNav">SHORTS</a>
 			</div>
 			<div class="levelOne oneLevel hideTablet">
-				<a href="/apparel-merchandise/t-shirts/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent());">T-SHIRTS</a>
+				<a href="/apparel-merchandise/t-shirts/" data-app-click="store_cc|dismissMobilNav">T-SHIRTS</a>
 			</div>
 			<div class="levelOne oneLevel hideTablet">
-				<a href="/apparel-merchandise/jerseys/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent());">JERSEYS</a>
+				<a href="/apparel-merchandise/jerseys/" data-app-click="store_cc|dismissMobilNav">JERSEYS</a>
 			</div>
 			<div class="levelOne oneLevel hideTablet">
-				<a href="/apparel-merchandise/pants/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent());">PANTS</a>
+				<a href="/apparel-merchandise/pants/" data-app-click="store_cc|dismissMobilNav">PANTS</a>
 			</div>
 			<div class="levelOne oneLevel hideTablet">
-				<a href="/apparel-merchandise/hats/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent());">HATS</a>
+				<a href="/apparel-merchandise/hats/" data-app-click="store_cc|dismissMobilNav">HATS</a>
 			</div>
 			<div class="levelOne oneLevel hideTablet">
-				<a href="/apparel-merchandise/novelties-and-accessories/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent());">ACCESSORIES</a>
+				<a href="/apparel-merchandise/novelties-and-accessories/" data-app-click="store_cc|dismissMobilNav">ACCESSORIES</a>
 			</div>
 			<div class="levelOne oneLevel hideTablet">
-				<a href="/apparel-merchandise/mens/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent());">MEN&#39;S</a>
+				<a href="/apparel-merchandise/mens/" data-app-click="store_cc|dismissMobilNav">MEN&#39;S</a>
 			</div>
 			<div class="levelOne oneLevel hideTablet">
-				<a href="/apparel-merchandise/womens/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent());">WOMEN&#39;S</a>
+				<a href="/apparel-merchandise/womens/" data-app-click="store_cc|dismissMobilNav">WOMEN&#39;S</a>
 			</div>
 			<div class="levelOne oneLevel hideTablet">
-				<a href="/apparel-merchandise/kids/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent());">KID&#39;S</a>
+				<a href="/apparel-merchandise/kids/" data-app-click="store_cc|dismissMobilNav">KID&#39;S</a>
 			</div>
 			<div class="levelOne oneLevel">
-				<a href="/sale-apparel-merchandise/clearance/" onclick="myApp.ext.store_cc.a.hideMobileDropDownOnSelect($(this).parent()); myApp.ext.store_cc.a.hideOnLink($(this).parent().parent());">SALE</a>
+				<a href="/sale-apparel-merchandise/clearance/" data-app-click="store_cc|dismissMobilNav">SALE</a>
 			</div>
 		</div>
 	</div>

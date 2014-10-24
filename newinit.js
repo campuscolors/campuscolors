@@ -910,7 +910,12 @@ _app.extend({
 		// }
 	// });
 	
-_app.rq.push(['script',0,'lightbox/js/lightbox-2.6.min.js']);
+	_app.u.bindTemplateEvent(function(){return true;},'depart.dismissDrop',function(event,$context,infoObj){
+		_app.ext.store_cc.u.dismissAllDrop();
+	});
+	
+	
+//_app.rq.push(['script',0,'lightbox/js/lightbox-2.6.min.js']); this runs in index apptimized.
 
 _app.model.getGrammar("pegjs");
 
