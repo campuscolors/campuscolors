@@ -515,7 +515,7 @@ function loadPage(id, successCallback, failCallback){
 
 function showPage(routeObj,parentID){
 //					dump('START showPage'); dump(routeObj);
-	routeObj.params.templateid = routeObj.params.templateID || "filteredSearchTemplate";
+	// routeObj.params.templateid = routeObj.params.templateID || "filteredSearchTemplate";
 //					dump(parentID);
 	routeObj.params.dataset = $.extend(true, {}, $.grep(_app.ext.store_filter.filterData[parentID].pages,function(e,i){
 		return e.id == routeObj.params.id;
@@ -602,7 +602,6 @@ _app.router.addAlias('subcat', function(routeObj) {
 			var dataset = $.extend(true, {}, $.grep(json.pages,function(e,i){
 				return e.id == b;
 			})[0]);
-dump('-------------------------subcat Alias routObj'); dump(routObj);
 			dataset.breadcrumb = [routeObj.pagefilter,routeObj.params.id]
 			// showContent('static',{'templateid':'splashPageTemplate','id':routeObj.params.id,'dataset':dataset});
 			_app.ext.quickstart.a.newShowContent(routeObj.value,routeObj.params);
@@ -640,7 +639,7 @@ _app.router.addAlias('subfilter', function(routeObj){
 		//decides if filter JSON is in local var or if it needs to be retrieved
 		dump('-------------------------subfilter Alias'); dump(routeObj);
 		var filterpage = routeObj.pagefilter;
-		routeObj.params.templateID = "filterSearchTemplate";
+		routeObj.params.templateID = "filteredSearchTemplate";
 		if(_app.ext.store_filter.filterData[filterpage]){
 			showSubPage(routeObj,filterpage);
 		}
