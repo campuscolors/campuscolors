@@ -337,417 +337,6 @@ _app.u.bindTemplateEvent('customerListsTemplate','complete.customer',function(ev
 		}}},"mutable");
 	_app.model.dispatchThis();							
 	});
-
-function loadPage(id, successCallback, failCallback){
-	var pageObj = _app.ext.store_filter.vars.filterPageLoadQueue[id];
-	if(pageObj){
-		$.getJSON(pageObj.jsonPath+"?_v="+(new Date()).getTime(), function(json){
-			_app.ext.store_filter.filterData[pageObj.id] = json;
-			if(typeof successCallback == 'function'){
-				successCallback();
-				}
-			})
-			.fail(function(){
-				dump("FILTER DATA FOR PAGE: "+pageObj.id+" UNAVAILABLE AT PATH: "+pageObj.jsonPath);
-				if(typeof failCallback == 'function'){
-					failCallback();
-					}
-				});
-		}
-	else {
-		if(typeof failCallback == 'function'){
-			failCallback();
-			}
-		}
-	};
-
-function showPage(routeObj,parentID){
-//					dump('START showPage'); dump(routeObj);
-	routeObj.params.templateid = routeObj.params.templateID || "filteredSearchTemplate";
-//					dump(parentID);
-	routeObj.params.dataset = $.extend(true, {}, $.grep(_app.ext.store_filter.filterData[parentID].pages,function(e,i){
-		return e.id == routeObj.params.id;
-	})[0]);
-//					dump('routeObj.params.dataset');  dump(routeObj.params.dataset.optionList);
-	
-	var optStrs = routeObj.params.dataset.optionList;
-	routeObj.params.dataset.options = routeObj.params.dataset.options || {};
-	for(var i in optStrs){
-//						dump('optStrs[i]'); dump(optStrs[i]);
-		var o = optStrs[i];
-		if(_app.ext.store_filter.vars.elasticFields[o]){
-			routeObj.params.dataset.options[o] = $.extend(true, {}, _app.ext.store_filter.vars.elasticFields[o]);
-			if(routeObj.hashParams[o]){
-				var values = routeObj.hashParams[o].split('|');
-				for(var i in routeObj.params.dataset.options[o].options){
-					var option = routeObj.params.dataset.options[o].options[i];
-					if($.inArray(option.v, values) >= 0){
-						option.checked = "checked";
-						}
-					}
-				}
-			}
-		else {
-			dump("Unrecognized option "+o+" on filter page "+routeObj.params.id);
-			}
-		}
-	routeObj.params.dataset.breadcrumb = [parentID,routeObj.params.id]	
-	routeObj.params.loadFullList = _app.ext.seo_robots.u.isRobotPresent();
-	routeObj.params.pageType = 'static'
-	// showContent('static',routeObj.params);
-	_app.ext.quickstart.a.newShowContent(routeObj.value,routeObj.params);
-	}
-
-
-function showSubPage(routeObj,parentID){
-//					dump('START showSubPage'); dump(routeObj);
-	routeObj.params.templateid = routeObj.params.templateID || "filteredSearchTemplate";
-//					dump(parentID); dump(_app.ext.store_filter.filterData);
-	var filterData = _app.ext.store_filter.filterData[parentID]; //gets the top level data
-//					dump('filtterData after gets top level data'); dump(filterData); dump(routeObj.params.id);
-	filterData = $.grep(filterData.pages,function(e,i){
-		return e.id == routeObj.params.id+"/";	//gets mid level data
-	})[0];
-
-//					dump(filterData);
-	filterData = $.grep(filterData.pages,function(e,i){
-		return e.id == routeObj.params.end+"/";	//gets the lowest level data
-	})[0];
-	routeObj.params.dataset = $.extend(true, {}, filterData);	//deep copy to avoid pass by reference bugs
-	
-	var optStrs = routeObj.params.dataset.optionList;
-	routeObj.params.dataset.options = routeObj.params.dataset.options || {};
-	for(var i in optStrs){
-//						dump('optStrs[i]'); dump(optStrs[i]);
-		var o = optStrs[i];
-		if(_app.ext.store_filter.vars.elasticFields[o]){
-			routeObj.params.dataset.options[o] = $.extend(true, {}, _app.ext.store_filter.vars.elasticFields[o]);
-			if(routeObj.hashParams[o]){
-				var values = routeObj.hashParams[o].split('|');
-				for(var i in routeObj.params.dataset.options[o].options){
-					var option = routeObj.params.dataset.options[o].options[i];
-					if($.inArray(option.v, values) >= 0){
-						option.checked = "checked";
-						}
-					}
-				}
-			}
-		else {
-			dump("Unrecognized option "+o+" on filter page "+routeObj.params.id);
-			}
-		}
-	routeObj.params.loadFullList = _app.ext.seo_robots.u.isRobotPresent();
-	routeObj.params.dataset.breadcrumb = [parentID,routeObj.params.id,routeObj.params.end]
-	routeObj.params.id = routeObj.params.id + "-" + routeObj.params.end;
-	routeObj.params.pageType = 'static';
-	// showContent('static',routeObj.params);
-	_app.ext.quickstart.a.newShowContent(routeObj.value,routeObj.params);
-	}
-
-_app.router.addAlias('subcat', function(routeObj) {
-	_app.require(['store_cc','store_filter','store_search','store_routing','prodlist_infinite','store_prodlist', 'templates.html'], function(){
-		var a = routeObj.pagefilter;
-		var b = routeObj.params.id+'/';
-		$.getJSON("filters/apparel/"+a+".json?_v="+(new Date()).getTime(), function(json){
-			var dataset = $.extend(true, {}, $.grep(json.pages,function(e,i){
-				return e.id == b;
-			})[0]);
-			dataset.breadcrumb = [routeObj.pagefilter,routeObj.params.id]
-			// showContent('static',{'templateid':'splashPageTemplate','id':routeObj.params.id,'dataset':dataset});
-			_app.ext.quickstart.a.newShowContent(routeObj.value,routeObj.params);
-		})
-		.fail(function() {
-			dump('FILTER DATA FOR ' + a + 'COULD NOT BE LOADED.');
-			_app.router.handleURIChange('/404');
-		});
-	});
-});	
-
-_app.router.addAlias('filter', function(routeObj){
-	_app.require(['store_cc','store_filter','store_search','store_routing','prodlist_infinite','store_prodlist', 'templates.html'], function(){
-//		dump('filter alias routeObj: '); dump(routeObj);
-		//decides if filter JSON is in local var or if it needs to be retrieved
-		var filterpage = routeObj.pagefilter;
-			if(_app.ext.store_filter.filterData[filterpage]){
-//			dump('RUNNING showPage');
-			showPage(routeObj,filterpage);
-		}
-		else {
-			dump('RUNNING filter loadPage');
-			loadPage(
-				filterpage, 
-				function(){showPage(routeObj,filterpage);}, 
-				function(){_app.router.handleURIChange('/404');}
-			);
-		}
-	});
-});
-
-_app.router.addAlias('subfilter', function(routeObj){
-	_app.require(['store_cc','store_filter','store_search','store_routing','prodlist_infinite','store_prodlist', 'templates.html'], function(){
-		//decides if filter JSON is in local var or if it needs to be retrieved
-		var filterpage = routeObj.pagefilter;
-		if(_app.ext.store_filter.filterData[filterpage]){
-	//							dump('RUNNING showPage');
-			showSubPage(routeObj,filterpage);
-		}
-		else {
-								dump('RUNNING subfilter loadPage');
-			loadPage(
-				filterpage, 
-				function(){showSubPage(routeObj,filterpage);}, 
-				function(){_app.router.handleURIChange('/404');}
-			);
-		}
-	});
-});
-
-//sends passed object of attribs as a showContent search
-_app.router.addAlias('promo', function(routeObj){
-	_app.require(['store_cc','store_filter','store_search','store_routing','prodlist_infinite','store_prodlist', 'templates.html'], function(){
-		var path = routeObj.params.PATH;
-//		dump('promo Alias'); dump(path);
-		$.getJSON("filters/search/"+path+".json?_v="+(new Date()).getTime(), function(json){
-			dump('content shown from json');
-//			dump('THE SEARCH JSON IS...'); dump(routeObj.params);
-			routeObj.params.elasticsearch = json;
-			showContent('search',	routeObj.params);
-		})
-		.fail(function() {
-			dump('FILTER DATA FOR ' + path + 'COULD NOT BE LOADED.');
-			_app.router.handleURIChange('/404');
-		}); 
-	});
-});
-
-_app.router.addAlias('root', function(routeObj){
-	_app.require(['store_cc','store_filter','store_search','store_routing','prodlist_infinite','store_prodlist', 'templates.html'], function(){
-		var route = routeObj.route;
-		var route = route.split('/')[0];
-
-		if(_app.ext.store_cc.vars[route]) {
-			dump('IT WAS ALREADY THERE...');
-			var filterData = $.extend(true, {}, _app.ext.store_cc.vars[route]);
-			$.extend(true, routeObj.params, {'templateid':routeObj.templateid,'id':json.id,'dataset':filterData});
-			_app.ext.quickstart.a.newShowContent(routeObj.value,routeObj.params);
-		}
-		else {
-			$.getJSON("filters/apparel/"+route+".json?_v="+(new Date()).getTime(), function(json){
-				json.breadcrumb = [json.id];
-				_app.ext.store_cc.vars[route] = json;
-				//Deep copy into the routeObj.params, and that becomes our new "infoObj"
-				//Need to pass through routeObj.params at this moment, as it is expected to become infoObj
-				//This may change later.
-				$.extend(true, routeObj.params, {'pageType':'static','templateid':routeObj.templateid,'id':json.id,'dataset':json});
-				_app.ext.quickstart.a.newShowContent(routeObj.value,routeObj.params);
-			})
-			.fail(function() {
-				dump('FILTER DATA FOR ' + route + 'COULD NOT BE LOADED.');
-			});
-		}
-	});
-});
-
-function createFilterPages(root, filter, subfilter){
-	_app.router.appendHash({'type':'exact','route':'/'+root+'/','templateid':'splashPageTemplate','callback':'root'});
-	if(filter){
-		_app.router.appendHash({'type':'match','route':'/'+root+'/{{id}}/','pagefilter':root,'callback':'filter'});
-		}
-	if(subfilter){
-		_app.router.appendHash({'type':'match','route':'/'+root+'/{{id}}/{{end}}/','pagefilter':root,'callback':'subfilter'});
-		}
-	_app.couple('store_filter','pushFilterPage',{id:root,jsonPath:"filters/apparel/"+root+".json"});
-	}
-
-createFilterPages('ncaa-apparel-merchandise', true);
-createFilterPages('nfl-apparel-merchandise', true);
-createFilterPages('nba-apparel-merchandise', true);
-createFilterPages('ncaa-team-apparel-merchandise', true, true);
-				//DO THIS FOR ALL THOSE BELOW:	
-					
-					_app.router.appendHash({'type':'exact','route':'/mlb-apparel-merchandise/','templateid':'splashPageTemplate','callback':'root'});
-					_app.router.appendHash({'type':'match','route':'/mlb-apparel-merchandise/{{id}}/','pagefilter':'mlb-apparel-merchandise','callback':'filter'});
-					_app.couple('store_filter','pushFilterPage',{id:"mlb-apparel-merchandise",jsonPath:"filters/apparel/.json"});
-					
-					
-					_app.router.appendHash({'type':'exact','route':'/nhl-apparel-merchandise/','templateid':'splashPageTemplate','callback':'root'});
-					_app.router.appendHash({'type':'match','route':'/nhl-apparel-merchandise/{{id}}/','pagefilter':'nhl-apparel-merchandise','callback':'filter'});
-					_app.couple('store_filter','pushFilterPage',{id:"nhl-apparel-merchandise",jsonPath:"filters/apparel/.json"});
-					
-					_app.router.appendHash({'type':'exact','route':'/team-apparel-merchandise/','templateid':'splashPageTemplate','callback':'root'});
-					
-					_app.router.appendHash({'type':'match','route':'/team-apparel-merchandise/{{id}}*','pagefilter':'team-apparel-merchandise','callback':'filter'});
-					_app.couple('store_filter','pushFilterPage',{id:"team-apparel-merchandise",jsonPath:"filters/apparel/.json"});
-/* END CHECK FOR STILL VALID */
-					
-//TEAM BY LEAGUE APPENDS
-/*ROOT*/		_app.router.appendHash({'type':'exact','route':'/ncaa-team-apparel-merchandise/','pagefilter':'ncaa-team-apparel-merchandise','templateid':'splashPageRootTemplate','callback':'root'});
-/*SUB*/			_app.router.appendHash({'type':'match','route':'/ncaa-team-apparel-merchandise/{{id}}/','pagefilter':'ncaa-team-apparel-merchandise','callback':'subcat'});
-			//		_app.couple('store_filter','pushFilterPage',{id:"ncaa-team-apparel-merchandise');
-/*LEAF*/		_app.router.appendHash({'type':'match','route':'/ncaa-team-apparel-merchandise/{{id}}/{{end}}/','pagefilter':'ncaa-team-apparel-merchandise','callback':'subfilter'});
-					_app.couple('store_filter','pushFilterPage',{id:"ncaa-team-apparel-merchandise",jsonPath:"filters/apparel/.json"});
-					
-/*ROOT*/		_app.router.appendHash({'type':'exact','route':'/nfl-team-apparel-merchandise/','pagefilter':'nfl-team-apparel-merchandise','templateid':'splashPageRootTemplate','callback':'root'});
-/*SUB*/			_app.router.appendHash({'type':'match','route':'/nfl-team-apparel-merchandise/{{id}}/','pagefilter':'nfl-team-apparel-merchandise','callback':'subcat'});
-			//		_app.couple('store_filter','pushFilterPage',{id:"nfl-team-apparel-merchandise');
-/*LEAF*/		_app.router.appendHash({'type':'match','route':'/nfl-team-apparel-merchandise/{{id}}/{{end}}/','pagefilter':'nfl-team-apparel-merchandise','callback':'subfilter'});
-					_app.couple('store_filter','pushFilterPage',{id:"nfl-team-apparel-merchandise",jsonPath:"filters/apparel/.json"});
-					
-/*ROOT*/		_app.router.appendHash({'type':'exact','route':'/nba-team-apparel-merchandise/','pagefilter':'nba-team-apparel-merchandise','templateid':'splashPageRootTemplate','callback':'root'});
-/*SUB*/			_app.router.appendHash({'type':'match','route':'/nba-team-apparel-merchandise/{{id}}/','pagefilter':'nba-team-apparel-merchandise','callback':'subcat'});
-			//		_app.couple('store_filter','pushFilterPage',{id:"nba-team-apparel-merchandise');
-/*LEAF*/		_app.router.appendHash({'type':'match','route':'/nba-team-apparel-merchandise/{{id}}/{{end}}/','pagefilter':'nba-team-apparel-merchandise','callback':'subfilter'});
-					_app.couple('store_filter','pushFilterPage',{id:"nba-team-apparel-merchandise",jsonPath:"filters/apparel/.json"});
-					
-/*ROOT*/		_app.router.appendHash({'type':'exact','route':'/mlb-team-apparel-merchandise/','pagefilter':'mlb-team-apparel-merchandise','templateid':'splashPageRootTemplate','callback':'root'});
-/*SUB*/			_app.router.appendHash({'type':'match','route':'/mlb-team-apparel-merchandise/{{id}}/','pagefilter':'mlb-team-apparel-merchandise','callback':'subcat'});
-			//		_app.couple('store_filter','pushFilterPage',{id:"mlb-team-apparel-merchandise');
-/*LEAF*/		_app.router.appendHash({'type':'match','route':'/mlb-team-apparel-merchandise/{{id}}/{{end}}/','pagefilter':'mlb-team-apparel-merchandise','callback':'subfilter'});
-					_app.couple('store_filter','pushFilterPage',{id:"mlb-team-apparel-merchandise",jsonPath:"filters/apparel/.json"});
-					
-/*ROOT*/		_app.router.appendHash({'type':'exact','route':'/nhl-team-apparel-merchandise/','pagefilter':'nhl-team-apparel-merchandise','templateid':'splashPageRootTemplate','callback':'root'});
-/*SUB*/			_app.router.appendHash({'type':'match','route':'/nhl-team-apparel-merchandise/{{id}}/','pagefilter':'nhl-team-apparel-merchandise','callback':'subcat'});
-			//		_app.couple('store_filter','pushFilterPage',{id:"nhl-team-apparel-merchandise');
-/*LEAF*/		_app.router.appendHash({'type':'match','route':'/nhl-team-apparel-merchandise/{{id}}/{{end}}/','pagefilter':'nhl-team-apparel-merchandise','callback':'subfilter'});
-					_app.couple('store_filter','pushFilterPage',{id:"nhl-team-apparel-merchandise",jsonPath:"filters/apparel/.json"});
-					
-/*ROOT*/		_app.router.appendHash({'type':'exact','route':'/soccer-team-apparel-merchandise/','pagefilter':'soccer-team-apparel-merchandise','templateid':'splashPageRootTemplate','callback':'root'});
-/*SUB*/			_app.router.appendHash({'type':'match','route':'/soccer-team-apparel-merchandise/{{id}}/','pagefilter':'soccer-team-apparel-merchandise','callback':'subcat'});
-			//		_app.couple('store_filter','pushFilterPage',{id:"soccer-team-apparel-merchandise');
-/*LEAF*/		_app.router.appendHash({'type':'match','route':'/soccer-team-apparel-merchandise/{{id}}/{{end}}/','pagefilter':'soccer-team-apparel-merchandise','callback':'subfilter'});
-					_app.couple('store_filter','pushFilterPage',{id:"soccer-team-apparel-merchandise",jsonPath:"filters/apparel/.json"});
-//END TEAM BY LEAGUE APPENDS	
-
-//LEAGUE APPENDS
-/*ROOT*/		_app.router.appendHash({'type':'exact','route':'/league-apparel-merchandise/','pagefilter':'league-apparel-merchandise','templateid':'splashPageRootTemplate','callback':'root'});
-/*SUB*/			_app.router.appendHash({'type':'match','route':'/league-apparel-merchandise/{{id}}/','pagefilter':'league-apparel-merchandise','callback':'subcat'});
-			//		_app.couple('store_filter','pushFilterPage',{id:"soccer-team-apparel-merchandise');
-/*LEAF*/		_app.router.appendHash({'type':'match','route':'/league-apparel-merchandise/{{id}}/{{end}}/','pagefilter':'league-apparel-merchandise','callback':'subfilter'});
-					_app.couple('store_filter','pushFilterPage',{id:"league-apparel-merchandise",jsonPath:"filters/apparel/.json"});
-					
-
-//BRANDS APPENDS					
-					_app.router.appendHash({'type':'exact','route':'/brands-apparel-merchandise/','templateid':'splashPageTemplate','callback':'root'});
-					_app.router.appendHash({'type':'match','route':'/brands-apparel-merchandise/{{id}}/','pagefilter':'brands-apparel-merchandise','callback':'filter'});
-					_app.couple('store_filter','pushFilterPage',{id:"brands-apparel-merchandise",jsonPath:"filters/apparel/.json"});
-
-//TYPE/GENDER APPENDS
-					_app.router.appendHash({'type':'exact','route':'/apparel-merchandise/','templateid':'splashPageTemplate','callback':'root'});
-					_app.router.appendHash({'type':'match','route':'/apparel-merchandise/{{id}}/','pagefilter':'apparel-merchandise','callback':'filter'});
-					_app.couple('store_filter','pushFilterPage',{id:"apparel-merchandise",jsonPath:"filters/apparel/.json"});
-					
-//CLEARANCE APPENDS					
-					_app.router.appendHash({'type':'exact','route':'/sale-apparel-merchandise/','templateid':'splashPageTemplate','callback':'root'});
-					_app.router.appendHash({'type':'match','route':'/sale-apparel-merchandise/{{id}}/','pagefilter':'sale-apparel-merchandise','callback':'filter'});
-					_app.couple('store_filter','pushFilterPage',{id:"sale-apparel-merchandise",jsonPath:"filters/apparel/.json"});
-
-//SEARCH APPENDS
-					_app.router.appendHash({'type':'match','route':'/search/promo/{{PATH}}*','callback':'promo'});					
-					
-
-					
-					_app.router.appendHash({'type':'exact','route':'/adidas-gear/','templateid':'splashPageTemplate','callback':'root'});
-					_app.router.appendHash({'type':'match','route':'/adidas-gear/{{id}}/','pagefilter':'adidas-gear','callback':'filter'});
-					_app.couple('store_filter','pushFilterPage',{id:"adidas-gear",jsonPath:"filters/apparel/.json"});
-					
-					_app.router.appendHash({'type':'exact','route':'/apparel/','templateid':'splashPageTemplate','callback':'root'});
-					_app.router.appendHash({'type':'match','route':'/apparel/{{id}}/','pagefilter':'apparel','callback':'filter'});
-					_app.couple('store_filter','pushFilterPage',{id:"apparel",jsonPath:"filters/apparel/.json"});
-					
-					_app.router.appendHash({'type':'exact','route':'/mens-apparel-merchandise/','templateid':'splashPageTemplate','callback':'root'});
-					_app.router.appendHash({'type':'match','route':'/mens-apparel-merchandise/{{id}}/','pagefilter':'mens-apparel-merchandise','callback':'filter'});
-					_app.couple('store_filter','pushFilterPage',{id:"mens-apparel-merchandise",jsonPath:"filters/apparel/.json"});
-					
-					_app.router.appendHash({'type':'exact','route':'/womens-apparel-merchandise/','templateid':'splashPageTemplate','callback':'root'});
-					_app.router.appendHash({'type':'match','route':'/womens-apparel-merchandise/{{id}}/','pagefilter':'womens-apparel-merchandise','callback':'filter'});
-					_app.couple('store_filter','pushFilterPage',{id:"womens-apparel-merchandise",jsonPath:"filters/apparel/.json"});
-					
-					_app.router.appendHash({'type':'exact','route':'/kids-apparel-merchandise/','templateid':'splashPageTemplate','callback':'root'});
-					_app.router.appendHash({'type':'match','route':'/kids-apparel-merchandise/{{id}}/','pagefilter':'kids-apparel-merchandise','callback':'filter'});
-					_app.couple('store_filter','pushFilterPage',{id:"kids-apparel-merchandise",jsonPath:"filters/apparel/.json"});	
-					_app.couple('store_filter','pushFilterPage',{id:"",jsonPath:"filters/apparel/.json"});
-_app.router.appendHash({'type':'match','route':'/filter/{{id}}*','callback':function(routeObj){
-	_app.require(['store_swc','seo_robots', 'store_search','store_routing','prodlist_infinite','store_prodlist', 'templates.html'], function(){
-		if(_app.ext.store_swc.filterData[routeObj.params.id]){
-			function showFilterPage(){
-				if(_app.ext.store_swc.vars.elasticFieldsLoaded){
-					routeObj.params.templateID = "filteredSearchTemplate";
-					routeObj.params.dataset = $.extend(true, {}, _app.ext.store_swc.filterData[routeObj.params.id]);
-					if(routeObj.params.dataset.onEnter){
-						routeObj.params.dataset.onEnter();
-						}
-					var optStrs = routeObj.params.dataset.optionList;
-					routeObj.params.dataset.options = routeObj.params.dataset.options || {};
-					for(var i in optStrs){
-						var o = optStrs[i];
-						if(_app.ext.store_swc.vars.elasticFields[o]){
-							routeObj.params.dataset.options[o] = $.extend(true, {}, _app.ext.store_swc.vars.elasticFields[o]);
-							if(routeObj.searchParams && routeObj.searchParams[o]){
-								var values = routeObj.searchParams[o].split('|');
-								for(var i in routeObj.params.dataset.options[o].options){
-									var option = routeObj.params.dataset.options[o].options[i];
-									if($.inArray(option.v, values) >= 0){
-										option.checked = "checked";
-										}
-									}
-								}
-							}
-						else {
-							dump("Unrecognized option "+o+" on filter page "+routeObj.params.id);
-							}
-						}
-					if(routeObj.searchParams && routeObj.searchParams.sport && routeObj.searchParams.team){
-						_app.ext.store_swc.u.setUserTeam({sport:routeObj.searchParams.sport,team:routeObj.searchParams.team}, true);
-						}
-					routeObj.params.dataset.userTeam = _app.ext.store_swc.vars.userTeam;
-					
-					if(routeObj.params.dataset.titleBuilder){
-						routeObj.params.dataset.seo_title = routeObj.params.dataset.titleBuilder(routeObj.params.dataset.userTeam.p);
-						}
-						
-					if(routeObj.params.dataset.descriptionBuilder){
-						routeObj.params.dataset.seo_description = routeObj.params.dataset.descriptionBuilder(routeObj.params.dataset.userTeam.p);
-						}
-					
-					if(routeObj.params.dataset.metaDescriptionBuilder){
-						routeObj.params.dataset.meta_description = routeObj.params.dataset.metaDescriptionBuilder(routeObj.params.dataset.userTeam.p);
-						}
-					routeObj.params.deferred = $.Deferred();
-					// routeObj.params.loadFullList = _app.ext.seo_robots.u.isRobotPresent();
-					routeObj.params.pageType = 'static';
-					_app.ext.quickstart.a.newShowContent(routeObj.value,routeObj.params)
-					}
-				else{
-					setTimeout(showFilterPage, 100);
-					}
-				}
-			showFilterPage();
-			}
-		else {
-			_app.ext.quickstart.a.newShowContent('404');
-			}
-		});
-	}});
-	
-_app.u.bindTemplateEvent('filteredSearchTemplate', 'complete.filter',function(event, $context, infoObj){
-	if(infoObj.deferred){
-		$('form.filterList',$context).data('deferred', infoObj.deferred);
-		}
-	if(!$context.attr('data-filter-rendered')){
-		var $form = $('form.filterList', $context);
-		function submitForm(){
-			if($form.attr('data-filter-base')){
-				$form.trigger('submit');
-				}
-			else {
-				// dump('gotta wait');
-				setTimeout(submitForm,100);
-				}
-			}
-		setTimeout(submitForm,0);
-		}
-	});
-
 _app.u.bindTemplateEvent(function(){return true;}, 'complete.routing', function(event, $context, infoObj){
 	if(infoObj){
 		var canonical = "";
@@ -897,6 +486,278 @@ _app.u.bindTemplateEvent('productTemplate', 'depart.store_cc', function(event, $
 	});
 	
 					
+
+function loadPage(id, successCallback, failCallback){
+	console.log(id);
+	dump(_app.ext.store_filter.vars.filterPageLoadQueue);
+	var pageObj = _app.ext.store_filter.vars.filterPageLoadQueue[id];
+	if(pageObj){
+		$.getJSON(pageObj.jsonPath+"?_v="+(new Date()).getTime(), function(json){
+			_app.ext.store_filter.filterData[pageObj.id] = json;
+			if(typeof successCallback == 'function'){
+				successCallback();
+				}
+			})
+			.fail(function(){
+				dump("FILTER DATA FOR PAGE: "+pageObj.id+" UNAVAILABLE AT PATH: "+pageObj.jsonPath);
+				if(typeof failCallback == 'function'){
+					failCallback();
+					}
+				});
+		}
+	else {
+		if(typeof failCallback == 'function'){
+			failCallback();
+			}
+		}
+	};
+
+function showPage(routeObj,parentID){
+//					dump('START showPage'); dump(routeObj);
+	routeObj.params.templateid = routeObj.params.templateID || "filteredSearchTemplate";
+//					dump(parentID);
+	routeObj.params.dataset = $.extend(true, {}, $.grep(_app.ext.store_filter.filterData[parentID].pages,function(e,i){
+		return e.id == routeObj.params.id;
+	})[0]);
+//					dump('routeObj.params.dataset');  dump(routeObj.params.dataset.optionList);
+	
+	var optStrs = routeObj.params.dataset.optionList;
+	routeObj.params.dataset.options = routeObj.params.dataset.options || {};
+	for(var i in optStrs){
+//						dump('optStrs[i]'); dump(optStrs[i]);
+		var o = optStrs[i];
+		if(_app.ext.store_filter.vars.elasticFields[o]){
+			routeObj.params.dataset.options[o] = $.extend(true, {}, _app.ext.store_filter.vars.elasticFields[o]);
+			if(routeObj.hashParams[o]){
+				var values = routeObj.hashParams[o].split('|');
+				for(var i in routeObj.params.dataset.options[o].options){
+					var option = routeObj.params.dataset.options[o].options[i];
+					if($.inArray(option.v, values) >= 0){
+						option.checked = "checked";
+						}
+					}
+				}
+			}
+		else {
+			dump("Unrecognized option "+o+" on filter page "+routeObj.params.id);
+			}
+		}
+	routeObj.params.dataset.breadcrumb = [parentID,routeObj.params.id]	
+	routeObj.params.pageType = 'static'
+	// showContent('static',routeObj.params);
+	_app.ext.quickstart.a.newShowContent(routeObj.value,routeObj.params);
+	}
+
+
+function showSubPage(routeObj,parentID){
+//					dump('START showSubPage'); dump(routeObj);
+	routeObj.params.templateid = routeObj.params.templateID || "filteredSearchTemplate";
+//					dump(parentID); dump(_app.ext.store_filter.filterData);
+	var filterData = _app.ext.store_filter.filterData[parentID]; //gets the top level data
+//					dump('filtterData after gets top level data'); dump(filterData); dump(routeObj.params.id);
+	filterData = $.grep(filterData.pages,function(e,i){
+		return e.id == routeObj.params.id+"/";	//gets mid level data
+	})[0];
+
+//					dump(filterData);
+	filterData = $.grep(filterData.pages,function(e,i){
+		return e.id == routeObj.params.end+"/";	//gets the lowest level data
+	})[0];
+	routeObj.params.dataset = $.extend(true, {}, filterData);	//deep copy to avoid pass by reference bugs
+	
+	var optStrs = routeObj.params.dataset.optionList;
+	routeObj.params.dataset.options = routeObj.params.dataset.options || {};
+	for(var i in optStrs){
+//						dump('optStrs[i]'); dump(optStrs[i]);
+		var o = optStrs[i];
+		if(_app.ext.store_filter.vars.elasticFields[o]){
+			routeObj.params.dataset.options[o] = $.extend(true, {}, _app.ext.store_filter.vars.elasticFields[o]);
+			if(routeObj.hashParams[o]){
+				var values = routeObj.hashParams[o].split('|');
+				for(var i in routeObj.params.dataset.options[o].options){
+					var option = routeObj.params.dataset.options[o].options[i];
+					if($.inArray(option.v, values) >= 0){
+						option.checked = "checked";
+						}
+					}
+				}
+			}
+		else {
+			dump("Unrecognized option "+o+" on filter page "+routeObj.params.id);
+			}
+		}
+	routeObj.params.dataset.breadcrumb = [parentID,routeObj.params.id,routeObj.params.end]
+	routeObj.params.id = routeObj.params.id + "-" + routeObj.params.end;
+	routeObj.params.pageType = 'static';
+	// showContent('static',routeObj.params);
+	_app.ext.quickstart.a.newShowContent(routeObj.value,routeObj.params);
+	}
+
+_app.router.addAlias('subcat', function(routeObj) {
+	_app.require(['store_cc','store_filter','store_search','store_routing','prodlist_infinite','store_prodlist', 'templates.html'], function(){
+		var a = routeObj.pagefilter;
+		var b = routeObj.params.id+'/';
+		$.getJSON("filters/apparel/"+a+".json?_v="+(new Date()).getTime(), function(json){
+			var dataset = $.extend(true, {}, $.grep(json.pages,function(e,i){
+				return e.id == b;
+			})[0]);
+			dataset.breadcrumb = [routeObj.pagefilter,routeObj.params.id]
+			// showContent('static',{'templateid':'splashPageTemplate','id':routeObj.params.id,'dataset':dataset});
+			_app.ext.quickstart.a.newShowContent(routeObj.value,routeObj.params);
+		})
+		.fail(function() {
+			dump('FILTER DATA FOR ' + a + 'COULD NOT BE LOADED.');
+			_app.router.handleURIChange('/404');
+		});
+	});
+});	
+
+_app.router.addAlias('filter', function(routeObj){
+	_app.require(['store_cc','store_filter','store_search','store_routing','prodlist_infinite','store_prodlist', 'templates.html'], function(){
+//		dump('filter alias routeObj: '); dump(routeObj);
+		//decides if filter JSON is in local var or if it needs to be retrieved
+		var filterpage = routeObj.pagefilter;
+			if(_app.ext.store_filter.filterData[filterpage]){
+//			dump('RUNNING showPage');
+			showPage(routeObj,filterpage);
+		}
+		else {
+			dump('RUNNING filter loadPage');
+			loadPage(
+				filterpage, 
+				function(){showPage(routeObj,filterpage);}, 
+				function(){_app.router.handleURIChange('/404');}
+			);
+		}
+	});
+});
+
+_app.router.addAlias('subfilter', function(routeObj){
+	_app.require(['store_cc','store_filter','store_search','store_routing','prodlist_infinite','store_prodlist', 'templates.html'], function(){
+		//decides if filter JSON is in local var or if it needs to be retrieved
+		var filterpage = routeObj.pagefilter;
+		if(_app.ext.store_filter.filterData[filterpage]){
+	//							dump('RUNNING showPage');
+			showSubPage(routeObj,filterpage);
+		}
+		else {
+								dump('RUNNING subfilter loadPage');
+			loadPage(
+				filterpage, 
+				function(){showSubPage(routeObj,filterpage);}, 
+				function(){_app.router.handleURIChange('/404');}
+			);
+		}
+	});
+});
+
+//sends passed object of attribs as a showContent search
+_app.router.addAlias('promo', function(routeObj){
+	_app.require(['store_cc','store_filter','store_search','store_routing','prodlist_infinite','store_prodlist', 'templates.html'], function(){
+		var path = routeObj.params.PATH;
+//		dump('promo Alias'); dump(path);
+		$.getJSON("filters/search/"+path+".json?_v="+(new Date()).getTime(), function(json){
+			dump('content shown from json');
+//			dump('THE SEARCH JSON IS...'); dump(routeObj.params);
+			routeObj.params.elasticsearch = json;
+			showContent('search',	routeObj.params);
+		})
+		.fail(function() {
+			dump('FILTER DATA FOR ' + path + 'COULD NOT BE LOADED.');
+			_app.router.handleURIChange('/404');
+		}); 
+	});
+});
+
+_app.router.addAlias('root', function(routeObj){
+	_app.require(['store_cc','store_filter','store_search','store_routing','prodlist_infinite','store_prodlist', 'templates.html'], function(){
+		var route = routeObj.route;
+		var route = route.split('/')[0];
+
+		if(_app.ext.store_cc.vars[route]) {
+			dump('IT WAS ALREADY THERE...');
+			var filterData = $.extend(true, {}, _app.ext.store_cc.vars[route]);
+			$.extend(true, routeObj.params, {'templateid':routeObj.templateid,'id':json.id,'dataset':filterData});
+			_app.ext.quickstart.a.newShowContent(routeObj.value,routeObj.params);
+		}
+		else {
+			$.getJSON("filters/apparel/"+route+".json?_v="+(new Date()).getTime(), function(json){
+				json.breadcrumb = [json.id];
+				_app.ext.store_cc.vars[route] = json;
+				//Deep copy into the routeObj.params, and that becomes our new "infoObj"
+				//Need to pass through routeObj.params at this moment, as it is expected to become infoObj
+				//This may change later.
+				$.extend(true, routeObj.params, {'pageType':'static','templateid':routeObj.templateid,'id':json.id,'dataset':json});
+				_app.ext.quickstart.a.newShowContent(routeObj.value,routeObj.params);
+			})
+			.fail(function() {
+				dump('FILTER DATA FOR ' + route + 'COULD NOT BE LOADED.');
+			});
+		}
+	});
+});
+
+function createPagesRootFilter(root){
+	_app.router.appendHash({'type':'exact','route':'/'+root+'/','templateid':'splashPageTemplate','callback':'root'});
+	_app.router.appendHash({'type':'match','route':'/'+root+'/{{id}}/','pagefilter':root,'callback':'filter'});
+	_app.couple('store_filter','pushFilterPage',{id:root,jsonPath:"filters/apparel/"+root+".json"});
+	}
+function createPagesSubcatSubfilter(root){
+	_app.router.appendHash({'type':'exact','route':'/'+root+'/','templateid':'splashPageTemplate','callback':'root'});
+	_app.router.appendHash({'type':'match','route':'/'+root+'/{{id}}/','pagefilter':root,'callback':'subcat'});
+	_app.router.appendHash({'type':'match','route':'/'+root+'/{{id}}/{{end}}/','pagefilter':root,'callback':'subfilter'});
+	_app.couple('store_filter','pushFilterPage',{id:root,jsonPath:"filters/apparel/"+root+".json"});
+	}
+
+createPagesRootFilter('ncaa-apparel-merchandise');
+createPagesRootFilter('nfl-apparel-merchandise');
+createPagesRootFilter('nba-apparel-merchandise');
+createPagesRootFilter('mlb-apparel-merchandise');
+createPagesRootFilter('nhl-apparel-merchandise');
+createPagesRootFilter('team-apparel-merchandise');
+createPagesRootFilter('apparel-merchandise');
+createPagesRootFilter('sale-apparel-merchandise');
+createPagesRootFilter('adidas-gear');
+createPagesRootFilter('apparel');
+createPagesRootFilter('mens-apparel-merchandise');
+createPagesRootFilter('womens-apparel-merchandise');
+createPagesRootFilter('kids-apparel-merchandise');
+createPagesRootFilter('kids-apparel-merchandise');
+createPagesRootFilter('');
+
+createPagesSubcatSubfilter('ncaa-team-apparel-merchandise');
+createPagesSubcatSubfilter('nfl-team-apparel-merchandise');
+createPagesSubcatSubfilter('nba-team-apparel-merchandise');
+createPagesSubcatSubfilter('mlb-team-apparel-merchandise');
+createPagesSubcatSubfilter('nhl-team-apparel-merchandise');
+createPagesSubcatSubfilter('soccer-team-apparel-merchandise');
+createPagesSubcatSubfilter('league-apparel-merchandise');
+createPagesSubcatSubfilter('brands-apparel-merchandise');
+				//DO THIS FOR ALL THOSE BELOW:	
+					
+//SEARCH APPENDS
+_app.router.appendHash({'type':'match','route':'/search/promo/{{PATH}}*','callback':'promo'});					
+					
+	
+_app.u.bindTemplateEvent('filteredSearchTemplate', 'complete.filter',function(event, $context, infoObj){
+	if(infoObj.deferred){
+		$('form.filterList',$context).data('deferred', infoObj.deferred);
+		}
+	if(!$context.attr('data-filter-rendered')){
+		var $form = $('form.filterList', $context);
+		function submitForm(){
+			if($form.attr('data-filter-base')){
+				$form.trigger('submit');
+				}
+			else {
+				// dump('gotta wait');
+				setTimeout(submitForm,100);
+				}
+			}
+		setTimeout(submitForm,0);
+		}
+	});
+
 _app.extend({
 	"namespace" : "seo_robots",
 	"filename" : "extensions/_robots.js"

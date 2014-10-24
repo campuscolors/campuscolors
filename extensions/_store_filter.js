@@ -330,7 +330,11 @@ var store_filter = function(_app) {
 			}, //e [app Events]
 		couplers : {
 			pushFilterPage : function(args){
-				_app.ext.store_filter.vars.filterPages.push(args);
+				dump('pushFilterPage');
+				dump(args);
+				if(args.id && args.jsonPath){
+					_app.ext.store_filter.vars.filterPageLoadQueue[args.id] = args;
+					}
 				}
 			}
 		} //r object.
