@@ -403,7 +403,11 @@ var store_cc = function(_app) {
 					for (var j = 1; j < 4; j++) {
 //						dump('HOTW '+j+' ='); dump(_app.ext.quickstart.vars.hotw[j]);
 						if(_app.ext.quickstart.vars.hotw[j] && _app.ext.quickstart.vars.hotw[j].pageType  == "homepage") {
-							$bread.append($("<a href='#!'>Home</a><span class='crumbTween'> &#62; </span>"));
+							if(!$bread.data("home-added")) {
+								$bread.append($("<a href='/'>Home</a><span class='crumbTween'> &#62; </span>"));
+								$bread.data("home-added");
+							}
+							else { /* Home has already been added, so don't put more than one */ }
 						}
 					}
 					
@@ -414,8 +418,8 @@ var store_cc = function(_app) {
 						}
 						else {
 							var $crumb = $("<a></a>");
-							if(i == 0) { $crumb.text(bc[i]).attr("href","#!" + bc[i].toLowerCase() + "/"); }
-							else { $crumb.text(bc[i]).attr("href","#!" + bc[0].toLowerCase() +"/"+ bc[i].toLowerCase() + "/"); }
+							if(i == 0) { $crumb.text(bc[i]).attr("href","/" + bc[i].toLowerCase() + "/"); }
+							else { $crumb.text(bc[i]).attr("href","/" + bc[0].toLowerCase() +"/"+ bc[i].toLowerCase() + "/"); }
 							$bread.append($crumb);
 							$bread.append("<span class='crumbTween'> &#62; </span>"); 
 						}
@@ -812,6 +816,7 @@ var store_cc = function(_app) {
 				var user = data.globals.binds.var;
 				dump('START chkoutadduser'); 
 				$('.username').empty().text(user);
+				dump(user);
 			}
 
 		}, //tlcFormats
