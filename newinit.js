@@ -640,12 +640,11 @@ _app.router.addAlias('subfilter', function(routeObj){
 		//decides if filter JSON is in local var or if it needs to be retrieved
 		dump('-------------------------subfilter Alias'); dump(routeObj);
 		var filterpage = routeObj.pagefilter;
+		routeObj.params.templateID = "filterSearchTemplate";
 		if(_app.ext.store_filter.filterData[filterpage]){
-	//							dump('RUNNING showPage');
 			showSubPage(routeObj,filterpage);
 		}
 		else {
-								dump('RUNNING subfilter loadPage');
 			loadPage(
 				filterpage, 
 				function(){showSubPage(routeObj,filterpage);}, 
@@ -677,15 +676,13 @@ _app.router.addAlias('root', function(routeObj){
 	_app.require(['store_cc','store_filter','store_search','store_routing','prodlist_infinite','store_prodlist', 'templates.html'], function(){
 		var route = routeObj.route;
 		var route = route.split('/')[0];
-
+		routeObj.params.templateID = 'splashPageTemplate';
 		if(_app.ext.store_cc.vars[route]) {
-			dump('IT WAS ALREADY THERE...');
 			var filterData = $.extend(true, {}, _app.ext.store_cc.vars[route]);
 			$.extend(true, routeObj.params, {'templateid':routeObj.templateid,'id':json.id,'dataset':filterData});
 			_app.ext.quickstart.a.newShowContent(routeObj.value,routeObj.params);
 		}
 		else {
-dump('-------------------------root alias'); dump(routObj);
 			$.getJSON("filters/apparel/"+route+".json?_v="+(new Date()).getTime(), function(json){
 				json.breadcrumb = [json.id];
 				_app.ext.store_cc.vars[route] = json;
@@ -703,14 +700,14 @@ dump('-------------------------root alias'); dump(routObj);
 });
 
 function createPagesRootFilter(root){
-	_app.router.appendHash({'type':'exact','route':'/'+root+'/','templateid':'splashPageTemplate','callback':'root'});
+	_app.router.appendHash({'type':'exact','route':'/'+root+'/','callback':'root'});
 	_app.router.appendHash({'type':'match','route':'/'+root+'/{{id}}/','pagefilter':root,'callback':'filter'});
 	_app.couple('store_filter','pushFilterPage',{id:root,jsonPath:"filters/apparel/"+root+".json"});
 	}
 function createPagesSubcatSubfilter(root){
-	_app.router.appendHash({'type':'exact','route':'/'+root+'/','templateid':'splashPageTemplate','callback':'root'});
+	_app.router.appendHash({'type':'exact','route':'/'+root+'/','callback':'root'});
 	_app.router.appendHash({'type':'match','route':'/'+root+'/{{id}}/','pagefilter':root,'callback':'subcat'});
-	_app.router.appendHash({'type':'match','route':'/'+root+'/{{id}}/{{end}}/','templateID':'filterSearchTemplate','pagefilter':root,'callback':'subfilter'});
+	_app.router.appendHash({'type':'match','route':'/'+root+'/{{id}}/{{end}}/','pagefilter':root,'callback':'subfilter'});
 	_app.couple('store_filter','pushFilterPage',{id:root,jsonPath:"filters/apparel/"+root+".json"});
 	}
 
