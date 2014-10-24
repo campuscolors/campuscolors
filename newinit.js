@@ -582,16 +582,18 @@ _app.router.addAlias('subcat', function(routeObj) {
 	_app.require(['store_cc','store_filter','store_search','store_routing','prodlist_infinite','store_prodlist', 'templates.html'], function(){
 		var a = routeObj.pagefilter;
 		var b = routeObj.params.id+'/';
+		routeObj.params.templateID = "splashPageTemplate";
 		$.getJSON("filters/apparel/"+a+".json?_v="+(new Date()).getTime(), function(json){
 			var dataset = $.extend(true, {}, $.grep(json.pages,function(e,i){
 				return e.id == b;
 			})[0]);
 			dataset.breadcrumb = [routeObj.pagefilter,routeObj.params.id]
 			// showContent('static',{'templateid':'splashPageTemplate','id':routeObj.params.id,'dataset':dataset});
+			$.extend(true, routeObj.params, {'pageType':'static','templateid':routeObj.templateid,'id':json.id,'dataset':dataset});
 			_app.ext.quickstart.a.newShowContent(routeObj.value,routeObj.params);
 		})
 		.fail(function() {
-			dump('FILTER DATA FOR ' + a + 'COULD NOT BE LOADED.');
+			dump('FILTER DATA FOR ' + a + 'SUBCAT COULD NOT BE LOADED.');
 			_app.router.handleURIChange('/404');
 		});
 	});
@@ -601,8 +603,8 @@ _app.router.addAlias('filter', function(routeObj){
 	_app.require(['store_cc','store_filter','store_search','store_routing','prodlist_infinite','store_prodlist', 'templates.html'], function(){
 //		dump('filter alias routeObj: '); dump(routeObj);
 		//decides if filter JSON is in local var or if it needs to be retrieved
-		dump('-------------------------filter Alias'); dump(routObj);
 		var filterpage = routeObj.pagefilter;
+		routeObj.params.templateID = "filteredSearchTemplate";
 			if(_app.ext.store_filter.filterData[filterpage]){
 //			dump('RUNNING showPage');
 			showPage(routeObj,filterpage);
@@ -646,23 +648,25 @@ _app.router.addAlias('promo', function(routeObj){
 			dump('content shown from json');
 //			dump('THE SEARCH JSON IS...'); dump(routeObj.params);
 			routeObj.params.elasticsearch = json;
-			showContent('search',	routeObj.params);
+		//	showContent('search',	routeObj.params);
+		//	_app.router.addAlias('search',		function(routeObj){_app.ext.quickstart.a.newShowContent(routeObj.value,	$.extend({'pageType':'search'}, routeObj.params));});
+			_app.ext.quickstart.a.newShowContent(routeObj.value,	$.extend({'pageType':'search'}, routeObj.params));
 		})
 		.fail(function() {
-			dump('FILTER DATA FOR ' + path + 'COULD NOT BE LOADED.');
+			dump('FILTER DATA FOR ' + path + ' PROMO COULD NOT BE LOADED.');
 			_app.router.handleURIChange('/404');
 		}); 
 	});
 });
 
+
 _app.router.addAlias('root', function(routeObj){
 	_app.require(['store_cc','store_filter','store_search','store_routing','prodlist_infinite','store_prodlist', 'templates.html'], function(){
-		var route = routeObj.route;
-		var route = route.split('/')[0];
-		routeObj.params.templateID = 'splashPageTemplate';
+		var route = routeObj.pagefilter;
+		routeObj.params.templateID = 'splashPageRootTemplate';
 		if(_app.ext.store_cc.vars[route]) {
 			var filterData = $.extend(true, {}, _app.ext.store_cc.vars[route]);
-			$.extend(true, routeObj.params, {'templateid':routeObj.templateid,'id':json.id,'dataset':filterData});
+			$.extend(true, routeObj.params, {'templateid':routeObj.templateid,'id':filterData.id,'dataset':filterData});
 			_app.ext.quickstart.a.newShowContent(routeObj.value,routeObj.params);
 		}
 		else {
@@ -676,19 +680,19 @@ _app.router.addAlias('root', function(routeObj){
 				_app.ext.quickstart.a.newShowContent(routeObj.value,routeObj.params);
 			})
 			.fail(function() {
-				dump('FILTER DATA FOR ' + route + 'COULD NOT BE LOADED.');
+				dump('FILTER DATA FOR ' + route + ' ROOT COULD NOT BE LOADED.');
 			});
 		}
 	});
 });
 
 function createPagesRootFilter(root){
-	_app.router.appendHash({'type':'exact','route':'/'+root+'/','callback':'root'});
+	_app.router.appendHash({'type':'exact','route':'/'+root+'/','pagefilter':root,'callback':'root'});
 	_app.router.appendHash({'type':'match','route':'/'+root+'/{{id}}/','pagefilter':root,'callback':'filter'});
 	_app.couple('store_filter','pushFilterPage',{id:root,jsonPath:"filters/apparel/"+root+".json"});
 	}
 function createPagesSubcatSubfilter(root){
-	_app.router.appendHash({'type':'exact','route':'/'+root+'/','callback':'root'});
+	_app.router.appendHash({'type':'exact','route':'/'+root+'/','pagefilter':root,'callback':'root'});
 	_app.router.appendHash({'type':'match','route':'/'+root+'/{{id}}/','pagefilter':root,'callback':'subcat'});
 	_app.router.appendHash({'type':'match','route':'/'+root+'/{{id}}/{{end}}/','pagefilter':root,'callback':'subfilter'});
 	_app.couple('store_filter','pushFilterPage',{id:root,jsonPath:"filters/apparel/"+root+".json"});
@@ -708,7 +712,7 @@ createPagesRootFilter('mens-apparel-merchandise');
 createPagesRootFilter('womens-apparel-merchandise');
 createPagesRootFilter('kids-apparel-merchandise');
 createPagesRootFilter('kids-apparel-merchandise');
-createPagesRootFilter('');
+createPagesRootFilter('brands-apparel-merchandise');
 
 createPagesSubcatSubfilter('ncaa-team-apparel-merchandise');
 createPagesSubcatSubfilter('nfl-team-apparel-merchandise');
@@ -717,7 +721,7 @@ createPagesSubcatSubfilter('mlb-team-apparel-merchandise');
 createPagesSubcatSubfilter('nhl-team-apparel-merchandise');
 createPagesSubcatSubfilter('soccer-team-apparel-merchandise');
 createPagesSubcatSubfilter('league-apparel-merchandise');
-createPagesSubcatSubfilter('brands-apparel-merchandise');
+createPagesSubcatSubfilter('');
 				//DO THIS FOR ALL THOSE BELOW:	
 					
 //SEARCH APPENDS
@@ -729,13 +733,13 @@ _app.u.bindTemplateEvent('filteredSearchTemplate', 'complete.filter',function(ev
 		$('form.filterList',$context).data('deferred', infoObj.deferred);
 		}
 	if(!$context.attr('data-filter-rendered')){
-		var $form = $('form.filterList', $context);
+		var $form = $('form.filterListTemplate', $context);
 		function submitForm(){
 			if($form.attr('data-filter-base')){
 				$form.trigger('submit');
 				}
 			else {
-				// dump('gotta wait');
+//				 dump('gotta wait');
 				setTimeout(submitForm,100);
 				}
 			}
