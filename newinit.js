@@ -263,7 +263,16 @@ _app.router.appendHash({'type':'exact','route':'/store_locations/','callback':fu
 		});
 	_app.ext.quickstart.a.newShowContent(routeObj.value,routeObj.params);
 	}});
-	
+
+_app.router.appendHash({'type':'exact','route':'/my_account/','callback':function(routeObj){
+	$.extend(routeObj.params,{
+		'pageType':'static',
+		'login' : true,
+		'templateID':'myAccountTemplate',
+		'require':['cco','templates.html']
+		});
+	_app.ext.quickstart.a.newShowContent(routeObj.value,routeObj.params);
+	}});	
 _app.u.bindTemplateEvent('myAccountTemplate','complete.customer',function(event, $context, infoObj){
 	_app.ext.cco.calls.appCheckoutDestinations.init(_app.model.fetchCartID(),{},'mutable'); //needed for country list in address editor.
 	_app.model.addDispatchToQ({"_cmd":"buyerAddressList","_tag":{'callback':'tlc','jqObj':$('.mainColumn',$context),'verb':'translate','datapointer':'buyerAddressList'}},'mutable');

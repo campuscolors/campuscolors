@@ -2101,7 +2101,7 @@ if you change these, you should move them above this comment so that when you (o
 						If you would like to make an exchange or return, please follow the instructions below.
 					</h3>
 					<p>
-						Step 1. Call Campus Colors at 866&#45;598&#45;CAMPUS &#40;2267&#41; or e&#45;mail us at service&#64;campuscolors.com 
+						Step 1. Call Campus Colors at 866&#45;598&#45;CAMPUS &#40;2267&#41; or e&#45;mail us at support&#64;campuscolors.com 
 						within 30 days of the date of shipment to receive a return authorization number. For quicker processing have your receipt 
 						number which is in the upper corner of your sale receipt. Please note that all returns must be postmarked within 10 days of 
 						the date that the RMA number is issued or they will be refused.
@@ -2143,7 +2143,7 @@ if you change these, you should move them above this comment so that when you (o
 </div>
 
 
-<div id="shippingTemplate" class="clearfix companyTemplate wrapper">
+<div id="shippingTemplate" class="clearfix companyTemplate wrapper shippingTemplate">
 	<span class="displayNone" data-seo-title-shipping="Shipping Policy - Shop Campus Colors - The Authentic Off Campus College Store"></span>
 	<span class="displayNone" data-seo-desc-shipping="Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!"></span>
 	
@@ -2333,27 +2333,25 @@ if you change these, you should move them above this comment so that when you (o
 
 
 
-<div id="customerTemplate" class="clearfix smallButton wrapper customerTemplate">
 
-	<div class="sideline center arial" data-customer-sideline="1">
+
+<div id="customerSidelineTemplate" class="sideline center arial" data-customer-sideline="1">
 	<nav id="customerNav">
-	<ul class="listStyleNone noPadOrMargin">
-		<li><a href='/customer/subscriberLists'>Newsletter Subscription</a></li>
-		<li><a href="/customer/myaccount">My Account</a></li>
-		<li><a href="/customer/changepassword">Change Password</a></li>
-		<li><a href="/customer/orders">Order History</a></li>
-		<li><a href="/customer/lists">Manage Lists</a></li>
-		<li class="hideIfLoggedOut"><a href="/customer/logout">Log Out</a></li>
-	</ul>
+		<ul class="listStyleNone noPadOrMargin">
+			<!-- <li><a href='/customer/subscriberLists'>Newsletter Subscription</a></li> -->
+			<li><a href="/my_account/" rel="nofollow">MY ACCOUNT</a></li>
+			<li><a href="/change_password/" rel="nofollow">CHANGE PASSWORD</a></li>
+			<li><a href="/my_order_history/" rel="nofollow">ORDER HISTORY</a></li>
+			<li><a href="/my_wishlist/" rel="nofollow">MANAGE LISTS</a></li>
+			<!-- <li class="hideIfLoggedOut" rel="nofollow"><a href="/customer/logout/">Log Out</a></li> -->
+		</ul>
 	</nav>
-	</div>
+</div>
 
+<div id="newsletterTemplate">
 	<div class="mainColumn">
 <!-- .textContentArea is used as a selector because IE8 doesn't play well  with tag type article as a selector -->
-
-<!--
-newsletterArticle is intended for buyers who are not logged in or do not have an account.
--->
+<!-- newsletterArticle is intended for buyers who are not logged in or do not have an account. -->
 		<div id="newsletterArticle" class="displayNone textContentArea">
 			<h1>Subscribe to our Newsletter and Save!</h1>
 			<form action="#" name="subscribeFrm" data-app-submit="quickstart|subscribeSubmit" class='alignedForm'>
@@ -2362,13 +2360,12 @@ newsletterArticle is intended for buyers who are not logged in or do not have an
 					<input placeholder="email address" maxlength="50" size="30" required name="email" value="" type="email" data-tlc="bind $var '.customer.login'; if(is $var --notblank;) {{apply --select=$var;}};">
 					</label>
 				</fieldset>
-				
 				<fieldset data-tlc="apply --empty; bind $var '.@lists'; controller#loop --templateid='subscriberListItemTemplate'; apply --append;" class="borderNone subscriberLists"></fieldset>
-			
 				<input class="applyButton" value="Subscribe" type="submit">
-			
 			</form>
 		</div>
+	</div>
+</div>
 <!--
 subscribeListsArticle is used for authenticated buyers.
 -->
@@ -2383,7 +2380,7 @@ subscribeListsArticle is used for authenticated buyers.
 
 		</div>
 
-		<div id="myaccountArticle" class="displayNone textContentArea">
+		<div id="myAccountTemplate" class="displayNone textContentArea">
 			<h1>My Account</h1>
 
 			<section>
@@ -2581,9 +2578,9 @@ subscribeListsArticle is used for authenticated buyers.
 			</div>
 		</div>
 
-	</div>
+	
 
-</div>
+
 
 
 <ul>

@@ -562,7 +562,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.productTemplateQuickView .prodSummaryContainer {width:90%; padding:0; float:none;}
 	.productTemplateQuickView .ccButton {width:40%}
 	
-	#shippingArticle h1 {font-size:1.4em;}
+	.shippingTemplate h1 {font-size:1.4em;}
 	.locationBlock {width:250px; float:left; margin:0 15px 0 0;}
 	.locationBlock:nth-child(odd) {float:right;}
 	.catSideline {width:173px; margin:0 20px 0 0; font-size:0.9em;}
@@ -656,7 +656,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	#product-modal .productTemplateQuickView .imageContainer, #product-modal .productTemplateQuickView .prodSummaryContainer {width:50%; float:left;}
 	.productTemplateQuickView .prodSummaryContainer {float:none;}
 	
-	#shippingArticle h1 {font-size:1.7em;}
+	.shippingTemplate h1 {font-size:1.7em;}
 	.locationBlock, .companyRight .sideline {width:300px;}
 	.catSideline {width:220px;}
 	.companyRight {padding:0 0 0 30px;}
@@ -685,7 +685,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.homeFeaturedCats .splashPageListTemplate {height:233px; width:330px;}
 	
 	.prodViewerContainer {width:948px;}
-	#shippingArticle h1 {font-size:1.8em;}
+	.shippingTemplate h1 {font-size:1.8em;}
 	.companyRight .sideline {margin:20px 21px 20px 0;}
 	
 	.chkButCont {float:right;}
