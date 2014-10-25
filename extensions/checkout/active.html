@@ -15,7 +15,11 @@ item list and summary are separate just to give more control over location.
 	<input data-tlc="bind $var '.cart.cartid'; if(is $var --notblank;) {{apply --select=$var;}}; " name="_cartid" type="hidden">
 
 <!-- define panel order -->
-	
+
+<div class="floatLeft noHovCCButton marginBottom pointer" onclick="$('.guestStartHere','.checkoutFormContainer').show();">Guest Checkout</div> <!-- campus remove after my account ready -->
+<div class="floatLeft existingPrompt marginBottom">Checkout as a Guest.</div> <!-- campus remove after my account ready -->
+
+<div class="displayNone accountTempDisable">
 	<div class="guestOrUser"> <!--campus-->
 		<div data-tlc="bind $var '.'; store_cc#toggleguestcheckout;" data-checkout-type="user"> <!--campus-->
 			<div class="floatLeft ccButton marginBottom" data-checkout-type="button">Sign In</div> <!--campus-->
@@ -26,6 +30,7 @@ item list and summary are separate just to give more control over location.
 			<div class="floatLeft existingPrompt marginBottom">Checkout as a Guest.</div> <!--campus-->
 		</div> <!--campus-->
 	</div> <!--campus-->
+</div>		
 		
 	<fieldset data-app-role="chkoutPreflight" class="marginBottom clear">
 		<legend class="headerPadding"><span>1. </span>CONTACT INFO</legend> <!--campus-->
@@ -122,6 +127,8 @@ item list and summary are separate just to give more control over location.
 	<h4 data-tlc="bind $var '.bill.email'; if(is $var --blank;) {{bind $var '.customer.login'; }}; if (is $var --notblank;) {{apply --append;}};" class="displayNone" data-app-role="username"></h4>
 	<span data-tlc="bind $var '.bill.email'; if(is $var --blank;) {{bind $var '.customer.login'; }}; store_cc#chkoutadduser;" class="displayNone"></span> <!--campus-->
 	
+	<div class="floatLeft guestStartHere redText displayNone">START HERE:</div>
+	
 	<div data-app-role="login">
 		<div class='marginBottom chkLoginCont'> <!--campus-->
 			<input data-tlc="bind $var '.bill.email'; if(is $var --blank;) {{bind $var '.customer.login'; }}; if(is $var --notblank;) {{apply --select=$var;}}; " required name="bill/email" size="30" placeholder="email address" data-app-blur="order_create|execBuyerEmailUpdate" type="email"><label>For order confirmation and tracking info</label><br> <!--campus-->
@@ -129,7 +136,9 @@ item list and summary are separate just to give more control over location.
 				<!-- <div>If you have an account with us, please enter your password below to login</div> campus -->
 				<input placeholder="password" size="30" name="password" type="password"><button class="applyButton ccButton" data-app-click="order_create|execBuyerLogin">Login</button> <!--campus-->
 			</div>
+<div class="displayNone accountTempDisable"> <!-- campus -->
 			<label class="accountCreateContainer"><input name="want/create_customer" data-app-change="order_create|tagAsAccountCreate" type="checkbox" >Create account&#63;</label> <!--campus-->
+</div> <!-- campus -->
 		</div>
 	</div>
 	<label class="displayNone"><input name="want/sign_in" checked=true type="checkbox" data-app-change="store_cc|tagAsSignIn" class="">Be a guest</label> <!--campus-->

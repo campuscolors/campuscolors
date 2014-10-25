@@ -223,6 +223,8 @@ var _robots = {
 	<div class="headerTop greyGradient">
 		<div class="headerMargin">
 			<div class="login floatRight hidePhone showTabletBlock showDesktopBlock">
+				Welcome, Guest&#33; <!-- remove this once my account ready -->
+<div class="displayNone accountTempDisable">
 				<span class="loginHide">
 					Welcome, Guest&#33; &#40;
 					<span class="pointer uYellowLink	 underline" onclick="myApp.ext.quickstart.u.showLoginModal();"> LOG IN</span> 
@@ -232,6 +234,7 @@ var _robots = {
 				</span>
 				<a href="/my_account/"><span class="loginShow username uYellowLink">myacc</span></a>
 				<a href="/customer/logout/"><span class="loginShow uYellowLink">LOG OUT</span></a>
+</div>
 			</div>
 			<div class="links">
 				<a href="/store_locations/" class="bareWhiteLink  showTablet showDesktop">STORE LOCATIONS |</a>
@@ -271,8 +274,10 @@ var _robots = {
 	<div class="mobileNav greenGradient hideTablet hideDesktop">
 		<div class="mobileMenu sprite pointer" data-app-click="store_cc|expandMobilNav"><span class="bareWhiteLink">Menu</span></div>
 		<span class="spacer"></span>
+<div class="displayNone accountTempDisable">
 		<a href="/customer/myaccount/" class="mobileAcct sprite"><span class="bareWhiteLink">Account</span></a>
 		<span class="spacer"></span>
+</div>				
 		<a href="tel:+18665982267" class="mobilePhone sprite"><span class="bareWhiteLink">Call</span></a>
 		<span class="spacer"></span>
 		<div onClick="myApp.ext.quickstart.u.showCartInModal({'templateID':'cartTemplate'});" class="mobileCart sprite"> <!-- href="/cart/" -->
@@ -860,7 +865,9 @@ var _robots = {
 						<li><a href="/frequently_asked_questions/">FAQ's</a></li>
 					</ul>
 					<ul class="listStyleNone footUL">
+<div class="displayNone accountTempDisable">
 						<li><a href="/customer/myaccount/">My Account</a></li>
+</div>
 						<li><a href="/privacy_policy/">Privacy Policy</a></li>
 						<li><a href="/about_us/">About Us</a></li>
 					</ul>
