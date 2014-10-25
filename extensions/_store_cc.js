@@ -75,33 +75,7 @@ var store_cc = function(_app) {
 			
 			addEventHandlers : {
 				onSuccess : function() {
-				
-					/**********************************
-						RYAN-
-						Anything still in this function, I have not yet handled.
-						This callback doesn't get called as part of the load process, though you could call it manually.
-					**********************************/
-					
-					
-					//createaccount page will be separate template, just change there
-					_app.templates.customerTemplate.on('complete.store_accountcreate',function(event,$context,infoObj) {
-						var $sideline = $('[data-customer-sideline]', $context);
-						if(infoObj.show == "createaccount") { $sideline.hide(); }
-						else { $sideline.show(); }
-					});
-					
-					//I know you've had issues with carts, so I left these here for you to convert and test
-					_app.templates.cartTemplate.on('complete.store_cc',function(event,$context,infoObj) {
-						_app.ext.store_cc.u.cartitemqty($context);
-						_app.ext.store_cc.u.getShipContainerHeight($context);
-					});
-					
 
-					
-					
-					
-					
-					
 				},
 				onError : function() {
 					dump('START store_cc.callbacks.addEventHandlers.onError');
@@ -1357,7 +1331,7 @@ var store_cc = function(_app) {
 											}
 											else {
 												//qty succesfully changed, tell them it's different
-												$thisCartItem.anymessage({"message":"There are only "+rd2.max+" of this item currently available. We appologize for any inconvinience, the quantity has been changed to "+rd.max+"."});
+												$thisCartItem.anymessage({"message":"There are only "+rd2.max+" of this item currently available. We appologize for any inconvinience, the quantity has been changed to "+rd2.max+"."});
 												var order = _app.data["cartDetail|"+rd2.thisCartID]["@ITEMS"];
 												for(var j = 0; j < order.length; j++) {
 													if(order[j].sku == rd2.thisSKU) { order[j].qty = rd2.max; }
@@ -1643,19 +1617,19 @@ var store_cc = function(_app) {
 				return false;
 			}, //tagAsSignIn
 			
-			cartModelCheckout : function($ele, p) {
+			//if modal cart is opened in checkout, removes checkout and reloads it to be sure any changes made in the cart are reflected in checkout
+			//if modal cart is not opened in checkout, goes to checkout.
+			cartModalCheckout : function($ele, p) {
 				p.preventDefault();
 				dump('START youarehere');
-				var docLocation = document.location;
-		dump(docLocation);
-				var goingTo = "#!" + $ele.data("you-are-here");
-				if(docLocation.hash == goingTo) {
-					$("#checkoutContainer").remove();
-					showContent("checkout");
+				//var goingTo = "/" + $ele.data("you-are-here");
+				if($("#mainContentArea :visible:first").attr('data-app-uri') == "/checkout/") {
+					$("#checkoutContainer").remove(); //kill the old checkout to be sure any changes made in the cart are updated. 
+					_app.ext.quickstart.a.newShowContent("checkout",{});
 					//$ele.closest('.ui-dialog-content').dialog('close');
 				}
 				else {
-					document.location.hash = goingTo;
+					_app.ext.quickstart.a.	newShowContent("checkout",{});
 					//_app.ext.quickstart.a.showContent($ele.data("you-are-here"));
 				}
 				

@@ -10,7 +10,7 @@ _app.u.loadScript(configURI,function(){
 	_app.vars.domain = zGlobals.appSettings.sdomain; //passed in ajax requests.
 	_app.vars.jqurl = (document.location.protocol === 'file:') ? _app.vars.testURL+'jsonapi/' : '/jsonapi/';
 	
-	var startupRequires = ['quickstart','store_cc', 'store_filter']
+	var startupRequires = ['quickstart','store_cc', 'store_filter','cco','store_product','order_create']
 	
 	_app.require(startupRequires, function(){
 		_app.ext.quickstart.callbacks.startMyProgram.onSuccess();
@@ -127,6 +127,10 @@ _app.couple('quickstart','addPageHandler',{
 			// _app.model.dispatchThis('mutable');
 			});
 		}
+	});
+_app.u.bindTemplateEvent('cartTemplate','complete.cart',function(event, $context, infoObj){
+	_app.ext.store_cc.u.cartitemqty($context);
+	_app.ext.store_cc.u.getShipContainerHeight($context);
 	});
 _app.u.bindTemplateEvent('cartTemplate','depart.destroy',function(event, $context, infoObj){
 	var $page = $context.closest('[data-app-uri]');
