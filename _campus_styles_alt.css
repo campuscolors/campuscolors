@@ -323,8 +323,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 .selectWrapper .sprite {height:40px; width:20px; position:absolute; top:10px; right:5px; background-position:0 0;}
 .qtySelect {height:35px; min-width:84px; margin:10px 5px; padding:6px 2px; color:#781c2b; display:inline-block; background:url("images/sprite_500x500.png") no-repeat scroll 25px -463px #ffffff; border:1px solid #781c2b; text-align:left;}
 .prodViewerAddToCartForm .numberInput {height:40px; border:1px inset #000000; text-align:center;}
-.productPage .addtocartbutton {height:50px; width:250px; color:#000000; font-size:2.1em; border-top:2px outset #fbe143; border-right:2px outset #000000; border-bottom:2px outset #000000; border-left:2px outset #fbe143; box-shadow:2px 2px 0 0 #cccccc; border-radius:0;}
-.productPage .addtocartbutton.orderSoon {width:170px; font-size:1.9em;}
+.productPage .addtocartbutton {height:50px; width:170px; color:#000000; font-size:2em; border-top:2px outset #fbe143; border-right:2px outset #000000; border-bottom:2px outset #000000; border-left:2px outset #fbe143; box-shadow:2px 2px 0 0 #cccccc; border-radius:0;}
 [data-order-soon='1'] {height:0; overflow:hidden;}
 .latency {width: 290px; margin:10px auto; color:#194835; font-size:1.2em; background-color:#eeeeee; border:2px solid #cccccc; box-shadow:2px 2px 0 0 #cccccc; padding:7px 0;}
 .latency .sprite {height:12px; width:16px; background-position:-351px -117px; display:inline-block;}
@@ -475,6 +474,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.mainPage a {height:25px; width:25px;}
 	.productList.ccList > li {height:106px; margin:5px 5px 118px 5px;}
 	.ccList .prodInfo {height:110px; bottom:-112px;}
+	.productPage .addtocartbutton {font-size:1.5em;} 
 	.chkoutPayMethods {font-size:1em;}
 	.checkoutFormContainer fieldset .panelContent.chkoutCartContents {padding:1em; font-size:1em;}
 }
@@ -569,7 +569,6 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.moneyBefore, .moneyAfter {top:20px;}
 	.prodSummaryUpper, .latency, .prodSummaryLower {width:auto; margin-bottom:20px; background-color:#eeeeee; border:2px solid #cccccc; box-shadow:2px 2px 0 0 #cccccc;}
 	.qtyATCWraper {width:80%;}
-	.productPage .addtocartbutton.orderSoon {width:160px; font-size:1.5em;}
 	.latency, .fitTip {padding:20px;}
 	.latency div[data-slide="toggle"] {margin:1em 0 0 0; padding:0;}
 	.productPage .addtocartbutton {padding:0;}
@@ -679,8 +678,8 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.basePrice {font-size:3em;}
 	.sizeOption:hover {background:#b75970;}
 	.sizeOption.selectedSize:hover{background:#ffffff;}
+	.productPage .addtocartbutton {width:220px; font-size:2em;}
 	.productPage .addtocartbutton:hover {background:#781c2b; color:#ffffff; border-left:2px outset #b75970; border-top:2px outset #b75970;}
-	.productPage .addtocartbutton.orderSoon {width:210px; font-size:1.9em;}
 	
 	#product-modal .productTemplateQuickView .imageContainer, #product-modal .productTemplateQuickView .prodSummaryContainer {width:50%; float:left;}
 	.productTemplateQuickView .prodSummaryContainer {float:none;}
