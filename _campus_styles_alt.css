@@ -287,9 +287,9 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 /*.productList.ccList > li {height:auto; width:30%; border:5px solid #000000; position:relative;}
 .fluidList.ccList > li {margin:1em 0 1em 1.9em;}
 */
-.productList.ccList > li {height:106px; margin:5px 5px 88px 5px;}
+.productList.ccList > li {height:96px; margin:5px 5px 108px 5px;}
 .ccList .prodThumbContainer img {height:auto; max-width:100%;}
-.ccList .prodInfo {height:80px; width:100%; background-color:rgba(1,1,1,0.5); position:absolute; bottom:-82px; left:0; padding:10px; text-align:center;}
+.ccList .prodInfo {height:100px; width:100%; background-color:rgba(1,1,1,0.5); position:absolute; bottom:-102px; left:0; padding:10px; text-align:center; overflow:hidden;}
 .ccList .prodInfo .ourPrice, .ccList .prodInfo .wasPrice, .ccList .prodInfo .nowPrice {font-weight:bold;}
 .ccList .prodInfo .wasPrice .pricePre {text-decoration:none;}
 .ccList .prodInfo .wasPrice {text-decoration:line-through;}
@@ -459,9 +459,14 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 
 
 @media screen and (min-width:400px) {
+	.hidePhoneLand {display:none;}
+	.showPhoneLand {display:inline;}
+	.showPhoneLandBlock {display:block;}
 	.headerTop {height:36px;}
-	.links {width:84%;}
+	.links {width:84%; text-align:center;}
 	.mainPage a {height:25px; width:25px;}
+	.productList.ccList > li {height:106px; margin:5px 5px 118px 5px;}
+	.ccList .prodInfo {height:110px; bottom:-112px;}
 }
 
 @media screen and (min-width : 768px) {
@@ -473,7 +478,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.secTitle {text-align:right;}
 	
 	.headerTop {font-size:0.60em;}
-	.links {width:67%; float:left;}
+	.links {width:67%; float:left; text-align:left;}
 	.headerMid {height:90px;}
 	.login, .links, .upperCartWrapper {margin:0.8em auto 0 auto;}
 	.logo {width:55%; display:inline-block;}
@@ -543,7 +548,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.filterGroupTitle {width:100%; padding:4px 4px 4px 10px; border-bottom:2px solid #000000; border-top:none; border-left:none; border-right:none;}
 	.filterHider {max-height:210px; padding:0 0 0 15px; margin:0 0 10px 0; overflow-y:auto; overflow-x:hidden;}
 	.splashPageListTemplate .title {height:67px; bottom:0; color:#ffffff; background-color:rgba(1,1,1,0.5);}
-	.ccList .prodInfo {bottom:0;}
+	.ccList .prodInfo {height:80px; bottom:0;}
 	
 	.prodViewerContainer {width:728px; margin:0 auto;}
 	.imageContainer, .prodSummaryContainer {width:50%; float:left;}
