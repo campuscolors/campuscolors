@@ -68,7 +68,7 @@ item list and summary are separate just to give more control over location.
 			</div>
 		</fieldset>
 
-		<fieldset data-app-role="chkoutAddressShip" data-app-addresstype="ship" class="displayNone marginBottom">
+		<fieldset data-app-role="chkoutAddressShip" data-app-addresstype="ship" class="displayNone marginBottom shipInfo">
 			<legend class="headerPaddingchk plainLegend">Shipping Address</legend> <!--campus-->
 			<div data-tlc="bind $var '.@ship'; controller#loop --templateid='chkoutBuyerAddressTemplate'; if (is $var --notblank;) {{apply --append;}};" class="panelContent displayNone addressList" data-app-role="addressExists"></div><!-- for return customers -->
 			<div data-tlc="bind $var '.'; transmogrify --dataset=$var --templateid='chkoutAddressShipTemplate'; apply --append;" class="panelContent" data-app-role="addressNew"></div><!-- for new customers -->

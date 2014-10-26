@@ -441,7 +441,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 .checkoutFormContainer .ccButton .ui-button-text {padding:0;}
 .checkoutFormContainer.customCheckout fieldset {padding:0; border:none;}
 .checkoutFormContainer fieldset legend, .checkoutFormContainer .fauxFieldset legend {width:100%; background:#cccccc; border:none; color:#781c2b; padding:0.2em 1em; font-family:Arial, sans-serif; font-weight:bold;}
-.checkoutFormContainer fieldset.shipInfo {width:50%; float:left;}
+.checkoutFormContainer fieldset.shipInfo {width:100%;}
 .shipCenter {width:70%; margin:0 auto;}
 .checkoutFormContainer .shipCenter input {width:100%;}
 .checkoutFormContainer .shipCenter input[type='checkbox'] {width:auto;}
@@ -594,6 +594,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.cartButtons .continueShoppingSpan {float:none; margin:0 auto 5px auto;}
 	.cartStuffContainer .moveToWishlist {height:1.4em; width:1.4em; margin-top:4px;}
 	
+	.checkoutFormContainer fieldset.shipInfo {width:49%; float:left;}
 	.checkoutSuccess {padding:30px;}
 	.orderContentsProdlistContainer .prodThumbContainer {border:2px solid #000000; box-shadow:2px 2px 0 0 #cccccc;}
 	.infoContainer {margin:0 10px 0 0;}
