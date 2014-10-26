@@ -104,7 +104,7 @@ item list and summary are separate just to give more control over location.
 <!-- line items -->	
 	<fieldset data-app-role="chkoutCartItemsList" class="marginBottom">
 		<legend class="headerPadding"><span>5. </span>CONTENTS</legend> <!--campus-->
-		<div data-tlc="bind $var '.'; transmogrify --dataset=$var --templateid='chkoutCartContentsTemplate'; apply --append;" class="panelContent"></div>
+		<div data-tlc="bind $var '.'; transmogrify --dataset=$var --templateid='chkoutCartContentsTemplate'; apply --append;" class="panelContent chkoutCartContents"></div> <!-- campus -->
 	</fieldset>
 
 
@@ -285,7 +285,7 @@ do NOT change any div id's or messaging will not work properly.
 		
 		<h2 data-app-role="nonStoredPaymentsHeader" class="displayNone">More Payment Choices</h2>
 		<div data-app-role="nonStoredPaymentsContent">
-			<div data-tlc="bind $var '.cart.cartid'; order_create#paymethodsasradiobuttons  --legacy;"></div>
+			<div data-tlc="bind $var '.cart.cartid'; order_create#paymethodsasradiobuttons  --legacy;" class="chkoutPayMethods"></div> <!-- campus -->
 		</div>
 		
 		<h2 data-app-role="storedPaymentsHeader" class="displayNone">Your Stored Payments</h2>
