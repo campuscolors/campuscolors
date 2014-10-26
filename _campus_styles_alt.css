@@ -225,8 +225,8 @@ header {position:relative;}
 .homeBanner .mainBanImageCont {width:300px;}
 .homeBanner img {height:auto; max-width:100%;}
 .homeBannerCont {position:relative;}
-.mainPageCont {position:absolute; right:60px; bottom:10px; z-index:2;}
-.mainPage a {height:15px; width:15px; background-color:#fbe143; color:#194835; margin:0 5px; padding:2px 0 0 0; display:inline-block; text-decoration:none;}
+.mainPageCont {position:absolute; right:31px; bottom:5px; z-index:2;}
+.mainPage a {height:19px; width:19px; background-color:#fbe143; color:#194835; margin:0 5px; padding:2px 0 0 0; display:inline-block; text-decoration:none;}
 .mainPage a.selected {background-color:#194835; color:#fbe143;}
 .mainPrev, .mainNext {height:18px; width:17px; background-position:-430px -120px; display:inline-block; margin:0 15px; display:none;}
 .mainNext {background-position:-410px -120px;}
@@ -490,7 +490,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.standardNav .levelOne .levelTwo {background-color:#781c2b; padding:0 0 0 20px; box-shadow:2px 2px 2px 0 #000000; text-shadow:2px 2px 2px #000000; cursor:default; font-weight:normal;} /* width:217px;  */
 	.standardNav .levelOne .levelTwo a {width:50%; padding:2px 0; font-size:1em; border:none; float:left; text-align:left;}
 	.standardNav .levelOne .levelTwo.teamDrop {height:0; width:768px; max-width:768px; transition: all 0.4s; padding:0 10px; column-count:5; -moz-column-count:5; -webkit-column-count:5;} /*columns will be alpha by row in IE9*/
-	.standardNav .levelOne .levelTwo.teamDrop.expand {height:200;}
+	.standardNav .levelOne .levelTwo.teamDrop.expand {height:200px;}
 	.standardNav .levelOne .levelTwo.teamDrop a {height:20px; width:135px; margin:2px 10px; overflow:hidden;}
 	.standardNav .levelOne .levelTwo.ncaaDrop {left:-39px;}
 	.standardNav .levelOne .levelTwo.ncaaDrop.expand {height:1070px;}
@@ -498,7 +498,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.standardNav .levelOne .levelTwo.nbaDrop {left:-211px;}
 	.standardNav .levelOne .levelTwo.mlbDrop {left:-297px;}
 	.standardNav .levelOne .levelTwo.nhlDrop {left:-383px;}
-	.standardNav .levelOne .levelTwo.nhlDrop {height:230px;}
+	.standardNav .levelOne .levelTwo.nhlDrop.expand {height:230px;}
 	
 	.footBG1 {height:740px; background-color:#9e9e9e;}
 	.footLeft {width:40%; position:relative; z-index:1;}
@@ -524,6 +524,8 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	
 	.homeBanner {max-height:268px;}
 	.homeBanner .mainBanImageCont {width:700px;}
+	.mainPageCont {right:40px; bottom:10px;}
+	.mainPage a {height:15px; width:15px;}
 	.homeFeaturedCats .splashPageListTemplate {height:219px; width:310px; margin:0 10px; display:inline-block; padding:0;}
 	.homeFeaturedCats .splashPageListTemplate .title {heigth:auto; padding:10px;}
 	.homeBestSell {max-height:310px;}
@@ -622,6 +624,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 /*	.footerTopBrandCarWrap {width:950px;}*/
 	
 	.homeMain {width:75%; float:right;}
+	.mainPageCont {right:22px;}
 	.homeVertNav {width:220px; padding:5px 5px 0 5px; position:relative;} /* compat-max-width:230px */
 	.vertNavBorder {border-left:3px solid #ffffff; border-right:3px solid #ffffff; border-top:3px solid #ffffff; border-radius:4px 4px 0 0; pading:0 0 11px 0;}
 	.vertNavTitle {font-size:12px;}
@@ -691,6 +694,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.standardNav .levelOne .levelTwo.nhlDrop {left:-540px;}
 	.standardNav .levelOne .levelTwo.teamDrop a {width:165px;}
 	.homeMainWrapper {width:1080px; margin:0 auto;}
+	.mainPageCont {right:60px;}
 	.homeFeaturedCats .splashPageListTemplate {height:233px; width:330px;}
 	
 	.prodViewerContainer {width:948px;}
