@@ -488,7 +488,6 @@ var store_cc = function(_app) {
 			
 /* PRODUCT PAGE TLC */
 			teamupsell : function(data,thisTLC) {
-				//#!team-apparel-merchandise/duke-blue-devils-apparel-merchandise.html
 				var $tag = data.globals.tags[data.globals.focusTag];
 				var prod = data.globals.binds.var;
 				var teamCode = prod['%attribs']['user:team_code'];
