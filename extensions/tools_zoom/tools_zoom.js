@@ -104,7 +104,8 @@ these extensions.
 				
 					//create containers & classes for images
 				var $mainImageCont = $('<div class="mainImageCont_'+data.value.pid+'"></div>');
-				
+	//check for below tablet res and don't add zoom in that case
+	if(screen.width >=768) {			
 					//if the zoom will not be in the original image container, different properties are needed
 				if($tag.data('zoomclass')) {
 					var $zoomImageCont = $('<div class="displayNone '+$tag.data('zoomclass')+' '+$tag.data('zoomclass')+'_'+data.value.pid+'"></div>');
@@ -124,7 +125,8 @@ these extensions.
 					var zoomImageClass = '.mainImageCont_'+data.value.pid;
 					$tag.append($mainImageCont)
 				}
-				
+	}
+	else { $tag.append($mainImageCont); }
 				
 				$mainImageCont = $('.mainImageCont_'+data.value.pid,$tag);
 								
@@ -149,7 +151,8 @@ these extensions.
 				if(data.bindData.hrefattr) {
 					$tag.attr({'href':_app.u.makeImage({'name':image,'w':data.bindData.w,'h':data.bindData.h,'b':data.bindData.b}),'rel':'lightbox[prodPageMain_'+pid+']'})
 				}
-				
+	//check for below tablet res and don't add zoom in that case
+	if(screen.width >=768) {			
 					//create zoom image
 				var zoomURL = _app.u.makeImage({
 					"name" 	: image,
@@ -184,7 +187,7 @@ these extensions.
 						}
 					);
 				}
-				
+	}			
 					//if isthumbs is set then add thumbnails, if not... don't.
 					//if no prod_image2, likely there are no thumbnails, don't create the container
 					//and fill it w/ a redundant image (may need a better check form the same image later).
