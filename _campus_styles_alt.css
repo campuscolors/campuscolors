@@ -280,8 +280,8 @@ header {position:relative;}
 .filterButton {width:40%; margin:0 5px 10px 5px; display:inline-block;}
 .filterButton.redGradient {color:#ffffff; padding:1px 8px; border:2px outset #b75970; box-shadow:2px 2px 0 0 #cccccc;}
 div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;}
-.botLinksCont {width:100%; margin:10px 0; text-align:center; clear:both;}
-.botLink {margin:0 10px; color:#000000; }
+.botLinksCont {width:95%; margin:10px auto; text-align:center; clear:both;}
+.botLink {margin:5px 10px; color:#000000; display:inline-block;}
 
 /* productListTemplateResultsNoPreview */
 /*.productList.ccList > li {height:auto; width:30%; border:5px solid #000000; position:relative;}
