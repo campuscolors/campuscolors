@@ -437,6 +437,7 @@ var store_cc = function(_app) {
 							$a.attr('href',thishref);
 							$tag.append($a);
 						}
+					}
 				},
 				
 /*PRODUCT LIST TLC*/	
