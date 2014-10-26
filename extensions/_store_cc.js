@@ -910,8 +910,9 @@ var store_cc = function(_app) {
 				if($target.data('isCarousel'))	{$target.trigger('play');} //only make it a carousel once, but make sure it always scrolls
 				else {
 					var width = "700px";
-					var carWidth = "95%";
-					if(screen.width < 768) { width = "300px"; carWidth = "100%";} 
+					var carWidth = "100%";
+					if(screen.width > 959) { carWidth="95%"; }
+					if(screen.width < 768) { width = "300px";} 
 					$target.data('isCarousel',true);
 					//for whatever reason, caroufredsel needs to be executed after a moment.
 					setTimeout(function(){
@@ -1090,7 +1091,7 @@ var store_cc = function(_app) {
 							$wrapper.append(_app.ext.store_cc.u.makeBanner(thisBanner,bannerWidth,bannerHeight,"ffffff"));
 							$container.removeClass('loadingBG').append($wrapper);
 						}
-						_app.ext.store_cc.u.runHomeMainBanner($($context));
+						_app.ext.store_cc.u.runHomeMainBanner($context);
 					}
 					else {
 						setTimeout(this.showHomepageBanners,250);
