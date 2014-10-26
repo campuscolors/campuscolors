@@ -225,7 +225,7 @@ header {position:relative;}
 .homeBanner .mainBanImageCont {width:300px;}
 .homeBanner img {height:auto; max-width:100%;}
 .homeBannerCont {position:relative;}
-.mainPageCont {position:absolute; right:31px; bottom:5px; z-index:2;}
+.mainPageCont {position:absolute; right:11px; bottom:5px; z-index:2;}
 .mainPage a {height:19px; width:19px; background-color:#fbe143; color:#194835; margin:0 5px; padding:2px 0 0 0; display:inline-block; text-decoration:none;}
 .mainPage a.selected {background-color:#194835; color:#fbe143;}
 .mainPrev, .mainNext {height:18px; width:17px; background-position:-430px -120px; display:inline-block; margin:0 15px; display:none;}
@@ -533,7 +533,6 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.homeBanner {max-height:268px;}
 	.homeBanner .mainBanImageCont {width:700px;}
 	.mainPageCont {right:40px; bottom:10px;}
-	.mainPage a {height:15px; width:15px;}
 	.homeFeaturedCats .splashPageListTemplate {height:219px; width:310px; margin:0 10px; display:inline-block; padding:0;}
 	.homeFeaturedCats .splashPageListTemplate .title {heigth:auto; padding:10px;}
 	.homeBestSell {max-height:310px;}
