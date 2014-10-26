@@ -1638,9 +1638,9 @@ var store_cc = function(_app) {
 				//dismissDrop is in utils and runs on any template depart
 				$ele.removeAttr('data-app-click');
 				//if a dropdown is open, and another is clicked, lets make sure all are ready to open again later but close them before opening a new one.
-				$("[data-app-click='store_cc|dismissDrop']",".standardNav").each(function(){ $(this).attr("store_cc|expandDrop"); });
+				$("[data-app-click='store_cc|dismissDrop']",".standardNav").each(function(){ $(this).attr("data-app-click","store_cc|expandDrop"); });
 				$("[data-dropnav]",".standardNav").each(function(){ $(this).removeClass("expand"); });
-				$ele.attr('data-app-click','store_cc|dismissDrop'); //make sure this one is ready to close when if clicked later.
+				$ele.attr('data-app-click','store_cc|dismissDrop'); //make sure this one is ready to close if clicked later.
 				$("[data-dropnav]",$ele).addClass("expand"); //the class that does the magic
 				$(".sprite",$ele).addClass("openMenu"); //turn arrow in mobile menu to show menu can be closed
 				dump("clicked expand");
