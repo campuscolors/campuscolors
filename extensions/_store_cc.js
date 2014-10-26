@@ -403,12 +403,15 @@ var store_cc = function(_app) {
 					$tag.append($bread);
 				}, //addbreadcrumb
 				
+				//adds type links (shorts, shirts, etc.) to bottom of product lists to allow crawlers to get to the type pages for each.
+				//this is because there are typically no links to them anywhere else. 
 				addbotlinks : function(data,thisTLC) {
-					var hash = document.location.hash;
-					if(hash.indexOf("team") != -1 || hash.indexOf("league") != -1) {
+					var hash = data.globals.binds.var.link; //dump(hash); 
+					if(hash && (hash.indexOf("team") != -1 || hash.indexOf("league") != -1)) {
 						var $tag = data.globals.tags[data.globals.focusTag];
 						var deezEnds = ["all","shorts","t-shirts","sweatshirts","jerseys","pants","hats","novelties-and-accessories"]
 						var hashArray = hash.split("/")
+//						dump('hashArray'); dump(hashArray);
 						var thisEnd = hashArray[hashArray.length-2];
 						var thisTeam = hashArray[hashArray.length-3];
 						var newHash = "";
@@ -423,6 +426,7 @@ var store_cc = function(_app) {
 						for(var i = 0; i < hashArray.length-2; i++) {
 							newHash += hashArray[i] + "/";
 						}
+
 						for(var j = 0; j < deezEnds.length; j++) {
 							var $a = $("<a class='botLink'></a>");
 //							dump(deezEnds[j]);
@@ -433,14 +437,6 @@ var store_cc = function(_app) {
 							$a.attr('href',thishref);
 							$tag.append($a);
 						}
-						
-						
-//						dump('new hash: '); dump(newHash);
-			/*			var team = hash[hash.length-3];
-						if(hash[hash.length-2] == "all") {
-							dump('this be d hash mon'); dump(hash);
-						}
-		*/			}
 				},
 				
 /*PRODUCT LIST TLC*/	
