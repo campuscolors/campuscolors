@@ -25,6 +25,7 @@
 	
 //console.log('');
 		function genJSON(input,$form) {
+//			var includeList = ["Brazil National Team","Chicago Fire","DC United","France National Team"]; //for testing
 			var $optionList = $('.optionList',$form);
 			var $addType = $('.addType',$form);
 			var $typeList = $('.typeList',$form);
@@ -33,12 +34,18 @@
 			var raw = input.split('\n');
 			var pages = [];
 			var siteMapLinksOnly = false;		//condition used to generate links for the node sitemap
-			var siteMapLinks = [];				//stores the links for the node sitemap
+			var siteMapLinks = [];					//stores the links for the node sitemap
 			
+			//they may only want to include certain teams, rebuild the data excluding those not in their list if so
+			if($("input[type=checkbox]",".inclusionList").prop('checked') === true) {
+				var includeList = $("textarea",".inclusionList").val().split("\n");
+//				console.log(includeList)	;			
+				raw = genIncludedArray(raw, includeList);
+			}
 			
 			//make the rootCatgory JSON
 			var rootCat = genRootCat(raw[0],raw[1]); //make the rootCatgory JSON
-			var rootPath = "#!"+raw[1].split('\t')[0].toLowerCase()+"/";
+			var rootPath = "/"+raw[1].split('\t')[0].toLowerCase()+"/";
 			if(siteMapLinksOnly) { siteMapLinks.push(rootPath); }  //store the root category path for sitemap
 //			console.log(rootPath);
 
@@ -93,7 +100,7 @@
 		};
 		
 		
-		//will generate a leaf subCategory for categories with product type: #!rootCat/subCat/leafCat/, and will have a product list in it.
+		//will generate a leaf subCategory for categories with product type: /rootCat/subCat/leafCat/, and will have a product list in it.
 		function genTypeSubCat(attrib,subPath,optionArray,$typeList, multiSubCat, siteMapLinksOnly) {
 			var typeSubCatArray = []; //what gets returned, an array of each page list object generated.
 			var typeArray = ["All"]; //an array to hold the types of subcats that need to be generated
@@ -163,7 +170,7 @@
 			return typeSubCatArray;
 		}
 		
-		//will generate a subCategory for categories with a product type: #!rootCat/subCat/, and will have a listing of type categories in it.
+		//will generate a subCategory for categories with a product type: /rootCat/subCat/, and will have a listing of type categories in it.
 		function genTypeCat(attrib,rootPath,optionArray,siteMapLinksOnly) {
 			console.log(attrib); console.log(rootPath); console.log(optionArray);
 			var typeCat = {};
@@ -192,7 +199,7 @@
 			else { return typeCat; }  //otherwise, return the whole cat object that was built. 
 	/*	sample data (it should look somewhat like this)	
 			"id": "duke-blue-devils-apparel-merchandise/",
-			"link": "#!test-ncaa-team-apparel-merchandise/duke-blue-devils-apparel-merchandise/",
+			"link": "/test-ncaa-team-apparel-merchandise/duke-blue-devils-apparel-merchandise/",
 			"img": "",
 			"name": "Duke Blue Devils Apparel & Merchandise",
 			"page-title": "Duke Blue Devils Apparel & Merchandise | CampusColors.com",
@@ -204,7 +211,7 @@
 	*/		
 		}
 		
-		//will generate a leaf subCategory when there is only root/sub/product: #!rootCat/subCat/leafCat, and will have a product list in it.
+		//will generate a leaf subCategory when there is only root/sub/product: /rootCat/subCat/leafCat, and will have a product list in it.
 		function genSubCat(attrib,rootPath,optionArray, multiSubCat, siteMapLinksOnly) {
 //			console.log(attrib);
 			var subCat = {"baseFilter" : {"term" : {}},"options" : {"base_price" : {"min" : 0}}};
@@ -279,12 +286,36 @@
 			if(desc[desc.length-1] == '\"') { desc = desc.substring(0,desc.length-1); }
 //			console.log(desc);
 			return desc;
-		}  
+		};
+		
+		//pass the array of data for category generation and an array of teams (by team long) to be included in the category generation.
+		//will return an array without the teams not in the inclusion array.
+		function genIncludedArray(raw, includeList) {
+			var includedArray = [];
+			var processArray = raw.slice(0,3);
+			includedArray.push.apply(includedArray,processArray);
+//			console.log(includedArray);
+						
+			for(var o = 0; o < includeList.length; o++) {		
+				for(var p = 3; p < raw.length; p++) {
+					var thisRaw = raw[p].split("\t");
+//					console.log(includeList[o]); console.log(thisRaw[0]);
+					if(includeList[o] == thisRaw[0]) { 
+						processArray.length = 0;
+						processArray = raw.slice(p,p+1);
+						includedArray.push.apply(includedArray,processArray);
+					}
+				}
+			}
+//			console.log(includedArray);
+			
+			return includedArray
+		};
 	</script>
 	
 	<style>
 	body {width:80%; margin:0 auto;}
-	textarea {width:50%; height:400px;}
+	textarea {width:50%; height:100px;}
 	code {border: 1px solid #000000; display:block;  margin:20px 0 0; padding:10px; width:50%;}
 	</style>
 </head>
@@ -320,14 +351,20 @@
 			<br>
 		</div>
 		<div class="typeList">
-			<div>Check a box below to include that sub-category in the team category results:</div>
+			<div>Check a box below to include that sub-category in the team or league category results:</div>
 			<input type="checkbox" value="Shorts"/>Shorts
 			<input type="checkbox" value="T-Shirts"/>T-Shirts
 			<input type="checkbox" value="Sweatshirts"/>Sweatshirts
 			<input type="checkbox" value="Jerseys"/>Jerseys
 			<input type="checkbox" value="Pants"/>Pants
 			<input type="checkbox" value="Hats"/>Hats
-			<input type="checkbox" value="Novelties & Accessories"/>Accessories
+			<input type="checkbox" value="Novelties & Accessories"/>Accessories <br>
+			<br>
+		</div>
+		<div class="inclusionList">
+			<div>Check the box below and enter a tab delimited list of team long data to exclude any teams (ONLY BUILT FOR TEAM CATEGORIES) from the category results:</div>
+			<input type="checkbox" value="excludeTeams"/>Include these teams, exclude any others. <br>
+			<textarea required="required" name="inclusionList"></textarea>
 		</div>
 		<button onClick="genJSON($('textarea[name=productList]',$(this).parent()).val(),$('#form')); return false;">Generazizate</input>
 	</div>
