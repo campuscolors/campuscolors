@@ -589,7 +589,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.shippingTemplate h1 {font-size:1.4em;}
 	.locationBlock {width:250px; float:left; margin:0 15px 0 0;}
 	.locationBlock:nth-child(odd) {float:right;}
-	.catSideline {width:173px; margin:0 20px 0 0; font-size:0.9em;}
+	.catSideline {width:183px; margin:0 20px 0 0; font-size:0.9em;}
 	.catSideline .ui-accordion-content {padding:0.5em;}
 	.companyRight {float:left; width:73%;}
 	.companyRight .sideline {width:250px; margin:20px 16px 20px 0;}
@@ -686,7 +686,6 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	
 	.shippingTemplate h1 {font-size:1.7em;}
 	.locationBlock, .companyRight .sideline {width:300px;}
-	.catSideline {width:220px;}
 	.companyRight {padding:0 0 0 30px;}
 	
 	.logContainer {width:31%;}
@@ -715,6 +714,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	
 	.prodViewerContainer {width:948px;}
 	.shippingTemplate h1 {font-size:1.8em;}
+	.catSideline .vertDropout {left:88px;}
 	.companyRight .sideline {margin:20px 21px 20px 0;}
 	
 	.chkButCont {float:right;}
