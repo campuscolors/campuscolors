@@ -801,15 +801,16 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 	<div data-tlc="bind $var '.'; store_cc#addbotlinks;" class="botLinksCont"></div>
 </div>
 
-<div id="vertNavTemplate" class="homeVertNav redGradient floatRight hidePhone hideTablet showDesktopBlock">
+<div id="vertNavTemplate" class="homeVertNav redGradient floatRight hidePhone hideTablet showDesktopBlock standarNav">
 			<div class="vertNavBorder">
 				<div class="vertNavTitle whiteText marginTop">SHOP BY</div>
 				<!-- <div class="vertLinkCont marginTop"><a href="/test-ncaa-team-apparel-merchandise/" class="bareWhiteLink bold">Test College</a></div> -->
-				<div onmouseover="myApp.ext.store_cc.a.showDropOut($(this));" onmouseout="myApp.ext.store_cc.a.hideDropOut($(this));" class="vertLinkCont marginTop">
+			<!--	<div onmouseover="myApp.ext.store_cc.a.showDropOut($(this));" onmouseout="myApp.ext.store_cc.a.hideDropOut($(this));" class="vertLinkCont marginTop"> -->
+				<div data-app-click="store_cc|expandDrop" class="vertLinkCont marginTop pointer">
 					<!-- <a href="/ncaa-team-apparel-merchandise/" class="bareWhiteLink bold">College</a> -->
 					<!-- <a href="/league-apparel-merchandise/ncaa/all/" class="bareWhiteLink bold">College</a> -->
 					<div class="bareWhiteLink bold">College</div>
-					<div data-dropout="1" data-width=896 data-low-width=808 data-height=886 data-low-height=886 class="vertDropout">
+					<div data-dropnav="1" data-dropout="1" data-width=896 data-low-width=808 data-height=886 data-low-height=886 class="vertDropout">
 						<div class="dropoutPositioning">
 							<div class="dropoutVertNavCont">
 								<div class="vertNavBorder">
