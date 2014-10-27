@@ -364,7 +364,7 @@
 		<div class="inclusionList">
 			<div>Check the box below and enter a tab delimited list of team long data to exclude any teams (ONLY BUILT FOR TEAM CATEGORIES) from the category results:</div>
 			<input type="checkbox" value="excludeTeams"/>Include these teams, exclude any others. <br>
-			<textarea required="required" name="inclusionList"></textarea>
+			<textarea name="inclusionList"></textarea>
 		</div>
 		<button onClick="genJSON($('textarea[name=productList]',$(this).parent()).val(),$('#form')); return false;">Generazizate</input>
 	</div>
