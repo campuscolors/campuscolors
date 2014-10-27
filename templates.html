@@ -560,7 +560,7 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 	<div class="filterBreadCrumb" data-tlc="bind $bc '.breadcrumb'; store_cc#addbreadcrumb;"></div>
 
 	<h1 data-tlc="bind $var '.name'; apply --append;"></h1>
-	<div data-tlc="bind $var '.banner'; if(is $var --eq='blank') {{apply --hide;}};">
+	<div data-tlc="bind $var '.banner'; if(is $var --eq='blank') {{apply --tag --remove;}};">
 		<a class="splashBanner" data-tlc="bind $href '.bannerlink'; apply --attrib='href';">
 			<p data-tlc="bind $var '.promo'; apply --append;"></p>
 			<img data-tlc="bind $var '.banner'; apply --img --media=$var --class='splashBanner' --width=890 --height=234 --bgcolor='ffffff' --replace bind $alt '.banneralt'; apply --attrib='alt';" src="blank.gif" alt="" height="890" width="234">
@@ -576,7 +576,7 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 	<div class="filterBreadCrumb" data-tlc="bind $bc '.breadcrumb'; store_cc#addbreadcrumb;"></div>
 
 	<h1 data-tlc="bind $var '.name'; apply --append;"></h1>
-	<div data-tlc="bind $var '.banner'; if(is $var --eq='blank') {{apply --hide;}};">
+	<div data-tlc="bind $var '.banner'; if(is $var --eq='blank') {{apply --tag --remove;}};">
 		<a class="splashBanner" data-tlc="bind $href '.bannerlink'; apply --attrib='href';">
 			<p data-tlc="bind $var '.promo'; apply --append;"></p>
 			<img data-tlc="bind $var '.banner'; apply --img --media=$var --class='splashBanner' --width=890 --height=234 --bgcolor='ffffff' --replace bind $alt '.banneralt'; apply --attrib='alt';" src="blank.gif" alt="" height="890" width="234">
