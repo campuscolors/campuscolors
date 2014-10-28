@@ -228,8 +228,8 @@ header {position:relative;}
 .homeBanner {max-height:115px; margin:20px auto; text-align:center; overflow:hidden;}
 .homeBanner .mainBanImageCont {width:300px;}
 .homeBanner img {height:auto; max-width:100%;}
-.homeBannerCont {position:relative;}
-.mainPageCont {position:absolute; right:11px; bottom:5px; z-index:2;}
+.homeBannerCont {width:300px; position:relative;}
+.mainPageCont {position:absolute; right:1px; bottom:5px; z-index:2;}
 .mainPage a {height:19px; width:19px; background-color:#fbe143; color:#194835; margin:0 5px; padding:2px 0 0 0; display:inline-block; text-decoration:none;}
 .mainPage a.selected {background-color:#194835; color:#fbe143;}
 .mainPrev, .mainNext {height:18px; width:17px; background-position:-430px -120px; display:inline-block; margin:0 15px; display:none;}
@@ -548,9 +548,9 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	
 	.homeMainWrapper .homeVertNav.showTablet {display:none;}
 	.homeBanner {max-height:268px;}
-	.homeBannerCont {width:auto;}
+	.homeBannerCont {width:700px;}
 	.homeBanner .mainBanImageCont {width:700px;}
-	.mainPageCont {right:40px; bottom:10px;}
+	.mainPageCont {right:10px; bottom:10px;}
 	.homeFeaturedCats .splashPageListTemplate {height:219px; width:310px; margin:0 10px; display:inline-block; padding:0;}
 	.homeFeaturedCats .splashPageListTemplate .title {height:auto; padding:10px;}
 	.homeBestSell {max-height:310px;}
@@ -650,7 +650,16 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	
 	.homeMainWrapper .homeVertNav.showTablet.showDesktopBlock {display:block;}
 	.homeMain {width:75%; float:right;}
-	.mainPageCont {right:22px;}
+	.homeBannerCont {height:268px; width:680px; margin:20px auto;}
+	.mainPageCont {right:7px;}
+	.homeTopBrands {width:654px; margin:0 auto 10px auto;}
+	.homeMain .topBrandItem {height:30px; width:50px; margin:0 20px; background-position:0px -343px; background-repeat:no-repeat; overflow:hidden; display:inline-block;}
+	.homeMain .topBrandItem.adidasLogo {background-position:-99px -343px;}
+	.homeMain .topBrandItem.underArmorLogo {background-position:-51px -343px;}
+	.homeMain .topBrandItem.newEraLogo {background-position:-147px -343px;}
+	.homeMain .topBrandItem.reebokLogo {background-position:-424px -344px;}
+	.homeMain .topBrandItem.fortySevenLogo {background-position:-194px -343px;}
+	.homeMain .topBrandItem.retroLogo {background-position:-235px -343px;}
 	.homeVertNav {width:220px; padding:5px 5px 0 5px; position:relative;} /* compat-max-width:230px */
 	.vertNavBorder {border-left:3px solid #ffffff; border-right:3px solid #ffffff; border-top:3px solid #ffffff; border-radius:4px 4px 0 0; padding:0 0 11px 0;}
 	.vertNavTitle {font-size:12px;}
@@ -668,15 +677,6 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.vertLinkCont.ncaa .vertDropout .scrollDropout {height:886px}
 	.vertLinkCont.nhl .vertDropout .scrollDropout {height:180px}
 	.dropLinkCont {height:18px; width:135px; margin:1px 10px; overflow:hidden;  padding:2px 0; font-size:0.7em; border:none; text-align:left; float:left; font-weight:normal; text-shadow:2px 2px 2px #000000;}
-	.homeBanner {margin:20px;}
-	.homeTopBrands {width:654px; margin:0 auto 10px auto;}
-	.homeMain .topBrandItem {height:30px; width:50px; margin:0 20px; background-position:0px -343px; background-repeat:no-repeat; overflow:hidden; display:inline-block;}
-	.homeMain .topBrandItem.adidasLogo {background-position:-99px -343px;}
-	.homeMain .topBrandItem.underArmorLogo {background-position:-51px -343px;}
-	.homeMain .topBrandItem.newEraLogo {background-position:-147px -343px;}
-	.homeMain .topBrandItem.reebokLogo {background-position:-424px -344px;}
-	.homeMain .topBrandItem.fortySevenLogo {background-position:-194px -343px;}
-	.homeMain .topBrandItem.retroLogo {background-position:-235px -343px;}
 
 	.splashPageTemplate {width:920px;}
 	.splashBanner p {left:140px;}
@@ -723,7 +723,8 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.standardNav .levelOne .levelTwo.nhlDrop {left:-540px;}
 	.standardNav .levelOne .levelTwo.teamDrop a {width:165px;}
 	.homeMainWrapper {width:1080px; margin:0 auto;}
-	.mainPageCont {right:60px;}
+	.homeBannerCont {width:700px;}
+	.mainPageCont {right:5px;}
 	.vertDropout.expand {width:896px;}
 	.homeFeaturedCats .splashPageListTemplate {height:233px; width:330px;}
 	
