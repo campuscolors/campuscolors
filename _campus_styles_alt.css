@@ -137,7 +137,7 @@ header {position:relative;}
 .loginShow {display:none;}
 .buyerLoggedIn .loginShow {display:inline;}
 
-.headerMid {height:120px; padding:10px 0 0 0; background-color:white; border-top:2px solid #ccccccc;}
+.headerMid {height:120px; padding:10px 0 0 0; background-color:white; border-top:2px solid #cccccc;}
 .logo img {height:auto; max-width:100%; margin:0 auto;}
 
 .mobileNav{height:60px; width:100%; margin:20px 0 0 0; text-align:center; border-top:2px solid #7fb8a1;}
@@ -168,7 +168,7 @@ header {position:relative;}
 .mobileSlideMenu.mobileExpand {left:-5px;}
 .slideMenuBorder {border-right:3px solid #ffffff; border-bottom:3px solid #ffffff; border-radius:0 0 4px 0; padding:30px 0;}
 .mobileSlideMenu .levelOne, .mobileSlideMenu .levelOne .levelTwo > a  {width:100%; padding:10px 0 10px 12px; border-top:1px solid #adadad; position:relative; font-size:1.3em;}
-.mobileSlideMenu .levelOne.oneLevel a {display:block; color:#000000; text-decoration:none; font-size:1em; padding:0; border:none;} #781c2b
+.mobileSlideMenu .levelOne.oneLevel a {display:block; color:#000000; text-decoration:none; font-size:1em; padding:0; border:none;}
 .mobileSlideMenu .levelOne:hover, .mobileSlideMenu .levelOne.oneLevel:hover a {color:#fbe143;}
 .mobileSlideMenu .levelOne.slideTitle {font-size:2em; border:none;}
 .mobileSlideMenu .levelOne.slideTitle:hover {color:#000000;}
@@ -237,7 +237,7 @@ header {position:relative;}
 
 .homeBestSell {max-height:140px; width:100%; overflow:hidden;} 
 .homeBestSell .ccList {width:100%;float:none;}
-.homeBestSell .productList.ccList > li, {height:90px; width:76px; border:2px solid #000000; margin:1em;}
+.homeBestSell .productList.ccList > li {height:90px; width:76px; border:2px solid #000000; margin:1em;}
 .homeBestSell .productList.ccList .prodInfo {display:none;}
 
 
@@ -256,7 +256,7 @@ header {position:relative;}
 .splashPageListTemplate, .productList.ccList > li {height:96px; width:90px; margin:5px; padding:0 5px; border:2px solid #000000; box-shadow:2px 2px 0 0 #bfbfbf; position:relative;}
 .splashPageListTemplate {margin:5px 5px 75px 5px;}
 .splashPageListTemplate img {height:auto; max-width:100%;}
-.splashPageListTemplate .title {height:80px; width:100%; padding:5px 0 0 0; position:absolute; left:0; bottom:-22; color:#000000; font-family:Arial, sans-serif; font-weight:bold; overflow:hidden;}
+.splashPageListTemplate .title {height:80px; width:100%; padding:5px 0 0 0; position:absolute; left:0; bottom:-80px; color:#000000; font-family:Arial, sans-serif; font-weight:bold; overflow:hidden;}
 
 
 
@@ -271,7 +271,6 @@ header {position:relative;}
 .filterGroupTitle.filterOpen {margin-bottom:1em;}
 .filterGroup.priceFilter .ui-slider {height:20px; width:70%; margin:5px 13px;}
 .filterGroup.priceFilter .sliderValContainer  {padding:0 2px;}
- {height:11px; width:16px; margin:0 0 0 5px; background-position:-350px -117px; background-repeat:no-repeat; display:inline-block;}
 .filterHider {overflow:hidden; padding:0 0 0 5px;}
 .filterControlContainer {text-align:center; clear:both; margin:10px 0 0 0;}
 /*.filteredSearchTemplate button {width:90%; display:block; clear:both; margin:10px auto; color:#ffffff; padding:1px 8px; border:2px outset #b75970;}*/
@@ -369,23 +368,23 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 .companyTemplate h3 {color:#666666;}
 .sideline a {color:#666666;}
 .sideline a:hover {color:#781c2b;}
-.companyTemplate #contactArticle h3, .companyTemplate #contactArticle span, .companyTemplate #contactArticle a {color:#194835; text-decoration:none;}
-.companyTemplate #contactArticle a:hover {color:#781c2b;}
+.companyTemplate .contactArticle h3, .companyTemplate .contactArticle span, .companyTemplate .contactArticle a {color:#194835; text-decoration:none;}
+.companyTemplate .contactArticle a:hover {color:#781c2b;}
 
 .companyAddress {width:100%;}
 .companyAddress button {margin:10px;}
-#contactArticle form {height:0; overflow:hidden;}
-#contactArticle form fieldset {border:none;}
+.contactArticle form {height:0; overflow:hidden;}
+.contactArticle form fieldset {border:none;}
 
 .locationBlock {width:300px;}
 .locationBlock img {height:auto; max-width:100%;}
-#locationsArticle h4 {color:#194835;}
-#locationsArticle a {color:#781c2b; text-decoration:none;}
-#locationsArticle a:hover {#194835;}
+.locationsArticle h4 {color:#194835;}
+.locationsArticle a {color:#781c2b; text-decoration:none;}
+.locationsArticle a:hover {color:#194835;}
 
 .catSideline {height:400px; width:180px; margin:0 auto;}
 .catSideline .homeVertNav {width:180px; padding:5px 4px 0 4px; position:relative;}
-.vertNavBorder {border-left:3px solid #ffffff; border-right:3px solid #ffffff; border-top:3px solid #ffffff; border-radius:4px 4px 0 0; pading:0 0 11px 0;}
+.vertNavBorder {border-left:3px solid #ffffff; border-right:3px solid #ffffff; border-top:3px solid #ffffff; border-radius:4px 4px 0 0; padding:0 0 11px 0;}
 .catSideline .homeVertNav .vertLinkCont, .catSideline .vertNavTitle {margin-left:13%; margin-right:33%; position:relative;}
 .catSideline .homeVertNav .vertLinkCont.vertNavLast {padding:0 0 5px 0;}
 .vertNavArrow {height:auto; max-width:100%; position:absolute; bottom:-39px; right:0;}
@@ -549,7 +548,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.homeBanner .mainBanImageCont {width:700px;}
 	.mainPageCont {right:40px; bottom:10px;}
 	.homeFeaturedCats .splashPageListTemplate {height:219px; width:310px; margin:0 10px; display:inline-block; padding:0;}
-	.homeFeaturedCats .splashPageListTemplate .title {heigth:auto; padding:10px;}
+	.homeFeaturedCats .splashPageListTemplate .title {height:auto; padding:10px;}
 	.homeBestSell {max-height:310px;}
 	.homeBestSell .productList.ccList > li {height:250px; width:210px; border:2px solid #000000; margin:1em;}
 	.homeBestSell .productList.ccList .prodInfo {display:block;}
@@ -649,7 +648,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.homeMain {width:75%; float:right;}
 	.mainPageCont {right:22px;}
 	.homeVertNav {width:220px; padding:5px 5px 0 5px; position:relative;} /* compat-max-width:230px */
-	.vertNavBorder {border-left:3px solid #ffffff; border-right:3px solid #ffffff; border-top:3px solid #ffffff; border-radius:4px 4px 0 0; pading:0 0 11px 0;}
+	.vertNavBorder {border-left:3px solid #ffffff; border-right:3px solid #ffffff; border-top:3px solid #ffffff; border-radius:4px 4px 0 0; padding:0 0 11px 0;}
 	.vertNavTitle {font-size:12px;}
 	.homeVertNav .vertLinkCont, .vertNavTitle {margin-left:13%; margin-right:33%; position:relative;}
 	.homeVertNav .vertLinkCont.vertNavLast {padding:0 0 5px 0;}
