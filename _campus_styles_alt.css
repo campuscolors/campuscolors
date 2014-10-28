@@ -389,8 +389,8 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 .catSideline .homeVertNav .vertLinkCont, .catSideline .vertNavTitle {margin-left:13%; margin-right:33%; position:relative;}
 .catSideline .homeVertNav .vertLinkCont.vertNavLast {padding:0 0 5px 0;}
 .vertNavArrow {height:auto; max-width:100%; position:absolute; bottom:-39px; right:0;}
-.vertDropout {width:0; transition:all 0.5s; position:absolute; top:-39px; left:100px; z-index:100; border-radius:4px; overflow:hidden;}
-.vertDropout.expand {width:624px;}
+.vertDropout {width:0; transition:all 0.5s; position:absolute; top:-39px; left:70px; z-index:100; border-radius:4px; overflow:hidden;}
+.vertDropout.expand {width:654px;}
 .vertDropout .dropoutPositioning {padding:0 0 0 32px;}
 .vertDropout .dropoutVertNavCont {padding:5px; border-radius:4px; background:#781c2b;}
 .vertDropout .vertNavBorder {border:2px solid #ffffff; border-radius:4px; padding:20px;}
