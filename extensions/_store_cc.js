@@ -1385,8 +1385,9 @@ var store_cc = function(_app) {
 			dismissAllDrop : function() {
 				dump('START dismissAllDrop');
 				//if a dropdown is open, and the page changes, lets make sure the dropdowns are ready to open again later but close them before changing pages.
-				$("[data-app-click='store_cc|dismissDrop']",".standardNav").each(function(){ $(this).attr("store_cc|expandDrop"); });
-				$("[data-dropnav]",".standardNav").each(function(){ $(this).removeClass("expand"); });
+				$("[data-app-click='store_cc|dismissDrop']","#appView").each(function(){ $(this).attr("store_cc|expandDrop"); });
+				$("[data-dropnav]","#appView").each(function(){ $(this).removeClass("expand"); });
+				$("[data-dropnav]","#appView").parent().each(function(){ $(this).removeClass("expandStyle"); });
 			},
 			
 		/*	This may be a better way to do this, but it doesn't work if the page isn't reloaded. If tablet goes from 
@@ -1638,10 +1639,12 @@ var store_cc = function(_app) {
 				//dismissDrop is in utils and runs on any template depart
 				$ele.removeAttr('data-app-click');
 				//if a dropdown is open, and another is clicked, lets make sure all are ready to open again later but close them before opening a new one.
-				$("[data-app-click='store_cc|dismissDrop']",".standardNav").each(function(){ $(this).attr("data-app-click","store_cc|expandDrop"); });
-				$("[data-dropnav]",".standardNav").each(function(){ $(this).removeClass("expand"); });
+				$("[data-app-click='store_cc|dismissDrop']","#appView").each(function(){ $(this).attr("data-app-click","store_cc|expandDrop"); });
+				$("[data-dropnav]","#appView").each(function(){ $(this).removeClass("expand"); });
+				$("[data-dropnav]","#appView").parent().each(function(){ $(this).removeClass("expandStyle"); });
 				$ele.attr('data-app-click','store_cc|dismissDrop'); //make sure this one is ready to close if clicked later.
 				$("[data-dropnav]",$ele).addClass("expand"); //the class that does the magic
+				$("[data-dropnav]",$ele).parent().addClass("expandStyle"); //the class that does the magic
 				$(".sprite",$ele).addClass("openMenu"); //turn arrow in mobile menu to show menu can be closed
 				dump("clicked expand");
 				return false;
@@ -1652,6 +1655,7 @@ var store_cc = function(_app) {
 			dismissDrop : function($ele,p) {
 				$ele.removeAttr('data-app-click').attr('data-app-click','store_cc|expandDrop'); //make it ready to open again later
 				$("[data-dropnav]",$ele).removeClass("expand"); //the class that does the magic
+				$("[data-dropnav]",$ele).parent().removeClass("expandStyle"); //the class that does the magic
 				$(".sprite",".slideMenuBorder").removeClass("openMenu"); //turn arrow in mobile menu to show menu can be opened
 				dump("clicked dismiss");
 				return false;

@@ -389,13 +389,18 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 .catSideline .homeVertNav .vertLinkCont, .catSideline .vertNavTitle {margin-left:13%; margin-right:33%; position:relative;}
 .catSideline .homeVertNav .vertLinkCont.vertNavLast {padding:0 0 5px 0;}
 .vertNavArrow {height:auto; max-width:100%; position:absolute; bottom:-39px; right:0;}
-.vertDropout {width:0; position:absolute; top:-39px; left:100px; z-index:1003; border-radius:4px; overflow:hidden;}
+.vertDropout {width:0; transition:all 0.5s; position:absolute; top:-39px; left:100px; z-index:100; border-radius:4px; overflow:hidden;}
+.vertDropout.expand {width:624px;}
 .vertDropout .dropoutPositioning {padding:0 0 0 32px;}
 .vertDropout .dropoutVertNavCont {padding:5px; border-radius:4px; background:#781c2b;}
 .vertDropout .vertNavBorder {border:2px solid #ffffff; border-radius:4px; padding:20px;}
 .vertDropout .sprite {height:82px; width:32px; position:absolute; top:12px; left:7px; background-position:-467px -50px;}
-.vertDropout .scrollDropout {column-count:4; -moz-column-count:4; -webkit-column-count:4;} /*columns will be alpha by row in IE9*/
+.vertDropout .scrollDropout {height:204px; column-count:4; -moz-column-count:4; -webkit-column-count:4;} /*columns will be alpha by row in IE9*/
+.vertLinkCont.ncaa .vertDropout .scrollDropout {height:1105px}
+.vertLinkCont.nhl .vertDropout .scrollDropout {height:224px}
 .dropLinkCont {height:18px; width:135px; margin:1px 10px; overflow:hidden;  padding:2px 0; font-size:0.7em; border:none; text-align:left; float:left; font-weight:normal; text-shadow:2px 2px 2px #000000;}
+.vertLinkCont .dropLink {color:#ffffff;}
+.vertLinkCont.expandStyle .dropLink {color:#fbe143;}
 
 
 
@@ -538,6 +543,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.payment {width:233px; background-position:-75px -159px;}
 	.gtsLogo{background-position:0 -215px;}
 	
+	.homeMainWrapper .homeVertNav.showTablet {display:none;}
 	.homeBanner {max-height:268px;}
 	.homeBannerCont {width:auto;}
 	.homeBanner .mainBanImageCont {width:700px;}
@@ -589,7 +595,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.shippingTemplate h1 {font-size:1.4em;}
 	.locationBlock {width:250px; float:left; margin:0 15px 0 0;}
 	.locationBlock:nth-child(odd) {float:right;}
-	.catSideline {width:183px; margin:0 20px 0 0; font-size:0.9em;}
+	.catSideline {width:175px; margin:0 20px 0 0; font-size:0.9em;}
 	.catSideline .ui-accordion-content {padding:0.5em;}
 	.companyRight {float:left; width:73%;}
 	.companyRight .sideline {width:250px; margin:20px 16px 20px 0;}
@@ -639,6 +645,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	
 /*	.footerTopBrandCarWrap {width:950px;}*/
 	
+	.homeMainWrapper .homeVertNav.showTablet.showDesktopBlock {display:block;}
 	.homeMain {width:75%; float:right;}
 	.mainPageCont {right:22px;}
 	.homeVertNav {width:220px; padding:5px 5px 0 5px; position:relative;} /* compat-max-width:230px */
@@ -648,14 +655,15 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.homeVertNav .vertLinkCont.vertNavLast {padding:0 0 5px 0;}
 	/*.vertNavArrow {height:50px; width:229px; position:absolute; bottom:-42px; right:0; background-position:-144px -210px;}*/
 	.vertNavArrow {height:auto; max-width:100%; position:absolute; bottom:-39px; right:0;}
-	.vertDropout {width:0; transition:all 0.5s; position:absolute; top:-39px; left:100px; z-index:1003; border-radius:4px; overflow:hidden;}
-	.vertDropout.expand {width:896px;}
+	.vertDropout {width:0; position:absolute; top:-39px; left:100px; z-index:100; border-radius:4px; overflow:hidden;}
+	.vertDropout.expand {width:805px;}
 	.vertDropout .dropoutPositioning {padding:0 0 0 32px;}
 	.vertDropout .dropoutVertNavCont {padding:5px; border-radius:4px; background:#781c2b;}
 	.vertDropout .vertNavBorder {border:2px solid #ffffff; border-radius:4px; padding:20px;}
 	.vertDropout .sprite {height:82px; width:32px; position:absolute; top:12px; left:7px; background-position:-467px -50px;}
-	.vertDropout .scrollDropout {height:0; column-count:5; -moz-column-count:5; -webkit-column-count:5;} /*columns will be alpha by row in IE9*/
-	.vertDropout .scrollDropout {height:886px;}
+	.vertDropout .scrollDropout {height:160px; column-count:5; -moz-column-count:5; -webkit-column-count:5;} /*columns will be alpha by row in IE9*/
+	.vertLinkCont.ncaa .vertDropout .scrollDropout {height:886px}
+	.vertLinkCont.nhl .vertDropout .scrollDropout {height:180px}
 	.dropLinkCont {height:18px; width:135px; margin:1px 10px; overflow:hidden;  padding:2px 0; font-size:0.7em; border:none; text-align:left; float:left; font-weight:normal; text-shadow:2px 2px 2px #000000;}
 	.homeBanner {margin:20px;}
 	.homeTopBrands {width:654px; margin:0 auto 10px auto;}
@@ -687,6 +695,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.productTemplateQuickView .prodSummaryContainer {float:none;}
 	
 	.shippingTemplate h1 {font-size:1.7em;}
+	.catSideline {width:183px;}
 	.locationBlock, .companyRight .sideline {width:300px;}
 	.companyRight {padding:0 0 0 30px;}
 	
@@ -712,6 +721,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.standardNav .levelOne .levelTwo.teamDrop a {width:165px;}
 	.homeMainWrapper {width:1080px; margin:0 auto;}
 	.mainPageCont {right:60px;}
+	.vertDropout.expand {width:896px;}
 	.homeFeaturedCats .splashPageListTemplate {height:233px; width:330px;}
 	
 	.prodViewerContainer {width:948px;}
