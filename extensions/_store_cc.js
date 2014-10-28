@@ -1619,16 +1619,14 @@ var store_cc = function(_app) {
 			//if modal cart is not opened in checkout, goes to checkout.
 			cartModalCheckout : function($ele, p) {
 				p.preventDefault();
-				dump('START youarehere');
+//				dump('START cartModalCheckout');
 				//var goingTo = "/" + $ele.data("you-are-here");
 				if($("#mainContentArea :visible:first").attr('data-app-uri') == "/checkout/") {
 					$("#checkoutContainer").remove(); //kill the old checkout to be sure any changes made in the cart are updated. 
-					_app.ext.quickstart.a.newShowContent("checkout",{});
-					//$ele.closest('.ui-dialog-content').dialog('close');
+					_app.router.handleURIChange('/checkout/');
 				}
 				else {
-					_app.ext.quickstart.a.	newShowContent("checkout",{});
-					//_app.ext.quickstart.a.showContent($ele.data("you-are-here"));
+					_app.router.handleURIChange('/checkout/');
 				}
 				
 				return false;
