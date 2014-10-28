@@ -486,8 +486,10 @@ do NOT change the input name or id or checkout will likely break.
 	
 	<!-- <h2 data-bind='var:order(bill/firstname);format:text; pretext:Shipping Status: ;'></h2> -->
 	
-	<h5 data-tlc="bind $var '.order.sum.order_total'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='Order Total: '; apply --append;}};" class="orderTotal"></h5>
-	<h5 data-tlc="bind $var '.order.sum.balance_due_total'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='Balance Due: '; apply --append;}};" class="balanceDue"></h5>
+	<h5 data-tlc="bind $var '.'; cco#shipinfobyid  --legacy;" data-legacy-useparentdata="true" class="orderShipping"></h5>
+	<h5 data-tlc="bind $var '.sum.tax_total'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='<span class=&quot;summaryPriceAlign&quot;>Tax: </span>'; apply --add --class='orderTax'; apply --append;}};"></h5>
+	<h5 data-tlc="bind $var '.order.sum.order_total'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='<span class=&quot;summaryPriceAlign&quot;>Order Total: </span>'; apply --append;}};" class="orderTotal"></h5>
+	<h5 data-tlc="bind $var '.order.sum.balance_due_total'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='<span class=&quot;summaryPriceAlign&quot;>Balance Due: </span>'; apply --append;}};" class="balanceDue"></h5>
 	</hgroup>
 	
 	<address class="marginBottom">
