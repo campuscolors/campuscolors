@@ -17,10 +17,10 @@ body {font-family:Oxygen, Helvetica, sans-serif;}
 *, *:before, *:after {-moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box;}
 .showTablet, .showDesktop, .hidePhone {display:none;}
 .quickview, .searchResultsProduct .quickView {display:none;}
-input[type='search'] {
+.productSearchForm input[type='search'].productSearchKeyword  {
 	-webkit-appearance:none;
-	-webkit-border-radius:0;
-	border-radius:0;
+	-webkit-border-radius:5px 0 0 5px;
+	border-radius:5px 0 0 5px;
 }
 
 .clear {clear:both;}
@@ -393,7 +393,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 .vertDropout .dropoutVertNavCont {padding:5px; border-radius:4px; background:#781c2b;}
 .vertDropout .vertNavBorder {border:2px solid #ffffff; border-radius:4px; padding:20px;}
 .vertDropout .sprite {height:82px; width:32px; position:absolute; top:12px; left:7px; background-position:-467px -50px;}
-.vertDropout .scrollDropout {height:268px; columns:3 155px; -moz-columns:3 155px; -webkit-columns:3 155px;} /*columns will be alpha by row in IE9*/
+.vertDropout .scrollDropout {height:268px; column-count:3; -moz-column-count:3; -webkit-column-count:3;} /*columns will be alpha by row in IE9*/
 .vertLinkCont.ncaa .vertDropout .scrollDropout {height:1490px}
 .vertLinkCont.nhl .vertDropout .scrollDropout {height:307px}
 .dropLinkCont {height:18px; width:135px; margin:1px 10px; overflow:hidden;  padding:2px 0; font-size:0.7em; border:none; text-align:left; float:left; font-weight:normal; text-shadow:2px 2px 2px #000000;}
