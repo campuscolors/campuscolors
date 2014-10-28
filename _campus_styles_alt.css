@@ -137,7 +137,7 @@ header {position:relative;}
 .loginShow {display:none;}
 .buyerLoggedIn .loginShow {display:inline;}
 
-.headerMid {height:120px; padding:10px 0 0 0; background-color:white; border-top:2px solid #cccccc;}
+.headerMid {height:120px; padding:10px 0 0 0; background-color:white;}
 .logo img {height:auto; max-width:100%; margin:0 auto;}
 
 .mobileNav{height:60px; width:100%; margin:20px 0 0 0; text-align:center; border-top:2px solid #7fb8a1;}
@@ -169,7 +169,6 @@ header {position:relative;}
 .slideMenuBorder {border-right:3px solid #ffffff; border-bottom:3px solid #ffffff; border-radius:0 0 4px 0; padding:30px 0;}
 .mobileSlideMenu .levelOne, .mobileSlideMenu .levelOne .levelTwo > a  {width:100%; padding:10px 0 10px 12px; border-top:1px solid #adadad; position:relative; font-size:1.3em;}
 .mobileSlideMenu .levelOne.oneLevel a {display:block; color:#000000; text-decoration:none; font-size:1em; padding:0; border:none;}
-.mobileSlideMenu .levelOne:hover, .mobileSlideMenu .levelOne.oneLevel:hover a {color:#fbe143;}
 .mobileSlideMenu .levelOne.slideTitle {font-size:2em; border:none;}
 .mobileSlideMenu .levelOne.slideTitle:hover {color:#000000;}
 .mobileSlideMenu .levelOne .slideTop {border:none;}
