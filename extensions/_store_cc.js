@@ -1634,6 +1634,7 @@ var store_cc = function(_app) {
 			
 			//adds class to open header dropdown menus with css animation. Also sets closing action on the triggering element for next click.
 			expandDrop : function($ele,p) {
+//				dump('START expandDrop');
 				//dismissDrop is in utils and runs on any template depart
 				$ele.removeAttr('data-app-click');
 				//if a dropdown is open, and another is clicked, lets make sure all are ready to open again later but close them before opening a new one.
@@ -1644,18 +1645,17 @@ var store_cc = function(_app) {
 				$("[data-dropnav]",$ele).addClass("expand"); //the class that does the magic
 				$("[data-dropnav]",$ele).parent().addClass("expandStyle"); //the class that does the magic
 				$(".sprite",$ele).addClass("openMenu"); //turn arrow in mobile menu to show menu can be closed
-				dump("clicked expand");
 				return false;
 			},
 			
 			//adds class to close header dropdown menus with css animation Also sets open action on the triggering element for next click.
 			//there is also a similar util function (dismissAllDrop) that gets run on template departure to ensure that the menus close if another link outside the menu is clicked.
 			dismissDrop : function($ele,p) {
+//				dump('START dismissDrop');
 				$ele.removeAttr('data-app-click').attr('data-app-click','store_cc|expandDrop'); //make it ready to open again later
 				$("[data-dropnav]",$ele).removeClass("expand"); //the class that does the magic
 				$("[data-dropnav]",$ele).parent().removeClass("expandStyle"); //the class that does the magic
 				$(".sprite",".slideMenuBorder").removeClass("openMenu"); //turn arrow in mobile menu to show menu can be opened
-				dump("clicked dismiss");
 				return false;
 			},
 			
