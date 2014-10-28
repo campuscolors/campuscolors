@@ -394,9 +394,9 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 .vertDropout .dropoutVertNavCont {padding:5px; border-radius:4px; background:#781c2b;}
 .vertDropout .vertNavBorder {border:2px solid #ffffff; border-radius:4px; padding:20px;}
 .vertDropout .sprite {height:82px; width:32px; position:absolute; top:12px; left:7px; background-position:-467px -50px;}
-.vertDropout .scrollDropout {height:204px; column-count:4; -moz-column-count:4; -webkit-column-count:4;} /*columns will be alpha by row in IE9*/
-.vertLinkCont.ncaa .vertDropout .scrollDropout {height:1105px}
-.vertLinkCont.nhl .vertDropout .scrollDropout {height:224px}
+.vertDropout .scrollDropout {height:268px; column-count:3; -moz-column-count:3; -webkit-column-count:3;} /*columns will be alpha by row in IE9*/
+.vertLinkCont.ncaa .vertDropout .scrollDropout {height:1490px}
+.vertLinkCont.nhl .vertDropout .scrollDropout {height:307px}
 .dropLinkCont {height:18px; width:135px; margin:1px 10px; overflow:hidden;  padding:2px 0; font-size:0.7em; border:none; text-align:left; float:left; font-weight:normal; text-shadow:2px 2px 2px #000000;}
 .vertLinkCont .dropLink {color:#ffffff;}
 .vertLinkCont.expandStyle .dropLink {color:#fbe143;}
