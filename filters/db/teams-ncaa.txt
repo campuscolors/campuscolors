@@ -1,7 +1,6 @@
 id	page-title	page-description	banner	bannerlink	banneralt	promo
 NCAA-Team-Apparel-Merchandise	NCAA Team Apparel at CampusColors.com	"Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!"	blank		Shop By Team Banner	Some promotional text goes here
 team_long	page-description	team_league	team_short	team_code-img	sub_banner	max-price
-Atlantic Coast Conference	"Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!"	NCAA	ACC	ACC	blank	150
 Air Force Falcons	"Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!"	NCAA	Air Force	AIR	blank	150
 Akron Zips	"Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!"	NCAA	Akron	AKRN	blank	150
 Alabama Crimson Tide	"Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!"	NCAA	Alabama	ALA	blank	150
@@ -12,6 +11,7 @@ Arizona State Sun Devils	"Shop Campus Colors for thousands of NCAA, NFL, NBA, ML
 Arizona Wildcats	"Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!"	NCAA	Arizona	ARZ	blank	150
 Arkansas Razorbacks	"Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!"	NCAA	Arkansas	ARK	blank	150
 Army Black Knights	"Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!"	NCAA	Army	ARMY	blank	150
+Atlantic Coast Conference	"Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!"	NCAA	ACC	ACC	blank	150
 Auburn Tigers	"Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!"	NCAA	Auburn	AUB	blank	150
 Ball State Cardinals	"Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!"	NCAA	Ball State	BALL	blank	150
 Baylor Bears	"Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!"	NCAA	Baylor	BAY	blank	150
