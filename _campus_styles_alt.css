@@ -95,7 +95,7 @@ body {font-family:Oxygen, Helvetica, sans-serif;}
 .tabbedProductContentTD .ui-tabs .ui-tabs-nav li.ui-state-active,
 .catSideline .title.ui-state-active, 
 .ui-dialog.emailDialog .ui-dialog-content,
-.applyButton.continueShoppingButton.ccButton {
+.continueShoppingButton.ccButton {
 	background: #b75970; /* Old browsers */
 	/* IE9 SVG, needs conditional override of 'filter' to 'none' 
 	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2I3NTk3MCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM3ODFjMmIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+); */
@@ -110,7 +110,7 @@ body {font-family:Oxygen, Helvetica, sans-serif;}
 
 .yellowGradient, .productPage .addtocartbutton, .ccButton,
 .tabContent .applyButton.ccButton, .noHovCCButton,
-#inStoreCheckoutButton .applyButton.ccButton.checkoutButton {
+.applyButton.ccButton.checkoutButton {
 	background: #fbe143; /* Old browsers */
 	/* IE9 SVG, needs conditional override of 'filter' to 'none' 
 	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZiZTE0MyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmNWJkMjUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+); */
@@ -430,9 +430,9 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 .cartSummary {width:58%;}
 .applyButton.continueShoppingButton.ccButton {min-width:150px; border:2px outset #b75970; padding:0 1%;}
 .ui-state-default.cartButtons {background:#ffffff; border:none;}
-.applyButton.continueShoppingButton.ccButton .ui-button-text {color:#ffffff;}
-#inStoreCheckoutButton .applyButton.ccButton.checkoutButton {border:2px outset #fbe143;  padding:0 1%;}
-#inStoreCheckoutButton.thisButton {float:none; margin:0 0 0.4em 0;}
+.ccButton.checkoutButton {height:38px; width:110px; margin:0 0 10px 0; border:2px outset #fbe143;  padding:9px; display:inline-block;}
+.continueShoppingButton.ccButton {height:38px; width:170px;  color:#ffffff; border:2px outset #b75970; padding:9px; margin:0 auto 10px auto;}
+.thisButton {float:none; margin:0 0 0.4em 0;}
  #paypalecbutton.thisButton {float:none; margin:0 0 0.1em 0;}
 .cartStuffContainer .moveToWishlist {height:1.7em; width:1.8em; border:none;}
 .removeButton.ui-button.ui-button-icon-only {height:auto; width:auto; padding:1% 2%; background:none; border:none;}
@@ -483,6 +483,8 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.productList.ccList > li {height:106px; margin:5px 5px 118px 5px;}
 	.ccList .prodInfo {height:110px; bottom:-112px;}
 	.productPage .addtocartbutton {font-size:1.5em;} 
+	.ccButton.checkoutButton {width:140px;padding:7px;}
+	.continueShoppingButton.ccButton {width:210px; padding:7px;}
 	.chkoutPayMethods {font-size:1em;}
 	.checkoutFormContainer fieldset .panelContent.chkoutCartContents {padding:1em; font-size:1em;}
 }
@@ -705,7 +707,6 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.logContainer {width:31%;}
 	.logRight {float:left;}
 	
-	.applyButton.continueShoppingButton.ccButton {min-width:210px;}
 	.checkoutFormContainer .ccButton:hover {background:#781c2b; border-color:#b75970 #000000 #000000 #b75970; color:#ffffff;}
 	.checkoutFormContainer .ccButton:hover .ui-button-text {color:#ffffff;}
 	.orderContentsTable .hide4Print .ui-state-default .ui-icon {background-image:url("images/ui-icons_ffffff_256x240.png");}
@@ -734,5 +735,6 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.companyRight .sideline {margin:20px 21px 20px 0;}
 	
 	.chkButCont {float:right;}
-	.cartButtons .continueShoppingSpan {float:left; margin:0;}
+	.continueShoppingButton.ccButton {float:left; margin:0;}
+	.cartButtons .continueShoppingSpan {float:left; }
 }

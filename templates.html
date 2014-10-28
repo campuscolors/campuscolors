@@ -3256,13 +3256,12 @@ This is the template used both within a dialog and inline, unless implicitly ove
 			<section class="marginBottom"></section>
 
 		</div>
-		<div class="ui-state-default cartButtons stdPadding clearfix">
+		<div class=" cartButtons stdPadding clearfix">
 			<!-- spans are set around the buttons so each element has one consitent tag type around it -->
-			<span class="continueShoppingSpan thisButton"><span class="applyButton continueShoppingButton ccButton pointer" data-app-click="quickstart|dialogCloseExec">Continue Shopping</span></span>
+		<!---	<span class="continueShoppingSpan thisButton"><span class="applyButton continueShoppingButton ccButton pointer" data-app-click="quickstart|dialogCloseExec">Continue Shopping</span></span> -->
+			<div class="continueShoppingButton ccButton pointer" data-app-click="quickstart|dialogCloseExec">Continue Shopping</div>
 			<div class="chkButCont">
-				<!-- TODO remove ID here -->
-				<span id="inStoreCheckoutButton" class='thisButton' title="proceed to secure checkout">
-					 <span data-app-click="store_cc|cartModalCheckout" data-you-are-here="checkout/" class="applyButton ccButton checkoutButton" >Checkout</span> 
+					 <span data-app-click="store_cc|cartModalCheckout" data-you-are-here="checkout/" class="ccButton checkoutButton" >Checkout</span> 
 					<!-- <a class="applyButton ccButton ui-state-highlight checkoutButton" href='/checkout/'>Checkout</a> -->
 				</span>
 				<!-- TODO remove ID here -->
