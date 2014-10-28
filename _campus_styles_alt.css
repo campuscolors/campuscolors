@@ -17,7 +17,12 @@ body {font-family:Oxygen, Helvetica, sans-serif;}
 *, *:before, *:after {-moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box;}
 .showTablet, .showDesktop, .hidePhone {display:none;}
 .quickview, .searchResultsProduct .quickView {display:none;}
-.productSearchForm input[type='search'].productSearchKeyword  {
+.productSearchForm input[type="search" i].productSearchKeyword  {
+	-webkit-appearance:none;
+	-webkit-border-radius:5px 0 0 5px;
+	border-radius:5px 0 0 5px;
+}
+.productSearchForm input[type="search"].productSearchKeyword  {
 	-webkit-appearance:none;
 	-webkit-border-radius:5px 0 0 5px;
 	border-radius:5px 0 0 5px;
