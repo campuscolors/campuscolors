@@ -190,7 +190,7 @@ _app.router.appendHash({'type':'exact','route':'/contact_us/','callback':functio
 	$.extend(routeObj.params,{
 		'pageType':'static',
 		'templateID':'contactUsTemplate',
-		'require':['templates.html']
+		'require':['templates.html', 'store_crm']
 		});
 	_app.ext.quickstart.a.newShowContent(routeObj.value,routeObj.params);
 	}});
