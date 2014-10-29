@@ -831,13 +831,13 @@ _app.extend({
 	"namespace" : "store_search",
 	"filename" : "extensions/store_search.js"
 	});
-	
-// _app.couple('store_search','addUniversalFilter',{
-	// 'filter' : {"has_child":{"type":"sku","query":{"range":{"available":{"gte":1}}}}}
-	// });
-// _app.couple('store_search','addUniversalFilter',{
-	// 'filter' : {"not":{"term":{"tags":"IS_DISCONTINUED"}}}
-	// });
+_app.couple('store_search','addUniversalFilter',{
+	'filter' : {"has_child":{"type":"sku","query":{"range":{"available":{"gte":1}}}}}
+	});
+_app.couple('store_search','addUniversalFilter',{
+	'filter' : {"not":{"term":{"tags":"IS_DISCONTINUED"}}}
+	});
+
 				
 _app.couple('quickstart','addPageHandler',{
 	"pageType" : "search",
