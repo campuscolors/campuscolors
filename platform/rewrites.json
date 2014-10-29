@@ -1,0 +1,52 @@
+[
+
+// vstore rewrites - not needed.
+// { "type":"path", "if":"/c=.*?/(.*)", "then#rewrite":"/$1" },
+// { "type":"path", "if":"/s=.*?/(.*)", "then#rewrite":"/$1" },
+
+// sendfile known urls
+{ "type":"path", "if":"/(league|ncaa-team|nfl-team|nba-team|mlb-team|nhl-team|soccer-team)\\-apparel\\-merchandise/.*", "then#sendfile":"/index.html", "apptimize":"false" },
+
+// redirct category pages
+{ "type":"path", "if":"/BrandList.aspx", "then#redirect":"/team-apparel-merchandise/" },
+{ "type":"path", "if":"/College.*", "then#redirect":"/ncaa-team-apparel-merchandise/" },
+{ "type":"path", "if":"/NFL.*", "then#redirect":"/nfl-team-apparel-merchandise/" },
+{ "type":"path", "if":"/NBA.*", "then#redirect":"/nba-team-apparel-merchandise/" },
+{ "type":"path", "if":"/MLB.*", "then#redirect":"/mlb-team-apparel-merchandise/" },
+{ "type":"path", "if":"/NHL.*", "then#redirect":"/nhl-team-apparel-merchandise/" },
+{ "type":"path", "if":"/Soccer.*", "then#redirect":"/soccer-team-apparel-merchandise/" },
+{ "type":"path", "if":"/(.*?)-Apparel-Merchandise", "then#redirect":"/$1-team-apparel-merchandise/" },
+{ "type":"path", "if":"/Nike-Gear", "then#redirect":"/brands-apparel-merchandise/nike-gear/" },
+{ "type":"path", "if":"/Adidas-Gear", "then#redirect":"/brands-apparel-merchandise/adidas-gear/" },
+{ "type":"path", "if":"/Clearance.aspx", "then#redirect":"/clearance-apparel-merchandise/" },
+
+
+// redirct product pages
+{ "type":"path", "if":"/Item--i-(.*?)", "then#redirect":"/product/$1" },
+
+// redirct company pages
+{ "type":"path", "if":"/content--name-Store-Locations", "then#redirect":"/company/locations/" },
+{ "type":"path", "if":"/content--name-Customer-Service", "then#redirect":"/company/about/" },
+{ "type":"path", "if":"/content--name-About-Us", "then#redirect":"/company/about/" },
+{ "type":"path", "if":"/content--name-Privacy-Policy", "then#redirect":"/company/privacy/" },
+{ "type":"path", "if":"/content--name-Pay-Methods", "then#redirect":"/company/payment/" },
+{ "type":"path", "if":"/content--name-FAQ", "then#redirect":"/company/faq/" },
+{ "type":"path", "if":"/ContactUs.aspx", "then#redirect":"/company/contact/" },
+{ "type":"path", "if":"/content--name-Shipping-Methods-and-Cost", "then#redirect":"/company/shipping/" },
+
+// pages w/ no solid match
+{ "type":"path", "if":"/CartPage.aspx", "then#redirect":"/" },
+{ "type":"path", "if":"/login.aspx?ReturnUrl=%2fMembers%2fMyAccount.aspx", "then#redirect":"/" },
+{ "type":"path", "if":"/login.aspx.*", "then#redirect":"/" },
+{ "type":"path", "if":"/refer.aspx", "then#redirect":"/" },
+{ "type":"path", "if":"/SiteMap.aspx", "then#redirect":"/" },
+{ "type":"path", "if":"/content--name-Connect-With-Campus-Colors", "then#redirect":"/" },
+{ "type":"path", "if":"/content--name-Wish-List", "then#redirect":"/" },
+{ "type":"path", "if":"/content--name-customer-reviews", "then#redirect":"/" },
+{ "type":"path", "if":"/content--name-Sales-Tax", "then#redirect":"/" }
+
+
+// redirect homepage
+// =uri	http://beta.campuscolors.com/	http://beta.campuscolors.com/#!
+
+]
