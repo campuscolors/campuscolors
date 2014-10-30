@@ -624,6 +624,7 @@ _app.router.addAlias('filter', function(routeObj){
 	});
 });
 
+
 _app.router.addAlias('subfilter', function(routeObj){
 	_app.require(['store_cc','store_filter','store_search','store_routing','prodlist_infinite','store_prodlist', 'templates.html'], function(){
 		//decides if filter JSON is in local var or if it needs to be retrieved
@@ -644,48 +645,50 @@ _app.router.addAlias('subfilter', function(routeObj){
 });
 
 				//sends passed object of attribs as a showContent search
-//				_app.router.addAlias('promo', function(routeObj){
-//					_app.require(['store_cc','store_filter','store_search','store_routing','prodlist_infinite','store_prodlist', 'templates.html'], function(){
-//						var path = routeObj.params.PATH;
+				_app.router.addAlias('promo', function(routeObj){
+					_app.require(['store_cc','store_filter','store_search','store_routing','prodlist_infinite','store_prodlist', 'templates.html'], function(){
+						var path = routeObj.params.PATH;
 				//		dump('promo Alias'); dump(path);
-//						$.getJSON("filters/search/"+path+".json?_v="+(new Date()).getTime(), function(json){
-//							dump('content shown from json');
+						$.getJSON("filters/search/"+path+".json?_v="+(new Date()).getTime(), function(json){
+							dump('content shown from json');
 				//			dump('THE SEARCH JSON IS...'); dump(routeObj.params);
-//							routeObj.params.elasticsearch = json;
+							routeObj.params.elasticsearch = json;
 						//	showContent('search',	routeObj.params);
 						//	_app.router.addAlias('search',		function(routeObj){_app.ext.quickstart.a.newShowContent(routeObj.value,	$.extend({'pageType':'search'}, routeObj.params));});
-//							_app.ext.quickstart.a.newShowContent(routeObj.value,	$.extend({'pageType':'search'}, routeObj.params));
-//						})
-//						.fail(function() {
-//							dump('FILTER DATA FOR ' + path + ' PROMO COULD NOT BE LOADED.');
-//							_app.router.handleURIChange('/404');
-//						}); 
-//					});
-//				});
-_app.router.addAlias('promo', function(routeObj){
-	_app.require(['store_cc','store_filter','store_search','store_routing','prodlist_infinite','store_prodlist', 'templates.html'], function(){
-		var route = routeObj.pagefilter;
-		routeObj.params.templateID = 'filteredSearchTemplate';
-		if(_app.ext.store_cc.vars[route]) {
-			var filterData = $.extend(true, {}, _app.ext.store_cc.vars[route]);
-			$.extend(true, routeObj.params, {'templateid':routeObj.templateid,'id':filterData.id,'dataset':filterData});
-			_app.ext.quickstart.a.newShowContent(routeObj.value,routeObj.params);
-		}
-		else {
-			$.getJSON("filters/search/"+route+".json?_v="+(new Date()).getTime(), function(json){
-			_app.ext.store_cc.vars[route] = json;
-				//Deep copy into the routeObj.params, and that becomes our new "infoObj"
-				//Need to pass through routeObj.params at this moment, as it is expected to become infoObj
-				//This may change later.
-				$.extend(true, routeObj.params, {'pageType':'static','templateid':routeObj.templateid,'id':json.id,'dataset':json});
-				_app.ext.quickstart.a.newShowContent(routeObj.value,routeObj.params);
-			})
-			.fail(function() {
-				dump('FILTER DATA FOR ' + route + ' PROMO COULD NOT BE LOADED.');
-			});
-		}
-	});
-});
+							_app.ext.quickstart.a.newShowContent(routeObj.value,	$.extend({'pageType':'search'}, routeObj.params));
+						})
+						.fail(function() {
+							dump('FILTER DATA FOR ' + path + ' PROMO COULD NOT BE LOADED.');
+							_app.router.handleURIChange('/404');
+						}); 
+					});
+				});
+//EXPERIMENTAL PROMO CATEGORY TO GIVE THE A MORE "CATEGORY" LIKE FEEL (TITLES, FACETS, ETC.)
+//WILL NEED IT'S OWN SHOWPAGE FUNCTION TO ADD THE FACETS FROM THE "ONLY LEAF" STYLE PAGE IT IS.
+//_app.router.addAlias('promo', function(routeObj){
+//	_app.require(['store_cc','store_filter','store_search','store_routing','prodlist_infinite','store_prodlist', 'templates.html'], function(){
+//		var route = routeObj.pagefilter;
+//		routeObj.params.templateID = 'filteredSearchTemplate';
+//		if(_app.ext.store_cc.vars[route]) {
+//			var filterData = $.extend(true, {}, _app.ext.store_cc.vars[route]);
+//			$.extend(true, routeObj.params, {'templateid':routeObj.templateid,'id':filterData.id,'dataset':filterData});
+//			_app.ext.quickstart.a.newShowContent(routeObj.value,routeObj.params);
+//		}
+//		else {
+//			$.getJSON("filters/search/"+route+".json?_v="+(new Date()).getTime(), function(json){
+//			_app.ext.store_cc.vars[route] = json;
+//				//Deep copy into the routeObj.params, and that becomes our new "infoObj"
+//				//Need to pass through routeObj.params at this moment, as it is expected to become infoObj
+//				//This may change later.
+//				$.extend(true, routeObj.params, {'pageType':'static','templateid':routeObj.templateid,'id':json.id,'dataset':json});
+//				_app.ext.quickstart.a.newShowContent(routeObj.value,routeObj.params);
+//			})
+//			.fail(function() {
+//				dump('FILTER DATA FOR ' + route + ' PROMO COULD NOT BE LOADED.');
+//			});
+//		}
+//	});
+//});
 
 _app.router.addAlias('root', function(routeObj){
 	_app.require(['store_cc','store_filter','store_search','store_routing','prodlist_infinite','store_prodlist', 'templates.html'], function(){
