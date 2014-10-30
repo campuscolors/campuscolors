@@ -655,6 +655,7 @@ var store_cc = function(_app) {
 						thisSearch.query.filtered.filter.and[0].term[attrib] = team; 
 						//Filter by type
 						thisSearch.query.filtered.filter.and.push({"term" : {"website_filter":types[i]}});
+						thisSearch.query.filtered.filter.and.push({"has_child":{"type":"sku","query": {"range":{"available":{"gte":1}}}}});  //only return item w/ inventory
 
 						var _tag = {
 							"datapointer" : "related-"+types[i]+"|"+data.value.pid
