@@ -15,7 +15,7 @@
 
 // sendfile known urls
 { "type":"path", "if":"/(league|ncaa-team|nfl-team|nba-team|mlb-team|nhl-team|soccer-team)\\-apparel\\-merchandise/.*", "then#sendfile":"/index.html", "apptimize":"false" },
-{ "type":"path", "if":"/\\apparel\\-merchandise/.*", "then#sendfile":"/index.html", "apptimize":"false" },
+{ "type":"path", "if":"/apparel\\-merchandise/.*", "then#sendfile":"/index.html", "apptimize":"false" },
 
 // redirct category pages
 { "type":"path", "if":"/BrandList.aspx", "then#redirect":"/team-apparel-merchandise/" },
