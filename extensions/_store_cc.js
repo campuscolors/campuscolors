@@ -474,6 +474,7 @@ var store_cc = function(_app) {
 				
 				if(screen.width < 767) {
 					// Dont hide all filter options if not mobile, just hide individual options. 
+					$tag.removeClass("openFilters");
 					$filter.removeClass("openFilters");
 				}
 				$tag.off('click').on('click',function() {
