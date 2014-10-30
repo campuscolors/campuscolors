@@ -441,13 +441,54 @@ var store_cc = function(_app) {
 				},
 				
 /*PRODUCT LIST TLC*/	
+			//adds link to leaf level of root category in order to bypass the standard "type" subcategory.
 			makelinkall : function(data, thisTLC) {
 				var $tag = data.globals.tags[data.globals.focusTag];
 				var href = data.globals.binds.href; //dump(href); 
 				href = href + "all/";
 				$tag.attr("href",href);
 			},
-		
+			
+			//adds/removes class to allow css animation to show/hide each filter option.
+			//if the class is present the click will remove, and vice versa. 
+			//Add the class in the template to begin w/ the filter open, don't add to begin with the filter closed. 
+			showfilter : function(data,thisTLC) {
+				var $tag = data.globals.tags[data.globals.focusTag];
+				var $filter = $tag.parent();
+				
+				$tag.off('click').on('click',function() {
+					if($filter.hasClass('filterOpen')) {
+						$filter.removeClass("filterOpen"); //closed when class is removed
+					}
+					else {
+						$filter.addClass("filterOpen"); //open when class is removed
+					}
+				});
+			},
+			
+			//adds/removes class to allow css animation to show/hide all filter options. Used for phone only.
+			//data-parent-filter-hider indicates filter parent container. 
+			showmobilefiltercontainer : function(data,thisTLC) {
+				var $tag = data.globals.tags[data.globals.focusTag];
+				var $filter = $("[data-parent-filter-hider]",$tag.parent())
+				
+				if(screen.width < 767) {
+					// Dont hide all filter options if not mobile, just hide individual options. 
+					$filter.removeClass("openFilters");
+				}
+				$tag.off('click').on('click',function() {
+					if($filter.hasClass('openFilters')) {
+						$tag.removeClass("openFilters");
+						$filter.removeClass("openFilters"); //the class that does the magic
+					}
+					else {
+						$tag.addClass("openFilters");
+						$filter.addClass("openFilters"); //the class that does the magic
+					}
+				});
+			},
+	
+/*	
 			//adds show/hide to filter options. Will add to parent container if in mobile view, otherwise only to individual filters.
 			//data-top indicates filter parent container. 
 			//data-filterview indicates whether individual filter should start opened or closed, as well as current state for next click
@@ -485,8 +526,9 @@ var store_cc = function(_app) {
 					},2000);
 				}
 			},
-			
+*/			
 /* PRODUCT PAGE TLC */
+			//add team logo and link to all products for said team under the main product image
 			teamupsell : function(data,thisTLC) {
 				var $tag = data.globals.tags[data.globals.focusTag];
 				var prod = data.globals.binds.var;
