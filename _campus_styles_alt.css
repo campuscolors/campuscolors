@@ -18,9 +18,13 @@ body {font-family:Oxygen, Helvetica, sans-serif;}
 .showTablet, .showDesktop, .hidePhone {display:none;}
 .quickview, .searchResultsProduct .quickView {display:none;}
 .productSearchForm input[type="search" i].productSearchKeyword  {
+	-webkit-appearance:none;
+	-webkit-border-radius:0;
 	border-radius:0;
 }
 .productSearchForm input[type="search"].productSearchKeyword  {
+	-webkit-appearance:none;
+	-webkit-border-radius:0;
 	border-radius:0;
 }
 
@@ -156,7 +160,7 @@ header {position:relative;}
 .upperCartWrapper .sprite {height:25px; width:31px; background-position:-129px 0; position:absolute; top:-4px; left:20px;}
 .upperCartWrapper .cartItemCount {width:16px; position:absolute; bottom:4px; right:0; color:#ffffff;}
 .searchWrapper {padding:8px; border-radius:7px; border:2px outset #308c67; margin:0 0 5px 0; display:inline-block;}
-.searchWrapper .productSearchKeyword {height:40px; width:220px; padding:10px; border:none; border-radius:5px 0 0 5px; background-color:#dddddd; float:left;}
+.searchWrapper .productSearchKeyword {height:40px; width:220px; padding:10px; border:none; background-color:#dddddd; float:left;}
 .searchWrapper .productSearchButton {height:40px; width:50px; border:1px outset #fbe143; background-color:#fbe143; background-position:12px 7px; background-repeat:no-repeat;}
 
 .headerLower {height:43px; width:100%; background-color:green; color:#ffffff; padding:8px 0 0 0; border-top:2px solid #000000; border-bottom:2px solid #000000; text-align:center; overflow:hidden;}
