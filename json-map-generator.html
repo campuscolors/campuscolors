@@ -37,11 +37,11 @@
 			var siteMapLinks = [];					//stores the links for the node sitemap
 			
 			//they may only want to include certain teams, rebuild the data excluding those not in their list if so
-			if($("input[type=checkbox]",".inclusionList").prop('checked') === true) {
-				var includeList = $("textarea",".inclusionList").val().split("\n");
+		//	if($("input[type=checkbox]",".inclusionList").prop('checked') === true) {
+		//		var includeList = $("textarea",".inclusionList").val().split("\n");
 //				console.log(includeList)	;			
-				raw = genIncludedArray(raw, includeList);
-			}
+		//		raw = genIncludedArray(raw, includeList);
+		//	}
 			
 			//make the rootCatgory JSON
 			var rootCat = genRootCat(raw[0],raw[1]); //make the rootCatgory JSON
@@ -65,7 +65,7 @@
 				
 				//take this path if there will be type categories: ncaa > ncaa-shirts,ncaa-shorts,ncaa-all instead of just nike > all nike
 				if(multiSubCat == "team" || "league") {
-					console.log('we can tell a box is checked.');
+//					console.log('we can tell a box is checked.');
 					var typeCat = genTypeCat(process, rootPath, optionArray, siteMapLinksOnly);
 					var subPath = ""; //if generating sitemap links, the link needed here isn't generated, so build it here in that case. 
 					siteMapLinksOnly ? subPath = rootPath + process[0].toLowerCase().split(" ").join("-") + "/" : subPath = typeCat.link;
@@ -131,7 +131,7 @@
 				var img = "";
 	//			typeSubCat["id"] = id;
 	//			typeSubCat["link"] = subPath + id;
-				typeSubCat["id"] = thisLowerType+"/";
+				typeSubCat["id"] = thisLowerType;
 				typeSubCat["link"] = subPath + thisLowerType+"/";
 				switch(thisLowerType) {
 					case "all" : img = "teamlogos/" + attrib[4].toLowerCase() + ".jpg"; break;
@@ -172,11 +172,11 @@
 		
 		//will generate a subCategory for categories with a product type: /rootCat/subCat/, and will have a listing of type categories in it.
 		function genTypeCat(attrib,rootPath,optionArray,siteMapLinksOnly) {
-			console.log(attrib); console.log(rootPath); console.log(optionArray);
+//			console.log(attrib); console.log(rootPath); console.log(optionArray);
 			var typeCat = {};
 			var teamLong = attrib[0];																						//team_long attribute
 			//var id = teamLong.toLowerCase().split(" ").join("-") + "-apparel-merchandise/";		//the id for the page (must match appendHash)
-			var id = teamLong.toLowerCase().split(" ").join("-") + "/";		//the id for the page (must match appendHash)
+			var id = teamLong.toLowerCase().split(" ").join("-");		//the id for the page (must match appendHash)
 			var teamLongUpper = uppercaseFirst(teamLong);													//used for name on page and meta title
 			var desc = removeQuotes(attrib[1]);
 			var teamLeague = attrib[2];																					//used to build key for baseFilter
@@ -185,8 +185,8 @@
 	//		var imageAlt = attrib[5];																							//the image that goes in the cat thumb. (should be from media library)
 			
 			typeCat["id"] = id;
-			typeCat["link"] = rootPath + id;
-			typeCat["img"] = "teamlogos/" + attrib[4] + ".jpg";
+			typeCat["link"] = rootPath + id + "/";
+			typeCat["img"] = "teamlogos/" + attrib[4].toLowerCase() + ".jpg";
 			typeCat["name"] = teamLongUpper + " Apparel & Merchandise";
 			typeCat["page-title"] = teamLongUpper + " Apparel & Merchandise | CampusColors.com";
 			typeCat["page-description"] = desc;
@@ -251,6 +251,7 @@
 		function genRootCat(title,attrib) {
 //			console.log(title);
 //			console.log(attrib);
+			var rootPath = "/"+attrib.split('\t')[0].toLowerCase()+"/";
 			var splitTitle = title.split('\t');
 			var splitAttrib = attrib.split('\t');
 			var rootCat = {};
@@ -260,6 +261,7 @@
 				rootCat[key] = splitAttrib[k];
 				if(k == 0) { rootCat["name"] = splitAttrib[k]; }
 			}
+			rootCat["link"] = rootPath;
 	//		key = "pages";
 	//		rootCat[key] = [];
 			return rootCat;
@@ -317,6 +319,7 @@
 	body {width:80%; margin:0 auto;}
 	textarea {width:50%; height:100px;}
 	code {border: 1px solid #000000; display:block;  margin:20px 0 0; padding:10px; width:50%;}
+	.displayNone {display:none;}
 	</style>
 </head>
 <body>
@@ -361,7 +364,7 @@
 			<input type="checkbox" value="Novelties & Accessories"/>Accessories <br>
 			<br>
 		</div>
-		<div class="inclusionList">
+		<div class="inclusionList displayNone">
 			<div>Check the box below and enter a tab delimited list of team long data to exclude any teams (ONLY BUILT FOR TEAM CATEGORIES) from the category results:</div>
 			<input type="checkbox" value="excludeTeams"/>Include these teams, exclude any others. <br>
 			<textarea name="inclusionList"></textarea>

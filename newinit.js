@@ -545,12 +545,12 @@ function showSubPage(routeObj,parentID){
 	var filterData = _app.ext.store_filter.filterData[parentID]; //gets the top level data
 //					dump('filtterData after gets top level data'); dump(filterData); dump(routeObj.params.id);
 	filterData = $.grep(filterData.pages,function(e,i){
-		return e.id == routeObj.params.id+"/";	//gets mid level data
+		return e.id == routeObj.params.id;	//gets mid level data
 	})[0];
 
 //					dump(filterData);
 	filterData = $.grep(filterData.pages,function(e,i){
-		return e.id == routeObj.params.end+"/";	//gets the lowest level data
+		return e.id == routeObj.params.end;	//gets the lowest level data
 	})[0];
 	routeObj.params.dataset = $.extend(true, {}, filterData);	//deep copy to avoid pass by reference bugs
 	
@@ -585,7 +585,7 @@ function showSubPage(routeObj,parentID){
 _app.router.addAlias('subcat', function(routeObj) {
 	_app.require(['store_cc','store_filter','store_search','store_routing','prodlist_infinite','store_prodlist', 'templates.html'], function(){
 		var a = routeObj.pagefilter;
-		var b = routeObj.params.id+'/';
+		var b = routeObj.params.id;
 		routeObj.params.templateID = "splashPageTemplate";
 		$.getJSON("filters/apparel/"+a+".json?_v="+(new Date()).getTime(), function(json){
 			var dataset = $.extend(true, {}, $.grep(json.pages,function(e,i){

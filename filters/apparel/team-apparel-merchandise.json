@@ -6,6 +6,7 @@
 		"bannerlink" : "",
 		"banneralt" : "Shop By Team Banner",
 		"promo" : "Some promotional text goes here",
+		"link" : "/team-apparel-merchandise/",
 		"pages" : [
 			{
 				"id" 				: "college-teams",
@@ -29,7 +30,6 @@
 				"baseFilter" 	: {"term" : {"team_league_ncaa" : "duke"}},
 				"options"		: {	"base_price" : { "min":0, "max":300 }},
 				"optionList" 	: [
-					"user:size_code",
 					"user:size_gender",
 					"user:type",
 					"user:vendor_code",
@@ -47,7 +47,6 @@
 				"baseFilter" 	: {"term" : {"team_league_ncaa" : "ill"}},
 				"options"		: {	"base_price" : { "min":0, "max":300 }},
 				"optionList" 	: [
-					"user:size_code",
 					"user:size_gender",
 					"user:type",
 					"user:vendor_code"
@@ -63,7 +62,6 @@
 				"baseFilter" 	: {"term" : {"team_league_ncaa" : "ilst"}},
 				"options"		: {	"base_price" : { "min":0, "max":300 }},
 				"optionList" 	: [
-					"user:size_code",
 					"user:size_gender",
 					"user:type",
 					"user:vendor_code"
@@ -79,7 +77,6 @@
 				"baseFilter" 	: {"term" : {"team_league_ncaa" : "ind"}},
 				"options"		: {	"base_price" : { "min":0, "max":300 }},
 				"optionList" 	: [
-					"user:size_code",
 					"user:size_gender",
 					"user:type",
 					"user:vendor_code"
@@ -95,7 +92,6 @@
 				"baseFilter" 	: {"term" : {"team_league_ncaa" : "iowa"}},
 				"options"		: {	"base_price" : { "min":0, "max":300 }},
 				"optionList" 	: [
-					"user:size_code",
 					"user:size_gender",
 					"user:type",
 					"user:vendor_code"

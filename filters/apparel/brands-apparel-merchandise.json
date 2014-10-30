@@ -3,10 +3,11 @@
 	"name": "Brands-Apparel-Merchandise",
 	"page-title": "Brands Apparel & Merchandise at CampusColors.com",
 	"page-description": "\"Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!\"",
-	"banner": "banners/test_cat_banner_785x200.jpg",
+	"banner": "blank",
 	"bannerlink": "",
 	"banneralt": "Shop By Brand Banner",
 	"promo": "Some promotional text goes here",
+	"link" : "/brands-apparel-merchandise/",
 	"pages": [
 		{
 			"baseFilter": {
@@ -36,7 +37,6 @@
 			"page-title": "Adidas Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -67,7 +67,6 @@
 			"page-title": "Aminco Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -98,7 +97,6 @@
 			"page-title": "Antigua Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -129,7 +127,6 @@
 			"page-title": "Blue 84 Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -160,7 +157,6 @@
 			"page-title": "Bleacher Creatures Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -191,7 +187,6 @@
 			"page-title": "Boelter Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -222,7 +217,6 @@
 			"page-title": "'47 Brand Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -253,7 +247,6 @@
 			"page-title": "BSI Products Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -284,7 +277,6 @@
 			"page-title": "Concept Sport Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -315,7 +307,6 @@
 			"page-title": "Charm 14 Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -346,7 +337,6 @@
 			"page-title": "Champion Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -377,7 +367,6 @@
 			"page-title": "C & I Collectibles Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -408,7 +397,6 @@
 			"page-title": "Comfy Feet Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -439,7 +427,6 @@
 			"page-title": "Colossuem Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -470,7 +457,6 @@
 			"page-title": "Concept One Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -501,7 +487,6 @@
 			"page-title": "Coopersburg Sports Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -532,7 +517,6 @@
 			"page-title": "Columbia Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -563,7 +547,6 @@
 			"page-title": "Distant Replays Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -594,7 +577,6 @@
 			"page-title": "Fit 2 Win Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -625,7 +607,6 @@
 			"page-title": "Fanatic Group Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -656,7 +637,6 @@
 			"page-title": "Fan Mats Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -687,7 +667,6 @@
 			"page-title": "For Bare Feet Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -718,7 +697,6 @@
 			"page-title": "Fathead Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -749,7 +727,6 @@
 			"page-title": "Foam Fanatics Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -780,7 +757,6 @@
 			"page-title": "Freemont Die Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -811,7 +787,6 @@
 			"page-title": "Front Row Sports Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -842,7 +817,6 @@
 			"page-title": "Franklin  Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -873,7 +847,6 @@
 			"page-title": "Fan Tape Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -904,7 +877,6 @@
 			"page-title": "The Game Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -935,7 +907,6 @@
 			"page-title": "Great American Products Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -966,7 +937,6 @@
 			"page-title": "Gear Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -997,7 +967,6 @@
 			"page-title": "Glory Haus Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -1028,7 +997,6 @@
 			"page-title": "GIII Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -1059,7 +1027,6 @@
 			"page-title": "Game Master Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -1090,7 +1057,6 @@
 			"page-title": "Highland Mint Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -1121,7 +1087,6 @@
 			"page-title": "Holloway Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -1152,7 +1117,6 @@
 			"page-title": "Hunter Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -1183,7 +1147,6 @@
 			"page-title": "J America Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -1214,7 +1177,6 @@
 			"page-title": "Jarden Sports Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -1245,7 +1207,6 @@
 			"page-title": "Rawlings Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -1276,7 +1237,6 @@
 			"page-title": "Kasky Kids Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -1307,7 +1267,6 @@
 			"page-title": "Little Earth Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -1338,7 +1297,6 @@
 			"page-title": "Logo Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -1369,7 +1327,6 @@
 			"page-title": "Majestic Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -1400,7 +1357,6 @@
 			"page-title": "Wincraft Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -1431,7 +1387,6 @@
 			"page-title": "Campus Colors Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -1462,7 +1417,6 @@
 			"page-title": "New Era Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -1502,7 +1456,6 @@
 			"page-title": "Nike Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -1533,7 +1486,6 @@
 			"page-title": "The Northwest Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -1564,7 +1516,6 @@
 			"page-title": "Genuine Stuff Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -1595,7 +1546,6 @@
 			"page-title": "Oyo Sports Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -1626,7 +1576,6 @@
 			"page-title": "Letter Art Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -1657,7 +1606,6 @@
 			"page-title": "Photo File Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -1688,7 +1636,6 @@
 			"page-title": "PPW Toys Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -1719,7 +1666,6 @@
 			"page-title": "Team ProMark Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -1750,7 +1696,6 @@
 			"page-title": "Pro Specialties Group Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -1781,7 +1726,6 @@
 			"page-title": "Pubs Of Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -1812,7 +1756,6 @@
 			"page-title": "Original Retro Brand Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -1843,7 +1786,6 @@
 			"page-title": "Reebok Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -1874,7 +1816,6 @@
 			"page-title": "Mojo Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -1905,7 +1846,6 @@
 			"page-title": "Rico Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -1936,7 +1876,6 @@
 			"page-title": "Ridell Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -1967,7 +1906,6 @@
 			"page-title": "R & R Imports Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -1998,7 +1936,6 @@
 			"page-title": "Russel Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -2029,7 +1966,6 @@
 			"page-title": "Sikiyou  Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -2060,7 +1996,6 @@
 			"page-title": "Skootz Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -2091,7 +2026,6 @@
 			"page-title": "Silver Star Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -2122,7 +2056,6 @@
 			"page-title": "Soffe Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -2153,7 +2086,6 @@
 			"page-title": "Sports Coverage Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -2184,7 +2116,6 @@
 			"page-title": "Spalding Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -2215,7 +2146,6 @@
 			"page-title": "Stockdale Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -2246,7 +2176,6 @@
 			"page-title": "Fabrique Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -2277,7 +2206,6 @@
 			"page-title": "Tailgate Clothing Co. Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -2308,7 +2236,6 @@
 			"page-title": "Team Effort Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -2339,7 +2266,6 @@
 			"page-title": "Tervis Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -2370,7 +2296,6 @@
 			"page-title": "The Emblem Source Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -2401,7 +2326,6 @@
 			"page-title": "Team Golf Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -2432,7 +2356,6 @@
 			"page-title": "Highland Mint Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -2463,7 +2386,6 @@
 			"page-title": "The Memory Company Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -2494,7 +2416,6 @@
 			"page-title": "Team Edition Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -2525,7 +2446,6 @@
 			"page-title": "Topperscot Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -2556,7 +2476,6 @@
 			"page-title": "Top Of The World Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -2587,7 +2506,6 @@
 			"page-title": "Top Sox Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -2618,7 +2536,6 @@
 			"page-title": "'47 Brand Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -2649,7 +2566,6 @@
 			"page-title": "Under Armour Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -2680,7 +2596,6 @@
 			"page-title": "Campus Colors Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -2711,7 +2626,6 @@
 			"page-title": "Wincraft Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -2742,7 +2656,6 @@
 			"page-title": "Winning Streak Sports Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -2773,7 +2686,6 @@
 			"page-title": "Wes & Willy  Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -2804,7 +2716,6 @@
 			"page-title": "Majestic Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -2835,7 +2746,6 @@
 			"page-title": "NFL Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -2866,7 +2776,6 @@
 			"page-title": "Reebok Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -2897,7 +2806,6 @@
 			"page-title": "Zephyr Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
@@ -2928,7 +2836,6 @@
 			"page-title": "Zipway Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
-				"user:size_code",
 				"user:size_gender",
 				"user:website_filter",
 				"user:color_pallete",
