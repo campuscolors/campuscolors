@@ -212,7 +212,7 @@ header {position:relative;}
 .newsLetterWrapper {width:100%; margin:10px auto 0 auto;}
 .newsLetterWrapper form {padding:8px; background-color:#fbe143; box-shadow:1px 1px 0px 0px #555;}
 .footEmail {height:40px; width:60%; padding:0 0 0 35px; border:none; color:#9e9e9e; background-position:-458px 0; background-repeat:no-repeat;}
-.footEmailSubmit {height:40px; width:39%; float:right; border:2px outset #b75970; color:#ffffff; font-size:15px; text-align:center;}
+.footEmailSubmit {height:40px; width:39%; padding:0; float:right; border:2px outset #b75970; color:#ffffff; font-size:15px; text-align:center;}
 .footSocBanners {width:440px; margin:0 auto;}
 .facebookBanner, .twitterBanner, .pinterestBanner, .instagramBanner {height:54px; width:40px; display:inline-block; margin:0 8px; background-position:-313px -150px;}
 .twitterBanner {background-position:-360px -150px;}
