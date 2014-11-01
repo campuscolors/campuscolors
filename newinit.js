@@ -15,6 +15,27 @@ _app.u.loadScript(configURI,function(){
 	_app.require(startupRequires, function(){
 		_app.ext.quickstart.callbacks.startMyProgram.onSuccess();
 		
+		//will destroy and reinitialize the header and homepage main banner carousels on screen resize. 
+		$(window).resize(function() {
+			var width = $(this).outerWidth();
+			var height = $(this).outerHeight();
+			setTimeout(function(){
+				if(width === screen.width) {
+					dump('window timeout resizing stuff:'); dump("screen width: "+screen.width); dump("width: "+width); dump("height: "+height); 
+					_app.ext.store_cc.u.runHeaderCarousel(true);
+					_app.ext.store_cc.u.runHeaderCarousel();
+					
+		//			this is setup, but phone/tablet portrait to landscape work well w/out it. 
+		//			Not likely to be changing widths enough for this to be needed. But it's here if needed. 
+		//			if($("#mainContentArea :visible:first").attr('data-app-uri') == "/") {
+		//				_app.ext.store_cc.u.runHomeMainBanner($(".homeTemplate"),true);
+		//				_app.ext.store_cc.u.runHomeMainBanner($(".homeTemplate"));
+		//			}
+		
+				}
+			},500);
+		});
+		
 		$.extend(handlePogs.prototype,_app.ext.store_cc.variations);
 		
 		_app.ext.store_cc.u.runHeaderCarousel();

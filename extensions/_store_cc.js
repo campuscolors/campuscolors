@@ -913,12 +913,18 @@ var store_cc = function(_app) {
 			
 /* CAROUSEL UTILS */
 			//Turns shipping banners in header into an auto scrolling carousel. 
-			runHeaderCarousel : function() {
+			runHeaderCarousel : function(destroy) {
 //				_app.u.dump('----Running homepage carousels');	
+				var destroy = destroy || false; //pass this argument to destroy the carousel 
+				//use a different element for higher than phone res (allows different format for content)
 				if(screen.width > 750) { var $target = $("[data-ship-carousel='notmobile']"); }
 				else { var $target = $("[data-ship-carousel='mobile']"); }
-				if($target.data('isCarousel'))	{$target.trigger('play');} //only make it a carousel once, but make sure it always scrolls
-				else {
+				//check if the carousel should be destroyed (if screen resize occured), restarted (if page is being revisited, although not likely for this particular carousel), 
+				//or if it needs to be initialized again or for the first time. 
+				if ($target.data('isCarousel') && destroy) { $target.data('isCarousel',false); $target.trigger('destroy'); /*dump('carouFredSel was destroyed');*/ } 
+				else if($target.data('isCarousel'))	{$target.trigger('play'); /*dump('carouFredSel was played');*/ } //only make it a carousel once, but make sure it always scrolls
+				else { 
+					//dump('carouFredSel was initialized');
 					$target.data('isCarousel',true);
 					//for whatever reason, caroufredsel needs to be executed after a moment.
 					setTimeout(function(){
@@ -947,11 +953,16 @@ var store_cc = function(_app) {
 			},
 
 			//Turns large banners on homepage into an auto scrolling carousel. 
-			runHomeMainBanner : function($context) {
+			runHomeMainBanner : function($context, destroy) {
 //				_app.u.dump('----Running homepage banner carousels');	
 				var $target = $('.homeBanner ',$context);
-				if($target.data('isCarousel'))	{$target.trigger('play');} //only make it a carousel once, but make sure it always scrolls
-				else {
+				var destroy = destroy || false; //pass this argument to destroy the carousel 
+				//check if the carousel should be destroyed (if screen resize occured), restarted (if page is being revisited, although not likely for this particular carousel), 
+				//or if it needs to be initialized again or for the first time. 
+				if ($target.data('isCarousel') && destroy) { $target.data('isCarousel',false); $target.trigger('destroy'); /*dump('carouFredSel was destroyed');*/ } 
+				else if($target.data('isCarousel')) { $target.trigger('play'); /*dump('carouFredSel was played');*/ } //only make it a carousel once, but make sure it always scrolls
+				else { 
+//					dump('carouFredSel was initialized');
 					var width = "680px";
 					var carWidth = "100%";
 					if(screen.width > 959) { width = "700px"; }
