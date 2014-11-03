@@ -881,7 +881,34 @@ var store_cc = function(_app) {
 //utilities are typically functions that are exected by an event or action.
 //any functions that are recycled should be here.
 		u : {
-
+			suppress : function($context){
+				var attempts = arguments[1] || 0;
+				if(typeof _app.ext.store_cc.vars.suppressionList !== 'undefined'){
+					$('a[href],area[href]',$context).each(function(){
+						if($.inArray($(this).attr('href'), _app.ext.store_cc.vars.suppressionList) >= 0){
+							$(this).empty().remove();
+							}
+						else {
+							//leave it alone
+							}
+						});
+					}
+				else if(attempts < 50){
+					setTimeout(function(){
+						_app.ext.store_cc.u.suppress($context, attempts+1);
+						}, 250);
+					}
+				else{
+					//give up
+					}
+				},
+			loadSuppressionList : function(callback){
+				callback = callback || function(){};
+				$.getJSON("suppression.json?_v="+(new Date()).getTime(), function(json){
+					_app.ext.store_cc.vars.suppressionList = json;
+					callback();
+					})
+				},
 /* FILTER SEARCH UTILS */		
 			//for top level category (ie: nhl-apparel) will check if data object has been loaded in vars and show content w/ it if it has,
 			//if not, will get data from the JSON record and showContent w/ that. Shows 404 if data can't be found in vars or JSON record.

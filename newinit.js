@@ -13,6 +13,9 @@ _app.u.loadScript(configURI,function(){
 	var startupRequires = ['quickstart','store_cc', 'store_filter','cco','store_product','order_create']
 	
 	_app.require(startupRequires, function(){
+		_app.ext.store_cc.u.loadSuppressionList(function(){
+			_app.ext.store_cc.u.suppress($('#appView'));
+			});
 		_app.ext.quickstart.callbacks.startMyProgram.onSuccess();
 		
 		//will destroy and reinitialize the header and homepage main banner carousels on screen resize. 
@@ -452,6 +455,7 @@ _app.extend({
 	"namespace" : "store_cc",
 	"filename" : "extensions/_store_cc.js"
 	});
+_app.u.bindTemplateEvent(function(){return true;}, 'complete.suppress', function(event, $context, infoObj){_app.ext.store_cc.u.suppress($context);});
 _app.extend({
 	"namespace" : "store_filter",
 	"filename" : "extensions/_store_filter.js"
