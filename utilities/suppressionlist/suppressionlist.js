@@ -63,7 +63,6 @@ for(var i in datafiles){
 	processPage(page);
 }
 ce.dispatch(function(data){
-	console.log('finalCallback');
-	console.log(JSON.stringify(suppress));
+	console.log('finishing...');
 	fs.writeFileSync(out, JSON.stringify(suppress));
 	});
