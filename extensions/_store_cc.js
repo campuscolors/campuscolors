@@ -886,7 +886,13 @@ var store_cc = function(_app) {
 				if(typeof _app.ext.store_cc.vars.suppressionList !== 'undefined'){
 					$('a[href],area[href]',$context).each(function(){
 						if($.inArray($(this).attr('href'), _app.ext.store_cc.vars.suppressionList) >= 0){
-							$(this).empty().remove();
+							var $suppress = $(this).closest('[data-suppress]');
+							if($suppress.length){
+								$suppress.empty().remove();
+								}
+							else {
+								$(this).empty().remove();
+								}
 							}
 						else {
 							//leave it alone
