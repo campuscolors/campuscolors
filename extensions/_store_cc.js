@@ -1471,12 +1471,42 @@ var store_cc = function(_app) {
 			
 			//make sure any open dropdowns are closed when a link is clicked (or page changes) so that the view isn't obstructed by them.
 			dismissAllDrop : function() {
-				dump('START dismissAllDrop');
+//				dump('START dismissAllDrop');
 				//if a dropdown is open, and the page changes, lets make sure the dropdowns are ready to open again later but close them before changing pages.
 				$("[data-app-click='store_cc|dismissDrop']","#appView").each(function(){ $(this).attr("store_cc|expandDrop"); });
 				$("[data-dropnav]","#appView").each(function(){ $(this).removeClass("expand"); });
+				$("[data-drop-width='horiz']","#appView").each(function() { if(screen.width > 767) { $(this).css('height','0'); } }); //column-count needs a height
 				$("[data-dropnav]","#appView").parent().each(function(){ $(this).removeClass("expandStyle"); });
 			},
+			
+			//determines a height for the dropdown/dropout elements dynamically to play better w/ column-count (to allow alpha order by column)
+			getHeight : function($item) {
+//				dump('START getHeight');
+				var height = 0;	//height of an element (all are the same size) for column height calculation
+				var counter = 0;	//count of items to determine how many high a column needs to be
+				var colWidth = $('[data-drop-width]',$item).attr("data-drop-width");	//"vert" for dropout menu, "horiz" for dropdown menu
+//				dump('data-drop-width'); dump(colWidth); 
+				$('a',$item).each(function(){	//get the count of anchors in the menu and the height each should be.
+					dump($(this).outerHeight());
+					if(counter == 1) { height += $(this).outerHeight(true); }
+					counter += 1;
+				});
+			
+				//determine how many columns to be used based on menu type and screen size (not used below tablet)
+				if(colWidth == 'horiz') {
+					if(screen.width < 960){ counter = counter/5 } //tablet dropdowns have 5 columns
+					else { counter = counter/6  } //desktop dropdown have 6 columns 
+				}
+				else if(colWidth == 'vert') { 
+					if(screen.width < 960) { counter = counter/3 } //tablet dropouts have 3 columns
+					 else { counter = counter/5 } //desktop dropouts have 5 columns
+				}
+//				dump('the height: '+height+' and counter: '+counter);
+				
+				height = Math.ceil(counter) * height + 15; //round up and add a little padding to be sure there is enough room
+				//$('.scrollDropout',$item).css('height',height+'px'); //this is set in where the function is called now. 
+				return height;
+			}
 			
 		/*	This may be a better way to do this, but it doesn't work if the page isn't reloaded. If tablet goes from 
 				portrait to landscape, the nav isn't hidden properly. Uses hideOnHome class for now.
@@ -1728,9 +1758,12 @@ var store_cc = function(_app) {
 				//if a dropdown is open, and another is clicked, lets make sure all are ready to open again later but close them before opening a new one.
 				$("[data-app-click='store_cc|dismissDrop']","#appView").each(function(){ $(this).attr("data-app-click","store_cc|expandDrop"); });
 				$("[data-dropnav]","#appView").each(function(){ $(this).removeClass("expand"); });
+				$("[data-drop-width='horiz']","#appView").each(function() { if(screen.width > 767) { $(this).css('height','0'); } }); //column-count needs a height
 				$("[data-dropnav]","#appView").parent().each(function(){ $(this).removeClass("expandStyle"); });
 				$ele.attr('data-app-click','store_cc|dismissDrop'); //make sure this one is ready to close if clicked later.
+
 				$("[data-dropnav]",$ele).addClass("expand"); //the class that does the magic
+				if(screen.width > 767) { $("[data-drop-width]",$ele).css('height',_app.ext.store_cc.u.getHeight($ele)+'px'); } //column-count needs a height
 				$("[data-dropnav]",$ele).parent().addClass("expandStyle"); //the class that does the magic
 				$(".sprite",$ele).addClass("openMenu"); //turn arrow in mobile menu to show menu can be closed
 				return false;
@@ -1742,6 +1775,7 @@ var store_cc = function(_app) {
 //				dump('START dismissDrop');
 				$ele.removeAttr('data-app-click').attr('data-app-click','store_cc|expandDrop'); //make it ready to open again later
 				$("[data-dropnav]",$ele).removeClass("expand"); //the class that does the magic
+				if(screen.width > 767) { $("[data-drop-width='horiz']",$ele).css('height','0'); } //column-count needs a height
 				$("[data-dropnav]",$ele).parent().removeClass("expandStyle"); //the class that does the magic
 				$(".sprite",".slideMenuBorder").removeClass("openMenu"); //turn arrow in mobile menu to show menu can be opened
 				return false;

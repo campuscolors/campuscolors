@@ -42,24 +42,26 @@
 			}
 			else if (option == "dropout") {
 				//the first anchor in the list should be to a product list of all that league's available product. 
-				var $firstA = $("<a class='bareWhiteLink bold'></a>");
-				var $firstDIV = $("<div class='dropLinkCont'></div>");
+				var $firstA = $("<a class='bareWhiteLink bold dropLinkCont'></a>");
+		//		var $firstDIV = $("<div class='dropLinkCont'></div>");
 				var href = "/league-apparel-merchandise/"+league+"/all/";
 				$firstA.attr("href",href);
 				league == "ncaa" ? $firstA.text("SEE ALL COLLEGE") : $firstA.text("SEE ALL " + league.toUpperCase());
-				$firstDIV.append($firstA);
-				output += $('<div>').append($firstDIV.clone()).html()+"\n";
+		//		$firstDIV.append($firstA);
+		//		output += $('<div>').append($firstDIV.clone()).html()+"\n";
+				output += $('<div>').append($firstA.clone()).html()+"\n";
 				
 				//now build links for all of the teams
 				for(var i = 0; i < raw.length; i++) {
 					//console.log(raw);
-					var $a = $("<a class='bareWhiteLink bold'></a>");
-					var $div = $("<div class='dropLinkCont'></div>");
+					var $a = $("<a class='bareWhiteLink bold dropLinkCont'></a>");
+		//			var $div = $("<div class='dropLinkCont'></div>"); //needed just the anchor because team suppression removes it, and empty div was left.
 					var href = "/"+league+"-team-apparel-merchandise/"+raw[i].toLowerCase().split(" ").join("-")+"/all/";
 					$a.attr("href",href);
 					$a.text(raw[i]);
-					$div.append($a);
-					output += $('<div>').append($div.clone()).html()+"\n";
+		//			$div.append($a);
+		//			output += $('<div>').append($div.clone()).html()+"\n";
+					output += $('<div>').append($a.clone()).html()+"\n";
 				}
 			}
 			else { var $a = $("<a>OH NO!! Something went wrong... </a>"); output += $('<div>').append($a.clone()).html()+"\n";  }
