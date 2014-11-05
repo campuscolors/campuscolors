@@ -35,7 +35,6 @@
 { "type":"path", "if":"/MLB.*", "then#redirect":"/mlb-team-apparel-merchandise/" },
 { "type":"path", "if":"/NHL.*", "then#redirect":"/nhl-team-apparel-merchandise/" },
 { "type":"path", "if":"/Soccer.*", "then#redirect":"/soccer-team-apparel-merchandise/" },
-//{ "type":"path", "if":"/(.*?)-Apparel-Merchandise", "then#redirect":"/$1-team-apparel-merchandise/" },
 { "type":"path", "if":"/Nike-Gear", "then#redirect":"/brands-apparel-merchandise/nike-gear/" },
 { "type":"path", "if":"/Adidas-Gear", "then#redirect":"/brands-apparel-merchandise/adidas-gear/" },
 { "type":"path", "if":"/Clearance.aspx", "then#redirect":"/clearance-apparel-merchandise/" },
