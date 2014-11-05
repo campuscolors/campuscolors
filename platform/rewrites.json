@@ -14,7 +14,7 @@
 
 
 // sendfile known urls
-{ "type":"path", "if":"/(league|ncaa-team|nfl-team|nba-team|mlb-team|nhl-team|soccer-team|brands|sale)\\-apparel\\-merchandise/.*", "then#sendfile":"/index.html", "apptimize":"false" },
+{ "type":"path", "if":"/(league|ncaa-team|nfl-team|nba-team|mlb-team|nhl-team|soccer-team|brands|sale|team)\\-apparel\\-merchandise/.*", "then#sendfile":"/index.html", "apptimize":"false" },
 { "type":"path", "if":"/apparel\\-merchandise/.*", "then#sendfile":"/index.html", "apptimize":"false" },
 { "type":"path", "if":"/store_locations/", "then#sendfile":"/index.html", "apptimize":"false" },
 { "type":"path", "if":"/about_us/", "then#sendfile":"/index.html", "apptimize":"false" },
