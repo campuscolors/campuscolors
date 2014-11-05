@@ -22,7 +22,7 @@
 			},
 			{
 				"id" 				: "nfl-teams",
-				"link"				: "/team-apparel-merchandise/nfl-teams/", 
+				"link"				: "/nfl-team-apparel-merchandise/", 
 				"img" 			: "",
 				"name"			: "NFL Teams",
 				"page-title" 	: "NFL Shorts at CampusColors.com",
@@ -34,7 +34,7 @@
 			},
 			{
 				"id" 				: "nba-teams",
-				"link"				: "/team-apparel-merchandise/nba-teams/", 
+				"link"				: "/nba-team-apparel-merchandise/", 
 				"img" 			: "",
 				"name"			: "NBA Teams",
 				"page-title" 	: "NBA Shorts at CampusColors.com",
@@ -46,7 +46,7 @@
 			},
 			{
 				"id" 				: "mlb-teams",
-				"link"				: "/team-apparel-merchandise/mlb-teams/", 
+				"link"				: "/mlb-team-apparel-merchandise/", 
 				"img" 			: "",
 				"name"			: "MLB Teams",
 				"page-title" 	: "MLB Shorts at CampusColors.com",
@@ -58,7 +58,7 @@
 			},
 			{
 				"id" 				: "nhl-teams",
-				"link"				: "/team-apparel-merchandise/nhl-teams/", 
+				"link"				: "/nhl-team-apparel-merchandise/", 
 				"img" 			: "",
 				"name"			: "NHL Teams",
 				"page-title" 	: "NHL Shorts at CampusColors.com",
@@ -70,7 +70,7 @@
 			},
 			{
 				"id" 				: "soccer-teams",
-				"link"				: "/team-apparel-merchandise/soccer-teams/", 
+				"link"				: "/soccer-team-apparel-merchandise/", 
 				"img" 			: "",
 				"name"			: "SOCCER Teams",
 				"page-title" 	: "SOCCER Shorts at CampusColors.com",
