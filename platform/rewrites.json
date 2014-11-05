@@ -22,8 +22,10 @@
 { "type":"path", "if":"/frequently_asked_questions/", "then#sendfile":"/index.html", "apptimize":"false" },
 { "type":"path", "if":"/contact_us/", "then#sendfile":"/index.html", "apptimize":"false" },
 { "type":"path", "if":"/shipping_policy/", "then#sendfile":"/index.html", "apptimize":"false" },
+{ "type":"path", "if":"/return_policy/", "then#sendfile":"/index.html", "apptimize":"false" },
 
-
+// redirct search pages
+{ "type":"/ItemSearch--search-(.*?).*", "then#redirect":"/search/$1" },
 
 // redirct category pages
 { "type":"path", "if":"/BrandList.aspx", "then#redirect":"/team-apparel-merchandise/" },
@@ -50,6 +52,7 @@
 { "type":"path", "if":"/content--name-FAQ", "then#redirect":"/frequently_asked_questions/" },
 { "type":"path", "if":"/ContactUs.aspx", "then#redirect":"/contact_us/" },
 { "type":"path", "if":"/content--name-Shipping-Methods-and-Cost", "then#redirect":"/shipping_policy/" },
+{ "type":"path", "if":"/content--name-Return", "then#redirect":"/return_policy/" },
 
 // pages w/ no solid match
 { "type":"path", "if":"/content--name-Pay-Methods", "then#redirect":"/" },
@@ -62,6 +65,7 @@
 { "type":"path", "if":"/content--name-Wish-List", "then#redirect":"/" },
 { "type":"path", "if":"/content--name-customer-reviews", "then#redirect":"/" },
 { "type":"path", "if":"/content--name-Sales-Tax", "then#redirect":"/" },
+{ "type":"path", "if":"/content--name-Track-Your-Order", "then#redirect":"/" },
 
 // legacy vanity urls (pilfered from abilityCommerce sitemap_index.html)
 { "type":"/(Air-Force-Falcons-Apparel-Merchandise)", "then#redirect":"/search/$1" },
