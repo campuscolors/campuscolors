@@ -24,6 +24,9 @@
 { "type":"path", "if":"/shipping_policy/", "then#sendfile":"/index.html", "apptimize":"false" },
 { "type":"path", "if":"/return_policy/", "then#sendfile":"/index.html", "apptimize":"false" },
 
+// make checkout work
+{ "type":"path", "if":"/category/", "then#sendfile":"/index.html", "apptimize":"false" },
+
 // redirct search pages
 { "type":"/ItemSearch--search-(.*?).*", "then#redirect":"/search/keywords/$1" },
 
