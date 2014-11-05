@@ -25,7 +25,7 @@
 { "type":"path", "if":"/return_policy/", "then#sendfile":"/index.html", "apptimize":"false" },
 
 // redirct search pages
-{ "type":"/ItemSearch--search-(.*?).*", "then#redirect":"/search/$1" },
+{ "type":"/ItemSearch--search-(.*?).*", "then#redirect":"/search/keywords/$1" },
 
 // redirct category pages
 { "type":"path", "if":"/BrandList.aspx", "then#redirect":"/team-apparel-merchandise/" },
@@ -68,7 +68,7 @@
 { "type":"path", "if":"/content--name-Track-Your-Order", "then#redirect":"/" },
 
 // legacy vanity urls (pilfered from abilityCommerce sitemap_index.html)
-{ "type":"/(Air-Force-Falcons-Apparel-Merchandise)", "then#redirect":"/search/$1" },
+{ "type":"/(Air-Force-Falcons-Apparel-Merchandise)", "then#redirect":"/search/keywords/$1" },
 { "type":"/(Alabama-Crimson-Tide-Apparel-Merchandise)", "then#redirect":"/search/$1" },
 { "type":"/(Arizona-Wildcats-Apparel-Merchandise)", "then#redirect":"/search/$1" },
 { "type":"/(Arizona-State-Sun-Devils-Apparel-Merchandise)", "then#redirect":"/search/$1" },
