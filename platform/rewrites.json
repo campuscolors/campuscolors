@@ -16,6 +16,7 @@
 // sendfile known urls
 { "type":"path", "if":"/(league|ncaa-team|nfl-team|nba-team|mlb-team|nhl-team|soccer-team|brands|sale)\\-apparel\\-merchandise/.*", "then#sendfile":"/index.html", "apptimize":"false" },
 { "type":"path", "if":"/apparel\\-merchandise/.*", "then#sendfile":"/index.html", "apptimize":"false" },
+{ "type":"path", "if":"/store_locations/", "then#sendfile":"/index.html", "apptimize":"false" },
 
 
 // redirct category pages
@@ -36,16 +37,16 @@
 { "type":"path", "if":"/Item--i-(.*?)", "then#redirect":"/product/$1" },
 
 // redirct company pages
-{ "type":"path", "if":"/content--name-Store-Locations", "then#redirect":"/company/locations/" },
-{ "type":"path", "if":"/content--name-Customer-Service", "then#redirect":"/company/about/" },
-{ "type":"path", "if":"/content--name-About-Us", "then#redirect":"/company/about/" },
-{ "type":"path", "if":"/content--name-Privacy-Policy", "then#redirect":"/company/privacy/" },
-{ "type":"path", "if":"/content--name-Pay-Methods", "then#redirect":"/company/payment/" },
-{ "type":"path", "if":"/content--name-FAQ", "then#redirect":"/company/faq/" },
-{ "type":"path", "if":"/ContactUs.aspx", "then#redirect":"/company/contact/" },
-{ "type":"path", "if":"/content--name-Shipping-Methods-and-Cost", "then#redirect":"/company/shipping/" },
+{ "type":"path", "if":"/content--name-Store-Locations", "then#redirect":"/store_locations/" },
+{ "type":"path", "if":"/content--name-Customer-Service", "then#redirect":"/about_us/" },
+{ "type":"path", "if":"/content--name-About-Us", "then#redirect":"/about_us/" },
+{ "type":"path", "if":"/content--name-Privacy-Policy", "then#redirect":"/privacy_policy/" },
+{ "type":"path", "if":"/content--name-FAQ", "then#redirect":"/frequently_asked_questions/" },
+{ "type":"path", "if":"/ContactUs.aspx", "then#redirect":"/contact_us/" },
+{ "type":"path", "if":"/content--name-Shipping-Methods-and-Cost", "then#redirect":"/shipping_policy/" },
 
 // pages w/ no solid match
+{ "type":"path", "if":"/content--name-Pay-Methods", "then#redirect":"/" },
 { "type":"path", "if":"/CartPage.aspx", "then#redirect":"/" },
 { "type":"path", "if":"/login.aspx?ReturnUrl=%2fMembers%2fMyAccount.aspx", "then#redirect":"/" },
 { "type":"path", "if":"/login.aspx.*", "then#redirect":"/" },
