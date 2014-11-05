@@ -67,7 +67,7 @@
 { "type":"path", "if":"/content--name-Track-Your-Order", "then#redirect":"/" },
 
 // legacy vanity urls (pilfered from abilityCommerce sitemap_index.html)
-{ "type":"/(Air-Force-Falcons-Apparel-Merchandise)", "then#redirect":"/search/keywords/$1" },
+{ "type":"/Air-Force-Falcons-Apparel-Merchandise", "then#redirect":"/search/keywords/Air-Force-Falcons-Apparel-Merchandise" },
 { "type":"/(Alabama-Crimson-Tide-Apparel-Merchandise)", "then#redirect":"/search/$1" },
 { "type":"/(Arizona-Wildcats-Apparel-Merchandise)", "then#redirect":"/search/$1" },
 { "type":"/(Arizona-State-Sun-Devils-Apparel-Merchandise)", "then#redirect":"/search/$1" },
