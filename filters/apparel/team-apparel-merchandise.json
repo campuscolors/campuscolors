@@ -2,7 +2,7 @@
 		"id"	: "Team-Apparel-Merchandise",
 		"page-title" : "Team Apparel at CampusColors.com",
 		"page-description" : "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
-		"banner" : "banners/test_cat_banner_785x200.jpg",
+		"banner" : "blank",
 		"bannerlink" : "",
 		"banneralt" : "Shop By Team Banner",
 		"promo" : "Some promotional text goes here",
@@ -10,7 +10,7 @@
 		"pages" : [
 			{
 				"id" 				: "college-teams",
-				"link"				: "/team-apparel-merchandise/college-teams/", 
+				"link"				: "/ncaa-team-apparel-merchandise/", 
 				"img" 			: "",
 				"name"			: "College Teams",
 				"page-title" 	: "College Teams at CampusColors.com",
@@ -18,83 +18,6 @@
 				"baseFilter" 	: {"term" : {"team_league" : "ncaa"}},
 				"optionList" 	: [
 					"user:team_league_ncaa"
-				]
-			},
-			{
-				"id" 				: "duke-blue-devils-apparel-merchandise.html",
-				"link"				: "/team-apparel-merchandise/duke-blue-devils-apparel-merchandise.html", 
-				"img" 			: "",
-				"name"			: "Duke Blue Devils Apparel & Merchandise",
-				"page-title" 	: "Duke Blue Devils Apparel & Merchandise | CampusColors.com",
-				"page-description" : "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
-				"baseFilter" 	: {"term" : {"team_league_ncaa" : "duke"}},
-				"options"		: {	"base_price" : { "min":0, "max":300 }},
-				"optionList" 	: [
-					"user:size_gender",
-					"user:type",
-					"user:vendor_code",
-					"user:website_filter",
-					"user:website_filter_alt"
-				]
-			},
-			{
-				"id" 				: "illinois-fighting-illini-apparel-merchandise.html",
-				"link"				: "/team-apparel-merchandise/illinois-fighting-illini-apparel-merchandise.html", 
-				"img" 			: "",
-				"name"			: "College Teams Illinois Fighting Illini",
-				"page-title" 	: "College Teams Illinois Fighting Illini at CampusColors.com",
-				"page-description" : "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
-				"baseFilter" 	: {"term" : {"team_league_ncaa" : "ill"}},
-				"options"		: {	"base_price" : { "min":0, "max":300 }},
-				"optionList" 	: [
-					"user:size_gender",
-					"user:type",
-					"user:vendor_code"
-				]
-			},
-			{
-				"id" 				: "illinois-state-redbirds-apparel-merchandise.html",
-				"link"				: "/team-apparel-merchandise/illinois-state-redbirds-apparel-merchandise.html", 
-				"img" 			: "",
-				"name"			: "College Teams Illinois State Redbirds",
-				"page-title" 	: "College Teams Illinois State Redbirds at CampusColors.com",
-				"page-description" : "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
-				"baseFilter" 	: {"term" : {"team_league_ncaa" : "ilst"}},
-				"options"		: {	"base_price" : { "min":0, "max":300 }},
-				"optionList" 	: [
-					"user:size_gender",
-					"user:type",
-					"user:vendor_code"
-				]
-			},
-			{
-				"id" 				: "indiana-hoosiers-apparel-merchandise.html",
-				"link"				: "/team-apparel-merchandise/indiana-hoosiers-apparel-merchandise.html", 
-				"img" 			: "",
-				"name"			: "College Teams Indiana Hoosiers",
-				"page-title" 	: "College Teams Indiana Hoosiers at CampusColors.com",
-				"page-description" : "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
-				"baseFilter" 	: {"term" : {"team_league_ncaa" : "ind"}},
-				"options"		: {	"base_price" : { "min":0, "max":300 }},
-				"optionList" 	: [
-					"user:size_gender",
-					"user:type",
-					"user:vendor_code"
-				]
-			},
-			{
-				"id" 				: "iowa-hawkeyes-apparel-merchandise.html",
-				"link"				: "/team-apparel-merchandise/iowa-hawkeyes-apparel-merchandise.html", 
-				"img" 			: "",
-				"name"			: "College Teams Iowa Hawkeyes",
-				"page-title" 	: "College Teams Iowa Hawkeyes at CampusColors.com",
-				"page-description" : "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
-				"baseFilter" 	: {"term" : {"team_league_ncaa" : "iowa"}},
-				"options"		: {	"base_price" : { "min":0, "max":300 }},
-				"optionList" 	: [
-					"user:size_gender",
-					"user:type",
-					"user:vendor_code"
 				]
 			},
 			{

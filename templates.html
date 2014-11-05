@@ -591,7 +591,7 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 
 <ul>
 	<li id="splashPageRootListTemplate" data-suppress=true class="splashPageListTemplate floatLeft marginRight">
-		<a data-tlc="bind $href '.link'; store_cc#makelinkall;">
+		<a data-tlc="bind $href '.link'; bind $id '.id'; store_cc#makelinkall;">
 			<img data-tlc="bind $var '.img'; apply --img --media=$var --width=190 --height=230 --bgcolor='#ffffff' --replace;" src="blank.gif" class="prodThumb" alt="" height="230" width="190">
 			<div data-tlc="bind $var '.name'; apply --append;" class="title center"></div>
 		</a>

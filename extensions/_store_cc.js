@@ -444,8 +444,12 @@ var store_cc = function(_app) {
 			//adds link to leaf level of root category in order to bypass the standard "type" subcategory.
 			makelinkall : function(data, thisTLC) {
 				var $tag = data.globals.tags[data.globals.focusTag];
-				var href = data.globals.binds.href; //dump(href); 
-				href = href + "all/";
+				var id = data.globals.binds.id; dump(id); 
+				var href = data.globals.binds.href; dump(href);
+				//no all section for these links from the team-apparel-merchandise page (just to catch redirect from the shop by team page).
+				if(id != "college-teams" && id != "nfl-teams" && id != "nba-teams" && id != "mlb-teams" && id != "nhl-teams" && id != "soccer-teams") {	
+					href = href + "all/";
+				}
 				$tag.attr("href",href);
 			},
 			
