@@ -17,6 +17,12 @@
 { "type":"path", "if":"/(league|ncaa-team|nfl-team|nba-team|mlb-team|nhl-team|soccer-team|brands|sale)\\-apparel\\-merchandise/.*", "then#sendfile":"/index.html", "apptimize":"false" },
 { "type":"path", "if":"/apparel\\-merchandise/.*", "then#sendfile":"/index.html", "apptimize":"false" },
 { "type":"path", "if":"/store_locations/", "then#sendfile":"/index.html", "apptimize":"false" },
+{ "type":"path", "if":"/about_us/", "then#sendfile":"/index.html", "apptimize":"false" },
+{ "type":"path", "if":"/privacy_policy/", "then#sendfile":"/index.html", "apptimize":"false" },
+{ "type":"path", "if":"/frequently_asked_questions/", "then#sendfile":"/index.html", "apptimize":"false" },
+{ "type":"path", "if":"/contact_us/", "then#sendfile":"/index.html", "apptimize":"false" },
+{ "type":"path", "if":"/shipping_policy/", "then#sendfile":"/index.html", "apptimize":"false" },
+
 
 
 // redirct category pages
