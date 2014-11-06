@@ -1589,7 +1589,10 @@ this will likely become more flexible in the future. ###
 				</div>
 </div>
 				<div class="satisfactionGuarantee marginBottom">
-					<div onclick="myApp.ext.store_cc.a.togglerecover($(this));" class="productPageLink pointer">100&#37; Satisfaction Guarantee&#42;</div>
+					<div onclick="myApp.ext.store_cc.a.togglerecover($(this));" class="productPageLink pointer">
+						<span class="pointer sprite"></span>
+						100&#37; Satisfaction Guarantee&#42;
+					</div>
 					<div class="marginTop" data-slide="toggle">
 						The condition of the item you buy is guaranteed to be new and its timely delivery is also guaranteed under our 100&#37; 
 						Satisfaction Guarantee. Please see our stated shipping windows for delivery times when completing your purchase.
@@ -1598,12 +1601,13 @@ this will likely become more flexible in the future. ###
 				
 			</div>
 			
-			
-			<div onclick="myApp.ext.store_cc.a.togglerecover($('.sprite'),$(this));" class="latency">
-				<span class="pointer sprite"></span>
-				<h3 class="arial pointer">SHIPS SAME DAY</h3>
-				<span class="pointer">&#40;if ordered before 3pm, CT&#41;&#42;</span>
-				<div class="latencyMessage marginTop" data-slide="toggle">&#42;Most orders ship same day. Orders containing multiple pieces may require an additional 1&#45;2 business days processing time.</div>
+			<div class="latency">
+				<div onclick="myApp.ext.store_cc.a.togglerecover($(this));">
+					<span class="pointer sprite"></span>
+					<h3 class="arial pointer">SHIPS SAME DAY</h3>
+					<span class="pointer">&#40;if ordered before 3pm, CT&#41;&#42;</span>
+					<div class="latencyMessage marginTop" data-slide="toggle">&#42;Most orders ship same day. Orders containing multiple pieces may require an additional 1&#45;2 business days processing time.</div>
+				</div>
 			</div>
 			<!-- Every item has the same latency, so it's static <div data-tlc="bind $var '.%attribs.zoovy:ship_latency'; if (is $var - -notblank;) {{ format - -prepend='Normally ships in '; format - -append=' day(s)'; apply - -append;}};" class="latency"></div> -->
 			

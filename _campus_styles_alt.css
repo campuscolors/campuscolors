@@ -332,8 +332,8 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 [data-order-soon='1'] {height:0; overflow:hidden;}
 .satisfactionGuarantee div[data-slide="toggle"] {display:none; padding:0 1em;}
 .latency {width: 290px; margin:10px auto; color:#194835; font-size:1.2em; background-color:#eeeeee; border:2px solid #cccccc; box-shadow:2px 2px 0 0 #cccccc; padding:7px 0;}
-.latency .sprite {height:12px; width:16px; background-position:-351px -117px; display:inline-block;}
-.latency.open .sprite {background-position:-351px -131px;}
+.latency .sprite, .satisfactionGuarantee .sprite {height:12px; width:16px; background-position:-351px -117px; display:inline-block;}
+.latency.open .sprite, .satisfactionGuarantee.open .sprite {background-position:-351px -131px;}
 .latency h3 {display:inline;}
 .latency span {font-size:0.6em;}
 .latency div[data-slide="toggle"] {display:none; color:#000000; text-align:left;	font-size:0.8em; margin:1em 0; padding:0 1em;}
