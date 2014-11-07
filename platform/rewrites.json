@@ -23,9 +23,11 @@
 { "type":"path", "if":"/contact_us/", "then#sendfile":"/index.html", "apptimize":"false" },
 { "type":"path", "if":"/shipping_policy/", "then#sendfile":"/index.html", "apptimize":"false" },
 { "type":"path", "if":"/return_policy/", "then#sendfile":"/index.html", "apptimize":"false" },
-
-// make checkout work
-{ "type":"path", "if":"/category/", "then#sendfile":"/index.html", "apptimize":"false" },
+{ "type":"path", "if":"/my_account/", "then#sendfile":"/index.html", "apptimize":false },
+{ "type":"path", "if":"/change_password/", "then#sendfile":"/index.html", "apptimize":false },
+{ "type":"path", "if":"/my_order_history/", "then#sendfile":"/index.html", "apptimize":false },
+{ "type":"path", "if":"/my_wishlist/", "then#sendfile":"/index.html", "apptimize":false },
+{ "type":"path", "if":"/checkout/", "then#sendfile":"/index.html", "apptimize":"false" },
 
 // redirct search pages
 { "type":"path", "if":"/ItemSearch--search-(.*?).*", "then#redirect":"/search/keywords/$1" },
