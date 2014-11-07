@@ -131,7 +131,10 @@ item list and summary are separate just to give more control over location.
 	
 	<div data-app-role="login">
 		<div class='marginBottom chkLoginCont'> <!--campus-->
-			<input data-tlc="bind $var '.bill.email'; if(is $var --blank;) {{bind $var '.customer.login'; }}; if(is $var --notblank;) {{apply --select=$var;}}; " required name="bill/email" size="30" placeholder="email address" data-app-blur="order_create|execBuyerEmailUpdate" type="email"><label>For order confirmation and tracking info</label><br> <!--campus-->
+			<div class="chkoutEMailWrapper"> <!--campus-->
+				<input data-tlc="bind $var '.bill.email'; if(is $var --blank;) {{bind $var '.customer.login'; }}; if(is $var --notblank;) {{apply --select=$var;}}; " required name="bill/email" size="30" placeholder="email address" data-app-blur="order_create|execBuyerEmailUpdate" type="email"> <!--campus-->
+			</div> <!--campus-->
+			<div>For order confirmation and tracking info</div><br> <!--campus-->
 			<div data-app-role="loginPasswordContainer" class="displayNone passwordContainer">
 				<!-- <div>If you have an account with us, please enter your password below to login</div> campus -->
 				<input placeholder="password" size="30" name="password" type="password"><button class="applyButton ccButton" data-app-click="order_create|execBuyerLogin">Login</button> <!--campus-->
