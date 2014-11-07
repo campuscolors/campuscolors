@@ -630,6 +630,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	
 	.notFoundRight {width:55%;}
 	.notFoundLink {font-size:1em; display:inline-block;}
+	.notFoundImg img {border:5px solid #000000; box-shadow:4px 3px 0 0 #cccccc;}
 }
 	
 	
