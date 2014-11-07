@@ -2145,6 +2145,7 @@ VALIDATION
 						if(required)	{
 							r = false;
 							$input.addClass('ui-state-error');
+							$input.after($span.text('required'));
 							}
 						else if($input.val())	{
 							$input.after($span.text('not a valid email address'));
