@@ -1,0 +1,44 @@
+{
+	"id": "Sale-Apparel-Merchandise",
+	"name": "Sale Apparel Merchandise",
+	"page-title": "Sale Apparel & Merchandise at CampusColors.com",
+	"page-description": "\"Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!\"",
+	"banner": "blank",
+	"bannerlink": "",
+	"banneralt": "Clearance Banner",
+	"promo": "Some promotional text goes here",
+	"link": "/sale-apparel-merchandise/",
+	"pages": [
+		{
+			"baseFilter": {
+				"term" : {
+					"tags" : "IS_SALE"
+				}
+			},
+			"options": {
+				"base_price": {
+					"min": 0,
+					"max": 150
+				}
+			},
+			"id": "clearance",
+			"link": "/sale-apparel-merchandise/clearance/",
+			"img": "blank",
+			"name": "Clearance Apparel & Merchandise",
+			"page-title": "Clearance Apparel & Merchandise | CampusColors.com",
+			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
+			"optionList": [
+				"user:size_gender",
+				"user:website_filter",
+				"user:vendor_code",
+				"user:color_pallete",
+				"user:team_league_ncaa",
+				"user:team_league_nfl",
+				"user:team_league_nba",
+				"user:team_league_mlb",
+				"user:team_league_nhl",
+				"user:team_conference"
+			]
+		}
+	]
+}

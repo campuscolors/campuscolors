@@ -167,6 +167,7 @@ var tlc = function()	{
 //	this.gatherDatapointers = function(){}'
 
 	this.translate = function($ele,dataset)	{
+		dataset = dataset || {};
 //		dump(" -> dataset: "); dump(dataset);
 		if($ele instanceof jQuery && dataset)	{
 			var _self = this;
@@ -629,9 +630,9 @@ This one block should get called for both img and imageurl but obviously, imageu
 			r = a+b.substr(1);//remove the 0 from b, then return a + b = 12,345,678.90
 	
 	//if the character before the decimal is just a zero, remove it.
-			if(r.split('.')[0] == 0){
-				r = '.'+r.split('.')[1]
-				}
+	//		if(r.split('.')[0] == 0){		//campus wants the zero there
+	//			r = '.'+r.split('.')[1]		//campus
+	//			}								//campus
 			r = (isNegative ? '-' : '')+'$'+r;
 			}
 		else	{

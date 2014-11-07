@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Team Link Generator</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script type="text/javascript">
+	
+		function clearTextAreas() {
+			$('textarea').each(function(){
+				$(this).val('');
+			});
+		}
+	
+		window.onload = clearTextAreas;
+	
+//console.log('');
+		function genLinks(name,league,$form) {
+//			var includeList = ["Brazil National Team","Chicago Fire","DC United","France National Team"]; //for testing
+			var raw = name.split('\n');
+			var output = "";
+			
+			//they may only want to include certain teams, rebuild the data excluding those not in their list if so
+			if($("input[type=checkbox]",".inclusionList").prop('checked') === true) {
+				var includeList = $("textarea",".inclusionList").val().split("\n");
+//				console.log(includeList)	;			
+				raw = genIncludedArray(raw, includeList);
+			}
+			
+			var option = $('input[name=type]:checked',$form).val();
+			console.log(option);
+			if(option == "dropdown") {
+				for(var i = 0; i < raw.length; i++) {
+					//console.log(raw);
+					var $a = $("<a></a>");
+					$a.attr("data-app-click","store_cc|dismissMobilNav");
+					var href = "/"+league+"-team-apparel-merchandise/"+raw[i].toLowerCase().split(" ").join("-")+"/all/";
+					$a.attr("href",href);
+					$a.text(raw[i]);
+					output += $('<div>').append($a.clone()).html()+"\n";
+				}
+			}
+			else if (option == "dropout") {
+				//the first anchor in the list should be to a product list of all that league's available product. 
+				var $firstA = $("<a class='bareWhiteLink bold dropLinkCont'></a>");
+		//		var $firstDIV = $("<div class='dropLinkCont'></div>");
+				var href = "/league-apparel-merchandise/"+league+"/all/";
+				$firstA.attr("href",href);
+				league == "ncaa" ? $firstA.text("SEE ALL COLLEGE") : $firstA.text("SEE ALL " + league.toUpperCase());
+		//		$firstDIV.append($firstA);
+		//		output += $('<div>').append($firstDIV.clone()).html()+"\n";
+				output += $('<div>').append($firstA.clone()).html()+"\n";
+				
+				//now build links for all of the teams
+				for(var i = 0; i < raw.length; i++) {
+					//console.log(raw);
+					var $a = $("<a class='bareWhiteLink bold dropLinkCont'></a>");
+		//			var $div = $("<div class='dropLinkCont'></div>"); //needed just the anchor because team suppression removes it, and empty div was left.
+					var href = "/"+league+"-team-apparel-merchandise/"+raw[i].toLowerCase().split(" ").join("-")+"/all/";
+					$a.attr("href",href);
+					$a.text(raw[i]);
+		//			$div.append($a);
+		//			output += $('<div>').append($div.clone()).html()+"\n";
+					output += $('<div>').append($a.clone()).html()+"\n";
+				}
+			}
+			else { var $a = $("<a>OH NO!! Something went wrong... </a>"); output += $('<div>').append($a.clone()).html()+"\n";  }
+//			console.log(output);			
+			$("#output").val(output);
+		};
+		
+		//pass the array of data for category generation and an array of teams (by team long) to be included in the category generation.
+		//will return an array without the teams not in the inclusion array.
+		function genIncludedArray(raw, includeList) {
+			var includedArray = [];
+			var processArray = [];
+//			console.log(raw); console.log(includeList);
+						
+			for(var o = 0; o < includeList.length; o++) {		
+				for(var p = 0; p < raw.length; p++) {
+//					console.log(includeList[o]); console.log(raw[p]);
+					if(includeList[o] == raw[p]) {
+						processArray.length = 0;
+						processArray = raw.slice(p,p+1);
+						includedArray.push.apply(includedArray,processArray);
+					}
+				}
+			}
+//			console.log(includedArray);
+			
+			return includedArray
+		};
+	</script>
+	
+	<style>
+	body {width:80%; margin:0 auto;}
+	textarea {width:50%; height:100px;}
+	code {border: 1px solid #000000; display:block;  margin:20px 0 0; padding:10px; width:50%;}
+	</style>
+</head>
+<body>
+	<p>
+		Enter CRLF separated list of team_long in this text field.
+	</p>
+	<div id="form">
+		<div>
+			<textarea required="required" name="team_long"></textarea>
+		</div>
+		<p>
+			<input type="radio" name="type" value="dropdown">Check here to make dropdown links <br>
+			<input type="radio" name="type" value="dropout">Check here to make dropout links: 
+		</p>
+		<div>
+			Enter the value for team_league in this field and press enter to get a list of anchor tags. <br>(ie: nhl or ncaa)
+			<input type="text" required="required" name="team_league"></textarea>
+		</div>
+		<div class="inclusionList">
+			<div><br>Check the box below and enter a tab delimited list of team long data to exclude any teams (ONLY BUILT FOR TEAM CATEGORIES) from the category results:</div>
+			<input type="checkbox" value="excludeTeams"/>Include these teams, exclude any others. <br>
+			<textarea name="inclusionList"></textarea>
+			<br><br>
+		</div>
+		<button onClick="genLinks($('textarea[name=team_long]',$(this).parent()).val(),$('input[name=team_league]',$(this).parent()).val(),$('#form')); return false;">Generazizate</input>
+	</div>
+	<textarea id="output" name="output"></textarea>
+</body>
+</html>

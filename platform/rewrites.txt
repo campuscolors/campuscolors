@@ -1,0 +1,46 @@
+#sample platform/rewrites.txt
+#col1:    [~=]uri|url|path|query
+#col2:     if match
+#col3:  goto
+#col4:  goto modifier
+
+#redirct category pages
+=path	/BrandList.aspx	/#!team-apparel-merchandise/
+~path	/College.*	/#!ncaa-team-apparel-merchandise/
+~path	/NFL.*	/#!nfl-team-apparel-merchandise/
+~path	/NBA.*	/#!nba-team-apparel-merchandise/
+~path	/MLB.*	/#!mlb-team-apparel-merchandise/
+~path	/NHL.*	/#!nhl-team-apparel-merchandise/
+~path	/Soccer.*	/#!soccer-team-apparel-merchandise/
+~path	^.*?/(.*?)-Apparel-Merchandise	/#!$1-team-apparel-merchandise/
+=path	/Nike-Gear	/#!brands-apparel-merchandise/nike-gear/
+=path	/Adidas-Gear	/#!brands-apparel-merchandise/adidas-gear/
+=path	/Clearance.aspx	/#!clearance-apparel-merchandise/
+
+#redirct product pages
+~path	/Item--i-(.*?)	/#!product/
+
+#redirct company pages
+=path	/content--name-Store-Locations	/#!company/locations/
+=path	/content--name-Customer-Service	/#!company/about/
+=path	/content--name-About-Us	/#!company/about/
+=path	/content--name-Privacy-Policy	/#!company/privacy/
+=path	/content--name-Pay-Methods	/#!company/payment/
+=path	/content--name-FAQ	/#!company/faq/
+=path	/ContactUs.aspx	/#!company/contact/
+=path	/content--name-Shipping-Methods-and-Cost	/#!company/shipping/
+
+#pages w/ no solid match
+=path	/CartPage.aspx	/#!
+=path	/login.aspx?ReturnUrl=%2fMembers%2fMyAccount.aspx	/#!
+~path	/login.aspx.*	/#!
+=path	/refer.aspx	/#!
+=path	/SiteMap.aspx	/#!
+=path	/content--name-Connect-With-Campus-Colors	/#!
+=path	/content--name-Wish-List	/#!
+=path	/content--name-customer-reviews	/#!
+=path	/content--name-Sales-Tax	/#!
+
+
+#redirect homepage
+=uri	http://beta.campuscolors.com/	http://beta.campuscolors.com/#!

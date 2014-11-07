@@ -1,0 +1,48 @@
+{
+	"filter": {
+		"or": [
+			{
+				"and" : [
+					{
+						"term": {
+							"team_league" : "ncaa"
+						}
+					},
+					{
+						"term": {
+							"website_filter" : "t-shirts"
+						}
+					}
+				]
+			},
+			{
+				"and" : [
+					{
+						"term": {
+							"team_league" : "ncaa"
+						}
+					},
+					{
+						"term": {
+							"website_filter" : "sweatshirts"
+						}
+					}
+				]
+			},
+			{
+				"and" : [
+					{
+						"term": {
+							"team_league" : "ncaa"
+						}
+					},
+					{
+						"term": {
+							"team_league" : "jerseys"
+						}
+					}
+				]
+			}
+		]
+	}
+}

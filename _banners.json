@@ -1,0 +1,52 @@
+[
+	{ "main" : 
+		[
+			{
+				"src"			: "banners/tailgating_banner_alt.jpg",
+				"width"		: "700",
+				"height"	: "268",
+				"alt"			: "Tailgating Essentials",
+				"title"		: "Tailgating Essentials",
+				"href"		: "/apparel-merchandise/novelties-and-accessories/"
+			},
+			{
+				"src"			: "banners/gameday_banner.jpg",
+				"width"		: "700",
+				"height"	: "268",
+				"alt"			: "Game Day",
+				"title"		: "Game Day",
+				"href"		: "/search/promo/college-shirts-sweatshirts-jerseys/"
+			},
+			{
+				"src"			: "banners/bogo_banner.jpg",
+				"width"		: "700",
+				"height"	: "268",
+				"alt"			: "Buy One Sweatshirt, Get One 30 percent off",
+				"title"		: "Buy One Sweatshirt, Get One 30 percent off",
+				"href"		: "/apparel-merchandise/sweatshirts/"
+			}
+		]
+	},
+	{ "featured" :
+		[
+			{
+				"src"			: "banners/college_sweatshirts.jpg",
+				"width"		: "330",
+				"height"	: "230",
+				"alt"			: "College Sweatshirts",
+				"title"		: "College Sweatshirts",
+				"label"		: "",
+				"href"		: "/league-apparel-merchandise/ncaa/sweatshirts/"
+			},
+			{
+				"src"			: "banners/nfl_hats.jpg",
+				"width"		: "330",
+				"height"	: "230",
+				"alt"			: "NFL Hats",
+				"title"		: "NFL Hats",
+				"label"		: "",
+				"href"		: "/league-apparel-merchandise/nfl/hats/"
+			}
+		]
+	}	
+]

@@ -6,7 +6,9 @@
 .project
 .metadata
 bin/
-/utilities/nodeproxy/node_modules/
+node_modules/
+/utilities/htmlbuilder/built/*/*.html
+/utilities/htmlbuilder/built/*.html
 /utilities/nodeproxy/jt.key
 /utilities/nodeproxy/www-spork*
 /utilities/nodeproxy/www.spork*

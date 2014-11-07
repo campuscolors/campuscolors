@@ -407,7 +407,9 @@ left them be to provide guidance later.
 							'onComplete' : function(r){
 								P.state = 'complete';
 								_app.renderFunctions.handleTemplateEvents(r.jqObj,$.extend(true,{},P,event));
+								if(r.deferred){r.deferred.resolve();}
 								},
+							'deferred' : vars.deferred,
 							'templateID' : $c.data('templateid'),
 							'jqObj' : $c
 							},P.Q);
@@ -587,8 +589,11 @@ note - dispatch isn't IN the function to give more control to developer. (you ma
 */
 			nukePayPalEC : function(_tag) {
 //				_app.u.dump("BEGIN cco.u.nukePayPalEC");
-				_app.ext.order_create.vars['payment-pt'] = null;
-				_app.ext.order_create.vars['payment-pi'] = null;
+				if(_app.ext.order_create){
+					//Doesn't require a _require, since if it's not loaded, it's already "nuked"
+					_app.ext.order_create.vars['payment-pt'] = null;
+					_app.ext.order_create.vars['payment-pi'] = null;
+					}
 				return this.modifyPaymentQbyTender('PAYPALEC',function(PQI){
 					//the delete cmd will reset want/payby to blank.
 					_app.ext.cco.calls.cartPaymentQ.init({'cmd':'delete','ID':PQI.ID},_tag || {'callback':'suppressErrors'}); //This kill process should be silent.
@@ -825,6 +830,7 @@ note - dispatch isn't IN the function to give more control to developer. (you ma
 
 //run this just prior to creating an order.
 //will clean up cart object.
+			//NOT INCLUDING A _REQUIRE SINCE THIS IS ONLY CALLED FROM ORDER_CREATE
 			sanitizeAndUpdateCart : function($form,_tag)	{
 //				dump("BEGIN cco.u.sanitizeAndUpdateCart");
 				if($form instanceof jQuery)	{
@@ -1277,13 +1283,21 @@ in a reorder, that data needs to be converted to the variations format required 
 //if the total is less than 0, just show 0 instead of a negative amount. zero is handled here too, just to avoid a formatMoney call.
 //if the first character is a dash, it's a negative amount.  JS didn't like amount *1 (returned NAN)
 					if(amount * 1 <= 0){
-						o += data.bindData.currencySign ? data.bindData.currencySign : '$';
+						o += data.bindData.currencysign ? data.bindData.currencysign : '$';
 						o += '0.00';
 						}
 					else	{
-						o += _app.u.formatMoney(amount,data.bindData.currencySign,'',data.bindData.hideZero);
+						o += _app.u.formatMoney(amount,data.bindData.currencysign,'',data.bindData.hideZero);
 						}
-					$tag.text("Balance due: "+o);  //update DOM.
+/*campus*/	if($tag.data("checkout")) {
+/*campus*/		var $span = $("<span class='summaryPriceAlign'></span");
+/*campus*/		$span.text("Balance due: ");
+/*campus*/		$tag.append($span);
+/*campus*/		$tag.append(o);
+/*campus*/		}
+/*campus*/	else {
+						$tag.text("Balance due: "+o);  //update DOM.
+/*campus*/	}
 					}
 				}, //orderBalance
 
@@ -1301,8 +1315,13 @@ in a reorder, that data needs to be converted to the variations format required 
 							o = "<span class='orderShipMethod'>"+(shipMethods[i]['pretty'] ? shipMethods[i]['pretty'] : shipMethods[i]['name'])+": <\/span>";
 	//only show amount if not blank.
 							if(shipMethods[i].amount)	{
-								o += "<span class='orderShipAmount'>"+_app.u.formatMoney(shipMethods[i].amount,' $',2,false)+"<\/span>";
-								}
+/*campus*/				if(shipMethods[i].amount == 0) {
+/*campus*/					o += "<span class='orderShipAmount'><span class='redText bold'>FREE<\/span><\/span>";
+/*campus*/				}
+/*campus*/				else {
+/*campus*/					o += "<span class='orderShipAmount'>"+_app.u.formatMoney(shipMethods[i].amount,'$',2,false)+"<\/span>";
+/*campus*/				}
+							}
 							break; //once we hit a match, no need to continue. at this time, only one ship method/price is available.
 							}
 						}

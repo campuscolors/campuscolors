@@ -7,7 +7,7 @@ The chkout prefix is reserved for checkout.
 
 item list and summary are separate just to give more control over location.
 -->
-<div id="checkoutTemplate" class="checkoutFormContainer" data-app-role="checkout">
+<div id="checkoutTemplate" class="checkoutFormContainer customCheckout" data-app-role="checkout">
 
 	<form action="#">
 	<input data-tlc="bind $var '.bill.shortcut'; if(is $var --notblank;) {{apply --select=$var;}}; " name="bill/shortcut" type="hidden">
@@ -15,61 +15,79 @@ item list and summary are separate just to give more control over location.
 	<input data-tlc="bind $var '.cart.cartid'; if(is $var --notblank;) {{apply --select=$var;}}; " name="_cartid" type="hidden">
 
 <!-- define panel order -->
-	<fieldset data-app-role="chkoutPreflight" class="marginBottom">
-		<legend class="headerPadding">Email / Account Login</legend>
+
+<div class="floatLeft noHovCCButton marginBottom pointer" onclick="$('.guestStartHere','.checkoutFormContainer').show();">Guest Checkout</div> <!-- campus remove after my account ready -->
+<div class="floatLeft existingPrompt marginBottom">Checkout as a Guest.</div> <!-- campus remove after my account ready -->
+
+<div class="displayNone accountTempDisable">
+	<div class="guestOrUser"> <!--campus-->
+		<div data-tlc="bind $var '.'; store_cc#toggleguestcheckout;" data-checkout-type="user"> <!--campus-->
+			<div class="floatLeft ccButton marginBottom" data-checkout-type="button">Sign In</div> <!--campus-->
+			<div class="floatLeft existingPrompt marginBottom">Existing customers sign in for faster checkout.</div> <!--campus-->
+		</div> <!--campus-->
+		<div data-tlc="bind $var '.'; store_cc#toggleguestcheckout;" data-checkout-type="guest" class="displayNone"> <!--campus-->
+			<div class="floatLeft ccButton marginBottom" data-checkout-type="button">Guest Checkout</div> <!--campus-->
+			<div class="floatLeft existingPrompt marginBottom">Checkout as a Guest.</div> <!--campus-->
+		</div> <!--campus-->
+	</div> <!--campus-->
+</div>		
+		
+	<fieldset data-app-role="chkoutPreflight" class="marginBottom clear">
+		<legend class="headerPadding"><span>1. </span>CONTACT INFO</legend> <!--campus-->
 		<div data-tlc="bind $var '.'; transmogrify --dataset=$var --templateid='chkoutPreflightTemplate'; apply --append;" data-legacy-useparentdata="true" class="panelContent"></div>
 		<div data-app-role="buyerLogout" class="displayNone pointer" data-app-click="order_create|buyerLogout">
-			Not you? <span class="lookLikeLink zlink">click here</span>.
+			Not you? <span class="lookLikeLink zlink uRedLink" onclick="myApp.ext.store_cc.a.manualToggle()">click here</span>.
 		</div>
 	</fieldset>
 
 
-
 	<fieldset data-app-role="chkoutAccountCreate" class="displayNone marginBottom">
-		<legend class="headerPadding">Account Creation</legend>
+		<legend class="headerPadding"><span>1a. </span>Account Creation</legend> <!--campus-->
 		<div data-tlc="bind $var '.'; transmogrify --dataset=$var --templateid='chkoutAccountCreateTemplate'; apply --append;" class="panelContent"></div>
 	</fieldset>
 
 
+	<div class="fauxFieldset"> <!--campus-->
+		<legend class="headerPadding"><span>2. </span>SHIPPING INFORMATION</legend> <!--campus-->
+		<div class='shipCenter'> <!--campus-->
+		<fieldset data-app-role="chkoutAddressBill" data-app-addresstype="bill" class="marginBottom shipInfo"> <!--campus-->
+			<legend class="headerPadding plainLegend">Billing Address</legend> <!--campus-->
+			<p data-app-role="addressExists" class="displayNone clearfix">Click the checkmark of the address you would like to use</p>
+			
+			<div data-tlc="bind $var '.@bill'; controller#loop --templateid='chkoutBuyerAddressTemplate'; if (is $var --notblank;) {{apply --append;}};" class="panelContent displayNone addressList" data-app-role="addressExists"></div><!-- for return customers -->
+			
+			<div class="clearfix marginBottom" data-app-role="addressExists"><button class="applyButton" data-app-click="order_create|showBuyerAddressAdd" data-app-addresstype="bill">Add New Address</button></div>
+			
+			<div data-tlc="bind $var '.'; transmogrify --dataset=$var --templateid='chkoutAddressBillTemplate'; apply --append;" class="panelContent" data-app-role="addressNew"></div><!-- for new customers -->
+			
+			<div data-app-role="billToShipContainer">
+			<label>
+			<input data-tlc="bind $var '.want.bill_to_ship'; if(is $var --notblank;) {{apply --select=$var;}}; " name="want/bill_to_ship" checked="checked" data-app-change="order_create|tagAsBillToShip" type="checkbox">
+			Ship to Billing Address <!--campus-->
+			</label>
+			</div>
+		</fieldset>
 
-	<fieldset data-app-role="chkoutAddressBill" data-app-addresstype="bill" class="marginBottom">
-		<legend class="headerPadding">Billing Address</legend>
-		<p data-app-role="addressExists" class="displayNone clearfix">Click the checkmark of the address you would like to use</p>
-		
-		<div data-tlc="bind $var '.@bill'; controller#loop --templateid='chkoutBuyerAddressTemplate'; if (is $var --notblank;) {{apply --append;}};" class="panelContent displayNone addressList" data-app-role="addressExists"></div><!-- for return customers -->
-		
-		<div class="clearfix marginBottom" data-app-role="addressExists"><button class="applyButton" data-app-click="order_create|showBuyerAddressAdd" data-app-addresstype="bill">Add New Address</button></div>
-		
-		<div data-tlc="bind $var '.'; transmogrify --dataset=$var --templateid='chkoutAddressBillTemplate'; apply --append;" class="panelContent" data-app-role="addressNew"></div><!-- for new customers -->
-		
-		<div data-app-role="billToShipContainer">
-		<label>
-		<input data-tlc="bind $var '.want.bill_to_ship'; if(is $var --notblank;) {{apply --select=$var;}}; " name="want/bill_to_ship" checked="checked" class="applyAnycb" data-app-change="order_create|tagAsBillToShip" type="checkbox">
-		ship to billing address
-		</label>
-		</div>
-	</fieldset>
+		<fieldset data-app-role="chkoutAddressShip" data-app-addresstype="ship" class="displayNone marginBottom shipInfo">
+			<legend class="headerPaddingchk plainLegend">Shipping Address</legend> <!--campus-->
+			<div data-tlc="bind $var '.@ship'; controller#loop --templateid='chkoutBuyerAddressTemplate'; if (is $var --notblank;) {{apply --append;}};" class="panelContent displayNone addressList" data-app-role="addressExists"></div><!-- for return customers -->
+			<div data-tlc="bind $var '.'; transmogrify --dataset=$var --templateid='chkoutAddressShipTemplate'; apply --append;" class="panelContent" data-app-role="addressNew"></div><!-- for new customers -->
+			<div class="clearfix" data-app-role="addressExists"><button class="applyButton" data-app-click="order_create|showBuyerAddressAdd" data-app-addresstype="ship">Add New Shipping Address</button></div>
+		</fieldset>
+		</div> <!--campus-->
+	</div> <!--campus-->
 
 
 
-	<fieldset data-app-role="chkoutAddressShip" data-app-addresstype="ship" class="displayNone marginBottom">
-		<legend class="headerPadding">Shipping Address</legend>
-		<div data-tlc="bind $var '.@ship'; controller#loop --templateid='chkoutBuyerAddressTemplate'; if (is $var --notblank;) {{apply --append;}};" class="panelContent displayNone addressList" data-app-role="addressExists"></div><!-- for return customers -->
-		<div data-tlc="bind $var '.'; transmogrify --dataset=$var --templateid='chkoutAddressShipTemplate'; apply --append;" class="panelContent" data-app-role="addressNew"></div><!-- for new customers -->
-		<div class="clearfix" data-app-role="addressExists"><button class="applyButton" data-app-click="order_create|showBuyerAddressAdd" data-app-addresstype="ship">Add New Shipping Address</button></div>
-	</fieldset>
-
-
-
-	<fieldset data-app-role="chkoutMethodsShip" class="marginBottom">
-		<legend class="headerPadding">Shipping Methods</legend>
+	<fieldset data-app-role="chkoutMethodsShip" class="marginBottom clear">
+		<legend class="headerPadding"><span>3. </span>CHOOSE A SHIPPING METHOD</legend> <!--campus-->
 		<div data-tlc="bind $var '.'; transmogrify --dataset=$var --templateid='chkoutMethodsShipTemplate'; apply --append;" class="panelContent"></div>
 	</fieldset>
 
 
 	
 	<fieldset data-app-role="chkoutMethodsPay" class="marginBottom">
-		<legend class="headerPadding">Payment Choices</legend>
+		<legend class="headerPadding"><span>4. </span>PAYMENT INFORMATION</legend> <!--campus-->
 		<div data-tlc="bind $var '.'; transmogrify --dataset=$var --templateid='chkoutMethodsPayTemplate'; apply --append;" class="panelContent"></div>
 	</fieldset>
 
@@ -85,15 +103,15 @@ item list and summary are separate just to give more control over location.
 
 <!-- line items -->	
 	<fieldset data-app-role="chkoutCartItemsList" class="marginBottom">
-		<legend class="headerPadding">Contents</legend>
-		<div data-tlc="bind $var '.'; transmogrify --dataset=$var --templateid='chkoutCartContentsTemplate'; apply --append;" class="panelContent"></div>
+		<legend class="headerPadding"><span>5. </span>CONTENTS</legend> <!--campus-->
+		<div data-tlc="bind $var '.'; transmogrify --dataset=$var --templateid='chkoutCartContentsTemplate'; apply --append;" class="panelContent chkoutCartContents"></div> <!-- campus -->
 	</fieldset>
 
 
 
 <!-- totals et all -->
 	<fieldset data-app-role="chkoutCartSummary" class="marginBottom">
-		<legend class="headerPadding">Summary</legend>
+		<legend class="headerPadding"><span>6. </span>SUMMARY</legend> <!--campus-->
 		<div data-tlc="bind $var '.'; transmogrify --dataset=$var --templateid='chkoutCartSummaryTemplate'; apply --append;" class="panelContent"></div>
 	</fieldset>
 
@@ -105,22 +123,30 @@ item list and summary are separate just to give more control over location.
 
 
 <section id="chkoutPreflightTemplate">
-
+	
 	<h4 data-tlc="bind $var '.bill.email'; if(is $var --blank;) {{bind $var '.customer.login'; }}; if (is $var --notblank;) {{apply --append;}};" class="displayNone" data-app-role="username"></h4>
+	<span data-tlc="bind $var '.bill.email'; if(is $var --blank;) {{bind $var '.customer.login'; }}; store_cc#chkoutadduser;" class="displayNone"></span> <!--campus-->
+	
+	<div class="floatLeft guestStartHere redText displayNone">START HERE:</div>
 	
 	<div data-app-role="login">
-		<div class='floatLeft marginBottom'>
-			<input data-tlc="bind $var '.bill.email'; if(is $var --blank;) {{bind $var '.customer.login'; }}; if(is $var --notblank;) {{apply --select=$var;}}; " required name="bill/email" size="30" placeholder="email address" data-app-blur="order_create|execBuyerEmailUpdate" type="email"><br>
-			<label class="accountCreateContainer"><input name="want/create_customer" class="applyAnycb" data-app-change="order_create|tagAsAccountCreate" type="checkbox" >Create account</label>
-		</div>
-	
-		<div data-app-role="loginPasswordContainer" class="displayNone floatRight passwordContainer">
-			<div>If you have an account with us, please enter your password below to login</div>
-			<input placeholder="password" size="30" name="password" type="password"><button class="applyButton" data-app-click="order_create|execBuyerLogin">login</button>
+		<div class='marginBottom chkLoginCont'> <!--campus-->
+			<div class="chkoutEMailWrapper"> <!--campus-->
+				<input data-tlc="bind $var '.bill.email'; if(is $var --blank;) {{bind $var '.customer.login'; }}; if(is $var --notblank;) {{apply --select=$var;}}; " required name="bill/email" size="30" placeholder="email address" data-app-blur="order_create|execBuyerEmailUpdate" type="email"> <!--campus-->
+			</div> <!--campus-->
+			<div>For order confirmation and tracking info</div><br> <!--campus-->
+			<div data-app-role="loginPasswordContainer" class="displayNone passwordContainer">
+				<!-- <div>If you have an account with us, please enter your password below to login</div> campus -->
+				<input placeholder="password" size="30" name="password" type="password"><button class="applyButton ccButton" data-app-click="order_create|execBuyerLogin">Login</button> <!--campus-->
+			</div>
+<div class="displayNone accountTempDisable"> <!-- campus -->
+			<label class="accountCreateContainer"><input name="want/create_customer" data-app-change="order_create|tagAsAccountCreate" type="checkbox" >Create account&#63;</label> <!--campus-->
+</div> <!-- campus -->
 		</div>
 	</div>
-
+	<label class="displayNone"><input name="want/sign_in" checked=true type="checkbox" data-app-change="store_cc|tagAsSignIn" class="">Be a guest</label> <!--campus-->
 </section>
+
 
 
 
@@ -139,25 +165,25 @@ because the panel is shared, the events (which aren't desired in the editor) are
 
 <section id="chkoutAddressBillTemplate">
 
-	<div><input data-tlc="bind $var '.bill.firstname'; if(is $var --blank;){{bind $var '.bill/firstname';}}; if(is $var --notblank;) {{apply --select=$var;}}; " placeholder="first name" name="bill/firstname" required value="" type="text"></div>
-	<div><input data-tlc="bind $var '.bill.lastname'; if(is $var --blank;){{bind $var '.bill/lastname';}}; if(is $var --notblank;) {{apply --select=$var;}}; " placeholder="last name" name="bill/lastname" required value="" type="text"></div>
+	<div><input data-tlc="bind $var '.bill.firstname'; if(is $var --blank;){{bind $var '.bill/firstname';}}; if(is $var --notblank;) {{apply --select=$var;}}; " placeholder="First Name" name="bill/firstname" required value="" type="text"></div> <!--campus-->
+	<div><input data-tlc="bind $var '.bill.lastname'; if(is $var --blank;){{bind $var '.bill/lastname';}}; if(is $var --notblank;) {{apply --select=$var;}}; " placeholder="Last Name" name="bill/lastname" required value="" type="text"></div> <!--campus-->
 
-	<div class="bill_company"><input data-tlc="bind $var '.bill.company';  if(is $var --blank;){{bind $var '.bill/company';}}; if(is $var --notblank;) {{apply --select=$var;}}; " name="bill/company" placeholder="company" value="" type="text"></div><!-- class is added so it can be easily disabled w/ css -->
+	<div class="bill_company"><input data-tlc="bind $var '.bill.company';  if(is $var --blank;){{bind $var '.bill/company';}}; if(is $var --notblank;) {{apply --select=$var;}}; " name="bill/company" placeholder="Company" value="" type="text"></div><!-- class is added so it can be easily disabled w/ css  campus -->
 
-	<div><input data-tlc="bind $var '.bill.address1';  if(is $var --blank;){{bind $var '.bill/address1';}}; if(is $var --notblank;) {{apply --select=$var;}}; " name="bill/address1" placeholder="address" required value="" type="text"></div>
+	<div><input data-tlc="bind $var '.bill.address1';  if(is $var --blank;){{bind $var '.bill/address1';}}; if(is $var --notblank;) {{apply --select=$var;}}; " name="bill/address1" placeholder="Address" required value="" type="text"></div> <!--campus-->
 
-	<div><input data-tlc="bind $var '.bill.address2'; if(is $var --blank;){{bind $var '.bill/address2';}}; if(is $var --notblank;) {{apply --select=$var;}}; " name="bill/address2" placeholder="address 2" value="" type="text"></div>
+	<div><input data-tlc="bind $var '.bill.address2'; if(is $var --blank;){{bind $var '.bill/address2';}}; if(is $var --notblank;) {{apply --select=$var;}}; " name="bill/address2" placeholder="Address 2" value="" type="text"></div> <!--campus-->
 
-	<div><input data-tlc="bind $var '.bill.city'; if(is $var --blank;){{bind $var '.bill/city';}}; if(is $var --notblank;) {{apply --select=$var;}}; " name="bill/city" placeholder="city" required value="" type="text"></div>
+	<div><input data-tlc="bind $var '.bill.city'; if(is $var --blank;){{bind $var '.bill/city';}}; if(is $var --notblank;) {{apply --select=$var;}}; " name="bill/city" placeholder="City" required value="" type="text"></div> <!--campus-->
 	
-	<div><input data-tlc="bind $var '.bill.region'; if(is $var --blank;){{bind $var '.bill/region';}}; if(is $var --notblank;) {{apply --select=$var;}}; " name="bill/region" placeholder="state/region" required size="5" value="" maxlength="20" type="text"></div>
+	<div><input data-tlc="bind $var '.bill.region'; if(is $var --blank;){{bind $var '.bill/region';}}; if(is $var --notblank;) {{apply --select=$var;}}; " name="bill/region" placeholder="State/Region" required size="5" value="" maxlength="20" type="text"></div> <!--campus-->
 	
 	<!-- postal not required for international. don't add it. -->
-	<div><input data-tlc="bind $var '.bill.postal'; if(is $var --blank;){{bind $var '.bill/postal';}}; if(is $var --notblank;) {{apply --select=$var;}}; " name="bill/postal" placeholder="zip/postal code" required size="14" value="" maxlength="10" type="text"></div>
+	<div><input data-tlc="bind $var '.bill.postal'; if(is $var --blank;){{bind $var '.bill/postal';}}; if(is $var --notblank;) {{apply --select=$var;}}; " name="bill/postal" placeholder="Zip/Postal Code" required size="14" value="" maxlength="10" type="text"></div> <!--campus-->
 
-	<div class="billCountry" data-app-role="billCountry"><select data-tlc="bind $var '.'; cco#countriesasoptions  --shiptype='bill' --legacy;" data-legacy-useparentdata="true" name="bill/countrycode" placeholder="country" required="required"><option value=''>Please choose</option></select></div>
+	<div class="billCountry" data-app-role="billCountry"><select data-tlc="bind $var '.'; cco#countriesasoptions  --shiptype='bill' --legacy;" data-legacy-useparentdata="true" name="bill/countrycode" placeholder="Country" required="required"><option value=''>Please choose</option></select></div <!--campus-->
 
-	<div><input data-tlc="bind $var '.bill.phone';  if(is $var --blank;){{bind $var '.bill/phone';}}; if(is $var --notblank;) {{apply --select=$var;}}; " name="bill/phone" placeholder="phone number" required value="" type="tel"> <span class="hint zhint">in case of billing/delivery problems</span></div>
+	<div><input data-tlc="bind $var '.bill.phone';  if(is $var --blank;){{bind $var '.bill/phone';}}; if(is $var --notblank;) {{apply --select=$var;}}; " name="bill/phone" placeholder="Phone Number" required value="" type="tel"> <span class="hint zhint">in case of billing/delivery problems</span></div> <!--campus-->
 
 </section>
 
@@ -174,23 +200,23 @@ because the panel is shared, the events (which aren't desired in the editor) are
 
 <section id="chkoutAddressShipTemplate">
 
-	<div><input data-tlc="bind $var '.ship.firstname';  if(is $var --blank;){{bind $var '.ship/firstname';}}; if(is $var --notblank;) {{apply --select=$var;}}; " placeholder="first name" name="ship/firstname" required value="" type="text"></div>
-	<div><input data-tlc="bind $var '.ship.lastname'; if(is $var --blank;){{bind $var '.ship/lastname';}}; if(is $var --notblank;) {{apply --select=$var;}}; " placeholder="last name" name="ship/lastname" required value="" type="text"></div>
+	<div><input data-tlc="bind $var '.ship.firstname';  if(is $var --blank;){{bind $var '.ship/firstname';}}; if(is $var --notblank;) {{apply --select=$var;}}; " placeholder="First Name" name="ship/firstname" required value="" type="text"></div> <!--campus-->
+	<div><input data-tlc="bind $var '.ship.lastname'; if(is $var --blank;){{bind $var '.ship/lastname';}}; if(is $var --notblank;) {{apply --select=$var;}}; " placeholder="Last Name" name="ship/lastname" required value="" type="text"></div> <!--campus-->
 
-	<div class="bill_company"><input data-tlc="bind $var '.ship.company';  if(is $var --blank;){{bind $var '.ship/company';}}; if(is $var --notblank;) {{apply --select=$var;}}; " name="ship/company" placeholder="company" value="" type="text"></div><!-- class is added so it can be easily disabled w/ css -->
+	<div class="bill_company"><input data-tlc="bind $var '.ship.company';  if(is $var --blank;){{bind $var '.ship/company';}}; if(is $var --notblank;) {{apply --select=$var;}}; " name="Ship/company" placeholder="Company" value="" type="text"></div><!-- class is added so it can be easily disabled w/ css  campus-->
 
-	<div><input data-tlc="bind $var '.ship.address1'; if(is $var --blank;){{bind $var '.ship/address1';}}; if(is $var --notblank;) {{apply --select=$var;}}; " name="ship/address1" placeholder="address" required value="" type="text"></div>
+	<div><input data-tlc="bind $var '.ship.address1'; if(is $var --blank;){{bind $var '.ship/address1';}}; if(is $var --notblank;) {{apply --select=$var;}}; " name="ship/address1" placeholder="Address" required value="" type="text"></div> <!--campus-->
 
-	<div><input data-tlc="bind $var '.ship.address2'; if(is $var --blank;){{bind $var '.ship/address2';}}; if(is $var --notblank;) {{apply --select=$var;}}; " name="ship/address2" placeholder="address 2" value="" type="text"></div>
+	<div><input data-tlc="bind $var '.ship.address2'; if(is $var --blank;){{bind $var '.ship/address2';}}; if(is $var --notblank;) {{apply --select=$var;}}; " name="ship/address2" placeholder="Address 2" value="" type="text"></div> <!--campus-->
 
-	<div><input data-tlc="bind $var '.ship.city'; if(is $var --blank;){{bind $var '.ship/city';}}; if(is $var --notblank;) {{apply --select=$var;}}; " name="ship/city" placeholder="city" required value="" type="text"></div>
+	<div><input data-tlc="bind $var '.ship.city'; if(is $var --blank;){{bind $var '.ship/city';}}; if(is $var --notblank;) {{apply --select=$var;}}; " name="ship/city" placeholder="City" required value="" type="text"></div> <!--campus-->
 	
-	<div><input data-tlc="bind $var '.ship.region'; if(is $var --blank;){{bind $var '.ship/region';}}; if(is $var --notblank;) {{apply --select=$var;}}; " name="ship/region" placeholder="state/region" required size="5" value="" maxlength="20" type="text"></div>
+	<div><input data-tlc="bind $var '.ship.region'; if(is $var --blank;){{bind $var '.ship/region';}}; if(is $var --notblank;) {{apply --select=$var;}}; " name="ship/region" placeholder="State/Region" required size="5" value="" maxlength="20" type="text"></div> <!--campus-->
 
 	
-	<div><input data-tlc="bind $var '.ship.postal';  if(is $var --blank;){{bind $var '.ship/postal';}}; if(is $var --notblank;) {{apply --select=$var;}}; " name="ship/postal" placeholder="zip/postal code" required size="14" value="" maxlength="10" type="text"></div>
+	<div><input data-tlc="bind $var '.ship.postal';  if(is $var --blank;){{bind $var '.ship/postal';}}; if(is $var --notblank;) {{apply --select=$var;}}; " name="ship/postal" placeholder="Zip/Postal Code" required size="14" value="" maxlength="10" type="text"></div> <!--campus-->
 
-	<div class="shipCountry" data-app-role="shipCountry"><select data-tlc="bind $var '.'; cco#countriesasoptions  --shiptype='ship' --legacy;" data-legacy-useparentdata="true" name="ship/countrycode" placeholder="country"><option value=''>Please choose</option></select></div>
+	<div class="shipCountry" data-app-role="shipCountry"><select data-tlc="bind $var '.'; cco#countriesasoptions  --shiptype='ship' --legacy;" data-legacy-useparentdata="true" name="ship/countrycode" placeholder="country"><option value=''>Please choose</option></select></div> <!--campus-->
 
 </section>
 
@@ -198,7 +224,7 @@ because the panel is shared, the events (which aren't desired in the editor) are
 <!-- a panel that only appears in 'nice' -->
 <section id="chkoutAccountCreateTemplate">
 
-<div><input data-tlc="bind $var '.want.new_password'; if(is $var --notblank;) {{apply --select=$var;}}; " data-minlength="8" placeholder="password" required name="want/new_password" size="12" type="password"> <span class="hint">must be at least 8 characters</span></div>
+<div><input data-tlc="bind $var '.want.new_password'; if(is $var --notblank;) {{apply --select=$var;}}; " data-minlength="8" placeholder="password" required name="want/new_password" size="12" type="password"> <span class="hint">Must be at least 8 characters</span></div>
 <div><input data-tlc="bind $var '.want.new_password2'; if(is $var --notblank;) {{apply --select=$var;}}; " data-minlength="8" placeholder="verify password" required name="want/new_password2" size="12" type="password"></div>
 <label>Recovery Question
 <select data-tlc="bind $var '.want.recovery_hint'; if(is $var --notblank;) {{apply --select=$var;}}; " name="want/recovery_hint">
@@ -241,10 +267,10 @@ do NOT change any div id's or messaging will not work properly.
 
 <div id="chkoutMethodsPayTemplate">
 
-	<div class="giftCardContainer" data-app-role="giftcardContainer">
+	<div class="giftCardContainer displayNone" > <!-- data-app-role="giftcardContainer"  : REMOVED UNTIL GIFT CARDS ARE ACCEPTED/SETUP (remove displayNone class when adding back in) campus-->
 	<label for="giftcardCode">Gift Certificate Code:</label>
 	<input name="giftcard" size="16" data-input-keyup="trigger-button-id" data-input-format="alphanumeric" data-trigger-button-id="execGiftcardAdd" type="text">
-	<button class="applyButton" data-app-click="order_create|execGiftcardAdd" data-button-id="execGiftcardAdd">add</button> 
+<!--campus-->	<button class="applyButton ccButton" data-app-click="order_create|execGiftcardAdd" data-button-id="execGiftcardAdd">Add</button> 
 	<p data-app-role="giftcardHint" class="zhint hint displayNone">if you wish to combine gift cards with another payment method, enter them here</p>
 	</div>
 
@@ -262,7 +288,7 @@ do NOT change any div id's or messaging will not work properly.
 		
 		<h2 data-app-role="nonStoredPaymentsHeader" class="displayNone">More Payment Choices</h2>
 		<div data-app-role="nonStoredPaymentsContent">
-			<div data-tlc="bind $var '.cart.cartid'; order_create#paymethodsasradiobuttons  --legacy;"></div>
+			<div data-tlc="bind $var '.cart.cartid'; order_create#paymethodsasradiobuttons  --legacy;" class="chkoutPayMethods"></div> <!-- campus -->
 		</div>
 		
 		<h2 data-app-role="storedPaymentsHeader" class="displayNone">Your Stored Payments</h2>
@@ -291,9 +317,11 @@ the defaultVar on prodName & image is for promotions, which have a 'description'
 	<div data-tlc="bind $var '.%attribs.zoovy:ship_latency'; if (is $var --notblank;) {{format --prepend='Normally ships in '; format --append=' day(s)'; apply --append;}};" class="prodLatency"></div>
 	<div data-tlc="bind $var '.%options'; controller#selectedoptionsdisplay --legacy; " class="prodOptions"></div>
 	</td>
-	<td class="alignRight"><span data-tlc="bind $var '.qty'; if (is $var --notblank;) {{apply --append;}};"></span></td>
-	<td class="alignRight"><span data-tlc="bind $var '.price'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='x '; apply --append;}};"></span></td>
-	<td class="alignRight"><span data-tlc="bind $var '.extended'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='= '; apply --append;}};"></span></td>
+	<td class="center"><span data-tlc="bind $var '.qty'; if (is $var --notblank;) {{apply --append;}};"></span></td>
+	<td class="center"><span data-tlc="bind $var '.price'; if (is $var --notblank;) {{apply --show;}};" class="displayNone">x</span></td> <!--campus-->
+	<td class="center"><span data-tlc="bind $var '.price'; if (is $var --notblank;) {{format --currency='USD';  apply --append;}};"></span></td> <!--campus-->
+	<td class="center"><span data-tlc="bind $var '.extended'; if (is $var --notblank;) {{apply --show;}};" class="displayNone"></span>=</td> <!--campus-->
+	<td class="center"><span data-tlc="bind $var '.extended'; if (is $var --notblank;) {{format --currency='USD'; apply --append;}};"></span></td> <!--campus-->
 </tr>
 </tbody></table>
 
@@ -302,14 +330,17 @@ the defaultVar on prodName & image is for promotions, which have a 'description'
 <table class="fullWidth gridTable">
 <thead>
 <tr>
-	<th colspan="2" class="alignLeft">product information</th>
-	<th class="alignRight">qty</th>
-	<th class="alignRight">price</th>
-	<th class="alignRight">item total</th>
+	<th colspan="2" class="alignLeft">Product Information</th> <!--campus-->
+	<th class="center">Qty</th> <!--campus-->
+	<th class="center"></th> <!--campus-->
+	<th class="center">Price</th> <!--campus-->
+	<th class="center"></th> <!--campus-->
+	<th class="center">Item Total</th> <!--campus-->
 </tr>
 </thead>
 <tbody data-tlc="bind $var '.@ITEMS'; controller#loop --templateid='chkoutCartItemTemplate'; if (is $var --notblank;) {{apply --append;}};" data-app-role="cartItemsTbody"></tbody>
 </table>
+<div class="ccButton floatRight pointer" onclick="myApp.ext.quickstart.u.showCartInModal({'templateID':'cartTemplate'});">Show Cart</div>
 </section>
 
 
@@ -321,30 +352,30 @@ the defaultVar on prodName & image is for promotions, which have a 'description'
 
 <section id="chkoutCartSummaryTemplate">
 	
-	<div data-tlc="bind $var '.sum.items_total'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='Subtotal: '; apply --add --class='orderSubtotal'; apply --append;}};"></div>
-	<div data-tlc="bind $var '.sum.tax_total'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='Tax: '; apply --add --class='orderTax'; apply --append;}};"></div>
+	<div data-tlc="bind $var '.sum.items_total'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='<span class=&quot;summaryPriceAlign&quot;>Subtotal: </span>'; apply --add --class='orderSubtotal'; apply --append;}};"></div>
+	<div data-tlc="bind $var '.sum.tax_total'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='<span class=&quot;summaryPriceAlign&quot;>Tax: </span>'; apply --add --class='orderTax'; apply --append;}};"></div>
 	<div data-tlc="bind $var '.'; cco#shipinfobyid  --legacy;" data-legacy-useparentdata="true" class="orderShipping"></div>
-	<div data-tlc="bind $var '.sum.hnd_total'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='Handling: '; apply --add --class='hndTotal'; apply --append;}};"></div>
-	<div data-tlc="bind $var '.sum.order_total'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='Order Total: '; apply --add --class='orderTotal'; apply --append;}};"></div>
-	<div data-tlc="bind $var '.sum.gfc_total'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='Giftcard(s): '; apply --add --class='orderGiftcardTotal'; apply --append;}};"></div>
-	<div data-tlc="bind $var '.sum.pnt_total'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='Reward Points: '; apply --add --class='rewardPointsTotal'; apply --append;}};"></div>
-	<div data-tlc="bind $var '.sum.rmc_total'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='Returns Credit: '; apply --add --class='returnsCreditTotal'; apply --append;}};"></div>
-	<div data-tlc="bind $var '.sum.spc_total'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='Specialty: '; apply --add --class='spcTotal'; apply --append;}};"></div>
+	<div data-tlc="bind $var '.sum.hnd_total'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='<span class=&quot;summaryPriceAlign&quot;>Handling: </span>'; apply --add --class='hndTotal'; apply --append;}};"></div>
+	<div data-tlc="bind $var '.sum.order_total'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='<span class=&quot;summaryPriceAlign&quot;>Order Total: </span>'; apply --add --class='orderTotal'; apply --append;}};"></div>
+	<div data-tlc="bind $var '.sum.gfc_total'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='<span class=&quot;summaryPriceAlign&quot;>Giftcard(s): </span>'; apply --add --class='orderGiftcardTotal'; apply --append;}};"></div>
+	<div data-tlc="bind $var '.sum.pnt_total'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='<span class=&quot;summaryPriceAlign&quot;>Reward Points: </span>'; apply --add --class='rewardPointsTotal'; apply --append;}};"></div>
+	<div data-tlc="bind $var '.sum.rmc_total'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='<span class=&quot;summaryPriceAlign&quot;>Returns Credit: </span>'; apply --add --class='returnsCreditTotal'; apply --append;}};"></div>
+	<div data-tlc="bind $var '.sum.spc_total'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='<span class=&quot;summaryPriceAlign&quot;>Specialty: </span>'; apply --add --class='spcTotal'; apply --append;}};"></div>
 
-	<div data-tlc="bind $var '.sum.balance_due_total'; cco#orderbalance  --classname='orderBalanceDue' --hidezero='false' --currencysign='$' --legacy;"></div>
+	<div data-tlc="bind $var '.sum.balance_due_total'; cco#orderbalance  --classname='orderBalanceDue' --hidezero='false' --currencysign='$' --legacy;" data-checkout="1"></div>
 
 	<div class="couponEntryContainer clearfix marginBottom" data-app-role="couponContainer">
 		<label for="coupon">Coupon/Promo Code:</label>
 		<input name="coupon" size="8" data-input-keyup="trigger-button-id" data-trigger-button-id="execCouponAdd" data-input-format="alphanumeric" type="text">
-		<button class="applyButton" data-app-click="order_create|execCouponAdd" data-button-id="execCouponAdd">add</button>
+<!--campus-->		<button class="applyButton ccButton" data-app-click="order_create|execCouponAdd" data-button-id="execCouponAdd">Add</button>
 	</div>
 	<!-- will appear if company field is populated AND payment method is NOT PO -->
-	<div data-app-role="referenceNumber" class="displayNone">
+	<div class="displayNone"> <!-- data-app-role="referenceNumber" : REMOVED AT CLIENT REQUEST leave displayNone when adding back in. campus-->
 		<label>Purchase Order/Reference #: </label>
 		<input type'text'="" name="want/reference_number" size="12">
 	</div>
 
-	<button class="applyButton ui-state-highlight" data-app-click="order_create|execCartOrderCreate">
+	<button class="applyButton ccButton ui-state-highlight" data-app-click="order_create|execCartOrderCreate">
 		Place Order
 	</button>
 
@@ -416,14 +447,14 @@ do NOT change the input name or id or checkout will likely break.
 
 <div id="chkoutCompletedTemplate" class="checkoutSuccess">
 
-	<div class="floatRight ocmThirdParty" data-app-role="thirdPartyContainer"></div>
-
+	<div class="floatRight ocmThirdParty displayNone" data-app-role="thirdPartyContainer"></div>
+	<a href="/" class="confirmationContinue ccButton">Continue Shopping</a> <!-- campus -->
 
 	<div class="orderSummaryDetails">
-		<h2>Thank you! Your order has been placed.</h2>
+		<h2 class="marginBottom">Thank you! Your order has been placed.</h2>
 		<h3 data-tlc="bind $var '.orderid'; if (is $var --notblank;) {{format --prepend='Your order id is '; apply --append;}};"></h3>
 		<div class="pointer marginBottom" data-app-role="paymentMessaging">
-			Click here to view/print your invoice.
+			<span class="uRedLink">Click here to view/print your invoice.<br><br></span>
 			<div data-tlc="bind $var '.payment_status_msg'; if (is $var --notblank;) {{apply --append;}};" class="zwarn"></div><!-- displays payment issues/errors -->
 		</div>
 		<div data-tlc="bind $var '.payment_status_detail'; if (is $var --notblank;) {{apply --append;}};" class="marginBottom"></div>
@@ -435,13 +466,15 @@ do NOT change the input name or id or checkout will likely break.
 	<span id="BuySafeGuaranteeSpan"></span>
 	<div class="clearAll"></div>
 
-<div data-app-role="invoiceContainer">
+<div data-app-role="invoiceContainer" class="marginTop">
 	<table class="orderContentsTable fullWidth">
 	<tbody><tr>
 		<td colspan="2">
-	<div class="floatRight hide4Print">
-	<button class="applyButton" data-text="false" data-icon-primary="ui-icon-print" data-app-click="order_create|execInvoicePrint">Print Invoice</button>
-	</div>
+	<div class="displayNone"> <!-- campus -->
+		<div class="floatRight hide4Print">
+		<button class="applyButton ccButton" data-text="false" data-icon-primary="ui-icon-print" data-app-click="order_create|execInvoicePrint">Print Invoice</button>
+		</div>
+	</div> <!-- campus -->
 	
 	<h2 data-tlc="bind $var '.order.our.orderid'; if (is $var --notblank;) {{apply --append;}};"></h2>
 	<h3 data-tlc="bind $var '.order.data.pool'; if (is $var --notblank;) {{format --prepend='Order Status: '; apply --append;}};"></h3>
@@ -456,8 +489,10 @@ do NOT change the input name or id or checkout will likely break.
 	
 	<!-- <h2 data-bind='var:order(bill/firstname);format:text; pretext:Shipping Status: ;'></h2> -->
 	
-	<h5 data-tlc="bind $var '.order.sum.order_total'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='Order Total: '; apply --append;}};" class="orderTotal"></h5>
-	<h5 data-tlc="bind $var '.order.sum.balance_due_total'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='Balance Due: '; apply --append;}};" class="balanceDue"></h5>
+	<h5 data-tlc="bind $var '.'; cco#shipinfobyid  --legacy;" data-legacy-useparentdata="true" class="orderShipping"></h5>
+	<h5 data-tlc="bind $var '.sum.tax_total'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='<span class=&quot;summaryPriceAlign&quot;>Tax: </span>'; apply --add --class='orderTax'; apply --append;}};"></h5>
+	<h5 data-tlc="bind $var '.order.sum.order_total'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='<span class=&quot;summaryPriceAlign&quot;>Order Total: </span>'; apply --append;}};" class="orderTotal"></h5>
+	<h5 data-tlc="bind $var '.order.sum.balance_due_total'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='<span class=&quot;summaryPriceAlign&quot;>Balance Due: </span>'; apply --append;}};" class="balanceDue"></h5>
 	</hgroup>
 	
 	<address class="marginBottom">
@@ -492,6 +527,9 @@ do NOT change the input name or id or checkout will likely break.
 	
 	
 		</td>
+	</tr>
+	<tr class="rowSpacer"></tr> 
+	<tr>
 		<td class="orderContentsProdlistContainer">
 		<ul data-tlc="bind $var '.order.tracking'; store_crm#ordertrackinglinks --legacy;" class="displayNone noListStyle marginBottom"></ul>
 		<table class="listStyleNone lineItemProdlist">
@@ -545,7 +583,7 @@ If this gets recycled, test in order history after making changes.
 	
 	<td>
 	<div class="prodThumbContainer marginRight">
-	<img data-tlc="bind $var '.%attribs.zoovy:prod_image1'; if (is $var --notblank;) {{ apply --img --media=$var --width=55 --height=55 --bgcolor='#ffffff' --replace;}};" src="/media/graphics/blank.gif" class="prodThumb" height="55" width="55">
+	<img data-tlc="bind $var '.%attribs.zoovy:prod_image1'; if (is $var --notblank;) {{ apply --img --media=$var --width=75 --height=75 --bgcolor='#ffffff' --replace;}};" src="/media/graphics/blank.gif" class="prodThumb" height="75" width="75"> <!-- campus -->
 	</div>
 	</td>
 	
@@ -567,7 +605,7 @@ If this gets recycled, test in order history after making changes.
 	</td>
 	
 	<td class="alignRight hide4Print">
-	<button data-tlc="bind $var '.product'; apply --attrib='data-pid'; " class="writeReview applyButton" data-app-click="store_crm|productReviewShow">Write Review</button>	
+	<button data-tlc="bind $var '.product'; apply --attrib='data-pid'; " class="writeReview applyButton ccButton" data-app-click="store_crm|productReviewShow">Write Review</button>	<!-- campus -->
 	</td>
 
 
