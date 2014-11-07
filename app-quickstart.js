@@ -94,6 +94,8 @@ var quickstart = function(_app) {
 				var r = true; //return false if extension won't load for some reason (account config, dependencies, etc).
 				_app.ext.quickstart.pageHandlers = {};
 				_app.ext.quickstart.pageRequires = {};
+				_app.ext.quickstart.loginHandlers = [];
+				_app.ext.quickstart.logoutHandlers = [];
 				return r;
 				},
 			onError : function()	{
@@ -460,12 +462,10 @@ document.write = function(v){
 		authenticateBuyer : {
 			onSuccess : function(tagObj)	{
 				_app.vars.cid = _app.data[tagObj.datapointer].cid; //save to a quickly referencable location.
-				$('#loginSuccessContainer').show(); //contains 'continue' button.
-/*campus: below id's changed to classes because there are two login forms*/
-				$('.loginMessaging').empty().show().append("Thank you, you are now logged in."); //used for success and fail messaging.
-				$('#loginFormContainer').hide(); //contains actual form.
-				$('.recoverPasswordContainer').hide(); //contains password recovery form.
-				_app.ext.quickstart.u.handleLoginActions();
+				
+				for(var i in _app.ext.quickstart.loginHandlers){
+					_app.ext.quickstart.loginHandlers[i](tagObj);
+					}
 				}
 			} //authenticateBuyer
 
@@ -2418,6 +2418,12 @@ else	{
 				//Does nothing, but allows google analytics to track this event
 				},
 //add this as a data-app-submit to the login form.
+			accountLogoutSubmit : function($ele, p){
+				_app.u.logBuyerOut();
+				for(var i in _app.ext.quickstart.logoutHandlers){
+					_app.ext.quickstart.logoutHandlers[i]();
+					}
+				},
 			accountLoginSubmit : function($ele,p)	{
 				p.preventDefault();
 				if(_app.u.validateForm($ele))	{
@@ -2811,6 +2817,12 @@ later, it will handle other third party plugins as well.
 				//dump('adding handler');
 				_app.ext.quickstart.pageHandlers[args.pageType] = args.handler;
 				_app.ext.quickstart.pageRequires[args.pageType] = args.require || [];
+				},
+			addLoginHandler : function(args){
+				_app.ext.quickstart.loginHandlers.push(args.handler);
+				},
+			addLogoutHandler : function(args){
+				_app.ext.quickstart.logoutHandlers.push(args.handler);
 				}
 			}
 

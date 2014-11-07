@@ -914,6 +914,23 @@ _app.extend({
 	"namespace" : "store_crm",
 	"filename" : "extensions/store_crm.js"
 	});
+_app.couple('quickstart','addLoginHandler',{
+	handler : function(tagObj){
+		$('#loginSuccessContainer').show(); //contains 'continue' button.
+/*campus: below id's changed to classes because there are two login forms*/
+		$('.loginMessaging').empty().show().append("Thank you, you are now logged in."); //used for success and fail messaging.
+		$('#loginFormContainer').hide(); //contains actual form.
+		$('.recoverPasswordContainer').hide(); //contains password recovery form.
+		_app.ext.quickstart.u.handleLoginActions();
+		}
+	});
+_app.couple('quickstart','addLogoutHandler',{
+	handler : function(tagObj){
+		$(document.body).removeClass('buyerLoggedIn');
+		$('.username').empty();
+		_app.router.handleURIChange('/');
+		}
+	});
 	
 // _app.extend({
 	// "namespace" : "partner_addthis",
