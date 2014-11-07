@@ -474,6 +474,12 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 
 
 
+/* PAGE NOT FOUND / 404 */
+.notFoundLink {font-size:1.2em; margin:3px 0 5px 15px; color:#781c2b; text-decoration:underline; display:block;}
+.notFoundLink.exception {margin:0; display:inline;}
+
+
+
 @media screen and (min-width:400px) {
 	.hidePhoneLand {display:none;}
 	.showPhoneLand {display:inline;}
@@ -621,6 +627,9 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.checkoutSuccess {padding:30px;}
 	.orderContentsProdlistContainer .prodThumbContainer {border:2px solid #000000; box-shadow:2px 2px 0 0 #cccccc;}
 	.infoContainer {margin:0 10px 0 0;}
+	
+	.notFoundRight {width:55%;}
+	.notFoundLink {font-size:1em; display:inline-block;}
 }
 	
 	
@@ -713,6 +722,10 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.checkoutFormContainer .ccButton:hover {background:#781c2b; border-color:#b75970 #000000 #000000 #b75970; color:#ffffff;}
 	.checkoutFormContainer .ccButton:hover .ui-button-text {color:#ffffff;}
 	.orderContentsTable .hide4Print .ui-state-default .ui-icon {background-image:url("images/ui-icons_ffffff_256x240.png");}
+	
+	.notFoundRight {width:60%;}
+	.notFoundLink {color:#b75970;}
+	.notFoundLink:hover {color:#781c2b;}
 }
 
 @media screen and (min-width : 1080px) {
