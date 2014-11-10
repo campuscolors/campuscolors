@@ -404,7 +404,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 .vertDropout .scrollDropout {column-count:3; -moz-column-count:3; -webkit-column-count:3;} /*columns will be alpha by row in IE9*/
 .vertLinkCont.ncaa .vertDropout .scrollDropout {}
 .vertLinkCont.nhl .vertDropout .scrollDropout {}
-.dropLinkCont {height:18px; width:165px; margin:1px 10px; overflow:hidden;  padding:2px 0; font-size:0.7em; border:none; text-align:left; float:left; text-shadow:2px 2px 2px #000000; display:block;}
+.dropLinkCont {height:18px; width:175px; margin:1px 10px; overflow:hidden;  padding:2px 0; font-size:0.7em; border:none; text-align:left; float:left; text-shadow:2px 2px 2px #000000; display:block;}
 .vertLinkCont .dropLink {color:#ffffff;}
 .vertLinkCont.expandStyle .dropLink {color:#fbe143;}
 
@@ -525,7 +525,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.standardNav .levelOne .levelTwo a {width:50%; padding:2px 0; font-size:1em; border:none; float:left; text-align:left;}
 	.standardNav .levelOne .levelTwo.teamDrop {height:0; width:768px; max-width:768px; transition: all 0.4s; padding:0 10px; column-count:4; -moz-column-count:4; -webkit-column-count:4;} /*columns will be alpha by row in IE9*/
 	.standardNav .levelOne .levelTwo.teamDrop.expand {}
-	.standardNav .levelOne .levelTwo.teamDrop a {height:20px; width:135px; margin:2px 10px; overflow:hidden;}
+	.standardNav .levelOne .levelTwo.teamDrop a {height:20px; width:175px; margin:2px 10px; overflow:hidden;}
 	.standardNav .levelOne .levelTwo.ncaaDrop {left:-39px;}
 	.standardNav .levelOne .levelTwo.ncaaDrop.expand {}
 	.standardNav .levelOne .levelTwo.nflDrop {left:-125px;}
@@ -658,7 +658,6 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.standardNav .levelOne .levelTwo.nbaDrop {left:-250px;}
 	.standardNav .levelOne .levelTwo.mlbDrop {left:-365px;}
 	.standardNav .levelOne .levelTwo.nhlDrop {left:-480px;}
-	.standardNav .levelOne .levelTwo.teamDrop a {width:145px;}
 	.newsLetterWrapper {width:80%;}
 	.cartWrapper .sprite {height:30px; width:30px; background-position:-39px 1px; margin:0 0 0 40px;}
 	.cartWrapper .cartItemCount {height:25px; width:25px; padding:1px 0 0 0; margin:0 5px 0 0; text-align:center; color:#ffffff; background-color:red; border-radius:15px; box-shadow:1px 1px 2px 0 #000000;}
@@ -742,7 +741,6 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.standardNav .levelOne .levelTwo.nbaDrop {left:-310px;}
 	.standardNav .levelOne .levelTwo.mlbDrop {left:-425px;}
 	.standardNav .levelOne .levelTwo.nhlDrop {left:-540px;}
-	.standardNav .levelOne .levelTwo.teamDrop a {width:165px;}
 	.homeMainWrapper {width:1080px; margin:0 auto;}
 	.homeBannerCont {width:700px;}
 	.mainPageCont {right:5px;}
