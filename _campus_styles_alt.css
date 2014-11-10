@@ -404,7 +404,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 .vertDropout .scrollDropout {column-count:3; -moz-column-count:3; -webkit-column-count:3;} /*columns will be alpha by row in IE9*/
 .vertLinkCont.ncaa .vertDropout .scrollDropout {}
 .vertLinkCont.nhl .vertDropout .scrollDropout {}
-.dropLinkCont {height:18px; width:135px; margin:1px 10px; overflow:hidden;  padding:2px 0; font-size:0.7em; border:none; text-align:left; float:left; text-shadow:2px 2px 2px #000000; display:block;}
+.dropLinkCont {height:18px; width:165px; margin:1px 10px; overflow:hidden;  padding:2px 0; font-size:0.7em; border:none; text-align:left; float:left; text-shadow:2px 2px 2px #000000; display:block;}
 .vertLinkCont .dropLink {color:#ffffff;}
 .vertLinkCont.expandStyle .dropLink {color:#fbe143;}
 
@@ -523,7 +523,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.standardNav .levelOne .sprite, .standardNav .levelOne .sprite.openMenu, .mobileSlideMenuClose {display:none;}
 	.standardNav .levelOne .levelTwo {background-color:#781c2b; padding:0 0 0 20px; box-shadow:2px 2px 2px 0 #000000; text-shadow:2px 2px 2px #000000; cursor:default; font-weight:normal;} /* width:217px;  */
 	.standardNav .levelOne .levelTwo a {width:50%; padding:2px 0; font-size:1em; border:none; float:left; text-align:left;}
-	.standardNav .levelOne .levelTwo.teamDrop {height:0; width:768px; max-width:768px; transition: all 0.4s; padding:0 10px; column-count:5; -moz-column-count:5; -webkit-column-count:5;} /*columns will be alpha by row in IE9*/
+	.standardNav .levelOne .levelTwo.teamDrop {height:0; width:768px; max-width:768px; transition: all 0.4s; padding:0 10px; column-count:4; -moz-column-count:4; -webkit-column-count:4;} /*columns will be alpha by row in IE9*/
 	.standardNav .levelOne .levelTwo.teamDrop.expand {}
 	.standardNav .levelOne .levelTwo.teamDrop a {height:20px; width:135px; margin:2px 10px; overflow:hidden;}
 	.standardNav .levelOne .levelTwo.ncaaDrop {left:-39px;}
@@ -651,7 +651,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.mobileSlideMenu .levelOne.oneLevel:hover a {color:#fbe143;}
 	.mobileSlideMenu.standardNav.hideOnHome {display:none;}
 	.standardNav .levelOne .levelTwo.teamDrop.expand {}
-	.standardNav .levelOne .levelTwo.teamDrop {height:0; width:960px; max-width:960px; transition: all 0.4s; column-count:6; -moz-column-count:6; -webkit-column-count:6;} /*columns will be alpha by row in IE9*/
+	.standardNav .levelOne .levelTwo.teamDrop {height:0; width:960px; max-width:960px; transition: all 0.4s; column-count:5; -moz-column-count:5; -webkit-column-count:5;} /*columns will be alpha by row in IE9*/
 	.standardNav .levelOne .levelTwo.ncaaDrop {left:-20px;}
 	.standardNav .levelOne .levelTwo.ncaaDrop.expand {}
 	.standardNav .levelOne .levelTwo.nflDrop {left:-135px;}
@@ -691,7 +691,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.vertDropout .dropoutVertNavCont {padding:5px; border-radius:4px; background:#781c2b;}
 	.vertDropout .vertNavBorder {border:2px solid #ffffff; border-radius:4px; padding:20px;}
 	.vertDropout .sprite {height:82px; width:32px; position:absolute; top:12px; left:7px; background-position:-467px -50px;}
-	.vertDropout .scrollDropout {column-count:5; -moz-column-count:5; -webkit-column-count:5;} /*columns will be alpha by row in IE9*/
+	.vertDropout .scrollDropout {column-count:4; -moz-column-count:4; -webkit-column-count:4;} /*columns will be alpha by row in IE9*/
 	.vertLinkCont.ncaa .vertDropout .scrollDropout {}
 	.vertLinkCont.nhl .vertDropout .scrollDropout {}
 

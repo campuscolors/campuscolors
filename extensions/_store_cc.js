@@ -1498,12 +1498,12 @@ var store_cc = function(_app) {
 			
 				//determine how many columns to be used based on menu type and screen size (not used below tablet)
 				if(colWidth == 'horiz') {
-					if(screen.width < 960){ counter = counter/5 } //tablet dropdowns have 5 columns
-					else { counter = counter/6  } //desktop dropdown have 6 columns 
+					if(screen.width < 960){ counter = counter/4 } //tablet dropdowns have 4 columns
+					else { counter = counter/5  } //desktop dropdown have 5 columns 
 				}
 				else if(colWidth == 'vert') { 
 					if(screen.width < 960) { counter = counter/3 } //tablet dropouts have 3 columns
-					 else { counter = counter/5 } //desktop dropouts have 5 columns
+					 else { counter = counter/4 } //desktop dropouts have 4 columns
 				}
 //				dump('the height: '+height+' and counter: '+counter);
 				
