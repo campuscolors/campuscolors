@@ -1313,13 +1313,19 @@ this will likely become more flexible in the future. ###
 <div id="pageNotFoundTemplate">
 
 	<div class="wrapper marginTop marginBottom">
-		<div class="notFoundRight marginTop marginBottom marginLeft floatRight">	
-			<h1>That one went wide...</h1>
+		<div class="notFoundRight marginBottom marginLeft floatRight">	
 			<p data-tlc="bind $var '.errmsg'; if(is $var --blank;) {{bind $route '.route'; if(is $route --notblank;) {{apply --show --tag;}};}};" class="displayNone">
 				We could not find the page you were looking for &#40; <span data-tlc="bind $var '.route'; apply --append;"></span> &#41;
 			</p>
-			<p data-tlc="bind $var '.errmsg'; if(is $var --notblank;) {{apply --show --tag; apply --append;}};" class="displayNone"></p>
-			<h4>You might try:</h4>
+			
+			<p data-tlc="bind $var '.pid'; if(is $var --notblank;) {{apply --show;}};" class="displayNone">
+				The item you are searching for &#40;<span data-tlc="bind $var '.pid'; if(is $var --notblank;) {{apply --append;}};"></span>&#41; no longer exists.
+				<br>Please check your spelling and try your search again. 
+				<br>If you are still having problems you can call our Customer Service department at 866-598-2267, 9:30 AM - 5:00 PM, Monday through Friday.
+			</p>
+			
+			<!-- <p data-tlc="bind $var '.errmsg'; if(is $var --notblank;) {{apply --show --tag; apply --append;}};" class="displayNone"></p> -->
+			<h4>You might also try:</h4>
 				<a href="/" class="notFoundLink">Home</a>
 			<h4>Or shop by league:</h4>
 			<a href="/league-apparel-merchandise/ncaa/all/" class="notFoundLink">College</a>
@@ -1333,7 +1339,7 @@ this will likely become more flexible in the future. ###
 			</p>
 		</div>
 		<div class="notFoundImg marginTop marginBottom floatLeft hidePhone showTabletBlock">
-			<img src="images/sample-field-goal_252x380.jpg">
+			<img src="images/item-not-found_425x258.jpg">
 		</div>
 	</div>
 

@@ -630,8 +630,8 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.orderContentsProdlistContainer .prodThumbContainer {border:2px solid #000000; box-shadow:2px 2px 0 0 #cccccc;}
 	.infoContainer {margin:0 10px 0 0;}
 	
-	.notFoundRight {width:55%;}
-	.notFoundLink {font-size:1em; display:inline-block;}
+	.notFoundRight {width:35%;}
+	.notFoundLink {font-size:1em;}
 	.notFoundImg img {border:5px solid #000000; box-shadow:4px 3px 0 0 #cccccc;}
 }
 	
@@ -727,8 +727,8 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.checkoutFormContainer .ccButton:hover .ui-button-text {color:#ffffff;}
 	.orderContentsTable .hide4Print .ui-state-default .ui-icon {background-image:url("images/ui-icons_ffffff_256x240.png");}
 	
-	.notFoundRight {width:60%;}
-	.notFoundLink {color:#b75970;}
+	.notFoundRight {width:50%;}
+	.notFoundLink {color:#b75970; display:inline-block;}
 	.notFoundLink:hover {color:#781c2b;}
 }
 
