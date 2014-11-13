@@ -222,9 +222,23 @@
 		},
 		{
 			"baseFilter": {
-				"term": {
-					"vendor_code": "bs"
-				}
+				"or" : [
+					{
+						"term": {
+							"vendor_code": "bs"
+						}
+					},
+					{
+						"term": {
+							"vendor_code": "p-twn"
+						}
+					},
+					{
+						"term": {
+							"vendor_code": "twin"
+						}
+					}
+				]
 			},
 			"options": {
 				"base_price": {
@@ -232,8 +246,8 @@
 					"max": 150
 				}
 			},
-			"id": "'47-brand-gear",
-			"link": "/brands-apparel-merchandise/'47-brand-gear/",
+			"id": "47-brand-gear",
+			"link": "/brands-apparel-merchandise/47-brand-gear/",
 			"img": "BS    ",
 			"name": "'47 Brand Apparel & Merchandise",
 			"page-title": "'47 Brand Apparel & Merchandise | CampusColors.com",
@@ -2526,36 +2540,6 @@
 			"img": "TPSX  ",
 			"name": "Top Sox Apparel & Merchandise",
 			"page-title": "Top Sox Apparel & Merchandise | CampusColors.com",
-			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
-			"optionList": [
-				"user:size_gender",
-				"user:website_filter",
-				"user:color_pallete",
-				"user:team_league_ncaa",
-				"user:team_league_nfl",
-				"user:team_league_nba",
-				"user:team_league_mlb",
-				"user:team_league_nhl",
-				"user:team_conference"
-			]
-		},
-		{
-			"baseFilter": {
-				"term": {
-					"vendor_code": "twin"
-				}
-			},
-			"options": {
-				"base_price": {
-					"min": 0,
-					"max": 150
-				}
-			},
-			"id": "'47-brand-gear",
-			"link": "/brands-apparel-merchandise/'47-brand-gear/",
-			"img": "TWIN  ",
-			"name": "'47 Brand Apparel & Merchandise",
-			"page-title": "'47 Brand Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
 				"user:size_gender",
