@@ -139,7 +139,7 @@ var store_filter = function(_app) {
 					for(var i in list){
 						var o = list[i];
 						var $t = $('<div data-filter="inputContainer"></div>');
-						$t.append('<label><input data-filter="filterCheckbox" type="checkbox" name="'+o.v+'" '+(o.checked ? 'checked="checked"' : '')+' />'+o.p+' <span data-filter="count"></span></label>');
+						$t.append('<label class="hangingIndent"><input data-filter="filterCheckbox" type="checkbox" name="'+o.v+'" '+(o.checked ? 'checked="checked"' : '')+' />'+o.p+' <span data-filter="count"></span></label>');
 						$('input', $t).on('change', function(event){
 							_app.ext.store_filter.e.execFilteredSearch($(this).closest('form'), event);
 						});

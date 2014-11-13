@@ -35,6 +35,7 @@ body {font-family:Oxygen, Helvetica, sans-serif;}
 .wrapper {width:290px; margin:0 auto;} /* for testing:  background-color:rgba(1,1,1,.1); */
 .listWrapper {width:300px; margin:0 auto;}
 .titleHead {width:100%; padding:5px; border:2px outset #000000; color:#ffffff; font-size:1.5em;}
+.hangingIndent {display:block; padding-left:20px; text-indent:-20px;}
 
 .bareYellowLink {color:#fbe143; text-decoration:none;}
 .uYellowLink {color:#fbe143; text-decoration:underline;}
