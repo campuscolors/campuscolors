@@ -11,18 +11,40 @@
 	"pages": [
 		{
 			"baseFilter": {
-				"or": [
-					{
-						"term": {
-							"vendor_code": "adds"
-						}
-					},
-					{
-						"term": {
-							"vendor_code": "yadds"
-						}
+				"query":{
+					"function_score" : {									
+						"filter":{
+							"or": [
+								{
+									"term": {
+										"vendor_code": "adds"
+									}
+								},
+								{
+									"term": {
+										"vendor_code": "yadds"
+									}
+								}
+							]
+						},
+						"functions" : [
+							{
+								"filter" : {
+									"term" : {
+										"team_league_mlb":"chws"
+									}
+								},
+								"script_score" : {
+									"script" : "constant",
+									"params":{
+										"constant" : 10
+									}
+								}
+							}
+						],
+						"boost_mode" : "sum"
 					}
-				]
+				}
 			},
 			"options": {
 				"base_price": {
