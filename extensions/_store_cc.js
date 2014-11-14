@@ -446,8 +446,9 @@ var store_cc = function(_app) {
 				var $tag = data.globals.tags[data.globals.focusTag];
 				var id = data.globals.binds.id; //dump(id); 
 				var href = data.globals.binds.href; //dump(href);
-				//no all section for these links from the team-apparel-merchandise page (just to catch redirect from the shop by team page).
-				if(id != "college-teams" && id != "nfl-teams" && id != "nba-teams" && id != "mlb-teams" && id != "nhl-teams" && id != "soccer-teams") {	
+				var link = href.split("/")[1];
+				//root category lists for these categories need to direct to all of the product for their team/league so alter the link on the li if they match. 
+				if(link === "league-apparel-merchandise" || link === "ncaa-team-apparel-merchandise" || link === "nba-team-apparel-merchandise" || link === "mlb-team-apparel-merchandise" || link === "nhl-team-apparel-merchandise" || link === "soccer-team-apparel-merchandise" || link === "nfl-team-apparel-merchandise") {	
 					href = href + "all/";
 				}
 				$tag.attr("href",href);
