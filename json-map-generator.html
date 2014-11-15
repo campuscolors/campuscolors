@@ -64,7 +64,7 @@
 				var process = raw[i].split('\t');
 				
 				//take this path if there will be type categories: ncaa > ncaa-shirts,ncaa-shorts,ncaa-all instead of just nike > all nike
-				if(multiSubCat == "team" || "league") {
+				if(multiSubCat == "team" || multiSubCat == "league") {
 //					console.log('we can tell a box is checked.');
 					var typeCat = genTypeCat(process, rootPath, optionArray, siteMapLinksOnly);
 					var subPath = ""; //if generating sitemap links, the link needed here isn't generated, so build it here in that case. 
@@ -83,7 +83,7 @@
 					else { pages.push(subCat); }  //otherwise push what should be the subCat object onto the categories pages array. 
 				}
 				//pages array may have been used to created typeCats, and add them to it for addition to the rootCat
-				if(multiSubCat == "team" || "league") { pages.push(typeCat); }
+				if(multiSubCat == "team" || multiSubCat == "league") { pages.push(typeCat); }
 			}
 			
 			if(siteMapLinksOnly) { $("#output").val(siteMapLinks); }  //if just looking for the sitemap links, output that array that was made of them. 
@@ -342,6 +342,7 @@
 			<input type="checkbox" value="user:team_league_nba"/>Teams NBA
 			<input type="checkbox" value="user:team_league_mlb"/>Teams MLB
 			<input type="checkbox" value="user:team_league_nhl"/>Teams NHL
+			<input type="checkbox" value="user:team_league_soccer"/>Teams Soccer
 			<input type="checkbox" value="user:team_conference"/>Teams Conference
 		</div>
 		<div class="addType">
