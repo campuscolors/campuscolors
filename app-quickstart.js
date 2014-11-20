@@ -1995,10 +1995,9 @@ either templateID needs to be set OR showloading must be true. TemplateID will t
 /*campus*/			width:'80%',   //browser doesn't like percentage for height
 /*campus*/			open : function(event, ui) {
 /*campus*/				$(".ui-dialog-titlebar-close").on("click.closeModal",function(){
-/*campus*/					if(document.location.hash == "#!checkout/") {
-/*campus*/						dump('it was checkout');
-/*campus*/						$("#checkoutContainer").remove();
-/*campus*/						showContent("checkout");
+/*campus*/					if($("#mainContentArea :visible:first").attr('data-app-uri') == "/checkout/") {
+/*campus*/						$("#checkoutContainer").remove(); //kill the old checkout to be sure any changes made in the cart are updated. 
+/*campus*/						_app.router.handleURIChange('/checkout/');
 /*campus*/					}
 /*campus*/				}); 
 /*campus*/			},
