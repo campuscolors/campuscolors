@@ -1,88 +1,20 @@
 0 info it worked if it ends with ok
 1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
 1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
-1 verbose cli   'install',
-1 verbose cli   'underscore' ]
-2 info using npm@1.3.5
-3 info using node@v0.10.15
+1 verbose cli   'install' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
 4 verbose node symlink C:\Program Files\nodejs\\node.exe
-5 warn package.json suppressionlist@0.1.0 No description
-6 warn package.json suppressionlist@0.1.0 No repository field.
-7 warn package.json suppressionlist@0.1.0 No README data
-8 verbose readDependencies using package.json deps
-9 verbose cache add [ 'underscore@^1.7.0', null ]
-10 verbose cache add name=undefined spec="underscore@^1.7.0" args=["underscore@^1.7.0",null]
-11 verbose parsed url { protocol: null,
-11 verbose parsed url   slashes: null,
-11 verbose parsed url   auth: null,
-11 verbose parsed url   host: null,
-11 verbose parsed url   port: null,
-11 verbose parsed url   hostname: null,
-11 verbose parsed url   hash: null,
-11 verbose parsed url   search: null,
-11 verbose parsed url   query: null,
-11 verbose parsed url   pathname: 'underscore@^1.7.0',
-11 verbose parsed url   path: 'underscore@^1.7.0',
-11 verbose parsed url   href: 'underscore@^1.7.0' }
-12 verbose cache add name="underscore" spec="^1.7.0" args=["underscore","^1.7.0"]
-13 verbose parsed url { protocol: null,
-13 verbose parsed url   slashes: null,
-13 verbose parsed url   auth: null,
-13 verbose parsed url   host: null,
-13 verbose parsed url   port: null,
-13 verbose parsed url   hostname: null,
-13 verbose parsed url   hash: null,
-13 verbose parsed url   search: null,
-13 verbose parsed url   query: null,
-13 verbose parsed url   pathname: '^1.7.0',
-13 verbose parsed url   path: '^1.7.0',
-13 verbose parsed url   href: '^1.7.0' }
-14 verbose addNamed [ 'underscore', '^1.7.0' ]
-15 verbose addNamed [ null, null ]
-16 silly lockFile efdc3de9-underscore-1-7-0 underscore@^1.7.0
-17 verbose lock underscore@^1.7.0 C:\Users\ryan\AppData\Roaming\npm-cache\efdc3de9-underscore-1-7-0.lock
-18 info addNameTag [ 'underscore', '^1.7.0' ]
-19 verbose url raw underscore
-20 verbose url resolving [ 'https://registry.npmjs.org/', './underscore' ]
-21 verbose url resolved https://registry.npmjs.org/underscore
-22 info trying registry request attempt 1 at 14:33:51
-23 verbose etag "B7MY4JU31Q88HFPC0KNK009U9"
-24 http GET https://registry.npmjs.org/underscore
-25 http 304 https://registry.npmjs.org/underscore
-26 silly registry.get cb [ 304,
-26 silly registry.get   { date: 'Fri, 07 Nov 2014 22:33:47 GMT',
-26 silly registry.get     server: 'Apache',
-26 silly registry.get     via: '1.1 varnish',
-26 silly registry.get     'last-modified': 'Fri, 07 Nov 2014 22:33:07 GMT',
-26 silly registry.get     'cache-control': 'max-age=60',
-26 silly registry.get     etag: '"B7MY4JU31Q88HFPC0KNK009U9"',
-26 silly registry.get     age: '54',
-26 silly registry.get     'x-served-by': 'cache-lax1434-LAX',
-26 silly registry.get     'x-cache': 'HIT',
-26 silly registry.get     'x-cache-hits': '2',
-26 silly registry.get     'x-timer': 'S1415399627.447041,VS0,VE0',
-26 silly registry.get     vary: 'Accept',
-26 silly registry.get     'content-length': '0',
-26 silly registry.get     'keep-alive': 'timeout=10, max=50',
-26 silly registry.get     connection: 'Keep-Alive' } ]
-27 verbose etag underscore from cache
-28 silly lockFile efdc3de9-underscore-1-7-0 underscore@^1.7.0
-29 silly lockFile efdc3de9-underscore-1-7-0 underscore@^1.7.0
-30 error Error: No compatible version found: underscore@'^1.7.0'
-30 error Valid install targets:
-30 error ["1.0.3","1.0.4","1.1.0","1.1.1","1.1.2","1.1.3","1.1.4","1.1.5","1.1.6","1.1.7","1.2.0","1.2.1","1.2.2","1.2.3","1.2.4","1.3.0","1.3.1","1.3.2","1.3.3","1.4.0","1.4.1","1.4.2","1.4.3","1.4.4","1.5.0","1.5.1","1.5.2","1.6.0","1.7.0"]
-30 error     at installTargetsError (C:\Program Files\nodejs\node_modules\npm\lib\cache.js:719:10)
-30 error     at C:\Program Files\nodejs\node_modules\npm\lib\cache.js:638:10
-30 error     at saved (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\get.js:142:7)
-30 error     at C:\Program Files\nodejs\node_modules\npm\node_modules\graceful-fs\polyfills.js:133:7
-30 error     at Object.oncomplete (fs.js:107:15)
-31 error If you need help, you may report this log at:
-31 error     <http://github.com/isaacs/npm/issues>
-31 error or email it to:
-31 error     <npm-@googlegroups.com>
-32 error System Windows_NT 6.2.9200
-33 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "underscore"
-34 error cwd c:\Users\ryan\Documents\GitHub\campuscolors\utilities\suppressionlist
-35 error node -v v0.10.15
-36 error npm -v 1.3.5
-37 verbose exit [ 1, true ]
+5 error Error: ENOENT, stat 'C:\Users\Daniel\AppData\Roaming\npm'
+6 error If you need help, you may report this *entire* log,
+6 error including the npm and node versions, at:
+6 error     <http://github.com/npm/npm/issues>
+7 error System Windows_NT 6.1.7601
+8 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
+9 error cwd C:\Users\Daniel\Documents\GitHub\campuscolors\utilities\suppressionlist
+10 error node -v v0.10.33
+11 error npm -v 1.4.28
+12 error path C:\Users\Daniel\AppData\Roaming\npm
+13 error code ENOENT
+14 error errno 34
+15 verbose exit [ 34, true ]
