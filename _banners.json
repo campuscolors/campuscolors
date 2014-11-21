@@ -18,12 +18,12 @@
 				"href"		: "/search/promo/college-shirts-sweatshirts-jerseys/"
 			},
 			{
-				"src"			: "banners/bogo_banner.jpg",
+				"src"			: "banners/bogo_pants_banner_700x268.jpg",
 				"width"		: "700",
 				"height"	: "268",
-				"alt"			: "Buy One Sweatshirt, Get One 30 percent off",
-				"title"		: "Buy One Sweatshirt, Get One 30 percent off",
-				"href"		: "/apparel-merchandise/sweatshirts/"
+				"alt"			: "Buy Any Pair of Pants, Get One 30 Percent Off",
+				"title"		: "Buy Any Pair of Pants, Get One 30 Percent Off",
+				"href"		: "/apparel-merchandise/pants/"
 			}
 		]
 	},
