@@ -94,7 +94,7 @@ _app.extend({
 
 _app.couple('quickstart','addPageHandler',{
 	"pageType" : "checkout",
-	"require" : ['order_create','cco', 'extensions/checkout/active.html'],
+	"require" : ['order_create','cco', 'extensions/checkout/active.html','templates.html'],
 	"handler" : function($container, infoObj, require){
 		var deferred = $.Deferred();
 		infoObj.defPipeline.addDeferred(deferred);
