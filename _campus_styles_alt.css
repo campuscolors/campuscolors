@@ -240,9 +240,9 @@ header {position:relative;}
 .homeFeaturedCats .secTitle {margin:0 60px 0 0;}
 .homeFeaturedCats ul {margin:20px; padding:0; text-align:center;}
 
-.homeBestSell {max-height:140px; width:100%; overflow:hidden;} 
-.homeBestSell .ccList {width:100%;float:none;}
-.homeBestSell .productList.ccList > li {height:90px; width:76px; border:2px solid #000000; margin:1em;}
+.homeBestSell {width:100%; overflow:hidden;} 
+.homeBestSell .ccList {width:304px; margin:0 auto; float:none;}
+.homeBestSell .productList.ccList > li {height:66px; width:66px; border:2px solid #000000; margin:0.5em;}
 .homeBestSell .productList.ccList .prodInfo {display:none;}
 
 
@@ -491,6 +491,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.homeBannerCont {width:300px;}
 	.mainPage a {height:25px; width:25px;}
 	.productList.ccList > li {height:106px; margin:5px 5px 118px 5px;}
+	.homeBestSell .productList.ccList > li {margin:0.3em;}
 	.ccList .prodInfo {height:110px; bottom:-112px;}
 	.productPage .addtocartbutton {font-size:1.5em;} 
 	.ccButton.checkoutButton {width:140px;padding:6px;}
@@ -565,8 +566,9 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.mainPageCont {right:10px; bottom:10px;}
 	.homeFeaturedCats .splashPageListTemplate {height:219px; width:310px; margin:0 10px; display:inline-block; padding:0;}
 	.homeFeaturedCats .splashPageListTemplate .title {height:auto; padding:10px;}
-	.homeBestSell {max-height:310px;}
-	.homeBestSell .productList.ccList > li {height:250px; width:210px; border:2px solid #000000; margin:1em;}
+	/*.homeBestSell {max-height:310px;}*/
+	.homeBestSell .ccList {width:664px;}
+	.homeBestSell .productList.ccList > li {height:170px; width:153px; border:2px solid #000000; margin:0.5em;}
 	.homeBestSell .productList.ccList .prodInfo {display:block;}
 	
 	.splashPageTemplate {width:690px;}
@@ -670,6 +672,8 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.homeMain {width:75%; float:right;}
 	.homeBannerCont {height:268px; width:680px; margin:20px auto;}
 	.mainPageCont {right:7px;}
+	.homeBestSell .ccList {width:904px;}
+	.homeBestSell .productList.ccList > li {height:250px; width:200px; border:2px solid #000000; margin:1em;}
 	.homeTopBrands {width:654px; margin:0 auto 10px auto;}
 	.homeMain .topBrandItem {height:30px; width:50px; margin:0 20px; background-position:0px -343px; background-repeat:no-repeat; overflow:hidden; display:inline-block;}
 	.homeMain .topBrandItem.adidasLogo {background-position:-99px -343px;}

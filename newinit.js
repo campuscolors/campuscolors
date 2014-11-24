@@ -469,7 +469,8 @@ _app.extend({
 _app.u.bindTemplateEvent('homepageTemplate', 'complete.store_cc',function(event,$context,infoObj) {
 	$(".mobileSlideMenu.standardNav").addClass("hideOnHome");
 	_app.ext.store_cc.u.showHomepageBanners($context);
-	_app.ext.store_cc.u.runHomeCarousel($context);
+	//was requested that this be static and show all 8 elements. See 11-24-2014 commit for style changes to revert to carousel. 
+	//_app.ext.store_cc.u.runHomeCarousel($context);
 	});
 _app.u.bindTemplateEvent('homepageTemplate', 'depart.store_cc',function(event,$context,infoObj) {
 	$(".mobileSlideMenu.standardNav").removeClass("hideOnHome");
