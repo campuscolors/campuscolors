@@ -1,29 +1,21 @@
 [
 	{ "main" : 
 		[
-			{
-				"src"			: "banners/bogo_pants_banner_700x268.jpg",
-				"width"		: "700",
-				"height"	: "268",
-				"alt"			: "Buy Any Pair of Pants, Get One 30 Percent Off",
-				"title"		: "Buy Any Pair of Pants, Get One 30 Percent Off",
-				"href"		: "/apparel-merchandise/pants/"
-			},
-            {
-				"src"			: "banners/shorts_everyday_700_x_268.jpg",
-				"width"		: "700",
-				"height"	: "268",
-				"alt"			: "Basketball Shorts, Pro and College Teams",
-				"title"		: "Basketball Shorts, Pro and College Teams",
-				"href"		: "/apparel-merchandise/shorts/"
-			},
-			{
+           {
 				"src"			: "banners/tailgating_banner_alt.jpg",
 				"width"		: "700",
 				"height"	: "268",
 				"alt"			: "Tailgating Essentials",
 				"title"		: "Tailgating Essentials",
 				"href"		: "/apparel-merchandise/novelties-and-accessories/"
+			},
+			{
+				"src"			: "banners/shorts_everyday_700_x_268.jpg",
+				"width"		: "700",
+				"height"	: "268",
+				"alt"			: "Basketball Shorts, Pro and College Teams",
+				"title"		: "Basketball Shorts, Pro and College Teams",
+				"href"		: "/apparel-merchandise/shorts/"
 			},
 			{
 				"src"			: "banners/gameday_banner.jpg",
