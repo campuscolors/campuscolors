@@ -1092,6 +1092,7 @@ this will likely become more flexible in the future. ###
 				</div>
 
 				<form data-tlc="bind $var '.pid'; store_product#atcform  --legacy; apply --append;" class="prodViewerAddToCartForm clearfix" action="#" data-app-submit="quickstart|productAdd2Cart"> <!-- to show cart inline add: data-show="inline" -->
+					<div data-tlc="bind $var '.@variations'; if(is $var --notblank;) {{apply --show;}};" class="marginTop displayNone">Please Select a Size:</div>
 					<fieldset data-tlc="bind $var '.pid'; store_product#atcvariations  --legacy; apply --append;" class="borderNone inLine variationsWrapper"></fieldset>
 					<!-- <fieldset data-tlc="bind $var '.'; store_product#atcquantityinput  - -defaultvalue='1' - -legacy;" class="borderNone inLine"></fieldset> -->
 					<div class='qtyATCWraper'>
