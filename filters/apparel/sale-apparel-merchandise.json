@@ -18,7 +18,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "clearance",

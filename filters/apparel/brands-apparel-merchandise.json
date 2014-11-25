@@ -32,7 +32,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "47-brand-gear",
@@ -72,7 +72,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "adidas-gear",
@@ -103,7 +103,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "all-sportz-brush-gear",
@@ -143,7 +143,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "aminco-gear",
@@ -174,7 +174,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "antigua-gear",
@@ -205,7 +205,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "bleacher-creatures-gear",
@@ -236,7 +236,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "blue-84-gear",
@@ -267,7 +267,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "boelter-gear",
@@ -307,7 +307,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "bsi-products-gear",
@@ -338,7 +338,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "c-&-i-collectibles-gear",
@@ -378,7 +378,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "campus-colors-gear",
@@ -409,7 +409,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "champion-gear",
@@ -440,7 +440,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "charm-14-gear",
@@ -471,7 +471,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "colosseum-gear",
@@ -502,7 +502,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "columbia-gear",
@@ -533,7 +533,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "comfy-feet-gear",
@@ -573,7 +573,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "concept-one-gear",
@@ -604,7 +604,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "concept-sport-gear",
@@ -635,7 +635,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "coopersburg-sports-gear",
@@ -666,7 +666,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "dallas-cowboys-merchandise-gear",
@@ -697,7 +697,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "distant-replays-gear",
@@ -728,7 +728,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "duck-house-sports-gear",
@@ -759,7 +759,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "elite-image-eyewear-gear",
@@ -790,7 +790,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "fabrique-gear",
@@ -821,7 +821,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "fan-mats-gear",
@@ -852,7 +852,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "fan-tape-gear",
@@ -883,7 +883,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "fanatic-group-gear",
@@ -914,7 +914,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "fathead-gear",
@@ -945,7 +945,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "fit-2-win-gear",
@@ -976,7 +976,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "foam-fanatics-gear",
@@ -1016,7 +1016,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "for-bare-feet-gear",
@@ -1047,7 +1047,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "for-bare-feet-gear",
@@ -1078,7 +1078,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "franklin--gear",
@@ -1109,7 +1109,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "freemont-die-gear",
@@ -1140,7 +1140,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "front-row-sports-gear",
@@ -1171,7 +1171,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "game-master-gear",
@@ -1202,7 +1202,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "gameday-spirit-gear",
@@ -1233,7 +1233,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "gear-gear",
@@ -1264,7 +1264,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "genuine-stuff-gear",
@@ -1295,7 +1295,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "giii-gear",
@@ -1326,7 +1326,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "glitter-girl-gear",
@@ -1357,7 +1357,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "glory-haus-gear",
@@ -1388,7 +1388,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "great-american-products-gear",
@@ -1428,7 +1428,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "highland-mint-gear",
@@ -1459,7 +1459,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "holloway-gear",
@@ -1499,7 +1499,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "hunter-gear",
@@ -1530,7 +1530,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "j-america-gear",
@@ -1561,7 +1561,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "jarden-sports-gear",
@@ -1592,7 +1592,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "kasky-kids-gear",
@@ -1623,7 +1623,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "league-collegiate-outfitters-gear",
@@ -1654,7 +1654,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "letter-art-gear",
@@ -1685,7 +1685,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "little-earth-gear",
@@ -1716,7 +1716,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "logo-gear",
@@ -1761,7 +1761,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "majestic-gear",
@@ -1792,7 +1792,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "mascot-factory-gear",
@@ -1823,7 +1823,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "me-&-my-big-ideas-gear",
@@ -1854,7 +1854,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "mojo-gear",
@@ -1885,7 +1885,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "mv-sport-gear",
@@ -1925,7 +1925,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "new-era-gear",
@@ -1956,7 +1956,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "nfl-gear",
@@ -1996,7 +1996,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "nike-gear",
@@ -2027,7 +2027,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "original-retro-brand-gear",
@@ -2058,7 +2058,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "oyo-sports-gear",
@@ -2089,7 +2089,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "photo-file-gear",
@@ -2120,7 +2120,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "pinemeadow-green-gear",
@@ -2151,7 +2151,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "ppw-toys-gear",
@@ -2182,7 +2182,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "pro-specialties-group-gear",
@@ -2213,7 +2213,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "pubs-of-gear",
@@ -2244,7 +2244,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "r-&-r-imports-gear",
@@ -2275,7 +2275,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "rawlings-gear",
@@ -2315,7 +2315,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "reebok-gear",
@@ -2355,7 +2355,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "rico-gear",
@@ -2395,7 +2395,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "ridell-gear",
@@ -2426,7 +2426,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "russel-gear",
@@ -2457,7 +2457,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "sikiyou--gear",
@@ -2488,7 +2488,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "silver-star-gear",
@@ -2519,7 +2519,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "skootz-gear",
@@ -2550,7 +2550,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "soffe-gear",
@@ -2581,7 +2581,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "spalding-gear",
@@ -2612,7 +2612,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "sports-coverage-gear",
@@ -2643,7 +2643,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "stockdale-gear",
@@ -2674,7 +2674,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "sutter's-mill-gear",
@@ -2705,7 +2705,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "tailgate-clothing-co.-gear",
@@ -2736,7 +2736,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "team-edition-gear",
@@ -2767,7 +2767,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "team-effort-gear",
@@ -2798,7 +2798,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "team-golf-gear",
@@ -2829,7 +2829,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "team-promark-gear",
@@ -2860,7 +2860,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "team-sports-america-gear",
@@ -2891,7 +2891,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "tervis-gear",
@@ -2922,7 +2922,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "the-emblem-source-gear",
@@ -2953,7 +2953,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "the-game-gear",
@@ -2984,7 +2984,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "the-memory-company-gear",
@@ -3024,7 +3024,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "the-northwest-gear",
@@ -3055,7 +3055,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "top-of-the-world-gear",
@@ -3086,7 +3086,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "top-sox-gear",
@@ -3126,7 +3126,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "topperscot-gear",
@@ -3157,7 +3157,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "under-armour-gear",
@@ -3188,7 +3188,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "wes-&-willy--gear",
@@ -3233,7 +3233,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "wincraft-gear",
@@ -3273,7 +3273,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "winning-streak-sports-gear",
@@ -3304,7 +3304,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "zephyr-gear",

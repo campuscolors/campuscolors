@@ -18,7 +18,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "shorts",
@@ -48,7 +48,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "t-shirts",
@@ -78,7 +78,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "sweatshirts",
@@ -108,7 +108,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "jerseys",
@@ -138,7 +138,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "pants",
@@ -168,7 +168,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "hats",
@@ -198,7 +198,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "novelties-and-accessories",
@@ -228,7 +228,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "mens",
@@ -259,7 +259,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "womens",
@@ -309,7 +309,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "kids",
@@ -340,7 +340,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "youth",
@@ -371,7 +371,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "toddler",
@@ -402,7 +402,7 @@
 			"options": {
 				"base_price": {
 					"min": 0,
-					"max": 150
+					"max": 400
 				}
 			},
 			"id": "infant",

@@ -1,8 +1,8 @@
 id	page-title	page-description	banner	bannerlink	banneralt	promo
 League-Apparel-Merchandise	Leauge Apparel at CampusColors.com	"Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!"	blank		Shop By Team Banner	Some promotional text goes here
 team_long	page-description	team_league	team_short	team_code-img	sub_banner	max-price
-NCAA	"Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!"	ncaa	Aresenal FC	NCAA	blank	150
-NFL	"Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!"	nfl	Brazil	NFL	blank	150
-NBA	"Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!"	nba	Celtic FC	NBA	blank	150
-MLB	"Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!"	mlb	Chicago	MLB	blank	150
-NHL	"Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!"	nhl	Club America	NHL	blank	150
+NCAA	"Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!"	ncaa	Aresenal FC	NCAA	blank	400
+NFL	"Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!"	nfl	Brazil	NFL	blank	400
+NBA	"Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!"	nba	Celtic FC	NBA	blank	400
+MLB	"Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!"	mlb	Chicago	MLB	blank	400
+NHL	"Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!"	nhl	Club America	NHL	blank	400
