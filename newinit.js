@@ -499,12 +499,21 @@ _app.couple('store_filter','pushCustomFilter',{
 			"filter" : {
 				"and" : [
 					{"range":{"available":{"gte":1}}},
-					{"regexp":{"sku":".+:(SZSM).*"}}
+					{"regexp":{"sku":".+:(SZSM|SZSL|SZXS|SZWB|SZWS|SZWC|SZYS|SZYZ).*"}}
 					]
 				}
 			}
 		}
 	});
+_app.couple('store_filter','pushCustomFilter',
+	{'id' : 'sizeMed','filter' : {"has_child":{"type":"sku","filter" : {"and" : [{"range":{"available":{"gte":1}}},{"regexp":{"sku":".+:(SZSM|SZMD|SZML|SZWB|SZWM|SZYM).*"}}]}}}}
+);
+_app.couple('store_filter','pushCustomFilter',
+	{'id' : 'sizeLarge','filter' : {"has_child":{"type":"sku","filter" : {"and" : [{"range":{"available":{"gte":1}}},{"regexp":{"sku":".+:(SZML|SZLG|SZWL|SZYL).*"}}]}}}}
+);
+_app.couple('store_filter','pushCustomFilter',
+	{'id' : 'sizeXLarge','filter' : {"has_child":{"type":"sku","filter" : {"and" : [{"range":{"available":{"gte":1}}},{"regexp":{"sku":".+:(SZXL|SZLL|SZ2X|SZ3X|SZWX|SZWA|SZYX).*"}}]}}}}
+);
 _app.u.bindTemplateEvent('homepageTemplate', 'complete.store_cc',function(event,$context,infoObj) {
 	$(".mobileSlideMenu.standardNav").addClass("hideOnHome");
 	_app.ext.store_cc.u.showHomepageBanners($context);

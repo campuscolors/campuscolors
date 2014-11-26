@@ -335,7 +335,14 @@ var store_filter = function(_app) {
 					}, 'datapointer':'appFilteredSearch','templateID':'productListTemplateResultsNoPreview','list':$resultsContainer, 'filterList' : $form, 'loadFullList' : loadFullList});
 				_app.model.dispatchThis();
 				
+				}, //execFilteredSearch
+				
+				submitcheckbox : function($ele,p) {
+					p.preventDefault();
+					_app.ext.store_filter.e.execFilteredSearch($ele.closest('form'), p);
+					return false;
 				}
+				
 			}, //e [app Events]
 		couplers : {
 			pushFilterPage : function(args){

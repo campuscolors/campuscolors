@@ -162,16 +162,6 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 			<span data-app-click="store_cc|resetFilter" class="ccButton filterButton pointer">Clear</span>
 		</div>
 	-->	
-		<!--
-			SIZE FILTERS 
-			these custom filters are declared in the init file
-			data-filter-type="custom" data-filter-custom="sizeLarge" 
-		-->
-		<div data-tlc="bind $var '.suppressSize'; if(is $var --notblank;){{apply --hide --tag;}};">
-			<div class="filterGroupTitle greyGradient">Size</div>
-			<input type="checkbox" data-filter-type="custom" data-filter-custom="sizeSmall" name="sizeSmall"><label>Small</label></input>
-		</div>
-		
 		<div data-tlc="bind $var '.options.user:size_gender'; if(is $var --blank;){{apply --hide;}};" class="filterGroup marginBottom filterOpen">
 			<div data-tlc="store_cc#showfilter;" data-filterview='1' data-top='0' class="filterGroupTitle greyGradient">Shop By<span class="sprite"></span></div>
 			<div class="filterHider" data-filter-hider=1>
@@ -182,6 +172,36 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 				</div>
 			</div>
 		</div>
+		
+		<!--
+			SIZE FILTERS 
+			these custom filters are declared in the init file
+			data-filter-type="custom" data-filter-custom="sizeLarge" 
+		-->
+		<div data-tlc="bind $var '.suppressSize'; if(is $var --notblank;){{apply --hide --tag;}};" class="filterGroup marginBottom filterOpen">
+			<div data-tlc="store_cc#showfilter;" data-filterview='1' data-top='0' class="filterGroupTitle greyGradient">Size<span class="sprite"></span></div>
+			<div class="filterHider" data-filter-hider=1>
+				<div class="filterCheckboxList">
+					<label class="hangingIndent">
+						<input type="checkbox" data-app-change="store_filter|submitcheckbox" data-filter-type="custom" data-filter-custom="sizeSmall" name="sizeSmall">
+						Small
+					</label>
+					<label class="hangingIndent">
+						<input type="checkbox" data-app-change="store_filter|submitcheckbox" data-filter-type="custom" data-filter-custom="sizeMed" name="sizeMed">
+						Medium
+					</label>
+					<label class="hangingIndent">
+						<input type="checkbox" data-app-change="store_filter|submitcheckbox" data-filter-type="custom" data-filter-custom="sizeLarge" name="sizeLarge">
+						Large
+					</label>
+					<label class="hangingIndent">
+						<input type="checkbox" data-app-change="store_filter|submitcheckbox" data-filter-type="custom" data-filter-custom="sizeXLarge" name="sizeXLarge">
+						Extra&#45;Large
+					</label>
+				</div>
+			</div>
+		</div>
+		
 <!-- TODO : ATTRIB BASED SIZE NOT ALLOWING FOR DISPLAY OF ALL SIZE VARIATIONS REPLACE WHEN SIZES CAN BE OBTAINED
 		<div data-tlc="bind $var '.options.user:size_code'; if(is $var - -blank){{apply - -hide;}};" class="filterGroup marginBottom">
 			<div data-tlc="store_cc#showfilter;" data-filterview='1' data-top='0' class="filterGroupTitle greyGradient">Size<span class="sprite"></span></div>
