@@ -46,7 +46,7 @@
 
 
 // redirct product pages
-{ "type":"path", "if":"/Item--i-(.*?)", "then#redirect":"/product/$1" },
+{ "type":"path", "if":"/Item--i-(.*?)", "then#redirect":"/product/$1/" },
 
 // redirct company pages
 { "type":"path", "if":"/content--name-Store-Locations", "then#redirect":"/store_locations/" },
