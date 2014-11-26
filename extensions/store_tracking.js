@@ -58,7 +58,7 @@ var store_tracking = function(_app) {
 						}
 					if(plugin.dynamic_value){
 						//globals.google_conversion_value = order.sum.order_total;
-/*campus*/		globals.google_conversion_value = .sum.items_total; //wanted net cost sans tax and/or shipping.
+/*campus*/		globals.google_conversion_value = order.sum.items_total; //wanted net cost sans tax and/or shipping.
 						}
 					_app.ext.store_tracking.u.addTrackingScript("//www.googleadservices.com/pagead/conversion.js", globals);
 					}
