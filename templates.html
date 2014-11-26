@@ -162,7 +162,17 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 			<span data-app-click="store_cc|resetFilter" class="ccButton filterButton pointer">Clear</span>
 		</div>
 	-->	
-		<div data-tlc="bind $var '.options.user:size_gender'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom filterOpen">
+		<!--
+			SIZE FILTERS 
+			these custom filters are declared in the init file
+			data-filter-type="custom" data-filter-custom="sizeLarge" 
+		-->
+		<div data-tlc="bind $var '.suppressSize'; if(is $var --notblank;){{apply --hide --tag;}};">
+			<div class="filterGroupTitle greyGradient">Size</div>
+			<input type="checkbox" data-filter-type="custom" data-filter-custom="sizeSmall" name="sizeSmall"><label>Small</label></input>
+		</div>
+		
+		<div data-tlc="bind $var '.options.user:size_gender'; if(is $var --blank;){{apply --hide;}};" class="filterGroup marginBottom filterOpen">
 			<div data-tlc="store_cc#showfilter;" data-filterview='1' data-top='0' class="filterGroupTitle greyGradient">Shop By<span class="sprite"></span></div>
 			<div class="filterHider" data-filter-hider=1>
 				<div class="filterCheckboxList" 

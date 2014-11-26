@@ -44,7 +44,7 @@ var store_filter = function(_app) {
 		init : {
 			onSuccess : function()	{
 				var r = false; //return false if extension won't load for some reason (account config, dependencies, etc).
-				
+				_app.ext.store_filter.customFilters = {};
 				_app.model.addDispatchToQ({"_cmd":"appResource","filename":"elastic_public.json","_tag":{"datapointer":"appResource|elastic_public", "callback":"handleElasticFields","extension":"store_filter"}},'mutable');
 				_app.model.dispatchThis('mutable');
 				
@@ -246,6 +246,18 @@ var store_filter = function(_app) {
 					else {
 						}
 					});
+				$('[data-filter-type=custom]', $form).each(function(){
+					if($(this).is(':checked')){
+						var id = $(this).attr('data-filter-custom');
+						if(_app.ext.store_filter.customFilters[id]){
+							dump(_app.ext.store_filter.customFilters[id]);
+							elasticsearch.filter.and.push(_app.ext.store_filter.customFilters[id]);
+							}
+						else {
+							dump('ERROR: in _app.ext.store_filter.e.execFilteredSearch, no custom filter found for id: '+id);
+							}
+						}
+					});
 				
 				var es;
 				if(!elasticsearch.sort){
@@ -331,6 +343,14 @@ var store_filter = function(_app) {
 				dump(args);
 				if(args.id && args.jsonPath){
 					_app.ext.store_filter.vars.filterPageLoadQueue[args.id] = args;
+					}
+				},
+			pushCustomFilter  : function(args){
+				if(args.id && args.filter){
+					_app.ext.store_filter.customFilters[args.id] = args.filter;
+					}
+				else{
+					dump('ERROR: _app.ext.store_filter.couplers.pushCustomFilter REQUIRES "id" AND "filter"');
 					}
 				}
 			}

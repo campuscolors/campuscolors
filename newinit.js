@@ -493,7 +493,20 @@ _app.extend({
 	"namespace" : "store_filter",
 	"filename" : "extensions/_store_filter.js"
 	});
-	
+_app.couple('store_filter','pushCustomFilter',{
+	'id' : 'sizeSmall',
+	'filter' : {
+		"has_child":{
+			"type":"sku",
+			"filter" : {
+				"and" : [
+					{"range":{"available":{"gte":1}}},
+					{"regexp":{"sku":".+:(SZSM).*"}}
+					]
+				}
+			}
+		}
+	});
 _app.u.bindTemplateEvent('homepageTemplate', 'complete.store_cc',function(event,$context,infoObj) {
 	$(".mobileSlideMenu.standardNav").addClass("hideOnHome");
 	_app.ext.store_cc.u.showHomepageBanners($context);
