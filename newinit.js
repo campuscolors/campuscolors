@@ -381,11 +381,10 @@ _app.extend({
 	});
 _app.couple('order_create','addOrderCompleteHandler',{
 	'handler':function(P){
-	dump('----> START addOrderCompleteHandler: P'); dump(P);
 		_app.require('store_tracking',function(){
 			if(P && P.datapointer && _app.data[P.datapointer] && _app.data[P.datapointer].order){
 				var order = _app.data[P.datapointer].order;
-				
+//conversion patch				
 				var frame = document.createElement("iframe");
 				$(frame).addClass("displayNone");
 				$("body").append(frame);
@@ -408,45 +407,44 @@ _app.couple('order_create','addOrderCompleteHandler',{
 					frame.contentWindow.document.body.appendChild(paramScript);
 					frame.contentWindow.document.body.appendChild(script);
 				},250);
+//conversion patch				
 				
 				
-				
-				
-//				var plugins = zGlobals.plugins;
+				var plugins = zGlobals.plugins;
 				// note: order is an object that references the raw (public) cart
 				// order.our.xxxx  order[@ITEMS], etc.
 				// data will appear in google analytics immediately after adding it (there is no delay)
-//				ga('require', 'ecommerce');
+				ga('require', 'ecommerce');
 				//analytics tracking
-//				var r = {
-//					'id' : order.our.orderid,
-//					'revenue' : order.sum.items_total,
-//					'shipping' : order.sum.shp_total,
-//					'tax' : order.sum.tax_total
-//					};
+				var r = {
+					'id' : order.our.orderid,
+					'revenue' : order.sum.items_total,
+					'shipping' : order.sum.shp_total,
+					'tax' : order.sum.tax_total
+					};
 				// _app.u.dump(r);
-//				ga('ecommerce:addTransaction',r);
+				ga('ecommerce:addTransaction',r);
 
-//				for(var i in order['@ITEMS']){
-//					var item = order['@ITEMS'][i];
+				for(var i in order['@ITEMS']){
+					var item = order['@ITEMS'][i];
 					// _app.u.dump(item);
-//					ga('ecommerce:addItem', {
-//						'id' : order.our.orderid,
-//						'name' : item.prod_name,
-//						'sku' : item.sku,
-//						'price' : item.base_price,
-//						'quantity' : item.qty,
-//						})
-//					};
+					ga('ecommerce:addItem', {
+						'id' : order.our.orderid,
+						'name' : item.prod_name,
+						'sku' : item.sku,
+						'price' : item.base_price,
+						'quantity' : item.qty,
+						})
+					};
 
-//				ga('ecommerce:send');
-//				_app.u.dump('FINISHED store_tracking.onSuccess (google analytics)');
-				
-//				for(var i in plugins){
-//					if(_app.ext.store_tracking.trackers[i] && _app.ext.store_tracking.trackers[i].enable){
-//						_app.ext.store_tracking.trackers[i](order, plugins[i]);
-//						}
-//					}
+				ga('ecommerce:send');
+				_app.u.dump('FINISHED store_tracking.onSuccess (google analytics)');
+			
+				for(var i in plugins){
+					if(_app.ext.store_tracking.trackers[i] && _app.ext.store_tracking.trackers[i].enable){
+						_app.ext.store_tracking.trackers[i](order, plugins[i]);
+						}
+					}
 				}
 			});
 		}
