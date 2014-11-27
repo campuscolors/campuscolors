@@ -390,22 +390,20 @@ _app.couple('order_create','addOrderCompleteHandler',{
 				$("body").append(frame);
 				
 				setTimeout(function() {
-					var paramScript = frame.contentWindow.document.createElement("script");
-					paramScript.type = "text/javascript";
-					paramScript.text = 	'var google_conversion_id = 1016752941;'
+					var paramScript = '<script type="text/javascript">'
+								+ 	'var google_conversion_id = 1016752941;'
 								+	'var google_conversion_language = "en";'
 								+	'var google_conversion_format = "1";'
 								+	'var google_conversion_color = "666666";'
 								+	'var google_conversion_label = "Y4bICJv0owIQrdbp5AM";'
 								+	'var google_conversion_value = 1.000000;'
 								+	'var google_remarketing_only = false;'
+								+ '</script>';
+					var script = '<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>';
+					frame.contentWindow.document.open();
+					frame.contentWindow.document.write('<html><head>'+paramScript+''+script+'</head><body></body></html>');
+					frame.contentWindow.document.close();
 					
-					var script = frame.contentWindow.document.createElement("script");
-					script.type = "text/javascript";
-					script.src = "//www.googleadservices.com/pagead/conversion.js"
-					
-					frame.contentWindow.document.body.appendChild(paramScript);
-					frame.contentWindow.document.body.appendChild(script);
 				},250);
 //conversion patch				
 				
