@@ -965,7 +965,7 @@ fallback is to just output the value.
 				_app.ext.quickstart.vars.showContentFinished = false;
 				
 				dump("BEGIN newShowContent ["+infoObj.pageType+"]."); dump(infoObj);
-				
+				dump(infoObj.templateid);
 				infoObj = infoObj || {}; //could be empty for a cart or checkout
 				infoObj.defPipeline = $.PromisePipeline();
 				//doing a setTimeout 0 here to allow the UI thread to finish executing before this condition sets

@@ -71,9 +71,12 @@ _app.couple('quickstart','addPageHandler',{
 		//By nature, the static page handler requires nothing, but the templates it renders may require all kinds of stuff
 		infoObj.require = infoObj.require || [];
 		_app.require(infoObj.require,function(){
+			console.dir(infoObj);
 			infoObj.verb = 'translate';
-	dump('------------------------------------------'); dump(infoObj);
+	dump('------------------------------------------'); //dump(infoObj);
 			infoObj.templateid = infoObj.templateID;
+			dump(infoObj.templateid);
+			dump(typeof _app.templates[infoObj.templateid]);
 			var $page = new tlc().runTLC(infoObj);
 			//$page.tlc(infoObj);
 			$page.data('templateid',infoObj.templateid);
@@ -186,10 +189,28 @@ _app.router.appendHash({'type':'exact','route':'/','callback':'homepage'});
 _app.router.addAlias('category',	function(routeObj){_app.ext.quickstart.a.newShowContent(routeObj.value,	$.extend({'pageType':'category'}, routeObj.params));});
 _app.router.appendHash({'type':'match','route':'/category/{{navcat}}*','callback':'category'});
 
-_app.router.addAlias('search',		function(routeObj){_app.ext.quickstart.a.newShowContent(routeObj.value,	$.extend({'pageType':'search'}, routeObj.params));});
-_app.router.appendHash({'type':'match','route':'/search/tag/{{tag}}*','callback':'search'});
-_app.router.appendHash({'type':'match','route':'/search/keywords/{{KEYWORDS}}*','callback':'search'});
-
+// _app.router.addAlias('search',		function(routeObj){_app.ext.quickstart.a.newShowContent(routeObj.value,	$.extend({'pageType':'search'}, routeObj.params));});
+_app.router.appendHash({'type':'match','route':'/search/tag/{{tag}}*','callback':function(routeObj){
+	_app.ext.quickstart.a.newShowContent(routeObj.value,{
+		"pageType" : "static",
+		"require" : ['templates.html','store_search','store_filter','store_routing','prodlist_infinite'],
+		"templateID" : "betterSearchTemplate",
+		"dataset" : $.extend(routeObj.params, {"baseFilter" : {"term":{"tags":routeObj.params.tag}}})
+		});
+	}});
+_app.router.appendHash({'type':'match','route':'/search/keywords/{{KEYWORDS}}*','callback':function(routeObj){
+	$.
+	_app.ext.quickstart.a.newShowContent(routeObj.value,{
+		"pageType" : "static",
+		"require" : ['templates.html','store_search','store_filter','store_routing','prodlist_infinite'],
+		"templateID" : "betterSearchTemplate",
+		"dataset" : $.extend(routeObj.params, {"baseFilter" : {"query" : {"query_string" : {"query" : routeObj.params.KEYWORDS}}}})
+		});
+	}});
+_app.u.bindTemplateEvent('betterSearchTemplate','complete.execsearch',function(event, $context, infoObj){
+	dump('triggering');
+	$('form', $context).trigger('submit');
+	});
 _app.router.addAlias('checkout',	function(routeObj){_app.ext.quickstart.a.newShowContent(routeObj.value,	$.extend({'pageType':'checkout', 'requireSecure':true}, routeObj.params));});
 _app.router.appendHash({'type':'exact','route':'/checkout','callback':'checkout'});
 _app.router.appendHash({'type':'exact','route':'/checkout/','callback':'checkout'});
@@ -917,8 +938,7 @@ _app.couple('store_search','addUniversalFilter',{
 _app.couple('store_search','addUniversalFilter',{
 	'filter' : {"not":{"term":{"tags":"IS_DISCONTINUED"}}}
 	});
-
-				
+	
 _app.couple('quickstart','addPageHandler',{
 	"pageType" : "search",
 	"require" : ['store_search','templates.html','store_routing'],
