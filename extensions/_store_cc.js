@@ -876,7 +876,7 @@ var store_cc = function(_app) {
 					.fail(function() {
 						//if the json for the regions can't be loaded, show the default text field as a backup. 
 						dump('FILTER DATA FOR REGIONS COULD NOT BE LOADED.');
-						$("input",$tag.parent()).show().attr('required','required');
+						$("input",$tag.parent()).show().attr('required','required').attr('name',name);
 						$tag.remove();
 					});
 				}
