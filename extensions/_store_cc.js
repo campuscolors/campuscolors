@@ -837,7 +837,51 @@ var store_cc = function(_app) {
 				dump('START chkoutadduser'); 
 				$('.username').empty().text(user);
 				dump(user);
-			}
+			},
+			
+			regionsasoptions : function(data, thisTLC)	{
+				var entireCart = data.globals.binds.var;
+				var $tag = data.globals.tags[data.globals.focusTag];
+//				dump('START regionsasoptions'); dump(entireCart);
+				var r = '', regions = [], cartid;
+				var name = $tag.attr('name');
+				
+				if(entireCart.cart && entireCart.cart.cartid){
+					cartid = entireCart.cart.cartid;
+					}
+				else	{
+					cartid = _app.model.fetchCartID(); //in some cases, such as an address editor, the cartid may not be in the data.
+					}
+				if(cartid) {
+					//get the regions
+					$.getJSON("_regions.json?_v="+(new Date()).getTime(), function(json){
+//						dump('THE REGIONS JSON IS...'); dump(json);
+						for(var i = 0; i < json.length; i += 1)	{
+							//if the region is already in cart, make that the selection in the select list (but seperately for bill and ship).
+							if(name == 'bill/region') {			
+								if(_app.data['cartDetail|'+cartid] && _app.data['cartDetail|'+cartid].bill && _app.data['cartDetail|'+cartid].bill.region && (json[i].val == _app.data['cartDetail|'+cartid].bill.region)) {
+									r += "<option selected value='"+json[i].val+"'>"+json[i].id+"</option>";
+								}
+								else { r += "<option value='"+json[i].val+"'>"+json[i].id+"</option>"; }
+							}
+							else {
+								if(_app.data['cartDetail|'+cartid] && _app.data['cartDetail|'+cartid].ship && _app.data['cartDetail|'+cartid].ship.region && (json[i].val == _app.data['cartDetail|'+cartid].ship.region)) {
+									r += "<option selected value='"+json[i].val+"'>"+json[i].id+"</option>";
+								}
+								else { r += "<option value='"+json[i].val+"'>"+json[i].id+"</option>"; }
+							}
+						}
+						$tag.append(r);
+					})
+					.fail(function() {
+						//if the json for the regions can't be loaded, show the default text field as a backup. 
+						dump('FILTER DATA FOR REGIONS COULD NOT BE LOADED.');
+						$("input",$tag.parent()).show().attr('required','required');
+						$tag.remove();
+					});
+				}
+				else	{ dump("For regionsasoptions tlcFormat in store_cc, cartID could not be obtained.",'warn'); }
+			},
 
 		}, //tlcFormats
 		

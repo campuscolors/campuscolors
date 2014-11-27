@@ -454,7 +454,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 .checkoutFormContainer fieldset.shipInfo {width:100%;}
 .shipCenter {width:70%; margin:0 auto;}
 .chkoutEMailWrapper {width:100%;}
-.checkoutFormContainer .shipCenter input, .chkoutEMailWrapper input {width:100%;}
+.checkoutFormContainer .shipCenter input, .checkoutFormContainer .shipCenter select, .chkoutEMailWrapper input {width:100%;}
 .checkoutFormContainer .shipCenter input[type='checkbox'] {width:auto;}
 .checkoutFormContainer fieldset legend.plainLegend {background:none; color:#000000;}
 .checkoutFormContainer fieldset legend span {color:#333333;}
