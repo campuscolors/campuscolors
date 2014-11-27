@@ -177,8 +177,8 @@ because the panel is shared, the events (which aren't desired in the editor) are
 	<div><input data-tlc="bind $var '.bill.city'; if(is $var --blank;){{bind $var '.bill/city';}}; if(is $var --notblank;) {{apply --select=$var;}}; " name="bill/city" placeholder="City" required value="" type="text"></div> <!--campus-->
 	
 	<div>
-		<input data-tlc="bind $var '.bill.region'; if(is $var --blank;){{bind $var '.bill/region';}}; if(is $var --notblank;) {{apply --select=$var;}}; " required name="bill/region" placeholder="State/Region" size="5" value="" maxlength="20" type="text"> <!--campus-->
-		<!-- <select data-tlc="bind $var '.'; store_cc#regionsasoptions  - -shiptype='bill';" data-app-change="order_create|execAddressUpdate" name="bill/region" placeholder="State/Region" required="required"><option value=''>State/Region</option></select> --> <!--campus--> 
+		<input class="displayNone" data-tlc="bind $var '.bill.region'; if(is $var --blank;){{bind $var '.bill/region';}}; if(is $var --notblank;) {{apply --select=$var;}};" placeholder="State/Region" size="5" value="" maxlength="20" type="text"> <!--campus-->
+		<select data-tlc="bind $var '.'; store_cc#regionsasoptions  --shiptype='bill';" data-app-change="order_create|execAddressUpdate" name="bill/region" placeholder="State/Region" required="required"><option value=''>State/Region</option></select> <!--campus--> 
 	</div>
 	
 	<!-- postal not required for international. don't add it. -->
@@ -215,8 +215,8 @@ because the panel is shared, the events (which aren't desired in the editor) are
 	<div><input data-tlc="bind $var '.ship.city'; if(is $var --blank;){{bind $var '.ship/city';}}; if(is $var --notblank;) {{apply --select=$var;}}; " name="ship/city" placeholder="City" required value="" type="text"></div> <!--campus-->
 
 	<div>
-		<input data-tlc="bind $var '.ship.region'; if(is $var --blank;){{bind $var '.ship/region';}}; if(is $var --notblank;) {{apply --select=$var;}}; " required name="ship/region" placeholder="State/Region" size="5" value="" maxlength="20" type="text"> <!--campus-->
-		<!-- <select data-tlc="bind $var '.'; store_cc#regionsasoptions  - -shiptype='ship';" data-app-change="order_create|execAddressUpdate" name="ship/region" placeholder="State/Region" required="required"><option value=''>State/Region</option></select> --> <!--campus-->
+		<input class="displayNone" data-tlc="bind $var '.ship.region'; if(is $var --blank;){{bind $var '.ship/region';}}; if(is $var --notblank;) {{apply --select=$var;}};" placeholder="State/Region" size="5" value="" maxlength="20" type="text"> <!--campus-->
+		<select data-tlc="bind $var '.'; store_cc#regionsasoptions  --shiptype='ship';" data-app-change="order_create|execAddressUpdate" name="ship/region" placeholder="State/Region" required="required"><option value=''>State/Region</option></select> <!--campus-->
 	</div>
 	
 	<div><input data-tlc="bind $var '.ship.postal';  if(is $var --blank;){{bind $var '.ship/postal';}}; if(is $var --notblank;) {{apply --select=$var;}}; " name="ship/postal" placeholder="Zip/Postal Code" required size="14" value="" maxlength="10" type="text"></div> <!--campus-->
