@@ -199,17 +199,62 @@ _app.router.appendHash({'type':'match','route':'/search/tag/{{tag}}*','callback'
 		});
 	}});
 _app.router.appendHash({'type':'match','route':'/search/keywords/{{KEYWORDS}}*','callback':function(routeObj){
-	$.
+	routeObj.optionList = {};
+	if(_app.ext.store_filter.vars.searchFacets) { 
+		routeObj.optionList =  _app.ext.store_filter.vars.searchFacets.optionList;
+		routeObj.params.options =  _app.ext.store_filter.vars.searchFacets.options;
+		showbetterSearch(routeObj);
+	}
+	else {
+		$.getJSON("filters/search/search.json?_v="+(new Date()).getTime(), function(json){
+//			dump('THE SEARCH JSON IS...'); dump(json);
+			_app.ext.store_filter.vars.searchFacets = json;
+			routeObj.optionList = json.optionList;
+			routeObj.params.options = json.options;
+			showbetterSearch(routeObj);
+		})
+		.fail(function() {
+			dump('FILTER DATA FOR SEARCH FACETS COULD NOT BE LOADED.');
+			_app.router.handleURIChange('/404');
+		}); 
+	}
+}});
+function showbetterSearch(routeObj) {
+	dump('----> showing better Search');
+	optStrs = routeObj.optionList;
+	routeObj.params.options = routeObj.params.options || {};
+	for(var i in optStrs){
+						dump('----> optStrs[i]'); dump(optStrs[i]);
+		var o = optStrs[i];
+		if(_app.ext.store_filter.vars.elasticFields[o]){
+			routeObj.params.options[o] = $.extend(true, {}, _app.ext.store_filter.vars.elasticFields[o]);
+			dump('routeObj.params.options[o]'); dump(routeObj.params.options[o]); 
+			if(routeObj.searchParams && routeObj.searchParams[o]){
+				var values = routeObj.searchParams[o].split('|');
+				for(var i in routeObj.params.options[o].options){
+					var option = routeObj.params.options[o].options[i];
+					if($.inArray(option.v, values) >= 0){
+						option.checked = "checked";
+					}
+				}
+			}
+		}
+		else {
+			dump("Unrecognized option "+o+" on filter page "+routeObj.params.id);
+		}
+	}
 	_app.ext.quickstart.a.newShowContent(routeObj.value,{
-		"pageType" : "static",
-		"require" : ['templates.html','store_search','store_filter','store_routing','prodlist_infinite'],
-		"templateID" : "betterSearchTemplate",
-		"dataset" : $.extend(routeObj.params, {"baseFilter" : {"query" : {"query_string" : {"query" : routeObj.params.KEYWORDS}}}})
-		});
-	}});
+	"pageType" : "static",
+	"require" : ['templates.html','store_search','store_filter','store_routing','prodlist_infinite','store_cc'],
+	"templateID" : "betterSearchTemplate",
+	"dataset" : $.extend(routeObj.params, {"baseFilter" : {"query" : {"query_string" : {"query" : routeObj.params.KEYWORDS}}},'options':routeObj.params.options})
+	});
+};
+	
 _app.u.bindTemplateEvent('betterSearchTemplate','complete.execsearch',function(event, $context, infoObj){
 	dump('triggering');
-	$('form', $context).trigger('submit');
+	//timeout because visiting search page a second/third/etc. time was submitting before the product was loaded leaving a blank page. 
+	setTimeout(function(){$('form', $context).trigger('submit');},500); 
 	});
 _app.router.addAlias('checkout',	function(routeObj){_app.ext.quickstart.a.newShowContent(routeObj.value,	$.extend({'pageType':'checkout', 'requireSecure':true}, routeObj.params));});
 _app.router.appendHash({'type':'exact','route':'/checkout','callback':'checkout'});

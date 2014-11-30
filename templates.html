@@ -154,7 +154,14 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 		</div>
 	</div>
 	-->	
-	<form onSubmit="return false;" data-app-submit="store_filter|execFilteredSearch" data-tlc="bind $bf '.baseFilter'; stringify; apply --attrib='data-filter-base';" data-parent-filter-hider=1 class="filterListTemplate openFilters">
+	<div data-tlc="bind $var '.'; transmogrify --dataset=$var --templateid='filterFacetsTemplate'; apply --append;" data-parent-filter-hider=1 class="filterListTranslator openFilters"></div>
+
+	<ul data-filter="resultsList" class="listStyleNone fluidList noPadOrMargin productList ccList"></ul>
+	<div data-tlc="bind $var '.'; store_cc#addbotlinks;" class="botLinksCont"></div>
+</div>
+
+<div id="filterFacetsTemplate">
+	<form onSubmit="return false;" data-app-submit="store_filter|execFilteredSearch" data-tlc="bind $bf '.baseFilter'; stringify; apply --attrib='data-filter-base';" class="filterListTemplate">
 		<input data-tlc="bind $var '.base'; store_cc#assigndata  --attribute='filter-base' --legacy;" data-cc="filterBase" type="hidden">	
 	<!-- INPUTS AUTO SUBMIT THE FORM	
 		<div class="filterControlContainer">
@@ -350,9 +357,6 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 		</div>
 	-->	
 	</form>
-
-	<ul data-filter="resultsList" class="listStyleNone fluidList noPadOrMargin productList ccList"></ul>
-	<div data-tlc="bind $var '.'; store_cc#addbotlinks;" class="botLinksCont"></div>
 </div>
 
 <div id="vertNavTemplate" class="homeVertNav redGradient floatRight hidePhone showTablet showDesktopBlock standarNav">
@@ -2249,204 +2253,12 @@ subscribeListsArticle is used for authenticated buyers.
 
 </div>
 
-<div id="betterSearchTemplate" data-filter="parent" class="searchResultsPage">
-	<form onSubmit="return false;" data-app-submit="store_filter|execFilteredSearch" data-tlc="bind $bf '.baseFilter'; stringify; apply --attrib='data-filter-base';" data-parent-filter-hider=1 class="filterListTemplate openFilters">
-		<input data-tlc="bind $var '.base'; store_cc#assigndata  --attribute='filter-base' --legacy;" data-cc="filterBase" type="hidden">	
-	<!-- INPUTS AUTO SUBMIT THE FORM	
-		<div class="filterControlContainer">
-			<span onClick="$(this).closest('form').trigger('submit');" data-reset-form="reset" class="redGradient arial filterButton pointer">Go!</span>
-			<span data-app-click="store_cc|resetFilter" class="ccButton filterButton pointer">Clear</span>
-		</div>
-	-->	
-		<div data-tlc="bind $var '.options.user:size_gender'; if(is $var --blank;){{apply --hide;}};" class="filterGroup marginBottom filterOpen">
-			<div data-tlc="store_cc#showfilter;" data-filterview='1' data-top='0' class="filterGroupTitle greyGradient">Shop By<span class="sprite"></span></div>
-			<div class="filterHider" data-filter-hider=1>
-				<div class="filterCheckboxList" 
-					data-tlc="bind $index '.options.user:size_gender.index';
-						bind $cbl '.options.user:size_gender.options'; 
-						store_filter#filtercheckboxlist --index=$index;">
-				</div>
-			</div>
-		</div>
-		
-		<!--
-			SIZE FILTERS 
-			these custom filters are declared in the init file
-			data-filter-type="custom" data-filter-custom="sizeLarge" 
-		<div data-tlc="bind $var '.suppressSize'; if(is $var --notblank;){{apply --hide --tag;}};" class="filterGroup marginBottom filterOpen">
-			<div data-tlc="store_cc#showfilter;" data-filterview='1' data-top='0' class="filterGroupTitle greyGradient">Size<span class="sprite"></span></div>
-			<div class="filterHider" data-filter-hider=1>
-				<div class="filterCheckboxList">
-					<label class="hangingIndent">
-						<input type="checkbox" data-app-change="store_filter|submitcheckbox" data-filter-type="custom" data-filter-custom="sizeSmall" name="sizeSmall">
-						Small
-					</label>
-					<label class="hangingIndent">
-						<input type="checkbox" data-app-change="store_filter|submitcheckbox" data-filter-type="custom" data-filter-custom="sizeMed" name="sizeMed">
-						Medium
-					</label>
-					<label class="hangingIndent">
-						<input type="checkbox" data-app-change="store_filter|submitcheckbox" data-filter-type="custom" data-filter-custom="sizeLarge" name="sizeLarge">
-						Large
-					</label>
-					<label class="hangingIndent">
-						<input type="checkbox" data-app-change="store_filter|submitcheckbox" data-filter-type="custom" data-filter-custom="sizeXLarge" name="sizeXLarge">
-						Extra&#45;Large
-					</label>
-				</div>
-			</div>
-		</div>
-		-->
-		
-<!-- TODO : ATTRIB BASED SIZE NOT ALLOWING FOR DISPLAY OF ALL SIZE VARIATIONS REPLACE WHEN SIZES CAN BE OBTAINED
-		<div data-tlc="bind $var '.options.user:size_code'; if(is $var - -blank){{apply - -hide;}};" class="filterGroup marginBottom">
-			<div data-tlc="store_cc#showfilter;" data-filterview='1' data-top='0' class="filterGroupTitle greyGradient">Size<span class="sprite"></span></div>
-			<div class="filterHider" data-filter-hider=1>
-				<div class="filterCheckboxList" 
-					data-tlc="bind $index '.options.user:size_code.index';
-						bind $cbl '.options.user:size_code.options'; 
-						store_filter#filtercheckboxlist - -index=$index;">
-				</div>
-			</div>
-		</div>
--->
-<!-- DIDN'T WANT TO USE SLIDER		
-		<div data-tlc="bind $var '.options.base_price'; if(is $var - -blank;){{apply - -tag - -remove;}};" class="filterGroup priceFilter marginBottom">
-			<div data-tlc="store_cc#showfilter;" data-filterview='0' data-top='0' class="filterGroupTitle greyGradient">Price<span class="sprite"></span></div>
-			<div class="filterHider" data-filter-hider=1>
-				<div data-filter-range-mult="100" data-tlc="bind $range '.options.base_price'; if(is $range - -notblank;){{store_cc#filterrange - -index='base_price';}};"></div>
-			</div>
-		</div>
--->		
-		<!-- <div data-tlc="bind $var '.options.base_price'; if(is $var --blank;){{apply --tag --remove;}};" class="filterGroup priceFilter marginBottom filterOpen"> -->
-		<div data-tlc="bind $var '.options.base_price'; if(is $var --blank;){{apply --tag --remove;}};" class="filterGroup priceFilter marginBottom filterOpen">
-			<div data-tlc="store_cc#showfilter;" data-filterview='1' data-top='0' class="filterGroupTitle greyGradient">Price<span class="sprite"></span></div>
-			<div class="filterHider" data-filter-hider=1>
-				<div data-filter-range-mult="100" data-tlc="bind $range '.options.base_price'; if(is $range --notblank;){{store_cc#filterrangebox --index='base_price';}};">
-					<div><input type="checkbox" data-price="0|24.99" /><label>&#36;0.00 - &#36;24.99</label></div>
-					<div><input type="checkbox" data-price="25|49.99"><label>&#36;25.00 - &#36;49.99</label></div>
-					<div><input type="checkbox" data-price="50|74.99"><label>&#36;50.00 - &#36;74.99</label></div>
-					<div><input type="checkbox" data-price="75|max"><label>&#36;75.00 &#43;	<div class="qualifies">&#40;Qualifies for free shipping&#41;</div></label></div>
-				</div>
-			</div>
-		</div>
-		
-		<div data-tlc="bind $var '.options.user:website_filter'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom filterOpen">
-			<div data-tlc="store_cc#showfilter;" data-filterview='1' data-top='0' class="filterGroupTitle greyGradient">Department<span class="sprite"></span></div>
-			<div class="filterHider" data-filter-hider=1>
-				<div class="filterCheckboxList"
-					data-tlc="bind $index '.options.user:website_filter.index';
-						bind $cbl '.options.user:website_filter.options'; 
-						store_filter#filtercheckboxlist --index=$index;">
-				</div>
-			</div>
-		</div>
-
-		<div data-tlc="bind $var '.options.user:color_pallete'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
-			<div data-tlc="store_cc#showfilter;" data-filterview='0' data-top='0' class="filterGroupTitle greyGradient">Color<span class="sprite"></span></div>
-			<div class="filterHider" data-filter-hider=1>
-				<div class="filterCheckboxList" 
-					data-tlc="bind $index '.options.user:color_pallete.index';
-						bind $cbl '.options.user:color_pallete.options'; 
-						store_filter#filtercheckboxlist --index=$index;">
-				</div>
-			</div>
-		</div>
-
-		<div data-tlc="bind $var '.options.user:vendor_code'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
-			<div data-tlc="store_cc#showfilter;" data-filterview='0' data-top='0' class="filterGroupTitle greyGradient">Brand<span class="sprite"></span></div>
-			<div class="filterHider" data-filter-hider=1>
-				<div class="filterCheckboxList" 
-					data-tlc="bind $index '.options.user:vendor_code.index';
-						bind $cbl '.options.user:vendor_code.options'; 
-						store_filter#filtercheckboxlist --index=$index;">
-				</div>
-			</div>
-		</div>
-		
-		<div data-tlc="bind $var '.options.user:team_league_ncaa'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
-			<div data-tlc="store_cc#showfilter;" data-filterview='0' data-top='0' class="filterGroupTitle greyGradient">College Teams<span class="sprite"></span></div>
-			<div class="filterHider" data-filter-hider=1>
-				<div class="filterCheckboxList" 
-					data-tlc="bind $index '.options.user:team_league_ncaa.index';
-						bind $cbl '.options.user:team_league_ncaa.options'; 
-						store_filter#filtercheckboxlist --index=$index;">
-				</div>
-			</div>
-		</div>
-		
-		<div data-tlc="bind $var '.options.user:team_league_nfl'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
-			<div data-tlc="store_cc#showfilter;" data-filterview='0' data-top='0' class="filterGroupTitle greyGradient">NFL Teams<span class="sprite"></span></div>
-			<div class="filterHider" data-filter-hider=1>
-				<div class="filterCheckboxList" 
-					data-tlc="bind $index '.options.user:team_league_nfl.index';
-						bind $cbl '.options.user:team_league_nfl.options'; 
-						store_filter#filtercheckboxlist --index=$index;">
-				</div>
-			</div>
-		</div>
-		
-		<div data-tlc="bind $var '.options.user:team_league_nba'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
-			<div data-tlc="store_cc#showfilter;" data-filterview='0' data-top='0' class="filterGroupTitle greyGradient">NBA Teams<span class="sprite"></span></div>
-			<div class="filterHider" data-filter-hider=1>
-				<div class="filterCheckboxList" 
-					data-tlc="bind $index '.options.user:team_league_nba.index';
-						bind $cbl '.options.user:team_league_nba.options'; 
-						store_filter#filtercheckboxlist --index=$index;">
-				</div>
-			</div>
-		</div>
-			
-		<div data-tlc="bind $var '.options.user:team_league_mlb'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
-			<div data-tlc="store_cc#showfilter;" data-filterview='0' data-top='0' class="filterGroupTitle greyGradient">MLB Teams<span class="sprite"></span></div>
-			<div class="filterHider" data-filter-hider=1>
-				<div class="filterCheckboxList" 
-					data-tlc="bind $index '.options.user:team_league_mlb.index';
-						bind $cbl '.options.user:team_league_mlb.options'; 
-						store_filter#filtercheckboxlist --index=$index;">
-				</div>
-			</div>
-		</div>
-		
-		<div data-tlc="bind $var '.options.user:team_league_nhl'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
-			<div data-tlc="store_cc#showfilter;" data-filterview='0' data-top='0' class="filterGroupTitle greyGradient">NHL Teams<span class="sprite"></span></div>
-			<div class="filterHider" data-filter-hider=1>
-				<div class="filterCheckboxList" 
-					data-tlc="bind $index '.options.user:team_league_nhl.index';
-						bind $cbl '.options.user:team_league_nhl.options'; 
-						store_filter#filtercheckboxlist --index=$index;">
-				</div>
-			</div>
-		</div>
-		
-		<div data-tlc="bind $var '.options.user:team_league'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
-			<div data-tlc="store_cc#showfilter;" data-filterview='0' data-top='0' class="filterGroupTitle greyGradient">Leauge<span class="sprite"></span></div>
-			<div class="filterHider" data-filter-hider=1>
-				<div class="filterCheckboxList" 
-					data-tlc="bind $index '.options.user:team_league.index';
-						bind $cbl '.options.user:team_league.options'; 
-						store_filter#filtercheckboxlist --index=$index;">
-				</div>
-			</div>
-		</div>
-		
-		<div data-tlc="bind $var '.options.user:team_conference'; if(is $var --blank){{apply --hide;}};" class="filterGroup marginBottom">
-			<div data-tlc="store_cc#showfilter;" data-filterview='0' data-top='0' class="filterGroupTitle greyGradient">Conference<span class="sprite"></span></div>
-			<div class="filterHider" data-filter-hider=1>
-				<div class="filterCheckboxList" 
-					data-tlc="bind $index '.options.user:team_conference.index';
-						bind $cbl '.options.user:team_conference.options'; 
-						store_filter#filtercheckboxlist --index=$index;">
-				</div>
-			</div>
-		</div>
-	<!-- INPUTS SET TO AUTO SUBMIT
-		<div class="filterControlContainer">
-			<span onClick="$(this).closest('form').trigger('submit');" class="redGradient arial filterButton pointer">Go!</span>
-			<span data-app-click="store_cc|resetFilter" class="ccButton filterButton pointer">Clear</span>
-		</div>
-	-->	
-	</form>
+<div id="betterSearchTemplate" data-filter="parent" class="searchResultsPage listWrapper">
+	<div data-tlc="store_cc#showmobilefiltercontainer;" data-filterview='0' data-top='1' class="showHideFilters hideTablet greyGradient arial">
+		FILTERS
+		<span class="sprite"></span>
+	</div>
+	<div data-tlc="bind $var '.'; transmogrify --dataset=$var --templateid='filterFacetsTemplate'; apply --append;" data-parent-filter-hider=1 class="filterListTranslator openFilters"></div>
 	<ul data-filter="resultsList" class="listStyleNone fluidList noPadOrMargin productList ccList"></ul>
 </div>
 

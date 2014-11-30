@@ -270,8 +270,8 @@ header {position:relative;}
 .showHideFilters .sprite, .filterGroupTitle .sprite {height:11px; width:16px; margin:0 0 0 5px; background-position:-376px -117px; background-repeat:no-repeat; display:inline-block;}
 .showHideFilters.openFilters .sprite, .filterOpen .filterGroupTitle .sprite {background-position:-376px -130px;}
 .filteredSearchTemplate ul {clear:both;}
-.filterListTemplate {max-height:0; width:270px; transition:all 0.5s; margin:10px auto; overflow:hidden;}
-.filterListTemplate.openFilters {max-height:500px;}
+.filterListTranslator {max-height:0; width:270px; transition:all 0.5s; margin:10px auto; overflow:hidden;}
+.filterListTranslator.openFilters {max-height:500px;}
 .filterGroup {width:46%; margin:5px; float:left;}
 .filterGroupTitle {padding:2px; border:1px solid #000000; color:#ffffff; font-weight:bold;}
 .filterOpen .filterGroupTitle {margin-bottom:1em;}
@@ -573,11 +573,11 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	
 	.splashPageTemplate {width:690px;}
 	.splashBanner p {height:150px; width:350px; left:20px;}
-	.splashPageListTemplate, .productList.ccList > li, .filterListTemplate, .catFilter {height:240px; width:210px; margin:10px; padding:0 5px; border:5px solid #000000; box-shadow:4px 4px 0 0 #bfbfbf;}
+	.splashPageListTemplate, .productList.ccList > li, .filterListTranslator, .catFilter {height:240px; width:210px; margin:10px; padding:0 5px; border:5px solid #000000; box-shadow:4px 4px 0 0 #bfbfbf;}
 	.catFilter {height:auto; margin:15px 10px 10px 10px; float:left;}
 	.filteredSearchTemplate ul {clear:none;}
-	.filterListTemplate {height:auto;  padding:0; float:left; border:5px solid #bfbfbf;}
-	.filterListTemplate.openFilters {max-height:2000px;}
+	.filterListTranslator {height:auto;  padding:0; float:left; border:5px solid #bfbfbf;}
+	.filterListTranslator.openFilters {max-height:2000px;}
 	.filterGroup {width:100%; margin:0;}
 	.filterGroupTitle {width:100%; padding:4px 4px 4px 10px; border-bottom:2px solid #000000; border-top:none; border-left:none; border-right:none;}
 	.filterHider {padding:0 0 0 15px; margin:0 0 10px 0; overflow-y:auto; overflow-x:hidden;}
