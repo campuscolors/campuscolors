@@ -1,0 +1,22 @@
+{
+	"options": {
+		"base_price": {
+			"min": 0,
+			"max": 400
+		}
+	},
+	"optionList": [
+		"user:size_gender",
+		"user:vendor_code",
+		"user:color_pallete",
+		"user:website_filter",
+		"user:team_league_ncaa",
+		"user:team_league_nfl",
+		"user:team_league_nba",
+		"user:team_league_mlb",
+		"user:team_league_nhl",
+		"user:team_league_soccer",
+		"user:team_league",
+		"user:team_conference"
+	]
+}
