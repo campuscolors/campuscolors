@@ -220,15 +220,15 @@ _app.router.appendHash({'type':'match','route':'/search/keywords/{{KEYWORDS}}*',
 	}
 }});
 function showbetterSearch(routeObj) {
-	dump('----> showing better Search');
+//	dump('----> showing better Search');
 	optStrs = routeObj.optionList;
 	routeObj.params.options = routeObj.params.options || {};
 	for(var i in optStrs){
-						dump('----> optStrs[i]'); dump(optStrs[i]);
+//		dump('----> optStrs[i]'); dump(optStrs[i]);
 		var o = optStrs[i];
 		if(_app.ext.store_filter.vars.elasticFields[o]){
 			routeObj.params.options[o] = $.extend(true, {}, _app.ext.store_filter.vars.elasticFields[o]);
-			dump('routeObj.params.options[o]'); dump(routeObj.params.options[o]); 
+//			dump('routeObj.params.options[o]'); dump(routeObj.params.options[o]); 
 			if(routeObj.searchParams && routeObj.searchParams[o]){
 				var values = routeObj.searchParams[o].split('|');
 				for(var i in routeObj.params.options[o].options){
@@ -454,7 +454,7 @@ _app.couple('order_create','addOrderCompleteHandler',{
 				var frame = document.createElement("iframe");
 				$(frame).addClass("displayNone");
 				$("body").append(frame);
-				
+
 				setTimeout(function() {
 					var paramScript = '<script type="text/javascript">'
 								+ 	'var google_conversion_id = 1016752941;'
@@ -462,7 +462,8 @@ _app.couple('order_create','addOrderCompleteHandler',{
 								+	'var google_conversion_format = "1";'
 								+	'var google_conversion_color = "666666";'
 								+	'var google_conversion_label = "Y4bICJv0owIQrdbp5AM";'
-								+	'var google_conversion_value = 1.000000;'
+								+	'var google_conversion_value = '+order.sum.items_total+';'
+						//		+	'var google_conversion_value = 1.000000;'
 								+	'var google_remarketing_only = false;'
 								+ '</script>';
 					var script = '<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>';
