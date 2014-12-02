@@ -1212,14 +1212,14 @@ var store_cc = function(_app) {
 			
 /* HOMEPAGE UTILS */
 			showHomepageBanners : function($context) {
-//			dump('START showHomepageBanners'); dump(_app.ext.store_cc.vars.homepageBanners[1].featured);
+			dump('START showHomepageBanners'); dump(_app.ext.store_cc.vars.homepageBanners.featured);
 				var $container = $('.homeBanner', $context);
 				var $featuredContainer = $('[data-home-featured="container"]', $context);
 				if(!$container.hasClass('bannersRendered')) {
-					if(_app.ext.store_cc.vars.homepageBanners && _app.ext.store_cc.vars.homepageBanners[0].main) {
+					if(_app.ext.store_cc.vars.homepageBanners && _app.ext.store_cc.vars.homepageBanners.main) {
 						$container.addClass('bannersRendered');
-						for(var i = 0; i < _app.ext.store_cc.vars.homepageBanners[0].main.length; i++) {
-							var thisBanner = _app.ext.store_cc.vars.homepageBanners[0].main[i];
+						for(var i = 0; i < _app.ext.store_cc.vars.homepageBanners.main.length; i++) {
+							var thisBanner = _app.ext.store_cc.vars.homepageBanners.main[i];
 							var bannerWidth = thisBanner.width == "" ? 620 : thisBanner.width;
 							var bannerHeight = thisBanner.height == "" ? 268 : thisBanner.height;
 							//dump('BANNER WIDTH & HEIGHT'); dump(bannerWidth); dump(bannerHeight);
@@ -1229,15 +1229,13 @@ var store_cc = function(_app) {
 						}
 						_app.ext.store_cc.u.runHomeMainBanner($context);
 					}
-					else {
-						setTimeout(this.showHomepageBanners,250);
-					}
+					else { setTimeout(this.showHomepageBanners,250); }
 				}
 				if(!$featuredContainer.hasClass('bannersRendered')) {
-					if(_app.ext.store_cc.vars.homepageBanners && _app.ext.store_cc.vars.homepageBanners[1].featured) {
+					if(_app.ext.store_cc.vars.homepageBanners && _app.ext.store_cc.vars.homepageBanners.featured) {
 						$featuredContainer.addClass('bannersRendered');
-						for(var j = 0; j < _app.ext.store_cc.vars.homepageBanners[1].featured.length; j++) {
-							var nextBanner = _app.ext.store_cc.vars.homepageBanners[1].featured[j];
+						for(var j = 0; j < _app.ext.store_cc.vars.homepageBanners.featured.length; j++) {
+							var nextBanner = _app.ext.store_cc.vars.homepageBanners.featured[j];
 							var bannerWidth = nextBanner.width == "" ? 330 : nextBanner.width;
 							var bannerHeight = nextBanner.height == "" ? 230 : nextBanner.height;
 							var $destination = j == 0 ? $('[data-home-featured="first"]', $context) : $('[data-home-featured="second"]', $context);
@@ -1249,8 +1247,8 @@ var store_cc = function(_app) {
 							}
 						}
 					}
+					else { setTimeout(this.showHomepageBanners,250); }
 				}
-				else { setTimeout(this.showHomepageBanners,250); }
 			},
 			
 			makeBanner : function(bannerJSON, w, h, b) {
@@ -1274,7 +1272,38 @@ var store_cc = function(_app) {
 					return $img;
 				}
 			},
-			
+/*			
+			showHeaderBanners : function($context) {
+				dump('START buildHeaderBanners');
+				
+				var $headerContainer = $('[data-ship-carousel]', $context);
+				if(!$headerContainer.hasClass('bannersRendered')) {
+					//if phone res different messages used because of size, so different json
+					if(_app.ext.store_cc.vars.homepageBanners) {
+						var thisJSON = screen.width > 750 ? _app.ext.store_cc.vars.homepageBanners.header : _app.ext.store_cc.vars.homepageBanners.mobileheader; 
+						dump(thisJSON);
+						for(var i = 0; i < thisJSON.length; i++) {
+							var thisBanner = thisJSON[i];
+							var $parent = $('<div class="shipCarItem"></div>');
+							if(thisJSON[i].img) {
+								var $(img) = $('<span class="shipLogo sprite"></span>');
+								$parent.append($img);
+							}
+							if(thisJSON[i].boldmsg) {
+								var $(boldmsg) = $('<span class="bold">'+thisJSON.boldmsg+'</span>');
+								$parent.append($boldmsg);
+							}
+							if(thisJSON[i].msg) {
+								var $(msg) = $('<span>'+thisJSON.msg+'</span>');
+								$parent.append($msg);
+							}
+							$headerContainer.append($parent);
+						}
+					}
+					else { setTimeout(this.showHeaderBanners,250); }
+				}
+			},
+*/			
 /* PRODUCT PAGE UTILS */
 			//called on depart from prod page to add item to recently viewed items list
 			//changed this from quickstart's addition at page load to prevent items from showing in list on first page visit

@@ -1,52 +1,80 @@
-[
-	{ "main" : 
-		[
-           {
-				"src"			: "banners/tailgating_banner_alt.jpg",
-				"width"		: "700",
-				"height"	: "268",
-				"alt"			: "Tailgating Essentials",
-				"title"		: "Tailgating Essentials",
-				"href"		: "/apparel-merchandise/novelties-and-accessories/"
-			},
-			{
-				"src"			: "banners/shorts_everyday_700_x_268.jpg",
-				"width"		: "700",
-				"height"	: "268",
-				"alt"			: "Basketball Shorts, Pro and College Teams",
-				"title"		: "Basketball Shorts, Pro and College Teams",
-				"href"		: "/apparel-merchandise/shorts/"
-			},
-			{
-				"src"			: "banners/gameday_banner.jpg",
-				"width"		: "700",
-				"height"	: "268",
-				"alt"			: "Game Day",
-				"title"		: "Game Day",
-				"href"		: "/search/promo/college-shirts-sweatshirts-jerseys/"
-			}
-		]
-	},
-	{ "featured" :
-		[
-			{
-				"src"			: "banners/college_sweatshirts.jpg",
-				"width"		: "330",
-				"height"	: "230",
-				"alt"			: "College Sweatshirts",
-				"title"		: "College Sweatshirts",
-				"label"		: "",
-				"href"		: "/league-apparel-merchandise/ncaa/sweatshirts/"
-			},
-			{
-				"src"			: "banners/nfl_hats.jpg",
-				"width"		: "330",
-				"height"	: "230",
-				"alt"			: "NFL Hats",
-				"title"		: "NFL Hats",
-				"label"		: "",
-				"href"		: "/league-apparel-merchandise/nfl/hats/"
-			}
-		]
-	}	
-]
+{
+	"main" : [
+	   {
+			"src"			: "banners/tailgating_banner_alt.jpg",
+			"width"		: "700",
+			"height"	: "268",
+			"alt"			: "Tailgating Essentials",
+			"title"		: "Tailgating Essentials",
+			"href"		: "/apparel-merchandise/novelties-and-accessories/"
+		},
+		{
+			"src"			: "banners/shorts_everyday_700_x_268.jpg",
+			"width"		: "700",
+			"height"	: "268",
+			"alt"			: "Basketball Shorts, Pro and College Teams",
+			"title"		: "Basketball Shorts, Pro and College Teams",
+			"href"		: "/apparel-merchandise/shorts/"
+		},
+		{
+			"src"			: "banners/gameday_banner.jpg",
+			"width"		: "700",
+			"height"	: "268",
+			"alt"			: "Game Day",
+			"title"		: "Game Day",
+			"href"		: "/search/promo/college-shirts-sweatshirts-jerseys/"
+		}
+	],
+	"featured" : [
+		{
+			"src"			: "banners/college_sweatshirts.jpg",
+			"width"		: "330",
+			"height"	: "230",
+			"alt"			: "College Sweatshirts",
+			"title"		: "College Sweatshirts",
+			"label"		: "",
+			"href"		: "/league-apparel-merchandise/ncaa/sweatshirts/"
+		},
+		{
+			"src"			: "banners/nfl_hats.jpg",
+			"width"		: "330",
+			"height"	: "230",
+			"alt"			: "NFL Hats",
+			"title"		: "NFL Hats",
+			"label"		: "",
+			"href"		: "/league-apparel-merchandise/nfl/hats/"
+		}
+	],
+	"header" :	[
+		{
+			"img"		: "ship",
+			"width"		: "",
+			"height"	: "",
+			"href"		: "/shipping_policy/"
+		},
+		{
+			"img"		: "sale",
+			"width"		: "",
+			"height"	: "",
+			"href"		: "/about_us/"
+		}
+	],
+	"mobileheader" : [
+		{
+			"img"		: "ship",
+			"boldmsg"	: "bold message",
+			"msg"		: "regular message",
+			"width"		: "",
+			"height"	: "",
+			"href"		: "/shipping_policy/"
+		},
+		{
+			"img"		: "sale",
+			"boldmsg"	: "",
+			"msg"		: "",
+			"width"		: "",
+			"height"	: "",
+			"href"		: "/about_us/"
+		}
+	]
+}
