@@ -29,12 +29,13 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 ga('create', 'UA-5315043-7', 'auto');
 ga('require','linker');
 ga('require','ecommerce', 'ecommerce.js');
-ga('set', {
-	// Replace name below
-	'appName' : 'CampusColors',
-	'appID' : 'ZMVC',
-	'appVersion' : '201405'
-	});
+// ga('set'.. breaks realtime analytics, only use when running inside android/ios shell
+//ga('set', {
+//	// Replace name below
+//	'appName' : 'CampusColors',
+//	'appID' : 'ZMVC',
+//	'appVersion' : '201405'
+//	});
 ga('require', 'displayfeatures');
 ga('send','pageview');
 ga('send','screenview');
