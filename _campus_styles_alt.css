@@ -164,11 +164,11 @@ header {position:relative;}
 .searchWrapper .productSearchKeyword {height:40px; width:220px; padding:10px; border:none; background-color:#dddddd; float:left;}
 .searchWrapper .productSearchButton {height:40px; width:50px; border:1px outset #fbe143; background-color:#fbe143; background-position:12px 7px; background-repeat:no-repeat;}
 
-.headerLower {height:43px; width:100%; background-color:green; color:#ffffff; padding:8px 0 0 0; border-top:2px solid #000000; border-bottom:2px solid #000000; text-align:center; overflow:hidden;}
-.shipCarItem {height:32px; width:100%; text-align:center;}
-.headerLower .promoOffer {font-size:1.3em; position:relative; padding:0 0 0 50px;}
-.headerLower .shipLogo {height:30px; width:45px; display:inline-block; background-position:-398px -3px; position:absolute; top:0; left:0;}
-.headerLower .promoCode {font-size:1.125em; position:relative; padding:0 0 0 50px;}
+.headerLower {height:43px; width:100%; color:#ffffff; padding:8px 0 0 0; border-top:2px solid #000000; border-bottom:2px solid #000000; text-align:center; overflow:hidden;}
+.shipCarItem {display:inline-block; height:32px; width:100%; text-align:center; text-decoration:none; color:#ffffff;}
+.headerLower .promoOffer {font-size:1.3em;}
+.headerLower .shipLogo {vertical-align:middle; /*height:30px; width:45px; display:inline-block; background-position:-398px -3px; position:absolute; top:0; left:0;*/}
+.headerLower .promoCode {font-size:1.125em;}
 
 .mobileSlideMenu {width:266px; transition:all 0.4s; background-color:#999999; padding:0 5px 5px 0; position:absolute; top:0; left:-275px; z-index:1001; border-radius:0 0 4px 0;}
 .mobileSlideMenu.mobileExpand {left:-5px;}

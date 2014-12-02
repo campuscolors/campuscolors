@@ -998,9 +998,10 @@ var store_cc = function(_app) {
 			runHeaderCarousel : function(destroy) {
 //				_app.u.dump('----Running homepage carousels');	
 				var destroy = destroy || false; //pass this argument to destroy the carousel 
+				var $target = $("[data-ship-carousel]")
 				//use a different element for higher than phone res (allows different format for content)
-				if(screen.width > 750) { var $target = $("[data-ship-carousel='notmobile']"); }
-				else { var $target = $("[data-ship-carousel='mobile']"); }
+		//		if(screen.width > 750) { var $target = $("[data-ship-carousel='notmobile']"); }
+		//		else { var $target = $("[data-ship-carousel='mobile']"); }
 				//check if the carousel should be destroyed (if screen resize occured), restarted (if page is being revisited, although not likely for this particular carousel), 
 				//or if it needs to be initialized again or for the first time. 
 				if ($target.data('isCarousel') && destroy) { $target.data('isCarousel',false); $target.trigger('destroy'); /*dump('carouFredSel was destroyed');*/ } 
@@ -1015,9 +1016,9 @@ var store_cc = function(_app) {
 							width:"100%",
 							items	: {
 								minimum: 1,
-					//			width: "100%" if a width is entered here fred decides it should be different. fred is a rebel.
+				//				width: "100%" //if a width is entered here fred decides it should be different. fred is a rebel.
 							},
-							scroll: {	fx: "fade"	},
+							scroll: {	fx: "fade" },
 							auto: {
 								delay : 1000,
 								duration : 1500,
@@ -1272,7 +1273,7 @@ var store_cc = function(_app) {
 					return $img;
 				}
 			},
-/*			
+			
 			showHeaderBanners : function($context) {
 				dump('START buildHeaderBanners');
 				
@@ -1281,21 +1282,26 @@ var store_cc = function(_app) {
 					//if phone res different messages used because of size, so different json
 					if(_app.ext.store_cc.vars.homepageBanners) {
 						var thisJSON = screen.width > 750 ? _app.ext.store_cc.vars.homepageBanners.header : _app.ext.store_cc.vars.homepageBanners.mobileheader; 
+						screen.width > 750 ? $headerContainer.parent().addClass('greenGradient') : $headerContainer.parent().addClass('greyGradient');
 						dump(thisJSON);
 						for(var i = 0; i < thisJSON.length; i++) {
 							var thisBanner = thisJSON[i];
-							var $parent = $('<div class="shipCarItem"></div>');
-							if(thisJSON[i].img) {
-								var $(img) = $('<span class="shipLogo sprite"></span>');
+							var $parent = thisBanner.href ? $('<a href="'+thisBanner.href+'" class="shipCarItem"></a>') : $('<div class="shipCarItem"></div>');
+							if(thisBanner.img) {
+								var $img = $('<img src="images/'+thisBanner.img+'" class="shipLogo marginRight">');
 								$parent.append($img);
 							}
-							if(thisJSON[i].boldmsg) {
-								var $(boldmsg) = $('<span class="bold">'+thisJSON.boldmsg+'</span>');
-								$parent.append($boldmsg);
+							if(thisBanner.boldlft) {
+								var $boldLeft = $('<span class="bold promoCode">'+thisBanner.boldlft+'</span>');
+								$parent.append($boldLeft);
 							}
-							if(thisJSON[i].msg) {
-								var $(msg) = $('<span>'+thisJSON.msg+'</span>');
+							if(thisBanner.msg) {
+								var $msg = thisBanner.split ? $('<span class="marginRight promoCode">'+thisBanner.msg+'</span>') : $('<span>'+thisBanner.msg+'</span>');
 								$parent.append($msg);
+							}
+							if(thisBanner.boldrt) {
+								var $boldRight = $('<span class="bold promoOffer">'+thisBanner.boldrt+'</span>');
+								$parent.append($boldRight);
 							}
 							$headerContainer.append($parent);
 						}
@@ -1303,7 +1309,7 @@ var store_cc = function(_app) {
 					else { setTimeout(this.showHeaderBanners,250); }
 				}
 			},
-*/			
+			
 /* PRODUCT PAGE UTILS */
 			//called on depart from prod page to add item to recently viewed items list
 			//changed this from quickstart's addition at page load to prevent items from showing in list on first page visit

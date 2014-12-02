@@ -18,7 +18,7 @@ _app.u.loadScript(configURI,function(){
 			});
 		_app.ext.quickstart.callbacks.startMyProgram.onSuccess();
 		
-//		_app.ext.store_cc.u.showHeaderBanners($('#appView'));
+		_app.ext.store_cc.u.showHeaderBanners($('#appView'));
 		
 		//will destroy and reinitialize the header and homepage main banner carousels on screen resize. 
 		$(window).resize(function() {
