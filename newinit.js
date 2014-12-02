@@ -190,35 +190,64 @@ _app.router.addAlias('category',	function(routeObj){_app.ext.quickstart.a.newSho
 _app.router.appendHash({'type':'match','route':'/category/{{navcat}}*','callback':'category'});
 
 // _app.router.addAlias('search',		function(routeObj){_app.ext.quickstart.a.newShowContent(routeObj.value,	$.extend({'pageType':'search'}, routeObj.params));});
-_app.router.appendHash({'type':'match','route':'/search/tag/{{tag}}*','callback':function(routeObj){
-	_app.ext.quickstart.a.newShowContent(routeObj.value,{
-		"pageType" : "static",
-		"require" : ['templates.html','store_search','store_filter','store_routing','prodlist_infinite'],
-		"templateID" : "betterSearchTemplate",
-		"dataset" : $.extend(routeObj.params, {"baseFilter" : {"term":{"tags":routeObj.params.tag}}})
-		});
-	}});
-_app.router.appendHash({'type':'match','route':'/search/keywords/{{KEYWORDS}}*','callback':function(routeObj){
+_app.router.appendHash({'type':'match','route':'/search/tag/{{tag}}*','searchtype':'tag','callback':'setSearchRouteObj'});
+_app.router.appendHash({'type':'match','route':'/search/keywords/{{KEYWORDS}}*','searchtype':'keywords','callback':'setSearchRouteObj'});
+_app.router.appendHash({'type':'match','route':'/search/promo/{{PROMO}}*','searchtype':'promo','callback':'setSearchRouteObj'});
+_app.router.addAlias('setSearchRouteObj', function(routeObj) {
+//	dump('----> setSearchRouteObj'); dump(routeObj);
+	
+	//set the base filter if it's a default keyword or tag search, otherwise it's a promo and the baseFilter needs to be loaded from json.
+	var isPromo = true;
+	if(routeObj.searchtype === "keywords") {
+		routeObj.baseFilter = {"baseFilter" : {"query" : {"query_string" : {"query" : routeObj.params.KEYWORDS}}}};
+		isPromo = false;
+	}
+	else if (routeObj.searchtype === "tag") {
+		routeObj.baseFilter = {"baseFilter" : {"term":{"tags":routeObj.params.tag}}}
+		isPromo = false;
+	}
+
+	//check to see if the filter options have been loaded before to avoid grabbing the json every time
 	routeObj.optionList = {};
 	if(_app.ext.store_filter.vars.searchFacets) { 
 		routeObj.optionList =  _app.ext.store_filter.vars.searchFacets.optionList;
 		routeObj.params.options =  _app.ext.store_filter.vars.searchFacets.options;
-		showbetterSearch(routeObj);
+		//if this is a promo search, go get the promo json, otherwise show the search now
+		if(isPromo) { setPromoSearchObj(routeObj); }
+		else { routeObj = showbetterSearch(routeObj); }
 	}
+	//if no var, options have to be loaded
 	else {
-		$.getJSON("filters/search/search.json?_v="+(new Date()).getTime(), function(json){
+		$.getJSON("filters/search/searchfacets.json?_v="+(new Date()).getTime(), function(json){
 //			dump('THE SEARCH JSON IS...'); dump(json);
 			_app.ext.store_filter.vars.searchFacets = json;
-			routeObj.optionList = json.optionList;
+ 			routeObj.optionList = json.optionList;
 			routeObj.params.options = json.options;
-			showbetterSearch(routeObj);
+			if(isPromo) { setPromoSearchObj(routeObj); }
+			else { routeObj = showbetterSearch(routeObj); }
 		})
 		.fail(function() {
 			dump('FILTER DATA FOR SEARCH FACETS COULD NOT BE LOADED.');
 			_app.router.handleURIChange('/404');
 		}); 
 	}
-}});
+});
+//grab the promo baseFilter out of the json from the path passed in routeObj.params.PROMO
+function setPromoSearchObj(routeObj) {
+//	dump(routeObj.params);
+	var path = routeObj.params.PROMO;
+	$.getJSON("filters/search/"+path+".json?_v="+(new Date()).getTime(), function(json){
+//		dump('THE PROMO JSON IS...'); dump(json);
+		routeObj.baseFilter = {};
+		routeObj.baseFilter = json;
+		showbetterSearch(routeObj);
+	})
+	.fail(function() {
+		dump('FILTER DATA FOR SEARCH FACETS COULD NOT BE LOADED.');
+		_app.router.handleURIChange('/404');
+	}); 
+};
+//check elastic for the options data to use w/ the showContent call
 function showbetterSearch(routeObj) {
 //	dump('----> showing better Search');
 	optStrs = routeObj.optionList;
@@ -243,11 +272,13 @@ function showbetterSearch(routeObj) {
 			dump("Unrecognized option "+o+" on filter page "+routeObj.params.id);
 		}
 	}
+	routeObj.baseFilter.options = $.extend(true, {}, routeObj.params.options);
 	_app.ext.quickstart.a.newShowContent(routeObj.value,{
-	"pageType" : "static",
-	"require" : ['templates.html','store_search','store_filter','store_routing','prodlist_infinite','store_cc'],
-	"templateID" : "betterSearchTemplate",
-	"dataset" : $.extend(routeObj.params, {"baseFilter" : {"query" : {"query_string" : {"query" : routeObj.params.KEYWORDS}}},'options':routeObj.params.options})
+		"pageType" : "static",
+		"require" : ['templates.html','store_search','store_filter','store_routing','prodlist_infinite','store_cc'],
+		"templateID" : "betterSearchTemplate",
+	//	"dataset" : $.extend(routeObj.params, {"baseFilter" : {"query" : {"query_string" : {"query" : routeObj.params.KEYWORDS}}},'options':routeObj.params.options})
+		"dataset" : $.extend(routeObj.params, routeObj.baseFilter)
 	});
 };
 	
@@ -788,51 +819,6 @@ _app.router.addAlias('subfilter', function(routeObj){
 	});
 });
 
-				//sends passed object of attribs as a showContent search
-				_app.router.addAlias('promo', function(routeObj){
-					_app.require(['store_cc','store_filter','store_search','store_routing','prodlist_infinite','store_prodlist', 'templates.html'], function(){
-						var path = routeObj.params.PATH;
-				//		dump('promo Alias'); dump(path);
-						$.getJSON("filters/search/"+path+".json?_v="+(new Date()).getTime(), function(json){
-							dump('content shown from json');
-				//			dump('THE SEARCH JSON IS...'); dump(routeObj.params);
-							routeObj.params.elasticsearch = json;
-						//	showContent('search',	routeObj.params);
-						//	_app.router.addAlias('search',		function(routeObj){_app.ext.quickstart.a.newShowContent(routeObj.value,	$.extend({'pageType':'search'}, routeObj.params));});
-							_app.ext.quickstart.a.newShowContent(routeObj.value,	$.extend({'pageType':'search'}, routeObj.params));
-						})
-						.fail(function() {
-							dump('FILTER DATA FOR ' + path + ' PROMO COULD NOT BE LOADED.');
-							_app.router.handleURIChange('/404');
-						}); 
-					});
-				});
-//EXPERIMENTAL PROMO CATEGORY TO GIVE THE A MORE "CATEGORY" LIKE FEEL (TITLES, FACETS, ETC.)
-//WILL NEED IT'S OWN SHOWPAGE FUNCTION TO ADD THE FACETS FROM THE "ONLY LEAF" STYLE PAGE IT IS.
-//_app.router.addAlias('promo', function(routeObj){
-//	_app.require(['store_cc','store_filter','store_search','store_routing','prodlist_infinite','store_prodlist', 'templates.html'], function(){
-//		var route = routeObj.pagefilter;
-//		routeObj.params.templateID = 'filteredSearchTemplate';
-//		if(_app.ext.store_cc.vars[route]) {
-//			var filterData = $.extend(true, {}, _app.ext.store_cc.vars[route]);
-//			$.extend(true, routeObj.params, {'templateid':routeObj.templateid,'id':filterData.id,'dataset':filterData});
-//			_app.ext.quickstart.a.newShowContent(routeObj.value,routeObj.params);
-//		}
-//		else {
-//			$.getJSON("filters/search/"+route+".json?_v="+(new Date()).getTime(), function(json){
-//			_app.ext.store_cc.vars[route] = json;
-//				//Deep copy into the routeObj.params, and that becomes our new "infoObj"
-//				//Need to pass through routeObj.params at this moment, as it is expected to become infoObj
-//				//This may change later.
-//				$.extend(true, routeObj.params, {'pageType':'static','templateid':routeObj.templateid,'id':json.id,'dataset':json});
-//				_app.ext.quickstart.a.newShowContent(routeObj.value,routeObj.params);
-//			})
-//			.fail(function() {
-//				dump('FILTER DATA FOR ' + route + ' PROMO COULD NOT BE LOADED.');
-//			});
-//		}
-//	});
-//});
 
 _app.router.addAlias('root', function(routeObj){
 	_app.require(['store_cc','store_filter','store_search','store_routing','prodlist_infinite','store_prodlist', 'templates.html'], function(){
@@ -871,11 +857,7 @@ function createPagesSubcatSubfilter(root){
 	_app.router.appendHash({'type':'match','route':'/'+root+'/{{id}}/{{end}}/','pagefilter':root,'callback':'subfilter'});
 	_app.couple('store_filter','pushFilterPage',{id:root,jsonPath:"filters/apparel/"+root+".json"});
 	}
-function createPagesPromoFilter(root) {
-	_app.router.appendHash({'type':'exact','route':'/'+root+'/','pagefilter':root,'callback':'promo'});
-}
 
-createPagesPromoFilter('promo');
 
 createPagesRootFilter('team-apparel-merchandise');
 createPagesRootFilter('apparel-merchandise');
@@ -889,9 +871,7 @@ createPagesSubcatSubfilter('mlb-team-apparel-merchandise');
 createPagesSubcatSubfilter('nhl-team-apparel-merchandise');
 createPagesSubcatSubfilter('soccer-team-apparel-merchandise');
 createPagesSubcatSubfilter('league-apparel-merchandise');
-	
-//SEARCH APPENDS
-_app.router.appendHash({'type':'match','route':'/search/promo/{{PATH}}*','callback':'promo'});					
+					
 					
 	
 _app.u.bindTemplateEvent('filteredSearchTemplate', 'complete.filter',function(event, $context, infoObj){

@@ -1,11 +1,11 @@
 {
-	"baseFilter": {
+	"baseFilter" : {
 		"or": [
 			{
 				"and" : [
 					{
 						"term": {
-							"team_league" : "ncaa"
+							"team_league" : "nfl"
 						}
 					},
 					{
@@ -19,7 +19,7 @@
 				"and" : [
 					{
 						"term": {
-							"team_league" : "ncaa"
+							"team_league" : "nfl"
 						}
 					},
 					{
@@ -33,7 +33,35 @@
 				"and" : [
 					{
 						"term": {
-							"team_league" : "ncaa"
+							"team_league" : "nfl"
+						}
+					},
+					{
+						"term": {
+							"website_filter" : "shorts"
+						}
+					}
+				]
+			},
+			{
+				"and" : [
+					{
+						"term": {
+							"team_league" : "nfl"
+						}
+					},
+					{
+						"term": {
+							"website_filter" : "pants"
+						}
+					}
+				]
+			},
+			{
+				"and" : [
+					{
+						"term": {
+							"team_league" : "nfl"
 						}
 					},
 					{

@@ -1,0 +1,21 @@
+{
+	"baseFilter" : {
+		"and" : [
+			{
+				"term": {
+					"team_league" : "nhl"
+				}
+			},
+			{
+				"term": {
+					"website_filter" : "t-shirts"
+				}
+			},
+			{
+				"term": {
+					"size_gender" : "womens"
+				}
+			}
+		]
+	}
+}

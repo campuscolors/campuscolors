@@ -1,0 +1,140 @@
+#
+#	Search the term below to see the sample json for the described type of search.
+#	These are some basic searches, more complex searches can be created if/when needed.
+#	Copy the oject below the search term (starting w/ the lone open brace, and finishing w/ the lone closing brace).
+#
+#	sampleorand 	: nfl t-shirts, and nfl sweatshirts, and... 
+# 	sampleand		: nhl women's t-shirts
+#  sampleor			: chicago blackhawks or chicago bulls or chicago bears or...  
+#
+
+
+
+sampleorand
+
+{
+	"baseFilter" : {
+		"or": [
+			{
+				"and" : [
+					{
+						"term": {
+							"team_league" : "nfl"
+						}
+					},
+					{
+						"term": {
+							"website_filter" : "t-shirts"
+						}
+					}
+				]
+			},
+			{
+				"and" : [
+					{
+						"term": {
+							"team_league" : "nfl"
+						}
+					},
+					{
+						"term": {
+							"website_filter" : "sweatshirts"
+						}
+					}
+				]
+			},
+			{
+				"and" : [
+					{
+						"term": {
+							"team_league" : "nfl"
+						}
+					},
+					{
+						"term": {
+							"website_filter" : "shorts"
+						}
+					}
+				]
+			},
+			{
+				"and" : [
+					{
+						"term": {
+							"team_league" : "nfl"
+						}
+					},
+					{
+						"term": {
+							"website_filter" : "pants"
+						}
+					}
+				]
+			},
+			{
+				"and" : [
+					{
+						"term": {
+							"team_league" : "nfl"
+						}
+					},
+					{
+						"term": {
+							"website_filter" : "jerseys"
+						}
+					}
+				]
+			}
+		]
+	}
+}
+
+
+sampleand
+
+{
+	"baseFilter" : {
+		"and" : [
+			{
+				"term": {
+					"team_league" : "nhl"
+				}
+			},
+			{
+				"term": {
+					"website_filter" : "t-shirts"
+				}
+			},
+			{
+				"term": {
+					"size_gender" : "womens"
+				}
+			}
+		]
+	}
+}
+
+
+sampleor
+
+{
+	"baseFilter" : {
+		"or" : [
+			{
+				"term": {
+					"team_league_nhl" : "chbh"
+				}
+			},
+			{
+				"term": {
+					"team_league_nba" : "chbu"
+				}
+			},
+			{
+				"term": {
+					"team_league_nfl" : "chbe"
+				}
+			}
+		]
+	}
+}
