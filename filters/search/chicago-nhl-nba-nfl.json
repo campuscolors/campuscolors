@@ -1,0 +1,21 @@
+{
+	"baseFilter" : {
+		"or" : [
+			{
+				"term": {
+					"team_league_nhl" : "chbh"
+				}
+			},
+			{
+				"term": {
+					"team_league_nba" : "chbu"
+				}
+			},
+			{
+				"term": {
+					"team_league_nfl" : "chbe"
+				}
+			}
+		]
+	}
+}

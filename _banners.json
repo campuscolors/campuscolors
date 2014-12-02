@@ -1,14 +1,6 @@
 [
 	{ "main" : 
 		[
-		   {
-				"src"			: "banners/blackfriday_700_x_268.jpg",
-				"width"		: "700",
-				"height"	: "268",
-				"alt"			: "Black Friday and Cyber Monday - 20 Percent Off 125 or More",
-				"title"		: "Black Friday and Cyber Monday - 20 Percent Off 125 or More",
-				"href"		: ""
-			},
            {
 				"src"			: "banners/tailgating_banner_alt.jpg",
 				"width"		: "700",

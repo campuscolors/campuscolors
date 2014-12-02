@@ -137,7 +137,7 @@ $(document).ready(function(){
 	if(!paramStr || paramStr.indexOf('_escaped_fragment_') < 0){
 		window.myApp = new initApp({
 			"_robotHasGreeted" : false, <!-- versionhere -->
-			"release":"201410.20141130014700",  //increment this  with each change. should solve caching issues. format: YYYYMMDDHHMMSS
+			"release":"201410.20141201211700",  //increment this  with each change. should solve caching issues. format: YYYYMMDDHHMMSS
 			"_clientid":"zmvc", //zmvc for store app, 1pc for one page checkout.
 			"baseURL":baseURL, //used in non-local mode.
 			"checkoutAuthMode" : "active",//can be passive, active or required
@@ -290,14 +290,14 @@ var _robots = {
 	<div class="headerLower greyGradient hideTablet hideDesktop">
 		<div data-ship-carousel="mobile">
 			<div class="shipCarItem">
-				<span class="promoOffer marginRight">
-					<span class="bold">20&#37; Off Your Order of &#36;125 or More. Code: BFRIDAY</span>
-				</span>
-			</div>
-			<div class="shipCarItem">
 				<span class="promoOffer arial marginRight">
 				<span class="shipLogo sprite">
 				</span>FREE SHIPPING ORDERS OVER $75</span>
+			</div>
+			<div class="shipCarItem">
+				<span class="promoOffer marginRight">
+				<span class="shipLogo sprite">
+				</span><span class="bold">&#36;3.99 </span>Flat Rate Shipping</span>
 			</div>
 			<div class="shipCarItem">
 				<span class="promoOffer marginRight">
@@ -309,7 +309,8 @@ var _robots = {
 	<div class="headerLower greenGradient hidePhone showTabletBlock showDesktopBlock">
 		<div data-ship-carousel="notmobile">
 			<div class="shipCarItem">
-				<span class="promoOffer bold">20&#37; Off Your Order of &#36;125 or More. <span class='marginLeft'>Code: BFRIDAY</span></span>
+				<span class="promoCode marginRight"><span class="shipLogo sprite"></span><span class="bold">&#36;3.99 </span>Flat Rate Shipping</span>
+				<span class="promoOffer arial marginRight">FREE SHIPPING ORDERS OVER $75</span>
 			</div>
 			<div class="shipCarItem">
 				<span class="promoCode marginRight"><span class="shipLogo sprite"></span>Ships same day if ordered by 3pm CT&#42;</span>
