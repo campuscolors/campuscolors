@@ -201,11 +201,11 @@ _app.router.addAlias('setSearchRouteObj', function(routeObj) {
 	//set the base filter if it's a default keyword or tag search, otherwise it's a promo and the baseFilter needs to be loaded from json.
 	var isPromo = true;
 	if(routeObj.searchtype === "keywords") {
-		routeObj.baseFilter = {"baseFilter" : {"query" : {"query_string" : {"query" : routeObj.params.KEYWORDS}}}};
+		routeObj.params.baseFilter = {"query" : {"query_string" : {"query" : routeObj.params.KEYWORDS}}};
 		isPromo = false;
 	}
 	else if (routeObj.searchtype === "tag") {
-		routeObj.baseFilter = {"baseFilter" : {"term":{"tags":routeObj.params.tag}}}
+		routeObj.params.baseFilter = {"term":{"tags":routeObj.params.tag}};
 		isPromo = false;
 	}
 
@@ -240,8 +240,8 @@ function setPromoSearchObj(routeObj) {
 	var path = routeObj.params.PROMO;
 	$.getJSON("filters/search/"+path+".json?_v="+(new Date()).getTime(), function(json){
 //		dump('THE PROMO JSON IS...'); dump(json);
-		routeObj.baseFilter = {};
-		routeObj.baseFilter = json;
+		routeObj.params.baseFilter = {};
+		routeObj.params.baseFilter = json;
 		showbetterSearch(routeObj);
 	})
 	.fail(function() {
@@ -274,13 +274,12 @@ function showbetterSearch(routeObj) {
 			dump("Unrecognized option "+o+" on filter page "+routeObj.params.id);
 		}
 	}
-	routeObj.baseFilter.options = $.extend(true, {}, routeObj.params.options);
 	_app.ext.quickstart.a.newShowContent(routeObj.value,{
 		"pageType" : "static",
 		"require" : ['templates.html','store_search','store_filter','store_routing','prodlist_infinite','store_cc'],
 		"templateID" : "betterSearchTemplate",
 	//	"dataset" : $.extend(routeObj.params, {"baseFilter" : {"query" : {"query_string" : {"query" : routeObj.params.KEYWORDS}}},'options':routeObj.params.options})
-		"dataset" : $.extend(routeObj.params, routeObj.baseFilter)
+		"dataset" : routeObj.params
 	});
 };
 	
