@@ -205,7 +205,7 @@ _app.router.addAlias('setSearchRouteObj', function(routeObj) {
 		isPromo = false;
 	}
 	else if (routeObj.searchtype === "tag") {
-		routeObj.params.baseFilter = {"term":{"tags":routeObj.params.tag}};
+		routeObj.params.baseFilter = {"term":{"tags":routeObj.params.tag.toUpperCase()}};
 		isPromo = false;
 	}
 
