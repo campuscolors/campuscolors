@@ -1,14 +1,6 @@
 {
 	"main" : [
 	   {
-			"src"			: "banners/newshortsbogo50off_700x268.jpg",
-			"width"		: "700",
-			"height"	: "268",
-			"alt"			: "Shorts - Buy One, Get One 50 Percent Off",
-			"title"		: "Shorts - Buy One, Get One 50 Percent Off",
-			"href"		: "/apparel-merchandise/shorts/"
-		},
-	   {
 			"src"			: "banners/tailgating_banner_alt.jpg",
 			"width"		: "700",
 			"height"	: "268",
@@ -55,14 +47,6 @@
 	],
 	"header" :	[
 	    {
-			"img"		: "sale-icon_59x40.png",
-			"boldlft"		: "SHORTS &#45; Buy One, Get One 50&#37; Off",
-			"msg"		: " ",
-			"boldrt"		: "CODE&#58; SHORTS50",
-			"split" 		: "true",
-			"href"		: "/shipping_policy/"
-		},
-		{
 			"img"		: "ship-icon_59x40.png",
 			"boldlft"		: "$3.99",
 			"msg"		: " Flat Rate Shipping",
@@ -80,20 +64,6 @@
 		}
 	],
 	"mobileheader" : [
-		{
-			"img"		: "sale-icon_32x23.png",
-			"boldlft"		: "SHORTS",
-			"msg"		: " &#45; Buy One, Get One 50&#37; Off",
-			"boldrt"		: "",
-			"href"		: "/shipping_policy/"
-		},
-		{
-			"img"		: "sale-icon_32x23.png",
-			"boldlft"		: "CODE&#58; SHORTS50",
-			"msg"		: "",
-			"boldrt"		: "",
-			"href"		: "/shipping_policy/"
-		},		
 		{
 			"img"		: "ship-icon_32x23.png",
 			"boldlft"		: "FREE SHIPPING ORDERS OVER $75",
