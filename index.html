@@ -135,29 +135,26 @@ $.PromisePipeline = function(){
 $(document).ready(function(){
 	var paramStr = window.location.href.replace(window.location.hash, '').split('?')[1];
 	if(!paramStr || paramStr.indexOf('_escaped_fragment_') < 0){
-	
-		var goahead = true;
+		var notIE8 = true;
 		if (navigator.appName == 'Microsoft Internet Explorer') {
-		console.log("BEGIN IE 8 check");
-		console.log(navigator.appName);
 		var ua = navigator.userAgent;
 		var re  = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
 		if (re.exec(ua) != null)
 			rv = parseFloat( RegExp.$1 );
 		if(rv > -1) {
 			if (rv < 9.0) {
-				goahead = false;
-				var ieMsg = $("<div>Hi, it appears you are using IE 8. For the best experience switch to a more modern browser"
-					+ "or call us at 866-598-2267 and we will be happy to assist you.</div>");
+				notIE8 = false;
+				var ieMsg = $("<div class='ie8msg'>Hello, it appears you are using IE 8. <br>"
+					+ "For the best experience switch to a more modern browser, <br>"
+					+ "or call us at <b>866-598-2267</b> and we will be happy to assist you.</div>");
 				$('#mainContentArea').append(ieMsg);
 				}
 			}
 		}
-		
-		if(goahead) {
+		if(notIE8) {
 			window.myApp = new initApp({
 				"_robotHasGreeted" : false, <!-- versionhere -->
-				"release":"201410.20141208120400",  //increment this  with each change. should solve caching issues. format: YYYYMMDDHHMMSS
+				"release":"201410.20141208122500",  //increment this  with each change. should solve caching issues. format: YYYYMMDDHHMMSS
 				"_clientid":"zmvc", //zmvc for store app, 1pc for one page checkout.
 				"baseURL":baseURL, //used in non-local mode.
 				"checkoutAuthMode" : "active",//can be passive, active or required
@@ -171,7 +168,6 @@ $(document).ready(function(){
 			$('#appversion').text(myApp.vars.release);
 			}
 		}
-	
 	});
 
 </script>

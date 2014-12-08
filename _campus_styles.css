@@ -14,6 +14,7 @@ html, body{padding:0px; margin: 0px;}
 body {font-family:Oxygen, Helvetica, sans-serif;}
 .yearbook {font-family:Times New Roman, serif;}
 *, *:before, *:after {-moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box;}
+.ie8msg {width: 50%; margin: 20px auto; text-align: center; border: 1px solid #ccc; padding: 20px; box-shadow: 1px 1px 1px 1px #ccc;}
 
 #appView {padding:0 5px;}
 .clear {clear:both;}
