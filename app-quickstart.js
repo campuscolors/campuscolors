@@ -2564,7 +2564,7 @@ else	{
 
 			productAdd2Cart : function($ele,p)	{
 				p.preventDefault();
-				_app.require(['cart_message','store_product','cco','templates.html'],function(){ /*campus: cartMessagePush was coming back indefined*/
+				_app.require(['store_product','cco','templates.html'],function(){
 					var cartObj = _app.ext.store_product.u.buildCartItemAppendObj($ele);
 					if(cartObj)	{
 						cartObj["_cartid"] = _app.model.fetchCartID();
@@ -2581,7 +2581,7 @@ else	{
 								else	{
 									_app.ext.quickstart.u.showCartInModal({'templateID':'cartTemplate'});
 									}
-								cartMessagePush(cartObj._cartid,'cart.itemAppend',_app.u.getWhitelistedObject(cartObj,['sku','pid','qty','quantity','%variations']));
+								//cartMessagePush(cartObj._cartid,'cart.itemAppend',_app.u.getWhitelistedObject(cartObj,['sku','pid','qty','quantity','%variations']));
 								}
 							}},'immutable');
 						_app.model.dispatchThis('immutable');
