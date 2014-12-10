@@ -2564,7 +2564,7 @@ else	{
 
 			productAdd2Cart : function($ele,p)	{
 				p.preventDefault();
-				_app.require(['store_product','cco','templates.html'],function(){
+				_app.require(['cart_message','store_product','cco','templates.html'],function(){ /*campus: cartMessagePush was coming back indefined*/
 					var cartObj = _app.ext.store_product.u.buildCartItemAppendObj($ele);
 					if(cartObj)	{
 						cartObj["_cartid"] = _app.model.fetchCartID();
