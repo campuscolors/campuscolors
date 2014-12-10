@@ -1,6 +1,14 @@
 {
 	"main" : [
 	   {
+			"src"			: "banners/college_football_playoffs_268x700.jpg",
+			"width"		: "700",
+			"height"	: "268",
+			"alt"			: "College Football Playoffs",
+			"title"		: "College Football Playoffs",
+			"href"		: "/search/promo/promotion-one/"
+		},
+	   {
 			"src"			: "banners/tailgating_banner_alt.jpg",
 			"width"		: "700",
 			"height"	: "268",
