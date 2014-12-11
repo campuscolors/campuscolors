@@ -33,6 +33,7 @@ body {font-family:Oxygen, Helvetica, sans-serif;}
 .center {text-align:center;}
 .bold {font-weight:bold;}
 .sprite {background-image:url(images/sprite_500x500.png);}
+.varyImage {max-width:100%; height:auto;}
 .wrapper {width:290px; margin:0 auto;} /* for testing:  background-color:rgba(1,1,1,.1); */
 .listWrapper {width:300px; margin:0 auto;}
 .titleHead {width:100%; padding:5px; border:2px outset #000000; color:#ffffff; font-size:1.5em;}
