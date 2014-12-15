@@ -10,7 +10,9 @@
 	light red:		#b75970
 	dark red:		#781c2b
  */
-html, body{padding:0px; margin: 0px;}
+.holidayShip {font-size:0.9em;}
+ 
+ html, body{padding:0px; margin: 0px;}
 body {font-family:Oxygen, Helvetica, sans-serif;}
 .oxygen {font-family:Oxygen, Helvetica, sans-serif;}
 .arial {font-family:Arial, sans-serif; font-weight:bold;}
