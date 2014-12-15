@@ -10,7 +10,7 @@
 	light red:		#b75970
 	dark red:		#781c2b
  */
-.holidayShip {font-size:0.9em;}
+.holidayShip {font-size:0.9em; text-align:left;}
  
  html, body{padding:0px; margin: 0px;}
 body {font-family:Oxygen, Helvetica, sans-serif;}
