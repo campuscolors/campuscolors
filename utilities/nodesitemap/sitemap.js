@@ -58,7 +58,9 @@ if(opts['customurls']){
 // now load all products and categories
 //
 var request = new XMLHttpRequest();
-request.open('GET','http://www.sportsworldchicago.com/jsonapi/call/v201410/appSEOFetch',false);
+request.open('GET','http://'+DOMAIN+'/jsonapi/call/v201410/appSEOFetch',false);
+console.log('this is the...');
+console.log(DOMAIN);
 request.send(null);
 
 var urls = JSON.parse(request.responseText);
