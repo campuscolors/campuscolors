@@ -78,6 +78,14 @@
 			"split" 		: "",
 			"href"		: "/shipping_policy/"
 		},
+		 {
+			"img"		: "ship-icon_59x40.png",
+			"boldlft"		: "",
+			"msg"		: "CODE: FREE2DAY for Free 2&#45;Day Shipping for X&#45;Mas &#45; Orders &#36;125&#43;",
+			"boldrt"		: " Order by 4 PM CST 12&#47;21",
+			"split" 		: "",
+			"href"		: "/shipping_policy/"
+		},
 		{
 			"img"		: "ship-icon_59x40.png",
 			"boldlft"		: "$3.99",
@@ -109,7 +117,21 @@
 			"boldrt"		: "",
 			"href"		: "/shipping_policy/"
 		},
-	    {
+		{
+			"img"		: "ship-icon_32x23.png",
+			"boldlft"		: "CODE: FREE2DAY for X&#45;Mas",
+			"msg"		: " By 4 PM CST 12&#47;21",
+			"boldrt"		: "",
+			"href"		: "/shipping_policy/"
+		},
+		{
+			"img"		: "ship-icon_32x23.png",
+			"boldlft"		: "FREE2DAY Orders &#36;125&#43;",
+			"msg"		: " By 4 PM CST 12&#47;21",
+			"boldrt"		: "",
+			"href"		: "/shipping_policy/"
+		},
+		{
 			"img"		: "ship-icon_32x23.png",
 			"boldlft"		: "FREE SHIPPING ORDERS OVER $50",
 			"msg"		: "",
