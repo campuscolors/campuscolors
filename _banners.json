@@ -1,5 +1,13 @@
 {
 	"main" : [
+       {
+			"src"			: "banners/20_off_single_item_25_off_150_268x700.jpg",
+			"width"		: "700",
+			"height"	: "268",
+			"alt"			: "25 Off 150 or More or 20 Percent Off Single Item",
+			"title"		: "25 Off 150 or More or 20 Percent Off Single Item",
+			"href"		: ""
+		},
 	   {
 			"src"			: "banners/holiday_shipping_calendar_268_x_700.jpg",
 			"width"		: "700",
