@@ -1,6 +1,14 @@
 {
 	"main" : [
        {
+			"src"			: "banners/free_2_day_shipping_268x700.jpg",
+			"width"		: "700",
+			"height"	: "268",
+			"alt"			: "2 Day Free Shipping on Orders 125 or More",
+			"title"		: "2 Day Free Shipping on Orders 125 or More",
+			"href"		: ""
+		},
+	   {
 			"src"			: "banners/20_off_single_item_25_off_150_268x700.jpg",
 			"width"		: "700",
 			"height"	: "268",
