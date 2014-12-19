@@ -70,15 +70,7 @@
 		}
 	],
 	"header" :	[
-	    {
-			"img"		: "ship-icon_59x40.png",
-			"boldlft"		: "",
-			"msg"		: "Order by 4 PM CST December 19th for Christmas Ground Delivery",
-			"boldrt"		: " Click Here for Details",
-			"split" 		: "",
-			"href"		: "/shipping_policy/"
-		},
-		 {
+	   {
 			"img"		: "ship-icon_59x40.png",
 			"boldlft"		: "",
 			"msg"		: "CODE: FREE2DAY for Free 2&#45;Day Shipping for X&#45;Mas &#45; Orders &#36;125&#43;",
@@ -108,13 +100,6 @@
 			"boldlft"		: "",
 			"msg"		: "X&#45;Mas Shipping Calendar",
 			"boldrt"		: " Click Here",
-			"href"		: "/shipping_policy/"
-		},
-		{
-			"img"		: "ship-icon_32x23.png",
-			"boldlft"		: "4 PM CST Dec&#46; 19th X&#45;Mas Ground Del&#46;",
-			"msg"		: "",
-			"boldrt"		: "",
 			"href"		: "/shipping_policy/"
 		},
 		{
