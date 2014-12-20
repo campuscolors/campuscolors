@@ -1,7 +1,7 @@
 {
 	"main" : [
        {
-			"src"			: "banners/free_2_day_shipping_268x700.jpg",
+			"src"			: "banners/free_2_day_shipping_268x700_2.jpg",
 			"width"		: "700",
 			"height"	: "268",
 			"alt"			: "2 Day Free Shipping on Orders 125 or More",
@@ -81,7 +81,7 @@
 	   {
 			"img"		: "ship-icon_59x40.png",
 			"boldlft"		: "",
-			"msg"		: "CODE: FREE2DAY for Free 2&#45;Day Shipping for X&#45;Mas &#45; Orders &#36;125&#43;",
+			"msg"		: "Order 2&#45;Day Shipping for X&#45;Mas",
 			"boldrt"		: " Order by 4 PM CST 12&#47;21",
 			"split" 		: "",
 			"href"		: "/shipping_policy/"
@@ -112,14 +112,7 @@
 		},
 		{
 			"img"		: "ship-icon_32x23.png",
-			"boldlft"		: "CODE: FREE2DAY for X&#45;Mas",
-			"msg"		: " By 4 PM CST 12&#47;21",
-			"boldrt"		: "",
-			"href"		: "/shipping_policy/"
-		},
-		{
-			"img"		: "ship-icon_32x23.png",
-			"boldlft"		: "FREE2DAY Orders &#36;125&#43;",
+			"boldlft"		: "2 Day Delivery for X&#45;Mas",
 			"msg"		: " By 4 PM CST 12&#47;21",
 			"boldrt"		: "",
 			"href"		: "/shipping_policy/"
