@@ -104,7 +104,7 @@
 		},
 		{
 			"img"		: "ship-icon_32x23.png",
-			"boldlft"		: "1 Day Delivery for X&#45;Mas",
+			"boldlft"		: "1&#45;Day Delivery for X&#45;Mas",
 			"msg"		: " By 4 PM CST 12&#47;22",
 			"boldrt"		: "",
 			"href"		: "/shipping_policy/"
