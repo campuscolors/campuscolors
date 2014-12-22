@@ -1,14 +1,6 @@
 {
 	"main" : [
        {
-			"src"			: "banners/free_2_day_shipping_268x700_2.jpg",
-			"width"		: "700",
-			"height"	: "268",
-			"alt"			: "2 Day Free Shipping on Orders 125 or More",
-			"title"		: "2 Day Free Shipping on Orders 125 or More",
-			"href"		: ""
-		},
-	   {
 			"src"			: "banners/20_off_single_item_25_off_150_268x700.jpg",
 			"width"		: "700",
 			"height"	: "268",
@@ -81,8 +73,8 @@
 	   {
 			"img"		: "ship-icon_59x40.png",
 			"boldlft"		: "",
-			"msg"		: "Order 2&#45;Day Shipping for X&#45;Mas",
-			"boldrt"		: " Order by 4 PM CST 12&#47;21",
+			"msg"		: "Order 1&#45;Day Shipping for X&#45;Mas",
+			"boldrt"		: " Order by 4 PM CST 12&#47;22",
 			"split" 		: "",
 			"href"		: "/shipping_policy/"
 		},
@@ -112,8 +104,8 @@
 		},
 		{
 			"img"		: "ship-icon_32x23.png",
-			"boldlft"		: "2 Day Delivery for X&#45;Mas",
-			"msg"		: " By 4 PM CST 12&#47;21",
+			"boldlft"		: "1 Day Delivery for X&#45;Mas",
+			"msg"		: " By 4 PM CST 12&#47;22",
 			"boldrt"		: "",
 			"href"		: "/shipping_policy/"
 		},
