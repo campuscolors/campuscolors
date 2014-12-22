@@ -65,7 +65,7 @@
 	   {
 			"img"		: "ship-icon_59x40.png",
 			"boldlft"		: "",
-			"msg"		: "Order 1&#45;Day Shipping for X&#45;Mas",
+			"msg"		: "Order 1 Day Shipping for X&#45;Mas",
 			"boldrt"		: " Order by 4 PM CST 12&#47;22",
 			"split" 		: "",
 			"href"		: "/shipping_policy/"
