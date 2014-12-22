@@ -1,14 +1,6 @@
 {
 	"main" : [
-       {
-			"src"			: "banners/holiday_shipping_calendar_268_x_700.jpg",
-			"width"		: "700",
-			"height"	: "268",
-			"alt"			: "Holiday Shipping Calendar",
-			"title"		: "Holiday Shipping Calendar",
-			"href"		: ""
-		},
-		{
+      	{
 			"src"			: "banners/college_football_playoffs_268x700.jpg",
 			"width"		: "700",
 			"height"	: "268",
@@ -62,15 +54,7 @@
 		}
 	],
 	"header" :	[
-	   {
-			"img"		: "ship-icon_59x40.png",
-			"boldlft"		: "",
-			"msg"		: "Order 1 Day Shipping for X&#45;Mas",
-			"boldrt"		: " Order by 4 PM CST 12&#47;22",
-			"split" 		: "",
-			"href"		: "/shipping_policy/"
-		},
-		{
+	 	{
 			"img"		: "ship-icon_59x40.png",
 			"boldlft"		: "$3.99",
 			"msg"		: " Flat Rate Shipping",
@@ -87,20 +71,6 @@
 		}
 	],
 	"mobileheader" : [
-		{
-			"img"		: "ship-icon_32x23.png",
-			"boldlft"		: "",
-			"msg"		: "X&#45;Mas Shipping Calendar",
-			"boldrt"		: " Click Here",
-			"href"		: "/shipping_policy/"
-		},
-		{
-			"img"		: "ship-icon_32x23.png",
-			"boldlft"		: "1 Day Delivery for X&#45;Mas",
-			"msg"		: " By 4 PM CST 12&#47;22",
-			"boldrt"		: "",
-			"href"		: "/shipping_policy/"
-		},
 		{
 			"img"		: "ship-icon_32x23.png",
 			"boldlft"		: "FREE SHIPPING ORDERS OVER $50",
