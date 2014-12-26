@@ -284,10 +284,20 @@ function showbetterSearch(routeObj) {
 };
 	
 _app.u.bindTemplateEvent('betterSearchTemplate','complete.execsearch',function(event, $context, infoObj){
-	dump('triggering');
+//	dump('triggering'); dump(infoObj.dataset.KEYWORDS);
+	if(infoObj.dataset.KEYWORDS) { 
+		ga('send', {
+			'hitType'			: 'event',					// Required.
+			'eventCategory'	: 'Search',					// Required.
+			'eventAction'		: 'Keyword Search',	// Required.
+			//'eventValue'	: 4,
+			'eventLabel'		: ''+infoObj.dataset.KEYWORDS+''
+			}
+		);
+	}
 	//timeout because visiting search page a second/third/etc. time was submitting before the product was loaded leaving a blank page. 
 	setTimeout(function(){$('form', $context).trigger('submit');},500); 
-	});
+});
 _app.router.addAlias('checkout',	function(routeObj){_app.ext.quickstart.a.newShowContent(routeObj.value,	$.extend({'pageType':'checkout', 'requireSecure':true}, routeObj.params));});
 _app.router.appendHash({'type':'exact','route':'/checkout','callback':'checkout'});
 _app.router.appendHash({'type':'exact','route':'/checkout/','callback':'checkout'});
