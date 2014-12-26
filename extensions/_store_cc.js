@@ -560,7 +560,7 @@ var store_cc = function(_app) {
 				var prod = data.globals.binds.var;
 				var pid = prod.pid;
 				var $input = $("<input class='displayNone' name='qty' \/>");
-				var $qty = $("<div class='qtyDesc floatLeft'>Qty </div>");
+				var $qty = $("<div class='qtyDesc floatLeft'>Qty: </div>");
 				var $select = $("<select class='qtySelect' data-select='qty' \/>");
 				var $selectWrapper = $("<div class='selectWrapper floatLeft'></div>");
 				var variations = prod['@variations'];
