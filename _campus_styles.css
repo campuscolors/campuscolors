@@ -331,6 +331,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 .qtyATCWraper {width:90%; margin:0 auto;}
 .selectWrapper {width:61px; position:relative; overflow:hidden;}
 .selectWrapper .sprite {height:40px; width:20px; position:absolute; top:10px; right:5px; background-position:0 0;}
+.qtyDesc {padding:0.9em 0 0 0; font-weight:bold;}
 .qtySelect {height:35px; min-width:84px; margin:10px 5px; padding:6px 2px; color:#781c2b; display:inline-block; background:url("images/sprite_500x500.png") no-repeat scroll 25px -463px #ffffff; border:1px solid #781c2b; text-align:left;}
 .prodViewerAddToCartForm .numberInput {height:40px; border:1px inset #000000; text-align:center;}
 .productPage .addtocartbutton {height:50px; width:170px; color:#000000; font-size:2em; border-top:2px outset #fbe143; border-right:2px outset #000000; border-bottom:2px outset #000000; border-left:2px outset #fbe143; box-shadow:2px 2px 0 0 #cccccc; border-radius:0;}
@@ -597,7 +598,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.basePrice {font-size:2.5em;}
 	.moneyBefore, .moneyAfter {top:20px;}
 	.prodSummaryUpper, .latency, .prodSummaryLower {width:auto; margin-bottom:20px; background-color:#eeeeee; border:2px solid #cccccc; box-shadow:2px 2px 0 0 #cccccc;}
-	.qtyATCWraper {width:80%;}
+	.qtyATCWraper {width:82%;}
 	.latency, .fitTip {padding:20px;}
 	.latency div[data-slide="toggle"] {margin:1em 0 0 0; padding:0;}
 	.productPage .addtocartbutton {padding:0;}
