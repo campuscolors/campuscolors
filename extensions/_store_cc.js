@@ -756,13 +756,13 @@ var store_cc = function(_app) {
 				var $tag = data.globals.tags[data.globals.focusTag];
 				var itemsTotal = data.globals.binds.var;
 				
-				if(itemsTotal < 50) { 
-					var diff = 50 - itemsTotal;
+				if(itemsTotal < 75) { 
+					var diff = 75 - itemsTotal;
 					diff = _app.u.formatMoney(diff,'','','');
 					//_app.u.formatMoney(amount,data.bindData.currencySign,'',data.bindData.hideZero);
 					$tag.text("Add $"+diff+" more for FREE SHIPPING!"); 
 				}
-				else if (itemsTotal >= 50) { $tag.text("You qualify for FREE SHIPPING!"); }
+				else if (itemsTotal >= 75) { $tag.text("You qualify for FREE SHIPPING!"); }
 				else { 
 					/* catch in case itemsTotal is somehow undef or null, show no message in the cart in that case */ 
 					dump('In store_cc#tillFreeShip and the total for the items in the cart did not fall above or below the free shipping threshold... that should be investigated.');
