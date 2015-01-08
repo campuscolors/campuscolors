@@ -263,14 +263,20 @@ var store_filter = function(_app) {
 				if(!elasticsearch.sort){
 					var tmp = {
 						"query" :{
-							"function_score" : {"filter":elasticsearch.filter}
+							"function_score" : {
+								"filter":elasticsearch.filter,
+								"functions" : [
+									{
+										"field_value_factor" : {
+											"field" : "boost"
+											}
+										}
+									],
+								"boost_mode" : "sum"
+								}
 							},
-		//				"filter" : elasticsearch.filter, 
 						"facets" : elasticsearch.facets
 						}
-					//tmp.query.function_score.boost_mode = "sum";
-					//tmp.query.function_score.script_score = {"script":"doc['boost'].value"};
-					//tmp.query.function_score.script_score = {"script":"_score"};
 					es = _app.ext.store_search.u.buildElasticRaw(tmp);
 					}
 				else {
