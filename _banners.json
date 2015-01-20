@@ -1,6 +1,14 @@
 {
 	"main" : [
-       {
+	{
+			"src"			: "banners/superbowl_banner_700x268.jpg",
+			"width"		: "700",
+			"height"	: "268",
+			"alt"			: "Super Bowl XLIX - Seahawks vs. Patriots",
+			"title"		: "Super Bowl XLIX - Seahawks vs. Patriots",
+			"href"		: ""
+		},
+	    {
 			"src"			: "banners/ohio_state_national_champions_700x268.jpg",
 			"width"		: "700",
 			"height"	: "268",
