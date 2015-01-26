@@ -16,15 +16,7 @@
 			"title"		: "Ohio State 2014 National Champions",
 			"href"		: "/search/promo/promotion-two/"
 		},
-	   {
-			"src"			: "banners/college_football_playoffs_268x700.jpg",
-			"width"		: "700",
-			"height"	: "268",
-			"alt"			: "College Football Playoffs",
-			"title"		: "College Football Playoffs",
-			"href"		: "/search/promo/promotion-one/"
-		},
-	   {
+	    {
 			"src"			: "banners/nike_700x268.jpg",
 			"width"		: "700",
 			"height"	: "268",
