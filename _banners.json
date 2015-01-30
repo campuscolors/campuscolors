@@ -1,56 +1,56 @@
 {
 	"main" : [
-      	{
-			"src"			: "banners/college_football_playoffs_268x700.jpg",
+	{
+			"src"			: "banners/superbowl_banner_700x268.jpg",
 			"width"		: "700",
 			"height"	: "268",
-			"alt"			: "College Football Playoffs",
-			"title"		: "College Football Playoffs",
-			"href"		: "/search/promo/promotion-one/"
+			"alt"			: "Super Bowl XLIX - Seahawks vs. Patriots",
+			"title"		: "Super Bowl XLIX - Seahawks vs. Patriots",
+			"href"		: ""
 		},
-	   {
-			"src"			: "banners/tailgating_banner_alt.jpg",
+	    {
+			"src"			: "banners/ohio_state_national_champions_700x268.jpg",
 			"width"		: "700",
 			"height"	: "268",
-			"alt"			: "Tailgating Essentials",
-			"title"		: "Tailgating Essentials",
-			"href"		: "/apparel-merchandise/novelties-and-accessories/"
+			"alt"			: "Ohio State 2014 National Champions",
+			"title"		: "Ohio State 2014 National Champions",
+			"href"		: "/search/promo/promotion-two/"
+		},
+	    {
+			"src"			: "banners/nike_700x268.jpg",
+			"width"		: "700",
+			"height"	: "268",
+			"alt"			: "Nike Apparel",
+			"title"		: "Nike Apparel",
+			"href"		: "/brands-apparel-merchandise/nike-gear/"
 		},
 		{
-			"src"			: "banners/shorts_everyday_700_x_268.jpg",
+			"src"			: "banners/adidas_700x268.jpg",
 			"width"		: "700",
 			"height"	: "268",
-			"alt"			: "Basketball Shorts, Pro and College Teams",
-			"title"		: "Basketball Shorts, Pro and College Teams",
-			"href"		: "/apparel-merchandise/shorts/"
-		},
-		{
-			"src"			: "banners/gameday_banner.jpg",
-			"width"		: "700",
-			"height"	: "268",
-			"alt"			: "Game Day",
-			"title"		: "Game Day",
-			"href"		: "/search/promo/college-shirts-sweatshirts-jerseys/"
+			"alt"			: "Adidas Products",
+			"title"		: "Adidas Products",
+			"href"		: "/brands-apparel-merchandise/adidas-gear/"
 		}
 	],
 	"featured" : [
 		{
-			"src"			: "banners/college_sweatshirts.jpg",
+			"src"			: "banners/nba_gear_330x230",
+			"width"		: "330",
+			"height"	: "230",
+			"alt"			: "NBA Gear",
+			"title"		: "NBA Gear",
+			"label"		: "",
+			"href"		: "/league-apparel-merchandise/nba/all/"
+		},
+		{
+			"src"			: "banners/college_sweatshirts_330x230.jpg",
 			"width"		: "330",
 			"height"	: "230",
 			"alt"			: "College Sweatshirts",
 			"title"		: "College Sweatshirts",
 			"label"		: "",
 			"href"		: "/league-apparel-merchandise/ncaa/sweatshirts/"
-		},
-		{
-			"src"			: "banners/nfl_hats.jpg",
-			"width"		: "330",
-			"height"	: "230",
-			"alt"			: "NFL Hats",
-			"title"		: "NFL Hats",
-			"label"		: "",
-			"href"		: "/league-apparel-merchandise/nfl/hats/"
 		}
 	],
 	"header" :	[
