@@ -1882,7 +1882,9 @@ var store_cc = function(_app) {
 			//		$(".mobileSlideMenu").animate({"left":"-275px"},500);
 					$(".mobileSlideMenu").removeClass("mobileExpand");
 				}
-			}
+			},
+			
+			socialMediaClick : function($ele,p) { /*just here to send app event to google, everything needed is on the tag*/ }
 			
 			
 		}, //e [app Events]
