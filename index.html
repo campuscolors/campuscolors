@@ -254,7 +254,7 @@ var _robots = {
 					&#41;
 				</span>
 				<a href="/my_account/"><span class="loginShow username uYellowLink">myacc</span></a>
-				<a href="/customer/logout/"><span class="loginShow uYellowLink">LOG OUT</span></a>
+				<span data-app-click="store_cc|logBuyerOut" data-ga-label="header" class="loginShow uYellowLink pointer">LOG OUT</span>
 </div>
 			</div>
 			<div class="links">
@@ -964,19 +964,6 @@ var _robots = {
 	<p id='loginMessaging' class='marginBottom appMessaging loginMessaging'></p>
 
 	<div id="loginFormContainer" class="loginFormContainer">
-		
-	<!-- Inline create account abandoned for a form in sign in modal.
-		<div class="createAccount logContainer">
-			<div class="logTitle arial">First Time With Us?</div>
-			<p class="center">If you have never made a purchase at this web site and have never subscribed to this store's mailing list,
-				please choose this option.
-			</p>
-			<a href="/customer/createaccount/" class="ccButton ui-widget ui-button">Create an Account</a>
-			<!- - USE THIS BUTTON WHEN CREATING WITH A MODAL (will need createAccount template added as well)
-			<button class='modalCreateButton tertiaryColorHover' onClick="app.ext.acctCreate.a.showAccountCreate();">Create an Account</button> - ->
-		</div>
-	-->	
-		
 		<div id="gotAccount" class='gotAccount logContainer'> 
 			<div class="logTitle arial">SIGN IN</div>
 			<!-- Third parameter is id of message destination -->
@@ -1011,8 +998,8 @@ var _robots = {
 				Note&#58; Entering a name, e-mail address, and password will allow you to check your order status online and recall your customer 
 				information for future orders.
 			</p>
-			<form action="#" class="inputsAsBreaks"  onSubmit="myApp.ext.store_cc.u.handleAppLoginCreate($(this)); return false;">
-				<!-- <form action="#" submit="return false;" class="inputsAsBreaks">  For testing form to prevent reload -->
+			<form action="#" class="inputsAsBreaks"  data-app-submit="store_cc|handleAppLoginCreate">
+				<!-- form action="#" submit="return false;" class="inputsAsBreaks">  For testing form to prevent reload (make tag whole when using) -->
 				<input type="hidden" name="_script" value="campuscolors"/>
 				<input type="hidden" name="form" value="wholesale" />
 				<input name="firstname" type="text" size="30" placeholder="First Name" required="required" class="zform_textbox" />
@@ -1020,76 +1007,6 @@ var _robots = {
 				<input name="email" type="email" size="30" placeholder="E-mail Address" required="required" class="zform_textbox" />
 				<input name="pass" type="password" size="30" placeholder="Password" required="required" class="zform_textbox" />
 				<input name="pass2" type="password" size="12" placeholder="Confirm Password" required="required" class="zform_textbox" />
-				<!--<div class="passwordInput"><b>Password</b><input name="password" size="30" placeholder="Password" required /></div>-->
-			<!-- Only wanted the basics for creating an account. 	
-				<div onclick="myApp.ext.store_cc.a.togglerecover($(this));" class="center">
-					<span class="uRedLink pointer">Click here</span> to enter more information and save time later.
-				</div>
-				<div data-slide="toggle">
-					<input name="address1" type="text" size="30" value="" placeholder="Address" class="zform_textbox" /> 
-					<input name="address2" type="text" size="30" value="" placeholder="Address (Line 2)" class="zform_textbox" />
-					<input name="city" type="text" size="30" placeholder="City" value="" class="zform_textbox" /> 	
-					<select name="region" class="zform_textbox">
-						<option selected="selected" value="">(Select State)</option>
-						<option value="AL">AL</option>
-						<option value="AK">AK</option>
-						<option value="AZ">AZ</option>
-						<option value="AR">AR</option>
-						<option value="CA">CA</option>
-						<option value="CO">CO</option>
-						<option value="CT">CT</option>
-						<option value="DE">DE</option>
-						<option value="DC">DC</option>
-						<option value="FL">FL</option>
-						<option value="GA">GA</option>
-						<option value="HI">HI</option>
-						<option value="ID">ID</option>
-						<option value="IL">IL</option>
-						<option value="IN">IN</option>
-						<option value="IA">IA</option>
-						<option value="KS">KS</option>
-						<option value="KY">KY</option>
-						<option value="LA">LA</option>
-						<option value="ME">ME</option>
-						<option value="MD">MD</option>
-						<option value="MA">MA</option>
-						<option value="MI">MI</option>
-						<option value="MN">MN</option>
-						<option value="MS">MS</option>
-						<option value="MO">MO</option>
-						<option value="MT">MT</option>
-						<option value="NE">NE</option>
-						<option value="NV">NV</option>
-						<option value="NH">NH</option>
-						<option value="NJ">NJ</option>
-						<option value="NM">NM</option>
-						<option value="NY">NY</option>
-						<option value="NC">NC</option>
-						<option value="ND">ND</option>
-						<option value="OH">OH</option>
-						<option value="OK">OK</option>
-						<option value="OR">OR</option>
-						<option value="PA">PA</option>
-						<option value="RI">RI</option>
-						<option value="SC">SC</option>
-						<option value="SD">SD</option>
-						<option value="TN">TN</option>
-						<option value="TX">TX</option>
-						<option value="UT">UT</option>
-						<option value="VT">VT</option>
-						<option value="VA">VA</option>
-						<option value="WA">WA</option>
-						<option value="WV">WV</option>
-						<option value="WI">WI</option>
-						<option value="WY">WY</option>
-					</select>
-					<input name="postal" type="text" size="10" value="" placeholder="Zip/Postal" class="textfzip zform_textbox" />
-					<select name="country" class="zform_textbox">
-						<option value="US">United States of America</option>
-					</select>
-					<input name="phone" type="tel" size="12" placeholder="Phone Number" value="" class="textfzip zform_textbox" />
-				</div>
-			-->
 				<input type="submit" value="Create an Account" class="createButton ccButton marginTop ui-widget ui-button">
 				<!-- <button onclick="myApp.ext.store_cc.u.handleAppLoginCreate($(this).parent());" class="createButton ui-button">Create an Account</button>  For testing form to prevent reload -->
 			</form>

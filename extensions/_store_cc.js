@@ -1346,37 +1346,6 @@ var store_cc = function(_app) {
 				}
 			},//showRecentlyViewedItems
 			
-/* CREATE ACCOUNT UTILS */			
-			handleAppLoginCreate : function($form)	{
-				if($form)	{
-					var formObj = $form.serializeJSON();
-					
-					if(formObj.pass !== formObj.pass2) {
-						_app.u.throwMessage('Sorry, your passwords do not match! Please re-enter your password');
-						return;
-					}
-					
-					var tagObj = {
-						'callback':function(rd) {
-							if(_app.model.responseHasErrors(rd)) {
-								$form.anymessage({'message':rd});
-							}
-							else {
-								showContent('customer',{'show':'myaccount'});
-								_app.u.throwMessage(_app.u.successMsgObject("Your account has been created!"));
-							}
-						}
-					}
-					
-					formObj._vendor = "campuscolors";
-					_app.ext.store_cc.calls.appBuyerCreate.init(formObj,tagObj,'immutable');
-					_app.model.dispatchThis('immutable');
-				}
-				else {
-					$('#globalMessaging').anymessage({'message':'$form not passed into store_cc.u.handleBuyerAccountCreate','gMessage':true});
-				}
-			}, //handleAppLoginCreate
-			
 /* COMPANY UTIL */			
 			tempFAQ : function($og) {
 				dump('START tempFAQ');
@@ -1884,7 +1853,56 @@ var store_cc = function(_app) {
 				}
 			},
 			
-			socialMediaClick : function($ele,p) { /*just here to send app event to google, everything needed is on the tag*/ }
+			socialMediaClick : function($ele,p) { /*just here to send app event to google, everything needed is on the tag*/ },
+			
+			/* CREATE ACCOUNT UTILS */			
+			handleAppLoginCreate : function($ele,p)	{
+				p.preventDefault();
+				if($ele)	{
+					var formObj = $ele.serializeJSON();
+			//TODO : email address check?
+					if(formObj.pass !== formObj.pass2) {
+						_app.u.throwMessage('Sorry, your passwords do not match! Please re-enter your password');
+						return;
+					}
+					
+					var tagObj = {
+						'callback':function(rd) {
+							if(_app.model.responseHasErrors(rd)) {
+								$ele.anymessage({'message':rd});
+							}
+							else {
+								//showContent('customer',{'show':'myaccount'});
+								//_app.u.throwMessage(_app.u.successMsgObject("Your account has been created!"));
+								$('html,body').animate({ scrollTop: 0 }, '500');
+								setTimeout(function() {
+										$("#loginMessaging").anymessage(_app.u.successMsgObject("Your account has been created!<br>Please Log In."));
+								},550);
+							}
+						}
+					}
+					
+					formObj._vendor = "campuscolors";
+					_app.ext.store_cc.calls.appBuyerCreate.init(formObj,tagObj,'immutable');
+					_app.model.dispatchThis('immutable');
+				}
+				else {
+					$('#globalMessaging').anymessage({'message':'$form not passed into store_cc.u.handleBuyerAccountCreate','gMessage':true});
+				}
+				return false;
+			}, //handleAppLoginCreate
+			
+			//will call logBuyerOut, remove logged in class, and
+			//show homepage if on my account page so my account isn't accessable any longer, 
+			logBuyerOut : function($ele,p) {
+				p.preventDefault();
+				_app.u.logBuyerOut();
+				if($("#mainContentArea :visible:first").attr("data-app-uri") === "/my_account/") {
+					_app.router.handleURIChange("/");
+				}
+				$('body').removeClass('buyerLoggedIn'); 
+				return false;
+			}
 			
 			
 		}, //e [app Events]

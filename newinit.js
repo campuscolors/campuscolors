@@ -18,6 +18,11 @@ _app.u.loadScript(configURI,function(){
 			});
 		_app.ext.quickstart.callbacks.startMyProgram.onSuccess();
 		
+		setTimeout(function() {
+			var initLogin = _app.ext.quickstart.u.getUsernameFromCart(_app.model.fetchCartID());
+			if(initLogin) { $('body').addClass('buyerLoggedIn');	$('.username').text(initLogin); }
+		},2000);
+		
 		_app.ext.store_cc.u.showHeaderBanners($('#appView'));
 		
 		//will destroy and reinitialize the header and homepage main banner carousels on screen resize. 
@@ -1026,7 +1031,7 @@ _app.couple('quickstart','addLoginHandler',{
 		$('.loginMessaging').empty().show().append("Thank you, you are now logged in."); //used for success and fail messaging.
 		$('#loginFormContainer').hide(); //contains actual form.
 		$('.recoverPasswordContainer').hide(); //contains password recovery form.
-		_app.ext.quickstart.u.handleLoginActions();
+		setTimeout(function() { _app.ext.quickstart.u.handleLoginActions(); },500); //timeout because username was getting set on the DOM after the call. 
 		}
 	});
 _app.couple('quickstart','addLogoutHandler',{
