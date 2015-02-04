@@ -46,6 +46,7 @@ body {font-family:Oxygen, Helvetica, sans-serif;}
 .bareYellowLink:hover, .uYellowLink:hover {color:#ffffff;}
 .uRedLink {color:#b75970; text-decoration:underline;}
 .uRedLink:hover {color:#781c2b;}
+.bareRedLink {color:#781c2b; text-decoration:none;}
 .bareWhiteLink {color:#ffffff; text-decoration:none;}
 .bareWhiteLink:hover {color:#fbe143;}
 .bareBlackLink {color:#000000; text-decoration:none;}
@@ -65,6 +66,9 @@ body {font-family:Oxygen, Helvetica, sans-serif;}
 .ui-widget-anymessage {box-shadow:1px 1px 9px -2px #bfbfbf; border:1px solid #cccccc; text-align:center;} 
 .ui-widget-anymessage button[title="close message"], .ui-widget-anymessage span.app-icon.app-icon-info {display:none;}
 .ui-state-default.ccButton, .ui-widget-content .ui-state-default.ccButton, .ui-widget-header .ui-state-default.ccButton {font-weight:bold;}
+
+.redBG {background-color:#781c2b;}
+.whiteBG {background-color:#ffffff;}
 
 .greyGradient,
 .tabbedProductContentTD .ui-tabs .ui-tabs-nav li.ui-state-default,
@@ -410,8 +414,8 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 .vertDropout .scrollDropout {column-count:3; -moz-column-count:3; -webkit-column-count:3;} /*columns will be alpha by row in IE9*/
 .vertLinkCont.ncaa .vertDropout .scrollDropout {}
 .vertLinkCont.nhl .vertDropout .scrollDropout {}
-.dropLinkCont {height:18px; width:175px; margin:1px 10px; overflow:hidden;  padding:2px 0; font-size:0.7em; border:none; text-align:left; float:left; text-shadow:2px 2px 2px #000000; display:block;}
-.vertLinkCont .dropLink {color:#ffffff;}
+.dropLinkCont {height:18px; width:175px; margin:1px 10px; overflow:hidden;  padding:2px 0; font-size:0.7em; border:none; text-align:left; float:left; display:block;}
+.vertLinkCont .dropLink {color:#781c2b;}
 .vertLinkCont.expandStyle .dropLink {color:#fbe143;}
 
 
@@ -688,7 +692,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.homeMain .topBrandItem.fortySevenLogo {background-position:-194px -343px;}
 	.homeMain .topBrandItem.retroLogo {background-position:-235px -343px;}
 	.homeVertNav {width:220px; padding:5px 5px 0 5px; position:relative;} /* compat-max-width:230px */
-	.vertNavBorder {border-left:3px solid #ffffff; border-right:3px solid #ffffff; border-top:3px solid #ffffff; border-radius:4px 4px 0 0; padding:0 0 11px 0;}
+	.vertNavBorder {border-left:3px solid #525252; border-right:3px solid #525252; border-top:3px solid #525252; border-radius:4px 4px 0 0; padding:0 0 11px 0;}
 	.vertNavTitle {font-size:12px;}
 	.homeVertNav .vertLinkCont, .vertNavTitle {margin-left:13%; margin-right:33%; position:relative;}
 	.homeVertNav .vertLinkCont.vertNavLast {padding:0 0 5px 0;}
@@ -698,7 +702,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.vertDropout.expand {width:805px;}
 	.vertDropout .dropoutPositioning {padding:0 0 0 32px;}
 	.vertDropout .dropoutVertNavCont {padding:5px; border-radius:4px; background:#781c2b;}
-	.vertDropout .vertNavBorder {border:2px solid #ffffff; border-radius:4px; padding:20px;}
+	.vertDropout .vertNavBorder {border:2px solid #525252; border-radius:4px; padding:20px;}
 	.vertDropout .sprite {height:82px; width:32px; position:absolute; top:12px; left:7px; background-position:-467px -50px;}
 	.vertDropout .scrollDropout {column-count:4; -moz-column-count:4; -webkit-column-count:4;} /*columns will be alpha by row in IE9*/
 	.vertLinkCont.ncaa .vertDropout .scrollDropout {}
