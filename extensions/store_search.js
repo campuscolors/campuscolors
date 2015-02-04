@@ -302,10 +302,6 @@ P.query = { 'and':{ 'filters':[ {'term':{'profile':'E31'}},{'term':{'tags':'IS_S
 				//Used to build relative path
 				infoObj.elasticsearch = $.extend(true, {}, elasticsearch);
 				
-				
-				//Used to build relative path
-				infoObj.elasticsearch = $.extend(true, {}, elasticsearch);
-				
 				var $list = $('[data-app-role="resultsContainer"]', $page);
 				_app.ext.store_search.u.updateDataOnListElement($list,elasticsearch,1);
 				//_app.ext.store_search.calls.appPublicSearch.init(elasticsearch,$.extend(true,{},infoObj,{'callback':'handleEmptyResults', 'emptyList':true,'datapointer':"appPublicSearch|"+JSON.stringify(elasticsearch),'extension':'store_swc', 'require' : ['store_prodlist','prodlist_infinite'],'templateID':'productListTemplateResults','list':$list}));

@@ -22,12 +22,6 @@ _app.extend({
 	"namespace" : "quickstart",
 	"filename" : "app-quickstart.js"
 	});
-myApp.rq.push(['extension',0,'store_filter','']);
-myApp.rq.push(['extension',0,'store_product','']);
-myApp.rq.push(['extension',0,'cart_message','']);
-myApp.rq.push(['extension',0,'store_crm','']);
-myApp.rq.push(['extension',0,'store_tracking','']);
-myApp.rq.push(['extension',0,'quickstart','','startMyProgram']);
 
 _app.couple('quickstart','addPageHandler',{
 	"pageType" : "static",
@@ -110,6 +104,7 @@ _app.couple('quickstart','addPageHandler',{
 					$(this).attr('data-app-change','quickstart|cartShipMethodSelect');
 					});
 				});
+
 			$cart.trigger(infoObj.trigger,$.extend({'Q':'mutable'},infoObj));
 				_app.model.dispatchThis('mutable');
 			

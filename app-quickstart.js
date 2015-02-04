@@ -186,13 +186,13 @@ document.write = function(v){
 		addCart2CM : {
 			onSuccess : function(_rtag){
 				var cartID = false;
-				_app.u.dump("BEGIN quickstart.callbacks.addCart2CM.onSuccess");
+//				_app.u.dump("BEGIN quickstart.callbacks.addCart2CM.onSuccess");
 				if(_rtag.datapointer == 'appCartExists' && _app.data[_rtag.datapointer].exists)	{
 //					_app.u.dump(" -> existing cart is valid. add to cart manager"); 
 //					dump(" -> _rtag:"); dump(_rtag);
 					cartID = _rtag.cartid;
 					_app.model.addCart2Session(cartID);
-					dump(" -> cart id is valid. added the cart to the session is "+_app.model.addCart2Session(cartID)); //this function updates _app.vars.carts
+//					dump(" -> cart id is valid. added the cart to the session is "+_app.model.addCart2Session(cartID)); //this function updates _app.vars.carts
 					if($('#cartMessenger').length)	{
 						//_app.ext.cart_message.u.initCartMessenger(cartID,$('#cartMessenger')); //starts the cart message polling
 						$('#cartMessenger').tlc({'verb':'translate','dataset':_app.data['cartDetail|'+cartID]}).attr('data-cartid',cartID);
@@ -313,9 +313,10 @@ document.write = function(v){
 				
 // SANITY - handleTemplateEvents does not get called here. It'll get executed as part of showPageContent callback, which is executed in buildQueriesFromTemplate.
 				},
-			onMissing : function(responseData,uuid)	{
-				var $container = responseData._rtag.jqObj.closest('[data-app-uri]');
-				_app.ext.quickstart.a.pageNotFound($container, responseData);
+			onError : function(responseData,uuid)	{
+//				dump(responseData);
+//				$('#mainContentArea').empty();
+				_app.u.throwMessage(responseData);
 				}
 			}, //showProd 
 
@@ -348,9 +349,10 @@ document.write = function(v){
 				_app.ext.quickstart.u.buildQueriesFromTemplate($.extend(true, {}, tagObj));
 				_app.model.dispatchThis();
 				},
-			onError: function(responseData)	{
-				var $container = responseData._rtag.jqObj.closest('[data-app-uri]');
-				_app.ext.quickstart.a.pageNotFound($container, responseData);
+			onError : function(responseData)	{
+				_app.u.throwMessage(responseData);
+				$('.loadingBG',$('#mainContentArea')).removeClass('loadingBG'); //nuke all loading gfx.
+				_app.ext.quickstart.u.changeCursor('auto'); //revert cursor so app doesn't appear to be in waiting mode.
 				}
 			}, //fetchPageContent
 
@@ -1927,6 +1929,8 @@ effects the display of the nav buttons only. should be run just after the handle
 				},
 
 			
+				
+
 /*
 This will open the cart in a modal. If an update is needed, that must be performed outside this function.
 assumes that cart is in memory before it's loaded.
@@ -1935,7 +1939,7 @@ either templateID needs to be set OR showloading must be true. TemplateID will t
  can't think of a reason not to use the default parentID, but just in case, it can be set.
 */
 			showCartInModal : function(P)	{
-				dump('showing cart in modal');
+
 				if(typeof P == 'object' && (P.templateID || P.showLoading === true)){
 					P.state = 'init';
 					var $modal = $('#modalCart');
@@ -1951,7 +1955,6 @@ either templateID needs to be set OR showloading must be true. TemplateID will t
 					else	{
 						P.cartid = _app.model.fetchCartID();
 						$modal = _app.ext.cco.a.getCartAsJqObj(P).attr({"id":"modalCart","title":"Your Shopping Cart"}).appendTo('body');
-						dump($modal);
 						_app.renderFunctions.handleTemplateEvents($modal,P); //init
 						$modal.on('complete',function(){
 							$("[data-app-role='shipMethodsUL']",$(this)).find(":radio").each(function(){

@@ -1283,11 +1283,11 @@ in a reorder, that data needs to be converted to the variations format required 
 //if the total is less than 0, just show 0 instead of a negative amount. zero is handled here too, just to avoid a formatMoney call.
 //if the first character is a dash, it's a negative amount.  JS didn't like amount *1 (returned NAN)
 					if(amount * 1 <= 0){
-						o += data.bindData.currencysign ? data.bindData.currencysign : '$';
+						o += data.bindData.currencySign ? data.bindData.currencySign : '$';
 						o += '0.00';
 						}
 					else	{
-						o += _app.u.formatMoney(amount,data.bindData.currencysign,'',data.bindData.hideZero);
+						o += _app.u.formatMoney(amount,data.bindData.currencySign,'',data.bindData.hideZero);
 						}
 /*campus*/	if($tag.data("checkout")) {
 /*campus*/		var $span = $("<span class='summaryPriceAlign'></span");

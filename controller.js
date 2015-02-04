@@ -1086,17 +1086,6 @@ ex: whoAmI call executed during app init. Don't want "we have no idea who you ar
 				catch(e){
 					if(windowHistoryAction == 'hash'){
 						window.location.hash = "#!"+routeObj.value;
-					}
-				if(hash){
-					routeObj.urihash = hash;
-					}
-				_app.router._executeCallback(routeObj);
-				return true;
-					try{
-						window.history.pushState(routeObj.value, "", routeObj.value);
-						}
-					catch(e){
-						//dump(e);
 						}
 					}
 				_app.router._executeCallback(routeObj);
@@ -2186,7 +2175,6 @@ VALIDATION
 						if(required)	{
 							r = false;
 							$input.addClass('ui-state-error');
-							$input.after($span.text('required'));
 							}
 						else if($input.val())	{
 							$input.after($span.text('not a valid email address'));
