@@ -295,6 +295,9 @@ P.query = { 'and':{ 'filters':[ {'term':{'profile':'E31'}},{'term':{'tags':'IS_S
 							}
 						});
 					}
+				else	{
+					//404
+					}
 
 				elasticsearch.size = 50;
 
