@@ -533,17 +533,13 @@ need to be customized on a per-ria basis.
 					$n.fadeIn(1000); 
 					callback();
 					}); //fade out old, fade in new.
-						});
 				}
 			else if($n instanceof jQuery)	{
 				$n.fadeIn(1000);
 				callback();
-/*campus robots*/		_app.ext.quickstart.vars.showContentFinished = true;
-/*campus robots*/		}, 1000);
 				}
 			else	{
 				dump("WARNING! in pageTransition, neither $o nor $n were instances of jQuery.  how odd.",'warn');
-				_app.ext.quickstart.vars.showContentFinished = true;
 				}
 			}, //pageTransition
 
@@ -931,35 +927,6 @@ fallback is to just output the value.
 				
 				dump("BEGIN showContent ["+infoObj.pageType+"]."); dump(infoObj);
 				
-				uri		+=	"&_session="+_app.vars._session;
-				return uri;
-				},
-				
-			pageNotFound : function($container, failObj, params){
-				failObj = failObj || {};
-				$container.empty();
-				params = $.extend({
-					"templateID" : "pageNotFoundTemplate",
-					"require" : ["templates.html"]
-					},params);
-				
-				failObj.route = $container.attr('data-app-uri');
-				_app.require(params.require, function(){
-					var $page = new tlc().getTemplateInstance(params.templateID);
-					$page.tlc({'verb':'translate','dataset':failObj});
-					$container.append($page);
-					//override the deferred pipeline, just call it here
-					_app.ext.quickstart.vars.showContentFinished = true;
-					failObj.state = 'complete';
-					_app.renderFunctions.handleTemplateEvents($page, failObj);
-					});
-				},
-				
-			newShowContent : function(uri,infoObj)	{
-				_app.ext.quickstart.vars.showContentFinished = false;
-				
-				dump("BEGIN newShowContent ["+infoObj.pageType+"]."); dump(infoObj);
-				dump(infoObj.templateid);
 				infoObj = infoObj || {}; //could be empty for a cart or checkout
 				infoObj.defPipeline = $.PromisePipeline();
 				//doing a setTimeout 0 here to allow the UI thread to finish executing before this condition sets
@@ -2551,7 +2518,6 @@ else	{
 						$('#mainContentArea_customer').empty().remove(); //kill so it gets regenerated. this a good idea?
 						showContent('customer',{'show':'myaccount'});
 						
-						});
 						});
 					});
 				return false;
