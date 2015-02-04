@@ -1,11 +1,11 @@
 (function(_app){
 var configURI = (document.location.protocol == 'file:') ? _app.vars.testURL+'jsonapi/config.js' : _app.vars.baseURL+'jsonapi/config.js';
 
+//Load the config.js script asynchronously.  When it finishes loading, we can start up the app
 _app.u.loadScript(configURI,function(){
-//in some cases, such as the zoovy UI, zglobals may not be defined. If that's the case, certain vars, such as jqurl, must be passed in via P in initialize:
-//	_app.u.dump(" ->>>>>>>>>>>>>>>>>>>>>>>>>>>>> zGlobals is an object");
+	//in some cases, such as the zoovy UI, zglobals may not be defined. If that's the case, certain vars, such as jqurl, must be passed in via P in initialize:
 	_app.vars.username = zGlobals.appSettings.username.toLowerCase(); //used w/ image URL's.
-//need to make sure the secureURL ends in a / always. doesn't seem to always come in that way via zGlobals
+	//need to make sure the secureURL ends in a / always. doesn't seem to always come in that way via zGlobals
 	_app.vars.secureURL = zGlobals.appSettings.https_app_url;
 	_app.vars.domain = zGlobals.appSettings.sdomain; //passed in ajax requests.
 	_app.vars.jqurl = (document.location.protocol === 'file:') ? _app.vars.testURL+'jsonapi/' : '/jsonapi/';
