@@ -65,7 +65,8 @@ function controller(_app)	{
 		_app.vars.fbUser = {};
 
 //used in conjunction with support/admin login. nukes entire local cache.
-		if(_app.u.getParameterByName('flush') == 1)	{
+		if(_app.u.getParameterByName('flush') == 1 || 
+			(_app.vars.thisSessionIsAdmin && document.location.protocol == "file:"))	{
 			_app.u.dump(" !!! Flush is enabled. session and local storage get nuked !!!");
 			if($.support.sessionStorage)	{
 				window.sessionStorage.clear();
@@ -1006,37 +1007,51 @@ ex: whoAmI call executed during app init. Don't want "we have no idea who you ar
 		//this would get added at end of INIT. that way, init can modify the hash as needed w/out impacting.
 				$('body').on('click.router','a[href], area[href]',function(event){
 					var a = event.currentTarget;
-					if(document.location.protocol == "file:"){
+					var isFileAndLocal = false;
+					if(a.protocol == "file:"){
 						a = document.createElement('a');
 						var href = $(this).attr('href');
-						if(href.indexOf('/') != 0){href = "/"+href;}
+						if(href.charAt(0) != '/'){href = "/"+href;}
 						a.href = "http://www.domain.com"+href;
+						isFileAndLocal = true;
 						}
 					var path = a.pathname;
 					var search = a.search;
 					var hash = a.hash;
-					console.log($(this).attr('href'));
-					console.log($(this).attr('href').indexOf('#'));
+					
 					if($(this).attr('href').indexOf('#') == 0){
 						//This is an internal hash link, href="#.*"
 						event.preventDefault();
 						}
-					else if(_app.router.handleURIChange(path, search, hash)){
+					else if(isFileAndLocal || window.location.hostname == a.hostname){
+						_app.router.handleURIChange(path, search, hash)
 						event.preventDefault();
 						}
 					else {
 						event.currentTarget.target = "_blank";
 						}
 					});
-				
+				var defaultPopState = window.onpopstate;
 				window.onpopstate = function(event){
-					_app.router.handleURIChange(event.state);
+					if(_app.router.handleURIChange(event.state)){
+						//handled, we're all good
+						}
+					else {
+						defaultPopState(event);
+						}
 					}
 				
 				}
 			},
 		
-		handleURIChange : function(uri, search, hash, skipPush, forcedParams){
+		handleURIChange : function(uri, search, hash, windowHistoryAction, forcedParams){
+			//default to pushstate
+			if(window.location.protocol == "file:"){
+				windowHistoryAction = "none";
+				}
+			if(typeof windowHistoryAction == 'undefined'){
+				windowHistoryAction = 'push';
+				}
 			console.log('handleURIChange');
 			var routeObj = _app.router._getRouteObj(uri, 'hash');
 			if(routeObj) {
@@ -1050,13 +1065,27 @@ ex: whoAmI call executed during app init. Don't want "we have no idea who you ar
 				if(hash){
 					routeObj.urihash = hash;
 					}
+				routeObj.path = uri;
+				routeObj.search = search;
+				routeObj.hash = hash;
 				routeObj.value = uri +""+ (search || "") +""+ (hash || "");
-				if(!skipPush){
-					try{
-						window.history.pushState(routeObj.value, "", routeObj.value);
+				try{
+					if(windowHistoryAction == 'push'){
+						window.history.pushState(routeObj.value,"",routeObj.value);
 						}
-					catch(e){
-						//dump(e);
+					else if (windowHistoryAction == 'replace'){
+						window.history.replaceState(routeObj.value,"",routeObj.value);
+						}
+					else if (windowHistoryAction == 'hash'){
+						window.history.pushState(routeObj.value, "", window.location.pathname+"#!"+routeObj.value);
+						}
+					else {
+						//skip
+						}
+					}
+				catch(e){
+					if(windowHistoryAction == 'hash'){
+						window.location.hash = "#!"+routeObj.value;
 						}
 					}
 				_app.router._executeCallback(routeObj);
@@ -1067,7 +1096,7 @@ ex: whoAmI call executed during app init. Don't want "we have no idea who you ar
 				}
 			return false;
 			},
-		handleURIString : function(uriStr, skipPush, forcedParams){
+		handleURIString : function(uriStr, windowHistoryAction, forcedParams){
 			var a = document.createElement('a');
 			a.href = "http://www.domain.com"+uriStr;
 			var path = a.pathname;
@@ -1076,7 +1105,7 @@ ex: whoAmI call executed during app init. Don't want "we have no idea who you ar
 			console.log(path);
 			console.log(search);
 			console.log(hash);
-			this.handleURIChange(path,search,hash,skipPush,forcedParams);
+			this.handleURIChange(path,search,hash,windowHistoryAction,forcedParams);
 			}
 		},
 
@@ -1705,6 +1734,7 @@ window.frames["printContainerIframe"].print();
 	//				_app.u.dump(" -> msg: "); _app.u.dump(msg);
 					if(msg._rtag && msg._rtag.jqObj)	{$target = msg._rtag.jqObj}
 					else if(msg.parentID){$target = $(_app.u.jqSelector('#',msg.parentID));}
+					else if(msg.jqObj){$target = msg.jqObj;}
 					else if(msg._rtag && (msg._rtag.parentID || msg._rtag.targetID || msg._rtag.selector))	{
 						if(msg._rtag.parentID)	{$target = $(_app.u.jqSelector('#',msg._rtag.parentID))}
 						else if(msg._rtag.targetID)	{$target = $(_app.u.jqSelector('#',msg._rtag.targetID))}
@@ -2145,7 +2175,6 @@ VALIDATION
 						if(required)	{
 							r = false;
 							$input.addClass('ui-state-error');
-							$input.after($span.text('required'));
 							}
 						else if($input.val())	{
 							$input.after($span.text('not a valid email address'));
@@ -3077,6 +3106,9 @@ return $r;
 			
 //infoObj.state = onCompletes or onInits. later, more states may be supported.
 			handleTemplateEvents : function($ele,infoObj)	{
+				// dump("handleTemplateEvents");
+				// dump($ele);
+				// dump(infoObj);
 				infoObj = infoObj || {};
 				if($ele instanceof jQuery && infoObj.state)	{
 					if($.inArray(infoObj.state,['init','complete','depart']) >= 0)	{
@@ -3283,7 +3315,9 @@ $tmp.empty().remove();
 		epoch2mdy : function($tag,data)	{
 			$tag.text(_app.u.epoch2Pretty(data.value,data.bindData.showtime))
 			},
-	
+		data : function($tag, data){
+			$tag.data(data.bindData.index, data.value);
+			},
 		text : function($tag,data){
 			var o = '';
 			if(jQuery.isEmptyObject(data.bindData))	{o = data.value}
@@ -3327,7 +3361,7 @@ $tmp.empty().remove();
 				}
 			else	{
 //for all other inputs and selects, simply setting the value will suffice.
-				if($tag.data('stringify'))	{
+				if($tag.data('stringify') || data.bindData.stringify)	{
 					$tag.val(JSON.stringify(data.value));
 					}
 				else	{

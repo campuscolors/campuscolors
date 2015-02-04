@@ -1,11 +1,11 @@
 (function(_app){
 var configURI = (document.location.protocol == 'file:') ? _app.vars.testURL+'jsonapi/config.js' : _app.vars.baseURL+'jsonapi/config.js';
 
+//Load the config.js script asynchronously.  When it finishes loading, we can start up the app
 _app.u.loadScript(configURI,function(){
-//in some cases, such as the zoovy UI, zglobals may not be defined. If that's the case, certain vars, such as jqurl, must be passed in via P in initialize:
-//	_app.u.dump(" ->>>>>>>>>>>>>>>>>>>>>>>>>>>>> zGlobals is an object");
+	//in some cases, such as the zoovy UI, zglobals may not be defined. If that's the case, certain vars, such as jqurl, must be passed in via P in initialize:
 	_app.vars.username = zGlobals.appSettings.username.toLowerCase(); //used w/ image URL's.
-//need to make sure the secureURL ends in a / always. doesn't seem to always come in that way via zGlobals
+	//need to make sure the secureURL ends in a / always. doesn't seem to always come in that way via zGlobals
 	_app.vars.secureURL = zGlobals.appSettings.https_app_url;
 	_app.vars.domain = zGlobals.appSettings.sdomain; //passed in ajax requests.
 	_app.vars.jqurl = (document.location.protocol === 'file:') ? _app.vars.testURL+'jsonapi/' : '/jsonapi/';
@@ -183,20 +183,20 @@ _app.extend({
 	"filename" : "extensions/store_routing.js"
 	});
 	//formerly in startup callback of store_routing
-_app.router.addAlias('product',		function(routeObj){_app.ext.quickstart.a.newShowContent(routeObj.value,	$.extend({'pageType':'product'}, routeObj.params));});
+_app.router.addAlias('product',		function(routeObj){_app.ext.quickstart.a.showContent(routeObj.value,	$.extend({'pageType':'product'}, routeObj.params));});
 _app.router.appendHash({'type':'match','route':'/product/{{pid}}/{{name}}*','callback':'product'});
 _app.router.appendHash({'type':'match','route':'/product/{{pid}}*','callback':'product'});
 
 
-_app.router.addAlias('homepage',	function(routeObj){_app.ext.quickstart.a.newShowContent(routeObj.value,	$.extend({'pageType':'homepage'}, routeObj.params));});
+_app.router.addAlias('homepage',	function(routeObj){_app.ext.quickstart.a.showContent(routeObj.value,	$.extend({'pageType':'homepage'}, routeObj.params));});
 _app.router.appendHash({'type':'exact','route':'/home','callback':'homepage'});
 _app.router.appendHash({'type':'exact','route':'/home/','callback':'homepage'});
 _app.router.appendHash({'type':'exact','route':'/','callback':'homepage'});
 
-_app.router.addAlias('category',	function(routeObj){_app.ext.quickstart.a.newShowContent(routeObj.value,	$.extend({'pageType':'category'}, routeObj.params));});
+_app.router.addAlias('category',	function(routeObj){_app.ext.quickstart.a.showContent(routeObj.value,	$.extend({'pageType':'category'}, routeObj.params));});
 _app.router.appendHash({'type':'match','route':'/category/{{navcat}}*','callback':'category'});
 
-// _app.router.addAlias('search',		function(routeObj){_app.ext.quickstart.a.newShowContent(routeObj.value,	$.extend({'pageType':'search'}, routeObj.params));});
+// _app.router.addAlias('search',		function(routeObj){_app.ext.quickstart.a.showContent(routeObj.value,	$.extend({'pageType':'search'}, routeObj.params));});
 _app.router.appendHash({'type':'match','route':'/search/tag/{{tag}}*','searchtype':'tag','callback':'setSearchRouteObj'});
 _app.router.appendHash({'type':'match','route':'/search/keywords/{{KEYWORDS}}*','searchtype':'keywords','callback':'setSearchRouteObj'});
 _app.router.appendHash({'type':'match','route':'/search/promo/{{PROMO}}*','searchtype':'promo','callback':'setSearchRouteObj'});
@@ -279,7 +279,7 @@ function showbetterSearch(routeObj) {
 			dump("Unrecognized option "+o+" on filter page "+routeObj.params.id);
 		}
 	}
-	_app.ext.quickstart.a.newShowContent(routeObj.value,{
+	_app.ext.quickstart.a.showContent(routeObj.value,{
 		"pageType" : "static",
 		"require" : ['templates.html','store_search','store_filter','store_routing','prodlist_infinite','store_cc'],
 		"templateID" : "betterSearchTemplate",
@@ -303,11 +303,11 @@ _app.u.bindTemplateEvent('betterSearchTemplate','complete.execsearch',function(e
 	//timeout because visiting search page a second/third/etc. time was submitting before the product was loaded leaving a blank page. 
 	setTimeout(function(){$('form', $context).trigger('submit');},500); 
 });
-_app.router.addAlias('checkout',	function(routeObj){_app.ext.quickstart.a.newShowContent(routeObj.value,	$.extend({'pageType':'checkout', 'requireSecure':true}, routeObj.params));});
+_app.router.addAlias('checkout',	function(routeObj){_app.ext.quickstart.a.showContent(routeObj.value,	$.extend({'pageType':'checkout', 'requireSecure':true}, routeObj.params));});
 _app.router.appendHash({'type':'exact','route':'/checkout','callback':'checkout'});
 _app.router.appendHash({'type':'exact','route':'/checkout/','callback':'checkout'});
 
-_app.router.addAlias('cart',	function(routeObj){_app.ext.quickstart.a.newShowContent(routeObj.value,	$.extend({'pageType':'cart'}, routeObj.params));});
+_app.router.addAlias('cart',	function(routeObj){_app.ext.quickstart.a.showContent(routeObj.value,	$.extend({'pageType':'cart'}, routeObj.params));});
 _app.router.appendHash({'type':'exact','route':'/cart','callback':'cart'});
 _app.router.appendHash({'type':'exact','route':'/cart/','callback':'cart'});
 
@@ -317,7 +317,7 @@ _app.router.appendHash({'type':'exact','route':'/404','callback':function(routeO
 		'templateID':'pageNotFoundTemplate',
 		'require':'templates.html'
 		});
-	_app.ext.quickstart.a.newShowContent(routeObj.value,routeObj.params);
+	_app.ext.quickstart.a.showContent(routeObj.value,routeObj.params);
 	}});
 
 _app.router.appendHash({'type':'exact','route':'/about_us/','callback':function(routeObj){
@@ -326,7 +326,7 @@ _app.router.appendHash({'type':'exact','route':'/about_us/','callback':function(
 		'templateID':'aboutUsTemplate',
 		'require':['templates.html']
 		});
-	_app.ext.quickstart.a.newShowContent(routeObj.value,routeObj.params);
+	_app.ext.quickstart.a.showContent(routeObj.value,routeObj.params);
 	}});
 _app.router.appendHash({'type':'exact','route':'/contact_us/','callback':function(routeObj){
 	$.extend(routeObj.params,{
@@ -334,7 +334,7 @@ _app.router.appendHash({'type':'exact','route':'/contact_us/','callback':functio
 		'templateID':'contactUsTemplate',
 		'require':['templates.html', 'store_crm']
 		});
-	_app.ext.quickstart.a.newShowContent(routeObj.value,routeObj.params);
+	_app.ext.quickstart.a.showContent(routeObj.value,routeObj.params);
 	}});
 _app.router.appendHash({'type':'exact','route':'/frequently_asked_questions/','callback':function(routeObj){
 	$.extend(routeObj.params,{
@@ -344,7 +344,7 @@ _app.router.appendHash({'type':'exact','route':'/frequently_asked_questions/','c
 		});
 	dump(routeObj.params);
 	routeObj.params.deferred = $.Deferred();
-	_app.ext.quickstart.a.newShowContent(routeObj.value,routeObj.params);
+	_app.ext.quickstart.a.showContent(routeObj.value,routeObj.params);
 	}});
 _app.u.bindTemplateEvent('faqTemplate','complete.faq',function(event, $context, infoObj){
 	$context.off('complete.faq');
@@ -360,7 +360,7 @@ _app.router.appendHash({'type':'exact','route':'/payment_policy/','callback':fun
 		'templateID':'paymentTemplate',
 		'require':['templates.html']
 		});
-	_app.ext.quickstart.a.newShowContent(routeObj.value,routeObj.params);
+	_app.ext.quickstart.a.showContent(routeObj.value,routeObj.params);
 	}});
 _app.router.appendHash({'type':'exact','route':'/privacy_policy/','callback':function(routeObj){
 	$.extend(routeObj.params,{
@@ -368,7 +368,7 @@ _app.router.appendHash({'type':'exact','route':'/privacy_policy/','callback':fun
 		'templateID':'privacyTemplate',
 		'require':['templates.html']
 		});
-	_app.ext.quickstart.a.newShowContent(routeObj.value,routeObj.params);
+	_app.ext.quickstart.a.showContent(routeObj.value,routeObj.params);
 	}});
 _app.router.appendHash({'type':'exact','route':'/return_policy/','callback':function(routeObj){
 	$.extend(routeObj.params,{
@@ -376,7 +376,7 @@ _app.router.appendHash({'type':'exact','route':'/return_policy/','callback':func
 		'templateID':'returnTemplate',
 		'require':['templates.html']
 		});
-	_app.ext.quickstart.a.newShowContent(routeObj.value,routeObj.params);
+	_app.ext.quickstart.a.showContent(routeObj.value,routeObj.params);
 	}});
 _app.router.appendHash({'type':'exact','route':'/shipping_policy/','callback':function(routeObj){
 	$.extend(routeObj.params,{
@@ -384,7 +384,7 @@ _app.router.appendHash({'type':'exact','route':'/shipping_policy/','callback':fu
 		'templateID':'shippingTemplate',
 		'require':['templates.html']
 		});
-	_app.ext.quickstart.a.newShowContent(routeObj.value,routeObj.params);
+	_app.ext.quickstart.a.showContent(routeObj.value,routeObj.params);
 	}});
 _app.router.appendHash({'type':'exact','route':'/store_locations/','callback':function(routeObj){
 	$.extend(routeObj.params,{
@@ -392,7 +392,7 @@ _app.router.appendHash({'type':'exact','route':'/store_locations/','callback':fu
 		'templateID':'locationTemplate',
 		'require':['templates.html']
 		});
-	_app.ext.quickstart.a.newShowContent(routeObj.value,routeObj.params);
+	_app.ext.quickstart.a.showContent(routeObj.value,routeObj.params);
 	}});
 
 _app.router.appendHash({'type':'exact','route':'/my_account/','callback':function(routeObj){
@@ -402,7 +402,7 @@ _app.router.appendHash({'type':'exact','route':'/my_account/','callback':functio
 		'templateID':'myAccountTemplate',
 		'require':['cco','templates.html']
 		});
-	_app.ext.quickstart.a.newShowContent(routeObj.value,routeObj.params);
+	_app.ext.quickstart.a.showContent(routeObj.value,routeObj.params);
 	}});	
 _app.u.bindTemplateEvent('myAccountTemplate','complete.customer',function(event, $context, infoObj){
 	_app.ext.cco.calls.appCheckoutDestinations.init(_app.model.fetchCartID(),{},'mutable'); //needed for country list in address editor.
@@ -416,7 +416,7 @@ _app.router.appendHash({'type':'exact','route':'/change_password/','callback':fu
 		'templateID':'changePasswordTemplate',
 		'require':['templates.html']
 		});
-	_app.ext.quickstart.a.newShowContent(routeObj.value,routeObj.params);
+	_app.ext.quickstart.a.showContent(routeObj.value,routeObj.params);
 	}});
 _app.router.appendHash({'type':'exact','route':'/my_order_history/','callback':function(routeObj){
 	$.extend(routeObj.params,{
@@ -425,7 +425,7 @@ _app.router.appendHash({'type':'exact','route':'/my_order_history/','callback':f
 		'templateID':'orderHistoryTemplate',
 		'require':['templates.html']
 		});
-	_app.ext.quickstart.a.newShowContent(routeObj.value,routeObj.params);
+	_app.ext.quickstart.a.showContent(routeObj.value,routeObj.params);
 	}});
 _app.u.bindTemplateEvent('changePasswordTemplate','complete.customer',function(event, $context, infoObj){
 	_app.model.addDispatchToQ({"_cmd":"buyerPurchaseHistory","_tag":{
@@ -443,7 +443,7 @@ _app.router.appendHash({'type':'exact','route':'/my_wishlist/','callback':functi
 		'templateID':'customerListsTemplate',
 		'require':['templates.html']
 		});
-	_app.ext.quickstart.a.newShowContent(routeObj.value,routeObj.params);
+	_app.ext.quickstart.a.showContent(routeObj.value,routeObj.params);
 	}});
 _app.u.bindTemplateEvent('customerListsTemplate','complete.customer',function(event, $context, infoObj){
 	_app.model.addDispatchToQ({"_cmd":"buyerProductLists","_tag":{"datapointer":"buyerProductLists",'verb':'translate','jqObj': $('.mainColumn',$context),'callback':'tlc',onComplete : function(rd){
@@ -721,7 +721,7 @@ function showPage(routeObj,parentID){
 	routeObj.params.dataset.breadcrumb = [parentID,routeObj.params.id]	
 	routeObj.params.pageType = 'static'
 	// showContent('static',routeObj.params);
-	_app.ext.quickstart.a.newShowContent(routeObj.value,routeObj.params);
+	_app.ext.quickstart.a.showContent(routeObj.value,routeObj.params);
 	}
 
 
@@ -766,7 +766,7 @@ function showSubPage(routeObj,parentID){
 	routeObj.params.id = routeObj.params.id + "-" + routeObj.params.end;
 	routeObj.params.pageType = 'static';
 	// showContent('static',routeObj.params);
-	_app.ext.quickstart.a.newShowContent(routeObj.value,routeObj.params);
+	_app.ext.quickstart.a.showContent(routeObj.value,routeObj.params);
 	}
 
 _app.router.addAlias('subcat', function(routeObj) {
@@ -781,7 +781,7 @@ _app.router.addAlias('subcat', function(routeObj) {
 			dataset.breadcrumb = [routeObj.pagefilter,routeObj.params.id]
 			// showContent('static',{'templateid':'splashPageTemplate','id':routeObj.params.id,'dataset':dataset});
 			$.extend(true, routeObj.params, {'pageType':'static','templateid':routeObj.templateid,'id':json.id,'dataset':dataset});
-			_app.ext.quickstart.a.newShowContent(routeObj.value,routeObj.params);
+			_app.ext.quickstart.a.showContent(routeObj.value,routeObj.params);
 		})
 		.fail(function() {
 			dump('FILTER DATA FOR ' + a + 'SUBCAT COULD NOT BE LOADED.');
@@ -839,7 +839,7 @@ _app.router.addAlias('root', function(routeObj){
 		if(_app.ext.store_cc.vars[route]) {
 			var filterData = $.extend(true, {}, _app.ext.store_cc.vars[route]);
 			$.extend(true, routeObj.params, {'templateid':routeObj.templateid,'id':filterData.id,'dataset':filterData});
-			_app.ext.quickstart.a.newShowContent(routeObj.value,routeObj.params);
+			_app.ext.quickstart.a.showContent(routeObj.value,routeObj.params);
 		}
 		else {
 			$.getJSON("filters/apparel/"+route+".json?_v="+(new Date()).getTime(), function(json){
@@ -849,7 +849,7 @@ _app.router.addAlias('root', function(routeObj){
 				//Need to pass through routeObj.params at this moment, as it is expected to become infoObj
 				//This may change later.
 				$.extend(true, routeObj.params, {'pageType':'static','templateid':routeObj.templateid,'id':json.id,'dataset':json});
-				_app.ext.quickstart.a.newShowContent(routeObj.value,routeObj.params);
+				_app.ext.quickstart.a.showContent(routeObj.value,routeObj.params);
 			})
 			.fail(function() {
 				dump('FILTER DATA FOR ' + route + ' ROOT COULD NOT BE LOADED.');
