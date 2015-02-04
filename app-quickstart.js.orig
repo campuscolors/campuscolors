@@ -94,8 +94,11 @@ var quickstart = function(_app) {
 				var r = true; //return false if extension won't load for some reason (account config, dependencies, etc).
 				_app.ext.quickstart.pageHandlers = {};
 				_app.ext.quickstart.pageRequires = {};
+<<<<<<< HEAD
 				_app.ext.quickstart.loginHandlers = [];
 				_app.ext.quickstart.logoutHandlers = [];
+=======
+>>>>>>> 8066b1ac3b572046a9b789d57cef8d9d8e5b5199
 				return r;
 				},
 			onError : function()	{
@@ -519,7 +522,11 @@ need to be customized on a per-ria basis.
 			}, //wiki
 
 // * 201403 -> infoObj now passed into pageTransition.
+<<<<<<< HEAD
+/*campus robots*/		pageTransition : function($o,$n, infoObj, callback)	{
+=======
 		pageTransition : function($o,$n, infoObj, callback)	{
+>>>>>>> 8066b1ac3b572046a9b789d57cef8d9d8e5b5199
 //if $o doesn't exist, the animation doesn't run and the new element doesn't show up, so that needs to be accounted for.
 //$o MAY be a jquery instance but have no length, so check both.
 			if($o instanceof jQuery && $o.length)	{
@@ -529,17 +536,36 @@ need to be customized on a per-ria basis.
 2. Puts control of this into custom page transitions.
 */
 
+<<<<<<< HEAD
+				if(infoObj.performJumpToTop && $(window).scrollTop() > 0)	{ // >0 scrolltop check should be on window, it'll work in ff AND chrome (body or html won't).
+					//new page content loading. scroll to top.
+					$('html, body').animate({scrollTop : 0},'fast',function(){
+/*campus robots*/		$o.fadeOut(1000, function(){$n.fadeIn(1000); callback(); setTimeout(function()
+/*campus robots*/		{_app.ext.quickstart.vars.showContentFinished = true;},100);}); //fade out old, fade in new.
+						});
+					} 
+				else	{ 
+/*campus robots*/	$o.fadeOut(1000, function(){$n.fadeIn(1000); callback(); setTimeout(function(){_app.ext.quickstart.vars.showContentFinished = true;},1000);}); //fade out old, fade in new.
+					}
+				}
+			else if($n instanceof jQuery)	{
+				dump(" -> $o is not properly defined.  jquery: "+($o instanceof jQuery)+" and length: "+$o.length);
+				$('html, body').animate({scrollTop : 0},'fast',function(){
+					$n.fadeIn(1000);
+/*campus robots*/	setTimeout(function(){
+/*campus robots*/		_app.ext.quickstart.vars.showContentFinished = true;
+/*campus robots*/		}, 1000);
+					});
+=======
 				$o.fadeOut(1000, function(){
 					$n.fadeIn(1000); 
 					callback();
 					}); //fade out old, fade in new.
-						});
 				}
 			else if($n instanceof jQuery)	{
 				$n.fadeIn(1000);
 				callback();
-/*campus robots*/		_app.ext.quickstart.vars.showContentFinished = true;
-/*campus robots*/		}, 1000);
+>>>>>>> 8066b1ac3b572046a9b789d57cef8d9d8e5b5199
 				}
 			else	{
 				dump("WARNING! in pageTransition, neither $o nor $n were instances of jQuery.  how odd.",'warn');
@@ -924,13 +950,14 @@ fallback is to just output the value.
 // myria.vars.session is where some user experience data is stored, such as recent searches or recently viewed items.
 // -> unshift is used in the case of 'recent' so that the 0 spot always holds the most recent and also so the length can be maintained (kept to a reasonable #).
 // infoObj.back can be set to 0 to skip a URI update (will skip both hash state and popstate.) 
-			
-				
-			showContent : function(uri,infoObj)	{
-				_app.ext.quickstart.vars.showContentFinished = false;
-				
-				dump("BEGIN showContent ["+infoObj.pageType+"]."); dump(infoObj);
-				
+<<<<<<< HEAD
+			secureContentLocation : function(path){
+				if(path.indexOf('/') == 0){
+					path = path.substr(1);
+					}
+				var uri	= 	zGlobals.appSettings.https_app_url;
+				uri 	+=	path;
+				uri		+=	"?cartID="+_app.model.fetchCartID();
 				uri		+=	"&_session="+_app.vars._session;
 				return uri;
 				},
@@ -960,6 +987,15 @@ fallback is to just output the value.
 				
 				dump("BEGIN newShowContent ["+infoObj.pageType+"]."); dump(infoObj);
 				dump(infoObj.templateid);
+=======
+			
+				
+			showContent : function(uri,infoObj)	{
+				_app.ext.quickstart.vars.showContentFinished = false;
+				
+				dump("BEGIN showContent ["+infoObj.pageType+"]."); dump(infoObj);
+				
+>>>>>>> 8066b1ac3b572046a9b789d57cef8d9d8e5b5199
 				infoObj = infoObj || {}; //could be empty for a cart or checkout
 				infoObj.defPipeline = $.PromisePipeline();
 				//doing a setTimeout 0 here to allow the UI thread to finish executing before this condition sets
@@ -991,7 +1027,11 @@ fallback is to just output the value.
 				
 				//Redirect to secure if required
 				if(((!_app.u.buyerIsAuthenticated() && infoObj.login) || infoObj.requireSecure) && document.location.protocol == "http:"){
+<<<<<<< HEAD
+					var secure = _app.ext.quickstart.a.secureContentLocation(uri);
+=======
 					var secure = _app.ext.quickstart.u.secureContentLocation(uri);
+>>>>>>> 8066b1ac3b572046a9b789d57cef8d9d8e5b5199
 					document.location = secure;
 					return false;
 					}
@@ -1001,7 +1041,11 @@ fallback is to just output the value.
 					$('#loginSuccessContainer').empty(); //empty any existing login messaging (errors/warnings/etc)
 					$('<button>').addClass('stdMargin ui-state-default ui-corner-all  ui-state-active').attr('id','modalLoginContinueButton').text('Continue').click(function(){
 						$('#loginFormForModal').dialog('close');
+<<<<<<< HEAD
+						_app.ext.quickstart.a.newShowContent(uri, infoObj) //binding this will reload this 'page' and show the appropriate content.
+=======
 						_app.ext.quickstart.a.showContent(uri, infoObj) //binding this will reload this 'page' and show the appropriate content.
+>>>>>>> 8066b1ac3b572046a9b789d57cef8d9d8e5b5199
 						}).appendTo($('#loginSuccessContainer'));
 					return false;
 					}
@@ -1441,6 +1485,8 @@ $target.tlc({
 
 
 		u : {
+<<<<<<< HEAD
+=======
 			secureContentLocation : function(path){
 				if(path.indexOf('/') == 0){
 					path = path.substr(1);
@@ -1451,6 +1497,7 @@ $target.tlc({
 				uri		+=	"&_session="+_app.vars._session;
 				return uri;
 				},
+>>>>>>> 8066b1ac3b572046a9b789d57cef8d9d8e5b5199
 //executed when the app loads.  
 //sets a default behavior of loading homepage. Can be overridden by passing in infoObj.
 			handleAppInit : function()	{
@@ -1960,6 +2007,8 @@ effects the display of the nav buttons only. should be run just after the handle
 				},
 
 			
+				
+
 /*
 This will open the cart in a modal. If an update is needed, that must be performed outside this function.
 assumes that cart is in memory before it's loaded.
@@ -2021,6 +2070,101 @@ either templateID needs to be set OR showloading must be true. TemplateID will t
 					}
 				}, //showCartInModal
 
+<<<<<<< HEAD
+//Customer pages differ from company pages. In this case, special logic is needed to determine whether or not content can be displayed based on authentication.
+// plus, most of the articles require an API request for more data.
+//handleTemplateEvents gets executed in showContent, which should always be used to execute this function.
+//by the time showCustomer is run, we are already on https if it is required.
+			showCustomer : function(infoObj)	{
+						switch(infoObj.show)	{
+							case 'help':
+								myApp.ext.quickstart.a.showBuyerCMUI();
+								break;
+
+							case 'subscriberLists':
+								_app.model.addDispatchToQ({"_cmd":"buyerDetail",'cartid':_app.model.fetchCartID(),"_tag":{"datapointer":"buyerDetail"}},"mutable");
+								//executes same code as newsletter.
+
+							case 'newsletter':
+								$article.showLoading({'message':'Fetching newsletter list'});
+								_app.model.addDispatchToQ({"_cmd":"appNewsletterList","_tag" : {
+									"datapointer" : "appNewsletterList",
+									callback : 'tlc',
+									extendByDatapointers : ["buyerDetail","cartDetail|"+_app.model.fetchCartID()], //including the cart allows name and email address to be populated.
+									verb : 'translate',
+									jqObj : $article
+									}},'mutable');
+								_app.model.dispatchThis('mutable');
+								$article.data('isTranslated',true);
+								break;	
+							case 'invoice':
+
+								var orderID = infoObj.uriParams.orderid;
+								var cartID = infoObj.uriParams.cartid;
+								if(cartID && orderID)	{
+									$article.showLoading({'message':'Retrieving order information'});
+									_app.model.addDispatchToQ({"_cmd":"buyerOrderGet",'orderid':orderID,'cartid':cartID,"_tag":{
+										"datapointer":"buyerOrderGet|"+orderID,
+										"callback": "tlc",
+										"jqObj" : $article
+										}},"mutable");
+									_app.model.dispatchThis('mutable');
+									}
+								else	{
+									$article.anymessage({'message':'Both a cart id and an order id are required (for security reasons) and one is not available. Please try your link again or, if the error persists, contact us for additional help.'});
+									}
+								break;
+							case 'orders':
+							//always fetch a clean copy of the order history.
+								_app.model.addDispatchToQ({"_cmd":"buyerPurchaseHistory","_tag":{
+									"datapointer":"buyerPurchaseHistory",
+									"callback":"tlc",
+									"verb" : "translate",
+									"jqObj" : $("[data-app-role='orderList']",$article).empty()
+									}},"mutable");
+								break;
+							case 'lists':
+//								_app.model.addDispatchToQ({"_cmd":"buyerProductLists","_tag":{"datapointer":"buyerProductLists",'parentID':'listsContainer','callback':'showBuyerLists','extension':'quickstart'}},"mutable");
+								_app.model.addDispatchToQ({"_cmd":"buyerProductLists","_tag":{"datapointer":"buyerProductLists",'verb':'translate','jqObj': $('#listsArticle',$customer),'callback':'tlc',onComplete : function(rd){
+//data formatting on lists is unlike any other format for product, so a special handler is used.				
+									function populateBuyerProdlist(listID,$context)	{
+										//add the product list ul here because tlc statement has list ID for bind.
+										$("[data-buyerlistid='"+listID+"']",$customer).append("<ul data-tlc=\"bind $var '.@"+listID+"'; store_prodlist#productlist  --hideSummary='1' --withReviews='1' --withVariations='1' --withInventory='1' --templateid='productListTemplateBuyerList'  --legacy;\" class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>");
+										_app.model.addDispatchToQ({"_cmd":"buyerProductListDetail","listid":listID,"_tag" : {'datapointer':'buyerProductListDetail|'+listID,"listid":listID,'callback':'buyerListAsProdlist','extension':'quickstart', "require":"store_prodlist",'jqObj':$("[data-buyerlistid='"+listID+"'] ul",$context)}},'mutable');
+										}
+									
+									var data = _app.data[rd.datapointer]['@lists']; //shortcut
+									var L = data.length;
+									var numRequests = 0;
+									for(var i = 0; i < L; i += 1)	{
+										populateBuyerProdlist(data[i].id,rd.jqObj)
+										}
+									_app.model.dispatchThis('mutable');
+									//no sense putting 1 list into an accordion.
+									if(L > 1)	{
+										$('.applyAccordion',rd.jqObj).accordion({heightStyle: "content"});
+										}
+									}}},"mutable");
+								break;
+							case 'myaccount':
+	//							dump(" -> myaccount article loaded. now show addresses...");
+								_app.ext.cco.calls.appCheckoutDestinations.init(_app.model.fetchCartID(),{},'mutable'); //needed for country list in address editor.
+								_app.model.addDispatchToQ({"_cmd":"buyerAddressList","_tag":{'callback':'tlc','jqObj':$article,'verb':'translate','datapointer':'buyerAddressList'}},'mutable');
+								break;
+							
+							case 'logout':
+								$(document.body).removeClass('buyerLoggedIn');
+								$('.username').empty();
+								_app.u.logBuyerOut();
+								document.location.hash = '';
+								break;
+							default:
+								dump("WARNING - unknown article/show ["+infoObj.show+" in showCustomer. ");
+							}
+				},  //showCustomer				
+				
+=======
+>>>>>>> 8066b1ac3b572046a9b789d57cef8d9d8e5b5199
 			showPaymentUpdateModal : function(orderid,cartid)	{
 				var $updateDialog = $("<div \/>",{'title':'Payment Update'}).appendTo('body');
 				$updateDialog.dialog({'modal':true,'width':500,'height':500});
@@ -2550,14 +2694,19 @@ else	{
 						},function(){
 						$('#mainContentArea_customer').empty().remove(); //kill so it gets regenerated. this a good idea?
 						showContent('customer',{'show':'myaccount'});
+<<<<<<< HEAD
+=======
 						
-						});
+>>>>>>> 8066b1ac3b572046a9b789d57cef8d9d8e5b5199
 						});
 					});
 				return false;
 				}, //showBuyerAddressUpdate
 
+<<<<<<< HEAD
+=======
 			// !!!!! check for use and update
+>>>>>>> 8066b1ac3b572046a9b789d57cef8d9d8e5b5199
 			showBuyerAddressAdd : function($ele,p)	{
 				p.preventDefault();
 				_app.require(['store_crm', 'order_create'],function(){
@@ -2571,7 +2720,10 @@ else	{
 				return false;
 				}, //showBuyerAddressAdd
 
+<<<<<<< HEAD
+=======
 			// !!!!! check for use and update
+>>>>>>> 8066b1ac3b572046a9b789d57cef8d9d8e5b5199
 			showBuyerAddressRemove : function($ele, p){
 				p.preventDefault();
 				_app.ext.store_crm.u.showAddressRemoveModal({
@@ -2732,12 +2884,15 @@ later, it will handle other third party plugins as well.
 				//dump('adding handler');
 				_app.ext.quickstart.pageHandlers[args.pageType] = args.handler;
 				_app.ext.quickstart.pageRequires[args.pageType] = args.require || [];
+<<<<<<< HEAD
 				},
 			addLoginHandler : function(args){
 				_app.ext.quickstart.loginHandlers.push(args.handler);
 				},
 			addLogoutHandler : function(args){
 				_app.ext.quickstart.logoutHandlers.push(args.handler);
+=======
+>>>>>>> 8066b1ac3b572046a9b789d57cef8d9d8e5b5199
 				}
 			}
 

@@ -10,6 +10,28 @@ _app.u.loadScript(configURI,function(){
 	_app.vars.domain = zGlobals.appSettings.sdomain; //passed in ajax requests.
 	_app.vars.jqurl = (document.location.protocol === 'file:') ? _app.vars.testURL+'jsonapi/' : '/jsonapi/';
 	
+<<<<<<< HEAD
+myApp.rq.push(['extension',0,'store_cc','','addEventHandlers']);
+myApp.rq.push(['extension',0,'tools_zoom','']);
+	
+myApp.rq.push(['extension',0,'order_create','']);
+myApp.rq.push(['extension',0,'cco','']);
+
+myApp.rq.push(['extension',0,'store_routing','']);
+myApp.rq.push(['extension',0,'seo_robots','']);
+myApp.rq.push(['extension',0,'store_seo','extensions/store_seo.js', 'attachHandlers']);
+
+myApp.rq.push(['extension',0,'store_prodlist','']);
+myApp.rq.push(['extension',0,'prodlist_infinite','']);
+myApp.rq.push(['extension',0,'store_navcats','']);
+myApp.rq.push(['extension',0,'store_search','']);
+myApp.rq.push(['extension',0,'store_filter','']);
+myApp.rq.push(['extension',0,'store_product','']);
+myApp.rq.push(['extension',0,'cart_message','']);
+myApp.rq.push(['extension',0,'store_crm','']);
+myApp.rq.push(['extension',0,'store_tracking','']);
+myApp.rq.push(['extension',0,'quickstart','','startMyProgram']);
+=======
 	var startupRequires = ['quickstart'];
 	
 	_app.require(startupRequires, function(){
@@ -22,12 +44,6 @@ _app.extend({
 	"namespace" : "quickstart",
 	"filename" : "app-quickstart.js"
 	});
-myApp.rq.push(['extension',0,'store_filter','']);
-myApp.rq.push(['extension',0,'store_product','']);
-myApp.rq.push(['extension',0,'cart_message','']);
-myApp.rq.push(['extension',0,'store_crm','']);
-myApp.rq.push(['extension',0,'store_tracking','']);
-myApp.rq.push(['extension',0,'quickstart','','startMyProgram']);
 
 _app.couple('quickstart','addPageHandler',{
 	"pageType" : "static",
@@ -61,6 +77,7 @@ _app.extend({
 	"namespace" : "order_create",
 	"filename" : "extensions/checkout/extension.js"
 	});
+>>>>>>> 8066b1ac3b572046a9b789d57cef8d9d8e5b5199
 
 _app.couple('quickstart','addPageHandler',{
 	"pageType" : "checkout",
@@ -110,6 +127,15 @@ _app.couple('quickstart','addPageHandler',{
 					$(this).attr('data-app-change','quickstart|cartShipMethodSelect');
 					});
 				});
+
+<<<<<<< HEAD
+//myApp.rq.push(['extension',1,'tools_ab_testing','extensions/tools_ab_testing.js']);
+myApp.rq.push(['extension',0,'partner_addthis','','startExtension']);
+//myApp.rq.push(['extension',1,'resellerratings_survey','extensions/partner_buysafe_guarantee.js','startExtension']); /// !!! needs testing.
+//myApp.rq.push(['extension',1,'buysafe_guarantee','extensions/partner_buysafe_guarantee.js','startExtension']);
+//myApp.rq.push(['extension',1,'powerReviews_reviews','extensions/partner_powerreviews_reviews.js','startExtension']);
+//myApp.rq.push(['extension',0,'magicToolBox_mzp','extensions/partner_magictoolbox_mzp.js','startExtension']); // (not working yet - ticket in to MTB)
+=======
 			$cart.trigger(infoObj.trigger,$.extend({'Q':'mutable'},infoObj));
 				_app.model.dispatchThis('mutable');
 			
@@ -132,6 +158,7 @@ _app.u.bindTemplateEvent(function(templateID){ return (templateID == 'cartTempla
 		$page.empty().remove();
 		}
 	});
+>>>>>>> 8066b1ac3b572046a9b789d57cef8d9d8e5b5199
 
 _app.extend({
 	"namespace" : "store_routing",
@@ -142,6 +169,12 @@ _app.router.addAlias('product',		function(routeObj){_app.ext.quickstart.a.showCo
 _app.router.appendHash({'type':'match','route':'/product/{{pid}}/{{name}}*','callback':'product'});
 _app.router.appendHash({'type':'match','route':'/product/{{pid}}*','callback':'product'});
 
+<<<<<<< HEAD
+//once peg is loaded, need to retrieve the grammar file. Order is important there. This will validate the file too.
+myApp.u.loadScript(myApp.vars.baseURL+'resources/peg-0.8.0.js',function(){
+	myApp.model.getGrammar(myApp.vars.baseURL+"resources/pegjs-grammar-20140203.pegjs");
+	}); // ### TODO -> callback on RQ.push wasn't getting executed. investigate.
+=======
 
 _app.router.addAlias('homepage',	function(routeObj){_app.ext.quickstart.a.showContent(routeObj.value,	$.extend({'pageType':'homepage'}, routeObj.params));});
 _app.router.appendHash({'type':'exact','route':'/home','callback':'homepage'});
@@ -150,6 +183,7 @@ _app.router.appendHash({'type':'exact','route':'/','callback':'homepage'});
 
 _app.router.addAlias('category',	function(routeObj){_app.ext.quickstart.a.showContent(routeObj.value,	$.extend({'pageType':'category'}, routeObj.params));});
 _app.router.appendHash({'type':'match','route':'/category/{{navcat}}*','callback':'category'});
+>>>>>>> 8066b1ac3b572046a9b789d57cef8d9d8e5b5199
 
 _app.router.addAlias('search',		function(routeObj){_app.ext.quickstart.a.showContent(routeObj.value,	$.extend({'pageType':'search'}, routeObj.params));});
 _app.router.appendHash({'type':'match','route':'/search/tag/{{tag}}*','callback':'search'});

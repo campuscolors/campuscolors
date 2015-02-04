@@ -72,6 +72,13 @@ var prodlist_infinite = function(_app) {
 				var $list = _rtag.list;
 				var EQ = $list.data('elastic-query');
 				if($list && $list.length)	{
+<<<<<<< HEAD
+					$list.data('total-page-count', Math.ceil( _app.data[_rtag.datapointer].hits.total / EQ.size));
+					
+					$list.removeClass('loadingBG');
+					if(L == 0)	{
+						$list.append("Your query returned zero results.");
+=======
 					var totalPages = Math.ceil( _app.data[_rtag.datapointer].hits.total / EQ.size);
 					// dump(totalPages);
 					$list.data('total-page-count', totalPages);
@@ -85,6 +92,7 @@ var prodlist_infinite = function(_app) {
 					$list.removeClass('loadingBG');
 					if(L == 0)	{
 						//$list.append("Your query returned zero results.");
+>>>>>>> 8066b1ac3b572046a9b789d57cef8d9d8e5b5199
 						}
 					else	{
 						$list.append(_app.ext.store_search.u.getElasticResultsAsJQObject(_rtag)); //prioritize w/ getting product in front of buyer
@@ -296,6 +304,14 @@ else	{
 
 				},
 			handleElasticScroll : function(_rtag, $tag){
+<<<<<<< HEAD
+				var EQ = $tag.data('elastic-query');
+				var currPage = $tag.data('page-in-focus');
+				var totalPages = $tag.data('total-page-count');
+				if(_app.data[_rtag.datapointer].hits.total <= EQ.size)	{$tag.parent().find("[data-app-role='infiniteProdlistLoadIndicator']").hide();} //do nothing. fewer than 1 page worth of items.
+				else if(currPage >= totalPages)	{
+				//reached the last 'page'. disable infinitescroll.
+=======
 				dump('handleElasticScroll');
 				//dump(_rtag);
 				var EQ = $tag.data('elastic-query');
@@ -313,9 +329,7 @@ else	{
 					// dump($(window).height());
 					// dump($tag.children().first().height());
 					// dump(override || $(window).scrollTop() >= ( $(document).height() - $(window).height() - ($tag.children().first().height() * 2) ) );
-					//campus colors has a large footer
-					//if(override || $(window).scrollTop() >= ( $(document).height() - $(window).height() - ($tag.chi
-/*campus*/				if(override || $(window).scrollTop() >= ( $(document).height() - $(window).height() - ($tag.children().first().height() * 6) ) )	{
+					if(override || $(window).scrollTop() >= ( $(document).height() - $(window).height() - ($tag.children().first().height() * 2) ) )	{
 						$(window).off('scroll.infiniteScroll');
 						if($tag.data('isDispatching') == true)	{}
 						else	{
@@ -327,10 +341,27 @@ else	{
 				
 				if(currPage >= totalPages)	{
 					//dump("Reached last page, stopping scroll");
+>>>>>>> 8066b1ac3b572046a9b789d57cef8d9d8e5b5199
 					$(window).off('scroll.infiniteScroll');
 					$tag.parent().find("[data-app-role='infiniteProdlistLoadIndicator']").hide();
 					}
 				else	{
+<<<<<<< HEAD
+					$(window).off('scroll.infiniteScroll').on('scroll.infiniteScroll',function(){
+						//will load data when two rows from bottom.
+						//if( $(window).scrollTop() >= ( $(document).height() - $(window).height() - ($tag.children().first().height() * 2) ) )	{
+						//campus colors has a large footer
+						if( $(window).scrollTop() >= ( $(document).height() - $(window).height() - ($tag.children().first().height() * 6) ) )	{
+							$(window).off('scroll.infiniteScroll');
+							if($tag.data('isDispatching') == true)	{}
+							else	{
+								var _tag = _app.u.getWhitelistedObject(_rtag, ['datapointer','callback','extension','list','templateID']);
+								_app.ext.store_search.u.changePage($tag, currPage+1, _tag);
+								}
+							}
+						});
+/*campus*/				}
+=======
 					if(_rtag.loadFullList){
 						onScroll(true);
 						}
@@ -338,6 +369,7 @@ else	{
 						$(window).off('scroll.infiniteScroll').on('scroll.infiniteScroll', function(){onScroll(false);});
 						}
 					}
+>>>>>>> 8066b1ac3b572046a9b789d57cef8d9d8e5b5199
 				}
 
 			} //util

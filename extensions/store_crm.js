@@ -791,7 +791,7 @@ This is used to get add an array of skus, most likely for a product list.
 			
 			productReviewShow : function($ele,p)	{
 				p.preventDefault();
-
+				console.log('here');
 				var pid = $ele.data('pid') || $ele.closest("[data-pid]").data('pid'); //used on product page
 				if(pid)	{
 					_app.ext.store_crm.u.showReviewFrmInModal({"pid":pid,"templateID":"reviewFrmTemplate"});

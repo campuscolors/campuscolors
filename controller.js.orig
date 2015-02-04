@@ -1007,6 +1007,13 @@ ex: whoAmI call executed during app init. Don't want "we have no idea who you ar
 		//this would get added at end of INIT. that way, init can modify the hash as needed w/out impacting.
 				$('body').on('click.router','a[href], area[href]',function(event){
 					var a = event.currentTarget;
+<<<<<<< HEAD
+					if(document.location.protocol == "file:"){
+						a = document.createElement('a');
+						var href = $(this).attr('href');
+						if(href.indexOf('/') != 0){href = "/"+href;}
+						a.href = "http://www.domain.com"+href;
+=======
 					var isFileAndLocal = false;
 					if(a.protocol == "file:"){
 						a = document.createElement('a');
@@ -1014,23 +1021,38 @@ ex: whoAmI call executed during app init. Don't want "we have no idea who you ar
 						if(href.charAt(0) != '/'){href = "/"+href;}
 						a.href = "http://www.domain.com"+href;
 						isFileAndLocal = true;
+>>>>>>> 8066b1ac3b572046a9b789d57cef8d9d8e5b5199
 						}
 					var path = a.pathname;
 					var search = a.search;
 					var hash = a.hash;
+<<<<<<< HEAD
+					console.log($(this).attr('href'));
+					console.log($(this).attr('href').indexOf('#'));
+=======
 					
+>>>>>>> 8066b1ac3b572046a9b789d57cef8d9d8e5b5199
 					if($(this).attr('href').indexOf('#') == 0){
 						//This is an internal hash link, href="#.*"
 						event.preventDefault();
 						}
+<<<<<<< HEAD
+					else if(_app.router.handleURIChange(path, search, hash)){
+=======
 					else if(isFileAndLocal || window.location.hostname == a.hostname){
 						_app.router.handleURIChange(path, search, hash)
+>>>>>>> 8066b1ac3b572046a9b789d57cef8d9d8e5b5199
 						event.preventDefault();
 						}
 					else {
 						event.currentTarget.target = "_blank";
 						}
 					});
+<<<<<<< HEAD
+				
+				window.onpopstate = function(event){
+					_app.router.handleURIChange(event.state);
+=======
 				var defaultPopState = window.onpopstate;
 				window.onpopstate = function(event){
 					if(_app.router.handleURIChange(event.state)){
@@ -1039,11 +1061,15 @@ ex: whoAmI call executed during app init. Don't want "we have no idea who you ar
 					else {
 						defaultPopState(event);
 						}
+>>>>>>> 8066b1ac3b572046a9b789d57cef8d9d8e5b5199
 					}
 				
 				}
 			},
 		
+<<<<<<< HEAD
+		handleURIChange : function(uri, search, hash, skipPush, forcedParams){
+=======
 		handleURIChange : function(uri, search, hash, windowHistoryAction, forcedParams){
 			//default to pushstate
 			if(window.location.protocol == "file:"){
@@ -1052,12 +1078,29 @@ ex: whoAmI call executed during app init. Don't want "we have no idea who you ar
 			if(typeof windowHistoryAction == 'undefined'){
 				windowHistoryAction = 'push';
 				}
+>>>>>>> 8066b1ac3b572046a9b789d57cef8d9d8e5b5199
 			console.log('handleURIChange');
 			var routeObj = _app.router._getRouteObj(uri, 'hash');
 			if(routeObj) {
 				routeObj.params = routeObj.params || {};
 				if(forcedParams){
 					$.extend(routeObj.params, forcedParams);
+<<<<<<< HEAD
+					}
+				if(search){
+					routeObj.searchParams = _app.u.kvp2Array(search.substr(1));
+					}
+				if(hash){
+					routeObj.urihash = hash;
+					}
+				routeObj.value = uri +""+ (search || "") +""+ (hash || "");
+				if(!skipPush){
+					try{
+						window.history.pushState(routeObj.value, "", routeObj.value);
+						}
+					catch(e){
+						//dump(e);
+=======
 					}
 				if(search){
 					routeObj.searchParams = _app.u.kvp2Array(search.substr(1));
@@ -1086,17 +1129,7 @@ ex: whoAmI call executed during app init. Don't want "we have no idea who you ar
 				catch(e){
 					if(windowHistoryAction == 'hash'){
 						window.location.hash = "#!"+routeObj.value;
-					}
-				if(hash){
-					routeObj.urihash = hash;
-					}
-				_app.router._executeCallback(routeObj);
-				return true;
-					try{
-						window.history.pushState(routeObj.value, "", routeObj.value);
-						}
-					catch(e){
-						//dump(e);
+>>>>>>> 8066b1ac3b572046a9b789d57cef8d9d8e5b5199
 						}
 					}
 				_app.router._executeCallback(routeObj);
@@ -1107,7 +1140,11 @@ ex: whoAmI call executed during app init. Don't want "we have no idea who you ar
 				}
 			return false;
 			},
+<<<<<<< HEAD
+		handleURIString : function(uriStr, skipPush, forcedParams){
+=======
 		handleURIString : function(uriStr, windowHistoryAction, forcedParams){
+>>>>>>> 8066b1ac3b572046a9b789d57cef8d9d8e5b5199
 			var a = document.createElement('a');
 			a.href = "http://www.domain.com"+uriStr;
 			var path = a.pathname;
@@ -1116,7 +1153,11 @@ ex: whoAmI call executed during app init. Don't want "we have no idea who you ar
 			console.log(path);
 			console.log(search);
 			console.log(hash);
+<<<<<<< HEAD
+			this.handleURIChange(path,search,hash,skipPush,forcedParams);
+=======
 			this.handleURIChange(path,search,hash,windowHistoryAction,forcedParams);
+>>>>>>> 8066b1ac3b572046a9b789d57cef8d9d8e5b5199
 			}
 		},
 
