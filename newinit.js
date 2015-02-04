@@ -10,11 +10,53 @@ _app.u.loadScript(configURI,function(){
 	_app.vars.domain = zGlobals.appSettings.sdomain; //passed in ajax requests.
 	_app.vars.jqurl = (document.location.protocol === 'file:') ? _app.vars.testURL+'jsonapi/' : '/jsonapi/';
 	
-	var startupRequires = ['quickstart'];
+	var startupRequires = ['quickstart','store_cc', 'store_filter','cco','store_product','order_create']
 	
 	_app.require(startupRequires, function(){
-		setTimeout(function(){$('#appView').removeClass('initFooter');}, 1200);
+		_app.ext.store_cc.u.loadSuppressionList(function(){
+			_app.ext.store_cc.u.suppress($('#appView'));
+			});
 		_app.ext.quickstart.callbacks.startMyProgram.onSuccess();
+		
+		setTimeout(function() {
+			var initLogin = _app.ext.quickstart.u.getUsernameFromCart(_app.model.fetchCartID());
+			if(initLogin) { $('body').addClass('buyerLoggedIn');	$('.username').text(initLogin); }
+		},2000);
+		
+		_app.ext.store_cc.u.showHeaderBanners($('#appView'));
+		
+		//will destroy and reinitialize the header and homepage main banner carousels on screen resize. 
+		$(window).resize(function() {
+			var width = $(this).outerWidth();
+			var height = $(this).outerHeight();
+			setTimeout(function(){
+				if(width === screen.width) {
+					dump('window timeout resizing stuff:'); dump("screen width: "+screen.width); dump("width: "+width); dump("height: "+height); 
+					_app.ext.store_cc.u.runHeaderCarousel(true);
+					_app.ext.store_cc.u.runHeaderCarousel();
+					
+		//			this is setup, but phone/tablet portrait to landscape work well w/out it. 
+		//			Not likely to be changing widths enough for this to be needed. But it's here if needed. 
+		//			if($("#mainContentArea :visible:first").attr('data-app-uri') == "/") {
+		//				_app.ext.store_cc.u.runHomeMainBanner($(".homeTemplate"),true);
+		//				_app.ext.store_cc.u.runHomeMainBanner($(".homeTemplate"));
+		//			}
+		
+				}
+			},500);
+		});
+		
+		$.extend(handlePogs.prototype,_app.ext.store_cc.variations);
+		
+		_app.ext.store_cc.u.runHeaderCarousel();
+		//_app.ext.store_cc.u.swipeMobileNav($(".mobileSlideMenu"));
+		_app.ext.store_cc.u.runFooterCarousel();
+		
+		//make sure minicart stays up to date. 
+		//I know why you're doing this, but let's find a framework fix soon -mc
+		_app.ext.store_cc.vars.mcSetInterval = setInterval(function(){
+			_app.ext.quickstart.u.handleMinicartUpdate({'datapointer':'cartDetail|'+_app.model.fetchCartID()});
+		},4000);
 		});
 	}); //The config.js is dynamically generated.
 	
@@ -36,8 +78,12 @@ _app.couple('quickstart','addPageHandler',{
 		//By nature, the static page handler requires nothing, but the templates it renders may require all kinds of stuff
 		infoObj.require = infoObj.require || [];
 		_app.require(infoObj.require,function(){
+			console.dir(infoObj);
 			infoObj.verb = 'translate';
+	dump('------------------------------------------'); //dump(infoObj);
 			infoObj.templateid = infoObj.templateID;
+			dump(infoObj.templateid);
+			dump(typeof _app.templates[infoObj.templateid]);
 			var $page = new tlc().runTLC(infoObj);
 			//$page.tlc(infoObj);
 			$page.data('templateid',infoObj.templateid);
@@ -58,7 +104,7 @@ _app.extend({
 
 _app.couple('quickstart','addPageHandler',{
 	"pageType" : "checkout",
-	"require" : ['order_create','cco', 'extensions/checkout/active.html'],
+	"require" : ['order_create','cco', 'extensions/checkout/active.html','templates.html'],
 	"handler" : function($container, infoObj, require){
 		var deferred = $.Deferred();
 		infoObj.defPipeline.addDeferred(deferred);
@@ -77,7 +123,7 @@ _app.u.bindTemplateEvent('checkoutTemplate','depart.destroy',function(event, $co
 	if($page){
 		$page.empty().remove();
 		}
-	});
+	});	
 _app.extend({
 	"namespace" : "cco",
 	"filename" : "extensions/cart_checkout_order.js"
@@ -121,7 +167,11 @@ _app.couple('quickstart','addPageHandler',{
 			});
 		}
 	});
-_app.u.bindTemplateEvent(function(templateID){ return (templateID == 'cartTemplate' || templateID == 'fieldcamTemplate')},'depart.destroy',function(event, $context, infoObj){
+_app.u.bindTemplateEvent('cartTemplate','complete.cart',function(event, $context, infoObj){
+	_app.ext.store_cc.u.cartitemqty($context);
+	_app.ext.store_cc.u.getShipContainerHeight($context);
+	});
+_app.u.bindTemplateEvent('cartTemplate','depart.destroy',function(event, $context, infoObj){
 	var $page = $context.closest('[data-app-uri]');
 	if($page){
 		$page.empty().remove();
@@ -146,10 +196,113 @@ _app.router.appendHash({'type':'exact','route':'/','callback':'homepage'});
 _app.router.addAlias('category',	function(routeObj){_app.ext.quickstart.a.showContent(routeObj.value,	$.extend({'pageType':'category'}, routeObj.params));});
 _app.router.appendHash({'type':'match','route':'/category/{{navcat}}*','callback':'category'});
 
-_app.router.addAlias('search',		function(routeObj){_app.ext.quickstart.a.showContent(routeObj.value,	$.extend({'pageType':'search'}, routeObj.params));});
-_app.router.appendHash({'type':'match','route':'/search/tag/{{tag}}*','callback':'search'});
-_app.router.appendHash({'type':'match','route':'/search/keywords/{{KEYWORDS}}*','callback':'search'});
+// _app.router.addAlias('search',		function(routeObj){_app.ext.quickstart.a.showContent(routeObj.value,	$.extend({'pageType':'search'}, routeObj.params));});
+_app.router.appendHash({'type':'match','route':'/search/tag/{{tag}}*','searchtype':'tag','callback':'setSearchRouteObj'});
+_app.router.appendHash({'type':'match','route':'/search/keywords/{{KEYWORDS}}*','searchtype':'keywords','callback':'setSearchRouteObj'});
+_app.router.appendHash({'type':'match','route':'/search/promo/{{PROMO}}*','searchtype':'promo','callback':'setSearchRouteObj'});
+_app.router.addAlias('setSearchRouteObj', function(routeObj) {
+//	dump('----> setSearchRouteObj'); dump(routeObj);
+	
+	//set the base filter if it's a default keyword or tag search, otherwise it's a promo and the baseFilter needs to be loaded from json.
+	var isPromo = true;
+	if(routeObj.searchtype === "keywords") {
+		routeObj.params.baseFilter = {"query" : {"query_string" : {"query" : routeObj.params.KEYWORDS}}};
+		isPromo = false;
+	}
+	else if (routeObj.searchtype === "tag") {
+		routeObj.params.baseFilter = {"term":{"tags":routeObj.params.tag.toUpperCase()}};
+		isPromo = false;
+	}
 
+	//check to see if the filter options have been loaded before to avoid grabbing the json every time
+	routeObj.optionList = {};
+	if(_app.ext.store_filter.vars.searchFacets) { 
+		routeObj.optionList =  _app.ext.store_filter.vars.searchFacets.optionList;
+		routeObj.params.options =  _app.ext.store_filter.vars.searchFacets.options;
+		//if this is a promo search, go get the promo json, otherwise show the search now
+		if(isPromo) { setPromoSearchObj(routeObj); }
+		else { routeObj = showbetterSearch(routeObj); }
+	}
+	//if no var, options have to be loaded
+	else {
+		$.getJSON("filters/search/searchfacets.json?_v="+(new Date()).getTime(), function(json){
+//			dump('THE SEARCH JSON IS...'); dump(json);
+			_app.ext.store_filter.vars.searchFacets = json;
+ 			routeObj.optionList = json.optionList;
+			routeObj.params.options = json.options;
+			if(isPromo) { setPromoSearchObj(routeObj); }
+			else { routeObj = showbetterSearch(routeObj); }
+		})
+		.fail(function() {
+			dump('FILTER DATA FOR SEARCH FACETS COULD NOT BE LOADED.');
+			_app.router.handleURIChange('/404');
+		}); 
+	}
+});
+//grab the promo baseFilter out of the json from the path passed in routeObj.params.PROMO
+function setPromoSearchObj(routeObj) {
+//	dump(routeObj.params);
+	var path = routeObj.params.PROMO;
+	$.getJSON("filters/search/"+path+".json?_v="+(new Date()).getTime(), function(json){
+//		dump('THE PROMO JSON IS...'); dump(json);
+		routeObj.params.baseFilter = {};
+		routeObj.params.baseFilter = json;
+		showbetterSearch(routeObj);
+	})
+	.fail(function() {
+		dump('FILTER DATA FOR SEARCH FACETS COULD NOT BE LOADED.');
+		_app.router.handleURIChange('/404');
+	}); 
+};
+//check elastic for the options data to use w/ the showContent call
+function showbetterSearch(routeObj) {
+//	dump('----> showing better Search');
+	optStrs = routeObj.optionList;
+	routeObj.params.options = routeObj.params.options || {};
+	for(var i in optStrs){
+//		dump('----> optStrs[i]'); dump(optStrs[i]);
+		var o = optStrs[i];
+		if(_app.ext.store_filter.vars.elasticFields[o]){
+			routeObj.params.options[o] = $.extend(true, {}, _app.ext.store_filter.vars.elasticFields[o]);
+//			dump('routeObj.params.options[o]'); dump(routeObj.params.options[o]); 
+			if(routeObj.searchParams && routeObj.searchParams[o]){
+				var values = routeObj.searchParams[o].split('|');
+				for(var i in routeObj.params.options[o].options){
+					var option = routeObj.params.options[o].options[i];
+					if($.inArray(option.v, values) >= 0){
+						option.checked = "checked";
+					}
+				}
+			}
+		}
+		else {
+			dump("Unrecognized option "+o+" on filter page "+routeObj.params.id);
+		}
+	}
+	_app.ext.quickstart.a.showContent(routeObj.value,{
+		"pageType" : "static",
+		"require" : ['templates.html','store_search','store_filter','store_routing','prodlist_infinite','store_cc'],
+		"templateID" : "betterSearchTemplate",
+	//	"dataset" : $.extend(routeObj.params, {"baseFilter" : {"query" : {"query_string" : {"query" : routeObj.params.KEYWORDS}}},'options':routeObj.params.options})
+		"dataset" : routeObj.params
+	});
+};
+	
+_app.u.bindTemplateEvent('betterSearchTemplate','complete.execsearch',function(event, $context, infoObj){
+//	dump('triggering'); dump(infoObj.dataset.KEYWORDS);
+	if(infoObj.dataset.KEYWORDS) { 
+		ga('send', {
+			'hitType'			: 'event',					// Required.
+			'eventCategory'	: 'Search',					// Required.
+			'eventAction'		: 'Keyword Search',	// Required.
+			//'eventValue'	: 4,
+			'eventLabel'		: ''+infoObj.dataset.KEYWORDS+''
+			}
+		);
+	}
+	//timeout because visiting search page a second/third/etc. time was submitting before the product was loaded leaving a blank page. 
+	setTimeout(function(){$('form', $context).trigger('submit');},500); 
+});
 _app.router.addAlias('checkout',	function(routeObj){_app.ext.quickstart.a.showContent(routeObj.value,	$.extend({'pageType':'checkout', 'requireSecure':true}, routeObj.params));});
 _app.router.appendHash({'type':'exact','route':'/checkout','callback':'checkout'});
 _app.router.appendHash({'type':'exact','route':'/checkout/','callback':'checkout'});
@@ -179,7 +332,7 @@ _app.router.appendHash({'type':'exact','route':'/contact_us/','callback':functio
 	$.extend(routeObj.params,{
 		'pageType':'static',
 		'templateID':'contactUsTemplate',
-		'require':['templates.html']
+		'require':['templates.html', 'store_crm']
 		});
 	_app.ext.quickstart.a.showContent(routeObj.value,routeObj.params);
 	}});
@@ -233,7 +386,15 @@ _app.router.appendHash({'type':'exact','route':'/shipping_policy/','callback':fu
 		});
 	_app.ext.quickstart.a.showContent(routeObj.value,routeObj.params);
 	}});
-	
+_app.router.appendHash({'type':'exact','route':'/store_locations/','callback':function(routeObj){
+	$.extend(routeObj.params,{
+		'pageType':'static',
+		'templateID':'locationTemplate',
+		'require':['templates.html']
+		});
+	_app.ext.quickstart.a.showContent(routeObj.value,routeObj.params);
+	}});
+
 _app.router.appendHash({'type':'exact','route':'/my_account/','callback':function(routeObj){
 	$.extend(routeObj.params,{
 		'pageType':'static',
@@ -242,23 +403,10 @@ _app.router.appendHash({'type':'exact','route':'/my_account/','callback':functio
 		'require':['cco','templates.html']
 		});
 	_app.ext.quickstart.a.showContent(routeObj.value,routeObj.params);
-	}});
+	}});	
 _app.u.bindTemplateEvent('myAccountTemplate','complete.customer',function(event, $context, infoObj){
 	_app.ext.cco.calls.appCheckoutDestinations.init(_app.model.fetchCartID(),{},'mutable'); //needed for country list in address editor.
 	_app.model.addDispatchToQ({"_cmd":"buyerAddressList","_tag":{'callback':'tlc','jqObj':$('.mainColumn',$context),'verb':'translate','datapointer':'buyerAddressList'}},'mutable');
-	_app.model.dispatchThis();							
-	});
-_app.router.appendHash({'type':'exact','route':'/my_order_history/','callback':function(routeObj){
-	$.extend(routeObj.params,{
-		'pageType':'static',
-		'login' : true,
-		'templateID':'orderHistoryTemplate',
-		'require':['templates.html']
-		});
-	_app.ext.quickstart.a.showContent(routeObj.value,routeObj.params);
-	}});
-_app.u.bindTemplateEvent('orderHistoryTemplate','complete.customer',function(event, $context, infoObj){
-	_app.model.addDispatchToQ({"_cmd":"buyerPurchaseHistory","_tag":{'callback':'tlc','jqObj':$('.mainColumn',$context),'verb':'translate','datapointer':'buyerPurchaseHistory'}},'mutable');
 	_app.model.dispatchThis();							
 	});
 _app.router.appendHash({'type':'exact','route':'/change_password/','callback':function(routeObj){
@@ -266,6 +414,15 @@ _app.router.appendHash({'type':'exact','route':'/change_password/','callback':fu
 		'pageType':'static',
 		'login' : true,
 		'templateID':'changePasswordTemplate',
+		'require':['templates.html']
+		});
+	_app.ext.quickstart.a.showContent(routeObj.value,routeObj.params);
+	}});
+_app.router.appendHash({'type':'exact','route':'/my_order_history/','callback':function(routeObj){
+	$.extend(routeObj.params,{
+		'pageType':'static',
+		'login' : true,
+		'templateID':'orderHistoryTemplate',
 		'require':['templates.html']
 		});
 	_app.ext.quickstart.a.showContent(routeObj.value,routeObj.params);
@@ -311,7 +468,6 @@ _app.u.bindTemplateEvent('customerListsTemplate','complete.customer',function(ev
 		}}},"mutable");
 	_app.model.dispatchThis();							
 	});
-		
 _app.u.bindTemplateEvent(function(){return true;}, 'complete.routing', function(event, $context, infoObj){
 	if(infoObj){
 		var canonical = "";
@@ -341,6 +497,27 @@ _app.couple('order_create','addOrderCompleteHandler',{
 		_app.require('store_tracking',function(){
 			if(P && P.datapointer && _app.data[P.datapointer] && _app.data[P.datapointer].order){
 				var order = _app.data[P.datapointer].order;
+//conversion patch				
+//creates the pixel image from the adwords no-script portion of the code and adds to conversion page.			
+				var gc_id = 1016752941;
+				var gc_language = "en";
+				var gc_format = "1";
+				var gc_color = "666666";
+				var gc_label = "Y4bICJv0owIQrdbp5AM";
+				var gc_value = order.sum.items_total;
+				var gc_currency = "USD";
+				var g_remarketing_only = false;
+				var guid = "ON";
+				var url = "https://www.googleadservices.com/pagead/conversion/"+gc_id
+					+"/?value="+gc_value
+					+"&amp;currency_code="+gc_currency
+					+"&amp;label="+gc_label
+					+"&amp;guid="+guid
+					+"&amp;script=0";
+				$("body").append("<img src='"+url+"'height='1' width='1' style='border-style:none;' alt='' class='adwpix'/>");
+//conversion patch				
+				
+				
 				var plugins = zGlobals.plugins;
 				// note: order is an object that references the raw (public) cart
 				// order.our.xxxx  order[@ITEMS], etc.
@@ -370,7 +547,7 @@ _app.couple('order_create','addOrderCompleteHandler',{
 
 				ga('ecommerce:send');
 				_app.u.dump('FINISHED store_tracking.onSuccess (google analytics)');
-				
+			
 				for(var i in plugins){
 					if(_app.ext.store_tracking.trackers[i] && _app.ext.store_tracking.trackers[i].enable){
 						_app.ext.store_tracking.trackers[i](order, plugins[i]);
@@ -383,9 +560,9 @@ _app.couple('order_create','addOrderCompleteHandler',{
 
 //Generate meta information
 _app.u.bindTemplateEvent(function(){return true;}, 'complete.metainformation',function(event, $context, infoObj){
-	var defaultTitle = "Chicago Cubs Apparel & Merchandise";
+	var defaultTitle = "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!";
 	var titlePrefix = "";
-	var titlePostfix = " | SportsWorldChicago.com";
+	var titlePostfix = " | CampusColors.com";
 	
 	var baseTitle = $('[data-seo-title]', $context).attr('data-seo-title') || defaultTitle;
 	var desc = $('[data-seo-desc]', $context).attr('data-seo-desc') || '';
@@ -413,25 +590,325 @@ _app.u.bindTemplateEvent(function(){return true;}, 'depart.scrollrestore', funct
 	$context.data('scroll-restore',scroll);
 	});
 
-// _app.u.bindTemplateEvent('productTemplate', 'complete.invcheck',function(event, $context, infoObj){
-	// if(!$context.attr('data-invcheck')){
-		// $context.attr('data-invcheck','true');
-		// var data = _app.data['appProductGet|'+infoObj.pid];
-		// var variations = data['@variations'];
-		// if(variations.length == 1){
-			// var id = variations[0].id;
-			// $('select[name='+id+'] option', $context).each(function(){
-				// var sku = infoObj.pid+":"+id+""+$(this).attr("value");
-				// dump(sku);
-				// dump(data["@inventory"][sku]);
-				// if(data["@inventory"][sku] && data["@inventory"][sku].AVAILABLE <= 0){
-					// //$(this).attr("disabled","disabled");
-					// $(this).remove();
-					// }
-				// });
-			// }
-		// }
-	// });
+_app.extend({
+	"namespace" : "store_cc",
+	"filename" : "extensions/_store_cc.js"
+	});
+_app.u.bindTemplateEvent(function(){return true;}, 'complete.suppress', function(event, $context, infoObj){_app.ext.store_cc.u.suppress($context);});
+_app.extend({
+	"namespace" : "store_filter",
+	"filename" : "extensions/_store_filter.js"
+	});
+_app.couple('store_filter','pushCustomFilter',{
+	'id' : 'sizeSmall',
+	'filter' : {
+		"has_child":{
+			"type":"sku",
+			"filter" : {
+				"and" : [
+					{"range":{"available":{"gte":1}}},
+					{"regexp":{"sku":".+:(SZSM|SZSL|SZXS|SZWB|SZWS|SZWC|SZYS|SZYZ).*"}}
+					]
+				}
+			}
+		}
+	});
+_app.couple('store_filter','pushCustomFilter',
+	{'id' : 'sizeMed','filter' : {"has_child":{"type":"sku","filter" : {"and" : [{"range":{"available":{"gte":1}}},{"regexp":{"sku":".+:(SZSM|SZMD|SZML|SZWB|SZWM|SZYM).*"}}]}}}}
+);
+_app.couple('store_filter','pushCustomFilter',
+	{'id' : 'sizeLarge','filter' : {"has_child":{"type":"sku","filter" : {"and" : [{"range":{"available":{"gte":1}}},{"regexp":{"sku":".+:(SZML|SZLG|SZWL|SZYL).*"}}]}}}}
+);
+_app.couple('store_filter','pushCustomFilter',
+	{'id' : 'sizeXLarge','filter' : {"has_child":{"type":"sku","filter" : {"and" : [{"range":{"available":{"gte":1}}},{"regexp":{"sku":".+:(SZXL|SZLL|SZ2X|SZ3X|SZWX|SZWA|SZYX).*"}}]}}}}
+);
+_app.u.bindTemplateEvent('homepageTemplate', 'complete.store_cc',function(event,$context,infoObj) {
+	$(".mobileSlideMenu.standardNav").addClass("hideOnHome");
+	_app.ext.store_cc.u.showHomepageBanners($context);
+	//was requested that this be static and show all 8 elements. See 11-24-2014 commit for style changes to revert to carousel. 
+	//_app.ext.store_cc.u.runHomeCarousel($context);
+	});
+_app.u.bindTemplateEvent('homepageTemplate', 'depart.store_cc',function(event,$context,infoObj) {
+	$(".mobileSlideMenu.standardNav").removeClass("hideOnHome");
+	});
+	
+_app.u.bindTemplateEvent('productTemplate', 'complete.invcheck',function(event, $context, infoObj){
+	if(!$context.attr('data-invcheck')){
+		$context.attr('data-invcheck','true');
+		var data = _app.data['appProductGet|'+infoObj.pid];
+		var variations = data['@variations'];
+		if(variations.length == 1 /*&& variations[0].id.match(/A[BDEFGHM]/) */){
+			var id = variations[0].id;
+			$('select[name='+id+'] option', $context).each(function(){
+				var sku = infoObj.pid+":"+id+""+$(this).attr("value");
+				dump(sku);
+				dump(data["@inventory"][sku]);
+				if(data["@inventory"][sku] && data["@inventory"][sku].AVAILABLE <= 0){
+					//$(this).attr("disabled","disabled");
+					$(this).remove();
+					}
+				});
+			}
+		}
+	});
+
+_app.u.bindTemplateEvent('productTemplate', 'complete.store_cc', function(event, $context, infoObj){
+	_app.ext.store_cc.u.showRecentlyViewedItems($context);
+	_app.ext.store_cc.u.runPreviousCarousel($context);
+	_app.ext.store_cc.u.showHideVariation($context,infoObj);
+	});
+_app.u.bindTemplateEvent('productTemplate', 'depart.store_cc', function(event, $context, infoObj){
+	_app.ext.store_cc.u.addRecentlyViewedItems($context, infoObj.pid);
+	});
+	
+					
+
+function loadPage(id, successCallback, failCallback){
+	console.log(id);
+	dump(_app.ext.store_filter.vars.filterPageLoadQueue);
+	var pageObj = _app.ext.store_filter.vars.filterPageLoadQueue[id];
+	if(pageObj){
+		$.getJSON(pageObj.jsonPath+"?_v="+(new Date()).getTime(), function(json){
+			_app.ext.store_filter.filterData[pageObj.id] = json;
+			if(typeof successCallback == 'function'){
+				successCallback();
+				}
+			})
+			.fail(function(){
+				dump("FILTER DATA FOR PAGE: "+pageObj.id+" UNAVAILABLE AT PATH: "+pageObj.jsonPath);
+				if(typeof failCallback == 'function'){
+					failCallback();
+					}
+				});
+		}
+	else {
+		if(typeof failCallback == 'function'){
+			failCallback();
+			}
+		}
+	};
+
+function showPage(routeObj,parentID){
+//					dump('START showPage'); dump(routeObj);
+	// routeObj.params.templateid = routeObj.params.templateID || "filteredSearchTemplate";
+//					dump(parentID);
+	routeObj.params.dataset = $.extend(true, {}, $.grep(_app.ext.store_filter.filterData[parentID].pages,function(e,i){
+		return e.id == routeObj.params.id;
+	})[0]);
+//					dump('routeObj.params.dataset');  dump(routeObj.params.dataset.optionList);
+	
+	var optStrs = routeObj.params.dataset.optionList;
+	routeObj.params.dataset.options = routeObj.params.dataset.options || {};
+	for(var i in optStrs){
+//						dump('optStrs[i]'); dump(optStrs[i]);
+		var o = optStrs[i];
+		if(_app.ext.store_filter.vars.elasticFields[o]){
+			routeObj.params.dataset.options[o] = $.extend(true, {}, _app.ext.store_filter.vars.elasticFields[o]);
+			if(routeObj.searchParams && routeObj.searchParams[o]){
+				var values = routeObj.searchParams[o].split('|');
+				for(var i in routeObj.params.dataset.options[o].options){
+					var option = routeObj.params.dataset.options[o].options[i];
+					if($.inArray(option.v, values) >= 0){
+						option.checked = "checked";
+						}
+					}
+				}
+			}
+		else {
+			dump("Unrecognized option "+o+" on filter page "+routeObj.params.id);
+			}
+		}
+	routeObj.params.dataset.breadcrumb = [parentID,routeObj.params.id]	
+	routeObj.params.pageType = 'static'
+	// showContent('static',routeObj.params);
+	_app.ext.quickstart.a.showContent(routeObj.value,routeObj.params);
+	}
+
+
+function showSubPage(routeObj,parentID){
+	routeObj.params.templateid = routeObj.params.templateID || "filteredSearchTemplate";
+					dump('START showSubPage'); dump(routeObj);
+//					dump(parentID); dump(_app.ext.store_filter.filterData);
+	var filterData = _app.ext.store_filter.filterData[parentID]; //gets the top level data
+//					dump('filtterData after gets top level data'); dump(filterData); dump(routeObj.params.id);
+	filterData = $.grep(filterData.pages,function(e,i){
+		return e.id == routeObj.params.id;	//gets mid level data
+	})[0];
+
+//					dump(filterData);
+	filterData = $.grep(filterData.pages,function(e,i){
+		return e.id == routeObj.params.end;	//gets the lowest level data
+	})[0];
+	routeObj.params.dataset = $.extend(true, {}, filterData);	//deep copy to avoid pass by reference bugs
+	
+	var optStrs = routeObj.params.dataset.optionList;
+	routeObj.params.dataset.options = routeObj.params.dataset.options || {};
+	for(var i in optStrs){
+//						dump('optStrs[i]'); dump(optStrs[i]);
+		var o = optStrs[i];
+		if(_app.ext.store_filter.vars.elasticFields[o]){
+			routeObj.params.dataset.options[o] = $.extend(true, {}, _app.ext.store_filter.vars.elasticFields[o]);
+			if(routeObj.searchParams && routeObj.searchParams[o]){
+				var values = routeObj.searchParams[o].split('|');
+				for(var i in routeObj.params.dataset.options[o].options){
+					var option = routeObj.params.dataset.options[o].options[i];
+					if($.inArray(option.v, values) >= 0){
+						option.checked = "checked";
+						}
+					}
+				}
+			}
+		else {
+			dump("Unrecognized option "+o+" on filter page "+routeObj.params.id);
+			}
+		}
+	routeObj.params.dataset.breadcrumb = [parentID,routeObj.params.id,routeObj.params.end]
+	routeObj.params.id = routeObj.params.id + "-" + routeObj.params.end;
+	routeObj.params.pageType = 'static';
+	// showContent('static',routeObj.params);
+	_app.ext.quickstart.a.showContent(routeObj.value,routeObj.params);
+	}
+
+_app.router.addAlias('subcat', function(routeObj) {
+	_app.require(['store_cc','store_filter','store_search','store_routing','prodlist_infinite','store_prodlist', 'templates.html'], function(){
+		var a = routeObj.pagefilter;
+		var b = routeObj.params.id;
+		routeObj.params.templateID = "splashPageTemplate";
+		$.getJSON("filters/apparel/"+a+".json?_v="+(new Date()).getTime(), function(json){
+			var dataset = $.extend(true, {}, $.grep(json.pages,function(e,i){
+				return e.id == b;
+			})[0]);
+			dataset.breadcrumb = [routeObj.pagefilter,routeObj.params.id]
+			// showContent('static',{'templateid':'splashPageTemplate','id':routeObj.params.id,'dataset':dataset});
+			$.extend(true, routeObj.params, {'pageType':'static','templateid':routeObj.templateid,'id':json.id,'dataset':dataset});
+			_app.ext.quickstart.a.showContent(routeObj.value,routeObj.params);
+		})
+		.fail(function() {
+			dump('FILTER DATA FOR ' + a + 'SUBCAT COULD NOT BE LOADED.');
+			_app.router.handleURIChange('/404');
+		});
+	});
+});	
+
+_app.router.addAlias('filter', function(routeObj){
+	_app.require(['store_cc','store_filter','store_search','store_routing','prodlist_infinite','store_prodlist', 'templates.html'], function(){
+//		dump('filter alias routeObj: '); dump(routeObj);
+		//decides if filter JSON is in local var or if it needs to be retrieved
+		var filterpage = routeObj.pagefilter;
+		routeObj.params.templateID = "filteredSearchTemplate";
+			if(_app.ext.store_filter.filterData[filterpage]){
+//			dump('RUNNING showPage');
+			showPage(routeObj,filterpage);
+		}
+		else {
+			dump('RUNNING filter loadPage');
+			loadPage(
+				filterpage, 
+				function(){showPage(routeObj,filterpage);}, 
+				function(){_app.router.handleURIChange('/404');}
+			);
+		}
+	});
+});
+
+
+_app.router.addAlias('subfilter', function(routeObj){
+	_app.require(['store_cc','store_filter','store_search','store_routing','prodlist_infinite','store_prodlist', 'templates.html'], function(){
+		//decides if filter JSON is in local var or if it needs to be retrieved
+		dump('-------------------------subfilter Alias'); dump(routeObj);
+		var filterpage = routeObj.pagefilter;
+		routeObj.params.templateID = "filteredSearchTemplate";
+		if(_app.ext.store_filter.filterData[filterpage]){
+			showSubPage(routeObj,filterpage);
+		}
+		else {
+			loadPage(
+				filterpage, 
+				function(){showSubPage(routeObj,filterpage);}, 
+				function(){_app.router.handleURIChange('/404');}
+			);
+		}
+	});
+});
+
+
+_app.router.addAlias('root', function(routeObj){
+	_app.require(['store_cc','store_filter','store_search','store_routing','prodlist_infinite','store_prodlist', 'templates.html'], function(){
+		var route = routeObj.pagefilter;
+		routeObj.params.templateID = 'splashPageRootTemplate';
+		if(_app.ext.store_cc.vars[route]) {
+			var filterData = $.extend(true, {}, _app.ext.store_cc.vars[route]);
+			$.extend(true, routeObj.params, {'templateid':routeObj.templateid,'id':filterData.id,'dataset':filterData});
+			_app.ext.quickstart.a.showContent(routeObj.value,routeObj.params);
+		}
+		else {
+			$.getJSON("filters/apparel/"+route+".json?_v="+(new Date()).getTime(), function(json){
+				json.breadcrumb = [json.id];
+				_app.ext.store_cc.vars[route] = json;
+				//Deep copy into the routeObj.params, and that becomes our new "infoObj"
+				//Need to pass through routeObj.params at this moment, as it is expected to become infoObj
+				//This may change later.
+				$.extend(true, routeObj.params, {'pageType':'static','templateid':routeObj.templateid,'id':json.id,'dataset':json});
+				_app.ext.quickstart.a.showContent(routeObj.value,routeObj.params);
+			})
+			.fail(function() {
+				dump('FILTER DATA FOR ' + route + ' ROOT COULD NOT BE LOADED.');
+			});
+		}
+	});
+});
+
+function createPagesRootFilter(root){
+	_app.router.appendHash({'type':'exact','route':'/'+root+'/','pagefilter':root,'callback':'root'});
+	_app.router.appendHash({'type':'match','route':'/'+root+'/{{id}}/','pagefilter':root,'callback':'filter'});
+	_app.couple('store_filter','pushFilterPage',{id:root,jsonPath:"filters/apparel/"+root+".json"});
+	}
+function createPagesSubcatSubfilter(root){
+	_app.router.appendHash({'type':'exact','route':'/'+root+'/','pagefilter':root,'callback':'root'});
+	_app.router.appendHash({'type':'match','route':'/'+root+'/{{id}}/','pagefilter':root,'callback':'subcat'});
+	_app.router.appendHash({'type':'match','route':'/'+root+'/{{id}}/{{end}}/','pagefilter':root,'callback':'subfilter'});
+	_app.couple('store_filter','pushFilterPage',{id:root,jsonPath:"filters/apparel/"+root+".json"});
+	}
+
+
+createPagesRootFilter('team-apparel-merchandise');
+createPagesRootFilter('apparel-merchandise');
+createPagesRootFilter('sale-apparel-merchandise');
+createPagesRootFilter('brands-apparel-merchandise');
+
+createPagesSubcatSubfilter('ncaa-team-apparel-merchandise');	
+createPagesSubcatSubfilter('nfl-team-apparel-merchandise');	
+createPagesSubcatSubfilter('nba-team-apparel-merchandise');
+createPagesSubcatSubfilter('mlb-team-apparel-merchandise');
+createPagesSubcatSubfilter('nhl-team-apparel-merchandise');
+createPagesSubcatSubfilter('soccer-team-apparel-merchandise');
+createPagesSubcatSubfilter('league-apparel-merchandise');
+					
+					
+	
+_app.u.bindTemplateEvent('filteredSearchTemplate', 'complete.filter',function(event, $context, infoObj){
+	if(infoObj.deferred){
+		$('form.filterList',$context).data('deferred', infoObj.deferred);
+		}
+	if(!$context.attr('data-filter-rendered')){
+		var $form = $('form.filterListTemplate', $context);
+		function submitForm(){
+			if($form.attr('data-filter-base')){
+				$form.trigger('submit');
+				}
+			else {
+//				 dump('gotta wait');
+				setTimeout(submitForm,100);
+				}
+			}
+		setTimeout(submitForm,0);
+		}
+	});
+
+_app.extend({
+	"namespace" : "seo_robots",
+	"filename" : "extensions/_robots.js"
+	});
 	
 _app.extend({
 	"namespace" : "store_prodlist",
@@ -477,6 +954,7 @@ _app.couple('quickstart','addPageHandler',{
 			}
 		_app.require(require,function(){
 			if(infoObj.templateID){}
+			//else if(infoObj.templateID = _app.ext.store_swc.u.fetchTemplateForPage(infoObj.navcat)){}
 			else{infoObj.templateID = 'categoryTemplate';}
 			if(infoObj.templateID = 'categoryTemplate'){
 				infoObj.prodRenderedDeferred = $.Deferred();
@@ -492,14 +970,13 @@ _app.extend({
 	"namespace" : "store_search",
 	"filename" : "extensions/store_search.js"
 	});
-	
 _app.couple('store_search','addUniversalFilter',{
 	'filter' : {"has_child":{"type":"sku","query":{"range":{"available":{"gte":1}}}}}
 	});
 _app.couple('store_search','addUniversalFilter',{
 	'filter' : {"not":{"term":{"tags":"IS_DISCONTINUED"}}}
 	});
-				
+	
 _app.couple('quickstart','addPageHandler',{
 	"pageType" : "search",
 	"require" : ['store_search','templates.html','store_routing'],
@@ -517,11 +994,15 @@ _app.extend({
 	"namespace" : "store_product",
 	"filename" : "extensions/store_product.js"
 	});
-
-
+	
+_app.extend({
+	"namespace" : "tools_zoom",
+	"filename" : "extensions/tools_zoom/tools_zoom.js"
+	});
+	
 _app.couple('quickstart','addPageHandler',{
 	"pageType" : "product",
-	"require" : ['store_product','store_navcats', 'store_routing', 'store_search', 'store_crm', 'templates.html'],
+	"require" : ['store_product','store_navcats', 'store_routing', 'store_crm', 'store_search', 'templates.html', 'store_prodlist', 'tools_zoom'],
 	"handler" : function($container, infoObj, require){
 		infoObj.deferred = $.Deferred();
 		infoObj.defPipeline.addDeferred(infoObj.deferred);
@@ -539,14 +1020,26 @@ _app.couple('quickstart','addPageHandler',{
 		}
 	});
 	
-// _app.extend({
-	// "namespace" : "cart_message",
-	// "filename" : "extensions/cart_message/extension.js"
-	// });
-	
 _app.extend({
 	"namespace" : "store_crm",
 	"filename" : "extensions/store_crm.js"
+	});
+_app.couple('quickstart','addLoginHandler',{
+	handler : function(tagObj){
+		$('#loginSuccessContainer').show(); //contains 'continue' button.
+/*campus: below id's changed to classes because there are two login forms*/
+		$('.loginMessaging').empty().show().append("Thank you, you are now logged in."); //used for success and fail messaging.
+		$('#loginFormContainer').hide(); //contains actual form.
+		$('.recoverPasswordContainer').hide(); //contains password recovery form.
+		setTimeout(function() { _app.ext.quickstart.u.handleLoginActions(); },500); //timeout because username was getting set on the DOM after the call. 
+		}
+	});
+_app.couple('quickstart','addLogoutHandler',{
+	handler : function(tagObj){
+		$(document.body).removeClass('buyerLoggedIn');
+		$('.username').empty();
+		_app.router.handleURIChange('/');
+		}
 	});
 	
 // _app.extend({
@@ -576,7 +1069,12 @@ _app.extend({
 		// }
 	// });
 	
-_app.rq.push(['script',0,'lightbox/js/lightbox-2.6.min.js']);
+	_app.u.bindTemplateEvent(function(){return true;},'depart.dismissDrop',function(event,$context,infoObj){
+		_app.ext.store_cc.u.dismissAllDrop();
+	});
+	
+	
+//_app.rq.push(['script',0,'lightbox/js/lightbox-2.6.min.js']); this runs in index apptimized.
 
 _app.model.getGrammar("pegjs");
 
@@ -649,10 +1147,10 @@ _app.router.appendInit({
 		return {'init':true} //returning anything but false triggers a match.
 		},
 	'callback':function(f,g){
-		$('#clickBlocker').remove();
 		dump(" -> triggered callback for appendInit");
 		g = g || {};
 		var $existingPage = $('#mainContentArea [data-app-uri]');
+		console.log($existingPage.length);
 		if($existingPage.length /*&& $existingPage.attr('data-app-uri') == document.location.pathname*/){
 			//We are a transplanted document, let's load accordingly.
 			//re-attach template handlers
@@ -667,8 +1165,7 @@ _app.router.appendInit({
 					}
 				}
 			//handleURIChange here will not change the page, but it will execute appropriate events
-			//that's why we pass false for the windowHistoryAction- no pushstate
-			_app.router.handleURIString($existingPage.attr('data-app-uri'), false, {"retrigger" : true});
+			_app.router.handleURIString($existingPage.attr('data-app-uri'), true, {"retrigger" : true});
 			}
 		else if (document.location.hash.indexOf("#!") == 0){
 			var pathStr = document.location.hash.substr(2);
@@ -678,10 +1175,10 @@ _app.router.appendInit({
 				pathStr = arr[0];
 				search = arr[1];
 				}
-			_app.router.handleURIChange("/"+pathStr, search, false, 'replace');
+			_app.router.handleURIChange("/"+pathStr, search, false, true);
 			}
 		else if(document.location.protocol == "file:"){
-			_app.router.handleURIChange("/", document.location.search, document.location.hash, 'replace');
+			_app.router.handleURIChange("/", document.location.search, document.location.hash, true);
 			}
 		else if (g.uriParams.marketplace){
 			_app.router.handleURIString('/product/'+g.uriParams.product+'/', 'replace');
@@ -689,10 +1186,10 @@ _app.router.appendInit({
 			}
 		else if(document.location.pathname)	{	
 			_app.u.dump('triggering handleHash');
-			_app.router.handleURIChange(document.location.pathname, document.location.search, document.location.hash, 'replace');
+			_app.router.handleURIChange(document.location.pathname, document.location.search, document.location.hash, true);
 			}
 		else	{
-			_app.router.handleURIChange("/", document.location.search, document.location.hash, 'replace');
+			_app.router.handleURIChange("/", document.location.search, document.location.hash, true);
 			_app.u.throwMessage(_app.u.successMsgObject("We're sorry, the page you requested could not be found!"));
 			window[_app.vars.analyticsPointer]('send', 'event','init','404 event',document.location.href);
 			}
