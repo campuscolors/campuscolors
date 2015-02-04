@@ -186,13 +186,13 @@ document.write = function(v){
 		addCart2CM : {
 			onSuccess : function(_rtag){
 				var cartID = false;
-//				_app.u.dump("BEGIN quickstart.callbacks.addCart2CM.onSuccess");
+				_app.u.dump("BEGIN quickstart.callbacks.addCart2CM.onSuccess");
 				if(_rtag.datapointer == 'appCartExists' && _app.data[_rtag.datapointer].exists)	{
 //					_app.u.dump(" -> existing cart is valid. add to cart manager"); 
 //					dump(" -> _rtag:"); dump(_rtag);
 					cartID = _rtag.cartid;
 					_app.model.addCart2Session(cartID);
-//					dump(" -> cart id is valid. added the cart to the session is "+_app.model.addCart2Session(cartID)); //this function updates _app.vars.carts
+					dump(" -> cart id is valid. added the cart to the session is "+_app.model.addCart2Session(cartID)); //this function updates _app.vars.carts
 					if($('#cartMessenger').length)	{
 						//_app.ext.cart_message.u.initCartMessenger(cartID,$('#cartMessenger')); //starts the cart message polling
 						$('#cartMessenger').tlc({'verb':'translate','dataset':_app.data['cartDetail|'+cartID]}).attr('data-cartid',cartID);
@@ -313,10 +313,9 @@ document.write = function(v){
 				
 // SANITY - handleTemplateEvents does not get called here. It'll get executed as part of showPageContent callback, which is executed in buildQueriesFromTemplate.
 				},
-			onError : function(responseData,uuid)	{
-//				dump(responseData);
-//				$('#mainContentArea').empty();
-				_app.u.throwMessage(responseData);
+			onMissing : function(responseData,uuid)	{
+				var $container = responseData._rtag.jqObj.closest('[data-app-uri]');
+				_app.ext.quickstart.a.pageNotFound($container, responseData);
 				}
 			}, //showProd 
 
@@ -349,10 +348,9 @@ document.write = function(v){
 				_app.ext.quickstart.u.buildQueriesFromTemplate($.extend(true, {}, tagObj));
 				_app.model.dispatchThis();
 				},
-			onError : function(responseData)	{
-				_app.u.throwMessage(responseData);
-				$('.loadingBG',$('#mainContentArea')).removeClass('loadingBG'); //nuke all loading gfx.
-				_app.ext.quickstart.u.changeCursor('auto'); //revert cursor so app doesn't appear to be in waiting mode.
+			onError: function(responseData)	{
+				var $container = responseData._rtag.jqObj.closest('[data-app-uri]');
+				_app.ext.quickstart.a.pageNotFound($container, responseData);
 				}
 			}, //fetchPageContent
 
@@ -439,7 +437,7 @@ document.write = function(v){
 				else	{
 //					dump(prods);
 //					tagObj.jqObj.tlc({'verb':'translate','datapointer':tagObj.datapointer});
-					_app.ext.store_prodlist.u.buildProductList({"loadsTemplate":"productListTemplateBuyerList","withInventory":1,"withVariations":1,"csv":prods,"hide_summary":1,"hide_pagination":1},tagObj.jqObj);
+					_app.ext.store_prodlist.u.buildProductList({"loadsTemplate":"productListTemplateBuyerList","withInventory":1,"withVariations":1,"parentID":tagObj.parentID,"csv":prods,"hide_summary":1,"hide_pagination":1},tagObj.jqObj);
 					_app.model.dispatchThis();
 					}
 				}
@@ -455,7 +453,7 @@ document.write = function(v){
 					$('#'+tagObj.targetID).anymessage({'message':'This list ('+listID+') appears to be empty.'});
 					}
 				else	{
-					_app.ext.store_prodlist.u.buildProductList({"templateID":tagObj.templateID,"csv":_app.data[tagObj.datapointer]['@products']}, tagObj.jqObj)
+					_app.ext.store_prodlist.u.buildProductList({"templateID":tagObj.templateID,"parentID":tagObj.targetID,"csv":_app.data[tagObj.datapointer]['@products']})
 					_app.model.dispatchThis();
 					}
 				}
@@ -481,7 +479,6 @@ document.write = function(v){
 the wiki translator has defaults for the links built in. however, these will most likely
 need to be customized on a per-ria basis.
 */
-		// !!!!! THESE LINKS NEED TO BE UPDATED
 		wiki : {
 			":search" : function(suffix,phrase){
 				return "<a href='#' onClick=\"return showContent('search',{'KEYWORDS':'"+encodeURI(suffix)+"'}); \">"+phrase+"<\/a>";
@@ -521,7 +518,7 @@ need to be customized on a per-ria basis.
 			}, //wiki
 
 // * 201403 -> infoObj now passed into pageTransition.
-		pageTransition : function($o,$n, infoObj, callback)	{
+/*campus robots*/		pageTransition : function($o,$n, infoObj, callback)	{
 //if $o doesn't exist, the animation doesn't run and the new element doesn't show up, so that needs to be accounted for.
 //$o MAY be a jquery instance but have no length, so check both.
 			if($o instanceof jQuery && $o.length)	{
@@ -531,26 +528,37 @@ need to be customized on a per-ria basis.
 2. Puts control of this into custom page transitions.
 */
 
-				$o.fadeOut(1000, function(){
-					$n.fadeIn(1000); 
-					callback();
-					}); //fade out old, fade in new.
+				if(infoObj.performJumpToTop && $(window).scrollTop() > 0)	{ // >0 scrolltop check should be on window, it'll work in ff AND chrome (body or html won't).
+					//new page content loading. scroll to top.
+					$('html, body').animate({scrollTop : 0},'fast',function(){
+/*campus robots*/		$o.fadeOut(1000, function(){$n.fadeIn(1000); callback(); setTimeout(function()
+/*campus robots*/		{_app.ext.quickstart.vars.showContentFinished = true;},100);}); //fade out old, fade in new.
+						});
+					} 
+				else	{ 
+/*campus robots*/	$o.fadeOut(1000, function(){$n.fadeIn(1000); callback(); setTimeout(function(){_app.ext.quickstart.vars.showContentFinished = true;},1000);}); //fade out old, fade in new.
+					}
 				}
 			else if($n instanceof jQuery)	{
-				$n.fadeIn(1000);
-				callback();
+				dump(" -> $o is not properly defined.  jquery: "+($o instanceof jQuery)+" and length: "+$o.length);
+				$('html, body').animate({scrollTop : 0},'fast',function(){
+					$n.fadeIn(1000);
+/*campus robots*/	setTimeout(function(){
+/*campus robots*/		_app.ext.quickstart.vars.showContentFinished = true;
+/*campus robots*/		}, 1000);
+					});
 				}
 			else	{
+				//hhmm  not sure how or why we got here.
 				dump("WARNING! in pageTransition, neither $o nor $n were instances of jQuery.  how odd.",'warn');
+				_app.ext.quickstart.vars.showContentFinished = true;
 				}
 			}, //pageTransition
 
 
 
 		tlcFormats : {
-			dump : function(data, thisTLC){
-				dump(data);
-				},
+			
 			searchbytag : function(data,thisTLC)	{
 				var argObj = thisTLC.args2obj(data.command.args,data.globals); //this creates an object of the args
 				var query = {"size":(argObj.size || 4),"mode":"elastic-search","filter":{"term":{"tags":argObj.tag}}};
@@ -716,7 +724,7 @@ LINK, ALT and IMG
 The value of link could be a hash (anchor) or a url (full or relative) so we try to guess.
 fallback is to just output the value.
 */
-			// !!!!! very outdated
+
 			banner : function($tag, data)	{
 				if(data.value)	{
 //				dump("begin quickstart.renderFormats.banner");
@@ -865,7 +873,7 @@ fallback is to just output the value.
 							})
 						}
 					else	{
-						$tag.attr({'data-href':'/product/'+pid,'data-app-click':'quickstart|showContent'});
+						$tag.attr({'data-hash':'#!product/'+pid,'data-app-click':'quickstart|showContent'});
 						}
 					}
 //				dump(" -> ID at end: "+$tag.attr('id'));
@@ -922,13 +930,42 @@ fallback is to just output the value.
 // myria.vars.session is where some user experience data is stored, such as recent searches or recently viewed items.
 // -> unshift is used in the case of 'recent' so that the 0 spot always holds the most recent and also so the length can be maintained (kept to a reasonable #).
 // infoObj.back can be set to 0 to skip a URI update (will skip both hash state and popstate.) 
-			
+			secureContentLocation : function(path){
+				if(path.indexOf('/') == 0){
+					path = path.substr(1);
+					}
+				var uri	= 	zGlobals.appSettings.https_app_url;
+				uri 	+=	path;
+				uri		+=	"?cartID="+_app.model.fetchCartID();
+				uri		+=	"&_session="+_app.vars._session;
+				return uri;
+				},
 				
-			showContent : function(uri,infoObj)	{
+			pageNotFound : function($container, failObj, params){
+				failObj = failObj || {};
+				$container.empty();
+				params = $.extend({
+					"templateID" : "pageNotFoundTemplate",
+					"require" : ["templates.html"]
+					},params);
+				
+				failObj.route = $container.attr('data-app-uri');
+				_app.require(params.require, function(){
+					var $page = new tlc().getTemplateInstance(params.templateID);
+					$page.tlc({'verb':'translate','dataset':failObj});
+					$container.append($page);
+					//override the deferred pipeline, just call it here
+					_app.ext.quickstart.vars.showContentFinished = true;
+					failObj.state = 'complete';
+					_app.renderFunctions.handleTemplateEvents($page, failObj);
+					});
+				},
+				
+			newShowContent : function(uri,infoObj)	{
 				_app.ext.quickstart.vars.showContentFinished = false;
 				
-				dump("BEGIN showContent ["+infoObj.pageType+"]."); dump(infoObj);
-				
+				dump("BEGIN newShowContent ["+infoObj.pageType+"]."); dump(infoObj);
+				dump(infoObj.templateid);
 				infoObj = infoObj || {}; //could be empty for a cart or checkout
 				infoObj.defPipeline = $.PromisePipeline();
 				//doing a setTimeout 0 here to allow the UI thread to finish executing before this condition sets
@@ -960,7 +997,7 @@ fallback is to just output the value.
 				
 				//Redirect to secure if required
 				if(((!_app.u.buyerIsAuthenticated() && infoObj.login) || infoObj.requireSecure) && document.location.protocol == "http:"){
-					var secure = _app.ext.quickstart.u.secureContentLocation(uri);
+					var secure = _app.ext.quickstart.a.secureContentLocation(uri);
 					document.location = secure;
 					return false;
 					}
@@ -970,7 +1007,7 @@ fallback is to just output the value.
 					$('#loginSuccessContainer').empty(); //empty any existing login messaging (errors/warnings/etc)
 					$('<button>').addClass('stdMargin ui-state-default ui-corner-all  ui-state-active').attr('id','modalLoginContinueButton').text('Continue').click(function(){
 						$('#loginFormForModal').dialog('close');
-						_app.ext.quickstart.a.showContent(uri, infoObj) //binding this will reload this 'page' and show the appropriate content.
+						_app.ext.quickstart.a.newShowContent(uri, infoObj) //binding this will reload this 'page' and show the appropriate content.
 						}).appendTo($('#loginSuccessContainer'));
 					return false;
 					}
@@ -1410,16 +1447,6 @@ $target.tlc({
 
 
 		u : {
-			secureContentLocation : function(path){
-				if(path.indexOf('/') == 0){
-					path = path.substr(1);
-					}
-				var uri	= 	zGlobals.appSettings.https_app_url;
-				uri 	+=	path;
-				uri		+=	"?cartID="+_app.model.fetchCartID();
-				uri		+=	"&_session="+_app.vars._session;
-				return uri;
-				},
 //executed when the app loads.  
 //sets a default behavior of loading homepage. Can be overridden by passing in infoObj.
 			handleAppInit : function()	{
@@ -1939,7 +1966,7 @@ either templateID needs to be set OR showloading must be true. TemplateID will t
  can't think of a reason not to use the default parentID, but just in case, it can be set.
 */
 			showCartInModal : function(P)	{
-
+				dump('showing cart in modal');
 				if(typeof P == 'object' && (P.templateID || P.showLoading === true)){
 					P.state = 'init';
 					var $modal = $('#modalCart');
@@ -1955,6 +1982,7 @@ either templateID needs to be set OR showloading must be true. TemplateID will t
 					else	{
 						P.cartid = _app.model.fetchCartID();
 						$modal = _app.ext.cco.a.getCartAsJqObj(P).attr({"id":"modalCart","title":"Your Shopping Cart"}).appendTo('body');
+						dump($modal);
 						_app.renderFunctions.handleTemplateEvents($modal,P); //init
 						$modal.on('complete',function(){
 							$("[data-app-role='shipMethodsUL']",$(this)).find(":radio").each(function(){
@@ -1991,6 +2019,98 @@ either templateID needs to be set OR showloading must be true. TemplateID will t
 					}
 				}, //showCartInModal
 
+//Customer pages differ from company pages. In this case, special logic is needed to determine whether or not content can be displayed based on authentication.
+// plus, most of the articles require an API request for more data.
+//handleTemplateEvents gets executed in showContent, which should always be used to execute this function.
+//by the time showCustomer is run, we are already on https if it is required.
+			showCustomer : function(infoObj)	{
+						switch(infoObj.show)	{
+							case 'help':
+								myApp.ext.quickstart.a.showBuyerCMUI();
+								break;
+
+							case 'subscriberLists':
+								_app.model.addDispatchToQ({"_cmd":"buyerDetail",'cartid':_app.model.fetchCartID(),"_tag":{"datapointer":"buyerDetail"}},"mutable");
+								//executes same code as newsletter.
+
+							case 'newsletter':
+								$article.showLoading({'message':'Fetching newsletter list'});
+								_app.model.addDispatchToQ({"_cmd":"appNewsletterList","_tag" : {
+									"datapointer" : "appNewsletterList",
+									callback : 'tlc',
+									extendByDatapointers : ["buyerDetail","cartDetail|"+_app.model.fetchCartID()], //including the cart allows name and email address to be populated.
+									verb : 'translate',
+									jqObj : $article
+									}},'mutable');
+								_app.model.dispatchThis('mutable');
+								$article.data('isTranslated',true);
+								break;	
+							case 'invoice':
+
+								var orderID = infoObj.uriParams.orderid;
+								var cartID = infoObj.uriParams.cartid;
+								if(cartID && orderID)	{
+									$article.showLoading({'message':'Retrieving order information'});
+									_app.model.addDispatchToQ({"_cmd":"buyerOrderGet",'orderid':orderID,'cartid':cartID,"_tag":{
+										"datapointer":"buyerOrderGet|"+orderID,
+										"callback": "tlc",
+										"jqObj" : $article
+										}},"mutable");
+									_app.model.dispatchThis('mutable');
+									}
+								else	{
+									$article.anymessage({'message':'Both a cart id and an order id are required (for security reasons) and one is not available. Please try your link again or, if the error persists, contact us for additional help.'});
+									}
+								break;
+							case 'orders':
+							//always fetch a clean copy of the order history.
+								_app.model.addDispatchToQ({"_cmd":"buyerPurchaseHistory","_tag":{
+									"datapointer":"buyerPurchaseHistory",
+									"callback":"tlc",
+									"verb" : "translate",
+									"jqObj" : $("[data-app-role='orderList']",$article).empty()
+									}},"mutable");
+								break;
+							case 'lists':
+//								_app.model.addDispatchToQ({"_cmd":"buyerProductLists","_tag":{"datapointer":"buyerProductLists",'parentID':'listsContainer','callback':'showBuyerLists','extension':'quickstart'}},"mutable");
+								_app.model.addDispatchToQ({"_cmd":"buyerProductLists","_tag":{"datapointer":"buyerProductLists",'verb':'translate','jqObj': $('#listsArticle',$customer),'callback':'tlc',onComplete : function(rd){
+//data formatting on lists is unlike any other format for product, so a special handler is used.				
+									function populateBuyerProdlist(listID,$context)	{
+										//add the product list ul here because tlc statement has list ID for bind.
+										$("[data-buyerlistid='"+listID+"']",$customer).append("<ul data-tlc=\"bind $var '.@"+listID+"'; store_prodlist#productlist  --hideSummary='1' --withReviews='1' --withVariations='1' --withInventory='1' --templateid='productListTemplateBuyerList'  --legacy;\" class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>");
+										_app.model.addDispatchToQ({"_cmd":"buyerProductListDetail","listid":listID,"_tag" : {'datapointer':'buyerProductListDetail|'+listID,"listid":listID,'callback':'buyerListAsProdlist','extension':'quickstart', "require":"store_prodlist",'jqObj':$("[data-buyerlistid='"+listID+"'] ul",$context)}},'mutable');
+										}
+									
+									var data = _app.data[rd.datapointer]['@lists']; //shortcut
+									var L = data.length;
+									var numRequests = 0;
+									for(var i = 0; i < L; i += 1)	{
+										populateBuyerProdlist(data[i].id,rd.jqObj)
+										}
+									_app.model.dispatchThis('mutable');
+									//no sense putting 1 list into an accordion.
+									if(L > 1)	{
+										$('.applyAccordion',rd.jqObj).accordion({heightStyle: "content"});
+										}
+									}}},"mutable");
+								break;
+							case 'myaccount':
+	//							dump(" -> myaccount article loaded. now show addresses...");
+								_app.ext.cco.calls.appCheckoutDestinations.init(_app.model.fetchCartID(),{},'mutable'); //needed for country list in address editor.
+								_app.model.addDispatchToQ({"_cmd":"buyerAddressList","_tag":{'callback':'tlc','jqObj':$article,'verb':'translate','datapointer':'buyerAddressList'}},'mutable');
+								break;
+							
+							case 'logout':
+								$(document.body).removeClass('buyerLoggedIn');
+								$('.username').empty();
+								_app.u.logBuyerOut();
+								document.location.hash = '';
+								break;
+							default:
+								dump("WARNING - unknown article/show ["+infoObj.show+" in showCustomer. ");
+							}
+				},  //showCustomer				
+				
 			showPaymentUpdateModal : function(orderid,cartid)	{
 				var $updateDialog = $("<div \/>",{'title':'Payment Update'}).appendTo('body');
 				$updateDialog.dialog({'modal':true,'width':500,'height':500});
@@ -2419,11 +2539,11 @@ else	{
 				_app.ext.quickstart.a.handleProdPreview($ele.closest("[data-pid]").data('pid'));
 				return false;
 				},
-			// !!! check for use, probably remove (why use an app-click for this when an <a> with an href is crawlable?
+
 			showContent : function($ele,p)	{
 				p.preventDefault();p
-				if($ele.attr('data-href'))	{
-					_app.router.handleURIString($ele.attr('data-href'));
+				if($ele.data('hash'))	{
+					document.location.hash = $ele.data('hash');
 					}
 				else	{
 					$("#globalMessaging").anymessage({"message":"In quickstart.e.showContent, no data-hash set on trigger element.","gMessage":true});
@@ -2503,14 +2623,12 @@ else	{
 			searchFormSubmit : function($ele,p)	{
 				p.preventDefault();
 				var sfo = $ele.serializeJSON($ele);
-				dump('searchFormSubmit');
-				dump(sfo);
 				if(sfo.KEYWORDS)	{
 					_app.router.handleURIChange('/search/keywords/'+sfo.KEYWORDS);
 					}
 				return false;
 				},
-			// !!!!! check for use and update
+
 			showBuyerAddressUpdate : function($ele,p)	{
 				p.preventDefault();
 				_app.require(['store_crm','cco'],function(){
@@ -2520,13 +2638,11 @@ else	{
 						},function(){
 						$('#mainContentArea_customer').empty().remove(); //kill so it gets regenerated. this a good idea?
 						showContent('customer',{'show':'myaccount'});
-						
 						});
 					});
 				return false;
 				}, //showBuyerAddressUpdate
 
-			// !!!!! check for use and update
 			showBuyerAddressAdd : function($ele,p)	{
 				p.preventDefault();
 				_app.require(['store_crm', 'order_create'],function(){
@@ -2540,7 +2656,6 @@ else	{
 				return false;
 				}, //showBuyerAddressAdd
 
-			// !!!!! check for use and update
 			showBuyerAddressRemove : function($ele, p){
 				p.preventDefault();
 				_app.ext.store_crm.u.showAddressRemoveModal({
