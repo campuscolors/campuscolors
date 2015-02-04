@@ -463,7 +463,7 @@
 { "type":"path", "if":"/(Chicago-Fire-Soccer-Apparel-Merchandise)", "then#redirect":"/search/keywords/$1" },
 { "type":"path", "if":"/(Colorado-Buffaloes-Apparel-Merchandise)", "then#redirect":"/search/keywords/$1" },
 { "type":"path", "if":"/(Final-Four-2014)", "then#redirect":"/search/keywords/$1" },
-{ "type":"path", "if":"/(Category--Auburn-Tigers--m-5582)", "then#redirect":"/search/keywords/$1" }
+{ "type":"path", "if":"/(Category--Auburn-Tigers--m-5582)", "then#redirect":"/search/keywords/$1" },
 
 //redirect old search urls
 { "type":"path", "if":"/search\\.cgis/(.*?)", "then#redirect":"/search/keywords/$1" }
