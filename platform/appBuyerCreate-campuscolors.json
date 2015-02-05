@@ -16,6 +16,7 @@
 	 
 
 	"createBuyer": [
+		"SET?newsletter-1=1",
 		"SET?firstname=$firstname&lastname=lastname",
 		"PASSWORD-SET?password=$pass",
 		"ADDRCREATE?SHORTCUT=DEFAULT&TYPE=BILL&firstname=$firstname&lastname=$lastname&phone=$phone&address1=$address1&address2=$address2&email=$email&city=$city&region=$region&postal=$postal",
