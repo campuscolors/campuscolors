@@ -11,7 +11,6 @@
 		{ "required":0,"var":"city","type":"text","label":"Purchasing Contact City" },
 		{ "required":0,"var":"region","type":"text","label":"Purchasing Contact Region/State" },
 		{ "required":0,"var":"postal","type":"text","label":"Purchasing Contact Postal/Zip" },
-		{ "required":0,"var":"country","type":"text","label":"Purchasing Contact Country" },
 		{ "required":0,"var":"phone","type":"text","label":"Purchasing Contact Phone" }
 	],
 	 
