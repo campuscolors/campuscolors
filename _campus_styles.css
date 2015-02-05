@@ -53,7 +53,8 @@ body {font-family:Oxygen, Helvetica, sans-serif;}
 .redText {color:#781c2b;}
 .yellowText {color:#fbe143;}
 .whiteText {color:#ffffff;}
-.ccButton, .tabContent .applyButton.ccButton, .applyButton.continueShoppingButton.ccButton, .noHovCCButton {padding:1% 2%; color:#000000; font-family:Arial, sans-serif; font-weight:bold; border-top:2px outset #fbe143; border-right:2px outset #000000; border-bottom:2px outset #000000; border-left:2px outset #fbe143; box-shadow:2px 2px 0 0 #cccccc; border-radius:0;}
+.ccButton, .tabContent .applyButton.ccButton, .applyButton.continueShoppingButton.ccButton, 
+.noHovCCButton {padding:1% 2%; color:#000000; font-family:Arial, sans-serif; font-weight:bold; border-top:2px outset #fbe143; border-right:2px outset #000000; border-bottom:2px outset #000000; border-left:2px outset #fbe143; box-shadow:2px 2px 0 0 #cccccc; border-radius:0;}
 
 .secTitleWrap {background-color:#9e9e9e; padding:5px 0;}
 .secTitleBorder {border-top:2px solid #525252; border-bottom:2px solid #525252;}
@@ -420,12 +421,14 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 
 
 
-/* CUSTOMER TEMPLATE*/
+/* LOGIN / CREATE ACCOUNT */
 .logContainer {height:auto; width:100%; padding:20px;}
 #loginFormContainer .logContainer {width:100%; float:none;}
 #loginFormContainer p {margin:1em 0;}
 .logTitle {color:#781c2b; font-size:1.5em;}
 #loginForm {width:100%}
+#modalLoginContinueButton.ccButton {background:#fbe143; border-width:2px; border-style:outset; border-color:#fbe143 #000000 #000000 #fbe143; color:#000000;}
+/*.ui-widget-content #modalLoginContinueButton.ccButton.ui-state-default */
 .zform_textbox {width:100%; padding:10px; margin:10px auto; display:block; border:1px solid #000000;}
 .createaccountArticle .ccButton, #loginFormContainer .ccButton {width:100%; color:#ffffff; border-top:2px outset #308c67; border-left:2px outset #308c67; font-family:Arial, sans-serif; font-weight:bold; display:inline-block; text-align:center; text-decoration:none; font-size:1.1em; padding:0.4em 1em;}
 .createaccountArticle div[data-slide='toggle'], #loginFormContainer div[data-slide='toggle'] {display:none;}
