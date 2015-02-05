@@ -1,18 +1,18 @@
 {
-	"_version":"201405",
+	"_version":"201411",
 	"_start":"createBuyer",
 	"_inputs":[
-		{ "required":1,"var":"firstname","type":"text","label":"First Name" },
-		{ "required":1,"var":"lastname","type":"text","label":"Last Name" },
+		{ "required":1,"var":"firstname","type":"text","label":"Purchasing Contact Firstname" },
+		{ "required":1,"var":"lastname","type":"text","label":"Purchasing Contact Lastname" },
 		{ "required":1,"var":"email","type":"text","label":"Email" },
 		{ "required":1,"var":"pass","type":"text","label":"Password" },
-		{ "required":0,"var":"address1","type":"text","label":"Address1" },
-		{ "required":0,"var":"address2","type":"text","label":"Address2" },
-		{ "required":0,"var":"city","type":"text","label":"City" },
-		{ "required":0,"var":"region","type":"text","label":"Region" },
-		{ "required":0,"var":"postal","type":"text","label":"Postal/Zip" },
-		{ "required":0,"var":"country","type":"text","label":"Country" },
-		{ "required":0,"var":"phone","type":"text","label":"Phone" }
+		{ "required":0,"var":"address1","type":"text","label":"Purchasing Contact Address1" },
+		{ "required":0,"var":"address2","type":"text","label":"Purchasing Contact Address2" },
+		{ "required":0,"var":"city","type":"text","label":"Purchasing Contact City" },
+		{ "required":0,"var":"region","type":"text","label":"Purchasing Contact Region/State" },
+		{ "required":0,"var":"postal","type":"text","label":"Purchasing Contact Postal/Zip" },
+		{ "required":0,"var":"country","type":"text","label":"Purchasing Contact Country" },
+		{ "required":0,"var":"phone","type":"text","label":"Purchasing Contact Phone" }
 	],
 	 
 
