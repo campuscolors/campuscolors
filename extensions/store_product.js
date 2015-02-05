@@ -219,10 +219,19 @@ addToCart : function (pid,$form){
 		
 		//if errors occured, report them.
 			 if(valid == false)	{
-				$form.anymessage({
-					'message' : 'It appears you left some required selections blank. Please make the following selection(s): <ul>'+errors+'<\/ul>',
-					'errtype' : 'youerr'
-					})
+//campus colors:
+				if(errors.indexOf("size") < 0) {
+					var thisMessage = {"message":"Please select a size."};
+				}
+				else {
+					var thisMessage = {"message":"It appears you left som required selections blank. Please make the following selection(s): <ul>"+errors+"<\/ul>","errtype":"youerr"};
+				}
+				$form.anymessage(thisMessage);
+		//orig messaging:		
+		//		$form.anymessage({
+		//			'message' : 'It appears you left some required selections blank. Please make the following selection(s): <ul>'+errors+'<\/ul>',
+		//			'errtype' : 'youerr'
+		//			})
 				}
 		//if all options are selected AND checkinventory is on, do inventory check.
 			else if(typeof zGlobals == 'object' && zGlobals.globalSettings.inv_mode > 1)	{
