@@ -416,7 +416,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 .vertLinkCont.ncaa .vertDropout .scrollDropout {}
 .vertLinkCont.nhl .vertDropout .scrollDropout {}
 .dropLinkCont {height:18px; width:175px; margin:1px 10px; overflow:hidden;  padding:2px 0; font-size:0.7em; border:none; text-align:left; float:left; display:block;}
-.vertLinkCont .dropLink {color:#781c2b;}
+.vertLinkCont .dropLink {color:#ffffff;}
 .vertLinkCont.expandStyle .dropLink {color:#fbe143;}
 
 
@@ -696,7 +696,6 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.homeMain .topBrandItem.fortySevenLogo {background-position:-194px -343px;}
 	.homeMain .topBrandItem.retroLogo {background-position:-235px -343px;}
 	.homeVertNav {width:220px; padding:5px 5px 0 5px; position:relative;} /* compat-max-width:230px */
-	.vertNavBorder {border-left:3px solid #525252; border-right:3px solid #525252; border-top:3px solid #525252; border-radius:4px 4px 0 0; padding:0 0 11px 0;}
 	.vertNavTitle {font-size:12px;}
 	.homeVertNav .vertLinkCont, .vertNavTitle {margin-left:13%; margin-right:33%; position:relative;}
 	.homeVertNav .vertLinkCont.vertNavLast {padding:0 0 5px 0;}
@@ -709,6 +708,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.vertDropout .vertNavBorder {border:2px solid #525252; border-radius:4px; padding:20px;}
 	.vertDropout .sprite {height:82px; width:32px; position:absolute; top:12px; left:7px; background-position:-467px -50px;}
 	.vertDropout .scrollDropout {column-count:4; -moz-column-count:4; -webkit-column-count:4;} /*columns will be alpha by row in IE9*/
+	.vertDropout .scrollDropout a:hover {color:#194835;}
 	.vertLinkCont.ncaa .vertDropout .scrollDropout {}
 	.vertLinkCont.nhl .vertDropout .scrollDropout {}
 
