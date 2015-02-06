@@ -43,12 +43,9 @@ body {font-family:Oxygen, Helvetica, sans-serif;}
 
 .bareYellowLink {color:#fbe143; text-decoration:none;}
 .uYellowLink {color:#fbe143; text-decoration:underline;}
-.bareYellowLink:hover, .uYellowLink:hover {color:#ffffff;}
 .uRedLink {color:#b75970; text-decoration:underline;}
-.uRedLink:hover {color:#781c2b;}
 .bareRedLink {color:#781c2b; text-decoration:none;}
 .bareWhiteLink {color:#ffffff; text-decoration:none;}
-.bareWhiteLink:hover {color:#fbe143;}
 .bareBlackLink {color:#000000; text-decoration:none;}
 .redText {color:#781c2b;}
 .yellowText {color:#fbe143;}
@@ -652,6 +649,9 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	
 	
 @media screen and (min-width : 960px) {
+	.bareYellowLink:hover, .uYellowLink:hover {color:#ffffff;}
+	.uRedLink:hover {color:#781c2b;}
+	.bareWhiteLink:hover {color:#fbe143;}
 	.wrapper {width:920px; margin:0 auto;}
 	.listWrapper, .standardNav .slideMenuBorder {width:920px;}
 	.hideDesktop {display:none;}
