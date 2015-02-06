@@ -17,6 +17,14 @@
 			"href"		: "/search/promo/promotion-one/"
 		},
 	    {
+			"src"			: "banners/ohio_state_national_champions_700x268.jpg",
+			"width"		: "700",
+			"height"	: "268",
+			"alt"			: "Ohio State 2014 National Champions",
+			"title"		: "Ohio State 2014 National Champions",
+			"href"		: "/search/promo/promotion-two/"
+		},
+	    {
 			"src"			: "banners/nike_700x268.jpg",
 			"width"		: "700",
 			"height"	: "268",
