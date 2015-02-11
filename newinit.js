@@ -594,6 +594,10 @@ _app.extend({
 	"namespace" : "store_cc",
 	"filename" : "extensions/_store_cc.js"
 	});
+_app.extend({
+	"namespace" : "cc_product",
+	"filename" : "extensions/_cc_product.js"
+	});
 _app.u.bindTemplateEvent(function(){return true;}, 'complete.suppress', function(event, $context, infoObj){_app.ext.store_cc.u.suppress($context);});
 _app.extend({
 	"namespace" : "store_filter",
@@ -1002,7 +1006,7 @@ _app.extend({
 	
 _app.couple('quickstart','addPageHandler',{
 	"pageType" : "product",
-	"require" : ['store_product','store_navcats', 'store_routing', 'store_crm', 'store_search', 'templates.html', 'store_prodlist', 'tools_zoom'],
+	"require" : ['store_product','store_navcats', 'store_routing', 'store_crm', 'store_search', 'templates.html', 'store_prodlist', 'tools_zoom','cc_product'],
 	"handler" : function($container, infoObj, require){
 		infoObj.deferred = $.Deferred();
 		infoObj.defPipeline.addDeferred(infoObj.deferred);
