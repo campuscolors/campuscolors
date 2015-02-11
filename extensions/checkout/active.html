@@ -367,7 +367,7 @@ the defaultVar on prodName & image is for promotions, which have a 'description'
 	<div data-tlc="bind $var '.sum.rmc_total'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='<span class=&quot;summaryPriceAlign&quot;>Returns Credit: </span>'; apply --add --class='returnsCreditTotal'; apply --append;}};"></div>
 	<div data-tlc="bind $var '.sum.spc_total'; if (is $var --notblank;) {{format --currency='USD'; format --prepend='<span class=&quot;summaryPriceAlign&quot;>Specialty: </span>'; apply --add --class='spcTotal'; apply --append;}};"></div>
 
-	<div data-tlc="bind $var '.sum.balance_due_total'; cco#orderbalance  --classname='orderBalanceDue' --hidezero='false' --currencysign='$' --legacy;" data-checkout="1"></div>
+	<div data-tlc="bind $var '.sum.balance_due_total'; cco#orderbalance  --classname='orderBalanceDue' --hidezero='false' --currencySign='$' --legacy;" data-checkout="1"></div>
 
 	<div class="couponEntryContainer clearfix marginBottom" data-app-role="couponContainer">
 		<label for="coupon">Coupon/Promo Code:</label>

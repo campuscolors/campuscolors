@@ -72,11 +72,19 @@ var prodlist_infinite = function(_app) {
 				var $list = _rtag.list;
 				var EQ = $list.data('elastic-query');
 				if($list && $list.length)	{
-					$list.data('total-page-count', Math.ceil( _app.data[_rtag.datapointer].hits.total / EQ.size));
-					
+					var totalPages = Math.ceil( _app.data[_rtag.datapointer].hits.total / EQ.size);
+					// dump(totalPages);
+					$list.data('total-page-count', totalPages);
+					// dump($list.attr('data-total-page-count'));
+					// dump(_app.data[_rtag.datapointer].hits.total);
+					// dump(EQ.size);
+					// dump(Math.ceil( _app.data[_rtag.datapointer].hits.total / EQ.size));
+					if(_rtag.emptyList){
+						$list.intervaledEmpty();
+						}
 					$list.removeClass('loadingBG');
 					if(L == 0)	{
-						$list.append("Your query returned zero results.");
+						//$list.append("Your query returned zero results.");
 						}
 					else	{
 						$list.append(_app.ext.store_search.u.getElasticResultsAsJQObject(_rtag)); //prioritize w/ getting product in front of buyer
@@ -203,7 +211,6 @@ It is run once, executed by the renderFormat.
 				function handleProd(pid,$templateCopy)	{
 					$templateCopy.attr('data-pid',pid);
 					return _app.calls.appProductGet.init({"pid":pid,"withVariations":plObj.withVariations,"withInventory":plObj.withInventory},{'callback':'translateTemplate','extension':'store_prodlist',jqObj:$templateCopy,'verb':'translate'},'mutable');
-// is this old or custom for campus?   return _app.calls.appProductGet.init({"pid":pid,"withVariations":plObj.withVariations,"withInventory":plObj.withInventory},{'callback':'tlc',jqObj:$templateCopy,'verb':'translate'},'mutable');
 					}
 //Go get ALL the data and render it at the end. Less optimal from a 'we have it in memory already' point of view, but solves a plethora of other problems.
 				for(var i = 0; i < L; i += 1)	{
@@ -288,30 +295,48 @@ else	{
 
 				},
 			handleElasticScroll : function(_rtag, $tag){
+				dump('handleElasticScroll');
+				//dump(_rtag);
 				var EQ = $tag.data('elastic-query');
 				var currPage = $tag.data('page-in-focus');
+				// dump('CURRPAGE: '+currPage);
 				var totalPages = $tag.data('total-page-count');
-				if(_app.data[_rtag.datapointer].hits.total <= EQ.size)	{$tag.parent().find("[data-app-role='infiniteProdlistLoadIndicator']").hide();} //do nothing. fewer than 1 page worth of items.
-				else if(currPage >= totalPages)	{
-				//reached the last 'page'. disable infinitescroll.
+				// dump('TOTAL: '+totalPages);
+				// dump(currPage >= totalPages);
+				var onScroll = function(override){
+					//will load data when two rows from bottom.
+					// dump('onScroll');
+					// dump(override);
+					// dump($(window).scrollTop());
+					// dump($(document).height());
+					// dump($(window).height());
+					// dump($tag.children().first().height());
+					// dump(override || $(window).scrollTop() >= ( $(document).height() - $(window).height() - ($tag.children().first().height() * 2) ) );
+					//campus colors has a large footer
+					//if(override || $(window).scrollTop() >= ( $(document).height() - $(window).height() - ($tag.children().first().height() * 2) ) )	{
+/*campus*/				if(override || $(window).scrollTop() >= ( $(document).height() - $(window).height() - ($tag.children().first().height() * 6) ) )	{
+						$(window).off('scroll.infiniteScroll');
+						if($tag.data('isDispatching') == true)	{}
+						else	{
+							var _tag = _app.u.getWhitelistedObject(_rtag, ['datapointer','callback','extension','list','templateID','loadFullList']);
+							_app.ext.store_search.u.changePage($tag, currPage+1, _tag);
+							}
+						}
+					}
+				
+				if(currPage >= totalPages)	{
+					//dump("Reached last page, stopping scroll");
 					$(window).off('scroll.infiniteScroll');
 					$tag.parent().find("[data-app-role='infiniteProdlistLoadIndicator']").hide();
 					}
 				else	{
-					$(window).off('scroll.infiniteScroll').on('scroll.infiniteScroll',function(){
-						//will load data when two rows from bottom.
-						//if( $(window).scrollTop() >= ( $(document).height() - $(window).height() - ($tag.children().first().height() * 2) ) )	{
-						//campus colors has a large footer
-						if( $(window).scrollTop() >= ( $(document).height() - $(window).height() - ($tag.children().first().height() * 6) ) )	{
-							$(window).off('scroll.infiniteScroll');
-							if($tag.data('isDispatching') == true)	{}
-							else	{
-								var _tag = _app.u.getWhitelistedObject(_rtag, ['datapointer','callback','extension','list','templateID']);
-								_app.ext.store_search.u.changePage($tag, currPage+1, _tag);
-								}
-							}
-						});
-/*campus*/				}
+					if(_rtag.loadFullList){
+						onScroll(true);
+						}
+					else {
+						$(window).off('scroll.infiniteScroll').on('scroll.infiniteScroll', function(){onScroll(false);});
+						}
+					}
 				}
 
 			} //util

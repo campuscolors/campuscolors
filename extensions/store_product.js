@@ -219,10 +219,19 @@ addToCart : function (pid,$form){
 		
 		//if errors occured, report them.
 			 if(valid == false)	{
-				$form.anymessage({
-					'message' : 'It appears you left some required selections blank. Please make the following selection(s): <ul>'+errors+'<\/ul>',
-					'errtype' : 'youerr'
-					})
+//campus colors:
+				if(errors.indexOf("size") < 0) {
+					var thisMessage = {"message":"Please select a size."};
+				}
+				else {
+					var thisMessage = {"message":"It appears you left som required selections blank. Please make the following selection(s): <ul>"+errors+"<\/ul>","errtype":"youerr"};
+				}
+				$form.anymessage(thisMessage);
+		//orig messaging:		
+		//		$form.anymessage({
+		//			'message' : 'It appears you left some required selections blank. Please make the following selection(s): <ul>'+errors+'<\/ul>',
+		//			'errtype' : 'youerr'
+		//			})
 				}
 		//if all options are selected AND checkinventory is on, do inventory check.
 			else if(typeof zGlobals == 'object' && zGlobals.globalSettings.inv_mode > 1)	{
@@ -337,7 +346,7 @@ addToCart : function (pid,$form){
 			detailedinvdisplay : function($tag,data)	{
 				var pid = data.value.pid;
 				if(pid && data.value['@inventory'] && data.value['@inventory'][pid])	{
-					$tag.append("<div>Available Inventory: "+data.value['@inventory'][pid].inv+"<\/div>");
+					$tag.append("<div>Available Inventory: "+data.value['@inventory'][pid].AVAILABLE+"<\/div>");
 					}
 				else if(pid && data.value['@inventory'])	{
 					var inventory = data.value['@inventory'],
@@ -813,7 +822,7 @@ NOTES
 							_app.require('cco',function(){
 								_app.ext.cco.calls.cartItemAppend.init(cartObj,_tag || {},'immutable');
 								_app.model.dispatchThis('immutable');
-								cartMessagePush(cartObj._cartid,'cart.itemAppend',_app.u.getWhitelistedObject(cartObj,['sku','pid','qty','quantity','%variations']));
+								//cartMessagePush(cartObj._cartid,'cart.itemAppend',_app.u.getWhitelistedObject(cartObj,['sku','pid','qty','quantity','%variations']));
 								});
 							}
 						}

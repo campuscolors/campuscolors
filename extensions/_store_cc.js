@@ -1284,7 +1284,7 @@ var store_cc = function(_app) {
 					//if phone res different messages used because of size, so different json
 					if(_app.ext.store_cc.vars.homepageBanners) {
 						var thisJSON = screen.width > 750 ? _app.ext.store_cc.vars.homepageBanners.header : _app.ext.store_cc.vars.homepageBanners.mobileheader; 
-						screen.width > 750 ? $headerContainer.parent().addClass('greenGradient') : $headerContainer.parent().addClass('greyGradient');
+						//screen.width > 750 ? $headerContainer.parent().addClass('greenGradient') : $headerContainer.parent().addClass('greyGradient');
 						dump(thisJSON);
 						for(var i = 0; i < thisJSON.length; i++) {
 							var thisBanner = thisJSON[i];

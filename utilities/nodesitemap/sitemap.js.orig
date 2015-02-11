@@ -58,7 +58,11 @@ if(opts['customurls']){
 // now load all products and categories
 //
 var request = new XMLHttpRequest();
+<<<<<<< HEAD
 request.open('GET','http://'+DOMAIN+'/jsonapi/call/v201410/appSEOFetch',false);
+=======
+request.open('GET','http://www.sportsworldchicago.com/jsonapi/call/v201410/appSEOFetch',false);
+>>>>>>> 8066b1ac3b572046a9b789d57cef8d9d8e5b5199
 request.send(null);
 
 var urls = JSON.parse(request.responseText);
@@ -74,10 +78,17 @@ for( var i in urls['@OBJECTS'] ) {
 				var url = '';
 				switch (res.type) {
 						case 'pid':
+<<<<<<< HEAD
 								url = '/product/' + res.id;
 								break;
 						case 'navcat':
+								url = '/category/' + res.id.substr(1);  // strip leading . in category name
+=======
+								url = '/product/' + res.id + '/';
+								break;
+						case 'navcat':
 								url = '/category/' + res.id.substr(1) +'/';  // strip leading . in category name
+>>>>>>> 8066b1ac3b572046a9b789d57cef8d9d8e5b5199
 								break;
 						case 'list' :
 								// we don't index these.
@@ -105,7 +116,11 @@ var CHUNKS = new Array;
 while (URLS.length > 0) {
         if (CHUNKS[CHUNKCOUNT]  == null) { CHUNKS[CHUNKCOUNT] = new Array; }    // initialize array
         CHUNKS[CHUNKCOUNT].push( URLS.shift() );
+<<<<<<< HEAD
+        if (CHUNKS[CHUNKCOUNT].length > 50000) { CHUNKCOUNT++; }
+=======
         if (CHUNKS[CHUNKCOUNT].length >= 50000) { CHUNKCOUNT++; }
+>>>>>>> 8066b1ac3b572046a9b789d57cef8d9d8e5b5199
         }
 
 //
@@ -156,4 +171,8 @@ while (CHUNKS.length>0) {
 
 console.log('writing '+PATH+'sitemap.xml');
 fs.writeFileSync(PATH + 'sitemap.xml', si.toString());
+<<<<<<< HEAD
 console.log('done');
+=======
+console.log('done');
+>>>>>>> 8066b1ac3b572046a9b789d57cef8d9d8e5b5199
