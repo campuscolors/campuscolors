@@ -1,14 +1,6 @@
 {
 	"main" : [
 		{
-			"src"			: "banners/valentines_day_700x268.jpg",
-			"width"		: "700",
-			"height"	: "268",
-			"alt"			: "Be A Sweetheart This Valentine's Day!",
-			"title"		: "Be A Sweetheart This Valentine's Day!",
-			"href"		: ""
-		},
-		{
 			"src"			: "banners/patriots_banner_700x268.jpg",
 			"width"		: "700",
 			"height"	: "268",
