@@ -33,7 +33,7 @@
 { "type":"path", "if":"/my_wishlist/", "then#sendfile":"/index.html", "apptimize":false },
 { "type":"path", "if":"/(league|ncaa-team|nfl-team|nba-team|mlb-team|nhl-team|soccer-team|brands|sale|team)\\-apparel\\-merchandise/.*", "then#sendfile":"/index.html", "apptimize":"false" },
 { "type":"path", "if":"/apparel\\-merchandise/.*", "then#sendfile":"/index.html", "apptimize":"false" },
-{ "type":"path", "if":"/march-madness/.*", "then#sendfile":"/index.html", "apptimize":"false" },
+{ "type":"path", "if":"/march\\-madness/.*", "then#sendfile":"/index.html", "apptimize":"false" },
 { "type":"path", "if":"/store_locations/", "then#sendfile":"/index.html", "apptimize":"false" },
 
 // redirct search pages
