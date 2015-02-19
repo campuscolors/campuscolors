@@ -880,9 +880,9 @@ _app.u.bindTemplateEvent('splashPageRootTemplate', 'complete.filter',function(ev
 });
 
 function createPagesRootFilter(root){
-	_app.router.appendHash({'type':'exact','route':'/'+root+'/','pagefilter':root,'callback':'root'});
-	_app.router.appendHash({'type':'match','route':'/'+root+'/{{id}}/','pagefilter':root,'callback':'filter'});
-	_app.couple('store_filter','pushFilterPage',{id:root,jsonPath:"filters/apparel/"+root+".json"});
+	_app.router.appendHash({'type':'exact','route':'/'+root.page+'/','pagefilter':root.page,'callback':'root'});
+	_app.router.appendHash({'type':'match','route':'/'+root.page+'/{{id}}/','pagefilter':root.page,'callback':'filter'});
+	_app.couple('store_filter','pushFilterPage',{id:root.page,jsonPath:"filters/"+root.path+"/"+root.page+".json"});
 	}
 function createPagesSubcatSubfilter(root){
 	_app.router.appendHash({'type':'exact','route':'/'+root+'/','pagefilter':root,'callback':'root'});
@@ -891,12 +891,12 @@ function createPagesSubcatSubfilter(root){
 	_app.couple('store_filter','pushFilterPage',{id:root,jsonPath:"filters/apparel/"+root+".json"});
 	}
 
+createPagesRootFilter({'page':'march-madness','path':'championships'});
 
-createPagesRootFilter('march-madness');
-createPagesRootFilter('team-apparel-merchandise');
-createPagesRootFilter('apparel-merchandise');
-createPagesRootFilter('sale-apparel-merchandise');
-createPagesRootFilter('brands-apparel-merchandise');
+createPagesRootFilter({'page':'team-apparel-merchandise','path':'apparel'});
+createPagesRootFilter({'page':'apparel-merchandise','path':'apparel'});
+createPagesRootFilter({'page':'sale-apparel-merchandise','path':'apparel'});
+createPagesRootFilter({'page':'brands-apparel-merchandise','path':'apparel'});
 
 createPagesSubcatSubfilter('ncaa-team-apparel-merchandise');	
 createPagesSubcatSubfilter('nfl-team-apparel-merchandise');	
