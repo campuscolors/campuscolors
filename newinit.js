@@ -892,6 +892,7 @@ function createPagesSubcatSubfilter(root){
 	}
 
 
+createPagesRootFilter('march-madness');
 createPagesRootFilter('team-apparel-merchandise');
 createPagesRootFilter('apparel-merchandise');
 createPagesRootFilter('sale-apparel-merchandise');
