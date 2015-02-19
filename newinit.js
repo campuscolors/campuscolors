@@ -172,6 +172,7 @@ _app.u.bindTemplateEvent('cartTemplate','complete.cart',function(event, $context
 	_app.ext.store_cc.u.getShipContainerHeight($context);
 	});
 _app.u.bindTemplateEvent('cartTemplate','depart.destroy',function(event, $context, infoObj){
+	$("iframe[data-adwords='remarketing']","[aria-describedby='modalCart']").remove();
 	var $page = $context.closest('[data-app-uri]');
 	if($page){
 		$page.empty().remove();
@@ -290,6 +291,7 @@ function showbetterSearch(routeObj) {
 	
 _app.u.bindTemplateEvent('betterSearchTemplate','complete.execsearch',function(event, $context, infoObj){
 //	dump('triggering'); dump(infoObj.dataset.KEYWORDS);
+	_app.ext.store_cc.u.addRemarketing({"ecomm_pagetype":"searchresults","ecomm_prodid":"","ecomm_totalvalue":""});
 	if(infoObj.dataset.KEYWORDS) { 
 		ga('send', {
 			'hitType'			: 'event',					// Required.
@@ -347,6 +349,7 @@ _app.router.appendHash({'type':'exact','route':'/frequently_asked_questions/','c
 	_app.ext.quickstart.a.showContent(routeObj.value,routeObj.params);
 	}});
 _app.u.bindTemplateEvent('faqTemplate','complete.faq',function(event, $context, infoObj){
+	_app.ext.store_cc.u.addRemarketing({"ecomm_pagetype":"other","ecomm_prodid":"","ecomm_totalvalue":""});
 	$context.off('complete.faq');
 	dump('in faq complete event');
 	_app.require(['store_crm','templates.html'],function(){
@@ -446,6 +449,7 @@ _app.router.appendHash({'type':'exact','route':'/my_wishlist/','callback':functi
 	_app.ext.quickstart.a.showContent(routeObj.value,routeObj.params);
 	}});
 _app.u.bindTemplateEvent('customerListsTemplate','complete.customer',function(event, $context, infoObj){
+	_app.ext.store_cc.u.addRemarketing({"ecomm_pagetype":"other","ecomm_prodid":"","ecomm_totalvalue":""});
 	_app.model.addDispatchToQ({"_cmd":"buyerProductLists","_tag":{"datapointer":"buyerProductLists",'verb':'translate','jqObj': $('.mainColumn',$context),'callback':'tlc',onComplete : function(rd){
 //data formatting on lists is unlike any other format for product, so a special handler is used.				
 		function populateBuyerProdlist(listID,$context)	{
@@ -557,6 +561,7 @@ _app.couple('order_create','addOrderCompleteHandler',{
 			});
 		}
 	});
+	
 
 //Generate meta information
 _app.u.bindTemplateEvent(function(){return true;}, 'complete.metainformation',function(event, $context, infoObj){
@@ -627,6 +632,7 @@ _app.couple('store_filter','pushCustomFilter',
 	{'id' : 'sizeXLarge','filter' : {"has_child":{"type":"sku","filter" : {"and" : [{"range":{"available":{"gte":1}}},{"regexp":{"sku":".+:(SZXL|SZLL|SZ2X|SZ3X|SZWX|SZWA|SZYX).*"}}]}}}}
 );
 _app.u.bindTemplateEvent('homepageTemplate', 'complete.store_cc',function(event,$context,infoObj) {
+	_app.ext.store_cc.u.addRemarketing({"ecomm_pagetype":"home","ecomm_prodid":"","ecomm_totalvalue":""});
 	$(".mobileSlideMenu.standardNav").addClass("hideOnHome");
 	_app.ext.store_cc.u.showHomepageBanners($context);
 	//was requested that this be static and show all 8 elements. See 11-24-2014 commit for style changes to revert to carousel. 
@@ -657,6 +663,11 @@ _app.u.bindTemplateEvent('productTemplate', 'complete.invcheck',function(event, 
 	});
 
 _app.u.bindTemplateEvent('productTemplate', 'complete.store_cc', function(event, $context, infoObj){
+	_app.ext.store_cc.u.addRemarketing({
+		"ecomm_pagetype":"product",
+		"ecomm_prodid":infoObj.pid,
+		"ecomm_totalvalue":parseFloat(_app.data[infoObj.datapointer]["%attribs"]["zoovy:base_price"])
+	});
 	_app.ext.store_cc.u.showRecentlyViewedItems($context);
 	_app.ext.store_cc.u.runPreviousCarousel($context);
 	_app.ext.store_cc.u.showHideVariation($context,infoObj);
@@ -793,6 +804,9 @@ _app.router.addAlias('subcat', function(routeObj) {
 		});
 	});
 });	
+_app.u.bindTemplateEvent('splashPageTemplate', 'complete.filter',function(event, $context, infoObj){
+	_app.ext.store_cc.u.addRemarketing({"ecomm_pagetype":"category","ecomm_prodid":"","ecomm_totalvalue":"","ecomm_category":infoObj.dataset.name});
+});
 
 _app.router.addAlias('filter', function(routeObj){
 	_app.require(['store_cc','store_filter','store_search','store_routing','prodlist_infinite','store_prodlist', 'templates.html'], function(){
@@ -861,6 +875,9 @@ _app.router.addAlias('root', function(routeObj){
 		}
 	});
 });
+_app.u.bindTemplateEvent('splashPageRootTemplate', 'complete.filter',function(event, $context, infoObj){
+	_app.ext.store_cc.u.addRemarketing({"ecomm_pagetype":"category","ecomm_prodid":"","ecomm_totalvalue":"","ecomm_category":infoObj.dataset.name});
+});
 
 function createPagesRootFilter(root){
 	_app.router.appendHash({'type':'exact','route':'/'+root+'/','pagefilter':root,'callback':'root'});
@@ -888,9 +905,9 @@ createPagesSubcatSubfilter('nhl-team-apparel-merchandise');
 createPagesSubcatSubfilter('soccer-team-apparel-merchandise');
 createPagesSubcatSubfilter('league-apparel-merchandise');
 					
-					
-	
+
 _app.u.bindTemplateEvent('filteredSearchTemplate', 'complete.filter',function(event, $context, infoObj){
+_app.ext.store_cc.u.addRemarketing({"ecomm_pagetype":"category","ecomm_prodid":"","ecomm_totalvalue":"","ecomm_category":infoObj.dataset.name});
 	if(infoObj.deferred){
 		$('form.filterList',$context).data('deferred', infoObj.deferred);
 		}

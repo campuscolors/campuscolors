@@ -884,7 +884,27 @@ var store_cc = function(_app) {
 				}
 				else	{ dump("For regionsasoptions tlcFormat in store_cc, cartID could not be obtained.",'warn'); }
 			},
-
+			
+			//gathers params for google remarketing tag. Google needs cart  as pagetype for both cart and checkout,
+			//remarket-context attrib differentiates the page for the addRemarketing function.
+			cartremarket : function(data, thisTLC) {
+				var cartItems = data.globals.binds.var;
+				dump('START store_cc.tlcFormats.cartremarket'); dump(cartItems);
+				var $tag = data.globals.tags[data.globals.focusTag];
+				var stid = [];
+				var toteval = 0;
+				for(index in cartItems) {
+					if(cartItems[index].extended) { toteval += parseFloat(cartItems[index].extended); }
+					if(cartItems[index].stid) { stid.push(cartItems[index].stid); }
+					dump(cartItems[index].extended); dump(cartItems[index].stid);
+				}
+				var gTagParams = {"ecomm_prodid":"","ecomm_pagetype":$tag.attr("data-remarket-page"),"ecomm_totalvalue":0};
+				gTagParams.ecomm_prodid = stid.length > 1 ? stid : stid[0];
+				gTagParams.ecomm_totalvalue = toteval;
+				_app.ext.store_cc.u.addRemarketing(gTagParams,$tag.attr("data-remarket-context"));
+				dump(gTagParams.ecomm_pagetype); dump(gTagParams.ecomm_prodid); dump(gTagParams.ecomm_totalvalue);
+			}
+				
 		}, //tlcFormats
 		
 		
@@ -932,6 +952,88 @@ var store_cc = function(_app) {
 //utilities are typically functions that are exected by an event or action.
 //any functions that are recycled should be here.
 		u : {
+			
+			//adds an iframe with the google remarketing script and vars for pages
+			addRemarketing : function(gTagParams,context) {
+				dump('START store_cc.u.addRemarketing'); dump(gTagParams);
+				//the cart isn't inline so it's context is different
+				//var destination = context === "cart" ? "[aria-describedby='modalCart']" : "body";
+				var destination = "body";
+				//check if remarketing has been loaded previously and remove iframe if it has
+				if($("iframe[data-adwords='remarketing']",destination).length > 0) {
+//					dump($("iframe","body").attr("data-adwords"));
+					//frame = $("iframe[data-adwords='remarketing']","body");
+					//$(,frame).empty();
+					$("iframe[data-adwords='remarketing']",destination).remove();
+				}
+				dump(gTagParams);
+				
+				//make a new iframe to put the script into
+				var frame = document.createElement("iframe");
+				$(frame).addClass("displayNone").attr("data-adwords","remarketing");
+				$(destination).append(frame);
+	
+				//build the script and run it
+				setTimeout(function() {
+					var paramScript = "<script type='text/javascript'>" 
+						+ "var google_tag_params = "+JSON.stringify(gTagParams)+";"
+						+	"</script>";
+					var remarketScript = "<script type='text/javascript'>"
+						+	"/* <![CDATA[ */"
+						+	"var google_conversion_id = 1016752941;"
+						+	"var google_custom_params = window.google_tag_params;"
+						+	"var google_remarketing_only = true;"
+						+	"/* ]]> */"
+						+	"</script>";
+					var conversionScript = "<script type='text/javascript'"
+						+	"src='//www.googleadservices.com/pagead/conversion.js'></script>";
+					frame.contentWindow.document.open();
+					frame.contentWindow.document.write("<html><head></head><body>"+paramScript+" "+remarketScript+" "+conversionScript+"</body></html>");
+					frame.contentWindow.document.close();
+				},250);
+			}, //addRemarketing
+			
+			//will itterate through cart, checkout, or conf pages and build google remarketing tag w/ data from each item there. 
+			getRemarketingItems : function(pageType,templateid,context) {
+				dump('START store_cc.u.getRemarketingItems');
+				dump(templateid); dump(context);
+				var stid = [];
+				var count = 0, toteval = 0;
+				$("[data-templateid='"+templateid+"']",context).each(function(){
+					count++; dump('getRemarketingItems count:::::::::::::::::::::::::::::::::::'); dump(count);
+					if($(this).attr("data-extended")) { toteval += parseFloat($(this).attr("data-extended")); }
+					if($(this).attr("data-stid")) { stid.push($(this).attr("data-stid")); }
+					dump($(this).attr("data-extended")); dump($(this).attr("data-stid"));
+				});
+				var gTagParams = {"ecomm_prodid":"","ecomm_pagetype":pageType,"ecomm_totalvalue":0};
+				gTagParams.pagetype = pageType;
+				gTagParams.ecomm_prodid = stid.length > 1 ? stid : stid[0];
+				gTagParams.ecomm_totalvalue = toteval;
+				_app.ext.store_cc.u.addRemarketing(gTagParams,context);
+				dump(gTagParams.ecomm_pagetype); dump(gTagParams.ecomm_prodid); dump(gTagParams.ecomm_totalvalue);
+			},
+
+			//TODO : KILL THIS, DON'T THINK IT'S NEEDED ANYLONGER
+			//looks at the infoObj to determine which page type will be passed to adword remarketing object
+			getRemarketingPage(infoObj) {
+				var remarketPage = false;
+				switch(infoObj.pageType) {
+					case "homepage" : remarketPage = "home"; break;
+					case "static" : 
+						if(infoObj.templateID === "filteredSearchTemplate") { remarketPage = "category"; }
+						else if(infoObj.templateID === "betterSearchTemplate") { remarketPage = "category"; }
+						else { remarketPage = "other"; } //shouldn't get here, but jic
+						break;
+					case "searchpage" : remarketPage = "searchresults"; break;
+					case "product" : remarketPage = infoObj.pageType; break;
+					case "checkout" : remarketPage = "purchase"; break;
+					default : 
+						if(infoObj.currentTarget.dataset.templateid === "cartTemplate") { remarketPage = "cart"; }
+						else { remarketPage = "other"; }
+				}
+				return remarketPage;
+			},
+			
 			suppress : function($context){
 				var attempts = arguments[1] || 0;
 				if(typeof _app.ext.store_cc.vars.suppressionList !== 'undefined'){

@@ -2343,6 +2343,7 @@ This is the template used both within a dialog and inline, unless implicitly ove
 <div class="cartStuffContainer">
 	<ul data-tlc="bind $var '.@ITEMS'; controller#loop --templateid='productListTemplateCart'; if (is $var --notblank;) {{apply --append;}};" class="listStyleNone fluidList clearfix noPadOrMargin productList lineItemProdlist"></ul>
 </div>
+<div class="displayNone" data-tlc="bind $var '.@ITEMS'; store_cc#cartremarket;" data-remarket-page="cart" data-remarket-context="cart" ></div>
 
 <div class="cartSummaryTotalsContainer">
 	<div class="ui-widget ui-corner-all">
