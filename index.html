@@ -155,7 +155,7 @@ $(document).ready(function(){
 		if(notIE8) {
 			window.myApp = new initApp({
 				"_robotHasGreeted" : false, <!-- versionhere -->
-				"release":"201410.20150219170600",  //increment this  with each change. should solve caching issues. format: YYYYMMDDHHMMSS
+				"release":"201410.20150219175000",  //increment this  with each change. should solve caching issues. format: YYYYMMDDHHMMSS
 				"_clientid":"zmvc", //zmvc for store app, 1pc for one page checkout.
 				"baseURL":baseURL, //used in non-local mode.
 				"checkoutAuthMode" : "active",//can be passive, active or required
@@ -258,13 +258,14 @@ var _robots = {
 </div>
 			</div>
 			<div class="links">
-				<a href="/store_locations/" class="bareWhiteLink  showTablet showDesktop">STORE LOCATIONS |</a>
+				<a href="/store_locations/" class="bareWhiteLink  showTablet showDesktop">STORE LOCATIONS &#124;</a>
 				<a href="/about_us/" class="bareWhiteLink marginRight showTablet showDesktop">CUSTOMER SERVICE</a>
-				<a href="/contact_us/" class="bareWhiteLink marginRight marginLeft showTablet showDesktop">(866) 598-2267</a>
-				<span class="whiteText showTablet showDesktop">Online Chat | </span>
-				<span class="hideTablet hideDesktop bareYellowLink liveChat"><span class="sprite"></span>Live Chat offline | </span>
-				<span class="yellowText showTablet showDesktop">CURRENTLY OFFLINE...</span>
-				<a href="/store_locations/" class="bareWhiteLink hideTablet hideDesktop">STORE LOCATIONS</a>
+				<a href="/contact_us/" class="bareWhiteLink marginRight marginLeft hidePhone showTabletBlock showDesktopBlock centeredPhone">&#40;866&#41; 598&#45;2267</a>
+				<!-- <span class="whiteText showTablet showDesktop">Online Chat &#124; </span>
+				<span class="hideTablet hideDesktop bareYellowLink liveChat"><span class="sprite"></span>Live Chat offline &#124; </span>
+				<span class="yellowText showTablet showDesktop">CURRENTLY OFFLINE...</span> -->
+				<a href="tel:+18665982267" class="hideTablet hideDesktop bareYellowLink liveChat">&#40;866&#41; 598&#45;2267 </a> 
+				<a href="/store_locations/" class="bareWhiteLink hideTablet hideDesktop">&#124; STORE LOCATIONS</a>
 			</div>
 			<div onClick="myApp.ext.quickstart.u.showCartInModal({'templateID':'cartTemplate'});" class="upperCartWrapper pointer floatLeft center hidePhone showTabletBlock hideDesktop">
 				<div class="sprite floatLeft">

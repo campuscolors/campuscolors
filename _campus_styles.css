@@ -521,6 +521,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	
 	.headerTop {font-size:0.60em;}
 	.links {width:67%; float:left; text-align:left;}
+	.centeredPhone {width: 50%; float: right; text-align: center;}
 	.headerMid {height:90px;}
 	.login, .links, .upperCartWrapper {margin:0.8em auto 0 auto;}
 	.logo {width:55%; display:inline-block;}
