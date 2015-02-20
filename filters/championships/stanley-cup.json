@@ -1,18 +1,18 @@
 {
-	"id": "March-Madness",
-	"name": "March Madness",
-	"page-title": "March Madness at CampusColors.com",
+	"id": "Stanley-Cup",
+	"name": "Stanley Cup",
+	"page-title": "Stanley Cup at CampusColors.com",
 	"page-description": "\"Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!\"",
 	"banner": "blank",
 	"bannerlink": "",
 	"banneralt": "Apparel Banner",
 	"promo": "Some promotional text goes here",
-	"link" : "/march-madness/",
+	"link" : "/stanley-cup/",
 	"pages": [
 		{
 			"baseFilter": {
 				"term": {
-					"league_championship": "fnl4"
+					"league_championship": "sc"
 				}
 			},
 			"options": {
@@ -21,11 +21,11 @@
 					"max": 400
 				}
 			},
-			"id": "t-shirts",
-			"link": "/march-madness/t-shirts/",
+			"id": "all",
+			"link": "/stanley-cup/all/",
 			"img": "",
-			"name": "March Madness T-Shirts",
-			"page-title": "March Madness T-Shirts | CampusColors.com",
+			"name": "Stanley Cup",
+			"page-title": "Stanley Cup All | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
 				"user:size_gender",

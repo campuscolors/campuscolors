@@ -894,6 +894,11 @@ function createPagesSubcatSubfilter(root,filterpage){
 	}
 
 createPagesRootFilter('march-madness','championships');
+createPagesRootFilter('college-football-playoffs','championships');
+createPagesRootFilter('nba-finals','championships');
+createPagesRootFilter('stanley-cup','championships');
+createPagesRootFilter('super-bowl','championships');
+createPagesRootFilter('world-series','championships');
 
 createPagesRootFilter('team-apparel-merchandise','apparel');
 createPagesRootFilter('apparel-merchandise','apparel');

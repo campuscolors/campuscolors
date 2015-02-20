@@ -27,6 +27,7 @@
 { "type":"path", "if":"/privacy_policy/", "then#sendfile":"/index.html", "apptimize":false },
 { "type":"path", "if":"/return_policy/", "then#sendfile":"/index.html", "apptimize":false },
 { "type":"path", "if":"/shipping_policy/", "then#sendfile":"/index.html", "apptimize":false },
+{ "type":"path", "if":"/store_locations/", "then#sendfile":"/index.html", "apptimize":"false" },
 { "type":"path", "if":"/my_account/", "then#sendfile":"/index.html", "apptimize":false },
 { "type":"path", "if":"/change_password/", "then#sendfile":"/index.html", "apptimize":false },
 { "type":"path", "if":"/my_order_history/", "then#sendfile":"/index.html", "apptimize":false },
@@ -34,7 +35,11 @@
 { "type":"path", "if":"/(league|ncaa-team|nfl-team|nba-team|mlb-team|nhl-team|soccer-team|brands|sale|team)\\-apparel\\-merchandise/.*", "then#sendfile":"/index.html", "apptimize":"false" },
 { "type":"path", "if":"/apparel\\-merchandise/.*", "then#sendfile":"/index.html", "apptimize":"false" },
 { "type":"path", "if":"/march\\-madness/.*", "then#sendfile":"/index.html", "apptimize":"false" },
-{ "type":"path", "if":"/store_locations/", "then#sendfile":"/index.html", "apptimize":"false" },
+{ "type":"path", "if":"/college\\-football\\-playoffs/.*", "then#sendfile":"/index.html", "apptimize":"false" },
+{ "type":"path", "if":"/nba\\-finals/.*", "then#sendfile":"/index.html", "apptimize":"false" },
+{ "type":"path", "if":"/stanley\\-cup/.*", "then#sendfile":"/index.html", "apptimize":"false" },
+{ "type":"path", "if":"/super\\-bowl/.*", "then#sendfile":"/index.html", "apptimize":"false" },
+{ "type":"path", "if":"/world\\-series/.*", "then#sendfile":"/index.html", "apptimize":"false" },
 
 // redirct search pages
 { "type":"path", "if":"/ItemSearch--search-(.*?).*", "then#redirect":"/search/keywords/$1" },

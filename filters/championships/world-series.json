@@ -1,18 +1,18 @@
 {
-	"id": "March-Madness",
-	"name": "March Madness",
-	"page-title": "March Madness at CampusColors.com",
+	"id": "World-Series",
+	"name": "World Series",
+	"page-title": "World Series at CampusColors.com",
 	"page-description": "\"Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!\"",
 	"banner": "blank",
 	"bannerlink": "",
 	"banneralt": "Apparel Banner",
 	"promo": "Some promotional text goes here",
-	"link" : "/march-madness/",
+	"link" : "/world-series/",
 	"pages": [
 		{
 			"baseFilter": {
 				"term": {
-					"league_championship": "fnl4"
+					"league_championship": "ws"
 				}
 			},
 			"options": {
@@ -21,11 +21,11 @@
 					"max": 400
 				}
 			},
-			"id": "t-shirts",
-			"link": "/march-madness/t-shirts/",
+			"id": "all",
+			"link": "/world-series/all/",
 			"img": "",
-			"name": "March Madness T-Shirts",
-			"page-title": "March Madness T-Shirts | CampusColors.com",
+			"name": "World Series",
+			"page-title": "World Series All | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
 				"user:size_gender",
