@@ -853,7 +853,8 @@ _app.router.addAlias('subfilter', function(routeObj){
 _app.router.addAlias('root', function(routeObj){
 	_app.require(['store_cc','store_filter','store_search','store_routing','prodlist_infinite','store_prodlist', 'templates.html'], function(){
 		var route = routeObj.pagefilter;
-		var path = routeObj.path;
+		var filterpath = routeObj.filterpath;
+dump('ROOOOOOOOOOOOOOOOOOOOOOOOOOOOT'); dump(routeObj);
 		routeObj.params.templateID = 'splashPageRootTemplate';
 		if(_app.ext.store_cc.vars[route]) {
 			var filterData = $.extend(true, {}, _app.ext.store_cc.vars[route]);
@@ -861,7 +862,7 @@ _app.router.addAlias('root', function(routeObj){
 			_app.ext.quickstart.a.showContent(routeObj.value,routeObj.params);
 		}
 		else {
-			$.getJSON("filters/"+path+"/"+route+".json?_v="+(new Date()).getTime(), function(json){
+			$.getJSON("filters/"+filterpath+"/"+route+".json?_v="+(new Date()).getTime(), function(json){
 				json.breadcrumb = [json.id];
 				_app.ext.store_cc.vars[route] = json;
 				//Deep copy into the routeObj.params, and that becomes our new "infoObj"
@@ -880,33 +881,32 @@ _app.u.bindTemplateEvent('splashPageRootTemplate', 'complete.filter',function(ev
 	_app.ext.store_cc.u.addRemarketing({"ecomm_pagetype":"category","ecomm_prodid":"","ecomm_totalvalue":"","ecomm_category":infoObj.dataset.name});
 });
 
-function createPagesRootFilter(root){
-dump('fjdksahfkshgoi;wshgorhagoireahogihrao;ighioerahgo;irehgoire;'); dump(root.page); dump(root.path);
-	_app.router.appendHash({'type':'exact','route':'/'+root.page+'/','path':root.path,'pagefilter':root.page,'callback':'root'});
-	_app.router.appendHash({'type':'match','route':'/'+root.page+'/{{id}}/','pagefilter':root.page,'callback':'filter'});
-	_app.couple('store_filter','pushFilterPage',{id:root.page,jsonPath:"filters/"+root.path+"/"+root.page+".json"});
+function createPagesRootFilter(root,filterpage){
+	_app.router.appendHash({'type':'exact','route':'/'+root+'/','filterpath':filterpage,'pagefilter':root,'callback':'root'});
+	_app.router.appendHash({'type':'match','route':'/'+root+'/{{id}}/','pagefilter':root,'callback':'filter'});
+	_app.couple('store_filter','pushFilterPage',{id:root,jsonPath:"filters/"+filterpage+"/"+root+".json"});
 	}
-function createPagesSubcatSubfilter(root){
-	_app.router.appendHash({'type':'exact','route':'/'+root.page+'/','path':root.path,'pagefilter':root,'callback':'root'});
-	_app.router.appendHash({'type':'match','route':'/'+root.page+'/{{id}}/','pagefilter':root.page,'callback':'subcat'});
-	_app.router.appendHash({'type':'match','route':'/'+root.page+'/{{id}}/{{end}}/','pagefilter':root.page,'callback':'subfilter'});
-	_app.couple('store_filter','pushFilterPage',{id:root.page,jsonPath:"filters/apparel/"+root.page+".json"});
+function createPagesSubcatSubfilter(root,filterpage){
+	_app.router.appendHash({'type':'exact','route':'/'+root+'/','filterpath':filterpage,'pagefilter':root,'callback':'root'});
+	_app.router.appendHash({'type':'match','route':'/'+root+'/{{id}}/','pagefilter':root,'callback':'subcat'});
+	_app.router.appendHash({'type':'match','route':'/'+root+'/{{id}}/{{end}}/','pagefilter':root,'callback':'subfilter'});
+	_app.couple('store_filter','pushFilterPage',{id:root,jsonPath:"filters/apparel/"+root+".json"});
 	}
 
-createPagesRootFilter({'page':'march-madness','path':'championships'});
+createPagesRootFilter('march-madness','championships');
 
-createPagesRootFilter({'page':'team-apparel-merchandise','path':'apparel'});
-createPagesRootFilter({'page':'apparel-merchandise','path':'apparel'});
-createPagesRootFilter({'page':'sale-apparel-merchandise','path':'apparel'});
-createPagesRootFilter({'page':'brands-apparel-merchandise','path':'apparel'});
+createPagesRootFilter('team-apparel-merchandise','apparel');
+createPagesRootFilter('apparel-merchandise','apparel');
+createPagesRootFilter('sale-apparel-merchandise','apparel');
+createPagesRootFilter('brands-apparel-merchandise','apparel');
 
-createPagesSubcatSubfilter({'page':'ncaa-team-apparel-merchandise','path':'apparel'});	
-createPagesSubcatSubfilter({'page':'nfl-team-apparel-merchandise','path':'apparel'});	
-createPagesSubcatSubfilter({'page':'nba-team-apparel-merchandise','path':'apparel'});
-createPagesSubcatSubfilter({'page':'mlb-team-apparel-merchandise','path':'apparel'});
-createPagesSubcatSubfilter({'page':'nhl-team-apparel-merchandise','path':'apparel'});
-createPagesSubcatSubfilter({'page':'soccer-team-apparel-merchandise','path':'apparel'});
-createPagesSubcatSubfilter({'page':'league-apparel-merchandise','path':'apparel'});
+createPagesSubcatSubfilter('ncaa-team-apparel-merchandise','apparel');	
+createPagesSubcatSubfilter('nfl-team-apparel-merchandise','apparel');	
+createPagesSubcatSubfilter('nba-team-apparel-merchandise','apparel');
+createPagesSubcatSubfilter('mlb-team-apparel-merchandise','apparel');
+createPagesSubcatSubfilter('nhl-team-apparel-merchandise','apparel');
+createPagesSubcatSubfilter('soccer-team-apparel-merchandise','apparel');
+createPagesSubcatSubfilter('league-apparel-merchandise','apparel');
 					
 
 _app.u.bindTemplateEvent('filteredSearchTemplate', 'complete.filter',function(event, $context, infoObj){
