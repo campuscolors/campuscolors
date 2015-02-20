@@ -1,0 +1,1 @@
+node sitemap.js -d www.campuscolors.com -c ./customurls.json -p ../../
