@@ -207,7 +207,29 @@ _app.router.addAlias('setSearchRouteObj', function(routeObj) {
 	//set the base filter if it's a default keyword or tag search, otherwise it's a promo and the baseFilter needs to be loaded from json.
 	var isPromo = true;
 	if(routeObj.searchtype === "keywords") {
-		routeObj.params.baseFilter = {"query" : {"query_string" : {"query" : routeObj.params.KEYWORDS}}};
+		//routeObj.params.baseFilter = {"query" : {"query_string" : {"query" : routeObj.params.KEYWORDS}}};
+		routeObj.params.baseFilter = {
+			"query": {
+				"function_score" : {										
+					"query" : {
+						"query_string":{"query":routeObj.params.KEYWORDS}	
+						},
+					"functions" : [
+						{
+							"filter" : {"query" : {"query_string":{"query":'"'+routeObj.params.KEYWORDS+'"'}}},
+							// "script_score" : {"script":"10"}
+							"script_score" : {
+								"script" : "constant",
+								"params":{
+									"constant" : 10
+									}
+								}
+							}
+						],
+					"boost_mode" : "sum"
+					}
+			}
+		};
 		isPromo = false;
 	}
 	else if (routeObj.searchtype === "tag") {
