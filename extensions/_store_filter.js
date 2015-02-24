@@ -189,7 +189,7 @@ var store_filter = function(_app) {
 					},
 					"facets" : {}
 					}
-				elasticsearch.sort = [{"prod_name.raw":{"order":"asc"}}];
+				//elasticsearch.sort = [{"prod_name.raw":{"order":"asc"}}];
 				$('[data-filter-type=sort]', $form).each(function(){
 					var $selectedOption = $('option:selected',$(this));
 					if($selectedOption.attr('data-filter-sort-attribute')){
