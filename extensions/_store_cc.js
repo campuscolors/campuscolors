@@ -958,7 +958,7 @@ var store_cc = function(_app) {
 //				dump('START store_cc.u.addRemarketing'); dump(gTagParams);
 				//remove any remarketing that may be left over from previous pages
 				$("[data-cc-remarketing='params']","body").remove();
-				$("[data-cc-remarketing='cdata']","body").remove();
+		//		$("[data-cc-remarketing='cdata']","body").remove();
 		//		$("[data-cc-remarketing='conversion']","body").remove();
 	
 				//build the scripts
@@ -977,8 +977,8 @@ var store_cc = function(_app) {
 				
 				//run them scripts
 				postscribe($("body"),paramScript);
-				postscribe($("body"),cdataScript);
-				postscribe($("body"),conversionScript);
+		//		postscribe($("body"),cdataScript);
+		//		postscribe($("body"),conversionScript);
 			}, //addRemarketing
 			
 			suppress : function($context){
