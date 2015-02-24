@@ -899,9 +899,9 @@ var store_cc = function(_app) {
 //					dump(cartItems[index].extended); dump(cartItems[index].stid);
 				}
 				var gTagParams = {"ecomm_prodid":"","ecomm_pagetype":$tag.attr("data-remarket-page"),"ecomm_totalvalue":0};
-				gTagParams.ecomm_prodid = stid.length > 1 ? stid : stid[0];
+				if(stid.length) gTagParams.ecomm_prodid = stid.length > 1 ? stid : stid[0];
 				gTagParams.ecomm_totalvalue = toteval;
-				_app.ext.store_cc.u.addRemarketing(gTagParams,$tag.attr("data-remarket-context"));
+				_app.ext.store_cc.u.addRemarketing(gTagParams);
 //				dump(gTagParams.ecomm_pagetype); dump(gTagParams.ecomm_prodid); dump(gTagParams.ecomm_totalvalue);
 			}
 				
@@ -954,41 +954,32 @@ var store_cc = function(_app) {
 		u : {
 			
 			//adds an iframe with the google remarketing script and vars for pages
-			addRemarketing : function(gTagParams,context) {
+			addRemarketing : function(gTagParams) {
 //				dump('START store_cc.u.addRemarketing'); dump(gTagParams);
-				//the cart isn't inline so it's context is different
-				//var destination = context === "cart" ? "[aria-describedby='modalCart']" : "body";
-				var destination = "body";
-				//check if remarketing has been loaded previously and remove iframe if it has
-				if($("iframe[data-adwords='remarketing']",destination).length > 0) {
-//					dump($("iframe","body").attr("data-adwords"));
-					//frame = $("iframe[data-adwords='remarketing']","body");
-					//$(,frame).empty();
-					$("iframe[data-adwords='remarketing']",destination).remove();
-				}
-				
-				//make a new iframe to put the script into
-				var frame = document.createElement("iframe");
-				$(frame).addClass("displayNone").attr("data-adwords","remarketing");
-				$(destination).append(frame);
+				//remove any remarketing that may be left over from previous pages
+				$("[data-cc-remarketing='params']","body").remove();
+				$("[data-cc-remarketing='cdata']","body").remove();
+		//		$("[data-cc-remarketing='conversion']","body").remove();
 	
-				//build the script and run it
+				//build the scripts
 				setTimeout(function() {
-					var paramScript = "<script type='text/javascript'>" 
+					var paramScript = "<script type='text/javascript' data-cc-remarketing='params'>" 
 						+ "var google_tag_params = "+JSON.stringify(gTagParams)+";"
 						+	"</script>";
-					var remarketScript = "<script type='text/javascript'>"
+					var cdataScript = "<script type='text/javascript' data-cc-remarketing='cdata'>"
 						+	"/* <![CDATA[ */"
 						+	"var google_conversion_id = 1016752941;"
 						+	"var google_custom_params = window.google_tag_params;"
 						+	"var google_remarketing_only = true;"
 						+	"/* ]]> */"
 						+	"</script>";
-					var conversionScript = "<script type='text/javascript'"
+					var conversionScript = "<script type='text/javascript' data-cc-remarketing='conversion'" 
 						+	"src='//www.googleadservices.com/pagead/conversion.js'></script>";
-					frame.contentWindow.document.open();
-					frame.contentWindow.document.write("<html><head></head><body>"+paramScript+" "+remarketScript+" "+conversionScript+"</body></html>");
-					frame.contentWindow.document.close();
+					
+					//run them scripts
+					postscribe($("body"),paramScript);
+					postscribe($("body"),cdataScript);
+					postscribe($("body"),conversionScript);
 				},250);
 			}, //addRemarketing
 			
