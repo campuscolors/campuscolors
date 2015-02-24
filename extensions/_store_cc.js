@@ -962,25 +962,23 @@ var store_cc = function(_app) {
 		//		$("[data-cc-remarketing='conversion']","body").remove();
 	
 				//build the scripts
-				setTimeout(function() {
-					var paramScript = "<script type='text/javascript' data-cc-remarketing='params'>" 
-						+ "var google_tag_params = "+JSON.stringify(gTagParams)+";"
-						+	"</script>";
-					var cdataScript = "<script type='text/javascript' data-cc-remarketing='cdata'>"
-						+	"/* <![CDATA[ */"
-						+	"var google_conversion_id = 1016752941;"
-						+	"var google_custom_params = window.google_tag_params;"
-						+	"var google_remarketing_only = true;"
-						+	"/* ]]> */"
-						+	"</script>";
-					var conversionScript = "<script type='text/javascript' data-cc-remarketing='conversion'" 
-						+	"src='//www.googleadservices.com/pagead/conversion.js'></script>";
-					
-					//run them scripts
-					postscribe($("body"),paramScript);
-					postscribe($("body"),cdataScript);
-					postscribe($("body"),conversionScript);
-				},250);
+				var paramScript = "<script type='text/javascript' data-cc-remarketing='params'>" 
+					+ "var google_tag_params = "+JSON.stringify(gTagParams)+";"
+					+	"</script>";
+				var cdataScript = "<script type='text/javascript' data-cc-remarketing='cdata'>"
+					+	"/* <![CDATA[ */"
+					+	"var google_conversion_id = 1016752941;"
+					+	"var google_custom_params = window.google_tag_params;"
+					+	"var google_remarketing_only = true;"
+					+	"/* ]]> */"
+					+	"</script>";
+				var conversionScript = "<script type='text/javascript' data-cc-remarketing='conversion'" 
+					+	"src='//www.googleadservices.com/pagead/conversion.js'></script>";
+				
+				//run them scripts
+				postscribe($("body"),paramScript);
+				postscribe($("body"),cdataScript);
+				postscribe($("body"),conversionScript);
 			}, //addRemarketing
 			
 			suppress : function($context){
