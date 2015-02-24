@@ -169,7 +169,7 @@ var store_filter = function(_app) {
 			execFilteredSearch : function($form, p){
 		dump('$form.data'); dump($form.data);
 				var loadFullList = $form.data('loadFullList'); dump('loadFullList: '); dump(loadFullList);
-				// dump("Executing Filtered Search");
+//				dump("Executing Filtered Search");
 				if(loadFullList){
 					_app.ext.store_filter.vars.filterLoadingComplete = false;
 					}
@@ -177,10 +177,11 @@ var store_filter = function(_app) {
 					_app.ext.store_filter.vars.filterLoadingComplete = true;
 					}
 				//var $page = $form.data('jqContext'); //For form outside of page
+				$form = $form.closest('form');
 				var $page = $form.closest('[data-filter=parent]');
 				p.preventDefault();
 				var $resultsContainer = $page.closest('[data-filter=parent]').find('[data-filter=resultsList]');
-				dump($form.attr('data-filter-base'));
+//				dump('filter base:'); dump($form.attr('data-filter-base'));
 				var filterBase = JSON.parse($form.attr('data-filter-base'));
 				var elasticsearch = {
 					"filter" : {
@@ -188,13 +189,15 @@ var store_filter = function(_app) {
 					},
 					"facets" : {}
 					}
+				elasticsearch.sort = [{"prod_name.raw":{"order":"asc"}}];
 				$('[data-filter-type=sort]', $form).each(function(){
 					var $selectedOption = $('option:selected',$(this));
 					if($selectedOption.attr('data-filter-sort-attribute')){
 						elasticsearch.sort = elasticsearch.sort || [];
 						var sort = {};
 						sort[$selectedOption.attr('data-filter-sort-attribute')] = {"order":$selectedOption.attr('data-filter-sort-direction')};
-						elasticsearch.sort.push(sort);
+						//elasticsearch.sort.push(sort); //adds to any other sorts (but doesn't seem to have the desired result).
+						elasticsearch.sort = sort; //overwrites the default abc sort.
 						}
 					});
 				$('[data-filter-type=range]', $form).each(function(){

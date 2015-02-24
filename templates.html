@@ -169,6 +169,13 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 			<span data-app-click="store_cc|resetFilter" class="ccButton filterButton pointer">Clear</span>
 		</div>
 	-->	
+	<!-- TODO : determine if checkbox is needed
+		<select data-app-change="store_filter|execFilteredSearch" data-filter-type="sort">
+			<option>Sort By...</option>
+			<option data-filter-sort-direction="asc" data-filter-sort-attribute="base_price">Price (asc)</option>
+			<option data-filter-sort-direction="desc" data-filter-sort-attribute="base_price">Price (desc)</option>
+		</select>
+	-->	
 		<div data-tlc="bind $var '.options.user:size_gender'; if(is $var --blank;){{apply --hide;}};" class="filterGroup marginBottom filterOpen">
 			<div data-tlc="store_cc#showfilter;" data-filterview='1' data-top='0' class="filterGroupTitle greyGradient">Shop By<span class="sprite"></span></div>
 			<div class="filterHider" data-filter-hider=1>
