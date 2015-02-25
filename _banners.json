@@ -1,20 +1,20 @@
 {
 	"main" : [
 		{
-			"src"			: "banners/patriots_banner_700x268.jpg",
+			"src"			: "banners/retrobrand_700x268.jpg",
 			"width"		: "700",
 			"height"	: "268",
-			"alt"			: "New England Patriots - Super Bowl XLIX Champions",
-			"title"		: "New England Patriots - Super Bowl XLIX Champions",
-			"href"		: "/search/promo/promotion-one/"
+			"alt"			: "Original Retro Brand - Super Soft Comfort",
+			"title"		: "Original Retro Brand - Super Soft Comfort",
+			"href"		: "/brands-apparel-merchandise/original-retro-brand-gear/"
 		},
-	    {
-			"src"			: "banners/ohio_state_national_champions_700x268.jpg",
+		{
+			"src"			: "banners/under_armour_700x268.jpg",
 			"width"		: "700",
 			"height"	: "268",
-			"alt"			: "Ohio State 2014 National Champions",
-			"title"		: "Ohio State 2014 National Champions",
-			"href"		: "/search/promo/promotion-two/"
+			"alt"			: "Under Armour",
+			"title"		: "Under Armour",
+			"href"		: "/brands-apparel-merchandise/under-armour-gear/"
 		},
 	    {
 			"src"			: "banners/nike_700x268.jpg",
