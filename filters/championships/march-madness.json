@@ -21,11 +21,11 @@
 					"max": 400
 				}
 			},
-			"id": "t-shirts",
-			"link": "/march-madness/t-shirts/",
+			"id": "all",
+			"link": "/march-madness/all/",
 			"img": "",
-			"name": "March Madness T-Shirts",
-			"page-title": "March Madness T-Shirts | CampusColors.com",
+			"name": "March Madness Apparel",
+			"page-title": "March Madness Apparel",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"optionList": [
 				"user:size_gender",
