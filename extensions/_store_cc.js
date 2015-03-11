@@ -953,7 +953,29 @@ var store_cc = function(_app) {
 //any functions that are recycled should be here.
 		u : {
 			
-			//adds an iframe with the google remarketing script and vars for pages
+			addFacebookRemarketing : function(params) {
+				var script = "<script type='text/javascript'>"
+					+	"(function() {"
+					//+	"window._pa = window._pa || {};";
+					+	"window._pa = {};"; //alway an empty object, otherwise previous data stays in var.
+				if(params.pageType === "checkout") {
+					script += "_pa.orderId = '"+params.orderId+"';";
+					script += "_pa.revenue = '"+params.orderTotal+"';";
+				}
+				if(params.pageType === "product") { script += "_pa.productId = '"+params.pid+"';"; }
+				script += "var pa = document.createElement('script');" 
+					+	"pa.type = 'text/javascript';"
+					+	"pa.async = true;"
+					+	"pa.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + '//tag.perfectaudience.com/serve/54eb74869b20b48eef000124.js';"
+					+	"var s = document.getElementsByTagName('script')[0];"
+					+	"s.parentNode.insertBefore(pa, s);"
+					+	"})();</script>";
+				postscribe($("body"),script);
+//				dump(params); dump(script); dump(_app.ext.quickstart.vars.hotw);
+			},
+			
+			//adds the google remarketing parameters script and vars for pages, 
+			//cdata and conversion scripts are static in index (cuz google liked it better that way).
 			addRemarketing : function(gTagParams) {
 //				dump('START store_cc.u.addRemarketing'); dump(gTagParams);
 				//remove any remarketing that may be left over from previous pages

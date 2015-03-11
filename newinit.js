@@ -314,6 +314,7 @@ function showbetterSearch(routeObj) {
 _app.u.bindTemplateEvent('betterSearchTemplate','complete.execsearch',function(event, $context, infoObj){
 //	dump('triggering'); dump(infoObj.dataset.KEYWORDS);
 	_app.ext.store_cc.u.addRemarketing({"ecomm_pagetype":"searchresults","ecomm_prodid":"","ecomm_totalvalue":""});
+	_app.ext.store_cc.u.addFacebookRemarketing({"pageType":"search"});
 	if(infoObj.dataset.KEYWORDS) { 
 		ga('send', {
 			'hitType'			: 'event',					// Required.
@@ -372,6 +373,7 @@ _app.router.appendHash({'type':'exact','route':'/frequently_asked_questions/','c
 	}});
 _app.u.bindTemplateEvent('faqTemplate','complete.faq',function(event, $context, infoObj){
 	_app.ext.store_cc.u.addRemarketing({"ecomm_pagetype":"other","ecomm_prodid":"","ecomm_totalvalue":""});
+	_app.ext.store_cc.u.addFacebookRemarketing({"pageType":"faq"});
 	$context.off('complete.faq');
 	dump('in faq complete event');
 	_app.require(['store_crm','templates.html'],function(){
@@ -472,6 +474,7 @@ _app.router.appendHash({'type':'exact','route':'/my_wishlist/','callback':functi
 	}});
 _app.u.bindTemplateEvent('customerListsTemplate','complete.customer',function(event, $context, infoObj){
 	_app.ext.store_cc.u.addRemarketing({"ecomm_pagetype":"other","ecomm_prodid":"","ecomm_totalvalue":""});
+	_app.ext.store_cc.u.addFacebookRemarketing({"pageType":"customerLists"});
 	_app.model.addDispatchToQ({"_cmd":"buyerProductLists","_tag":{"datapointer":"buyerProductLists",'verb':'translate','jqObj': $('.mainColumn',$context),'callback':'tlc',onComplete : function(rd){
 //data formatting on lists is unlike any other format for product, so a special handler is used.				
 		function populateBuyerProdlist(listID,$context)	{
@@ -543,6 +546,7 @@ _app.couple('order_create','addOrderCompleteHandler',{
 				$("body").append("<img src='"+url+"'height='1' width='1' style='border-style:none;' alt='' class='adwpix'/>");
 //conversion patch				
 				
+				_app.ext.store_cc.u.addFacebookRemarketing({"pageType":"checkout","orderId":order.our.orderid,"orderTotal":order.sum.items_total});
 				
 				var plugins = zGlobals.plugins;
 				// note: order is an object that references the raw (public) cart
@@ -655,6 +659,7 @@ _app.couple('store_filter','pushCustomFilter',
 );
 _app.u.bindTemplateEvent('homepageTemplate', 'complete.store_cc',function(event,$context,infoObj) {
 	_app.ext.store_cc.u.addRemarketing({"ecomm_pagetype":"home","ecomm_prodid":"","ecomm_totalvalue":""});
+	_app.ext.store_cc.u.addFacebookRemarketing({"pageType":"homePage"});
 	$(".mobileSlideMenu.standardNav").addClass("hideOnHome");
 	_app.ext.store_cc.u.showHomepageBanners($context);
 	//was requested that this be static and show all 8 elements. See 11-24-2014 commit for style changes to revert to carousel. 
@@ -690,6 +695,7 @@ _app.u.bindTemplateEvent('productTemplate', 'complete.store_cc', function(event,
 		"ecomm_prodid":infoObj.pid,
 		"ecomm_totalvalue":parseFloat(_app.data[infoObj.datapointer]["%attribs"]["zoovy:base_price"])
 	});
+	_app.ext.store_cc.u.addFacebookRemarketing({"pageType":"product","pid":infoObj.pid});
 	_app.ext.store_cc.u.showRecentlyViewedItems($context);
 	_app.ext.store_cc.u.runPreviousCarousel($context);
 	_app.ext.store_cc.u.showHideVariation($context,infoObj);
@@ -828,6 +834,7 @@ _app.router.addAlias('subcat', function(routeObj) {
 });	
 _app.u.bindTemplateEvent('splashPageTemplate', 'complete.filter',function(event, $context, infoObj){
 	_app.ext.store_cc.u.addRemarketing({"ecomm_pagetype":"category","ecomm_prodid":"","ecomm_totalvalue":"","ecomm_category":infoObj.dataset.name});
+	_app.ext.store_cc.u.addFacebookRemarketing({"pageType":"category"});
 });
 
 _app.router.addAlias('filter', function(routeObj){
@@ -901,6 +908,7 @@ dump('ROOOOOOOOOOOOOOOOOOOOOOOOOOOOT'); dump(routeObj);
 });
 _app.u.bindTemplateEvent('splashPageRootTemplate', 'complete.filter',function(event, $context, infoObj){
 	_app.ext.store_cc.u.addRemarketing({"ecomm_pagetype":"category","ecomm_prodid":"","ecomm_totalvalue":"","ecomm_category":infoObj.dataset.name});
+	_app.ext.store_cc.u.addFacebookRemarketing({"pageType":"category"});
 });
 
 function createPagesRootFilter(root,filterpage){
@@ -938,6 +946,7 @@ createPagesSubcatSubfilter('league-apparel-merchandise','apparel');
 
 _app.u.bindTemplateEvent('filteredSearchTemplate', 'complete.filter',function(event, $context, infoObj){
 _app.ext.store_cc.u.addRemarketing({"ecomm_pagetype":"category","ecomm_prodid":"","ecomm_totalvalue":"","ecomm_category":infoObj.dataset.name});
+_app.ext.store_cc.u.addFacebookRemarketing({"pageType":"category"});
 	if(infoObj.deferred){
 		$('form.filterList',$context).data('deferred', infoObj.deferred);
 		}
