@@ -954,7 +954,11 @@ var store_cc = function(_app) {
 		u : {
 			
 			addFacebookRemarketing : function(params) {
-				var script = "<script type='text/javascript'>"
+				if($("[data-fb-script='lower']","body").length) {
+					$("[data-fb-script='lower']","body").remove();
+					$("[fbscript='upper']","head").remove();
+				}
+				var script = "<script type='text/javascript' data-fb-script='lower'>"
 					+	"(function() {"
 					//+	"window._pa = window._pa || {};";
 					+	"window._pa = {};"; //alway an empty object, otherwise previous data stays in var.
@@ -964,6 +968,7 @@ var store_cc = function(_app) {
 				}
 				if(params.pageType === "product") { script += "_pa.productId = '"+params.pid+"';"; }
 				script += "var pa = document.createElement('script');" 
+					+	"pa.fbscript = 'upper';"
 					+	"pa.type = 'text/javascript';"
 					+	"pa.async = true;"
 					+	"pa.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + '//tag.perfectaudience.com/serve/54eb74869b20b48eef000124.js';"
