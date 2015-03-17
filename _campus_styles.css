@@ -141,8 +141,8 @@ body {font-family:Oxygen, Helvetica, sans-serif;}
 header {position:relative;}
 .headerTop {height:26px; width:100%; border-top:2px solid #ccc; border-bottom:2px solid #000000; color:#ffffff; background-color:#767676;}
 .headerMargin {margin:0 20px;}
-.links {width:80%; margin:0.3em auto 0 auto;}
-.liveChat {padding:0 0 0 19px; position:relative;}
+.links {width:90%; margin:0.3em auto 0 auto; text-align:center;}
+.liveChat, .locationsLink {display:inline-block; position:relative;}
 .liveChat .sprite {height:15px; width:19px; background-position:-178px 1px; background-repeat:no-repeat; position:absolute; left:0; top:0;}
 
 .buyerLoggedIn .loginHide {display:none;}
@@ -521,7 +521,8 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	
 	.headerTop {font-size:0.60em;}
 	.links {width:67%; float:left; text-align:left;}
-	.centeredPhone {width: 50%; float: right; text-align: center;}
+	.liveChat, .locationsLink {display:none;}
+	.centeredPhone {width:45%; float: right; text-align: center;}
 	.headerMid {height:90px;}
 	.login, .links, .upperCartWrapper {margin:0.8em auto 0 auto;}
 	.logo {width:55%; display:inline-block;}
