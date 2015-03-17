@@ -247,8 +247,8 @@ header {position:relative;}
 .homeFeaturedCats ul {margin:20px; padding:0; text-align:center;}
 
 .homeBestSell {width:100%; overflow:hidden;} 
-.homeBestSell .ccList {width:304px; margin:0 auto; float:none;}
-.homeBestSell .productList.ccList > li {height:66px; width:66px; border:2px solid #000000; margin:0.5em;}
+.homeBestSell .ccList {width:304px; margin:0 auto; float:none; text-align:center;}
+.homeBestSell .productList.ccList > li {height:66px; width:66px; border:2px solid #000000; margin:0.4em; display:inline-block; float:none;}
 .homeBestSell .productList.ccList .prodInfo {display:none;}
 
 
@@ -581,7 +581,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.homeFeaturedCats .splashPageListTemplate .title {height:auto; padding:10px;}
 	/*.homeBestSell {max-height:310px;}*/
 	.homeBestSell .ccList {width:664px;}
-	.homeBestSell .productList.ccList > li {height:170px; width:153px; border:2px solid #000000; margin:0.5em;}
+	.homeBestSell .productList.ccList > li {height:170px; width:153px; border:2px solid #000000; margin:0.4em;}
 	.homeBestSell .productList.ccList .prodInfo {display:block;}
 	
 	.splashPageTemplate {width:690px;}
@@ -690,7 +690,7 @@ div[data-filter-type="rangebox"] .qualifies {font-size:0.8em; margin:0 0 0 20px;
 	.homeBannerCont {height:268px; width:680px; margin:20px auto;}
 	.mainPageCont {right:7px;}
 	.homeBestSell .ccList {width:904px;}
-	.homeBestSell .productList.ccList > li {height:250px; width:200px; border:2px solid #000000; margin:1em;}
+	.homeBestSell .productList.ccList > li {height:250px; width:200px; border:2px solid #000000; margin:0.8em;}
 	.homeTopBrands {width:654px; margin:0 auto 10px auto;}
 	.homeMain .topBrandItem {height:30px; width:50px; margin:0 20px; background-position:0px -343px; background-repeat:no-repeat; overflow:hidden; display:inline-block;}
 	.homeMain .topBrandItem.adidasLogo {background-position:-99px -343px;}
