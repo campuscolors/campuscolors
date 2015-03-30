@@ -1,6 +1,14 @@
 {
 	"main" : [
 		{
+			"src"			: "banners/final_four_alt_700x268.jpg",
+			"width"		: "700",
+			"height"	: "268",
+			"alt"			: "March Madness",
+			"title"		: "March Madness",
+			"href"		: "/march-madness/all/"
+		},
+		{
 			"src"			: "banners/march_to_the_madness.jpg",
 			"width"		: "700",
 			"height"	: "268",
@@ -23,15 +31,8 @@
 			"alt"			: "Nike Apparel",
 			"title"		: "Nike Apparel",
 			"href"		: "/brands-apparel-merchandise/nike-gear/"
-		},
-		{
-			"src"			: "banners/adidas_700x268.jpg",
-			"width"		: "700",
-			"height"	: "268",
-			"alt"			: "Adidas Products",
-			"title"		: "Adidas Products",
-			"href"		: "/brands-apparel-merchandise/adidas-gear/"
 		}
+		
 	],
 	"featured" : [
 		{
