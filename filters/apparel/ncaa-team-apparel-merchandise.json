@@ -48960,14 +48960,289 @@
 			]
 		},
 		{
-			"id": "ucsb-banana-slugs",
-			"link": "/ncaa-team-apparel-merchandise/ucsb-banana-slugs/",
-			"img": "teamlogos/ucsc.jpg",
-			"name": "UCSB Banana Slugs Apparel & Merchandise",
-			"page-title": "UCSB Banana Slugs Apparel & Merchandise | CampusColors.com",
+			"id": "ucsb-gauchos",
+			"link": "/ncaa-team-apparel-merchandise/ucsb-gauchos/",
+			"img": "teamlogos/ucsb.jpg",
+			"name": "UCSB Gauchos Apparel & Merchandise",
+			"page-title": "UCSB Gauchos Apparel & Merchandise | CampusColors.com",
 			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 			"banner": "blank",
-			"banneralt": "UCSB Banana Slugs Promotion",
+			"banneralt": "UCSB Gauchos Promotion",
+			"pages": [
+				{
+					"baseFilter": {
+						"term": {
+							"team_league_ncaa": "ucsb"
+						}
+					},
+					"options": {
+						"base_price": {
+							"min": 0,
+							"max": 400
+						}
+					},
+					"id": "all",
+					"link": "/ncaa-team-apparel-merchandise/ucsb-gauchos/all/",
+					"img": "teamlogos/ucsb.jpg",
+					"name": "UCSB Gauchos Apparel & Merchandise",
+					"page-title": "UCSB Gauchos Apparel & Merchandise | CampusColors.com",
+					"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
+					"optionList": [
+						"user:size_gender",
+						"user:website_filter",
+						"user:vendor_code",
+						"user:color_pallete"
+					]
+				},
+				{
+					"baseFilter": {
+						"and": [
+							{
+								"term": {
+									"team_league_ncaa": "ucsb"
+								}
+							},
+							{
+								"term": {
+									"website_filter": "shorts"
+								}
+							}
+						]
+					},
+					"options": {
+						"base_price": {
+							"min": 0,
+							"max": 400
+						}
+					},
+					"id": "shorts",
+					"link": "/ncaa-team-apparel-merchandise/ucsb-gauchos/shorts/",
+					"img": "products/images/unc_26641x_gy",
+					"name": "UCSB Gauchos Apparel & Merchandise Shorts",
+					"page-title": "UCSB Gauchos Apparel & Merchandise Shorts | CampusColors.com",
+					"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
+					"optionList": [
+						"user:size_gender",
+						"user:website_filter",
+						"user:vendor_code",
+						"user:color_pallete"
+					]
+				},
+				{
+					"baseFilter": {
+						"and": [
+							{
+								"term": {
+									"team_league_ncaa": "ucsb"
+								}
+							},
+							{
+								"term": {
+									"website_filter": "t-shirts"
+								}
+							}
+						]
+					},
+					"options": {
+						"base_price": {
+							"min": 0,
+							"max": 400
+						}
+					},
+					"id": "t-shirts",
+					"link": "/ncaa-team-apparel-merchandise/ucsb-gauchos/t-shirts/",
+					"img": "products/images/org_24003x_bk",
+					"name": "UCSB Gauchos Apparel & Merchandise T-Shirts",
+					"page-title": "UCSB Gauchos Apparel & Merchandise T-Shirts | CampusColors.com",
+					"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
+					"optionList": [
+						"user:size_gender",
+						"user:website_filter",
+						"user:vendor_code",
+						"user:color_pallete"
+					]
+				},
+				{
+					"baseFilter": {
+						"and": [
+							{
+								"term": {
+									"team_league_ncaa": "ucsb"
+								}
+							},
+							{
+								"term": {
+									"website_filter": "sweatshirts"
+								}
+							}
+						]
+					},
+					"options": {
+						"base_price": {
+							"min": 0,
+							"max": 400
+						}
+					},
+					"id": "sweatshirts",
+					"link": "/ncaa-team-apparel-merchandise/ucsb-gauchos/sweatshirts/",
+					"img": "products/images/col_27919x_bk",
+					"name": "UCSB Gauchos Apparel & Merchandise Sweatshirts",
+					"page-title": "UCSB Gauchos Apparel & Merchandise Sweatshirts | CampusColors.com",
+					"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
+					"optionList": [
+						"user:size_gender",
+						"user:website_filter",
+						"user:vendor_code",
+						"user:color_pallete"
+					]
+				},
+				{
+					"baseFilter": {
+						"and": [
+							{
+								"term": {
+									"team_league_ncaa": "ucsb"
+								}
+							},
+							{
+								"term": {
+									"website_filter": "jerseys"
+								}
+							}
+						]
+					},
+					"options": {
+						"base_price": {
+							"min": 0,
+							"max": 400
+						}
+					},
+					"id": "jerseys",
+					"link": "/ncaa-team-apparel-merchandise/ucsb-gauchos/jerseys/",
+					"img": "products/images/chbh_3264a_rd",
+					"name": "UCSB Gauchos Apparel & Merchandise Jerseys",
+					"page-title": "UCSB Gauchos Apparel & Merchandise Jerseys | CampusColors.com",
+					"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
+					"optionList": [
+						"user:size_gender",
+						"user:website_filter",
+						"user:vendor_code",
+						"user:color_pallete"
+					]
+				},
+				{
+					"baseFilter": {
+						"and": [
+							{
+								"term": {
+									"team_league_ncaa": "ucsb"
+								}
+							},
+							{
+								"term": {
+									"website_filter": "pants"
+								}
+							}
+						]
+					},
+					"options": {
+						"base_price": {
+							"min": 0,
+							"max": 400
+						}
+					},
+					"id": "pants",
+					"link": "/ncaa-team-apparel-merchandise/ucsb-gauchos/pants/",
+					"img": "products/images/duke_28734x_bk",
+					"name": "UCSB Gauchos Apparel & Merchandise Pants",
+					"page-title": "UCSB Gauchos Apparel & Merchandise Pants | CampusColors.com",
+					"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
+					"optionList": [
+						"user:size_gender",
+						"user:website_filter",
+						"user:vendor_code",
+						"user:color_pallete"
+					]
+				},
+				{
+					"baseFilter": {
+						"and": [
+							{
+								"term": {
+									"team_league_ncaa": "ucsb"
+								}
+							},
+							{
+								"term": {
+									"website_filter": "hats"
+								}
+							}
+						]
+					},
+					"options": {
+						"base_price": {
+							"min": 0,
+							"max": 400
+						}
+					},
+					"id": "hats",
+					"link": "/ncaa-team-apparel-merchandise/ucsb-gauchos/hats/",
+					"img": "products/images/cal_17142x_nv",
+					"name": "UCSB Gauchos Apparel & Merchandise Hats",
+					"page-title": "UCSB Gauchos Apparel & Merchandise Hats | CampusColors.com",
+					"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
+					"optionList": [
+						"user:size_gender",
+						"user:website_filter",
+						"user:vendor_code",
+						"user:color_pallete"
+					]
+				},
+				{
+					"baseFilter": {
+						"and": [
+							{
+								"term": {
+									"team_league_ncaa": "ucsb"
+								}
+							},
+							{
+								"term": {
+									"website_filter": "novelties & accessories"
+								}
+							}
+						]
+					},
+					"options": {
+						"base_price": {
+							"min": 0,
+							"max": 400
+						}
+					},
+					"id": "novelties-and-accessories",
+					"link": "/ncaa-team-apparel-merchandise/ucsb-gauchos/novelties-and-accessories/",
+					"img": "products/images/acc_33158_tc",
+					"name": "UCSB Gauchos Apparel & Merchandise Novelties & Accessories",
+					"page-title": "UCSB Gauchos Apparel & Merchandise Novelties & Accessories | CampusColors.com",
+					"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
+					"optionList": [
+						"user:size_gender",
+						"user:website_filter",
+						"user:vendor_code",
+						"user:color_pallete"
+					]
+				}
+			]
+		},
+		{
+			"id": "ucsc-banana-slugs",
+			"link": "/ncaa-team-apparel-merchandise/ucsc-banana-slugs/",
+			"img": "teamlogos/ucsc.jpg",
+			"name": "UCSC Banana Slugs Apparel & Merchandise",
+			"page-title": "UCSC Banana Slugs Apparel & Merchandise | CampusColors.com",
+			"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
+			"banner": "blank",
+			"banneralt": "UCSC Banana Slugs Promotion",
 			"pages": [
 				{
 					"baseFilter": {
@@ -48982,10 +49257,10 @@
 						}
 					},
 					"id": "all",
-					"link": "/ncaa-team-apparel-merchandise/ucsb-banana-slugs/all/",
+					"link": "/ncaa-team-apparel-merchandise/ucsc-banana-slugs/all/",
 					"img": "teamlogos/ucsc.jpg",
-					"name": "UCSB Banana Slugs Apparel & Merchandise",
-					"page-title": "UCSB Banana Slugs Apparel & Merchandise | CampusColors.com",
+					"name": "UCSC Banana Slugs Apparel & Merchandise",
+					"page-title": "UCSC Banana Slugs Apparel & Merchandise | CampusColors.com",
 					"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 					"optionList": [
 						"user:size_gender",
@@ -49016,10 +49291,10 @@
 						}
 					},
 					"id": "shorts",
-					"link": "/ncaa-team-apparel-merchandise/ucsb-banana-slugs/shorts/",
+					"link": "/ncaa-team-apparel-merchandise/ucsc-banana-slugs/shorts/",
 					"img": "products/images/unc_26641x_gy",
-					"name": "UCSB Banana Slugs Apparel & Merchandise Shorts",
-					"page-title": "UCSB Banana Slugs Apparel & Merchandise Shorts | CampusColors.com",
+					"name": "UCSC Banana Slugs Apparel & Merchandise Shorts",
+					"page-title": "UCSC Banana Slugs Apparel & Merchandise Shorts | CampusColors.com",
 					"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 					"optionList": [
 						"user:size_gender",
@@ -49050,10 +49325,10 @@
 						}
 					},
 					"id": "t-shirts",
-					"link": "/ncaa-team-apparel-merchandise/ucsb-banana-slugs/t-shirts/",
+					"link": "/ncaa-team-apparel-merchandise/ucsc-banana-slugs/t-shirts/",
 					"img": "products/images/org_24003x_bk",
-					"name": "UCSB Banana Slugs Apparel & Merchandise T-Shirts",
-					"page-title": "UCSB Banana Slugs Apparel & Merchandise T-Shirts | CampusColors.com",
+					"name": "UCSC Banana Slugs Apparel & Merchandise T-Shirts",
+					"page-title": "UCSC Banana Slugs Apparel & Merchandise T-Shirts | CampusColors.com",
 					"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 					"optionList": [
 						"user:size_gender",
@@ -49084,10 +49359,10 @@
 						}
 					},
 					"id": "sweatshirts",
-					"link": "/ncaa-team-apparel-merchandise/ucsb-banana-slugs/sweatshirts/",
+					"link": "/ncaa-team-apparel-merchandise/ucsc-banana-slugs/sweatshirts/",
 					"img": "products/images/col_27919x_bk",
-					"name": "UCSB Banana Slugs Apparel & Merchandise Sweatshirts",
-					"page-title": "UCSB Banana Slugs Apparel & Merchandise Sweatshirts | CampusColors.com",
+					"name": "UCSC Banana Slugs Apparel & Merchandise Sweatshirts",
+					"page-title": "UCSC Banana Slugs Apparel & Merchandise Sweatshirts | CampusColors.com",
 					"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 					"optionList": [
 						"user:size_gender",
@@ -49118,10 +49393,10 @@
 						}
 					},
 					"id": "jerseys",
-					"link": "/ncaa-team-apparel-merchandise/ucsb-banana-slugs/jerseys/",
+					"link": "/ncaa-team-apparel-merchandise/ucsc-banana-slugs/jerseys/",
 					"img": "products/images/chbh_3264a_rd",
-					"name": "UCSB Banana Slugs Apparel & Merchandise Jerseys",
-					"page-title": "UCSB Banana Slugs Apparel & Merchandise Jerseys | CampusColors.com",
+					"name": "UCSC Banana Slugs Apparel & Merchandise Jerseys",
+					"page-title": "UCSC Banana Slugs Apparel & Merchandise Jerseys | CampusColors.com",
 					"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 					"optionList": [
 						"user:size_gender",
@@ -49152,10 +49427,10 @@
 						}
 					},
 					"id": "pants",
-					"link": "/ncaa-team-apparel-merchandise/ucsb-banana-slugs/pants/",
+					"link": "/ncaa-team-apparel-merchandise/ucsc-banana-slugs/pants/",
 					"img": "products/images/duke_28734x_bk",
-					"name": "UCSB Banana Slugs Apparel & Merchandise Pants",
-					"page-title": "UCSB Banana Slugs Apparel & Merchandise Pants | CampusColors.com",
+					"name": "UCSC Banana Slugs Apparel & Merchandise Pants",
+					"page-title": "UCSC Banana Slugs Apparel & Merchandise Pants | CampusColors.com",
 					"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 					"optionList": [
 						"user:size_gender",
@@ -49186,10 +49461,10 @@
 						}
 					},
 					"id": "hats",
-					"link": "/ncaa-team-apparel-merchandise/ucsb-banana-slugs/hats/",
+					"link": "/ncaa-team-apparel-merchandise/ucsc-banana-slugs/hats/",
 					"img": "products/images/cal_17142x_nv",
-					"name": "UCSB Banana Slugs Apparel & Merchandise Hats",
-					"page-title": "UCSB Banana Slugs Apparel & Merchandise Hats | CampusColors.com",
+					"name": "UCSC Banana Slugs Apparel & Merchandise Hats",
+					"page-title": "UCSC Banana Slugs Apparel & Merchandise Hats | CampusColors.com",
 					"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 					"optionList": [
 						"user:size_gender",
@@ -49220,10 +49495,10 @@
 						}
 					},
 					"id": "novelties-and-accessories",
-					"link": "/ncaa-team-apparel-merchandise/ucsb-banana-slugs/novelties-and-accessories/",
+					"link": "/ncaa-team-apparel-merchandise/ucsc-banana-slugs/novelties-and-accessories/",
 					"img": "products/images/acc_33158_tc",
-					"name": "UCSB Banana Slugs Apparel & Merchandise Novelties & Accessories",
-					"page-title": "UCSB Banana Slugs Apparel & Merchandise Novelties & Accessories | CampusColors.com",
+					"name": "UCSC Banana Slugs Apparel & Merchandise Novelties & Accessories",
+					"page-title": "UCSC Banana Slugs Apparel & Merchandise Novelties & Accessories | CampusColors.com",
 					"page-description": "Shop Campus Colors for thousands of NCAA, NFL, NBA, MLB, & NHL products, novelties and more! We offer gear from top brands such as Nike & Adidas. Ship Same-Day to All 50 States!",
 					"optionList": [
 						"user:size_gender",
