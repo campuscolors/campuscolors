@@ -1,19 +1,11 @@
 {
 	"main" : [
 		{
-			"src"			: "banners/final_four_alt_700x268.jpg",
+			"src"			: "banners/blue_devils_final_700x268.jpg",
 			"width"		: "700",
 			"height"	: "268",
-			"alt"			: "March Madness",
-			"title"		: "March Madness",
-			"href"		: "/march-madness/all/"
-		},
-		{
-			"src"			: "banners/march_to_the_madness.jpg",
-			"width"		: "700",
-			"height"	: "268",
-			"alt"			: "March Madness",
-			"title"		: "March Madness",
+			"alt"			: "Cut the net, Blue Devils are Champs",
+			"title"		: "Cut the net, Blue Devils are Champs",
 			"href"		: "/march-madness/all/"
 		},
 		{
@@ -24,6 +16,14 @@
 			"title"		: "Original Retro Brand - Super Soft Comfort",
 			"href"		: "/brands-apparel-merchandise/original-retro-brand-gear/"
 		},
+		{
+			"src"			: "banners/under_armour_700x268.jpg",
+			"width"		: "700",
+			"height"	: "268",
+			"alt"			: "Under Armour",
+			"title"		: "Under Armour",
+			"href"		: "/brands-apparel-merchandise/under-armour-gear/"
+		},
 	    {
 			"src"			: "banners/nike_700x268.jpg",
 			"width"		: "700",
@@ -31,8 +31,15 @@
 			"alt"			: "Nike Apparel",
 			"title"		: "Nike Apparel",
 			"href"		: "/brands-apparel-merchandise/nike-gear/"
+		},
+		{
+			"src"			: "banners/adidas_700x268.jpg",
+			"width"		: "700",
+			"height"	: "268",
+			"alt"			: "Adidas Products",
+			"title"		: "Adidas Products",
+			"href"		: "/brands-apparel-merchandise/adidas-gear/"
 		}
-		
 	],
 	"featured" : [
 		{
@@ -56,41 +63,34 @@
 	],
 	"header" :	[
 		{
-			"img"		: "",
-			"boldlft"		: "",
-			"msg"		: "Welcome to the Madness!!",
-			"boldrt"		: "save $5 off $50, $10 off $75, or $20 off $125!",
-			"split"		: "true",
-			"href"		: "/march-madness/all/"
-		},
-	 	{
 			"img"		: "ship-icon_59x40.png",
 			"boldlft"		: "$3.99",
 			"msg"		: " Flat Rate Shipping",
 			"boldrt"		: "FREE SHIPPING ORDERS OVER $75",
 			"split" 		: "true",
 			"href"		: "/shipping_policy/"
+		},
+		{
+			"img"		: "ship-icon_59x40.png",
+			"boldlft"		: "",
+			"msg"		: "Ships same day if ordered by 3pm CT&#42;",
+			"boldrt"		: "FREE SHIPPING ORDERS OVER $75",
+			"split"		: "true",
+			"href"		: "/shipping_policy/"
 		}
 	],
 	"mobileheader" : [
 		{
-			"img"		: "",
-			"boldlft"		: "",
-			"msg"		: "Welcome to the Madness!!",
-			"boldrt"		: "",
-			"href"		: "/march-madness/all/"
-		},
-		{
-			"img"		: "",
-			"boldlft"		: "",
-			"msg"		: "",
-			"boldrt"		: "save $5 off $50, $10 off $75, or $20 off $125!",
-			"href"		: "/march-madness/all/"
-		},
-		{
 			"img"		: "ship-icon_32x23.png",
 			"boldlft"		: "FREE SHIPPING ORDERS OVER $75",
 			"msg"		: "",
+			"boldrt"		: "",
+			"href"		: "/shipping_policy/"
+		},
+		{
+			"img"		: "ship-icon_32x23.png",
+			"boldlft"		: "",
+			"msg"		: "Ships same day if ordered by 3pm CT*",
 			"boldrt"		: "",
 			"href"		: "/shipping_policy/"
 		},
