@@ -1,7 +1,15 @@
 {
 	"main" : [
 		{
-			"src"			: "banners/blue_devils_final_700x268.jpg",
+			"src"		: "banners/black_hawks2.jpg",
+			"width"		: "700",
+			"height"	: "268",
+			"alt"			: "Black Hawks",
+			"title"		: "Under Armour",
+			"href"		: "/nhl-team-apparel-merchandise/chicago-blackhawks/all/"
+		},
+		{
+			"src"		: "banners/blue_devils_final_700x268.jpg",
 			"width"		: "700",
 			"height"	: "268",
 			"alt"			: "Cut the net, Blue Devils are Champs",
@@ -9,23 +17,15 @@
 			"href"		: "/march-madness/all/"
 		},
 		{
-			"src"			: "banners/retrobrand_700x268.jpg",
+			"src"		: "banners/retrobrand_700x268.jpg",
 			"width"		: "700",
 			"height"	: "268",
 			"alt"			: "Original Retro Brand - Super Soft Comfort",
 			"title"		: "Original Retro Brand - Super Soft Comfort",
 			"href"		: "/brands-apparel-merchandise/original-retro-brand-gear/"
 		},
-		{
-			"src"			: "banners/under_armour_700x268.jpg",
-			"width"		: "700",
-			"height"	: "268",
-			"alt"			: "Under Armour",
-			"title"		: "Under Armour",
-			"href"		: "/brands-apparel-merchandise/under-armour-gear/"
-		},
 	    {
-			"src"			: "banners/nike_700x268.jpg",
+			"src"		: "banners/nike_700x268.jpg",
 			"width"		: "700",
 			"height"	: "268",
 			"alt"			: "Nike Apparel",
@@ -33,7 +33,7 @@
 			"href"		: "/brands-apparel-merchandise/nike-gear/"
 		},
 		{
-			"src"			: "banners/adidas_700x268.jpg",
+			"src"		: "banners/adidas_700x268.jpg",
 			"width"		: "700",
 			"height"	: "268",
 			"alt"			: "Adidas Products",
