@@ -1,14 +1,6 @@
 {
 	"main" : [
 		{
-			"src"		: "banners/black_hawks_700x268.jpg",
-			"width"		: "700",
-			"height"	: "268",
-			"alt"			: "Black Hawks",
-			"title"		: "Under Armour",
-			"href"		: "/nhl-team-apparel-merchandise/chicago-blackhawks/jerseys/"
-		},
-		{
 			"src"		: "banners/blue_devils_final_700x268.jpg",
 			"width"		: "700",
 			"height"	: "268",
