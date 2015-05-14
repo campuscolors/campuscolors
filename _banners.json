@@ -1,6 +1,14 @@
 {
 	"main" : [
 		{
+			"src"		: "banners/bulls_jerseys700x268.jpg",
+			"width"		: "700",
+			"height"	: "268",
+			"alt"			: "Congratulations Jimmy Butler",
+			"title"		: "Congratulations Jimmy Butler",
+			"href"		: "/nba-team-apparel-merchandise/chicago-bulls/jerseys/"
+		},
+		{
 			"src"		: "banners/blue_devils_final_700x268.jpg",
 			"width"		: "700",
 			"height"	: "268",
