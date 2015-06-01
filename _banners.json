@@ -1,20 +1,12 @@
 {
 	"main" : [
 		{
-			"src"		: "banners/grad_gifts_700x268.jpg",
+			"src"		: "banners/summer_kick_off_700x268.jpg",
 			"width"		: "700",
 			"height"	: "268",
-			"alt"			: "Grad Gifts",
-			"title"		: "Grad Gifts",
+			"alt"			: "Summer Kick Off Sale 20% off all T-Shirts and Shorts",
+			"title"		: "Summer Kick Off Sale",
 			"href"		: ""
-		},
-		{
-			"src"		: "banners/bulls_jerseys700x268.jpg",
-			"width"		: "700",
-			"height"	: "268",
-			"alt"			: "Congratulations Jimmy Butler",
-			"title"		: "Congratulations Jimmy Butler",
-			"href"		: "/nba-team-apparel-merchandise/chicago-bulls/jerseys/"
 		},
 		{
 			"src"		: "banners/retrobrand_700x268.jpg",
