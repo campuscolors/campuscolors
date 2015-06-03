@@ -55,34 +55,34 @@
 	],
 	"header" :	[
 		{
+			"img"		: "sale-icon_59x40.png",
+			"boldlft"		: "20% OFF all T-Shirts & Shorts",
+			"msg"		: " - Thru June 21",
+			"boldrt"		: "",
+			"split"		: "true",
+			"href"		: ""
+		},
+		{
 			"img"		: "ship-icon_59x40.png",
 			"boldlft"		: "$3.99",
 			"msg"		: " Flat Rate Shipping",
 			"boldrt"		: "FREE SHIPPING ORDERS OVER $75",
 			"split" 		: "true",
 			"href"		: "/shipping_policy/"
-		},
-		{
-			"img"		: "ship-icon_59x40.png",
-			"boldlft"		: "",
-			"msg"		: "Ships same day if ordered by 3pm CT&#42;",
-			"boldrt"		: "FREE SHIPPING ORDERS OVER $75",
-			"split"		: "true",
-			"href"		: "/shipping_policy/"
 		}
 	],
 	"mobileheader" : [
 		{
-			"img"		: "ship-icon_32x23.png",
-			"boldlft"		: "FREE SHIPPING ORDERS OVER $75",
-			"msg"		: "",
+			"img"		: "sale-icon_32x23.png",
+			"boldlft"		: "",
+			"msg"		: "20% OFF all T-Shirts & Shorts Thru June 21",
 			"boldrt"		: "",
-			"href"		: "/shipping_policy/"
+			"href"		: ""
 		},
 		{
 			"img"		: "ship-icon_32x23.png",
-			"boldlft"		: "",
-			"msg"		: "Ships same day if ordered by 3pm CT*",
+			"boldlft"		: "FREE SHIPPING ORDERS OVER $75",
+			"msg"		: "",
 			"boldrt"		: "",
 			"href"		: "/shipping_policy/"
 		},
