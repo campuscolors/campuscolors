@@ -1,6 +1,14 @@
 {
 	"main" : [
 		{
+			"src"		: "banners/blackhawks_stanley_cup_700x268.jpg",
+			"width"		: "700",
+			"height"	: "268",
+			"alt"			: "Chicago Black Hawks hoist the 2015 Stanley Cup",
+			"title"		: "Chicago Black Hawks hoist the 2015 Stanley Cup",
+			"href"		: "nhl-team-apparel-merchandise/chicago-blackhawks/all/"
+		},
+		{
 			"src"		: "banners/summer_kick_off_700x268.jpg",
 			"width"		: "700",
 			"height"	: "268",
