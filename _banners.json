@@ -1,6 +1,14 @@
 {
 	"main" : [
 		{
+			"src"			: "banners/warriors_champs_700x268.jpg",
+			"width"		: "700",
+			"height"	: "268",
+			"alt"			: "Golden State Warriors 2105 NBA Champions",
+			"title"		: "Golden State Warriors 2105 NBA Champions",
+			"href"		: "/nba-finals/all/"
+		},
+		{
 			"src"			: "banners/bhcup.jpg",
 			"width"		: "700",
 			"height"	: "268",
@@ -9,23 +17,15 @@
 			"href"		: "/stanley-cup/all/"
 		},
 		{
-			"src"		: "banners/summer_kick_off_700x268.jpg",
+			"src"			: "banners/summer_kick_off_700x268.jpg",
 			"width"		: "700",
 			"height"	: "268",
 			"alt"			: "Summer Kick Off Sale 20% off all T-Shirts and Shorts",
 			"title"		: "Summer Kick Off Sale",
 			"href"		: ""
 		},
-		{
-			"src"		: "banners/retrobrand_700x268.jpg",
-			"width"		: "700",
-			"height"	: "268",
-			"alt"			: "Original Retro Brand - Super Soft Comfort",
-			"title"		: "Original Retro Brand - Super Soft Comfort",
-			"href"		: "/brands-apparel-merchandise/original-retro-brand-gear/"
-		},
 	    {
-			"src"		: "banners/nike_700x268.jpg",
+			"src"			: "banners/nike_700x268.jpg",
 			"width"		: "700",
 			"height"	: "268",
 			"alt"			: "Nike Apparel",
@@ -33,7 +33,7 @@
 			"href"		: "/brands-apparel-merchandise/nike-gear/"
 		},
 		{
-			"src"		: "banners/adidas_700x268.jpg",
+			"src"			: "banners/adidas_700x268.jpg",
 			"width"		: "700",
 			"height"	: "268",
 			"alt"			: "Adidas Products",
