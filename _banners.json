@@ -1,20 +1,20 @@
 {
 	"main" : [
 		{
-			"src"			: "banners/warriors_champs_700x268.jpg",
-			"width"		: "700",
-			"height"	: "268",
-			"alt"			: "Golden State Warriors 2105 NBA Champions",
-			"title"		: "Golden State Warriors 2105 NBA Champions",
-			"href"		: "/nba-finals/all/"
-		},
-		{
 			"src"			: "banners/bhcup.jpg",
 			"width"		: "700",
 			"height"	: "268",
 			"alt"			: "Chicago Black Hawks hoist the 2015 Stanley Cup",
 			"title"		: "Chicago Black Hawks hoist the 2015 Stanley Cup",
 			"href"		: "/stanley-cup/all/"
+		},
+		{
+			"src"			: "banners/warriors_champs_700x268.jpg",
+			"width"		: "700",
+			"height"	: "268",
+			"alt"			: "Golden State Warriors 2105 NBA Champions",
+			"title"		: "Golden State Warriors 2105 NBA Champions",
+			"href"		: "/nba-finals/all/"
 		},
 		{
 			"src"			: "banners/summer_kick_off_700x268.jpg",
