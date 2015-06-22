@@ -16,14 +16,6 @@
 			"title"		: "Golden State Warriors 2105 NBA Champions",
 			"href"		: "/nba-finals/all/"
 		},
-		{
-			"src"			: "banners/summer_kick_off_700x268.jpg",
-			"width"		: "700",
-			"height"	: "268",
-			"alt"			: "Summer Kick Off Sale 20% off all T-Shirts and Shorts",
-			"title"		: "Summer Kick Off Sale",
-			"href"		: ""
-		},
 	    {
 			"src"			: "banners/nike_700x268.jpg",
 			"width"		: "700",
@@ -63,30 +55,23 @@
 	],
 	"header" :	[
 		{
-			"img"		: "sale-icon_59x40.png",
-			"boldlft"		: "20% OFF all T-Shirts & Shorts",
-			"msg"		: " - Thru June 21",
-			"boldrt"		: "",
-			"split"		: "true",
-			"href"		: ""
-		},
-		{
 			"img"		: "ship-icon_59x40.png",
 			"boldlft"		: "$3.99",
 			"msg"		: " Flat Rate Shipping",
 			"boldrt"		: "FREE SHIPPING ORDERS OVER $75",
 			"split" 		: "true",
 			"href"		: "/shipping_policy/"
+		},
+		{
+			"img"		: "ship-icon_59x40.png",
+			"boldlft"		: "",
+			"msg"		: "Ships same day if ordered by 3pm CT&#42;",
+			"boldrt"		: "FREE SHIPPING ORDERS OVER $75",
+			"split"		: "true",
+			"href"		: "/shipping_policy/"
 		}
 	],
 	"mobileheader" : [
-		{
-			"img"		: "sale-icon_32x23.png",
-			"boldlft"		: "",
-			"msg"		: "20% OFF all T-Shirts & Shorts Thru June 21",
-			"boldrt"		: "",
-			"href"		: ""
-		},
 		{
 			"img"		: "ship-icon_32x23.png",
 			"boldlft"		: "FREE SHIPPING ORDERS OVER $75",
@@ -96,8 +81,8 @@
 		},
 		{
 			"img"		: "ship-icon_32x23.png",
-			"boldlft"		: "$3.99",
-			"msg"		: " Flat Shipping Rate",
+			"boldlft"		: "",
+			"msg"		: "Ships same day if ordered by 3pm CT*",
 			"boldrt"		: "",
 			"href"		: "/shipping_policy/"
 		}
