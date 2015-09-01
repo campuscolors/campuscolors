@@ -1,20 +1,12 @@
 {
 	"main" : [
 		{
-			"src"			: "banners/bhcup.jpg",
+			"src"			: "banners/tackletimesale.jpg",
 			"width"		: "700",
 			"height"	: "268",
-			"alt"			: "Chicago Black Hawks hoist the 2015 Stanley Cup",
-			"title"		: "Chicago Black Hawks hoist the 2015 Stanley Cup",
-			"href"		: "/stanley-cup/all/"
-		},
-		{
-			"src"			: "banners/warriors_champs_700x268.jpg",
-			"width"		: "700",
-			"height"	: "268",
-			"alt"			: "Golden State Warriors 2105 NBA Champions",
-			"title"		: "Golden State Warriors 2105 NBA Champions",
-			"href"		: "/nba-finals/all/"
+			"alt"			: "Tackle Time T-shirt sale - 15% off all t-shirts",
+			"title"		: "Tackle Time T-shirt sale - 15% off all t-shirts",
+			"href"		: "/league-apparel-merchandise/nfl/t-shirts/"
 		},
 	    {
 			"src"			: "banners/nike_700x268.jpg",
