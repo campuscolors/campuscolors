@@ -1,14 +1,6 @@
 {
 	"main" : [
 		{
-			"src"			: "banners/tackletimesale.jpg",
-			"width"		: "700",
-			"height"	: "268",
-			"alt"			: "Tackle Time T-shirt sale - 15% off all t-shirts",
-			"title"		: "Tackle Time T-shirt sale - 15% off all t-shirts",
-			"href"		: "/league-apparel-merchandise/nfl/t-shirts/"
-		},
-	    {
 			"src"			: "banners/nike_700x268.jpg",
 			"width"		: "700",
 			"height"	: "268",
